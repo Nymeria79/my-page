@@ -1,33 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>小c的空间</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的医学博客 - 个人主页</title>
     <style>
-        body { 
-            font-family: "Microsoft YaHei", sans-serif; 
-            background: #f0f0f0; 
-            text-align: center; 
-            padding-top: 100px; 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft YaHei", sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
+        
+        /* 密码大门样式 - 全屏遮罩 */
+        #gate {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
         }
-        h1 { color: #667eea; }
-        .hidden { display: none; }
+        #gate h2 { color: white; font-size: 2rem; margin-bottom: 10px; }
+        #gate p { color: rgba(255,255,255,0.8); margin-bottom: 30px; }
+        #gate input {
+            padding: 15px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            width: 280px;
+            text-align: center;
+            outline: none;
+        }
+        #gate button {
+            margin-top: 20px;
+            padding: 12px 40px;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        #gate button:hover { transform: scale(1.05); }
+        #gate .error { color: #ffcccc; margin-top: 15px; display: none; }
+        
+        /* 博客内容样式 - 初始隐藏 */
+        #blog-content { display: none; }
+        
+        /* 以下是你原来的博客样式 */
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 0; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        nav { background-color: white; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
+        nav a { text-decoration: none; color: #667eea; font-weight: 500; }
+        nav a:hover { color: #764ba2; }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .about-section { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin-bottom: 2rem; }
+        .about-section h2 { color: #667eea; margin-bottom: 1rem; border-left: 4px solid #667eea; padding-left: 1rem; }
+        .blog-posts { display: grid; gap: 1.5rem; }
+        .post-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
+        .post-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
+        .post-card h3 { color: #333; margin-bottom: 0.5rem; }
+        .post-meta { color: #999; font-size: 0.9rem; margin-bottom: 1rem; }
+        .post-excerpt { color: #666; line-height: 1.8; }
+        .read-more { display: inline-block; margin-top: 1rem; color: #667eea; text-decoration: none; font-weight: 500; }
+        .read-more:hover { color: #764ba2; }
+        footer { background-color: #333; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; }
+        @media (max-width: 768px) { nav ul { flex-direction: column; gap: 1rem; } }
     </style>
 </head>
 <body>
-    <div id="content" class="hidden">
-        <h1>欢迎进入小c的空间</h1>
-        <p>这是我用 Git 部署的第一个网站。</p>
-        <p>医学大四生正在学前端。</p>
+
+    <!-- 密码大门 -->
+    <div id="gate">
+        <h2>🔐 私人领域</h2>
+        <p>请输入密码进入小c的空间</p>
+        <input type="password" id="pwd" placeholder="输入密码..." onkeypress="if(event.key==='Enter')unlock()">
+        <button onclick="unlock()">进入</button>
+        <p class="error" id="err">密码错误，请重试</p>
+    </div>
+
+    <!-- 博客内容（密码正确后显示） -->
+    <div id="blog-content">
+        <header>
+            <h1>我的医学博客</h1>
+            <p>记录学医路上的点滴思考</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#blog">博客</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <section id="about" class="about-section">
+                <h2>关于我</h2>
+                <p>你好！我是一名大四医学生。这个博客是我用来整理学习笔记、分享医学见解的地方。</p>
+                <p style="margin-top: 1rem;">欢迎你的到来，希望我们能够一起交流学习！</p>
+            </section>
+            
+            <section id="blog">
+                <h2 style="margin-bottom: 1.5rem; color: #667eea;">最新文章</h2>
+                <div class="blog-posts">
+                    <article class="post-card">
+                        <h3>我的第一篇博客</h3>
+                        <div class="post-meta">发布于 2024-01-28</div>
+                        <p class="post-excerpt">今天终于搭建起了自己的个人博客！作为一名医学生，我希望通过这个平台记录学习过程中的收获与感悟...</p>
+                        <a href="post1.html" class="read-more">阅读全文 →</a>
+                    </article>
+                    
+                    <article class="post-card">
+                        <h3>医学学习方法分享</h3>
+                        <div class="post-meta">发布于 2024-01-25</div>
+                        <p class="post-excerpt">经过几年的医学学习，我总结了一些对我来说比较有效的学习方法。今天想和大家分享一下...</p>
+                        <a href="post2.html" class="read-more">阅读全文 →</a>
+                    </article>
+                    
+                    <article class="post-card">
+                        <h3>实习见闻：第一次进手术室</h3>
+                        <div class="post-meta">发布于 2024-01-20</div>
+                        <p class="post-excerpt">今天第一次进入手术室观摩手术，内心充满了紧张和期待。在无影灯下，我看到了医生们精湛的技术...</p>
+                        <a href="post3.html" class="read-more">阅读全文 →</a>
+                    </article>
+                </div>
+            </section>
+        </div>
+        
+        <footer id="contact">
+            <p>© 2024 我的医学博客 | 用心记录，与你分享</p>
+        </footer>
     </div>
 
     <script>
-        let p = prompt("请输入密码：");
-        if(p === "1234") {
-            document.getElementById("content").classList.remove("hidden");
-        } else {
-            alert("密码错误");
-            document.body.innerHTML = "禁止访问";
+        // ===== 修改这里更改密码 =====
+        const PASSWORD = "xiaoc";
+        // ============================
+        
+        // 检查是否已经解锁（关闭浏览器后需要重新输入）
+        if(localStorage.getItem("unlocked") === "yes") {
+            document.getElementById("gate").style.display = "none";
+            document.getElementById("blog-content").style.display = "block";
+        }
+        
+        function unlock() {
+            if(document.getElementById("pwd").value === PASSWORD) {
+                localStorage.setItem("unlocked", "yes");
+                document.getElementById("gate").style.display = "none";
+                document.getElementById("blog-content").style.display = "block";
+            } else {
+                document.getElementById("err").style.display = "block";
+                document.getElementById("pwd").value = "";
+            }
         }
     </script>
 </body>
