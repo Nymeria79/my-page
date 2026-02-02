@@ -7,7 +7,6 @@
     <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
-    /* 米白底色 */
     body { 
         font-family: "Microsoft YaHei", sans-serif; 
         line-height: 1.6; 
@@ -15,7 +14,6 @@
         background-color: #FAF9F6; 
     }
     
-    /* 密码门 - 米白底+淡紫文字 */
     #gate {
         position: fixed;
         top: 0; left: 0; width: 100%; height: 100%;
@@ -42,7 +40,7 @@
     #gate button {
         margin-top: 20px;
         padding: 12px 40px;
-        background: #9B8AA6;      /* 柔和紫灰按钮 */
+        background: #9B8AA6;
         color: white;
         border: none;
         border-radius: 25px;
@@ -56,7 +54,6 @@
     
     #blog-content { display: none; }
     
-    /* 头部 - 米白底 */
     header { 
         background: #FAF9F6; 
         color: #5A5A5A; 
@@ -68,7 +65,6 @@
     header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #6A5A7A; }
     header p { font-size: 1.1rem; color: #8A8A8A; }
     
-    /* 导航 */
     nav { 
         background-color: #FFFFFF; 
         padding: 1rem 0; 
@@ -83,7 +79,6 @@
     
     .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
     
-    /* 卡片 - 纯白底，配合米白背景 */
     .about-section, .post-card { 
         background: #FFFFFF; 
         border: 1px solid #F0EFE9;
@@ -101,7 +96,16 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
     }
     .post-card h3 { color: #4A4A4A; margin-bottom: 0.5rem; }
-    .post-meta { color: #9A9A9A; font-size: 0.9rem; margin-bottom: 1rem; }
+    .post-meta { 
+        color: #9A9A9A; 
+        font-size: 0.9rem; 
+        margin-bottom: 1rem; 
+    }
+    /* 时间标签样式 */
+    .update-time {
+        color: #8B7AA6;
+        font-weight: 500;
+    }
     .post-excerpt { color: #666; line-height: 1.8; }
     .read-more { 
         display: inline-block; 
@@ -112,7 +116,6 @@
     }
     .read-more:hover { color: #6A5A7A; }
     
-    /* 页脚 - 浅暖灰 */
     footer { 
         background-color: #E8E6E1; 
         color: #5A5A5A; 
@@ -122,13 +125,12 @@
         border-top: 1px solid #D8D6D1;
     }
     
-    /* 免责声明样式（米白协调版） */
     .medical-disclaimer {
         max-width: 900px;
         margin: 2rem auto;
         padding: 1.5rem;
-        background: #F5F3EF;        /* 比背景稍深一点的米黄 */
-        border-left: 4px solid #9B8AA6;  /* 柔和紫边框 */
+        background: #F5F3EF;
+        border-left: 4px solid #9B8AA6;
         border-radius: 0 8px 8px 0;
         font-size: 0.85rem;
         color: #6A6A6A;
@@ -153,7 +155,7 @@
         <p class="error" id="err">密码错误，请重试</p>
     </div>
 
-    <!-- 博客内容（密码正确后显示） -->
+    <!-- 博客内容 -->
     <div id="blog-content">
         <header>
             <h1>我的医学博客</h1>
@@ -174,8 +176,6 @@
                 <h2>关于我</h2>
                 <p>你好！我是一名大四医学生。这个博客是我用来整理学习体会、分享医学见解的地方。</p>
                 <p style="margin-top: 1rem;">欢迎你的到来，希望我们能够一起交流学习！</p>
-                
-                
             </section>
 
             <!-- 医疗免责声明 -->
@@ -188,26 +188,48 @@
             <section id="blog">
                 <h2 style="margin-bottom: 1.5rem; color: #6A5A7A;">最新文章</h2>
                 <div class="blog-posts">
+                    
+                    <!-- 文章1：data-file标记文件名，脚本会自动抓取时间 -->
                     <article class="post-card">
                         <h3>我的第一篇博客</h3>
-                        <div class="post-meta">发布于 2026-02-01</div>
+                        <div class="post-meta">
+                            发布于 2026-02-01 · 
+                            <span class="update-time" data-file="post1.html">获取时间...</span>
+                        </div>
                         <p class="post-excerpt">今天终于搭建起了自己的个人博客！作为一名医学生，我希望通过这个平台记录学习过程中的收获与感悟...</p>
-                        <a href="post1.html" class="read-more">阅读全文 →</a>
+                        <a href="post1.html" class="read-more" data-file="post1.html">阅读全文 →</a>
                     </article>
                     
+                    <!-- 文章2：外链，不加data-file，保持静态时间 -->
                     <article class="post-card">
                         <h3>医学学习方法及笔记分享</h3>
                         <div class="post-meta">发布于 2026-02-02</div>
                         <p class="post-excerpt">经过几年的医学学习，我正在总结一些对我来说比较有效的学习方法<br>也开始整理存储一些笔记，分享在此...</p>
-                        <a href="https://nymeria79.github.io/anki-viewer/" class="read-more">访问网站 →</a>
+                        <a href="https://nymeria79.github.io/anki-viewer/" target="_blank" class="read-more">访问网站 →</a>
                     </article>
                     
+                    <!-- 文章3：本地文件，自动获取时间 -->
                     <article class="post-card">
                         <h3>示教/实习见闻</h3>
-                        <div class="post-meta">发布于 2026-0x-xx</div>
+                        <div class="post-meta">
+                            发布于 2026-02-02 · 
+                            <span class="update-time" data-file="post3.html">获取时间...</span>
+                        </div>
                         <p class="post-excerpt">此处存放示教课/实习期间的见闻和思考</p>
-                        <a href="post3.html" class="read-more">阅读全文 →</a>
+                        <a href="post3.html" class="read-more" data-file="post3.html">阅读全文 →</a>
                     </article>
+
+                    <!-- 示例：如何添加新文章（带自动时间） -->
+                    <article class="post-card">
+                        <h3>新文章标题</h3>
+                        <div class="post-meta">
+                            发布于 2026-02-02 · 
+                            <span class="update-time" data-file="post4.html">获取时间...</span>
+                        </div>
+                        <p class="post-excerpt">文章摘要...</p>
+                        <a href="post4.html" class="read-more" data-file="post4.html">阅读全文 →</a>
+                    </article>
+
                 </div>
             </section>
         </div>
@@ -219,11 +241,9 @@
     </div>
 
     <script>
-        // ===== 修改这里更改密码 =====
+        // ===== 密码功能 =====
         const PASSWORD = "xiaoc";
-        // ============================
         
-        // 检查是否已经解锁（关闭浏览器后需要重新输入）
         if(localStorage.getItem("unlocked") === "yes") {
             document.getElementById("gate").style.display = "none";
             document.getElementById("blog-content").style.display = "block";
@@ -239,6 +259,72 @@
                 document.getElementById("pwd").value = "";
             }
         }
+
+        // ===== 自动获取GitHub最后修改时间 =====
+        // 配置（已按你的仓库设置好）
+        const GITHUB_USER = 'Nymeria79';
+        const GITHUB_REPO = 'my-page';
+        const CACHE_KEY = 'blog_update_times';
+        const CACHE_MINUTES = 30; // 缓存30分钟，避免频繁请求
+
+        // 读取缓存
+        function getCache() {
+            try {
+                const data = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
+                if (Date.now() - (data.ts || 0) < CACHE_MINUTES * 60000) {
+                    return data.times || {};
+                }
+            } catch(e) {}
+            return {};
+        }
+
+        // 保存缓存
+        function saveCache(times) {
+            localStorage.setItem(CACHE_KEY, JSON.stringify({
+                ts: Date.now(),
+                times: times
+            }));
+        }
+
+        // 获取单个文件时间
+        async function fetchTime(filename) {
+            const cache = getCache();
+            if (cache[filename]) return cache[filename];
+
+            try {
+                const res = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/commits?path=${filename}&per_page=1`);
+                if (!res.ok) throw new Error('API错误');
+                const data = await res.json();
+                if (data.length > 0) {
+                    const date = new Date(data[0].commit.committer.date);
+                    // 格式：02-02 14:30
+                    const str = `${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}`;
+                    cache[filename] = str;
+                    saveCache(cache);
+                    return str;
+                }
+            } catch(e) {
+                console.log('获取失败:', filename);
+            }
+            return null;
+        }
+
+        // 页面加载后自动获取所有时间
+        document.addEventListener('DOMContentLoaded', async () => {
+            const timeElements = document.querySelectorAll('.update-time[data-file]');
+            
+            for (let el of timeElements) {
+                const file = el.getAttribute('data-file');
+                const time = await fetchTime(file);
+                if (time) {
+                    el.textContent = '最后修改：' + time;
+                    el.style.color = '#7A6A8A'; // 成功获取后加深颜色
+                } else {
+                    el.textContent = '最后修改：未知';
+                    el.style.color = '#bbb';
+                }
+            }
+        });
     </script>
 </body>
 </html>
