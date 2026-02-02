@@ -5,71 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的医学博客 - 个人主页</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: "Microsoft YaHei", sans-serif; line-height: 1.6; color: #333; background-color: #f5f5f5; }
-        
-        /* 密码大门样式 - 全屏遮罩 */
-        #gate {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-        #gate h2 { color: white; font-size: 2rem; margin-bottom: 10px; }
-        #gate p { color: rgba(255,255,255,0.8); margin-bottom: 30px; }
-        #gate input {
-            padding: 15px 25px;
-            font-size: 16px;
-            border: none;
-            border-radius: 30px;
-            width: 280px;
-            text-align: center;
-            outline: none;
-        }
-        #gate button {
-            margin-top: 20px;
-            padding: 12px 40px;
-            background: white;
-            color: #667eea;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        #gate button:hover { transform: scale(1.05); }
-        #gate .error { color: #ffcccc; margin-top: 15px; display: none; }
-        
-        /* 博客内容样式 - 初始隐藏 */
-        #blog-content { display: none; }
-        
-        /* 以下是你原来的博客样式 */
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem 0; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.1rem; opacity: 0.9; }
-        nav { background-color: white; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
-        nav a { text-decoration: none; color: #667eea; font-weight: 500; }
-        nav a:hover { color: #764ba2; }
-        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-        .about-section { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .about-section h2 { color: #667eea; margin-bottom: 1rem; border-left: 4px solid #667eea; padding-left: 1rem; }
-        .blog-posts { display: grid; gap: 1.5rem; }
-        .post-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
-        .post-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.15); }
-        .post-card h3 { color: #333; margin-bottom: 0.5rem; }
-        .post-meta { color: #999; font-size: 0.9rem; margin-bottom: 1rem; }
-        .post-excerpt { color: #666; line-height: 1.8; }
-        .read-more { display: inline-block; margin-top: 1rem; color: #667eea; text-decoration: none; font-weight: 500; }
-        .read-more:hover { color: #764ba2; }
-        footer { background-color: #333; color: white; text-align: center; padding: 2rem 0; margin-top: 3rem; }
-        @media (max-width: 768px) { nav ul { flex-direction: column; gap: 1rem; } }
-    </style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    /* 米白底色 */
+    body { 
+        font-family: "Microsoft YaHei", sans-serif; 
+        line-height: 1.6; 
+        color: #3D3D3D; 
+        background-color: #FAF9F6; 
+    }
+    
+    /* 密码门 - 米白底+淡紫文字 */
+    #gate {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: #FAF9F6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    #gate h2 { color: #7A6A8A; font-size: 2rem; margin-bottom: 10px; }
+    #gate p { color: #8A8A8A; margin-bottom: 30px; }
+    #gate input {
+        padding: 15px 25px;
+        font-size: 16px;
+        border: 1px solid #E0DEE6;
+        background: #FFFFFF;
+        border-radius: 30px;
+        width: 280px;
+        text-align: center;
+        outline: none;
+        color: #5A5A5A;
+    }
+    #gate button {
+        margin-top: 20px;
+        padding: 12px 40px;
+        background: #9B8AA6;      /* 柔和紫灰按钮 */
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    #gate button:hover { background: #8B7A96; transform: scale(1.05); }
+    #gate .error { color: #C97B7B; margin-top: 15px; display: none; }
+    
+    #blog-content { display: none; }
+    
+    /* 头部 - 米白底 */
+    header { 
+        background: #FAF9F6; 
+        color: #5A5A5A; 
+        padding: 2rem 0; 
+        text-align: center; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border-bottom: 1px solid #F0EFE9;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #6A5A7A; }
+    header p { font-size: 1.1rem; color: #8A8A8A; }
+    
+    /* 导航 */
+    nav { 
+        background-color: #FFFFFF; 
+        padding: 1rem 0; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.03); 
+        position: sticky; 
+        top: 0; 
+        z-index: 100; 
+    }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
+    nav a { text-decoration: none; color: #8B7AA6; font-weight: 500; }
+    nav a:hover { color: #6A5A7A; }
+    
+    .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+    
+    /* 卡片 - 纯白底，配合米白背景 */
+    .about-section, .post-card { 
+        background: #FFFFFF; 
+        border: 1px solid #F0EFE9;
+        padding: 2rem; 
+        border-radius: 10px; 
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
+        margin-bottom: 2rem; 
+    }
+    .about-section h2 { color: #6A5A7A; margin-bottom: 1rem; border-left: 4px solid #9B8AA6; padding-left: 1rem; }
+    
+    .blog-posts { display: grid; gap: 1.5rem; }
+    .post-card { padding: 1.5rem; transition: transform 0.3s, box-shadow 0.3s; }
+    .post-card:hover { 
+        transform: translateY(-3px); 
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    }
+    .post-card h3 { color: #4A4A4A; margin-bottom: 0.5rem; }
+    .post-meta { color: #9A9A9A; font-size: 0.9rem; margin-bottom: 1rem; }
+    .post-excerpt { color: #666; line-height: 1.8; }
+    .read-more { 
+        display: inline-block; 
+        margin-top: 1rem; 
+        color: #8B7AA6; 
+        text-decoration: none; 
+        font-weight: 500; 
+    }
+    .read-more:hover { color: #6A5A7A; }
+    
+    /* 页脚 - 浅暖灰 */
+    footer { 
+        background-color: #E8E6E1; 
+        color: #5A5A5A; 
+        text-align: center; 
+        padding: 2rem 0; 
+        margin-top: 3rem; 
+        border-top: 1px solid #D8D6D1;
+    }
+    
+    /* 免责声明样式（米白协调版） */
+    .medical-disclaimer {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        background: #F5F3EF;        /* 比背景稍深一点的米黄 */
+        border-left: 4px solid #9B8AA6;  /* 柔和紫边框 */
+        border-radius: 0 8px 8px 0;
+        font-size: 0.85rem;
+        color: #6A6A6A;
+    }
+    .medical-disclaimer h3 {
+        color: #8B7AA6;
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    @media (max-width: 768px) { nav ul { flex-direction: column; gap: 1rem; } }
+</style>
 </head>
 <body>
 
@@ -105,6 +176,13 @@
                 <p style="margin-top: 1rem;">欢迎你的到来，希望我们能够一起交流学习！</p>
                 <p style="margin-top: 1rem;">⚠️ 不用于任何临床诊断参考，仅供阅读参考</p>
                 
+            </section>
+
+            <!-- 医疗免责声明 -->
+            <section class="medical-disclaimer">
+                <h3>⚠️ 医疗免责声明</h3>
+                <p>本网站所有内容（包括但不限于文字、图表、笔记、链接）仅供<strong>教育参考与信息分享</strong>，不构成任何形式的医疗建议、诊断或治疗方案。</p>
+                <p>浏览本网站不建立医患关系；内容不能替代专业医疗人员的面诊、诊断或治疗建议；如有健康疑虑，请咨询具有执业资质的医疗卫生提供者。</p>
             </section>
             
             <section id="blog">
