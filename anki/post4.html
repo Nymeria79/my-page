@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3"><strong>《神经系统与精神疾病大题》</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1..<strong>脊髓灰质各部功能</strong><br>构成与分区：由<span class="blur-text">多极神经元</span>胞体及树突构成，横切面呈<span class="blur-text">"H"形</span>，分为<span class="blur-text">前角</span>、<span class="blur-text">侧角</span>、后角和灰质连合。<br>前角与侧角：前角含<span class="blur-text">运动神经元</span>胞体；侧角见于<span class="blur-text">胸1~腰3</span>（<span class="blur-text">交感神经</span>低级中枢）和<span class="blur-text">骶2~骶4</span>（<span class="blur-text">副交感神经</span>低级中枢）。<br>后角：细胞属<span class="blur-text">感觉性</span>，接受后根感觉纤维传来的神经冲动，并将其传到脑或在节段内、节段间起联络作用。</td>
+                            <td>1..<strong>脊髓灰质各部功能</strong><br>构成与分区：由<span class="answer-text">多极神经元</span>胞体及树突构成，横切面呈<span class="answer-text">"H"形</span>，分为<span class="answer-text">前角</span>、<span class="answer-text">侧角</span>、后角和灰质连合。<br>前角与侧角：前角含<span class="answer-text">运动神经元</span>胞体；侧角见于<span class="answer-text">胸1~腰3</span>（<span class="answer-text">交感神经</span>低级中枢）和<span class="answer-text">骶2~骶4</span>（<span class="answer-text">副交感神经</span>低级中枢）。<br>后角：细胞属<span class="answer-text">感觉性</span>，接受后根感觉纤维传来的神经冲动，并将其传到脑或在节段内、节段间起联络作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2..A <strong>脑干分部及脑神经进出（一）</strong><br>分部：包括<span class="blur-text">延髓</span>、<span class="blur-text">脑桥</span>和<span class="blur-text">中脑</span>三部分。<br>延髓结构：前面有<span class="blur-text">锥体</span>和<span class="blur-text">锥体交叉</span>；后面有<span class="blur-text">薄束结节</span>、<span class="blur-text">楔束结节</span>、小脑下脚和菱形窝下半。<br>延髓神经：进出脑神经有<span class="blur-text">舌咽神经</span>、<span class="blur-text">迷走神经</span>、<span class="blur-text">副神经</span>和<span class="blur-text">舌下神经</span>四对。</td>
+                            <td>2..A <strong>脑干分部及脑神经进出（一）</strong><br>分部：包括<span class="answer-text">延髓</span>、<span class="answer-text">脑桥</span>和<span class="answer-text">中脑</span>三部分。<br>延髓结构：前面有<span class="answer-text">锥体</span>和<span class="answer-text">锥体交叉</span>；后面有<span class="answer-text">薄束结节</span>、<span class="answer-text">楔束结节</span>、小脑下脚和菱形窝下半。<br>延髓神经：进出脑神经有<span class="answer-text">舌咽神经</span>、<span class="answer-text">迷走神经</span>、<span class="answer-text">副神经</span>和<span class="answer-text">舌下神经</span>四对。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2..B <strong>脑干分部及脑神经进出（二）</strong><br>脑桥结构：前正中线有<span class="blur-text">基底沟</span>，两侧有<span class="blur-text">小脑中脚</span>；后面有小脑上脚和菱形窝上半。<br>脑桥神经：进出脑神经有<span class="blur-text">三叉神经</span>、<span class="blur-text">展神经</span>、<span class="blur-text">面神经</span>和<span class="blur-text">前庭蜗神经</span>四对。<br>中脑结构：前面有<span class="blur-text">大脑脚</span>和脚间窝；后面有<span class="blur-text">上丘</span>和<span class="blur-text">下丘</span>；内部有<span class="blur-text">中脑水管</span>。<br>中脑神经：进出脑神经有<span class="blur-text">动眼神经</span>和<span class="blur-text">滑车神经</span>。</td>
+                            <td>2..B <strong>脑干分部及脑神经进出（二）</strong><br>脑桥结构：前正中线有<span class="answer-text">基底沟</span>，两侧有<span class="answer-text">小脑中脚</span>；后面有小脑上脚和菱形窝上半。<br>脑桥神经：进出脑神经有<span class="answer-text">三叉神经</span>、<span class="answer-text">展神经</span>、<span class="answer-text">面神经</span>和<span class="answer-text">前庭蜗神经</span>四对。<br>中脑结构：前面有<span class="answer-text">大脑脚</span>和脚间窝；后面有<span class="answer-text">上丘</span>和<span class="answer-text">下丘</span>；内部有<span class="answer-text">中脑水管</span>。<br>中脑神经：进出脑神经有<span class="answer-text">动眼神经</span>和<span class="answer-text">滑车神经</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3..<strong>间脑位置、分部及功能</strong><br>位置与分部：位于<span class="blur-text">中脑</span>的前上方，主要包括<span class="blur-text">背侧丘脑</span>、<span class="blur-text">后丘脑</span>、<span class="blur-text">下丘脑</span>、上丘脑和底丘脑。<br>感觉中继：背侧丘脑是全身躯体感觉传入大脑皮质前的<span class="blur-text">中继站</span>，是<span class="blur-text">皮质下躯体感觉中枢</span>；后丘脑分为内、外侧膝状体，前者是<span class="blur-text">皮质下听觉中枢</span>，后者是<span class="blur-text">皮质下视觉中枢</span>。<br>下丘脑功能：是<span class="blur-text">皮质下内脏神经活动中枢</span>，并对<span class="blur-text">体温</span>、<span class="blur-text">摄食</span>、<span class="blur-text">水的平衡</span>及情绪反应等有重要作用。</td>
+                            <td>3..<strong>间脑位置、分部及功能</strong><br>位置与分部：位于<span class="answer-text">中脑</span>的前上方，主要包括<span class="answer-text">背侧丘脑</span>、<span class="answer-text">后丘脑</span>、<span class="answer-text">下丘脑</span>、上丘脑和底丘脑。<br>感觉中继：背侧丘脑是全身躯体感觉传入大脑皮质前的<span class="answer-text">中继站</span>，是<span class="answer-text">皮质下躯体感觉中枢</span>；后丘脑分为内、外侧膝状体，前者是<span class="answer-text">皮质下听觉中枢</span>，后者是<span class="answer-text">皮质下视觉中枢</span>。<br>下丘脑功能：是<span class="answer-text">皮质下内脏神经活动中枢</span>，并对<span class="answer-text">体温</span>、<span class="answer-text">摄食</span>、<span class="answer-text">水的平衡</span>及情绪反应等有重要作用。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">4..<strong>语言中枢的位置、损伤后的临床表现及诊断</strong><br>（原文内容缺失，请补充后制作卡片）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5..<strong>分布到舌的神经</strong><br>舌肌运动：由<span class="blur-text">舌下神经</span>支配。<br>舌前2/3感觉：一般躯体感觉（痛、温、触觉）由<span class="blur-text">三叉神经</span>的<span class="blur-text">下颌神经</span>中的<span class="blur-text">舌神经</span>支配；味觉由<span class="blur-text">面神经</span>的<span class="blur-text">鼓索神经</span>随舌神经分布至该区域。<br>舌后1/3感觉：一般感觉及味觉由<span class="blur-text">舌咽神经</span>管理。</td>
+                            <td>5..<strong>分布到舌的神经</strong><br>舌肌运动：由<span class="answer-text">舌下神经</span>支配。<br>舌前2/3感觉：一般躯体感觉（痛、温、触觉）由<span class="answer-text">三叉神经</span>的<span class="answer-text">下颌神经</span>中的<span class="answer-text">舌神经</span>支配；味觉由<span class="answer-text">面神经</span>的<span class="answer-text">鼓索神经</span>随舌神经分布至该区域。<br>舌后1/3感觉：一般感觉及味觉由<span class="answer-text">舌咽神经</span>管理。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6..<strong>面神经管不同部位损伤症状</strong><br>管外损伤（出<span class="blur-text">茎乳孔</span>后）：同侧<span class="blur-text">表情肌瘫痪</span>，表现为<span class="blur-text">额纹消失</span>、<span class="blur-text">眼裂变大</span>（不能闭眼皱眉）、<span class="blur-text">鼻唇沟变浅</span>、不能鼓腮、笑时嘴角偏向健侧、流涎、角膜反射消失。<br>管内损伤：除上述症状外，还有<span class="blur-text">舌前2/3味觉丧失</span>和<span class="blur-text">唾液腺分泌障碍</span>（<span class="blur-text">鼓索</span>受损）；<span class="blur-text">泪腺分泌障碍</span>（<span class="blur-text">岩浅大神经</span>受损）；<span class="blur-text">听觉过敏</span>（<span class="blur-text">镫骨肌支</span>受损）。</td>
+                            <td>6..<strong>面神经管不同部位损伤症状</strong><br>管外损伤（出<span class="answer-text">茎乳孔</span>后）：同侧<span class="answer-text">表情肌瘫痪</span>，表现为<span class="answer-text">额纹消失</span>、<span class="answer-text">眼裂变大</span>（不能闭眼皱眉）、<span class="answer-text">鼻唇沟变浅</span>、不能鼓腮、笑时嘴角偏向健侧、流涎、角膜反射消失。<br>管内损伤：除上述症状外，还有<span class="answer-text">舌前2/3味觉丧失</span>和<span class="answer-text">唾液腺分泌障碍</span>（<span class="answer-text">鼓索</span>受损）；<span class="answer-text">泪腺分泌障碍</span>（<span class="answer-text">岩浅大神经</span>受损）；<span class="answer-text">听觉过敏</span>（<span class="answer-text">镫骨肌支</span>受损）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7..<strong>躯干四肢意识性本体感觉和精细触觉传导通路</strong><br>第一、二级神经元：第一级胞体在<span class="blur-text">脊神经节</span>，纤维构成<span class="blur-text">薄束</span>和<span class="blur-text">楔束</span>；第二级胞体在<span class="blur-text">薄束核</span>和<span class="blur-text">楔束核</span>，纤维经<span class="blur-text">内侧丘系交叉</span>构成<span class="blur-text">内侧丘系</span>。<br>第三级神经元与投射：第三级胞体在<span class="blur-text">丘脑腹后外侧核</span>，发出<span class="blur-text">丘脑中央辐射</span>；投射至大脑<span class="blur-text">中央后回上2/3</span>和<span class="blur-text">中央旁小叶后部</span>。</td>
+                            <td>7..<strong>躯干四肢意识性本体感觉和精细触觉传导通路</strong><br>第一、二级神经元：第一级胞体在<span class="answer-text">脊神经节</span>，纤维构成<span class="answer-text">薄束</span>和<span class="answer-text">楔束</span>；第二级胞体在<span class="answer-text">薄束核</span>和<span class="answer-text">楔束核</span>，纤维经<span class="answer-text">内侧丘系交叉</span>构成<span class="answer-text">内侧丘系</span>。<br>第三级神经元与投射：第三级胞体在<span class="answer-text">丘脑腹后外侧核</span>，发出<span class="answer-text">丘脑中央辐射</span>；投射至大脑<span class="answer-text">中央后回上2/3</span>和<span class="answer-text">中央旁小叶后部</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8..A <strong>针刺左小指疼痛觉传导通路（一）</strong><br>第一级神经元：痛觉经<span class="blur-text">尺神经</span>传入<span class="blur-text">脊神经节</span>；中枢突经<span class="blur-text">后根外侧部</span>进入脊髓<span class="blur-text">背外侧束</span>，上升<span class="blur-text">1~2</span>个脊髓节段后，止于脊髓后角。<br>第二级神经元：胞体位于相应脊髓节段的第<span class="blur-text">I、IV~VIII</span>层；第二级纤维经<span class="blur-text">白质前连合</span>向颅侧斜越1~2个节段至<span class="blur-text">对侧</span>侧索上升，加入<span class="blur-text">脊髓丘脑侧束</span>。<br>走行：经延髓、脑桥和中脑止于<span class="blur-text">丘脑腹后外侧核</span>。</td>
+                            <td>8..A <strong>针刺左小指疼痛觉传导通路（一）</strong><br>第一级神经元：痛觉经<span class="answer-text">尺神经</span>传入<span class="answer-text">脊神经节</span>；中枢突经<span class="answer-text">后根外侧部</span>进入脊髓<span class="answer-text">背外侧束</span>，上升<span class="answer-text">1~2</span>个脊髓节段后，止于脊髓后角。<br>第二级神经元：胞体位于相应脊髓节段的第<span class="answer-text">I、IV~VIII</span>层；第二级纤维经<span class="answer-text">白质前连合</span>向颅侧斜越1~2个节段至<span class="answer-text">对侧</span>侧索上升，加入<span class="answer-text">脊髓丘脑侧束</span>。<br>走行：经延髓、脑桥和中脑止于<span class="answer-text">丘脑腹后外侧核</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>8..B <strong>针刺左小指疼痛觉传导通路（二）</strong><br>第三级神经元：胞体位于<span class="blur-text">腹后外侧核</span>，发出<span class="blur-text">丘脑中央辐射</span>经<span class="blur-text">内囊后肢</span>投射至<span class="blur-text">中央后回</span>。<br>结果：经上述传导使小指痛觉传至大脑皮质，产生痛觉。</td>
+                            <td>8..B <strong>针刺左小指疼痛觉传导通路（二）</strong><br>第三级神经元：胞体位于<span class="answer-text">腹后外侧核</span>，发出<span class="answer-text">丘脑中央辐射</span>经<span class="answer-text">内囊后肢</span>投射至<span class="answer-text">中央后回</span>。<br>结果：经上述传导使小指痛觉传至大脑皮质，产生痛觉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>9..A <strong>视觉传导和对光反射通路（一）</strong><br>神经元与起始：第一级<span class="blur-text">双极细胞</span>，第二级<span class="blur-text">节细胞</span>，轴突集合成<span class="blur-text">视神经</span>。<br>入颅与交叉：经<span class="blur-text">视神经管</span>入颅形成<span class="blur-text">视交叉</span>；鼻侧半纤维<span class="blur-text">交叉</span>至对侧，颞侧半纤维<span class="blur-text">不交叉</span>。<br>视束与终止：交叉后延为<span class="blur-text">视束</span>，主要终止于<span class="blur-text">外侧膝状体</span>，发出<span class="blur-text">视辐射</span>经内囊后肢投射至距状沟上下皮质。</td>
+                            <td>9..A <strong>视觉传导和对光反射通路（一）</strong><br>神经元与起始：第一级<span class="answer-text">双极细胞</span>，第二级<span class="answer-text">节细胞</span>，轴突集合成<span class="answer-text">视神经</span>。<br>入颅与交叉：经<span class="answer-text">视神经管</span>入颅形成<span class="answer-text">视交叉</span>；鼻侧半纤维<span class="answer-text">交叉</span>至对侧，颞侧半纤维<span class="answer-text">不交叉</span>。<br>视束与终止：交叉后延为<span class="answer-text">视束</span>，主要终止于<span class="answer-text">外侧膝状体</span>，发出<span class="answer-text">视辐射</span>经内囊后肢投射至距状沟上下皮质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>9..B <strong>视觉传导和对光反射通路（二）</strong><br>对光反射通路：视网膜→视神经→视交叉→两侧视束→<span class="blur-text">上丘臂</span>→<span class="blur-text">顶盖前区</span>→两侧<span class="blur-text">动眼神经副核</span>→动眼神经→睫状神经节→节后纤维→瞳孔括约肌收缩。<br>视神经损伤：患侧眼<span class="blur-text">全盲</span>，直接对光反射<span class="blur-text">消失</span>，间接对光反射<span class="blur-text">存在</span>。<br>视交叉与视束损伤：视交叉中部损伤致双眼<span class="blur-text">颞侧偏盲</span>；一侧视束损伤致双眼<span class="blur-text">同向性偏盲</span>。</td>
+                            <td>9..B <strong>视觉传导和对光反射通路（二）</strong><br>对光反射通路：视网膜→视神经→视交叉→两侧视束→<span class="answer-text">上丘臂</span>→<span class="answer-text">顶盖前区</span>→两侧<span class="answer-text">动眼神经副核</span>→动眼神经→睫状神经节→节后纤维→瞳孔括约肌收缩。<br>视神经损伤：患侧眼<span class="answer-text">全盲</span>，直接对光反射<span class="answer-text">消失</span>，间接对光反射<span class="answer-text">存在</span>。<br>视交叉与视束损伤：视交叉中部损伤致双眼<span class="answer-text">颞侧偏盲</span>；一侧视束损伤致双眼<span class="answer-text">同向性偏盲</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10..A <strong>头面部浅感觉传导通路（一）</strong><br>第一级神经元：胞体位于<span class="blur-text">三叉神经节</span>，周围突组成三叉神经分布于头面部皮肤和黏膜，中枢突入脑桥；触觉止于<span class="blur-text">三叉神经脑桥核</span>，痛温觉止于<span class="blur-text">三叉神经脊束核</span>。<br>第二级神经元：上述二核发出二级纤维交叉到对侧组成<span class="blur-text">三叉丘系</span>，终于丘脑<span class="blur-text">腹后内侧核</span>。<br>第三级神经元：丘脑<span class="blur-text">腹后内侧核</span>，轴突参加丘脑中央辐射，经内囊后肢，终于大脑<span class="blur-text">中央后回下部</span>。</td>
+                            <td>10..A <strong>头面部浅感觉传导通路（一）</strong><br>第一级神经元：胞体位于<span class="answer-text">三叉神经节</span>，周围突组成三叉神经分布于头面部皮肤和黏膜，中枢突入脑桥；触觉止于<span class="answer-text">三叉神经脑桥核</span>，痛温觉止于<span class="answer-text">三叉神经脊束核</span>。<br>第二级神经元：上述二核发出二级纤维交叉到对侧组成<span class="answer-text">三叉丘系</span>，终于丘脑<span class="answer-text">腹后内侧核</span>。<br>第三级神经元：丘脑<span class="answer-text">腹后内侧核</span>，轴突参加丘脑中央辐射，经内囊后肢，终于大脑<span class="answer-text">中央后回下部</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>10..B <strong>头面部浅感觉传导通路（二）</strong><br>损伤表现：若<span class="blur-text">三叉丘系</span>损伤，表现为<span class="blur-text">对侧</span>头面部浅感觉障碍；若<span class="blur-text">三叉神经脊束</span>受损，则表现为<span class="blur-text">同侧</span>头面部痛温觉障碍。</td>
+                            <td>10..B <strong>头面部浅感觉传导通路（二）</strong><br>损伤表现：若<span class="answer-text">三叉丘系</span>损伤，表现为<span class="answer-text">对侧</span>头面部浅感觉障碍；若<span class="answer-text">三叉神经脊束</span>受损，则表现为<span class="answer-text">同侧</span>头面部痛温觉障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>11..A <strong>皮质脊髓束传导通路特点（一）</strong><br>神经元组成：上运动神经元位于<span class="blur-text">中央前回上2/3</span>和<span class="blur-text">中央旁小叶前部</span>的<span class="blur-text">锥体细胞</span>。<br>下行路径：轴突组成皮质脊髓束，经<span class="blur-text">内囊后肢</span>、<span class="blur-text">大脑脚底</span>、<span class="blur-text">脑桥基底部</span>下行至延髓腹侧部形成<span class="blur-text">锥体</span>。<br>锥体交叉：在锥体下端，<span class="blur-text">75%~90%</span>的纤维交叉至对侧，称<span class="blur-text">锥体交叉</span>。</td>
+                            <td>11..A <strong>皮质脊髓束传导通路特点（一）</strong><br>神经元组成：上运动神经元位于<span class="answer-text">中央前回上2/3</span>和<span class="answer-text">中央旁小叶前部</span>的<span class="answer-text">锥体细胞</span>。<br>下行路径：轴突组成皮质脊髓束，经<span class="answer-text">内囊后肢</span>、<span class="answer-text">大脑脚底</span>、<span class="answer-text">脑桥基底部</span>下行至延髓腹侧部形成<span class="answer-text">锥体</span>。<br>锥体交叉：在锥体下端，<span class="answer-text">75%~90%</span>的纤维交叉至对侧，称<span class="answer-text">锥体交叉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>11..B <strong>皮质脊髓束传导通路特点（二）</strong><br>侧束与前束：交叉后纤维在对侧脊髓外侧索下行称<span class="blur-text">皮质脊髓侧束</span>；未交叉纤维形成<span class="blur-text">皮质脊髓前束</span>在前索内下行，一般只达<span class="blur-text">中胸节</span>。<br>功能联系：大部分纤维经<span class="blur-text">中间神经元</span>中继后到前角运动神经元；极少部分直接止于前角运动神经元，与<span class="blur-text">技巧运动</span>及手的<span class="blur-text">精细动作</span>有关。</td>
+                            <td>11..B <strong>皮质脊髓束传导通路特点（二）</strong><br>侧束与前束：交叉后纤维在对侧脊髓外侧索下行称<span class="answer-text">皮质脊髓侧束</span>；未交叉纤维形成<span class="answer-text">皮质脊髓前束</span>在前索内下行，一般只达<span class="answer-text">中胸节</span>。<br>功能联系：大部分纤维经<span class="answer-text">中间神经元</span>中继后到前角运动神经元；极少部分直接止于前角运动神经元，与<span class="answer-text">技巧运动</span>及手的<span class="answer-text">精细动作</span>有关。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>12..A <strong>皮质核束的起始、行经与支配（一）</strong><br>起始与行经：主要发自<span class="blur-text">中央前回下部</span>，经<span class="blur-text">内囊膝部</span>下达脑干，止于脑神经躯体运动核和特殊内脏运动核。<br>支配特点：大部分脑神经运动核接受<span class="blur-text">双侧</span>皮质核束纤维；仅<span class="blur-text">舌下神经核</span>和<span class="blur-text">面神经核下部</span>（支配眼裂以下表情肌）只接受<span class="blur-text">对侧</span>皮质核束支配。</td>
+                            <td>12..A <strong>皮质核束的起始、行经与支配（一）</strong><br>起始与行经：主要发自<span class="answer-text">中央前回下部</span>，经<span class="answer-text">内囊膝部</span>下达脑干，止于脑神经躯体运动核和特殊内脏运动核。<br>支配特点：大部分脑神经运动核接受<span class="answer-text">双侧</span>皮质核束纤维；仅<span class="answer-text">舌下神经核</span>和<span class="answer-text">面神经核下部</span>（支配眼裂以下表情肌）只接受<span class="answer-text">对侧</span>皮质核束支配。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>12..B <strong>皮质核束损伤分析（二）</strong><br>左侧下半面肌瘫+伸舌左偏：表示<span class="blur-text">右侧</span>皮质核束系统损伤导致<span class="blur-text">核上瘫</span>。<br>左侧全部面肌瘫：表示<span class="blur-text">左侧</span>面神经<span class="blur-text">核下瘫</span>，为周围性损伤。</td>
+                            <td>12..B <strong>皮质核束损伤分析（二）</strong><br>左侧下半面肌瘫+伸舌左偏：表示<span class="answer-text">右侧</span>皮质核束系统损伤导致<span class="answer-text">核上瘫</span>。<br>左侧全部面肌瘫：表示<span class="answer-text">左侧</span>面神经<span class="answer-text">核下瘫</span>，为周围性损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>13..A <strong>大脑的血液供应（一）</strong><br>动脉来源：来自<span class="blur-text">颈内动脉</span>和<span class="blur-text">椎-基底动脉</span>；颈内动脉供应大脑半球前<span class="blur-text">2/3</span>，椎-基底动脉供应大脑半球后<span class="blur-text">1/3</span>。<br>颈内动脉主要分支：<span class="blur-text">大脑前动脉</span>（沿胼胝体上方后行）、<span class="blur-text">大脑中动脉</span>（向外行进入外侧沟）、<span class="blur-text">后交通动脉</span>（与大脑后动脉吻合）、脉络丛前动脉。</td>
+                            <td>13..A <strong>大脑的血液供应（一）</strong><br>动脉来源：来自<span class="answer-text">颈内动脉</span>和<span class="answer-text">椎-基底动脉</span>；颈内动脉供应大脑半球前<span class="answer-text">2/3</span>，椎-基底动脉供应大脑半球后<span class="answer-text">1/3</span>。<br>颈内动脉主要分支：<span class="answer-text">大脑前动脉</span>（沿胼胝体上方后行）、<span class="answer-text">大脑中动脉</span>（向外行进入外侧沟）、<span class="answer-text">后交通动脉</span>（与大脑后动脉吻合）、脉络丛前动脉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>13..B <strong>大脑的血液供应（二）</strong><br>椎-基底动脉：左右<span class="blur-text">椎动脉</span>汇合成<span class="blur-text">基底动脉</span>，分支为<span class="blur-text">大脑后动脉</span>。<br>Willis环组成：由<span class="blur-text">颈内动脉</span>、<span class="blur-text">大脑前动脉</span>、<span class="blur-text">前交通动脉</span>、大脑后动脉、后交通动脉共同组成<span class="blur-text">脑底动脉环</span>（Willis环）。</td>
+                            <td>13..B <strong>大脑的血液供应（二）</strong><br>椎-基底动脉：左右<span class="answer-text">椎动脉</span>汇合成<span class="answer-text">基底动脉</span>，分支为<span class="answer-text">大脑后动脉</span>。<br>Willis环组成：由<span class="answer-text">颈内动脉</span>、<span class="answer-text">大脑前动脉</span>、<span class="answer-text">前交通动脉</span>、大脑后动脉、后交通动脉共同组成<span class="answer-text">脑底动脉环</span>（Willis环）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>14..A <strong>脑脊液的产生及循环途径（一）</strong><br>产生：脑脊液产生于各<span class="blur-text">脑室的脉络丛</span>组织。<br>脑室内循环：侧脑室→经<span class="blur-text">室间孔</span>→第三脑室→经<span class="blur-text">中脑水管</span>→第四脑室→经<span class="blur-text">正中孔</span>和外侧孔→小脑延髓池。</td>
+                            <td>14..A <strong>脑脊液的产生及循环途径（一）</strong><br>产生：脑脊液产生于各<span class="answer-text">脑室的脉络丛</span>组织。<br>脑室内循环：侧脑室→经<span class="answer-text">室间孔</span>→第三脑室→经<span class="answer-text">中脑水管</span>→第四脑室→经<span class="answer-text">正中孔</span>和外侧孔→小脑延髓池。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>14..B <strong>脑脊液的产生及循环途径（二）</strong><br>脑室外循环：离开脑室后漫流至<span class="blur-text">蛛网膜下隙</span>。<br>回流：主要通过<span class="blur-text">蛛网膜粒</span>渗入<span class="blur-text">上矢状窦</span>；其次通过淋巴间隙汇入静脉。</td>
+                            <td>14..B <strong>脑脊液的产生及循环途径（二）</strong><br>脑室外循环：离开脑室后漫流至<span class="answer-text">蛛网膜下隙</span>。<br>回流：主要通过<span class="answer-text">蛛网膜粒</span>渗入<span class="answer-text">上矢状窦</span>；其次通过淋巴间隙汇入静脉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>15..<strong>神经纤维传导兴奋的特征</strong><br>完整性与绝缘性：要求神经纤维在<span class="blur-text">结构</span>和<span class="blur-text">功能</span>上完整；一条神经干内多条纤维传导互不干扰，因局部电流主要在<span class="blur-text">一条纤维</span>上构成回路。<br>双向性：神经纤维上任何一点产生的动作电位可同时向<span class="blur-text">两端</span>传导。<br>相对不疲劳性：以<span class="blur-text">局部电流</span>方式进行，耗能远小于突触传递。</td>
+                            <td>15..<strong>神经纤维传导兴奋的特征</strong><br>完整性与绝缘性：要求神经纤维在<span class="answer-text">结构</span>和<span class="answer-text">功能</span>上完整；一条神经干内多条纤维传导互不干扰，因局部电流主要在<span class="answer-text">一条纤维</span>上构成回路。<br>双向性：神经纤维上任何一点产生的动作电位可同时向<span class="answer-text">两端</span>传导。<br>相对不疲劳性：以<span class="answer-text">局部电流</span>方式进行，耗能远小于突触传递。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>16..<strong>中枢神经元联系方式及作用</strong><br>聚合式：许多神经元轴突末梢与<span class="blur-text">同一神经元</span>建立突触联系，使多个神经元作用集中，发生<span class="blur-text">总和</span>，多见于<span class="blur-text">传出途径</span>。<br>辐散式：一个神经元轴突通过分支与<span class="blur-text">多个神经元</span>建立突触联系，使一个神经元兴奋影响多个神经元，多见于<span class="blur-text">感觉传导途径</span>。<br>链锁式与环式：链锁式在空间上<span class="blur-text">加强或扩大</span>作用范围；环式是<span class="blur-text">正负反馈</span>的结构基础。</td>
+                            <td>16..<strong>中枢神经元联系方式及作用</strong><br>聚合式：许多神经元轴突末梢与<span class="answer-text">同一神经元</span>建立突触联系，使多个神经元作用集中，发生<span class="answer-text">总和</span>，多见于<span class="answer-text">传出途径</span>。<br>辐散式：一个神经元轴突通过分支与<span class="answer-text">多个神经元</span>建立突触联系，使一个神经元兴奋影响多个神经元，多见于<span class="answer-text">感觉传导途径</span>。<br>链锁式与环式：链锁式在空间上<span class="answer-text">加强或扩大</span>作用范围；环式是<span class="answer-text">正负反馈</span>的结构基础。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>17..A <strong>特异性与非特异性投射系统比较（一）</strong><br>特异性投射系统：从<span class="blur-text">丘脑感觉接替核</span>发出，投射到大脑皮质<span class="blur-text">特定区域</span>，具有<span class="blur-text">点对点</span>投射关系；功能是引起特定感觉并激发传出冲动。<br>非特异性投射系统：由<span class="blur-text">丘脑髓板内核群</span>发出，<span class="blur-text">弥散地投射</span>到大脑皮质广泛区域；功能是提高大脑皮质的<span class="blur-text">兴奋性</span>，保持清醒状态。</td>
+                            <td>17..A <strong>特异性与非特异性投射系统比较（一）</strong><br>特异性投射系统：从<span class="answer-text">丘脑感觉接替核</span>发出，投射到大脑皮质<span class="answer-text">特定区域</span>，具有<span class="answer-text">点对点</span>投射关系；功能是引起特定感觉并激发传出冲动。<br>非特异性投射系统：由<span class="answer-text">丘脑髓板内核群</span>发出，<span class="answer-text">弥散地投射</span>到大脑皮质广泛区域；功能是提高大脑皮质的<span class="answer-text">兴奋性</span>，保持清醒状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>17..B <strong>特异性与非特异性投射系统比较（二）</strong><br>相互关系：特异性投射系统产生特定感觉，有赖于非特异性投射系统提高皮质的<span class="blur-text">兴奋水平</span>及觉醒状态；非特异性传入冲动来源于<span class="blur-text">特异性投射系统</span>的感觉传入信息。</td>
+                            <td>17..B <strong>特异性与非特异性投射系统比较（二）</strong><br>相互关系：特异性投射系统产生特定感觉，有赖于非特异性投射系统提高皮质的<span class="answer-text">兴奋水平</span>及觉醒状态；非特异性传入冲动来源于<span class="answer-text">特异性投射系统</span>的感觉传入信息。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>18..A <strong>脊休克的表现（一）</strong><br>躯体与反射：横断面以下躯体<span class="blur-text">感觉</span>和<span class="blur-text">随意运动</span>完全丧失；<span class="blur-text">骨骼肌反射</span>消失，<span class="blur-text">肌紧张</span>减弱或消失。<br>血管与排泄：<span class="blur-text">外周血管扩张</span>、血压下降；直肠和膀胱粪尿潴留，排便排尿反射丧失。</td>
+                            <td>18..A <strong>脊休克的表现（一）</strong><br>躯体与反射：横断面以下躯体<span class="answer-text">感觉</span>和<span class="answer-text">随意运动</span>完全丧失；<span class="answer-text">骨骼肌反射</span>消失，<span class="answer-text">肌紧张</span>减弱或消失。<br>血管与排泄：<span class="answer-text">外周血管扩张</span>、血压下降；直肠和膀胱粪尿潴留，排便排尿反射丧失。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>18..B <strong>脊休克产生原因（二）</strong><br>原因：离断的脊髓突然失去<span class="blur-text">高级中枢</span>（<span class="blur-text">大脑皮质</span>、<span class="blur-text">脑干网状结构</span>和前庭核）的调节，使脊髓内神经元兴奋性明显下降。</td>
+                            <td>18..B <strong>脊休克产生原因（二）</strong><br>原因：离断的脊髓突然失去<span class="answer-text">高级中枢</span>（<span class="answer-text">大脑皮质</span>、<span class="answer-text">脑干网状结构</span>和前庭核）的调节，使脊髓内神经元兴奋性明显下降。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>19..A <strong>突触前抑制与突触后抑制的主要区别（一）</strong><br>结构基础：突触前抑制通过<span class="blur-text">轴突-轴突式</span>突触活动产生；突触后抑制通过<span class="blur-text">抑制性中间神经元</span>的活动产生。<br>产生部位：突触前抑制发生在<span class="blur-text">突触前膜</span>；突触后抑制发生在<span class="blur-text">突触后膜</span>。<br>释放递质：突触前抑制是<span class="blur-text">γ-氨基丁酸</span>；突触后抑制是<span class="blur-text">抑制性递质</span>。</td>
+                            <td>19..A <strong>突触前抑制与突触后抑制的主要区别（一）</strong><br>结构基础：突触前抑制通过<span class="answer-text">轴突-轴突式</span>突触活动产生；突触后抑制通过<span class="answer-text">抑制性中间神经元</span>的活动产生。<br>产生部位：突触前抑制发生在<span class="answer-text">突触前膜</span>；突触后抑制发生在<span class="answer-text">突触后膜</span>。<br>释放递质：突触前抑制是<span class="answer-text">γ-氨基丁酸</span>；突触后抑制是<span class="answer-text">抑制性递质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>19..B <strong>突触前抑制与突触后抑制的主要区别（二）</strong><br>突触后电位：突触前抑制产生<span class="blur-text">EPSP</span>（<span class="blur-text">去极化</span>抑制）；突触后抑制产生<span class="blur-text">IPSP</span>（<span class="blur-text">超极化</span>抑制）。<br>产生机制：突触前抑制因突触前膜先去极化，使末梢释放<span class="blur-text">递质量减少</span>；突触后抑制使突触后膜发生<span class="blur-text">超极化</span>。</td>
+                            <td>19..B <strong>突触前抑制与突触后抑制的主要区别（二）</strong><br>突触后电位：突触前抑制产生<span class="answer-text">EPSP</span>（<span class="answer-text">去极化</span>抑制）；突触后抑制产生<span class="answer-text">IPSP</span>（<span class="answer-text">超极化</span>抑制）。<br>产生机制：突触前抑制因突触前膜先去极化，使末梢释放<span class="answer-text">递质量减少</span>；突触后抑制使突触后膜发生<span class="answer-text">超极化</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>20..A <strong>自主神经系统功能活动特征（一）</strong><br>双重支配：组织器官接受<span class="blur-text">交感神经</span>和<span class="blur-text">副交感神经</span>双重支配，二者作用通常互相<span class="blur-text">拮抗</span>（唾液腺除外）。<br>紧张性作用：对效应器具有持久的<span class="blur-text">紧张性</span>作用。<br>影响因素：对效应器的作用受效应器所处<span class="blur-text">功能状态</span>的影响。</td>
+                            <td>20..A <strong>自主神经系统功能活动特征（一）</strong><br>双重支配：组织器官接受<span class="answer-text">交感神经</span>和<span class="answer-text">副交感神经</span>双重支配，二者作用通常互相<span class="answer-text">拮抗</span>（唾液腺除外）。<br>紧张性作用：对效应器具有持久的<span class="answer-text">紧张性</span>作用。<br>影响因素：对效应器的作用受效应器所处<span class="answer-text">功能状态</span>的影响。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>20..B <strong>自主神经系统功能活动特征（二）</strong><br>交感神经调节：活动<span class="blur-text">广泛</span>，常在机体<span class="blur-text">急剧变化</span>时加强，伴有<span class="blur-text">肾上腺髓质激素</span>大量分泌，动员潜在力量提高适应能力。<br>副交感神经调节：活动范围<span class="blur-text">局限</span>，常在<span class="blur-text">安静</span>时活动较强，伴<span class="blur-text">胰岛素</span>分泌增多，促进消化、储存能量。</td>
+                            <td>20..B <strong>自主神经系统功能活动特征（二）</strong><br>交感神经调节：活动<span class="answer-text">广泛</span>，常在机体<span class="answer-text">急剧变化</span>时加强，伴有<span class="answer-text">肾上腺髓质激素</span>大量分泌，动员潜在力量提高适应能力。<br>副交感神经调节：活动范围<span class="answer-text">局限</span>，常在<span class="answer-text">安静</span>时活动较强，伴<span class="answer-text">胰岛素</span>分泌增多，促进消化、储存能量。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>21..A <strong>下丘脑的生理功能（一）</strong><br>基本功能：是调节<span class="blur-text">内脏活动</span>的较高级中枢，整合躯体运动、自主性功能和<span class="blur-text">内分泌腺</span>活动。<br>摄食与饱中枢：外侧区是<span class="blur-text">摄食中枢</span>，腹内侧核是<span class="blur-text">饱中枢</span>。<br>水平衡：外侧区尾侧是<span class="blur-text">摄水中枢</span>，并控制<span class="blur-text">抗利尿激素</span>释放。</td>
+                            <td>21..A <strong>下丘脑的生理功能（一）</strong><br>基本功能：是调节<span class="answer-text">内脏活动</span>的较高级中枢，整合躯体运动、自主性功能和<span class="answer-text">内分泌腺</span>活动。<br>摄食与饱中枢：外侧区是<span class="answer-text">摄食中枢</span>，腹内侧核是<span class="answer-text">饱中枢</span>。<br>水平衡：外侧区尾侧是<span class="answer-text">摄水中枢</span>，并控制<span class="answer-text">抗利尿激素</span>释放。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>21..B <strong>下丘脑的生理功能（二）</strong><br>体温与情绪：<span class="blur-text">视前区-下丘脑前部</span>是体温调节中枢所在地；腹内侧区存在<span class="blur-text">防御反应区</span>。<br>生物节律：<span class="blur-text">视交叉上核</span>是机体昼夜节律活动的重要中枢结构和控制中心。</td>
+                            <td>21..B <strong>下丘脑的生理功能（二）</strong><br>体温与情绪：<span class="answer-text">视前区-下丘脑前部</span>是体温调节中枢所在地；腹内侧区存在<span class="answer-text">防御反应区</span>。<br>生物节律：<span class="answer-text">视交叉上核</span>是机体昼夜节律活动的重要中枢结构和控制中心。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>22..<strong>脑电波的分类及各波的意义</strong><br>α波与β波：α波频率<span class="blur-text">8~13Hz</span>，振幅<span class="blur-text">20~100μV</span>，在<span class="blur-text">枕叶</span>区显著；β波频率<span class="blur-text">14~30Hz</span>，振幅<span class="blur-text">5~20μV</span>，在<span class="blur-text">额叶</span>和<span class="blur-text">顶叶</span>明显。<br>θ波与δ波：θ波频率<span class="blur-text">4~7Hz</span>，振幅<span class="blur-text">20~150μV</span>，是中枢神经系统<span class="blur-text">抑制状态</span>的表现；δ波频率<span class="blur-text">0.5~3Hz</span>，振幅<span class="blur-text">20~200μV</span>，睡眠时出现。</td>
+                            <td>22..<strong>脑电波的分类及各波的意义</strong><br>α波与β波：α波频率<span class="answer-text">8~13Hz</span>，振幅<span class="answer-text">20~100μV</span>，在<span class="answer-text">枕叶</span>区显著；β波频率<span class="answer-text">14~30Hz</span>，振幅<span class="answer-text">5~20μV</span>，在<span class="answer-text">额叶</span>和<span class="answer-text">顶叶</span>明显。<br>θ波与δ波：θ波频率<span class="answer-text">4~7Hz</span>，振幅<span class="answer-text">20~150μV</span>，是中枢神经系统<span class="answer-text">抑制状态</span>的表现；δ波频率<span class="answer-text">0.5~3Hz</span>，振幅<span class="answer-text">20~200μV</span>，睡眠时出现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>23..A <strong>去大脑僵直的现象（一）</strong><br>切断部位：在中脑<span class="blur-text">上、下丘</span>之间切断脑干。<br>姿态：动物出现四肢<span class="blur-text">伸直</span>、头<span class="blur-text">昂</span>尾<span class="blur-text">翘</span>、脊柱硬挺。<br>肌肉表现：全身肌肉特别是<span class="blur-text">伸肌</span>出现肌紧张<span class="blur-text">亢进</span>。</td>
+                            <td>23..A <strong>去大脑僵直的现象（一）</strong><br>切断部位：在中脑<span class="answer-text">上、下丘</span>之间切断脑干。<br>姿态：动物出现四肢<span class="answer-text">伸直</span>、头<span class="answer-text">昂</span>尾<span class="answer-text">翘</span>、脊柱硬挺。<br>肌肉表现：全身肌肉特别是<span class="answer-text">伸肌</span>出现肌紧张<span class="answer-text">亢进</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>23..B <strong>去大脑僵直的原因（二）</strong><br>机制：切断后使<span class="blur-text">大脑皮质</span>抑制区和<span class="blur-text">尾状核</span>到脑干网状结构<span class="blur-text">抑制区</span>的通路被切断，抑制区失去高位中枢始动作用，下行抑制作用降低。<br>易化作用：而<span class="blur-text">易化区</span>活动受影响小，下行<span class="blur-text">易化</span>作用占优势，导致伸肌肌紧张亢进。</td>
+                            <td>23..B <strong>去大脑僵直的原因（二）</strong><br>机制：切断后使<span class="answer-text">大脑皮质</span>抑制区和<span class="answer-text">尾状核</span>到脑干网状结构<span class="answer-text">抑制区</span>的通路被切断，抑制区失去高位中枢始动作用，下行抑制作用降低。<br>易化作用：而<span class="answer-text">易化区</span>活动受影响小，下行<span class="answer-text">易化</span>作用占优势，导致伸肌肌紧张亢进。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>24..A <strong>神经胶质细胞的功能（一）</strong><br>支持作用：<span class="blur-text">星形胶质细胞</span>构成支架，支持神经元胞体和纤维。<br>修复与再生：神经元变性时，<span class="blur-text">小胶质细胞</span>转变为<span class="blur-text">巨噬细胞</span>参与清除碎片，再由胶质细胞增生填充。<br>物质代谢：星形胶质细胞终足终止于<span class="blur-text">毛细血管壁</span>，运输营养物质和排除代谢产物。</td>
+                            <td>24..A <strong>神经胶质细胞的功能（一）</strong><br>支持作用：<span class="answer-text">星形胶质细胞</span>构成支架，支持神经元胞体和纤维。<br>修复与再生：神经元变性时，<span class="answer-text">小胶质细胞</span>转变为<span class="answer-text">巨噬细胞</span>参与清除碎片，再由胶质细胞增生填充。<br>物质代谢：星形胶质细胞终足终止于<span class="answer-text">毛细血管壁</span>，运输营养物质和排除代谢产物。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>24..B <strong>神经胶质细胞的功能（二）</strong><br>绝缘和屏蔽：<span class="blur-text">施万细胞</span>、<span class="blur-text">少突胶质细胞</span>构成髓鞘，防止电流扩散；构成<span class="blur-text">血-脑屏障</span>。<br>维持离子浓度：星形胶质细胞通过泵<span class="blur-text">K+</span>活动，缓冲细胞外液中钾离子浓度。<br>摄取和分泌：<span class="blur-text">神经递质</span>的摄取和分泌。</td>
+                            <td>24..B <strong>神经胶质细胞的功能（二）</strong><br>绝缘和屏蔽：<span class="answer-text">施万细胞</span>、<span class="answer-text">少突胶质细胞</span>构成髓鞘，防止电流扩散；构成<span class="answer-text">血-脑屏障</span>。<br>维持离子浓度：星形胶质细胞通过泵<span class="answer-text">K+</span>活动，缓冲细胞外液中钾离子浓度。<br>摄取和分泌：<span class="answer-text">神经递质</span>的摄取和分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>25..A <strong>突触传递的过程及原理（一）</strong><br>化学性突触：动作电位使突触前膜对<span class="blur-text">Ca2+</span>通透性增加，突触小泡释放递质到<span class="blur-text">突触间隙</span>。<br>兴奋性突触：释放<span class="blur-text">兴奋性递质</span>，提高突触后膜对<span class="blur-text">Na+</span>通透性，产生<span class="blur-text">EPSP</span>。</td>
+                            <td>25..A <strong>突触传递的过程及原理（一）</strong><br>化学性突触：动作电位使突触前膜对<span class="answer-text">Ca2+</span>通透性增加，突触小泡释放递质到<span class="answer-text">突触间隙</span>。<br>兴奋性突触：释放<span class="answer-text">兴奋性递质</span>，提高突触后膜对<span class="answer-text">Na+</span>通透性，产生<span class="answer-text">EPSP</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>25..B <strong>突触传递的过程及原理（二）</strong><br>抑制性突触：释放<span class="blur-text">抑制性递质</span>，提高突触后膜对<span class="blur-text">Cl-</span>或K+通透性（主要是Cl-），导致<span class="blur-text">超极化</span>，产生<span class="blur-text">IPSP</span>。<br>递质清除：通过<span class="blur-text">灭活酶</span>失活、突触前膜<span class="blur-text">摄取</span>或进入血液终止作用。<br>电突触：间隙<span class="blur-text">狭窄</span>，膜阻抗<span class="blur-text">低</span>，可<span class="blur-text">双向</span>传递。</td>
+                            <td>25..B <strong>突触传递的过程及原理（二）</strong><br>抑制性突触：释放<span class="answer-text">抑制性递质</span>，提高突触后膜对<span class="answer-text">Cl-</span>或K+通透性（主要是Cl-），导致<span class="answer-text">超极化</span>，产生<span class="answer-text">IPSP</span>。<br>递质清除：通过<span class="answer-text">灭活酶</span>失活、突触前膜<span class="answer-text">摄取</span>或进入血液终止作用。<br>电突触：间隙<span class="answer-text">狭窄</span>，膜阻抗<span class="answer-text">低</span>，可<span class="answer-text">双向</span>传递。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>26..A <strong>兴奋性突触与抑制性突触传递的异同（一）</strong><br>相同点：动作电位到达末梢时引起突触前膜对<span class="blur-text">Ca2+</span>通透性增加；递质与<span class="blur-text">特异性受体</span>结合导致突触后膜离子通道状态改变；突触后电位都是<span class="blur-text">局部电位</span>，经总和达到阈电位引起活动改变。</td>
+                            <td>26..A <strong>兴奋性突触与抑制性突触传递的异同（一）</strong><br>相同点：动作电位到达末梢时引起突触前膜对<span class="answer-text">Ca2+</span>通透性增加；递质与<span class="answer-text">特异性受体</span>结合导致突触后膜离子通道状态改变；突触后电位都是<span class="answer-text">局部电位</span>，经总和达到阈电位引起活动改变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>26..B <strong>兴奋性突触与抑制性突触传递的异同（二）</strong><br>递质与通透性：兴奋性释放<span class="blur-text">兴奋性递质</span>，增加<span class="blur-text">Na+</span>通透性；抑制性释放<span class="blur-text">抑制性递质</span>，增加<span class="blur-text">Cl-</span>通透性。<br>电位变化：兴奋性产生<span class="blur-text">EPSP</span>（<span class="blur-text">去极化</span>）；抑制性产生<span class="blur-text">IPSP</span>（<span class="blur-text">超极化</span>）。</td>
+                            <td>26..B <strong>兴奋性突触与抑制性突触传递的异同（二）</strong><br>递质与通透性：兴奋性释放<span class="answer-text">兴奋性递质</span>，增加<span class="answer-text">Na+</span>通透性；抑制性释放<span class="answer-text">抑制性递质</span>，增加<span class="answer-text">Cl-</span>通透性。<br>电位变化：兴奋性产生<span class="answer-text">EPSP</span>（<span class="answer-text">去极化</span>）；抑制性产生<span class="answer-text">IPSP</span>（<span class="answer-text">超极化</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>27..A <strong>突触后抑制的概念、分类及生理意义（一）</strong><br>概念：由<span class="blur-text">抑制性中间神经元</span>活动引起，末梢释放<span class="blur-text">抑制性递质</span>，使突触后膜产生<span class="blur-text">IPSP</span>，从而使突触后神经元出现抑制。<br>传入侧支性抑制：传入纤维进入中枢后，直接兴奋某一中枢神经元，同时发出侧支兴奋一个<span class="blur-text">抑制性中间神经元</span>，转而抑制另一中枢神经元产生IPSP，曾被称为<span class="blur-text">交互抑制</span>；意义在于使不同中枢活动<span class="blur-text">协调</span>。</td>
+                            <td>27..A <strong>突触后抑制的概念、分类及生理意义（一）</strong><br>概念：由<span class="answer-text">抑制性中间神经元</span>活动引起，末梢释放<span class="answer-text">抑制性递质</span>，使突触后膜产生<span class="answer-text">IPSP</span>，从而使突触后神经元出现抑制。<br>传入侧支性抑制：传入纤维进入中枢后，直接兴奋某一中枢神经元，同时发出侧支兴奋一个<span class="answer-text">抑制性中间神经元</span>，转而抑制另一中枢神经元产生IPSP，曾被称为<span class="answer-text">交互抑制</span>；意义在于使不同中枢活动<span class="answer-text">协调</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>27..B <strong>突触后抑制的概念、分类及生理意义（二）</strong><br>回返性抑制：中枢神经元兴奋时，传出冲动沿轴突外传，同时侧支兴奋另一个<span class="blur-text">抑制性中间神经元</span>，反过来抑制原先兴奋的神经元及同一中枢的其他神经元；属于<span class="blur-text">反馈抑制</span>（<span class="blur-text">负反馈</span>）。<br>生理意义：使神经元活动<span class="blur-text">及时终止</span>，促使同一中枢内许多神经元活动<span class="blur-text">协调一致</span>。</td>
+                            <td>27..B <strong>突触后抑制的概念、分类及生理意义（二）</strong><br>回返性抑制：中枢神经元兴奋时，传出冲动沿轴突外传，同时侧支兴奋另一个<span class="answer-text">抑制性中间神经元</span>，反过来抑制原先兴奋的神经元及同一中枢的其他神经元；属于<span class="answer-text">反馈抑制</span>（<span class="answer-text">负反馈</span>）。<br>生理意义：使神经元活动<span class="answer-text">及时终止</span>，促使同一中枢内许多神经元活动<span class="answer-text">协调一致</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>28..A <strong>神经递质受体的特点（一）</strong><br>亚型与分布：每个配体有数个<span class="blur-text">受体亚型</span>；除存在于<span class="blur-text">突触后膜</span>外，还存在于<span class="blur-text">突触前膜</span>，调节递质释放。<br>受体家族：分为<span class="blur-text">促离子型受体</span>（<span class="blur-text">化学门控通道</span>）和<span class="blur-text">促代谢型受体</span>（<span class="blur-text">G-蛋白耦联受体</span>）。</td>
+                            <td>28..A <strong>神经递质受体的特点（一）</strong><br>亚型与分布：每个配体有数个<span class="answer-text">受体亚型</span>；除存在于<span class="answer-text">突触后膜</span>外，还存在于<span class="answer-text">突触前膜</span>，调节递质释放。<br>受体家族：分为<span class="answer-text">促离子型受体</span>（<span class="answer-text">化学门控通道</span>）和<span class="answer-text">促代谢型受体</span>（<span class="answer-text">G-蛋白耦联受体</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>28..B <strong>神经递质受体的特点（二）</strong><br>脱敏现象：受体较长时间暴露于配体时失去反应。包括<span class="blur-text">同源脱敏</span>（只对特异性配体丧失反应）和<span class="blur-text">异源脱敏</span>（使细胞对其他配体也无反应）。</td>
+                            <td>28..B <strong>神经递质受体的特点（二）</strong><br>脱敏现象：受体较长时间暴露于配体时失去反应。包括<span class="answer-text">同源脱敏</span>（只对特异性配体丧失反应）和<span class="answer-text">异源脱敏</span>（使细胞对其他配体也无反应）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>29..<strong>条件反射和非条件反射的区别</strong><br>形成与基础：非条件反射<span class="blur-text">生来就有</span>、数量<span class="blur-text">有限</span>，是长期<span class="blur-text">种系发展</span>中形成的；条件反射通过<span class="blur-text">后天学习</span>形成，数量<span class="blur-text">无限</span>，在<span class="blur-text">非条件反射</span>基础上建立。<br>中枢部位：非条件反射可无需<span class="blur-text">大脑皮层</span>参与；条件反射主要中枢在<span class="blur-text">大脑皮层</span>。<br>生理意义：非条件反射使机体初步<span class="blur-text">适应环境</span>；条件反射大大提高机体对环境的<span class="blur-text">适应性</span>和<span class="blur-text">预见性</span>。</td>
+                            <td>29..<strong>条件反射和非条件反射的区别</strong><br>形成与基础：非条件反射<span class="answer-text">生来就有</span>、数量<span class="answer-text">有限</span>，是长期<span class="answer-text">种系发展</span>中形成的；条件反射通过<span class="answer-text">后天学习</span>形成，数量<span class="answer-text">无限</span>，在<span class="answer-text">非条件反射</span>基础上建立。<br>中枢部位：非条件反射可无需<span class="answer-text">大脑皮层</span>参与；条件反射主要中枢在<span class="answer-text">大脑皮层</span>。<br>生理意义：非条件反射使机体初步<span class="answer-text">适应环境</span>；条件反射大大提高机体对环境的<span class="answer-text">适应性</span>和<span class="answer-text">预见性</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>30..A <strong>牵张反射的概念、类型及产生机理（一）</strong><br>概念：有神经支配的骨骼肌受到外力牵拉时，能引起受牵拉的<span class="blur-text">同一肌肉</span>收缩的反射活动。<br>感受器与传入：感受器是<span class="blur-text">肌梭</span>；肌肉受牵拉兴奋时，经<span class="blur-text">Ia</span>、<span class="blur-text">II</span>类传入纤维到脊髓，使脊髓前角<span class="blur-text">α运动神经元</span>兴奋。<br>γ环路：前角<span class="blur-text">γ运动神经元</span>兴奋引起<span class="blur-text">梭内肌</span>收缩，维持肌梭兴奋传入，使牵张反射加强。</td>
+                            <td>30..A <strong>牵张反射的概念、类型及产生机理（一）</strong><br>概念：有神经支配的骨骼肌受到外力牵拉时，能引起受牵拉的<span class="answer-text">同一肌肉</span>收缩的反射活动。<br>感受器与传入：感受器是<span class="answer-text">肌梭</span>；肌肉受牵拉兴奋时，经<span class="answer-text">Ia</span>、<span class="answer-text">II</span>类传入纤维到脊髓，使脊髓前角<span class="answer-text">α运动神经元</span>兴奋。<br>γ环路：前角<span class="answer-text">γ运动神经元</span>兴奋引起<span class="answer-text">梭内肌</span>收缩，维持肌梭兴奋传入，使牵张反射加强。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>30..B <strong>牵张反射的类型（二）</strong><br>腱反射：又称<span class="blur-text">位相性</span>牵张反射，快速牵拉肌腱，发生于<span class="blur-text">快肌纤维</span>。<br>肌紧张：又称<span class="blur-text">紧张性</span>牵张反射，缓慢持续牵拉肌腱，发生于<span class="blur-text">慢肌纤维</span>。</td>
+                            <td>30..B <strong>牵张反射的类型（二）</strong><br>腱反射：又称<span class="answer-text">位相性</span>牵张反射，快速牵拉肌腱，发生于<span class="answer-text">快肌纤维</span>。<br>肌紧张：又称<span class="answer-text">紧张性</span>牵张反射，缓慢持续牵拉肌腱，发生于<span class="answer-text">慢肌纤维</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>31..A <strong>苯二氮䓬类作用机制和主要临床应用（一）</strong><br>作用机制：与<span class="blur-text">苯二氮䓬受体</span>结合后，促进<span class="blur-text">GABA</span>与<span class="blur-text">GABAA</span>受体结合，使氯通道开放频率增加，<span class="blur-text">Cl-</span>内流使神经细胞超极化，产生突触后抑制。<br>抗焦虑与镇静：改善恐惧、紧张、忧虑等症状；可产生暂时性<span class="blur-text">记忆缺失</span>，用于<span class="blur-text">麻醉前给药</span>。<br>镇静催眠：缩短<span class="blur-text">诱导睡眠时间</span>，提高觉醒阈，减少夜间觉醒次数。</td>
+                            <td>31..A <strong>苯二氮䓬类作用机制和主要临床应用（一）</strong><br>作用机制：与<span class="answer-text">苯二氮䓬受体</span>结合后，促进<span class="answer-text">GABA</span>与<span class="answer-text">GABAA</span>受体结合，使氯通道开放频率增加，<span class="answer-text">Cl-</span>内流使神经细胞超极化，产生突触后抑制。<br>抗焦虑与镇静：改善恐惧、紧张、忧虑等症状；可产生暂时性<span class="answer-text">记忆缺失</span>，用于<span class="answer-text">麻醉前给药</span>。<br>镇静催眠：缩短<span class="answer-text">诱导睡眠时间</span>，提高觉醒阈，减少夜间觉醒次数。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>31..B <strong>苯二氮䓬类作用机制和主要临床应用（二）</strong><br>抗惊厥抗癫痫：辅助治疗<span class="blur-text">破伤风</span>、<span class="blur-text">子痫</span>、小儿高热惊厥和药物中毒性惊厥；<span class="blur-text">地西泮</span>静脉注射是<span class="blur-text">癫痫持续状态</span>的首选药。<br>中枢性肌松作用：缓解人类<span class="blur-text">大脑损伤</span>所致肌肉僵直。</td>
+                            <td>31..B <strong>苯二氮䓬类作用机制和主要临床应用（二）</strong><br>抗惊厥抗癫痫：辅助治疗<span class="answer-text">破伤风</span>、<span class="answer-text">子痫</span>、小儿高热惊厥和药物中毒性惊厥；<span class="answer-text">地西泮</span>静脉注射是<span class="answer-text">癫痫持续状态</span>的首选药。<br>中枢性肌松作用：缓解人类<span class="answer-text">大脑损伤</span>所致肌肉僵直。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>32..A <strong>苯二氮䓬类取代巴比妥类的理由（一）</strong><br>抗焦虑与安全性：小剂量苯二氮䓬类有良好的<span class="blur-text">抗焦虑</span>作用，快而确实；治疗指数<span class="blur-text">高</span>，安全范围<span class="blur-text">大</span>，对呼吸影响<span class="blur-text">小</span>。<br>睡眠时相：延长<span class="blur-text">NREMS第二期</span>，缩短或取消<span class="blur-text">NREMS第四期</span>（减少夜惊和梦游）；<span class="blur-text">依赖性</span>和<span class="blur-text">戒断症状</span>较轻。</td>
+                            <td>32..A <strong>苯二氮䓬类取代巴比妥类的理由（一）</strong><br>抗焦虑与安全性：小剂量苯二氮䓬类有良好的<span class="answer-text">抗焦虑</span>作用，快而确实；治疗指数<span class="answer-text">高</span>，安全范围<span class="answer-text">大</span>，对呼吸影响<span class="answer-text">小</span>。<br>睡眠时相：延长<span class="answer-text">NREMS第二期</span>，缩短或取消<span class="answer-text">NREMS第四期</span>（减少夜惊和梦游）；<span class="answer-text">依赖性</span>和<span class="answer-text">戒断症状</span>较轻。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>32..B <strong>苯二氮䓬类取代巴比妥类的理由（二）</strong><br>代谢与相互作用：对肝药酶<span class="blur-text">几无诱导作用</span>，联合用药相互作用小。<br>巴比妥类缺点：缩短<span class="blur-text">REMS</span>，久用停药后REMS"<span class="blur-text">反跳性</span>"延长，伴有多梦；苯二氮䓬类还有<span class="blur-text">中枢性肌肉松弛</span>作用，麻醉前给药可减少<span class="blur-text">麻醉药用量</span>。</td>
+                            <td>32..B <strong>苯二氮䓬类取代巴比妥类的理由（二）</strong><br>代谢与相互作用：对肝药酶<span class="answer-text">几无诱导作用</span>，联合用药相互作用小。<br>巴比妥类缺点：缩短<span class="answer-text">REMS</span>，久用停药后REMS"<span class="answer-text">反跳性</span>"延长，伴有多梦；苯二氮䓬类还有<span class="answer-text">中枢性肌肉松弛</span>作用，麻醉前给药可减少<span class="answer-text">麻醉药用量</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>33..<strong>苯妥英钠的临床应用</strong><br>癫痫治疗：是<span class="blur-text">大发作</span>和<span class="blur-text">局限性发作</span>的首选药物；对小发作（<span class="blur-text">失神发作</span>）无效，甚至使病情恶化。<br>神经痛：治疗<span class="blur-text">三叉神经痛</span>和<span class="blur-text">舌咽神经痛</span>等中枢疼痛综合征。<br>心律失常：主要用于治疗<span class="blur-text">室性心律失常</span>，特别对<span class="blur-text">强心苷中毒</span>引起的室性心律失常有效。</td>
+                            <td>33..<strong>苯妥英钠的临床应用</strong><br>癫痫治疗：是<span class="answer-text">大发作</span>和<span class="answer-text">局限性发作</span>的首选药物；对小发作（<span class="answer-text">失神发作</span>）无效，甚至使病情恶化。<br>神经痛：治疗<span class="answer-text">三叉神经痛</span>和<span class="answer-text">舌咽神经痛</span>等中枢疼痛综合征。<br>心律失常：主要用于治疗<span class="answer-text">室性心律失常</span>，特别对<span class="answer-text">强心苷中毒</span>引起的室性心律失常有效。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>34..A <strong>苯妥英钠的不良反应（一）</strong><br>急性与慢性毒性：静脉注射过快可引起<span class="blur-text">心律失常</span>、血压下降；口服过量表现眩晕、<span class="blur-text">共济失调</span>和<span class="blur-text">眼球震颤</span>，严重者可出现<span class="blur-text">小脑萎缩</span>。<br>精神症状：血药浓度＞40μg/ml可致<span class="blur-text">精神错乱</span>，＞50μg/ml出现<span class="blur-text">昏睡</span>、昏迷；约<span class="blur-text">20%</span>患者可出现<span class="blur-text">齿龈增生</span>。</td>
+                            <td>34..A <strong>苯妥英钠的不良反应（一）</strong><br>急性与慢性毒性：静脉注射过快可引起<span class="answer-text">心律失常</span>、血压下降；口服过量表现眩晕、<span class="answer-text">共济失调</span>和<span class="answer-text">眼球震颤</span>，严重者可出现<span class="answer-text">小脑萎缩</span>。<br>精神症状：血药浓度＞40μg/ml可致<span class="answer-text">精神错乱</span>，＞50μg/ml出现<span class="answer-text">昏睡</span>、昏迷；约<span class="answer-text">20%</span>患者可出现<span class="answer-text">齿龈增生</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>34..B <strong>苯妥英钠的不良反应（二）</strong><br>代谢与血液：加速<span class="blur-text">维生素D</span>代谢，出现<span class="blur-text">低钙血症</span>、软骨病和佝偻病；久服可致<span class="blur-text">叶酸</span>吸收和代谢障碍，发生<span class="blur-text">巨幼细胞贫血</span>。<br>过敏反应与致畸：皮肤瘙痒、皮疹、<span class="blur-text">粒细胞缺乏</span>、<span class="blur-text">血小板减少</span>、<span class="blur-text">再生障碍性贫血</span>等；偶见肝脏损害；有<span class="blur-text">致畸</span>反应。</td>
+                            <td>34..B <strong>苯妥英钠的不良反应（二）</strong><br>代谢与血液：加速<span class="answer-text">维生素D</span>代谢，出现<span class="answer-text">低钙血症</span>、软骨病和佝偻病；久服可致<span class="answer-text">叶酸</span>吸收和代谢障碍，发生<span class="answer-text">巨幼细胞贫血</span>。<br>过敏反应与致畸：皮肤瘙痒、皮疹、<span class="answer-text">粒细胞缺乏</span>、<span class="answer-text">血小板减少</span>、<span class="answer-text">再生障碍性贫血</span>等；偶见肝脏损害；有<span class="answer-text">致畸</span>反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>35..<strong>氯丙嗪能阻断的受体</strong><br>受体类型：可以阻断<span class="blur-text">多巴胺受体</span>、<span class="blur-text">肾上腺素α受体</span>和<span class="blur-text">M胆碱受体</span>。<br>抗精神病作用机制：与阻断中脑-<span class="blur-text">边缘系统</span>和中脑-<span class="blur-text">皮层系统</span>的<span class="blur-text">D2受体</span>有关。</td>
+                            <td>35..<strong>氯丙嗪能阻断的受体</strong><br>受体类型：可以阻断<span class="answer-text">多巴胺受体</span>、<span class="answer-text">肾上腺素α受体</span>和<span class="answer-text">M胆碱受体</span>。<br>抗精神病作用机制：与阻断中脑-<span class="answer-text">边缘系统</span>和中脑-<span class="answer-text">皮层系统</span>的<span class="answer-text">D2受体</span>有关。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>36..A <strong>氯丙嗪的中枢神经系统作用及临床应用（一）</strong><br>抗精神病作用：阻断中脑-边缘系统和中脑-皮层系统的<span class="blur-text">D2样受体</span>；迅速控制<span class="blur-text">兴奋-躁动</span>状态，大剂量连续用药能消除<span class="blur-text">幻觉</span>和<span class="blur-text">妄想</span>等症状。<br>镇吐作用：小剂量阻断延髓第四脑室底部<span class="blur-text">催吐化学感受区</span>的D2受体；大剂量直接抑制<span class="blur-text">呕吐中枢</span>；不能对抗<span class="blur-text">前庭神经</span>刺激引起的呕吐。</td>
+                            <td>36..A <strong>氯丙嗪的中枢神经系统作用及临床应用（一）</strong><br>抗精神病作用：阻断中脑-边缘系统和中脑-皮层系统的<span class="answer-text">D2样受体</span>；迅速控制<span class="answer-text">兴奋-躁动</span>状态，大剂量连续用药能消除<span class="answer-text">幻觉</span>和<span class="answer-text">妄想</span>等症状。<br>镇吐作用：小剂量阻断延髓第四脑室底部<span class="answer-text">催吐化学感受区</span>的D2受体；大剂量直接抑制<span class="answer-text">呕吐中枢</span>；不能对抗<span class="answer-text">前庭神经</span>刺激引起的呕吐。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>36..B <strong>氯丙嗪的中枢神经系统作用及临床应用（二）</strong><br>体温调节：对<span class="blur-text">下丘脑体温调节中枢</span>有很强的抑制作用，使体温随<span class="blur-text">环境温度</span>的改变而改变。<br>自主神经作用：阻断<span class="blur-text">α受体</span>导致血管扩张、血压下降；阻断<span class="blur-text">M胆碱受体</span>引起口干、便秘、视物模糊。<br>内分泌影响：阻断结节-漏斗系统的<span class="blur-text">D2受体</span>亚型，减少催乳素释放抑制因子等分泌，抑制<span class="blur-text">垂体生长激素</span>分泌。</td>
+                            <td>36..B <strong>氯丙嗪的中枢神经系统作用及临床应用（二）</strong><br>体温调节：对<span class="answer-text">下丘脑体温调节中枢</span>有很强的抑制作用，使体温随<span class="answer-text">环境温度</span>的改变而改变。<br>自主神经作用：阻断<span class="answer-text">α受体</span>导致血管扩张、血压下降；阻断<span class="answer-text">M胆碱受体</span>引起口干、便秘、视物模糊。<br>内分泌影响：阻断结节-漏斗系统的<span class="answer-text">D2受体</span>亚型，减少催乳素释放抑制因子等分泌，抑制<span class="answer-text">垂体生长激素</span>分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>37..A <strong>氯丙嗪的不良反应及禁忌症（一）</strong><br>一般不良反应：中枢抑制，<span class="blur-text">M受体拮抗</span>症状，<span class="blur-text">α受体拮抗</span>症状。<br>锥体外系反应（1）：<span class="blur-text">帕金森综合征</span>、<span class="blur-text">静坐不能</span>、<span class="blur-text">急性肌张力障碍</span>（多巴胺功能下降，胆碱能功能相对增强→抗胆碱治疗如<span class="blur-text">苯海索</span>+增强多巴胺功能如<span class="blur-text">金刚烷胺</span>）。</td>
+                            <td>37..A <strong>氯丙嗪的不良反应及禁忌症（一）</strong><br>一般不良反应：中枢抑制，<span class="answer-text">M受体拮抗</span>症状，<span class="answer-text">α受体拮抗</span>症状。<br>锥体外系反应（1）：<span class="answer-text">帕金森综合征</span>、<span class="answer-text">静坐不能</span>、<span class="answer-text">急性肌张力障碍</span>（多巴胺功能下降，胆碱能功能相对增强→抗胆碱治疗如<span class="answer-text">苯海索</span>+增强多巴胺功能如<span class="answer-text">金刚烷胺</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>37..B <strong>氯丙嗪的不良反应及禁忌症（二）</strong><br>锥体外系反应（2）：<span class="blur-text">迟发性运动障碍</span>（长期使用，<span class="blur-text">D2受体上调</span>→停药，抗多巴胺治疗）。<br>其他不良反应：药源性精神异常、<span class="blur-text">惊厥</span>与癫痫、过敏反应、内分泌紊乱。<br>禁忌症：禁用于严重<span class="blur-text">肝肾功能不全</span>、严重中枢抑制、严重<span class="blur-text">心血管疾病</span>、<span class="blur-text">癫痫</span>患者、乳腺增生及乳腺癌。</td>
+                            <td>37..B <strong>氯丙嗪的不良反应及禁忌症（二）</strong><br>锥体外系反应（2）：<span class="answer-text">迟发性运动障碍</span>（长期使用，<span class="answer-text">D2受体上调</span>→停药，抗多巴胺治疗）。<br>其他不良反应：药源性精神异常、<span class="answer-text">惊厥</span>与癫痫、过敏反应、内分泌紊乱。<br>禁忌症：禁用于严重<span class="answer-text">肝肾功能不全</span>、严重中枢抑制、严重<span class="answer-text">心血管疾病</span>、<span class="answer-text">癫痫</span>患者、乳腺增生及乳腺癌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>38..<strong>抗精神失常药的分类</strong><br>临床用途分类：分为<span class="blur-text">抗精神病药</span>、<span class="blur-text">抗躁狂症药</span>、<span class="blur-text">抗抑郁症药</span>和<span class="blur-text">抗焦虑症</span>。<br>抗精神分裂症药分类（四类）：<span class="blur-text">吩噻嗪类</span>、<span class="blur-text">硫杂蒽类</span>、<span class="blur-text">丁酰苯类</span>及其他类。</td>
+                            <td>38..<strong>抗精神失常药的分类</strong><br>临床用途分类：分为<span class="answer-text">抗精神病药</span>、<span class="answer-text">抗躁狂症药</span>、<span class="answer-text">抗抑郁症药</span>和<span class="answer-text">抗焦虑症</span>。<br>抗精神分裂症药分类（四类）：<span class="answer-text">吩噻嗪类</span>、<span class="answer-text">硫杂蒽类</span>、<span class="answer-text">丁酰苯类</span>及其他类。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">39..<strong>流行性脑脊髓膜炎与流行性乙型脑炎的区别</strong><br>（图片内容，请参考教材表格进行对比）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>40..A <strong>流行性脑脊髓膜炎的临床病理联系（一）</strong><br>病变性质与部位：<span class="blur-text">化脓性炎</span>；病变位于<span class="blur-text">脑脊膜</span>和<span class="blur-text">蛛网膜下腔</span>。<br>病变特点：肉眼见脑脊膜血管高度扩张，蛛网膜下腔充满<span class="blur-text">灰黄色脓性渗出物</span>；镜下见蛛网膜血管高度扩张充血，蛛网膜下腔有大量<span class="blur-text">中性粒细胞</span>及<span class="blur-text">纤维蛋白</span>渗出。</td>
+                            <td>40..A <strong>流行性脑脊髓膜炎的临床病理联系（一）</strong><br>病变性质与部位：<span class="answer-text">化脓性炎</span>；病变位于<span class="answer-text">脑脊膜</span>和<span class="answer-text">蛛网膜下腔</span>。<br>病变特点：肉眼见脑脊膜血管高度扩张，蛛网膜下腔充满<span class="answer-text">灰黄色脓性渗出物</span>；镜下见蛛网膜血管高度扩张充血，蛛网膜下腔有大量<span class="answer-text">中性粒细胞</span>及<span class="answer-text">纤维蛋白</span>渗出。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>40..B <strong>流行性脑脊髓膜炎的临床病理联系（二）</strong><br>颅内压升高症状：表现为<span class="blur-text">头痛</span>、<span class="blur-text">喷射性呕吐</span>、小儿<span class="blur-text">前囟饱满</span>；因脑血管充血，蛛网膜颗粒被脓性渗出物阻塞影响脑脊液吸收。<br>脑膜刺激征：包括<span class="blur-text">颈项强直</span>和<span class="blur-text">Kernig征阳性</span>；因炎症累及神经根周围脑膜，神经根在椎间孔处受压。<br>脑神经麻痹：基底部脑膜炎累及<span class="blur-text">III、IV、V、VI、VII</span>对脑神经；脑脊液压力升高，浑浊，含有大量<span class="blur-text">脓细胞</span>，蛋白增多，糖减少。</td>
+                            <td>40..B <strong>流行性脑脊髓膜炎的临床病理联系（二）</strong><br>颅内压升高症状：表现为<span class="answer-text">头痛</span>、<span class="answer-text">喷射性呕吐</span>、小儿<span class="answer-text">前囟饱满</span>；因脑血管充血，蛛网膜颗粒被脓性渗出物阻塞影响脑脊液吸收。<br>脑膜刺激征：包括<span class="answer-text">颈项强直</span>和<span class="answer-text">Kernig征阳性</span>；因炎症累及神经根周围脑膜，神经根在椎间孔处受压。<br>脑神经麻痹：基底部脑膜炎累及<span class="answer-text">III、IV、V、VI、VII</span>对脑神经；脑脊液压力升高，浑浊，含有大量<span class="answer-text">脓细胞</span>，蛋白增多，糖减少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>41..A <strong>中枢神经系统肿瘤的生物学特性和临床表现（一）</strong><br>生物学特性（1）：与癌不同，肿瘤没有类似<span class="blur-text">癌前病变</span>和<span class="blur-text">原位癌</span>的阶段；良恶性具有<span class="blur-text">相对性</span>，无论级别高低都可在脑内广泛浸润。<br>生物学特性（2）：患者预后受<span class="blur-text">解剖学部位</span>影响；<span class="blur-text">脑脊液转移</span>是恶性胶质瘤常见转移方式，特别是位于脑室旁和脑池旁的肿瘤。</td>
+                            <td>41..A <strong>中枢神经系统肿瘤的生物学特性和临床表现（一）</strong><br>生物学特性（1）：与癌不同，肿瘤没有类似<span class="answer-text">癌前病变</span>和<span class="answer-text">原位癌</span>的阶段；良恶性具有<span class="answer-text">相对性</span>，无论级别高低都可在脑内广泛浸润。<br>生物学特性（2）：患者预后受<span class="answer-text">解剖学部位</span>影响；<span class="answer-text">脑脊液转移</span>是恶性胶质瘤常见转移方式，特别是位于脑室旁和脑池旁的肿瘤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>41..B <strong>中枢神经系统肿瘤的生物学特性和临床表现（二）</strong><br>生物学特性（3）：即使在形态学上分化很差的肿瘤也很少发生<span class="blur-text">颅外转移</span>。<br>共同临床表现（1）：压迫或破坏周围脑组织引起局部神经症状，如<span class="blur-text">癫痫</span>、<span class="blur-text">瘫痪</span>和<span class="blur-text">视野缺损</span>等。<br>共同临床表现（2）：引起<span class="blur-text">颅内压增高</span>，表现为<span class="blur-text">头痛</span>、<span class="blur-text">呕吐</span>和<span class="blur-text">视盘水肿</span>。</td>
+                            <td>41..B <strong>中枢神经系统肿瘤的生物学特性和临床表现（二）</strong><br>生物学特性（3）：即使在形态学上分化很差的肿瘤也很少发生<span class="answer-text">颅外转移</span>。<br>共同临床表现（1）：压迫或破坏周围脑组织引起局部神经症状，如<span class="answer-text">癫痫</span>、<span class="answer-text">瘫痪</span>和<span class="answer-text">视野缺损</span>等。<br>共同临床表现（2）：引起<span class="answer-text">颅内压增高</span>，表现为<span class="answer-text">头痛</span>、<span class="answer-text">呕吐</span>和<span class="answer-text">视盘水肿</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">42..<strong>阿尔兹海默症与帕金森病的异同点</strong><br>（图片内容，请参考教材表格进行对比）</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">43..<strong>周围性眩晕与中枢性眩晕的鉴别</strong><br>（图片内容，请参考教材表格进行对比）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>44..A <strong>上、下运动神经元瘫痪的鉴别（一）</strong><br>瘫痪分布与肌萎缩：上运动神经元瘫痪以<span class="blur-text">整个肢体</span>为主，无或轻度<span class="blur-text">废用性萎缩</span>；下运动神经元瘫痪以<span class="blur-text">肌群</span>为主，<span class="blur-text">明显</span>萎缩。<br>肌张力与腱反射：上运动神经元瘫痪肌张力<span class="blur-text">增高</span>（痉挛性），腱反射<span class="blur-text">增强</span>；下运动神经元瘫痪肌张力<span class="blur-text">降低</span>（弛缓性），腱反射<span class="blur-text">减低或消失</span>。</td>
+                            <td>44..A <strong>上、下运动神经元瘫痪的鉴别（一）</strong><br>瘫痪分布与肌萎缩：上运动神经元瘫痪以<span class="answer-text">整个肢体</span>为主，无或轻度<span class="answer-text">废用性萎缩</span>；下运动神经元瘫痪以<span class="answer-text">肌群</span>为主，<span class="answer-text">明显</span>萎缩。<br>肌张力与腱反射：上运动神经元瘫痪肌张力<span class="answer-text">增高</span>（痉挛性），腱反射<span class="answer-text">增强</span>；下运动神经元瘫痪肌张力<span class="answer-text">降低</span>（弛缓性），腱反射<span class="answer-text">减低或消失</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>44..B <strong>上、下运动神经元瘫痪的鉴别（二）</strong><br>病理反射与肌束颤动：上运动神经元瘫痪<span class="blur-text">有</span>病理反射，<span class="blur-text">无</span>肌束颤动；下运动神经元瘫痪<span class="blur-text">无</span>病理反射，<span class="blur-text">可有</span>肌束颤动。<br>电生理检查：上运动神经元瘫痪神经传导<span class="blur-text">正常</span>，肌电图<span class="blur-text">无</span>失神经电位；下运动神经元瘫痪神经传导<span class="blur-text">异常</span>，肌电图<span class="blur-text">有</span>失神经电位。</td>
+                            <td>44..B <strong>上、下运动神经元瘫痪的鉴别（二）</strong><br>病理反射与肌束颤动：上运动神经元瘫痪<span class="answer-text">有</span>病理反射，<span class="answer-text">无</span>肌束颤动；下运动神经元瘫痪<span class="answer-text">无</span>病理反射，<span class="answer-text">可有</span>肌束颤动。<br>电生理检查：上运动神经元瘫痪神经传导<span class="answer-text">正常</span>，肌电图<span class="answer-text">无</span>失神经电位；下运动神经元瘫痪神经传导<span class="answer-text">异常</span>，肌电图<span class="answer-text">有</span>失神经电位。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">45..<strong>感觉障碍的定位诊断</strong><br>（图片内容，请参考教材表格，主要包括末梢型、神经干型、后根型、脊髓后角/前连合/半切/横贯性、脑干交叉性、丘脑对侧偏身、内囊对侧偏身、皮质对侧单肢等部位的分布特点）</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">46..<strong>上运动神经元瘫痪的定位诊断</strong><br>（图片内容，请参考教材）</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">47..<strong>不同节段脊髓损伤的定位</strong><br>（图片内容，请参考教材，主要涉及高位颈段、颈膨大、胸段、腰膨大、马尾神经等不同节段的表现）</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">48..<strong>下运动神经元瘫痪定位诊断</strong><br>（图片内容，请参考教材）</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">49..<strong>无先兆偏头痛与先兆偏头痛</strong><br>（图片内容，请参考教材诊断标准表格）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>50..A <strong>脑梗死的临床表现和治疗（一）</strong><br>临床表现：中老年多见，病前有<span class="blur-text">高血压</span>、<span class="blur-text">糖尿病</span>、冠心病及血脂异常等危险因素；常在<span class="blur-text">安静状态</span>或<span class="blur-text">睡眠中</span>起病。<br>颈内动脉血栓：表现为<span class="blur-text">三偏征</span>；优势半球受累出现<span class="blur-text">失语</span>，非优势半球受累可有<span class="blur-text">体象障碍</span>。<br>椎动脉血栓：可出现<span class="blur-text">延髓背外侧综合征</span>。</td>
+                            <td>50..A <strong>脑梗死的临床表现和治疗（一）</strong><br>临床表现：中老年多见，病前有<span class="answer-text">高血压</span>、<span class="answer-text">糖尿病</span>、冠心病及血脂异常等危险因素；常在<span class="answer-text">安静状态</span>或<span class="answer-text">睡眠中</span>起病。<br>颈内动脉血栓：表现为<span class="answer-text">三偏征</span>；优势半球受累出现<span class="answer-text">失语</span>，非优势半球受累可有<span class="answer-text">体象障碍</span>。<br>椎动脉血栓：可出现<span class="answer-text">延髓背外侧综合征</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>50..B <strong>脑梗死的治疗（二）</strong><br>一般治疗：卧床休息，注意皮肤、口腔及尿道护理；保持<span class="blur-text">呼吸道通畅</span>；调控<span class="blur-text">血压</span>、控制<span class="blur-text">血糖</span>；防治感染、上消化道出血和深静脉血栓。<br>特殊治疗：<span class="blur-text">rt-PA</span>溶栓应在<span class="blur-text">4.5小时</span>内，<span class="blur-text">尿激酶</span>溶栓应在<span class="blur-text">6小时</span>内；<span class="blur-text">抗血小板聚集</span>治疗；<span class="blur-text">抗凝治疗</span>（心源性梗死）；脑保护治疗；<span class="blur-text">甘露醇</span>、<span class="blur-text">呋塞米</span>脱水降颅压；外科治疗如去骨瓣减压。</td>
+                            <td>50..B <strong>脑梗死的治疗（二）</strong><br>一般治疗：卧床休息，注意皮肤、口腔及尿道护理；保持<span class="answer-text">呼吸道通畅</span>；调控<span class="answer-text">血压</span>、控制<span class="answer-text">血糖</span>；防治感染、上消化道出血和深静脉血栓。<br>特殊治疗：<span class="answer-text">rt-PA</span>溶栓应在<span class="answer-text">4.5小时</span>内，<span class="answer-text">尿激酶</span>溶栓应在<span class="answer-text">6小时</span>内；<span class="answer-text">抗血小板聚集</span>治疗；<span class="answer-text">抗凝治疗</span>（心源性梗死）；脑保护治疗；<span class="answer-text">甘露醇</span>、<span class="answer-text">呋塞米</span>脱水降颅压；外科治疗如去骨瓣减压。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">51..<strong>缺血性脑血管疾病的鉴别</strong><br>（图片内容，请参考教材）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>52..A <strong>小脑幕切迹疝的临床表现（一）</strong><br>颅内压增高症状：剧烈<span class="blur-text">头痛</span>，<span class="blur-text">喷射状呕吐</span>，<span class="blur-text">视神经盘水肿</span>。<br>瞳孔改变（初期）：患侧<span class="blur-text">动眼神经</span>受刺激，导致患侧瞳孔<span class="blur-text">变小</span>，对光反射<span class="blur-text">迟钝</span>。<br>瞳孔改变（进展）：患侧动眼神经麻痹，瞳孔逐渐<span class="blur-text">扩大</span>，直接和间接对光反射均<span class="blur-text">消失</span>，伴上睑下垂，眼球外斜。</td>
+                            <td>52..A <strong>小脑幕切迹疝的临床表现（一）</strong><br>颅内压增高症状：剧烈<span class="answer-text">头痛</span>，<span class="answer-text">喷射状呕吐</span>，<span class="answer-text">视神经盘水肿</span>。<br>瞳孔改变（初期）：患侧<span class="answer-text">动眼神经</span>受刺激，导致患侧瞳孔<span class="answer-text">变小</span>，对光反射<span class="answer-text">迟钝</span>。<br>瞳孔改变（进展）：患侧动眼神经麻痹，瞳孔逐渐<span class="answer-text">扩大</span>，直接和间接对光反射均<span class="answer-text">消失</span>，伴上睑下垂，眼球外斜。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>52..B <strong>小脑幕切迹疝的临床表现（二）</strong><br>后续进展与生命体征：双侧瞳孔<span class="blur-text">散大</span>，对光反射消失；病变对侧肢体肌力<span class="blur-text">减弱</span>或<span class="blur-text">瘫痪</span>，病理征<span class="blur-text">阳性</span>；出现<span class="blur-text">嗜睡</span>、浅昏迷至深昏迷；生命体征紊乱出现<span class="blur-text">Cushing反应</span>（血压升高、心跳脉搏缓慢、呼吸节律减慢、体温升高）。</td>
+                            <td>52..B <strong>小脑幕切迹疝的临床表现（二）</strong><br>后续进展与生命体征：双侧瞳孔<span class="answer-text">散大</span>，对光反射消失；病变对侧肢体肌力<span class="answer-text">减弱</span>或<span class="answer-text">瘫痪</span>，病理征<span class="answer-text">阳性</span>；出现<span class="answer-text">嗜睡</span>、浅昏迷至深昏迷；生命体征紊乱出现<span class="answer-text">Cushing反应</span>（血压升高、心跳脉搏缓慢、呼吸节律减慢、体温升高）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>53..A <strong>枕骨大孔疝/小脑扁桃体疝的临床表现（一）</strong><br>颅内压增高：表现为剧烈<span class="blur-text">头痛</span>，频繁<span class="blur-text">呕吐</span>，<span class="blur-text">颈项强直</span>，<span class="blur-text">强迫体位</span>。<br>呼吸抑制：因疝出组织压迫<span class="blur-text">延髓呼吸中枢</span>，表现为<span class="blur-text">呼吸抑制</span>（与小脑幕切迹疝主要区别）。<br>生命体征紊乱：同小脑幕切迹疝，但出现<span class="blur-text">较早</span>且<span class="blur-text">明显</span>。</td>
+                            <td>53..A <strong>枕骨大孔疝/小脑扁桃体疝的临床表现（一）</strong><br>颅内压增高：表现为剧烈<span class="answer-text">头痛</span>，频繁<span class="answer-text">呕吐</span>，<span class="answer-text">颈项强直</span>，<span class="answer-text">强迫体位</span>。<br>呼吸抑制：因疝出组织压迫<span class="answer-text">延髓呼吸中枢</span>，表现为<span class="answer-text">呼吸抑制</span>（与小脑幕切迹疝主要区别）。<br>生命体征紊乱：同小脑幕切迹疝，但出现<span class="answer-text">较早</span>且<span class="answer-text">明显</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>53..B <strong>枕骨大孔疝/小脑扁桃体疝的临床表现（二）</strong><br>瞳孔与锥体束征：初期瞳孔呈<span class="blur-text">对称性缩小</span>，继而<span class="blur-text">散大</span>，光反应由迟钝变消失；可出现<span class="blur-text">双侧锥体束征</span>，或表现为四肢肌张力<span class="blur-text">减低</span>。</td>
+                            <td>53..B <strong>枕骨大孔疝/小脑扁桃体疝的临床表现（二）</strong><br>瞳孔与锥体束征：初期瞳孔呈<span class="answer-text">对称性缩小</span>，继而<span class="answer-text">散大</span>，光反应由迟钝变消失；可出现<span class="answer-text">双侧锥体束征</span>，或表现为四肢肌张力<span class="answer-text">减低</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>54..<strong>小脑幕切迹疝和枕骨大孔疝比较</strong><br>疝出部位：小脑幕切迹疝为<span class="blur-text">小脑幕</span>，枕骨大孔疝为<span class="blur-text">枕骨大孔</span>。<br>疝出组织：前者为<span class="blur-text">颞叶钩回</span>、<span class="blur-text">海马回</span>；后者为<span class="blur-text">小脑扁桃体</span>。<br>受压部位：前者为<span class="blur-text">中脑</span>；后者为<span class="blur-text">延髓</span>（生命中枢）。<br>主要表现：前者为瞳孔变化、意识障碍、对侧肢体瘫痪；后者为突发<span class="blur-text">呼吸心跳停止</span>。</td>
+                            <td>54..<strong>小脑幕切迹疝和枕骨大孔疝比较</strong><br>疝出部位：小脑幕切迹疝为<span class="answer-text">小脑幕</span>，枕骨大孔疝为<span class="answer-text">枕骨大孔</span>。<br>疝出组织：前者为<span class="answer-text">颞叶钩回</span>、<span class="answer-text">海马回</span>；后者为<span class="answer-text">小脑扁桃体</span>。<br>受压部位：前者为<span class="answer-text">中脑</span>；后者为<span class="answer-text">延髓</span>（生命中枢）。<br>主要表现：前者为瞳孔变化、意识障碍、对侧肢体瘫痪；后者为突发<span class="answer-text">呼吸心跳停止</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>55..A <strong>单纯疱疹病毒性脑炎的诊断（一）</strong><br>临床特征：<span class="blur-text">急性</span>起病，发热、头痛等感染症状；脑实质损害表现；脑脊液大致正常或轻度异常，可见<span class="blur-text">红细胞</span>；脑电图以<span class="blur-text">颞</span>、<span class="blur-text">额</span>区为主的弥漫性慢波或痫样放电；脑MRI呈颞、额叶局灶性炎症改变、出血灶。</td>
+                            <td>55..A <strong>单纯疱疹病毒性脑炎的诊断（一）</strong><br>临床特征：<span class="answer-text">急性</span>起病，发热、头痛等感染症状；脑实质损害表现；脑脊液大致正常或轻度异常，可见<span class="answer-text">红细胞</span>；脑电图以<span class="answer-text">颞</span>、<span class="answer-text">额</span>区为主的弥漫性慢波或痫样放电；脑MRI呈颞、额叶局灶性炎症改变、出血灶。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>55..B <strong>单纯疱疹病毒性脑炎的诊断（二）</strong><br>诊断金标准：双份血清和脑脊液<span class="blur-text">HSV抗体</span>检查有显著增高趋势；脑脊液<span class="blur-text">PCR</span>检测中发现HSV病毒DNA；脑组织检查细胞核内<span class="blur-text">嗜酸性包涵体</span>，电镜下发现病毒颗粒；脑组织或脑脊液<span class="blur-text">分离培养</span>出HSV。</td>
+                            <td>55..B <strong>单纯疱疹病毒性脑炎的诊断（二）</strong><br>诊断金标准：双份血清和脑脊液<span class="answer-text">HSV抗体</span>检查有显著增高趋势；脑脊液<span class="answer-text">PCR</span>检测中发现HSV病毒DNA；脑组织检查细胞核内<span class="answer-text">嗜酸性包涵体</span>，电镜下发现病毒颗粒；脑组织或脑脊液<span class="answer-text">分离培养</span>出HSV。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>56..A <strong>颅底骨折的临床表现（一）</strong><br>淤血斑：颅前窝骨折出现"<span class="blur-text">熊猫眼</span>"征（眶周淤血）；颅后窝骨折出现"<span class="blur-text">Battle征</span>"（乳突和枕骨下部皮下淤血）。<br>脑脊液漏：颅前窝骨折出现<span class="blur-text">脑脊液鼻漏</span>；颅中窝骨折出现脑脊液<span class="blur-text">鼻漏</span>、<span class="blur-text">耳漏</span>。</td>
+                            <td>56..A <strong>颅底骨折的临床表现（一）</strong><br>淤血斑：颅前窝骨折出现"<span class="answer-text">熊猫眼</span>"征（眶周淤血）；颅后窝骨折出现"<span class="answer-text">Battle征</span>"（乳突和枕骨下部皮下淤血）。<br>脑脊液漏：颅前窝骨折出现<span class="answer-text">脑脊液鼻漏</span>；颅中窝骨折出现脑脊液<span class="answer-text">鼻漏</span>、<span class="answer-text">耳漏</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>56..B <strong>颅底骨折的临床表现（二）</strong><br>颅神经损伤（前窝）：<span class="blur-text">筛板</span>骨折→<span class="blur-text">嗅神经</span>损伤→嗅觉障碍；<span class="blur-text">视神经管</span>骨折→<span class="blur-text">视神经</span>损伤→视觉障碍。<br>颅神经损伤（中窝）：蝶骨/颞骨骨折可损伤<span class="blur-text">视神经</span>、<span class="blur-text">动眼神经</span>、<span class="blur-text">滑车神经</span>、<span class="blur-text">三叉神经</span>、<span class="blur-text">展神经</span>；颞骨岩部骨折→<span class="blur-text">面神经</span>、<span class="blur-text">听神经</span>损伤。<br>颅神经损伤（后窝）：枕骨大孔/岩尖后缘骨折→<span class="blur-text">舌咽神经</span>、<span class="blur-text">迷走神经</span>、副神经、舌下神经损伤。</td>
+                            <td>56..B <strong>颅底骨折的临床表现（二）</strong><br>颅神经损伤（前窝）：<span class="answer-text">筛板</span>骨折→<span class="answer-text">嗅神经</span>损伤→嗅觉障碍；<span class="answer-text">视神经管</span>骨折→<span class="answer-text">视神经</span>损伤→视觉障碍。<br>颅神经损伤（中窝）：蝶骨/颞骨骨折可损伤<span class="answer-text">视神经</span>、<span class="answer-text">动眼神经</span>、<span class="answer-text">滑车神经</span>、<span class="answer-text">三叉神经</span>、<span class="answer-text">展神经</span>；颞骨岩部骨折→<span class="answer-text">面神经</span>、<span class="answer-text">听神经</span>损伤。<br>颅神经损伤（后窝）：枕骨大孔/岩尖后缘骨折→<span class="answer-text">舌咽神经</span>、<span class="answer-text">迷走神经</span>、副神经、舌下神经损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>57..A <strong>原发性和继发性脑伤的鉴别（一）</strong><br>发生时间：原发性脑伤<span class="blur-text">受伤当时立即</span>发生；继发性脑伤<span class="blur-text">受伤一定时间后</span>发生。<br>症状出现时间：前者伤后<span class="blur-text">立即</span>出现症状和体征；后者伤后过<span class="blur-text">一段时间</span>出现，原有症状进行性<span class="blur-text">加重</span>。</td>
+                            <td>57..A <strong>原发性和继发性脑伤的鉴别（一）</strong><br>发生时间：原发性脑伤<span class="answer-text">受伤当时立即</span>发生；继发性脑伤<span class="answer-text">受伤一定时间后</span>发生。<br>症状出现时间：前者伤后<span class="answer-text">立即</span>出现症状和体征；后者伤后过<span class="answer-text">一段时间</span>出现，原有症状进行性<span class="answer-text">加重</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>57..B <strong>原发性和继发性脑伤的鉴别（二）</strong><br>手术需求与预后：前者<span class="blur-text">无需开颅</span>手术，预后取决于<span class="blur-text">伤情轻重</span>；后者往往需<span class="blur-text">及时开颅</span>手术，预后与处理是否<span class="blur-text">及时正确</span>有关。</td>
+                            <td>57..B <strong>原发性和继发性脑伤的鉴别（二）</strong><br>手术需求与预后：前者<span class="answer-text">无需开颅</span>手术，预后取决于<span class="answer-text">伤情轻重</span>；后者往往需<span class="answer-text">及时开颅</span>手术，预后与处理是否<span class="answer-text">及时正确</span>有关。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>58..A <strong>原发性脑损伤（一）</strong><br>脑震荡：受伤后立即出现短暂<span class="blur-text">意识障碍</span>（数秒至数分钟，一般不超过<span class="blur-text">半小时</span>）；<span class="blur-text">逆行性遗忘</span>（不能回忆受伤当时及前一段时间）；意识恢复后很快趋于正常，神经系统检查<span class="blur-text">无阳性体征</span>。</td>
+                            <td>58..A <strong>原发性脑损伤（一）</strong><br>脑震荡：受伤后立即出现短暂<span class="answer-text">意识障碍</span>（数秒至数分钟，一般不超过<span class="answer-text">半小时</span>）；<span class="answer-text">逆行性遗忘</span>（不能回忆受伤当时及前一段时间）；意识恢复后很快趋于正常，神经系统检查<span class="answer-text">无阳性体征</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>58..B <strong>原发性脑损伤（二）</strong><br>弥漫性轴索损伤（DAI）：原发昏迷时间<span class="blur-text">较长</span>；广泛轴索损害使皮层与皮层下中枢失去联系；累及脑干可出现一侧或双侧瞳孔<span class="blur-text">散大</span>、光反射<span class="blur-text">消失</span>、<span class="blur-text">同向凝视</span>。</td>
+                            <td>58..B <strong>原发性脑损伤（二）</strong><br>弥漫性轴索损伤（DAI）：原发昏迷时间<span class="answer-text">较长</span>；广泛轴索损害使皮层与皮层下中枢失去联系；累及脑干可出现一侧或双侧瞳孔<span class="answer-text">散大</span>、光反射<span class="answer-text">消失</span>、<span class="answer-text">同向凝视</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>58..C <strong>原发性脑损伤（三）</strong><br>脑挫裂伤：意识障碍程度和持续时间与脑挫裂伤的<span class="blur-text">程度</span>、<span class="blur-text">范围</span>相关，大多在<span class="blur-text">半小时</span>以上；可出现与伤灶相应的神经功能障碍（运动区→<span class="blur-text">偏瘫</span>，语言中枢→<span class="blur-text">失语</span>）；严重者出现<span class="blur-text">高颅压</span>（血压升高、心率减慢、病理呼吸）。</td>
+                            <td>58..C <strong>原发性脑损伤（三）</strong><br>脑挫裂伤：意识障碍程度和持续时间与脑挫裂伤的<span class="answer-text">程度</span>、<span class="answer-text">范围</span>相关，大多在<span class="answer-text">半小时</span>以上；可出现与伤灶相应的神经功能障碍（运动区→<span class="answer-text">偏瘫</span>，语言中枢→<span class="answer-text">失语</span>）；严重者出现<span class="answer-text">高颅压</span>（血压升高、心率减慢、病理呼吸）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>59..<strong>硬脑膜外血肿的临床表现</strong><br>病因与关系：多由暴力<span class="blur-text">直接打击</span>头部所致；是颅骨变形、骨折的并发症，血肿部位与<span class="blur-text">颅骨骨折</span>部位基本一致。<br>意识障碍特点：原发脑伤<span class="blur-text">轻</span>，原发昏迷时间<span class="blur-text">短</span>；常有典型的<span class="blur-text">中间清醒期</span>。<br>预后：如<span class="blur-text">及时手术</span>，预后好。</td>
+                            <td>59..<strong>硬脑膜外血肿的临床表现</strong><br>病因与关系：多由暴力<span class="answer-text">直接打击</span>头部所致；是颅骨变形、骨折的并发症，血肿部位与<span class="answer-text">颅骨骨折</span>部位基本一致。<br>意识障碍特点：原发脑伤<span class="answer-text">轻</span>，原发昏迷时间<span class="answer-text">短</span>；常有典型的<span class="answer-text">中间清醒期</span>。<br>预后：如<span class="answer-text">及时手术</span>，预后好。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>60..<strong>急性硬脑膜下血肿的临床表现</strong><br>病因与关系：常由<span class="blur-text">对冲伤</span>引起；是<span class="blur-text">脑挫裂伤</span>的并发症，血肿位于脑挫裂伤处。<br>意识障碍特点：原发脑伤<span class="blur-text">重</span>，原发昏迷时间<span class="blur-text">长</span>；<span class="blur-text">中间清醒期少见</span>，而为中间意识好转期或意识进行性恶化所代替。<br>预后：<span class="blur-text">较差</span>。</td>
+                            <td>60..<strong>急性硬脑膜下血肿的临床表现</strong><br>病因与关系：常由<span class="answer-text">对冲伤</span>引起；是<span class="answer-text">脑挫裂伤</span>的并发症，血肿位于脑挫裂伤处。<br>意识障碍特点：原发脑伤<span class="answer-text">重</span>，原发昏迷时间<span class="answer-text">长</span>；<span class="answer-text">中间清醒期少见</span>，而为中间意识好转期或意识进行性恶化所代替。<br>预后：<span class="answer-text">较差</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>61..A <strong>急性硬膜外血肿与急性硬膜下血肿的比较（一）</strong><br>受伤机制与部位：硬膜外多为<span class="blur-text">加速伤</span>、冲击受力部位，血肿常位于<span class="blur-text">骨折处</span>（约70%在<span class="blur-text">颞区</span>）；硬膜下多为<span class="blur-text">减速伤</span>、对冲部位，血肿位于脑挫裂伤处。<br>出血来源：硬膜外为<span class="blur-text">脑膜动脉</span>、<span class="blur-text">静脉窦</span>；硬膜下为脑挫裂伤处脑的<span class="blur-text">小血管</span>。<br>原发脑伤与昏迷：硬膜外原发脑伤<span class="blur-text">轻</span>，原发昏迷时间<span class="blur-text">短</span>；硬膜下原发脑伤<span class="blur-text">重</span>，原发昏迷时间<span class="blur-text">长</span>。</td>
+                            <td>61..A <strong>急性硬膜外血肿与急性硬膜下血肿的比较（一）</strong><br>受伤机制与部位：硬膜外多为<span class="answer-text">加速伤</span>、冲击受力部位，血肿常位于<span class="answer-text">骨折处</span>（约70%在<span class="answer-text">颞区</span>）；硬膜下多为<span class="answer-text">减速伤</span>、对冲部位，血肿位于脑挫裂伤处。<br>出血来源：硬膜外为<span class="answer-text">脑膜动脉</span>、<span class="answer-text">静脉窦</span>；硬膜下为脑挫裂伤处脑的<span class="answer-text">小血管</span>。<br>原发脑伤与昏迷：硬膜外原发脑伤<span class="answer-text">轻</span>，原发昏迷时间<span class="answer-text">短</span>；硬膜下原发脑伤<span class="answer-text">重</span>，原发昏迷时间<span class="answer-text">长</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>61..B <strong>急性硬膜外血肿与急性硬膜下血肿的比较（二）</strong><br>清醒期与影像：硬膜外常有典型的<span class="blur-text">中间清醒期</span>，CT呈<span class="blur-text">梭形</span>高密度影；硬膜下<span class="blur-text">中间清醒期少见</span>，CT呈<span class="blur-text">新月形</span>高密度影。<br>预后：硬膜外预后<span class="blur-text">较好</span>；硬膜下预后<span class="blur-text">较差</span>。</td>
+                            <td>61..B <strong>急性硬膜外血肿与急性硬膜下血肿的比较（二）</strong><br>清醒期与影像：硬膜外常有典型的<span class="answer-text">中间清醒期</span>，CT呈<span class="answer-text">梭形</span>高密度影；硬膜下<span class="answer-text">中间清醒期少见</span>，CT呈<span class="answer-text">新月形</span>高密度影。<br>预后：硬膜外预后<span class="answer-text">较好</span>；硬膜下预后<span class="answer-text">较差</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">62..<strong>Glasgow昏迷评分法</strong><br>（图片内容，请参考教材，主要包括睁眼反应、语言反应、运动反应三项评分标准）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>63..<strong>癫痫发作的共性</strong><br>四个特征：<span class="blur-text">发作性</span>、<span class="blur-text">短暂性</span>、<span class="blur-text">重复性</span>、<span class="blur-text">刻板性</span>。</td>
+                            <td>63..<strong>癫痫发作的共性</strong><br>四个特征：<span class="answer-text">发作性</span>、<span class="answer-text">短暂性</span>、<span class="answer-text">重复性</span>、<span class="answer-text">刻板性</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>64..A <strong>癫痫的临床表现（一）</strong><br>局灶性发作：包括<span class="blur-text">局灶性运动性</span>发作、<span class="blur-text">局灶性感觉性</span>发作、<span class="blur-text">复杂部分性</span>发作、局灶性继发<span class="blur-text">全面性</span>发作。<br>全面性发作类型：<span class="blur-text">全面强直-阵挛性</span>发作（强直期、阵挛期、发作后期）、<span class="blur-text">失神</span>发作、强直性发作、阵挛性发作、<span class="blur-text">肌阵挛</span>发作、<span class="blur-text">失张力</span>发作。</td>
+                            <td>64..A <strong>癫痫的临床表现（一）</strong><br>局灶性发作：包括<span class="answer-text">局灶性运动性</span>发作、<span class="answer-text">局灶性感觉性</span>发作、<span class="answer-text">复杂部分性</span>发作、局灶性继发<span class="answer-text">全面性</span>发作。<br>全面性发作类型：<span class="answer-text">全面强直-阵挛性</span>发作（强直期、阵挛期、发作后期）、<span class="answer-text">失神</span>发作、强直性发作、阵挛性发作、<span class="answer-text">肌阵挛</span>发作、<span class="answer-text">失张力</span>发作。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>64..B <strong>癫痫的临床表现（二）</strong><br>全面强直-阵挛性发作分期：<span class="blur-text">强直期</span>、<span class="blur-text">阵挛期</span>、<span class="blur-text">发作后期</span>。</td>
+                            <td>64..B <strong>癫痫的临床表现（二）</strong><br>全面强直-阵挛性发作分期：<span class="answer-text">强直期</span>、<span class="answer-text">阵挛期</span>、<span class="answer-text">发作后期</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>65..A <strong>抗癫痫药物的用药原则（一）</strong><br>用药时机：<span class="blur-text">2次</span>发作以上、EEG异常、有易反复发作病因或家族史即可开始用药。<br>选药原则：原发全身强直-阵挛发作首选<span class="blur-text">丙戊酸</span>；失神发作首选<span class="blur-text">丙戊酸</span>；部分性发作首选<span class="blur-text">卡马西平</span>；部分发作继发全身性发作首选<span class="blur-text">卡马西平</span>。</td>
+                            <td>65..A <strong>抗癫痫药物的用药原则（一）</strong><br>用药时机：<span class="answer-text">2次</span>发作以上、EEG异常、有易反复发作病因或家族史即可开始用药。<br>选药原则：原发全身强直-阵挛发作首选<span class="answer-text">丙戊酸</span>；失神发作首选<span class="answer-text">丙戊酸</span>；部分性发作首选<span class="answer-text">卡马西平</span>；部分发作继发全身性发作首选<span class="answer-text">卡马西平</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>65..B <strong>抗癫痫药物的用药原则（二）</strong><br>治疗原则：<span class="blur-text">单药</span>治疗，剂量<span class="blur-text">个体化</span>；<span class="blur-text">逐渐</span>换药；必要时<span class="blur-text">联合</span>用药；<span class="blur-text">长期</span>用药；缓慢<span class="blur-text">减量停药</span>；复发时需<span class="blur-text">重新开始</span>治疗。</td>
+                            <td>65..B <strong>抗癫痫药物的用药原则（二）</strong><br>治疗原则：<span class="answer-text">单药</span>治疗，剂量<span class="answer-text">个体化</span>；<span class="answer-text">逐渐</span>换药；必要时<span class="answer-text">联合</span>用药；<span class="answer-text">长期</span>用药；缓慢<span class="answer-text">减量停药</span>；复发时需<span class="answer-text">重新开始</span>治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>66..A <strong>蛛网膜下腔出血的临床表现和治疗原则（一）</strong><br>临床表现：突发"<span class="blur-text">爆炸样</span>"头痛，伴恶心、呕吐、面色苍白、全身冷汗；典型体征为<span class="blur-text">脑膜刺激征</span>（颈项强直、<span class="blur-text">Kernig征</span>阳性）；眼底<span class="blur-text">出血</span>是诊断重要依据之一。</td>
+                            <td>66..A <strong>蛛网膜下腔出血的临床表现和治疗原则（一）</strong><br>临床表现：突发"<span class="answer-text">爆炸样</span>"头痛，伴恶心、呕吐、面色苍白、全身冷汗；典型体征为<span class="answer-text">脑膜刺激征</span>（颈项强直、<span class="answer-text">Kernig征</span>阳性）；眼底<span class="answer-text">出血</span>是诊断重要依据之一。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>66..B <strong>蛛网膜下腔出血的临床表现和治疗原则（二）</strong><br>治疗原则：一般监测生命体征；降低颅内压（<span class="blur-text">甘露醇</span>、<span class="blur-text">呋塞米</span>、白蛋白）；绝对<span class="blur-text">卧床休息</span>，避免再次出血；治疗脑血管痉挛（<span class="blur-text">钙通道阻滞剂</span>）；防治脑积水等并发症；减少诱因（避免情绪激动、防止咳嗽）。</td>
+                            <td>66..B <strong>蛛网膜下腔出血的临床表现和治疗原则（二）</strong><br>治疗原则：一般监测生命体征；降低颅内压（<span class="answer-text">甘露醇</span>、<span class="answer-text">呋塞米</span>、白蛋白）；绝对<span class="answer-text">卧床休息</span>，避免再次出血；治疗脑血管痉挛（<span class="answer-text">钙通道阻滞剂</span>）；防治脑积水等并发症；减少诱因（避免情绪激动、防止咳嗽）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>67..A <strong>帕金森病的临床表现（一）</strong><br>发病特点：多在<span class="blur-text">60岁</span>以后发病；起病<span class="blur-text">隐袭</span>，进展<span class="blur-text">缓慢</span>，逐渐加剧。<br>进展方式：症状常自<span class="blur-text">一侧上肢</span>开始→波及同侧下肢→对侧上肢及下肢，呈<span class="blur-text">"N"字形</span>进展；少数自一侧下肢开始，两侧下肢同时开始者极少见。</td>
+                            <td>67..A <strong>帕金森病的临床表现（一）</strong><br>发病特点：多在<span class="answer-text">60岁</span>以后发病；起病<span class="answer-text">隐袭</span>，进展<span class="answer-text">缓慢</span>，逐渐加剧。<br>进展方式：症状常自<span class="answer-text">一侧上肢</span>开始→波及同侧下肢→对侧上肢及下肢，呈<span class="answer-text">"N"字形</span>进展；少数自一侧下肢开始，两侧下肢同时开始者极少见。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>68..<strong>英国帕金森病协会脑库诊断标准（3步骤）</strong><br>步骤：符合<span class="blur-text">帕金森综合征</span>诊断标准+不存在<span class="blur-text">绝对排除标准</span>+有<span class="blur-text">支持诊断标准</span>。<br>核心症状（帕金森综合征诊断标准）：<span class="blur-text">运动迟缓</span>+下列至少一项：<span class="blur-text">静止性震颤</span>、<span class="blur-text">肌强直</span>、<span class="blur-text">姿势异常</span>。</td>
+                            <td>68..<strong>英国帕金森病协会脑库诊断标准（3步骤）</strong><br>步骤：符合<span class="answer-text">帕金森综合征</span>诊断标准+不存在<span class="answer-text">绝对排除标准</span>+有<span class="answer-text">支持诊断标准</span>。<br>核心症状（帕金森综合征诊断标准）：<span class="answer-text">运动迟缓</span>+下列至少一项：<span class="answer-text">静止性震颤</span>、<span class="answer-text">肌强直</span>、<span class="answer-text">姿势异常</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>69..A <strong>帕金森病的治疗（一）</strong><br>非药物治疗：包括<span class="blur-text">心理疏导</span>、<span class="blur-text">运动疗法</span>、照料护理等。<br>药物治疗：<span class="blur-text">复方多巴制剂</span>、<span class="blur-text">多巴胺受体激动剂</span>、<span class="blur-text">MAO-B抑制剂</span>、<span class="blur-text">COMT抑制剂</span>、<span class="blur-text">抗胆碱能药物</span>、促多巴胺释放药。</td>
+                            <td>69..A <strong>帕金森病的治疗（一）</strong><br>非药物治疗：包括<span class="answer-text">心理疏导</span>、<span class="answer-text">运动疗法</span>、照料护理等。<br>药物治疗：<span class="answer-text">复方多巴制剂</span>、<span class="answer-text">多巴胺受体激动剂</span>、<span class="answer-text">MAO-B抑制剂</span>、<span class="answer-text">COMT抑制剂</span>、<span class="answer-text">抗胆碱能药物</span>、促多巴胺释放药。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>69..B <strong>帕金森病的治疗（二）</strong><br>其他治疗：<span class="blur-text">手术</span>治疗；<span class="blur-text">细胞移植</span>治疗和<span class="blur-text">基因治疗</span>。</td>
+                            <td>69..B <strong>帕金森病的治疗（二）</strong><br>其他治疗：<span class="answer-text">手术</span>治疗；<span class="answer-text">细胞移植</span>治疗和<span class="answer-text">基因治疗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>70..A <strong>多发性硬化（MS）的临床表现（一）</strong><br>临床特点：<span class="blur-text">时间多发性</span>和<span class="blur-text">空间多发性</span>（脑室周围、胼胝体、脑干、小脑、脊髓）；症状<span class="blur-text">少</span>而体征<span class="blur-text">多</span>。<br>眼部症状：急性<span class="blur-text">视神经炎</span>或球后视神经炎，急性单眼视力下降、视物模糊、视野缺损；多单侧起病；<span class="blur-text">核间性眼肌麻痹</span>。</td>
+                            <td>70..A <strong>多发性硬化（MS）的临床表现（一）</strong><br>临床特点：<span class="answer-text">时间多发性</span>和<span class="answer-text">空间多发性</span>（脑室周围、胼胝体、脑干、小脑、脊髓）；症状<span class="answer-text">少</span>而体征<span class="answer-text">多</span>。<br>眼部症状：急性<span class="answer-text">视神经炎</span>或球后视神经炎，急性单眼视力下降、视物模糊、视野缺损；多单侧起病；<span class="answer-text">核间性眼肌麻痹</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>70..B <strong>多发性硬化（MS）的临床表现（二）</strong><br>肢体与感觉：表现为一个或多个肢体肌力下降或步态异常，<span class="blur-text">下肢</span>受累最常见；运动后无力是MS特征性表现；感觉异常包括麻木、刺痛，可见<span class="blur-text">Lhermitte征</span>（颈部过屈诱发出刺痛或闪电样感觉异常）。<br>其他：急性<span class="blur-text">脊髓炎</span>、<span class="blur-text">共济失调</span>等。</td>
+                            <td>70..B <strong>多发性硬化（MS）的临床表现（二）</strong><br>肢体与感觉：表现为一个或多个肢体肌力下降或步态异常，<span class="answer-text">下肢</span>受累最常见；运动后无力是MS特征性表现；感觉异常包括麻木、刺痛，可见<span class="answer-text">Lhermitte征</span>（颈部过屈诱发出刺痛或闪电样感觉异常）。<br>其他：急性<span class="answer-text">脊髓炎</span>、<span class="answer-text">共济失调</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>71..<strong>MS的诊断原则</strong><br>两个"多发"：<span class="blur-text">时间多发性</span>（DIT）和<span class="blur-text">空间多发性</span>（DIS）。<br>时间多发性：两次以上临床发作，症状持续<span class="blur-text">24小时</span>以上，两次发作间隔<span class="blur-text">1个月</span>以上；或MRI上存在多次复发证据。<br>空间多发性：<span class="blur-text">两个</span>以上解剖学白质病灶的证据，可通过<span class="blur-text">MRI</span>确定。</td>
+                            <td>71..<strong>MS的诊断原则</strong><br>两个"多发"：<span class="answer-text">时间多发性</span>（DIT）和<span class="answer-text">空间多发性</span>（DIS）。<br>时间多发性：两次以上临床发作，症状持续<span class="answer-text">24小时</span>以上，两次发作间隔<span class="answer-text">1个月</span>以上；或MRI上存在多次复发证据。<br>空间多发性：<span class="answer-text">两个</span>以上解剖学白质病灶的证据，可通过<span class="answer-text">MRI</span>确定。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>72..<strong>MS的治疗</strong><br>分期治疗：急性期使用<span class="blur-text">糖皮质激素</span>大剂量、短疗程冲击；缓解期使用<span class="blur-text">疾病修正治疗</span>（DMT）；<span class="blur-text">对症</span>治疗。</td>
+                            <td>72..<strong>MS的治疗</strong><br>分期治疗：急性期使用<span class="answer-text">糖皮质激素</span>大剂量、短疗程冲击；缓解期使用<span class="answer-text">疾病修正治疗</span>（DMT）；<span class="answer-text">对症</span>治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>73..A <strong>神经上皮肿瘤的临床表现（一）</strong><br>星形细胞肿瘤：<span class="blur-text">弥漫性星形细胞瘤</span>（WHO II级）常见于青壮年，多位于大脑半球，50%以<span class="blur-text">癫痫</span>起病；<span class="blur-text">胶质母细胞瘤</span>（WHO IV级）是最常见恶性星形细胞瘤，多见于大脑半球深部白质。<br>临床表现：颅内压增高症状、精神症状、局限性神经功能障碍。</td>
+                            <td>73..A <strong>神经上皮肿瘤的临床表现（一）</strong><br>星形细胞肿瘤：<span class="answer-text">弥漫性星形细胞瘤</span>（WHO II级）常见于青壮年，多位于大脑半球，50%以<span class="answer-text">癫痫</span>起病；<span class="answer-text">胶质母细胞瘤</span>（WHO IV级）是最常见恶性星形细胞瘤，多见于大脑半球深部白质。<br>临床表现：颅内压增高症状、精神症状、局限性神经功能障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>73..B <strong>神经上皮肿瘤的临床表现（二）</strong><br>少突胶质细胞肿瘤：约占神经上皮性肿瘤的<span class="blur-text">5%~20%</span>，常伴<span class="blur-text">钙化</span>；临床可无症状，或癫痫首发。<br>髓母细胞瘤：儿童最常见恶性颅内肿瘤（WHO <span class="blur-text">IV级</span>），起源于<span class="blur-text">小脑蚓部</span>（第四脑室顶），易随脑脊液播散，主要症状为颅内压增高和<span class="blur-text">共济失调</span>。<br>室管膜瘤：多位于幕下或脑室内，可随脑脊液播散，常引起<span class="blur-text">脑积水</span>。</td>
+                            <td>73..B <strong>神经上皮肿瘤的临床表现（二）</strong><br>少突胶质细胞肿瘤：约占神经上皮性肿瘤的<span class="answer-text">5%~20%</span>，常伴<span class="answer-text">钙化</span>；临床可无症状，或癫痫首发。<br>髓母细胞瘤：儿童最常见恶性颅内肿瘤（WHO <span class="answer-text">IV级</span>），起源于<span class="answer-text">小脑蚓部</span>（第四脑室顶），易随脑脊液播散，主要症状为颅内压增高和<span class="answer-text">共济失调</span>。<br>室管膜瘤：多位于幕下或脑室内，可随脑脊液播散，常引起<span class="answer-text">脑积水</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>73..C <strong>神经上皮肿瘤的临床表现（三）</strong><br>脑膜瘤：颅内最常见的<span class="blur-text">良性</span>肿瘤（WHO <span class="blur-text">I级</span>），占颅内原发肿瘤<span class="blur-text">15%~24%</span>；好发部位为<span class="blur-text">大脑凸面</span>、矢状窦旁、大脑镰旁和颅底；影像学强化明显，存在<span class="blur-text">脑膜尾征</span>。</td>
+                            <td>73..C <strong>神经上皮肿瘤的临床表现（三）</strong><br>脑膜瘤：颅内最常见的<span class="answer-text">良性</span>肿瘤（WHO <span class="answer-text">I级</span>），占颅内原发肿瘤<span class="answer-text">15%~24%</span>；好发部位为<span class="answer-text">大脑凸面</span>、矢状窦旁、大脑镰旁和颅底；影像学强化明显，存在<span class="answer-text">脑膜尾征</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>73..D <strong>神经上皮肿瘤的临床表现（四）</strong><br>垂体瘤：头痛、视力视野障碍（典型者为<span class="blur-text">双颞侧偏盲</span>）、<span class="blur-text">内分泌紊乱</span>（功能性腺瘤）。<br>听神经鞘瘤：首发症状多为<span class="blur-text">耳鸣</span>（高频），继而出现一侧听力进行性减退、失聪；可出现同侧角膜反射减退、周围性面瘫、<span class="blur-text">共济失调</span>等。</td>
+                            <td>73..D <strong>神经上皮肿瘤的临床表现（四）</strong><br>垂体瘤：头痛、视力视野障碍（典型者为<span class="answer-text">双颞侧偏盲</span>）、<span class="answer-text">内分泌紊乱</span>（功能性腺瘤）。<br>听神经鞘瘤：首发症状多为<span class="answer-text">耳鸣</span>（高频），继而出现一侧听力进行性减退、失聪；可出现同侧角膜反射减退、周围性面瘫、<span class="answer-text">共济失调</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>74..A <strong>急性脊髓炎的鉴别诊断（一）</strong><br>急性脊髓炎诊断要点：<span class="blur-text">急性</span>起病；病前有感染、<span class="blur-text">免疫接种</span>病史；迅速出现的脊髓<span class="blur-text">横贯性</span>损害；脑脊液支持急性脊髓炎；MRI、CT等除外其它脊髓病。</td>
+                            <td>74..A <strong>急性脊髓炎的鉴别诊断（一）</strong><br>急性脊髓炎诊断要点：<span class="answer-text">急性</span>起病；病前有感染、<span class="answer-text">免疫接种</span>病史；迅速出现的脊髓<span class="answer-text">横贯性</span>损害；脑脊液支持急性脊髓炎；MRI、CT等除外其它脊髓病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>74..B <strong>急性脊髓炎的鉴别诊断（二）</strong><br>NMO（视神经脊髓炎）诊断标准：必要条件为<span class="blur-text">视神经炎</span>+<span class="blur-text">急性脊髓炎</span>；支持条件包括脊髓MRI异常病灶≥<span class="blur-text">3个</span>椎体节段、头颅MRI不符合<span class="blur-text">MS</span>诊断标准、血清<span class="blur-text">NMO-IgG</span>阳性。</td>
+                            <td>74..B <strong>急性脊髓炎的鉴别诊断（二）</strong><br>NMO（视神经脊髓炎）诊断标准：必要条件为<span class="answer-text">视神经炎</span>+<span class="answer-text">急性脊髓炎</span>；支持条件包括脊髓MRI异常病灶≥<span class="answer-text">3个</span>椎体节段、头颅MRI不符合<span class="answer-text">MS</span>诊断标准、血清<span class="answer-text">NMO-IgG</span>阳性。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>75..A <strong>脊髓压迫症的临床表现（一）</strong><br>急性压迫：进展快，多出现<span class="blur-text">脊髓休克</span>。<br>慢性压迫分期：分为三期，早期<span class="blur-text">根痛期</span>，脊髓部分受压期（<span class="blur-text">脊髓半切综合征</span>），脊髓完全受压期（表现为脊髓完全横贯损害）。</td>
+                            <td>75..A <strong>脊髓压迫症的临床表现（一）</strong><br>急性压迫：进展快，多出现<span class="answer-text">脊髓休克</span>。<br>慢性压迫分期：分为三期，早期<span class="answer-text">根痛期</span>，脊髓部分受压期（<span class="answer-text">脊髓半切综合征</span>），脊髓完全受压期（表现为脊髓完全横贯损害）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>75..B <strong>脊髓压迫症的临床表现（二）</strong><br>神经根症状：受累神经根支配皮节发作性、周期性疼痛，体位变化时加重或减轻。<br>感觉障碍：后根损害出现根性疼痛、节段性感觉丧失；脊髓丘脑束损害出现病变水平以下<span class="blur-text">对侧</span>痛温觉障碍；髓内病变感觉障碍<span class="blur-text">由上向下</span>进展，髓外病变<span class="blur-text">由下向上</span>进展。</td>
+                            <td>75..B <strong>脊髓压迫症的临床表现（二）</strong><br>神经根症状：受累神经根支配皮节发作性、周期性疼痛，体位变化时加重或减轻。<br>感觉障碍：后根损害出现根性疼痛、节段性感觉丧失；脊髓丘脑束损害出现病变水平以下<span class="answer-text">对侧</span>痛温觉障碍；髓内病变感觉障碍<span class="answer-text">由上向下</span>进展，髓外病变<span class="answer-text">由下向上</span>进展。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>75..C <strong>脊髓压迫症的临床表现（三）</strong><br>运动障碍：<span class="blur-text">脊髓休克</span>；前根损伤导致<span class="blur-text">下运动神经元</span>瘫痪；皮质脊髓束损伤导致<span class="blur-text">上运动神经元</span>瘫痪。<br>自主神经功能障碍：<span class="blur-text">尿潴留</span>、<span class="blur-text">尿失禁</span>、便秘；皮肤循环和营养受损。</td>
+                            <td>75..C <strong>脊髓压迫症的临床表现（三）</strong><br>运动障碍：<span class="answer-text">脊髓休克</span>；前根损伤导致<span class="answer-text">下运动神经元</span>瘫痪；皮质脊髓束损伤导致<span class="answer-text">上运动神经元</span>瘫痪。<br>自主神经功能障碍：<span class="answer-text">尿潴留</span>、<span class="answer-text">尿失禁</span>、便秘；皮肤循环和营养受损。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>76..A <strong>脊髓压迫症的诊断（一）</strong><br>定向诊断：是否为脊髓压迫性。依据根痛、脊髓部分受压→脊髓横贯性损害、<span class="blur-text">影像学</span>。<br>纵向定位：病变上界判断依据包括<span class="blur-text">神经根痛</span>节段、感觉障碍平面、<span class="blur-text">腱反射改变</span>、肌肉萎缩、脊柱压痛或叩痛。</td>
+                            <td>76..A <strong>脊髓压迫症的诊断（一）</strong><br>定向诊断：是否为脊髓压迫性。依据根痛、脊髓部分受压→脊髓横贯性损害、<span class="answer-text">影像学</span>。<br>纵向定位：病变上界判断依据包括<span class="answer-text">神经根痛</span>节段、感觉障碍平面、<span class="answer-text">腱反射改变</span>、肌肉萎缩、脊柱压痛或叩痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>76..B <strong>脊髓压迫症的诊断（二）</strong><br>横向定位：判断<span class="blur-text">髓内</span>还是<span class="blur-text">髓外</span>病变。<br>病因及性质：结合病史、影像学等确定。</td>
+                            <td>76..B <strong>脊髓压迫症的诊断（二）</strong><br>横向定位：判断<span class="answer-text">髓内</span>还是<span class="answer-text">髓外</span>病变。<br>病因及性质：结合病史、影像学等确定。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">77..<strong>髓内病变和髓外病变的比较</strong><br>（图片内容，请参考教材表格）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>78..<strong>脊髓压迫症的治疗原则</strong><br>原则：去除病因，解除脊髓压迫。<br>时间窗：急性压迫尽可能在<span class="blur-text">6小时</span>内减压。<br>手术顺序：如有多个压迫病变，先解除<span class="blur-text">高水平节段</span>的病变。<br>治疗方式：髓外硬膜下病变最好通过<span class="blur-text">手术切除</span>；髓内肿瘤可通过减压手术和<span class="blur-text">放疗</span>。</td>
+                            <td>78..<strong>脊髓压迫症的治疗原则</strong><br>原则：去除病因，解除脊髓压迫。<br>时间窗：急性压迫尽可能在<span class="answer-text">6小时</span>内减压。<br>手术顺序：如有多个压迫病变，先解除<span class="answer-text">高水平节段</span>的病变。<br>治疗方式：髓外硬膜下病变最好通过<span class="answer-text">手术切除</span>；髓内肿瘤可通过减压手术和<span class="answer-text">放疗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>79..A <strong>特发性面神经麻痹的临床表现（一）</strong><br>概述：任何年龄均可发病，男性略多于女性；起病迅速，数小时至数天内达高峰；病前多有<span class="blur-text">受凉感染</span>史；绝大多数为<span class="blur-text">单侧</span>发病。<br>茎乳孔附近病变：同侧<span class="blur-text">周围性面瘫</span>，额纹消失、眼裂变大、鼻唇沟变浅，伴耳后疼痛。</td>
+                            <td>79..A <strong>特发性面神经麻痹的临床表现（一）</strong><br>概述：任何年龄均可发病，男性略多于女性；起病迅速，数小时至数天内达高峰；病前多有<span class="answer-text">受凉感染</span>史；绝大多数为<span class="answer-text">单侧</span>发病。<br>茎乳孔附近病变：同侧<span class="answer-text">周围性面瘫</span>，额纹消失、眼裂变大、鼻唇沟变浅，伴耳后疼痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>79..B <strong>特发性面神经麻痹的临床表现（二）</strong><br>鼓索神经近端病变：除面瘫外，还有同侧<span class="blur-text">舌前2/3味觉丧失</span>，唾液减少。<br>镫骨肌神经近端损害：除上述症状外，还有<span class="blur-text">听觉过敏</span>。</td>
+                            <td>79..B <strong>特发性面神经麻痹的临床表现（二）</strong><br>鼓索神经近端病变：除面瘫外，还有同侧<span class="answer-text">舌前2/3味觉丧失</span>，唾液减少。<br>镫骨肌神经近端损害：除上述症状外，还有<span class="answer-text">听觉过敏</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>80..A <strong>重症肌无力危象的分类及基本处理原则（一）</strong><br>定义：指<span class="blur-text">呼吸肌</span>受累出现呼吸困难，需借助<span class="blur-text">呼吸机</span>辅助呼吸，为致死主要原因。<br>诱因：常由<span class="blur-text">呼吸道感染</span>、手术、紧张、全身疾病等诱发。</td>
+                            <td>80..A <strong>重症肌无力危象的分类及基本处理原则（一）</strong><br>定义：指<span class="answer-text">呼吸肌</span>受累出现呼吸困难，需借助<span class="answer-text">呼吸机</span>辅助呼吸，为致死主要原因。<br>诱因：常由<span class="answer-text">呼吸道感染</span>、手术、紧张、全身疾病等诱发。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>80..B <strong>重症肌无力危象的分类及基本处理原则（二）</strong><br>分类：1）<span class="blur-text">肌无力危象</span>（最常见，因胆碱酯酶抑制剂剂量不足，注射<span class="blur-text">新斯的明</span>可好转）；2）<span class="blur-text">胆碱能危象</span>（过量应用胆碱酯酶抑制剂，应<span class="blur-text">立即停用</span>）；3）<span class="blur-text">反拗性危象</span>（服药无效，应立即停用，待受体恢复后再次使用）。</td>
+                            <td>80..B <strong>重症肌无力危象的分类及基本处理原则（二）</strong><br>分类：1）<span class="answer-text">肌无力危象</span>（最常见，因胆碱酯酶抑制剂剂量不足，注射<span class="answer-text">新斯的明</span>可好转）；2）<span class="answer-text">胆碱能危象</span>（过量应用胆碱酯酶抑制剂，应<span class="answer-text">立即停用</span>）；3）<span class="answer-text">反拗性危象</span>（服药无效，应立即停用，待受体恢复后再次使用）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>80..C <strong>重症肌无力危象的分类及基本处理原则（三）</strong><br>基本处理：保持<span class="blur-text">呼吸道通畅</span>，呼吸机辅助通气；积极控制<span class="blur-text">感染</span>；<span class="blur-text">糖皮质激素</span>治疗；条件允许给予<span class="blur-text">血浆交换</span>或<span class="blur-text">免疫球蛋白</span>治疗。</td>
+                            <td>80..C <strong>重症肌无力危象的分类及基本处理原则（三）</strong><br>基本处理：保持<span class="answer-text">呼吸道通畅</span>，呼吸机辅助通气；积极控制<span class="answer-text">感染</span>；<span class="answer-text">糖皮质激素</span>治疗；条件允许给予<span class="answer-text">血浆交换</span>或<span class="answer-text">免疫球蛋白</span>治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>81..A <strong>器质性精神障碍临床表现的共同特点（一）</strong><br>与原发病关系：精神障碍与原发器质性疾病的病情严重程度呈<span class="blur-text">平行</span>关系，发生时间常有<span class="blur-text">先后</span>关系。<br>病程特点：急性器质性疾病常引起<span class="blur-text">意识障碍</span>；慢性器质性疾病常引起<span class="blur-text">智能障碍</span>和<span class="blur-text">人格改变</span>。</td>
+                            <td>81..A <strong>器质性精神障碍临床表现的共同特点（一）</strong><br>与原发病关系：精神障碍与原发器质性疾病的病情严重程度呈<span class="answer-text">平行</span>关系，发生时间常有<span class="answer-text">先后</span>关系。<br>病程特点：急性器质性疾病常引起<span class="answer-text">意识障碍</span>；慢性器质性疾病常引起<span class="answer-text">智能障碍</span>和<span class="answer-text">人格改变</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>81..B <strong>器质性精神障碍临床表现的共同特点（二）</strong><br>症状与治疗：精神障碍缺少<span class="blur-text">独特</span>症状；积极治疗原发疾病并及时处理精神障碍，可使精神症状<span class="blur-text">好转</span>。</td>
+                            <td>81..B <strong>器质性精神障碍临床表现的共同特点（二）</strong><br>症状与治疗：精神障碍缺少<span class="answer-text">独特</span>症状；积极治疗原发疾病并及时处理精神障碍，可使精神症状<span class="answer-text">好转</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">82..<strong>阿尔兹海默病的临床表现和诊断</strong><br>（图片内容，请参考教材分期表格，主要包括早期记忆障碍、中期痴呆、晚期严重痴呆等表现，以及诊断标准：痴呆综合征+精神神经系统检查+认知功能检查+排除其他原因）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>83..A <strong>酒精致精神障碍的临床表现和治疗原则（一）</strong><br>急性酒中毒：大量饮酒史，适应不良行为改变；出现说话含糊、<span class="blur-text">共济失调</span>、步态不稳、<span class="blur-text">眼球震颤</span>、脸色发红等。<br>酒精依赖综合征：与饮酒的<span class="blur-text">量</span>和<span class="blur-text">时间</span>有关，包括精神依赖和躯体依赖。</td>
+                            <td>83..A <strong>酒精致精神障碍的临床表现和治疗原则（一）</strong><br>急性酒中毒：大量饮酒史，适应不良行为改变；出现说话含糊、<span class="answer-text">共济失调</span>、步态不稳、<span class="answer-text">眼球震颤</span>、脸色发红等。<br>酒精依赖综合征：与饮酒的<span class="answer-text">量</span>和<span class="answer-text">时间</span>有关，包括精神依赖和躯体依赖。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>83..B <strong>酒精致精神障碍的临床表现和治疗原则（二）</strong><br>戒断反应：长期饮酒突然停饮所致，包括单纯戒断反应、<span class="blur-text">震颤谵妄</span>、<span class="blur-text">癫痫样发作</span>。<br>其他精神障碍：酒相关性痴呆、<span class="blur-text">科萨科夫综合征</span>、酒精性幻觉症、酒精性妄想症、<span class="blur-text">人格改变</span>。</td>
+                            <td>83..B <strong>酒精致精神障碍的临床表现和治疗原则（二）</strong><br>戒断反应：长期饮酒突然停饮所致，包括单纯戒断反应、<span class="answer-text">震颤谵妄</span>、<span class="answer-text">癫痫样发作</span>。<br>其他精神障碍：酒相关性痴呆、<span class="answer-text">科萨科夫综合征</span>、酒精性幻觉症、酒精性妄想症、<span class="answer-text">人格改变</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>83..C <strong>酒精致精神障碍的治疗原则（三）</strong><br>治疗：戒酒后积极治疗原发病；急性中毒时防止<span class="blur-text">呼吸抑制</span>；震颤谵妄需安静环境、<span class="blur-text">苯二氮䓬类</span>镇静、控制精神症状、补充<span class="blur-text">大剂量维生素</span>；酒精性幻觉/妄想症使用<span class="blur-text">抗精神病药物</span>（如喹硫平、奥氮平）。</td>
+                            <td>83..C <strong>酒精致精神障碍的治疗原则（三）</strong><br>治疗：戒酒后积极治疗原发病；急性中毒时防止<span class="answer-text">呼吸抑制</span>；震颤谵妄需安静环境、<span class="answer-text">苯二氮䓬类</span>镇静、控制精神症状、补充<span class="answer-text">大剂量维生素</span>；酒精性幻觉/妄想症使用<span class="answer-text">抗精神病药物</span>（如喹硫平、奥氮平）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>84..A <strong>抑郁发作的临床表现（一）</strong><br>情感低落：<span class="blur-text">六无</span>症状（无趣、无助、无能、无力、无望、无价值感）；<span class="blur-text">三自</span>症状（自责、自罪、<span class="blur-text">自杀</span>）。<br>思维与意志：<span class="blur-text">思维迟缓</span>；<span class="blur-text">意志活动减退</span>。</td>
+                            <td>84..A <strong>抑郁发作的临床表现（一）</strong><br>情感低落：<span class="answer-text">六无</span>症状（无趣、无助、无能、无力、无望、无价值感）；<span class="answer-text">三自</span>症状（自责、自罪、<span class="answer-text">自杀</span>）。<br>思维与意志：<span class="answer-text">思维迟缓</span>；<span class="answer-text">意志活动减退</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>84..B <strong>抑郁发作的临床表现（二）</strong><br>躯体与生物症状：<span class="blur-text">头昏</span>、<span class="blur-text">头痛</span>等躯体症状；<span class="blur-text">睡眠障碍</span>是最常见的伴随症状之一。</td>
+                            <td>84..B <strong>抑郁发作的临床表现（二）</strong><br>躯体与生物症状：<span class="answer-text">头昏</span>、<span class="answer-text">头痛</span>等躯体症状；<span class="answer-text">睡眠障碍</span>是最常见的伴随症状之一。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">85..<strong>抑郁发作、躁狂发作的诊断标准</strong><br>（图片内容，请参考教材诊断标准表格）</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">86..<strong>神经症的共同特征</strong><br>（图片内容，请参考教材：起病与心理社会因素有关、病前人格基础、症状多样但无器质性证据、无精神病性症状、有自知力、社会功能相对完好、病程迁延）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>87..<strong>创伤后应激障碍的诊断要点</strong><br>核心要素：突然遭受<span class="blur-text">异乎寻常</span>的创伤性事件；反复重现<span class="blur-text">创伤性体验</span>；持续的<span class="blur-text">警觉性增高</span>；对刺激相似或有关情景的<span class="blur-text">回避</span>；社会功能<span class="blur-text">严重受损</span>；持续至少<span class="blur-text">几周</span>。</td>
+                            <td>87..<strong>创伤后应激障碍的诊断要点</strong><br>核心要素：突然遭受<span class="answer-text">异乎寻常</span>的创伤性事件；反复重现<span class="answer-text">创伤性体验</span>；持续的<span class="answer-text">警觉性增高</span>；对刺激相似或有关情景的<span class="answer-text">回避</span>；社会功能<span class="answer-text">严重受损</span>；持续至少<span class="answer-text">几周</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>88..A <strong>神经性厌食的临床表现（一）</strong><br>一般症状：<span class="blur-text">体象障碍</span>（核心心理特征）、故意节制食量、避免体重增加。<br>精神与躯体：精神症状包括焦虑、失眠、<span class="blur-text">抑郁</span>；躯体症状包括头晕、头痛、恶心、呕吐。</td>
+                            <td>88..A <strong>神经性厌食的临床表现（一）</strong><br>一般症状：<span class="answer-text">体象障碍</span>（核心心理特征）、故意节制食量、避免体重增加。<br>精神与躯体：精神症状包括焦虑、失眠、<span class="answer-text">抑郁</span>；躯体症状包括头晕、头痛、恶心、呕吐。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>89..A <strong>神经性厌食的诊断（一）</strong><br>症状标准：体重减轻大于正常平均体重的<span class="blur-text">15%</span>或<span class="blur-text">BMI<17.5</span>；<span class="blur-text">体象障碍</span>（害怕发胖/超价观念）；故意造成体重减轻；<span class="blur-text">下丘脑-垂体-性腺轴</span>内分泌紊乱。<br>病程与严重程度：症状持续至少<span class="blur-text">3个月</span>；症状造成严重的紊乱或影响社会功能。</td>
+                            <td>89..A <strong>神经性厌食的诊断（一）</strong><br>症状标准：体重减轻大于正常平均体重的<span class="answer-text">15%</span>或<span class="answer-text">BMI<17.5</span>；<span class="answer-text">体象障碍</span>（害怕发胖/超价观念）；故意造成体重减轻；<span class="answer-text">下丘脑-垂体-性腺轴</span>内分泌紊乱。<br>病程与严重程度：症状持续至少<span class="answer-text">3个月</span>；症状造成严重的紊乱或影响社会功能。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>89..B <strong>神经性厌食的诊断（二）</strong><br>排除标准：排除<span class="blur-text">肝硬化</span>等器质性疾病。</td>
+                            <td>89..B <strong>神经性厌食的诊断（二）</strong><br>排除标准：排除<span class="answer-text">肝硬化</span>等器质性疾病。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">90..<strong>精神发育迟滞等级划分</strong><br>（图片内容，请参考教材表格：轻度IQ 50-69，中度35-49，重度20-34，极重度<20）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>91..A <strong>孤独症的临床表现（一）</strong><br>核心症状：<span class="blur-text">社会交往障碍</span>（社会化偏差、机械性模仿）；<span class="blur-text">语言交流障碍</span>（语言发育延迟、重复无意义的话）；<span class="blur-text">重复刻板行为</span>（兴趣狭窄、固执生活习惯）。</td>
+                            <td>91..A <strong>孤独症的临床表现（一）</strong><br>核心症状：<span class="answer-text">社会交往障碍</span>（社会化偏差、机械性模仿）；<span class="answer-text">语言交流障碍</span>（语言发育延迟、重复无意义的话）；<span class="answer-text">重复刻板行为</span>（兴趣狭窄、固执生活习惯）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>91..B <strong>孤独症的临床表现（二）</strong><br>其他表现：<span class="blur-text">感知觉障碍</span>（触觉、听觉、味觉障碍）；认知和智能障碍（智力障碍、特异认知特征）。</td>
+                            <td>91..B <strong>孤独症的临床表现（二）</strong><br>其他表现：<span class="answer-text">感知觉障碍</span>（触觉、听觉、味觉障碍）；认知和智能障碍（智力障碍、特异认知特征）。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">92..<strong>孤独症的诊断要点</strong><br>（图片内容，请参考教材四个标准：起病年龄3岁前，症状标准包括人际交往/言语交流/兴趣刻板三方面损害，严重程度标准，排除标准）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>93..A <strong>注意缺陷多动障碍的临床表现（一）</strong><br>核心症状：<span class="blur-text">注意障碍</span>（注意缺陷，注意力不集中、稳定性差）；<span class="blur-text">活动过度</span>（活动水平明显比正常儿童多）；情绪不稳、<span class="blur-text">冲动任性</span>。</td>
+                            <td>93..A <strong>注意缺陷多动障碍的临床表现（一）</strong><br>核心症状：<span class="answer-text">注意障碍</span>（注意缺陷，注意力不集中、稳定性差）；<span class="answer-text">活动过度</span>（活动水平明显比正常儿童多）；情绪不稳、<span class="answer-text">冲动任性</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>93..B <strong>注意缺陷多动障碍的临床表现（二）</strong><br>其他表现：<span class="blur-text">学习困难</span>和认知障碍；常共患其他发育障碍或精神障碍（<span class="blur-text">共病现象</span>）。</td>
+                            <td>93..B <strong>注意缺陷多动障碍的临床表现（二）</strong><br>其他表现：<span class="answer-text">学习困难</span>和认知障碍；常共患其他发育障碍或精神障碍（<span class="answer-text">共病现象</span>）。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">94..<strong>注意缺陷多动障碍的诊断要点</strong><br>（图片内容，请参考教材四个标准：起病年龄12岁前，症状标准注意缺陷和多动症状同时存在且持续6个月，社会功能标准，排除标准）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>95..<strong>精神科急诊的基本处理原则</strong><br>处理原则：确保诊疗过程<span class="blur-text">安全</span>；判断患者有无优先处理的<span class="blur-text">躯体疾病</span>；对精神症状<span class="blur-text">严重程度</span>进行评估；根据情况决定是否需要<span class="blur-text">急诊处理</span>。</td>
+                            <td>95..<strong>精神科急诊的基本处理原则</strong><br>处理原则：确保诊疗过程<span class="answer-text">安全</span>；判断患者有无优先处理的<span class="answer-text">躯体疾病</span>；对精神症状<span class="answer-text">严重程度</span>进行评估；根据情况决定是否需要<span class="answer-text">急诊处理</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

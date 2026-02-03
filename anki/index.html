@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小c的笔记导航</title>
+    <link rel="stylesheet" href="https://nymeria79.github.io/my-page/style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- 卡片1：头部 -->
+        <div class="card header-card">
+            <h1>📚 小c的anki笔记导航</h1>
+            <p class="subtitle">许多anki学习笔记的传送门，点击卡片即可跳转</p>
+
+            <div class="medical-disclaimer">
+                <strong>⚠️ 医疗免责声明</strong>
+                <p>本站所有内容仅供教育参考与信息分享，不构成医疗建议、诊断或治疗方案。浏览本站不建立医患关系，如有健康疑虑请咨询执业医疗人员。</p>
+            </div>
+        </div>
+
+        <!-- 卡片2：个人博客 -->
+        <div class="card">
+            <div class="card-title">📝 个人博客</div>
+            <div class="card-desc">最初的主页，存放见闻思考和综合内容</div>
+            <div class="card-meta" style="margin-bottom: 16px;">更新：2025-02-01</div>
+            <a href="https://nymeria79.github.io/my-page/" target="_blank" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px;">访问网站</a>
+        </div>
+
+        <!-- 卡片3：Anki可视化工具 -->
+        <div class="card">
+            <div class="card-title">✨ Anki可视化工具</div>
+            <div class="card-desc">粘贴anki笔记自动排版，Claude写的实用工具</div>
+            <div class="card-meta" id="time-post2" data-file="post2.html" style="margin-bottom: 16px;">获取时间中...</div>
+            <a href="post2.html" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px;">打开工具</a>
+        </div>
+
+        <!-- 卡片4：Anki知识库（核心卡片） -->
+        <div class="card">
+            <div class="card-title">🎴 Anki知识库</div>
+            <div class="card-desc">这学期Anki内容的可视化图表，预计十多个页面</div>
+            <div class="card-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">⚠️ 不用于任何临床诊断参考，仅供个人学习</div>
+            <div class="card-meta" id="time-main" style="margin-bottom: 20px;">同步时间计算中...</div>
+            
+            <div class="card-desc" style="margin-top: 16px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大四寒假</div>
+            <div class="links-grid">
+                <a href="post11.html" class="link-item" data-file="post11.html">github·基础名词</a>
+                <a href="post12.html" class="link-item" data-file="post12.html">github·非开发者</a>
+                <a href="post13.html" class="link-item" data-file="post13.html">github·个人博客</a>
+            </div>
+
+            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大四下</div>
+            <div class="links-grid">
+                <a href="post3.html" class="link-item" data-file="post3.html">神经系统·名词解释</a>
+                <a href="post4.html" class="link-item" data-file="post4.html">神经系统·大题</a>
+                <a href="post5.html" class="link-item" data-file="post5.html">儿科学·名词解释</a>
+                <a href="post6.html" class="link-item" data-file="post6.html">儿科学·大题</a>
+                <a href="post7.html" class="link-item" data-file="post7.html">传染病学·名词解释</a>
+                <a href="post8.html" class="link-item" data-file="post8.html">传染病学·大题</a>
+                <a href="post9.html" class="link-item" data-file="post9.html">全科医学·名词解释</a>
+                <a href="post10.html" class="link-item" data-file="post10.html">全科医学·大题</a>
+            </div>
+        </div>
+
+        <!-- 卡片5：使用说明 -->
+        <div class="card disclaimer-card" style="background: #fcfcfc; border-left: 4px solid var(--link-color);">
+            <div style="color: var(--link-color); margin-bottom: 16px; font-weight: 600; font-size: 1.1rem;">🔧 如何添加新的笔记链接？</div>
+            
+            <div style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 10px; padding-left: 24px; position: relative; line-height: 1.8;">
+                <span style="position: absolute; left: 0; color: var(--link-color); font-weight: bold;">1.</span>
+                复制上面的一个 <code style="background: var(--link-bg); padding: 2px 6px; border-radius: 4px; color: var(--link-color); font-family: monospace; font-size: 0.9rem;">&lt;a&gt;</code> 链接块
+            </div>
+            <div style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 10px; padding-left: 24px; position: relative; line-height: 1.8;">
+                <span style="position: absolute; left: 0; color: var(--link-color); font-weight: bold;">2.</span>
+                修改 href 和 data-file 为新文件名（如 post14.html）
+            </div>
+            <div style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 10px; padding-left: 24px; position: relative; line-height: 1.8;">
+                <span style="position: absolute; left: 0; color: var(--link-color); font-weight: bold;">3.</span>
+                修改链接文字
+            </div>
+            <div style="font-size: 0.95rem; color: var(--text-secondary); padding-left: 24px; position: relative; line-height: 1.8;">
+                <span style="position: absolute; left: 0; color: var(--link-color); font-weight: bold;">4.</span>
+                保存推送，时间会自动出现
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // GitHub API 配置
+        const GITHUB_USER = 'nymeria79';
+        const GITHUB_REPO = 'anki-viewer';
+        const CACHE_MS = 3600000; // 1小时缓存
+        
+        function getCache() {
+            try {
+                const data = JSON.parse(localStorage.getItem('page_times') || '{}');
+                if (Date.now() - (data.ts || 0) < CACHE_MS) {
+                    return data.files || {};
+                }
+            } catch(e) {}
+            return {};
+        }
+        
+        function saveCache(files) {
+            localStorage.setItem('page_times', JSON.stringify({
+                ts: Date.now(),
+                files: files
+            }));
+        }
+        
+        async function fetchTime(filename) {
+            const cache = getCache();
+            if (cache[filename]) return cache[filename];
+            
+            try {
+                const res = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/commits?path=${filename}&per_page=1`);
+                if (!res.ok) throw new Error('API限制');
+                const data = await res.json();
+                if (data.length > 0) {
+                    const date = new Date(data[0].commit.committer.date);
+                    const str = `${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}`;
+                    cache[filename] = str;
+                    saveCache(cache);
+                    return str;
+                }
+            } catch(e) {
+                console.log('获取失败:', filename);
+            }
+            return null;
+        }
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            // 处理卡片3的单文件时间
+            const meta2 = document.getElementById('time-post2');
+            if (meta2) {
+                const t = await fetchTime(meta2.getAttribute('data-file'));
+                if (t) meta2.textContent = '最后改动：' + t;
+                else meta2.textContent = '更新：近期';
+            }
+            
+            // 处理所有链接的时间标签
+            const fileElements = document.querySelectorAll('[data-file]');
+            let latestTime = '';
+            let latestFile = '';
+            
+            for (let el of fileElements) {
+                const file = el.getAttribute('data-file');
+                if (!file || file === 'post2.html') continue; // 跳过已经处理的post2
+                
+                const time = await fetchTime(file);
+                if (time) {
+                    // 在链接内添加时间标签（使用CSS类）
+                    const span = document.createElement('span');
+                    span.className = 'file-time';
+                    span.textContent = time;
+                    el.appendChild(span);
+                    
+                    // 记录最新时间
+                    if (time > latestTime) {
+                        latestTime = time;
+                        latestFile = file;
+                    }
+                }
+            }
+            
+            // 更新卡片3顶部的整体时间
+            const mainMeta = document.getElementById('time-main');
+            if (mainMeta && latestTime) {
+                mainMeta.textContent = `最近更新：${latestFile.replace('.html','')} (${latestTime})`;
+                mainMeta.style.color = 'var(--link-color)';
+                mainMeta.style.fontWeight = '500';
+            } else if (mainMeta) {
+                mainMeta.textContent = '最后同步：刚刚';
+            }
+        });
+    </script>
+
+</body>
+</html>

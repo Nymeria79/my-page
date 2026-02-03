@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3"><strong>《神经系统与精神疾病名词解释》</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1. <strong>cortex:皮质</strong><br>定义：在<span class="blur-text">中枢神经系统</span>内，<span class="blur-text">大、小脑表面的灰质</span>称皮质。</td>
+                            <td>1. <strong>cortex:皮质</strong><br>定义：在<span class="answer-text">中枢神经系统</span>内，<span class="answer-text">大、小脑表面的灰质</span>称皮质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. <strong>gray matter:灰质</strong><br>定义：在<span class="blur-text">中枢神经系统</span>内，<span class="blur-text">神经元胞体和树突</span>集中的部位，在新鲜标本中呈<span class="blur-text">灰暗色</span>，称灰质。</td>
+                            <td>2. <strong>gray matter:灰质</strong><br>定义：在<span class="answer-text">中枢神经系统</span>内，<span class="answer-text">神经元胞体和树突</span>集中的部位，在新鲜标本中呈<span class="answer-text">灰暗色</span>，称灰质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. <strong>white matter:白质</strong><br>定义：在<span class="blur-text">中枢神经系统</span>内，<span class="blur-text">神经纤维</span>集中的部位色泽<span class="blur-text">白亮</span>，称白质。</td>
+                            <td>3. <strong>white matter:白质</strong><br>定义：在<span class="answer-text">中枢神经系统</span>内，<span class="answer-text">神经纤维</span>集中的部位色泽<span class="answer-text">白亮</span>，称白质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. <strong>medulla:髓质</strong><br>定义：在<span class="blur-text">中枢神经系统</span>内，位于<span class="blur-text">大、小脑深部</span>的白质称髓质。</td>
+                            <td>4. <strong>medulla:髓质</strong><br>定义：在<span class="answer-text">中枢神经系统</span>内，位于<span class="answer-text">大、小脑深部</span>的白质称髓质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. <strong>nucleus:神经核</strong><br>定义：在<span class="blur-text">中枢神经系统</span>内，<span class="blur-text">形态和功能相似</span>的神经元胞体集聚成的<span class="blur-text">团块</span>。</td>
+                            <td>5. <strong>nucleus:神经核</strong><br>定义：在<span class="answer-text">中枢神经系统</span>内，<span class="answer-text">形态和功能相似</span>的神经元胞体集聚成的<span class="answer-text">团块</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. A <strong>neuron:神经元</strong><br>定义：是<span class="blur-text">神经系统的基本功能单位</span>。<br>功能：能<span class="blur-text">感受刺激</span>并产生、传导<span class="blur-text">神经冲动</span>，以控制和调节其他系统、器官活动。</td>
+                            <td>6. A <strong>neuron:神经元</strong><br>定义：是<span class="answer-text">神经系统的基本功能单位</span>。<br>功能：能<span class="answer-text">感受刺激</span>并产生、传导<span class="answer-text">神经冲动</span>，以控制和调节其他系统、器官活动。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. <strong>glia:神经胶质</strong><br>功能：具有<span class="blur-text">保护、绝缘、修复、营养</span>等功能。</td>
+                            <td>7. <strong>glia:神经胶质</strong><br>功能：具有<span class="answer-text">保护、绝缘、修复、营养</span>等功能。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. <strong>fasciculus:纤维束</strong><br>定义：在<span class="blur-text">中枢神经系统</span>内，<span class="blur-text">起止、行程和功能基本相同</span>的神经纤维集聚成束。</td>
+                            <td>8. <strong>fasciculus:纤维束</strong><br>定义：在<span class="answer-text">中枢神经系统</span>内，<span class="answer-text">起止、行程和功能基本相同</span>的神经纤维集聚成束。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. <strong>ganglion:神经节</strong><br>定义：在<span class="blur-text">周围神经系统</span>内，神经元的<span class="blur-text">胞体</span>集聚处称神经节。</td>
+                            <td>9. <strong>ganglion:神经节</strong><br>定义：在<span class="answer-text">周围神经系统</span>内，神经元的<span class="answer-text">胞体</span>集聚处称神经节。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. <strong>nerve:神经</strong><br>定义：在<span class="blur-text">周围神经系统</span>内，神经纤维集聚在一起，外包<span class="blur-text">结缔组织膜</span>，称神经。</td>
+                            <td>10. <strong>nerve:神经</strong><br>定义：在<span class="answer-text">周围神经系统</span>内，神经纤维集聚在一起，外包<span class="answer-text">结缔组织膜</span>，称神经。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. <strong>cauda equina:马尾</strong><br>位置：<span class="blur-text">脊髓末端水平面以下</span>，位于<span class="blur-text">椎管硬膜囊内</span>的脊神经根合称马尾。</td>
+                            <td>11. <strong>cauda equina:马尾</strong><br>位置：<span class="answer-text">脊髓末端水平面以下</span>，位于<span class="answer-text">椎管硬膜囊内</span>的脊神经根合称马尾。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. <strong>filum terminale:终丝</strong><br>结构：<span class="blur-text">脊髓圆锥</span>向下延伸为<span class="blur-text">无神经组织的结缔组织</span>状的细丝。<br>附着：附着于<span class="blur-text">尾骨背面</span>。<br>功能：有<span class="blur-text">固定脊髓</span>的作用。</td>
+                            <td>12. <strong>filum terminale:终丝</strong><br>结构：<span class="answer-text">脊髓圆锥</span>向下延伸为<span class="answer-text">无神经组织的结缔组织</span>状的细丝。<br>附着：附着于<span class="answer-text">尾骨背面</span>。<br>功能：有<span class="answer-text">固定脊髓</span>的作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. <strong>decussation of pyramid:锥体交叉</strong><br>位置：<span class="blur-text">延髓的锥体下端</span>。<br>纤维：<span class="blur-text">皮质脊髓束</span>行至此处，<span class="blur-text">大部分纤维交叉到对侧</span>，此交叉称锥体交叉。</td>
+                            <td>13. <strong>decussation of pyramid:锥体交叉</strong><br>位置：<span class="answer-text">延髓的锥体下端</span>。<br>纤维：<span class="answer-text">皮质脊髓束</span>行至此处，<span class="answer-text">大部分纤维交叉到对侧</span>，此交叉称锥体交叉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. <strong>decussation of medial lemniscus:内侧丘系交叉</strong><br>位置：<span class="blur-text">延髓</span>。<br>纤维：<span class="blur-text">薄束核和楔束核</span>发出的纤维在此<span class="blur-text">交叉至对侧</span>，此交叉称内侧丘系交叉。</td>
+                            <td>14. <strong>decussation of medial lemniscus:内侧丘系交叉</strong><br>位置：<span class="answer-text">延髓</span>。<br>纤维：<span class="answer-text">薄束核和楔束核</span>发出的纤维在此<span class="answer-text">交叉至对侧</span>，此交叉称内侧丘系交叉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. <strong>trapezoid body:斜方体</strong><br>位置：<span class="blur-text">脑桥</span>。<br>纤维：<span class="blur-text">蜗神经核</span>发出的纤维<span class="blur-text">横行越边到对侧</span>，此处纤维称斜方体。</td>
+                            <td>15. <strong>trapezoid body:斜方体</strong><br>位置：<span class="answer-text">脑桥</span>。<br>纤维：<span class="answer-text">蜗神经核</span>发出的纤维<span class="answer-text">横行越边到对侧</span>，此处纤维称斜方体。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. <strong>pyramidal tract:锥体束</strong><br>组成：由<span class="blur-text">大脑皮质中央前回及中央旁小叶前部</span>细胞发出的轴突组成，包括<span class="blur-text">皮质脊髓束和皮质核束</span>。<br>功能：支配<span class="blur-text">全身骨骼肌运动</span>。</td>
+                            <td>16. <strong>pyramidal tract:锥体束</strong><br>组成：由<span class="answer-text">大脑皮质中央前回及中央旁小叶前部</span>细胞发出的轴突组成，包括<span class="answer-text">皮质脊髓束和皮质核束</span>。<br>功能：支配<span class="answer-text">全身骨骼肌运动</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. <strong>tonsil of cerebellum:小脑扁桃体</strong><br>位置：位于<span class="blur-text">小脑下面</span>，靠近<span class="blur-text">枕骨大孔</span>。<br>临床意义：颅内压增高时，小脑扁桃体可嵌入<span class="blur-text">枕骨大孔</span>，形成<span class="blur-text">小脑扁桃体疝</span>，压迫<span class="blur-text">延髓</span>，危及生命。</td>
+                            <td>17. <strong>tonsil of cerebellum:小脑扁桃体</strong><br>位置：位于<span class="answer-text">小脑下面</span>，靠近<span class="answer-text">枕骨大孔</span>。<br>临床意义：颅内压增高时，小脑扁桃体可嵌入<span class="answer-text">枕骨大孔</span>，形成<span class="answer-text">小脑扁桃体疝</span>，压迫<span class="answer-text">延髓</span>，危及生命。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. <strong>third ventricle:第三脑室</strong><br>位置：位于<span class="blur-text">丘脑和下丘脑间</span>，为<span class="blur-text">矢状位狭窄间隙</span>。<br>内容：内含<span class="blur-text">脑脊液</span>。<br>通路：其与<span class="blur-text">侧脑室和第四脑室</span>相通。</td>
+                            <td>18. <strong>third ventricle:第三脑室</strong><br>位置：位于<span class="answer-text">丘脑和下丘脑间</span>，为<span class="answer-text">矢状位狭窄间隙</span>。<br>内容：内含<span class="answer-text">脑脊液</span>。<br>通路：其与<span class="answer-text">侧脑室和第四脑室</span>相通。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. <strong>fourth ventricle:第四脑室</strong><br>位置：位于<span class="blur-text">延髓、脑桥和小脑之间</span>，呈<span class="blur-text">四棱锥体形</span>。<br>内容：内含<span class="blur-text">脑脊液</span>。<br>通路：其与<span class="blur-text">第三脑室、蛛网膜下隙及脊髓中央管</span>相通。</td>
+                            <td>19. <strong>fourth ventricle:第四脑室</strong><br>位置：位于<span class="answer-text">延髓、脑桥和小脑之间</span>，呈<span class="answer-text">四棱锥体形</span>。<br>内容：内含<span class="answer-text">脑脊液</span>。<br>通路：其与<span class="answer-text">第三脑室、蛛网膜下隙及脊髓中央管</span>相通。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. A <strong>internal capsule:内囊</strong><br>位置：位于<span class="blur-text">背侧丘脑、尾状核和豆状核之间</span>的白质板。<br>临床意义：一侧内囊损伤可导致<span class="blur-text">三偏综合征</span>，即<span class="blur-text">偏瘫、偏身感觉障碍、双眼对侧同向偏盲</span>。</td>
+                            <td>20. A <strong>internal capsule:内囊</strong><br>位置：位于<span class="answer-text">背侧丘脑、尾状核和豆状核之间</span>的白质板。<br>临床意义：一侧内囊损伤可导致<span class="answer-text">三偏综合征</span>，即<span class="answer-text">偏瘫、偏身感觉障碍、双眼对侧同向偏盲</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. <strong>corpus striatum:纹状体</strong><br>组成：由<span class="blur-text">尾状核和豆状核</span>组成。<br>功能：具有调节<span class="blur-text">肌肉张力</span>、调整<span class="blur-text">运动姿势</span>、参与<span class="blur-text">学习记忆</span>的功能。</td>
+                            <td>21. <strong>corpus striatum:纹状体</strong><br>组成：由<span class="answer-text">尾状核和豆状核</span>组成。<br>功能：具有调节<span class="answer-text">肌肉张力</span>、调整<span class="answer-text">运动姿势</span>、参与<span class="answer-text">学习记忆</span>的功能。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. <strong>corpus callosum:胼胝体</strong><br>定义：连合<span class="blur-text">左、右大脑半球新皮质</span>的纤维。<br>联系：广泛联系<span class="blur-text">额叶、顶叶、枕叶和颞叶</span>。<br>分部：分为<span class="blur-text">胼胝体嘴部、膝部、干部和压部</span>。</td>
+                            <td>22. <strong>corpus callosum:胼胝体</strong><br>定义：连合<span class="answer-text">左、右大脑半球新皮质</span>的纤维。<br>联系：广泛联系<span class="answer-text">额叶、顶叶、枕叶和颞叶</span>。<br>分部：分为<span class="answer-text">胼胝体嘴部、膝部、干部和压部</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. <strong>Reflex:反射</strong><br>定义：神经系统感受<span class="blur-text">体内、外环境变化的刺激</span>后，对环境变化作出<span class="blur-text">适宜的反应</span>。</td>
+                            <td>23. <strong>Reflex:反射</strong><br>定义：神经系统感受<span class="answer-text">体内、外环境变化的刺激</span>后，对环境变化作出<span class="answer-text">适宜的反应</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. <strong>reflex arc:反射弧</strong><br>定义：为反射的<span class="blur-text">形态学基础</span>。<br>组成：包括五个环节，<span class="blur-text">感受器、传入神经、中枢、传出神经、效应器</span>。</td>
+                            <td>24. <strong>reflex arc:反射弧</strong><br>定义：为反射的<span class="answer-text">形态学基础</span>。<br>组成：包括五个环节，<span class="answer-text">感受器、传入神经、中枢、传出神经、效应器</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25. <strong>white communicating branch:白交通支</strong><br>定义：为连<span class="blur-text">脊神经与交感干</span>之间的细支。<br>来源：由<span class="blur-text">脊髓侧角的内脏运动神经元</span>发出的神经纤维，经<span class="blur-text">脊神经前根、前支</span>，于<span class="blur-text">椎间孔外侧</span>出脊神经至交感干。<br>特点：该纤维为<span class="blur-text">有髓纤维</span>，呈<span class="blur-text">亮白色</span>，称白交通支。</td>
+                            <td>25. <strong>white communicating branch:白交通支</strong><br>定义：为连<span class="answer-text">脊神经与交感干</span>之间的细支。<br>来源：由<span class="answer-text">脊髓侧角的内脏运动神经元</span>发出的神经纤维，经<span class="answer-text">脊神经前根、前支</span>，于<span class="answer-text">椎间孔外侧</span>出脊神经至交感干。<br>特点：该纤维为<span class="answer-text">有髓纤维</span>，呈<span class="answer-text">亮白色</span>，称白交通支。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26. <strong>vegetative nervous system:自主神经系统</strong><br>定义：<span class="blur-text">内脏运动神经</span>调节内脏、心血管的运动及腺体分泌，通常不受人的意识控制，故称自主神经系统，也称<span class="blur-text">植物神经系统</span>。</td>
+                            <td>26. <strong>vegetative nervous system:自主神经系统</strong><br>定义：<span class="answer-text">内脏运动神经</span>调节内脏、心血管的运动及腺体分泌，通常不受人的意识控制，故称自主神经系统，也称<span class="answer-text">植物神经系统</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27. <strong>pathways:传导通路</strong><br>感觉传导路：感受器接受内外环境的刺激转变成神经冲动后，将神经冲动由<span class="blur-text">周围神经传入中枢</span>，到达<span class="blur-text">大脑皮质或其他高位中枢</span>并可形成各种感觉的神经链。<br>运动传导通路：由<span class="blur-text">大脑皮质或皮质下中枢</span>发出的神经纤维，直接或经过中继后终止于<span class="blur-text">脑干或脊髓运动神经元</span>，再传到效应器。</td>
+                            <td>27. <strong>pathways:传导通路</strong><br>感觉传导路：感受器接受内外环境的刺激转变成神经冲动后，将神经冲动由<span class="answer-text">周围神经传入中枢</span>，到达<span class="answer-text">大脑皮质或其他高位中枢</span>并可形成各种感觉的神经链。<br>运动传导通路：由<span class="answer-text">大脑皮质或皮质下中枢</span>发出的神经纤维，直接或经过中继后终止于<span class="answer-text">脑干或脊髓运动神经元</span>，再传到效应器。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28. <strong>pupillary light reflex:瞳孔对光反射</strong><br>定义：光照<span class="blur-text">一侧眼</span>的瞳孔，引起<span class="blur-text">两眼瞳孔缩小</span>的反应。</td>
+                            <td>28. <strong>pupillary light reflex:瞳孔对光反射</strong><br>定义：光照<span class="answer-text">一侧眼</span>的瞳孔，引起<span class="answer-text">两眼瞳孔缩小</span>的反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29. A <strong>pyramidal system:锥体系</strong><br>组成：包括<span class="blur-text">皮质脊髓束和皮质核束</span>。<br>分级：一般分为<span class="blur-text">上运动神经元和下运动神经元</span>两级。<br>上运动神经元：为位于<span class="blur-text">大脑皮质</span>投射至<span class="blur-text">脑神经一般躯体和特殊内脏运动核及脊髓前角运动神经元</span>的传出神经元。<br>下运动神经元：为<span class="blur-text">脑神经一般躯体和特殊内脏运动核及脊髓前角运动神经元</span>，其胞体和轴突组成传导运动神经冲动的<span class="blur-text">最后通路</span>。</td>
+                            <td>29. A <strong>pyramidal system:锥体系</strong><br>组成：包括<span class="answer-text">皮质脊髓束和皮质核束</span>。<br>分级：一般分为<span class="answer-text">上运动神经元和下运动神经元</span>两级。<br>上运动神经元：为位于<span class="answer-text">大脑皮质</span>投射至<span class="answer-text">脑神经一般躯体和特殊内脏运动核及脊髓前角运动神经元</span>的传出神经元。<br>下运动神经元：为<span class="answer-text">脑神经一般躯体和特殊内脏运动核及脊髓前角运动神经元</span>，其胞体和轴突组成传导运动神经冲动的<span class="answer-text">最后通路</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30. <strong>extrapyramidal system:锥体外系</strong><br>定义：是指<span class="blur-text">锥体系以外</span>影响和控制躯体运动的一切传导路径。<br>组成：包括<span class="blur-text">大脑皮质、纹状体、背侧丘脑、底丘脑、中脑顶盖、红核、黑质、脑桥核、前庭神经核、小脑和脑干的网状结构</span>等及它们的纤维联系。</td>
+                            <td>30. <strong>extrapyramidal system:锥体外系</strong><br>定义：是指<span class="answer-text">锥体系以外</span>影响和控制躯体运动的一切传导路径。<br>组成：包括<span class="answer-text">大脑皮质、纹状体、背侧丘脑、底丘脑、中脑顶盖、红核、黑质、脑桥核、前庭神经核、小脑和脑干的网状结构</span>等及它们的纤维联系。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31. <strong>脊髓丘脑束</strong><br>组成：脊神经节中枢突经后根外侧部的细纤维在脊髓灰质<span class="blur-text">I、IV-VII层</span>换元后，经<span class="blur-text">白质前联合</span>交叉至对侧形成<span class="blur-text">脊髓丘脑侧束</span>，传递<span class="blur-text">痛、温觉</span>；经后根内侧部的粗纤维在后索内上升1-2个阶段换元后交叉形成<span class="blur-text">脊髓丘脑前束</span>，传递<span class="blur-text">触、压觉</span>。<br>走行：上行至脑干下部时，前束加入<span class="blur-text">内侧丘系</span>，侧束延续为<span class="blur-text">脊髓丘脑系</span>，二者均止于<span class="blur-text">丘脑</span>。</td>
+                            <td>31. <strong>脊髓丘脑束</strong><br>组成：脊神经节中枢突经后根外侧部的细纤维在脊髓灰质<span class="answer-text">I、IV-VII层</span>换元后，经<span class="answer-text">白质前联合</span>交叉至对侧形成<span class="answer-text">脊髓丘脑侧束</span>，传递<span class="answer-text">痛、温觉</span>；经后根内侧部的粗纤维在后索内上升1-2个阶段换元后交叉形成<span class="answer-text">脊髓丘脑前束</span>，传递<span class="answer-text">触、压觉</span>。<br>走行：上行至脑干下部时，前束加入<span class="answer-text">内侧丘系</span>，侧束延续为<span class="answer-text">脊髓丘脑系</span>，二者均止于<span class="answer-text">丘脑</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32. <strong>三叉丘系</strong><br>起源：<span class="blur-text">三叉神经脊束核和三叉神经脑桥核</span>发出纤维越过中线至对侧。<br>走行：组成三叉丘系，伴行于<span class="blur-text">内侧丘系背外侧</span>，止于<span class="blur-text">背侧丘脑腹后内侧核</span>。<br>功能：传导<span class="blur-text">对侧头面部、口鼻腔粘膜、牙齿与牙龈</span>等处的<span class="blur-text">痛温觉和触压觉</span>。</td>
+                            <td>32. <strong>三叉丘系</strong><br>起源：<span class="answer-text">三叉神经脊束核和三叉神经脑桥核</span>发出纤维越过中线至对侧。<br>走行：组成三叉丘系，伴行于<span class="answer-text">内侧丘系背外侧</span>，止于<span class="answer-text">背侧丘脑腹后内侧核</span>。<br>功能：传导<span class="answer-text">对侧头面部、口鼻腔粘膜、牙齿与牙龈</span>等处的<span class="answer-text">痛温觉和触压觉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33. <strong>内侧丘系</strong><br>起源：由延髓的<span class="blur-text">薄束核和楔束核</span>发出的纤维，绕中央管形成<span class="blur-text">内弓状纤维</span>，在中央管的腹侧交叉为<span class="blur-text">内侧丘系交叉</span>。<br>走行：交叉完毕后在对侧转折上行，形成内侧丘系。<br>功能：传导<span class="blur-text">躯干四肢的本体感觉和精细触觉</span>。</td>
+                            <td>33. <strong>内侧丘系</strong><br>起源：由延髓的<span class="answer-text">薄束核和楔束核</span>发出的纤维，绕中央管形成<span class="answer-text">内弓状纤维</span>，在中央管的腹侧交叉为<span class="answer-text">内侧丘系交叉</span>。<br>走行：交叉完毕后在对侧转折上行，形成内侧丘系。<br>功能：传导<span class="answer-text">躯干四肢的本体感觉和精细触觉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34. <strong>外侧丘系</strong><br>起源：<span class="blur-text">蜗神经</span>纤维入脑桥，至于<span class="blur-text">蜗神经核</span>，发出纤维。<br>走行：大部分在脑桥基底部与被盖部之间横行向对侧，这些横行纤维称为<span class="blur-text">斜方体</span>，斜方体纤维在<span class="blur-text">上橄榄核</span>外侧折向上行，称外侧丘系。小部分纤维不交叉，至上橄榄核换元发出纤维加入同侧外侧丘系。</td>
+                            <td>34. <strong>外侧丘系</strong><br>起源：<span class="answer-text">蜗神经</span>纤维入脑桥，至于<span class="answer-text">蜗神经核</span>，发出纤维。<br>走行：大部分在脑桥基底部与被盖部之间横行向对侧，这些横行纤维称为<span class="answer-text">斜方体</span>，斜方体纤维在<span class="answer-text">上橄榄核</span>外侧折向上行，称外侧丘系。小部分纤维不交叉，至上橄榄核换元发出纤维加入同侧外侧丘系。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35. <strong>corticonuclear tract:皮质核束</strong><br>走行：在<span class="blur-text">脑干</span>内下降的过程中，沿途分支终止于<span class="blur-text">双侧的脑神经核</span>。<br>特殊支配：<span class="blur-text">舌下神经核</span>（支配舌肌）和<span class="blur-text">面神经核下部</span>（支配眼裂以下的表情肌）只接受<span class="blur-text">对侧</span>皮质核束支配。</td>
+                            <td>35. <strong>corticonuclear tract:皮质核束</strong><br>走行：在<span class="answer-text">脑干</span>内下降的过程中，沿途分支终止于<span class="answer-text">双侧的脑神经核</span>。<br>特殊支配：<span class="answer-text">舌下神经核</span>（支配舌肌）和<span class="answer-text">面神经核下部</span>（支配眼裂以下的表情肌）只接受<span class="answer-text">对侧</span>皮质核束支配。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36. <strong>corticospinal tract:皮质脊髓束</strong><br>走行：在<span class="blur-text">延髓下部</span>，大部分纤维交叉至对侧，形成<span class="blur-text">锥体交叉</span>。<br>分区：交叉后的纤维在脊髓<span class="blur-text">外侧索</span>下降称<span class="blur-text">皮质脊髓侧束</span>；小部分纤维不交叉，入脊髓<span class="blur-text">前索</span>下降，形成<span class="blur-text">皮质脊髓前束</span>。</td>
+                            <td>36. <strong>corticospinal tract:皮质脊髓束</strong><br>走行：在<span class="answer-text">延髓下部</span>，大部分纤维交叉至对侧，形成<span class="answer-text">锥体交叉</span>。<br>分区：交叉后的纤维在脊髓<span class="answer-text">外侧索</span>下降称<span class="answer-text">皮质脊髓侧束</span>；小部分纤维不交叉，入脊髓<span class="answer-text">前索</span>下降，形成<span class="answer-text">皮质脊髓前束</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37. <strong>Broca 区</strong><br>别名：<span class="blur-text">说话中枢</span>，即<span class="blur-text">运动性语言中枢</span>。<br>位置：位于<span class="blur-text">额下回后部</span>。</td>
+                            <td>37. <strong>Broca 区</strong><br>别名：<span class="answer-text">说话中枢</span>，即<span class="answer-text">运动性语言中枢</span>。<br>位置：位于<span class="answer-text">额下回后部</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38. <strong>Wernicke 区</strong><br>定义：<span class="blur-text">听觉性语言中枢和视觉性语言中枢</span>之间没有明显界限，有学者将它们称为Wernicke区。<br>范围：包括<span class="blur-text">颞上回、颞中回后部、缘上回及角回</span>。</td>
+                            <td>38. <strong>Wernicke 区</strong><br>定义：<span class="answer-text">听觉性语言中枢和视觉性语言中枢</span>之间没有明显界限，有学者将它们称为Wernicke区。<br>范围：包括<span class="answer-text">颞上回、颞中回后部、缘上回及角回</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39. <strong>优势半球</strong><br>定义：主要从事<span class="blur-text">语言文字符方面</span>的大脑半球，一般为<span class="blur-text">左侧</span>半球。</td>
+                            <td>39. <strong>优势半球</strong><br>定义：主要从事<span class="answer-text">语言文字符方面</span>的大脑半球，一般为<span class="answer-text">左侧</span>半球。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40. <strong>epidural space:硬膜外隙</strong><br>脊髓部位：在脊髓是<span class="blur-text">硬脊膜与椎管内面的骨膜</span>之间的间隙，呈<span class="blur-text">负压</span>，此隙向上<span class="blur-text">不通入颅腔</span>。<br>内容：其内含有<span class="blur-text">脊神经根、椎内静脉丛、脂肪和疏松结缔组织、淋巴管</span>等。<br>临床：为临床<span class="blur-text">硬膜外间隙阻滞麻醉</span>的部位。<br>脑部：其在脑内是位于<span class="blur-text">硬脑膜和颅骨</span>之间，是潜在性的间隙。</td>
+                            <td>40. <strong>epidural space:硬膜外隙</strong><br>脊髓部位：在脊髓是<span class="answer-text">硬脊膜与椎管内面的骨膜</span>之间的间隙，呈<span class="answer-text">负压</span>，此隙向上<span class="answer-text">不通入颅腔</span>。<br>内容：其内含有<span class="answer-text">脊神经根、椎内静脉丛、脂肪和疏松结缔组织、淋巴管</span>等。<br>临床：为临床<span class="answer-text">硬膜外间隙阻滞麻醉</span>的部位。<br>脑部：其在脑内是位于<span class="answer-text">硬脑膜和颅骨</span>之间，是潜在性的间隙。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41. <strong>terminal cistern:终池</strong><br>位置：<span class="blur-text">蛛网膜下隙的下部</span>，自<span class="blur-text">脊髓下端</span>至<span class="blur-text">第2骶椎</span>扩大形成。<br>内容：内含<span class="blur-text">马尾</span>。<br>临床：是临床<span class="blur-text">腰椎穿刺</span>部位。</td>
+                            <td>41. <strong>terminal cistern:终池</strong><br>位置：<span class="answer-text">蛛网膜下隙的下部</span>，自<span class="answer-text">脊髓下端</span>至<span class="answer-text">第2骶椎</span>扩大形成。<br>内容：内含<span class="answer-text">马尾</span>。<br>临床：是临床<span class="answer-text">腰椎穿刺</span>部位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42. <strong>subarachnoid space:蛛网膜下隙</strong><br>位置：在<span class="blur-text">脑和脊髓的蛛网膜和软膜</span>之间的间隙。<br>内容：内充满<span class="blur-text">脑脊液</span>。<br>临床：其下端扩大为<span class="blur-text">终池</span>，为临床<span class="blur-text">腰椎穿刺</span>部位。</td>
+                            <td>42. <strong>subarachnoid space:蛛网膜下隙</strong><br>位置：在<span class="answer-text">脑和脊髓的蛛网膜和软膜</span>之间的间隙。<br>内容：内充满<span class="answer-text">脑脊液</span>。<br>临床：其下端扩大为<span class="answer-text">终池</span>，为临床<span class="answer-text">腰椎穿刺</span>部位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43. <strong>arachnoid granulations:蛛网膜粒</strong><br>结构：为<span class="blur-text">脑蛛网膜</span>在硬脑膜构成的<span class="blur-text">上矢状窦</span>附近形成许多"<span class="blur-text">菜花状</span>"突起，突入<span class="blur-text">硬脑膜窦</span>内。<br>功能：<span class="blur-text">脑脊液</span>通过蛛网膜颗粒渗入<span class="blur-text">硬脑膜窦</span>内，回流入静脉。</td>
+                            <td>43. <strong>arachnoid granulations:蛛网膜粒</strong><br>结构：为<span class="answer-text">脑蛛网膜</span>在硬脑膜构成的<span class="answer-text">上矢状窦</span>附近形成许多"<span class="answer-text">菜花状</span>"突起，突入<span class="answer-text">硬脑膜窦</span>内。<br>功能：<span class="answer-text">脑脊液</span>通过蛛网膜颗粒渗入<span class="answer-text">硬脑膜窦</span>内，回流入静脉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44. A <strong>cavernous sinus:海绵窦</strong><br>位置：是颅内一对重要的<span class="blur-text">硬脑膜窦</span>，位于<span class="blur-text">蝶鞍和垂体的两侧</span>，前达<span class="blur-text">眶上裂内侧</span>，后至<span class="blur-text">颞骨岩部的尖端</span>。<br>结构：窦内有许多<span class="blur-text">结缔组织小梁</span>，窦中血流<span class="blur-text">缓慢</span>，感染时易形成<span class="blur-text">栓塞</span>。<br>交通：海绵窦交通广泛，经<span class="blur-text">眼下静脉、卵圆孔及破裂孔导血管</span>与<span class="blur-text">翼静脉丛</span>相通，借<span class="blur-text">眶内的眼上静脉、内眦静脉</span>与<span class="blur-text">面静脉</span>相通。</td>
+                            <td>44. A <strong>cavernous sinus:海绵窦</strong><br>位置：是颅内一对重要的<span class="answer-text">硬脑膜窦</span>，位于<span class="answer-text">蝶鞍和垂体的两侧</span>，前达<span class="answer-text">眶上裂内侧</span>，后至<span class="answer-text">颞骨岩部的尖端</span>。<br>结构：窦内有许多<span class="answer-text">结缔组织小梁</span>，窦中血流<span class="answer-text">缓慢</span>，感染时易形成<span class="answer-text">栓塞</span>。<br>交通：海绵窦交通广泛，经<span class="answer-text">眼下静脉、卵圆孔及破裂孔导血管</span>与<span class="answer-text">翼静脉丛</span>相通，借<span class="answer-text">眶内的眼上静脉、内眦静脉</span>与<span class="answer-text">面静脉</span>相通。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>44. B <strong>cavernous sinus:海绵窦（通过结构）</strong><br>外侧壁：自上而下依次有<span class="blur-text">动眼神经、滑车神经、眼神经及上颌神经</span>通过。<br>内侧壁：上部为<span class="blur-text">垂体</span>，窦内有<span class="blur-text">颈内动脉</span>及其外侧的<span class="blur-text">展神经</span>通过。</td>
+                            <td>44. B <strong>cavernous sinus:海绵窦（通过结构）</strong><br>外侧壁：自上而下依次有<span class="answer-text">动眼神经、滑车神经、眼神经及上颌神经</span>通过。<br>内侧壁：上部为<span class="answer-text">垂体</span>，窦内有<span class="answer-text">颈内动脉</span>及其外侧的<span class="answer-text">展神经</span>通过。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>45. <strong>cerebral arterial circle:脑底动脉环</strong><br>别名：又称<span class="blur-text">Willis 环</span>。<br>位置：环绕<span class="blur-text">视交叉、漏斗以及脚间窝</span>的其他结构。<br>组成：由<span class="blur-text">颈内动脉、大脑前动脉、前交通动脉、大脑后动脉、后交通动脉</span>共同组成。<br>功能：使<span class="blur-text">两侧颈内动脉系与椎-基底动脉系</span>互相交通，是调节两侧颈内动脉系和椎-基底动脉系血液的<span class="blur-text">重要结构</span>。</td>
+                            <td>45. <strong>cerebral arterial circle:脑底动脉环</strong><br>别名：又称<span class="answer-text">Willis 环</span>。<br>位置：环绕<span class="answer-text">视交叉、漏斗以及脚间窝</span>的其他结构。<br>组成：由<span class="answer-text">颈内动脉、大脑前动脉、前交通动脉、大脑后动脉、后交通动脉</span>共同组成。<br>功能：使<span class="answer-text">两侧颈内动脉系与椎-基底动脉系</span>互相交通，是调节两侧颈内动脉系和椎-基底动脉系血液的<span class="answer-text">重要结构</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>46. <strong>突触</strong><br>定义：一个神经元的<span class="blur-text">轴突末梢</span>与其他神经元的<span class="blur-text">胞体或突起</span>相接触，所形成的<span class="blur-text">特殊结构</span>。</td>
+                            <td>46. <strong>突触</strong><br>定义：一个神经元的<span class="answer-text">轴突末梢</span>与其他神经元的<span class="answer-text">胞体或突起</span>相接触，所形成的<span class="answer-text">特殊结构</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>47. <strong>胆碱能纤维</strong><br>定义：释放<span class="blur-text">乙酰胆碱</span>作为递质的纤维称为胆碱能纤维。</td>
+                            <td>47. <strong>胆碱能纤维</strong><br>定义：释放<span class="answer-text">乙酰胆碱</span>作为递质的纤维称为胆碱能纤维。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>48. <strong>兴奋性突触后电位</strong><br>定义：突触后膜的膜电位在递质作用下发生<span class="blur-text">去极化</span>改变，使该突触后神经元对其他刺激的兴奋性<span class="blur-text">升高</span>，这种电位变化称为兴奋性突触后电位。</td>
+                            <td>48. <strong>兴奋性突触后电位</strong><br>定义：突触后膜的膜电位在递质作用下发生<span class="answer-text">去极化</span>改变，使该突触后神经元对其他刺激的兴奋性<span class="answer-text">升高</span>，这种电位变化称为兴奋性突触后电位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>49. <strong>后发放/后放电(after discharge)</strong><br>定义：在<span class="blur-text">环式联系</span>中，即使最初的刺激已经停止，传出通路上冲动发放仍能<span class="blur-text">继续一段时间</span>，这种现象称为后发放或后放电。</td>
+                            <td>49. <strong>后发放/后放电(after discharge)</strong><br>定义：在<span class="answer-text">环式联系</span>中，即使最初的刺激已经停止，传出通路上冲动发放仍能<span class="answer-text">继续一段时间</span>，这种现象称为后发放或后放电。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>50. <strong>抑制性突触后电位</strong><br>定义：突触后膜的膜电位在递质作用下发生<span class="blur-text">超极化</span>改变，使该突触后神经元对其他刺激的兴奋性<span class="blur-text">下降</span>，这种电位变化称为抑制性突触后电位。</td>
+                            <td>50. <strong>抑制性突触后电位</strong><br>定义：突触后膜的膜电位在递质作用下发生<span class="answer-text">超极化</span>改变，使该突触后神经元对其他刺激的兴奋性<span class="answer-text">下降</span>，这种电位变化称为抑制性突触后电位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>51. <strong>传入侧支性抑制</strong><br>机制：传入纤维进入中枢后，一方面直接兴奋与其联系的某一中枢神经元，产生传出效应；另一方面通过其侧支兴奋另一<span class="blur-text">抑制性中间神经元</span>，转而再<span class="blur-text">抑制另一中枢神经元</span>，称为传入侧支性抑制。</td>
+                            <td>51. <strong>传入侧支性抑制</strong><br>机制：传入纤维进入中枢后，一方面直接兴奋与其联系的某一中枢神经元，产生传出效应；另一方面通过其侧支兴奋另一<span class="answer-text">抑制性中间神经元</span>，转而再<span class="answer-text">抑制另一中枢神经元</span>，称为传入侧支性抑制。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>52. <strong>回返性抑制</strong><br>机制：某一中枢的神经元兴奋时，传出冲动沿轴突外传，同时又经轴突侧支传向另一<span class="blur-text">抑制性中间神经元</span>，该抑制性中间神经元兴奋后，冲动经轴突又回到原先发动兴奋的神经元及同一中枢的其他神经元，<span class="blur-text">抑制它们的活动</span>，这种抑制称为回返性抑制。</td>
+                            <td>52. <strong>回返性抑制</strong><br>机制：某一中枢的神经元兴奋时，传出冲动沿轴突外传，同时又经轴突侧支传向另一<span class="answer-text">抑制性中间神经元</span>，该抑制性中间神经元兴奋后，冲动经轴突又回到原先发动兴奋的神经元及同一中枢的其他神经元，<span class="answer-text">抑制它们的活动</span>，这种抑制称为回返性抑制。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>53. <strong>突触后抑制</strong><br>定义：<span class="blur-text">抑制性中间神经元</span>兴奋时，末梢释放<span class="blur-text">抑制性递质</span>，使突触后膜产生<span class="blur-text">IPSP</span>，从而使突触后神经元出现抑制，称为突触后抑制。</td>
+                            <td>53. <strong>突触后抑制</strong><br>定义：<span class="answer-text">抑制性中间神经元</span>兴奋时，末梢释放<span class="answer-text">抑制性递质</span>，使突触后膜产生<span class="answer-text">IPSP</span>，从而使突触后神经元出现抑制，称为突触后抑制。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>54. <strong>突触前抑制</strong><br>定义：通过改变<span class="blur-text">突触前膜</span>的活动，最终使突触后神经元兴奋性降低，从而引起抑制现象称为突触前抑制。</td>
+                            <td>54. <strong>突触前抑制</strong><br>定义：通过改变<span class="answer-text">突触前膜</span>的活动，最终使突触后神经元兴奋性降低，从而引起抑制现象称为突触前抑制。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>55. <strong>中枢延搁</strong><br>定义：兴奋通过<span class="blur-text">中枢部分</span>传递较慢，耽搁时间较长，称为中枢延搁。</td>
+                            <td>55. <strong>中枢延搁</strong><br>定义：兴奋通过<span class="answer-text">中枢部分</span>传递较慢，耽搁时间较长，称为中枢延搁。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>56. <strong>突触的可塑性</strong><br>定义：突触可塑性是指突触的反复活动引致突触的传递功能的<span class="blur-text">增强(易化)或减弱(抑制)</span>。</td>
+                            <td>56. <strong>突触的可塑性</strong><br>定义：突触可塑性是指突触的反复活动引致突触的传递功能的<span class="answer-text">增强(易化)或减弱(抑制)</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>57. <strong>突触前受体</strong><br>定义：存在于<span class="blur-text">突触前膜</span>上的受体称为突触前受体。</td>
+                            <td>57. <strong>突触前受体</strong><br>定义：存在于<span class="answer-text">突触前膜</span>上的受体称为突触前受体。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>58. <strong>肾上腺素能纤维</strong><br>定义：以<span class="blur-text">去甲肾上腺素</span>为递质的神经纤维称为肾上腺素能纤维。</td>
+                            <td>58. <strong>肾上腺素能纤维</strong><br>定义：以<span class="answer-text">去甲肾上腺素</span>为递质的神经纤维称为肾上腺素能纤维。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>59. <strong>神经递质</strong><br>定义：指由<span class="blur-text">突触前神经元</span>合成并在末梢释放，经<span class="blur-text">突触间隙</span>扩散，特异性地作用于<span class="blur-text">突触后神经元或效应器细胞上的受体</span>，引致信息从突触前传递到突触后的一些<span class="blur-text">化学物质</span>。</td>
+                            <td>59. <strong>神经递质</strong><br>定义：指由<span class="answer-text">突触前神经元</span>合成并在末梢释放，经<span class="answer-text">突触间隙</span>扩散，特异性地作用于<span class="answer-text">突触后神经元或效应器细胞上的受体</span>，引致信息从突触前传递到突触后的一些<span class="answer-text">化学物质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>60. <strong>突触后电位</strong><br>定义：发生在<span class="blur-text">突触后膜</span>上的电位变化称为突触后电位。</td>
+                            <td>60. <strong>突触后电位</strong><br>定义：发生在<span class="answer-text">突触后膜</span>上的电位变化称为突触后电位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>61. <strong>习惯化</strong><br>定义：较<span class="blur-text">温和刺激</span>反复作用，使突触<span class="blur-text">减小对刺激的反应能力</span>，其时程<span class="blur-text">短</span>。<br>机制：原因是<span class="blur-text">前膜递质释放减少</span>，而递质释放减少是由于<span class="blur-text">钙通道失活</span>，胞内的钙下降。</td>
+                            <td>61. <strong>习惯化</strong><br>定义：较<span class="answer-text">温和刺激</span>反复作用，使突触<span class="answer-text">减小对刺激的反应能力</span>，其时程<span class="answer-text">短</span>。<br>机制：原因是<span class="answer-text">前膜递质释放减少</span>，而递质释放减少是由于<span class="answer-text">钙通道失活</span>，胞内的钙下降。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>62. <strong>敏感化</strong><br>表现：表现为突触对刺激的反应性<span class="blur-text">增强</span>，传递效能<span class="blur-text">提高</span>。<br>机制：原因是突触前膜递质释放<span class="blur-text">增加</span>，而递质释放增加是由于<span class="blur-text">AC激活</span>，使<span class="blur-text">cAMP</span>增加，故敏感化可能是突触前易化。</td>
+                            <td>62. <strong>敏感化</strong><br>表现：表现为突触对刺激的反应性<span class="answer-text">增强</span>，传递效能<span class="answer-text">提高</span>。<br>机制：原因是突触前膜递质释放<span class="answer-text">增加</span>，而递质释放增加是由于<span class="answer-text">AC激活</span>，使<span class="answer-text">cAMP</span>增加，故敏感化可能是突触前易化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>63. <strong>特异性投射系统</strong><br>定义：指<span class="blur-text">经典的感觉传导道</span>（除<span class="blur-text">嗅觉</span>外）上行到<span class="blur-text">丘脑</span>，在<span class="blur-text">丘脑感觉接替核</span>换元后，向<span class="blur-text">大脑皮层特定区域点对点</span>投射的系统。</td>
+                            <td>63. <strong>特异性投射系统</strong><br>定义：指<span class="answer-text">经典的感觉传导道</span>（除<span class="answer-text">嗅觉</span>外）上行到<span class="answer-text">丘脑</span>，在<span class="answer-text">丘脑感觉接替核</span>换元后，向<span class="answer-text">大脑皮层特定区域点对点</span>投射的系统。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>64. <strong>非特异性投射系统</strong><br>定义：从<span class="blur-text">脑干网状结构</span>投射到<span class="blur-text">丘脑第三类细胞群</span>的纤维，经换元后向<span class="blur-text">整个大脑皮层广泛区域弥散</span>投射的系统。</td>
+                            <td>64. <strong>非特异性投射系统</strong><br>定义：从<span class="answer-text">脑干网状结构</span>投射到<span class="answer-text">丘脑第三类细胞群</span>的纤维，经换元后向<span class="answer-text">整个大脑皮层广泛区域弥散</span>投射的系统。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>65. <strong>牵涉痛</strong><br>定义：<span class="blur-text">内脏疾病</span>往往引起身体<span class="blur-text">远隔的体表部位</span>发生<span class="blur-text">疼痛或痛觉过敏</span>的现象，称为牵涉痛。</td>
+                            <td>65. <strong>牵涉痛</strong><br>定义：<span class="answer-text">内脏疾病</span>往往引起身体<span class="answer-text">远隔的体表部位</span>发生<span class="answer-text">疼痛或痛觉过敏</span>的现象，称为牵涉痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>66. <strong>屈反射</strong><br>定义：给脊髓动物的四肢皮肤以<span class="blur-text">损伤性刺激</span>，可引起受刺激的肢体<span class="blur-text">屈肌</span>发生反射性收缩，<span class="blur-text">伸肌舒张</span>，肢体屈曲，称为屈反射。</td>
+                            <td>66. <strong>屈反射</strong><br>定义：给脊髓动物的四肢皮肤以<span class="answer-text">损伤性刺激</span>，可引起受刺激的肢体<span class="answer-text">屈肌</span>发生反射性收缩，<span class="answer-text">伸肌舒张</span>，肢体屈曲，称为屈反射。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>67. <strong>痛觉</strong><br>定义：是<span class="blur-text">伤害性刺激或潜在伤害性刺激</span>作用于人体产生的一种复杂的感觉，一般认为疼痛包括<span class="blur-text">痛感觉和痛反应</span>两方面。</td>
+                            <td>67. <strong>痛觉</strong><br>定义：是<span class="answer-text">伤害性刺激或潜在伤害性刺激</span>作用于人体产生的一种复杂的感觉，一般认为疼痛包括<span class="answer-text">痛感觉和痛反应</span>两方面。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>68. <strong>皮层诱发电位</strong><br>定义：<span class="blur-text">感觉传入系统</span>受刺激时，在皮层上某一区域引出的<span class="blur-text">形式较为固定的电位变化</span>，称为皮层诱发电位。</td>
+                            <td>68. <strong>皮层诱发电位</strong><br>定义：<span class="answer-text">感觉传入系统</span>受刺激时，在皮层上某一区域引出的<span class="answer-text">形式较为固定的电位变化</span>，称为皮层诱发电位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>69. <strong>α波阻断</strong><br>定义：<span class="blur-text">睁开眼睛</span>或接受其他刺激时，α波<span class="blur-text">立即消失</span>而呈现<span class="blur-text">快波</span>，这一现象称为α波阻断。</td>
+                            <td>69. <strong>α波阻断</strong><br>定义：<span class="answer-text">睁开眼睛</span>或接受其他刺激时，α波<span class="answer-text">立即消失</span>而呈现<span class="answer-text">快波</span>，这一现象称为α波阻断。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>70. <strong>异相睡眠</strong><br>定义：脑电图呈<span class="blur-text">去同步化快波</span>的睡眠时相称为异相睡眠。</td>
+                            <td>70. <strong>异相睡眠</strong><br>定义：脑电图呈<span class="answer-text">去同步化快波</span>的睡眠时相称为异相睡眠。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>71. <strong>脑电图</strong><br>定义：将引导电极放在<span class="blur-text">头皮表面</span>，通过脑电图机所记录到的<span class="blur-text">皮质自发电位变化的波形</span>称为脑电图。</td>
+                            <td>71. <strong>脑电图</strong><br>定义：将引导电极放在<span class="answer-text">头皮表面</span>，通过脑电图机所记录到的<span class="answer-text">皮质自发电位变化的波形</span>称为脑电图。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>72. <strong>运动单位</strong><br>定义：由<span class="blur-text">一个α运动神经元</span>及其所支配的<span class="blur-text">全部肌纤维</span>所组成的<span class="blur-text">功能单位</span>。</td>
+                            <td>72. <strong>运动单位</strong><br>定义：由<span class="answer-text">一个α运动神经元</span>及其所支配的<span class="answer-text">全部肌纤维</span>所组成的<span class="answer-text">功能单位</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>73. <strong>牵张反射</strong><br>定义：有神经支配的骨骼肌在受到<span class="blur-text">外力牵拉</span>时，能引起受牵拉的<span class="blur-text">同一肌肉收缩</span>的反射活动，称牵张反射。</td>
+                            <td>73. <strong>牵张反射</strong><br>定义：有神经支配的骨骼肌在受到<span class="answer-text">外力牵拉</span>时，能引起受牵拉的<span class="answer-text">同一肌肉收缩</span>的反射活动，称牵张反射。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>74. <strong>腱反射</strong><br>定义：指<span class="blur-text">快速牵拉肌腱</span>时发生的<span class="blur-text">牵张反射</span>。</td>
+                            <td>74. <strong>腱反射</strong><br>定义：指<span class="answer-text">快速牵拉肌腱</span>时发生的<span class="answer-text">牵张反射</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>75. <strong>肌紧张</strong><br>定义：是由<span class="blur-text">缓慢而持续地牵拉肌腱</span>所引起的<span class="blur-text">牵张反射</span>。</td>
+                            <td>75. <strong>肌紧张</strong><br>定义：是由<span class="answer-text">缓慢而持续地牵拉肌腱</span>所引起的<span class="answer-text">牵张反射</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>76. <strong>脊休克</strong><br>定义：当脊髓与<span class="blur-text">高位中枢离断</span>后，断面以下的脊髓暂时<span class="blur-text">丧失反射活动的能力</span>，进入<span class="blur-text">无反应状态</span>，这种现象称为脊休克。</td>
+                            <td>76. <strong>脊休克</strong><br>定义：当脊髓与<span class="answer-text">高位中枢离断</span>后，断面以下的脊髓暂时<span class="answer-text">丧失反射活动的能力</span>，进入<span class="answer-text">无反应状态</span>，这种现象称为脊休克。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>77. <strong>去大脑僵直</strong><br>定义：在<span class="blur-text">中脑上、下丘之间切断脑干</span>的动物，会出现<span class="blur-text">四肢伸直、头尾昂起、脊柱挺硬</span>等主要是<span class="blur-text">伸肌过度紧张</span>的现象称为去大脑僵直。</td>
+                            <td>77. <strong>去大脑僵直</strong><br>定义：在<span class="answer-text">中脑上、下丘之间切断脑干</span>的动物，会出现<span class="answer-text">四肢伸直、头尾昂起、脊柱挺硬</span>等主要是<span class="answer-text">伸肌过度紧张</span>的现象称为去大脑僵直。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>78. <strong>生物节律</strong><br>定义：机体内的各种活动按<span class="blur-text">一定的时间顺序</span>发生变化，这种变化的节律称为生物节律。</td>
+                            <td>78. <strong>生物节律</strong><br>定义：机体内的各种活动按<span class="answer-text">一定的时间顺序</span>发生变化，这种变化的节律称为生物节律。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>79. <strong>本能行为</strong><br>定义：是指动物在进化过程中形成而<span class="blur-text">遗传固定下来</span>的，对<span class="blur-text">个体和种族生存</span>具有重要意义的行为。如<span class="blur-text">摄食、性行为</span>等都属于动物的本能行为。</td>
+                            <td>79. <strong>本能行为</strong><br>定义：是指动物在进化过程中形成而<span class="answer-text">遗传固定下来</span>的，对<span class="answer-text">个体和种族生存</span>具有重要意义的行为。如<span class="answer-text">摄食、性行为</span>等都属于动物的本能行为。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>80. <strong>第一信号系统</strong><br>定义：对<span class="blur-text">第一信号</span>发生反应的大脑皮层功能系统。</td>
+                            <td>80. <strong>第一信号系统</strong><br>定义：对<span class="answer-text">第一信号</span>发生反应的大脑皮层功能系统。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>81. <strong>第二信号系统</strong><br>定义：对<span class="blur-text">第二信号</span>发生反应的大脑皮层功能系统。为<span class="blur-text">人类所特有</span>，是人类区别于动物的<span class="blur-text">主要特征</span>。</td>
+                            <td>81. <strong>第二信号系统</strong><br>定义：对<span class="answer-text">第二信号</span>发生反应的大脑皮层功能系统。为<span class="answer-text">人类所特有</span>，是人类区别于动物的<span class="answer-text">主要特征</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>82. <strong>一侧优势</strong><br>定义：指人脑的<span class="blur-text">高级功能向一侧半球集中</span>的现象，<span class="blur-text">左侧</span>大脑皮层在<span class="blur-text">词语活动功能</span>上占优势，<span class="blur-text">右侧</span>皮层在<span class="blur-text">非语言性认知功能</span>上占优势。</td>
+                            <td>82. <strong>一侧优势</strong><br>定义：指人脑的<span class="answer-text">高级功能向一侧半球集中</span>的现象，<span class="answer-text">左侧</span>大脑皮层在<span class="answer-text">词语活动功能</span>上占优势，<span class="answer-text">右侧</span>皮层在<span class="answer-text">非语言性认知功能</span>上占优势。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>83. <strong>皮质电图</strong><br>定义：在动物实验中将<span class="blur-text">颅骨打开</span>，或在病人进行<span class="blur-text">脑外科手术</span>时，把引导电极<span class="blur-text">直接放在皮质表面</span>所记录出来的皮质自发电位变化波形称为皮质电图。</td>
+                            <td>83. <strong>皮质电图</strong><br>定义：在动物实验中将<span class="answer-text">颅骨打开</span>，或在病人进行<span class="answer-text">脑外科手术</span>时，把引导电极<span class="answer-text">直接放在皮质表面</span>所记录出来的皮质自发电位变化波形称为皮质电图。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>84. A <strong>红色神经元(red neuron)</strong><br>定义：神经元的<span class="blur-text">凝固性坏死</span>，形态学表现为神经元<span class="blur-text">核固缩</span>，胞体<span class="blur-text">缩小变形</span>，胞质<span class="blur-text">尼氏小体消失</span>，HE染色胞质呈<span class="blur-text">深伊红色</span>，称为红色神经元。</td>
+                            <td>84. A <strong>红色神经元(red neuron)</strong><br>定义：神经元的<span class="answer-text">凝固性坏死</span>，形态学表现为神经元<span class="answer-text">核固缩</span>，胞体<span class="answer-text">缩小变形</span>，胞质<span class="answer-text">尼氏小体消失</span>，HE染色胞质呈<span class="answer-text">深伊红色</span>，称为红色神经元。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>85. <strong>卫星现象(satelliosis)</strong><br>定义：一个神经元由<span class="blur-text">5个或5个以上</span><span class="blur-text">少突胶质细胞</span>围绕，称为卫星现象。</td>
+                            <td>85. <strong>卫星现象(satelliosis)</strong><br>定义：一个神经元由<span class="answer-text">5个或5个以上</span><span class="answer-text">少突胶质细胞</span>围绕，称为卫星现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>86. <strong>噬神经细胞现象(neuronophagia)</strong><br>定义：<span class="blur-text">坏死的神经元</span>被<span class="blur-text">增生的小胶质细胞或血源性巨噬细胞</span>包围吞噬的现象，称为噬神经细胞现象。</td>
+                            <td>86. <strong>噬神经细胞现象(neuronophagia)</strong><br>定义：<span class="answer-text">坏死的神经元</span>被<span class="answer-text">增生的小胶质细胞或血源性巨噬细胞</span>包围吞噬的现象，称为噬神经细胞现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>87. <strong>血管淋巴套现象(perivascular lymphocytic infiltration)</strong><br>定义：常见于<span class="blur-text">中枢神经系统的病毒性疾病</span>，<span class="blur-text">淋巴细胞</span>围绕血管周围间隙形成血管套，称为血管淋巴套现象。</td>
+                            <td>87. <strong>血管淋巴套现象(perivascular lymphocytic infiltration)</strong><br>定义：常见于<span class="answer-text">中枢神经系统的病毒性疾病</span>，<span class="answer-text">淋巴细胞</span>围绕血管周围间隙形成血管套，称为血管淋巴套现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>88. <strong>软化灶(soften foci)</strong><br>定义：<span class="blur-text">灶性神经组织坏死、液化</span>，形成质地<span class="blur-text">疏松</span>、染色较淡的<span class="blur-text">镂空筛网状</span>病灶，称为软化灶，是具有<span class="blur-text">特征性诊断意义</span>的病变。</td>
+                            <td>88. <strong>软化灶(soften foci)</strong><br>定义：<span class="answer-text">灶性神经组织坏死、液化</span>，形成质地<span class="answer-text">疏松</span>、染色较淡的<span class="answer-text">镂空筛网状</span>病灶，称为软化灶，是具有<span class="answer-text">特征性诊断意义</span>的病变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>89. <strong>胶质细胞结节(glial nodule)</strong><br>定义：胶质细胞<span class="blur-text">局灶性增生</span>、<span class="blur-text">聚集成团</span>，称为胶质细胞结节。</td>
+                            <td>89. <strong>胶质细胞结节(glial nodule)</strong><br>定义：胶质细胞<span class="answer-text">局灶性增生</span>、<span class="answer-text">聚集成团</span>，称为胶质细胞结节。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>90. <strong>格子细胞(泡沫细胞)(gutter cell)</strong><br>定义：<span class="blur-text">小胶质细胞或巨噬细胞</span>吞噬神经组织崩解产物后，胞体<span class="blur-text">增大</span>，胞质中出现大量<span class="blur-text">脂质小滴</span>，HE染色呈<span class="blur-text">空泡状</span>，称为格子细胞或泡沫细胞。</td>
+                            <td>90. <strong>格子细胞(泡沫细胞)(gutter cell)</strong><br>定义：<span class="answer-text">小胶质细胞或巨噬细胞</span>吞噬神经组织崩解产物后，胞体<span class="answer-text">增大</span>，胞质中出现大量<span class="answer-text">脂质小滴</span>，HE染色呈<span class="answer-text">空泡状</span>，称为格子细胞或泡沫细胞。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>91. <strong>脑疝形成(herniation)</strong><br>机制：<span class="blur-text">颅内压升高</span>引起<span class="blur-text">脑移位</span>、<span class="blur-text">脑室变形</span>。<br>病变：使部分脑组织嵌入<span class="blur-text">颅脑内的分隔</span>（<span class="blur-text">大脑镰、小脑天幕</span>）和<span class="blur-text">颅骨孔道</span>（如<span class="blur-text">枕骨大孔</span>等）。</td>
+                            <td>91. <strong>脑疝形成(herniation)</strong><br>机制：<span class="answer-text">颅内压升高</span>引起<span class="answer-text">脑移位</span>、<span class="answer-text">脑室变形</span>。<br>病变：使部分脑组织嵌入<span class="answer-text">颅脑内的分隔</span>（<span class="answer-text">大脑镰、小脑天幕</span>）和<span class="answer-text">颅骨孔道</span>（如<span class="answer-text">枕骨大孔</span>等）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>92. <strong>脑水肿(brain edema)</strong><br>定义：脑组织内<span class="blur-text">液体过多贮积</span>而引起<span class="blur-text">脑体积增大</span>的一种病理状态。</td>
+                            <td>92. <strong>脑水肿(brain edema)</strong><br>定义：脑组织内<span class="answer-text">液体过多贮积</span>而引起<span class="answer-text">脑体积增大</span>的一种病理状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>93. <strong>脑积水(hydrocephalus)</strong><br>定义：<span class="blur-text">脑室系统</span>内<span class="blur-text">脑脊液含量异常增多</span>伴<span class="blur-text">脑室持续性扩张</span>。</td>
+                            <td>93. <strong>脑积水(hydrocephalus)</strong><br>定义：<span class="answer-text">脑室系统</span>内<span class="answer-text">脑脊液含量异常增多</span>伴<span class="answer-text">脑室持续性扩张</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>94. <strong>沃-弗综合征(Waterhouse Friederichsen syndrome)</strong><br>常见：常见于<span class="blur-text">暴发型流行性脑膜炎双球菌败血症</span>。<br>表现：主要表现为<span class="blur-text">周围循环衰竭、休克</span>和<span class="blur-text">皮肤黏膜出血</span>，同时<span class="blur-text">两侧肾上腺广泛出血</span>和<span class="blur-text">肾上腺皮质功能衰竭</span>。</td>
+                            <td>94. <strong>沃-弗综合征(Waterhouse Friederichsen syndrome)</strong><br>常见：常见于<span class="answer-text">暴发型流行性脑膜炎双球菌败血症</span>。<br>表现：主要表现为<span class="answer-text">周围循环衰竭、休克</span>和<span class="answer-text">皮肤黏膜出血</span>，同时<span class="answer-text">两侧肾上腺广泛出血</span>和<span class="answer-text">肾上腺皮质功能衰竭</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>95. <strong>老年斑(senile plaque)</strong><br>性质：为<span class="blur-text">细胞外结构</span>，本质为<span class="blur-text">退变的神经突起</span>围绕中心<span class="blur-text">淀粉样物质</span>。<br>染色：HE染色呈<span class="blur-text">嗜伊红染色的团块状</span>，中心周围有<span class="blur-text">空晕</span>环绕，外周有<span class="blur-text">不规则嗜银颗粒或丝状物质</span>。</td>
+                            <td>95. <strong>老年斑(senile plaque)</strong><br>性质：为<span class="answer-text">细胞外结构</span>，本质为<span class="answer-text">退变的神经突起</span>围绕中心<span class="answer-text">淀粉样物质</span>。<br>染色：HE染色呈<span class="answer-text">嗜伊红染色的团块状</span>，中心周围有<span class="answer-text">空晕</span>环绕，外周有<span class="answer-text">不规则嗜银颗粒或丝状物质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>96. <strong>神经毡(neuropil)</strong><br>构成：由<span class="blur-text">神经突起、胶质细胞突起</span>构成的<span class="blur-text">网状结构</span>。</td>
+                            <td>96. <strong>神经毡(neuropil)</strong><br>构成：由<span class="answer-text">神经突起、胶质细胞突起</span>构成的<span class="answer-text">网状结构</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>97. <strong>脱髓鞘(demyelination)</strong><br>机制：<span class="blur-text">Schwann细胞变性</span>或<span class="blur-text">髓鞘损伤</span>导致<span class="blur-text">髓鞘板层分离、肿胀、断裂</span>，并崩解成<span class="blur-text">脂滴</span>，进而<span class="blur-text">完全脱失</span>，而<span class="blur-text">轴索相对保留</span>。</td>
+                            <td>97. <strong>脱髓鞘(demyelination)</strong><br>机制：<span class="answer-text">Schwann细胞变性</span>或<span class="answer-text">髓鞘损伤</span>导致<span class="answer-text">髓鞘板层分离、肿胀、断裂</span>，并崩解成<span class="answer-text">脂滴</span>，进而<span class="answer-text">完全脱失</span>，而<span class="answer-text">轴索相对保留</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>98. <strong>腔隙状坏死(lacunae)</strong><br>定义：直径<span class="blur-text">小于1.5cm</span>的<span class="blur-text">囊性变损伤灶</span>，常呈<span class="blur-text">多发性</span>。<br>好发：可见于<span class="blur-text">基底核、内囊、丘脑、脑桥基底部和大脑白质</span>。</td>
+                            <td>98. <strong>腔隙状坏死(lacunae)</strong><br>定义：直径<span class="answer-text">小于1.5cm</span>的<span class="answer-text">囊性变损伤灶</span>，常呈<span class="answer-text">多发性</span>。<br>好发：可见于<span class="answer-text">基底核、内囊、丘脑、脑桥基底部和大脑白质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>99. <strong>砂粒体(psammoma body)</strong><br>结构：是在<span class="blur-text">变性的组织</span>上形成呈<span class="blur-text">同心圆的层状结构中的钙盐沉积</span>。<br>见于：见于<span class="blur-text">脑膜瘤</span>等。</td>
+                            <td>99. <strong>砂粒体(psammoma body)</strong><br>结构：是在<span class="answer-text">变性的组织</span>上形成呈<span class="answer-text">同心圆的层状结构中的钙盐沉积</span>。<br>见于：见于<span class="answer-text">脑膜瘤</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>100. <strong>意识</strong><br>定义：个体对<span class="blur-text">周围环境及自身状态</span>的<span class="blur-text">感知能力</span>。</td>
+                            <td>100. <strong>意识</strong><br>定义：个体对<span class="answer-text">周围环境及自身状态</span>的<span class="answer-text">感知能力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>101. <strong>脑死亡</strong><br>定义：<span class="blur-text">全脑功能不可逆</span>的丧失。</td>
+                            <td>101. <strong>脑死亡</strong><br>定义：<span class="answer-text">全脑功能不可逆</span>的丧失。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>102. <strong>朦胧状态(twilight state)</strong><br>特点：<span class="blur-text">意识范围缩小</span>，伴<span class="blur-text">意识清晰度降低</span>。<br>病程：<span class="blur-text">突发突止</span>，结束后多陷入<span class="blur-text">深度睡眠</span>，意识恢复后对病中体验<span class="blur-text">片段回忆或全部遗忘</span>。<br>多见于：多见于<span class="blur-text">癫痫</span>。</td>
+                            <td>102. <strong>朦胧状态(twilight state)</strong><br>特点：<span class="answer-text">意识范围缩小</span>，伴<span class="answer-text">意识清晰度降低</span>。<br>病程：<span class="answer-text">突发突止</span>，结束后多陷入<span class="answer-text">深度睡眠</span>，意识恢复后对病中体验<span class="answer-text">片段回忆或全部遗忘</span>。<br>多见于：多见于<span class="answer-text">癫痫</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>103. <strong>失语(aphasia)</strong><br>前提：是指<span class="blur-text">意识正常</span>，<span class="blur-text">发音和构音无异常</span>，<span class="blur-text">大脑皮质语言功能区</span>病变导致的<span class="blur-text">言语交流能力障碍</span>。<br>表现：表现为<span class="blur-text">自发谈话、听理解、复述、命名、阅读、书写</span>障碍。</td>
+                            <td>103. <strong>失语(aphasia)</strong><br>前提：是指<span class="answer-text">意识正常</span>，<span class="answer-text">发音和构音无异常</span>，<span class="answer-text">大脑皮质语言功能区</span>病变导致的<span class="answer-text">言语交流能力障碍</span>。<br>表现：表现为<span class="answer-text">自发谈话、听理解、复述、命名、阅读、书写</span>障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>104. <strong>Broca失语</strong><br>别名：也称<span class="blur-text">运动性失语</span>。<br>部位：部位为<span class="blur-text">优势半球额下回后部</span>运动性语言中枢（<span class="blur-text">Broca区</span>）。<br>表现：临床表现为<span class="blur-text">非流利型失语</span>、<span class="blur-text">口语表达障碍</span>、<span class="blur-text">找词困难</span>，呈<span class="blur-text">电报式语言</span>。复述、命名、阅读和书写<span class="blur-text">不同程度受损</span>。</td>
+                            <td>104. <strong>Broca失语</strong><br>别名：也称<span class="answer-text">运动性失语</span>。<br>部位：部位为<span class="answer-text">优势半球额下回后部</span>运动性语言中枢（<span class="answer-text">Broca区</span>）。<br>表现：临床表现为<span class="answer-text">非流利型失语</span>、<span class="answer-text">口语表达障碍</span>、<span class="answer-text">找词困难</span>，呈<span class="answer-text">电报式语言</span>。复述、命名、阅读和书写<span class="answer-text">不同程度受损</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>105. <strong>Wernicke失语</strong><br>别名：<span class="blur-text">感觉性失语</span>。<br>部位：部位为<span class="blur-text">优势半球颞上回后部</span>听性语言中枢（<span class="blur-text">Wernicke区</span>）。<br>表现：临床表现为<span class="blur-text">不能理解他人或自己言语</span>，能对他人提问或指令做出正确反应。自己言语<span class="blur-text">流利</span>，但<span class="blur-text">用词错误或凌乱</span>，让人难以理解。</td>
+                            <td>105. <strong>Wernicke失语</strong><br>别名：<span class="answer-text">感觉性失语</span>。<br>部位：部位为<span class="answer-text">优势半球颞上回后部</span>听性语言中枢（<span class="answer-text">Wernicke区</span>）。<br>表现：临床表现为<span class="answer-text">不能理解他人或自己言语</span>，能对他人提问或指令做出正确反应。自己言语<span class="answer-text">流利</span>，但<span class="answer-text">用词错误或凌乱</span>，让人难以理解。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>106. <strong>命名性失语</strong><br>部位：部位为<span class="blur-text">优势侧半球颞中回后部</span>。<br>表现：临床表现为对<span class="blur-text">物体命名</span>发生障碍，能够叙述某物的<span class="blur-text">性状和用途</span>。</td>
+                            <td>106. <strong>命名性失语</strong><br>部位：部位为<span class="answer-text">优势侧半球颞中回后部</span>。<br>表现：临床表现为对<span class="answer-text">物体命名</span>发生障碍，能够叙述某物的<span class="answer-text">性状和用途</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>107. <strong>失写症(书写不能)</strong><br>部位：部位为<span class="blur-text">优势侧半球额中回后部</span>。<br>表现：临床表现为<span class="blur-text">手部运动功能正常</span>，但<span class="blur-text">丧失书写能力</span>或写出内容存在<span class="blur-text">词汇、语义和语法方面的错误</span>。<span class="blur-text">抄写能力保留</span>，常合并<span class="blur-text">运动性和感觉性失语</span>。</td>
+                            <td>107. <strong>失写症(书写不能)</strong><br>部位：部位为<span class="answer-text">优势侧半球额中回后部</span>。<br>表现：临床表现为<span class="answer-text">手部运动功能正常</span>，但<span class="answer-text">丧失书写能力</span>或写出内容存在<span class="answer-text">词汇、语义和语法方面的错误</span>。<span class="answer-text">抄写能力保留</span>，常合并<span class="answer-text">运动性和感觉性失语</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>108. <strong>失读症</strong><br>部位：部位为<span class="blur-text">优势侧半球顶叶角回</span>。<br>表现：临床表现为患者<span class="blur-text">并无失明</span>但<span class="blur-text">不能辨识书面文字</span>，不能理解文字意义。</td>
+                            <td>108. <strong>失读症</strong><br>部位：部位为<span class="answer-text">优势侧半球顶叶角回</span>。<br>表现：临床表现为患者<span class="answer-text">并无失明</span>但<span class="answer-text">不能辨识书面文字</span>，不能理解文字意义。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>109. <strong>传导性失语</strong><br>部位：部位为<span class="blur-text">优势半球缘上回皮质深部白质内的弓状纤维</span>。<br>表现：临床表现为<span class="blur-text">口语清晰</span>，能自发讲出<span class="blur-text">语义完整、语法结构正常的句子</span>，<span class="blur-text">听理解正常</span>；但<span class="blur-text">不能复述</span>在自发谈话时较易说出的词、句子或<span class="blur-text">以错语复述</span>。</td>
+                            <td>109. <strong>传导性失语</strong><br>部位：部位为<span class="answer-text">优势半球缘上回皮质深部白质内的弓状纤维</span>。<br>表现：临床表现为<span class="answer-text">口语清晰</span>，能自发讲出<span class="answer-text">语义完整、语法结构正常的句子</span>，<span class="answer-text">听理解正常</span>；但<span class="answer-text">不能复述</span>在自发谈话时较易说出的词、句子或<span class="answer-text">以错语复述</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>110. <strong>构音障碍(dysarthria)</strong><br>病因：是因<span class="blur-text">神经肌肉的器质性病变</span>，造成<span class="blur-text">发音器官的肌肉功能障碍</span>而无法正常发音。<br>特点：发音<span class="blur-text">含糊不清</span>而<span class="blur-text">用词准确</span>。</td>
+                            <td>110. <strong>构音障碍(dysarthria)</strong><br>病因：是因<span class="answer-text">神经肌肉的器质性病变</span>，造成<span class="answer-text">发音器官的肌肉功能障碍</span>而无法正常发音。<br>特点：发音<span class="answer-text">含糊不清</span>而<span class="answer-text">用词准确</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>111. <strong>眩晕(vertigo)</strong><br>性质：是一种<span class="blur-text">运动性或位置性错觉</span>。<br>机制：造成人与周围环境空间关系在<span class="blur-text">大脑皮质</span>中反应失真，产生<span class="blur-text">旋转、倾倒及起伏</span>等感觉。</td>
+                            <td>111. <strong>眩晕(vertigo)</strong><br>性质：是一种<span class="answer-text">运动性或位置性错觉</span>。<br>机制：造成人与周围环境空间关系在<span class="answer-text">大脑皮质</span>中反应失真，产生<span class="answer-text">旋转、倾倒及起伏</span>等感觉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>112. <strong>头晕(dizziness)</strong><br>定义：是指<span class="blur-text">自身不稳感</span>，常伴有<span class="blur-text">头脑不清晰感</span>，<span class="blur-text">没有运动的虚假或扭曲的感觉</span>。</td>
+                            <td>112. <strong>头晕(dizziness)</strong><br>定义：是指<span class="answer-text">自身不稳感</span>，常伴有<span class="answer-text">头脑不清晰感</span>，<span class="answer-text">没有运动的虚假或扭曲的感觉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>113. <strong>不自主运动(involuntary movement)</strong><br>定义：在<span class="blur-text">意识清楚</span>的情况下，出现的<span class="blur-text">不受主观控制</span>的<span class="blur-text">无目的的异常运动</span>。</td>
+                            <td>113. <strong>不自主运动(involuntary movement)</strong><br>定义：在<span class="answer-text">意识清楚</span>的情况下，出现的<span class="answer-text">不受主观控制</span>的<span class="answer-text">无目的的异常运动</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>114. <strong>肌强直(rigidity)</strong><br>病因：<span class="blur-text">锥体外系统病变</span>引起<span class="blur-text">屈肌、伸肌</span>的肌张力<span class="blur-text">均匀增高</span>。</td>
+                            <td>114. <strong>肌强直(rigidity)</strong><br>病因：<span class="answer-text">锥体外系统病变</span>引起<span class="answer-text">屈肌、伸肌</span>的肌张力<span class="answer-text">均匀增高</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>115. <strong>静止性震颤</strong><br>定义：是指在<span class="blur-text">安静和肌肉松弛</span>的情况下出现的震颤。<br>表现：表现为<span class="blur-text">安静时出现</span>、<span class="blur-text">活动时减轻</span>、<span class="blur-text">睡眠时消失</span>，手指有节律的抖动，每秒约<span class="blur-text">4-6次</span>，呈"<span class="blur-text">搓药丸样</span>"。<br>常见于：常见于<span class="blur-text">帕金森病</span>。</td>
+                            <td>115. <strong>静止性震颤</strong><br>定义：是指在<span class="answer-text">安静和肌肉松弛</span>的情况下出现的震颤。<br>表现：表现为<span class="answer-text">安静时出现</span>、<span class="answer-text">活动时减轻</span>、<span class="answer-text">睡眠时消失</span>，手指有节律的抖动，每秒约<span class="answer-text">4-6次</span>，呈"<span class="answer-text">搓药丸样</span>"。<br>常见于：常见于<span class="answer-text">帕金森病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>116. <strong>姿势性震颤</strong><br>特点：在随意运动时不出现，当肢体和躯干主动保持<span class="blur-text">某种姿势时才出现</span>。<br>表现：肢体放松时震颤<span class="blur-text">消失</span>，当肌肉紧张时又变得明显。<br>常见于：常见于<span class="blur-text">特发性震颤、慢性酒精中毒、肝性脑病</span>等。</td>
+                            <td>116. <strong>姿势性震颤</strong><br>特点：在随意运动时不出现，当肢体和躯干主动保持<span class="answer-text">某种姿势时才出现</span>。<br>表现：肢体放松时震颤<span class="answer-text">消失</span>，当肌肉紧张时又变得明显。<br>常见于：常见于<span class="answer-text">特发性震颤、慢性酒精中毒、肝性脑病</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>117. <strong>运动性震颤</strong><br>别名：又称<span class="blur-text">意向性震颤(intention tremor)</span>。<br>特点：是指肢体<span class="blur-text">有目的的接近某个目标</span>时，在运动过程中出现的震颤，<span class="blur-text">越接近目标震颤越明显</span>。<br>多见于：多见于<span class="blur-text">小脑病变</span>。</td>
+                            <td>117. <strong>运动性震颤</strong><br>别名：又称<span class="answer-text">意向性震颤(intention tremor)</span>。<br>特点：是指肢体<span class="answer-text">有目的的接近某个目标</span>时，在运动过程中出现的震颤，<span class="answer-text">越接近目标震颤越明显</span>。<br>多见于：多见于<span class="answer-text">小脑病变</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>118. <strong>舞蹈样动作(choreic movement)</strong><br>病因：多有<span class="blur-text">尾状核和壳核</span>的病变引起。<br>表现：为肢体<span class="blur-text">不规则、无节律和无目的</span>的不自主运动。<br>见于：见于<span class="blur-text">小舞蹈病或亨廷顿病</span>等。</td>
+                            <td>118. <strong>舞蹈样动作(choreic movement)</strong><br>病因：多有<span class="answer-text">尾状核和壳核</span>的病变引起。<br>表现：为肢体<span class="answer-text">不规则、无节律和无目的</span>的不自主运动。<br>见于：见于<span class="answer-text">小舞蹈病或亨廷顿病</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>119. <strong>手足徐动症(athetosis)</strong><br>别名：又称<span class="blur-text">指划动作或易变性痉挛</span>。<br>机制：由于<span class="blur-text">上下肢远端</span>的<span class="blur-text">游走性肌张力增高或降低</span>。<br>多见于：多见于<span class="blur-text">脑炎</span>等。</td>
+                            <td>119. <strong>手足徐动症(athetosis)</strong><br>别名：又称<span class="answer-text">指划动作或易变性痉挛</span>。<br>机制：由于<span class="answer-text">上下肢远端</span>的<span class="answer-text">游走性肌张力增高或降低</span>。<br>多见于：多见于<span class="answer-text">脑炎</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>120. <strong>扭转痉挛(torsion spasm)</strong><br>表现：表现为以<span class="blur-text">躯干为长轴</span>，身体<span class="blur-text">向一个方向缓慢的扭转</span>，呈<span class="blur-text">旋转性不自主运动</span>，常伴有<span class="blur-text">四肢的不自主痉挛</span>。</td>
+                            <td>120. <strong>扭转痉挛(torsion spasm)</strong><br>表现：表现为以<span class="answer-text">躯干为长轴</span>，身体<span class="answer-text">向一个方向缓慢的扭转</span>，呈<span class="answer-text">旋转性不自主运动</span>，常伴有<span class="answer-text">四肢的不自主痉挛</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>121. <strong>共济失调(ataxia)</strong><br>定义：运动时<span class="blur-text">动作笨拙而不协调</span>，可由<span class="blur-text">小脑、深感觉、前庭和额叶</span>病变引起。</td>
+                            <td>121. <strong>共济失调(ataxia)</strong><br>定义：运动时<span class="answer-text">动作笨拙而不协调</span>，可由<span class="answer-text">小脑、深感觉、前庭和额叶</span>病变引起。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>122. <strong>小脑性共济失调</strong><br>病因：<span class="blur-text">小脑本身、小脑脚的传入或传出联系纤维、红核、脑桥或脊髓</span>的病变导致的随意运动的<span class="blur-text">力量、速度、幅度和节律的不规则</span>。</td>
+                            <td>122. <strong>小脑性共济失调</strong><br>病因：<span class="answer-text">小脑本身、小脑脚的传入或传出联系纤维、红核、脑桥或脊髓</span>的病变导致的随意运动的<span class="answer-text">力量、速度、幅度和节律的不规则</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>123. <strong>缺损症状(defect signs)</strong><br>定义：指神经组织受损使<span class="blur-text">正常神经功能减弱或缺失</span>，如<span class="blur-text">偏瘫、偏身感觉障碍、失语</span>。</td>
+                            <td>123. <strong>缺损症状(defect signs)</strong><br>定义：指神经组织受损使<span class="answer-text">正常神经功能减弱或缺失</span>，如<span class="answer-text">偏瘫、偏身感觉障碍、失语</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>124. <strong>刺激症状(stimulation signs)</strong><br>定义：指神经结构受激惹后产生的<span class="blur-text">过度兴奋表现</span>，如<span class="blur-text">痫性发作、坐骨神经痛、三叉神经痛</span>。</td>
+                            <td>124. <strong>刺激症状(stimulation signs)</strong><br>定义：指神经结构受激惹后产生的<span class="answer-text">过度兴奋表现</span>，如<span class="answer-text">痫性发作、坐骨神经痛、三叉神经痛</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>125. <strong>释放症状(release signs)</strong><br>定义：指中枢神经系统受损使其对<span class="blur-text">低级中枢的控制功能减弱</span>，而使<span class="blur-text">低级中枢的功能</span>表现出来，如<span class="blur-text">肌张力增高、病理征、腱反射亢进</span>。</td>
+                            <td>125. <strong>释放症状(release signs)</strong><br>定义：指中枢神经系统受损使其对<span class="answer-text">低级中枢的控制功能减弱</span>，而使<span class="answer-text">低级中枢的功能</span>表现出来，如<span class="answer-text">肌张力增高、病理征、腱反射亢进</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>126. <strong>断联休克症状(blocked and shock signs)</strong><br>定义：指中枢神经系统<span class="blur-text">急性局部性严重病变</span>，引起与之功能相关的<span class="blur-text">远隔部位的神经功能短暂缺失</span>，如<span class="blur-text">脑出血急性期和急性脊髓炎早期</span>的下运动神经元表现。</td>
+                            <td>126. <strong>断联休克症状(blocked and shock signs)</strong><br>定义：指中枢神经系统<span class="answer-text">急性局部性严重病变</span>，引起与之功能相关的<span class="answer-text">远隔部位的神经功能短暂缺失</span>，如<span class="answer-text">脑出血急性期和急性脊髓炎早期</span>的下运动神经元表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>127. <strong>感觉过敏</strong><br>定义：给予<span class="blur-text">轻微刺激</span>，引起<span class="blur-text">强烈疼痛</span>。</td>
+                            <td>127. <strong>感觉过敏</strong><br>定义：给予<span class="answer-text">轻微刺激</span>，引起<span class="answer-text">强烈疼痛</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>128. <strong>感觉过度</strong><br>定义：由于<span class="blur-text">刺激阈增高</span>与<span class="blur-text">反应时间延长</span>，刺激必须达到<span class="blur-text">很强的程度</span>方有感觉，有刺激后，需经<span class="blur-text">一潜伏期</span>，才能感到<span class="blur-text">强烈的、定位不明确的不适感觉</span>。</td>
+                            <td>128. <strong>感觉过度</strong><br>定义：由于<span class="answer-text">刺激阈增高</span>与<span class="answer-text">反应时间延长</span>，刺激必须达到<span class="answer-text">很强的程度</span>方有感觉，有刺激后，需经<span class="answer-text">一潜伏期</span>，才能感到<span class="answer-text">强烈的、定位不明确的不适感觉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>129. <strong>感觉到错</strong><br>定义：对刺激的<span class="blur-text">感觉错误</span>。</td>
+                            <td>129. <strong>感觉到错</strong><br>定义：对刺激的<span class="answer-text">感觉错误</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>130. <strong>感觉异常</strong><br>定义：<span class="blur-text">无外界刺激</span>而发生的异常感觉。</td>
+                            <td>130. <strong>感觉异常</strong><br>定义：<span class="answer-text">无外界刺激</span>而发生的异常感觉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>131. <strong>疼痛</strong><br>定义：<span class="blur-text">感觉纤维</span>受刺激，是躯体的<span class="blur-text">防御信号</span>。</td>
+                            <td>131. <strong>疼痛</strong><br>定义：<span class="answer-text">感觉纤维</span>受刺激，是躯体的<span class="answer-text">防御信号</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>132. <strong>分离性感觉缺失</strong><br>定义：同一部位仅有<span class="blur-text">某种感觉缺失</span>，而<span class="blur-text">其他感觉保存</span>。</td>
+                            <td>132. <strong>分离性感觉缺失</strong><br>定义：同一部位仅有<span class="answer-text">某种感觉缺失</span>，而<span class="answer-text">其他感觉保存</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>133. A <strong>脊髓半切综合征Brown-Sequard syndrome</strong><br>表现：单侧传导束型感觉障碍，表现为<span class="blur-text">损伤同侧深感觉障碍</span>、<span class="blur-text">损伤对侧浅感觉障碍</span>、<span class="blur-text">病变同侧节段性分离性感觉障碍</span>、<span class="blur-text">病变同侧节段性运动障碍</span>、<span class="blur-text">病变以下同侧上运动神经元瘫痪</span>。<br>见于：见于<span class="blur-text">髓外肿瘤早期</span>。</td>
+                            <td>133. A <strong>脊髓半切综合征Brown-Sequard syndrome</strong><br>表现：单侧传导束型感觉障碍，表现为<span class="answer-text">损伤同侧深感觉障碍</span>、<span class="answer-text">损伤对侧浅感觉障碍</span>、<span class="answer-text">病变同侧节段性分离性感觉障碍</span>、<span class="answer-text">病变同侧节段性运动障碍</span>、<span class="answer-text">病变以下同侧上运动神经元瘫痪</span>。<br>见于：见于<span class="answer-text">髓外肿瘤早期</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>134. <strong>三偏综合征</strong><br>病因：<span class="blur-text">内囊病变</span>引起<span class="blur-text">对侧偏瘫、偏身感觉障碍、偏盲</span>。</td>
+                            <td>134. <strong>三偏综合征</strong><br>病因：<span class="answer-text">内囊病变</span>引起<span class="answer-text">对侧偏瘫、偏身感觉障碍、偏盲</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>135. <strong>交叉性瘫痪(crossed paralysis)</strong><br>病因：<span class="blur-text">脑干病变</span>引起<span class="blur-text">病变侧脑神经麻痹</span>及<span class="blur-text">对侧肢体中枢性瘫痪</span>。<br>常见于：常见于<span class="blur-text">CVD、肿瘤</span>。</td>
+                            <td>135. <strong>交叉性瘫痪(crossed paralysis)</strong><br>病因：<span class="answer-text">脑干病变</span>引起<span class="answer-text">病变侧脑神经麻痹</span>及<span class="answer-text">对侧肢体中枢性瘫痪</span>。<br>常见于：常见于<span class="answer-text">CVD、肿瘤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>137</td>
+                            <td>136. <strong>古茨曼综合征</strong><br>表现：<span class="blur-text">失写、失算、手指失识、失左右定向感</span>。</td>
+                            <td>136. <strong>古茨曼综合征</strong><br>表现：<span class="answer-text">失写、失算、手指失识、失左右定向感</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>138</td>
+                            <td>137. <strong>偏头痛(migraine)</strong><br>性质：是一种常见的<span class="blur-text">原发性头痛</span>。<br>表现：表现为<span class="blur-text">发作性单侧头痛</span>，部分<span class="blur-text">双侧</span>中重度<span class="blur-text">搏动性</span>，持续<span class="blur-text">4~72小时</span>，走路、摇头等日常活动可加重，伴<span class="blur-text">恶心、呕吐、畏光、畏声</span>，少数患者头痛发作前或发作时有<span class="blur-text">视觉、感觉、言语、运动</span>等先兆，多有<span class="blur-text">家族史</span>。</td>
+                            <td>137. <strong>偏头痛(migraine)</strong><br>性质：是一种常见的<span class="answer-text">原发性头痛</span>。<br>表现：表现为<span class="answer-text">发作性单侧头痛</span>，部分<span class="answer-text">双侧</span>中重度<span class="answer-text">搏动性</span>，持续<span class="answer-text">4~72小时</span>，走路、摇头等日常活动可加重，伴<span class="answer-text">恶心、呕吐、畏光、畏声</span>，少数患者头痛发作前或发作时有<span class="answer-text">视觉、感觉、言语、运动</span>等先兆，多有<span class="answer-text">家族史</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>139</td>
+                            <td>138. <strong>单纯疱疹病毒性脑炎(Herpes simplex encephalitis,HSE)</strong><br>别名：又称为<span class="blur-text">急性坏死性脑炎、出血性脑炎</span>。<br>病因：由<span class="blur-text">单纯疱疹病毒</span>引起的急性颅内感染性疾病。<br>好发：最常累及<span class="blur-text">颞叶和额叶</span>。<br>表现：表现为<span class="blur-text">发热及脑损害特征</span>，是最严重和最常见的病毒性脑炎类型。</td>
+                            <td>138. <strong>单纯疱疹病毒性脑炎(Herpes simplex encephalitis,HSE)</strong><br>别名：又称为<span class="answer-text">急性坏死性脑炎、出血性脑炎</span>。<br>病因：由<span class="answer-text">单纯疱疹病毒</span>引起的急性颅内感染性疾病。<br>好发：最常累及<span class="answer-text">颞叶和额叶</span>。<br>表现：表现为<span class="answer-text">发热及脑损害特征</span>，是最严重和最常见的病毒性脑炎类型。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>140</td>
+                            <td>139. <strong>短暂性脑缺血发作(transient ischemic attack,TIA)</strong><br>定义：<span class="blur-text">脑或视网膜局灶性缺血</span>所致的，<span class="blur-text">不伴急性脑梗死</span>的短暂性神经功能障碍。</td>
+                            <td>139. <strong>短暂性脑缺血发作(transient ischemic attack,TIA)</strong><br>定义：<span class="answer-text">脑或视网膜局灶性缺血</span>所致的，<span class="answer-text">不伴急性脑梗死</span>的短暂性神经功能障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>141</td>
+                            <td>140. <strong>缺血性脑卒中(ischemic stroke)</strong><br>定义：各种原因引起的<span class="blur-text">局部脑组织血液供应障碍</span>，使局部脑组织发生<span class="blur-text">不可逆损害</span>，导致<span class="blur-text">脑组织缺血、缺氧性坏死</span>。</td>
+                            <td>140. <strong>缺血性脑卒中(ischemic stroke)</strong><br>定义：各种原因引起的<span class="answer-text">局部脑组织血液供应障碍</span>，使局部脑组织发生<span class="answer-text">不可逆损害</span>，导致<span class="answer-text">脑组织缺血、缺氧性坏死</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>142</td>
+                            <td>141. <strong>跌倒发作(drops attacks)</strong><br>表现：表现为突然出现<span class="blur-text">双下肢失去张力</span>而跌倒，<span class="blur-text">无意识丧失</span>，可以很快自行站立。<br>病因：是<span class="blur-text">椎动脉缺血</span>导致<span class="blur-text">低位脑干网状结构</span>受累所致，有时见于患者转头或者仰头时。</td>
+                            <td>141. <strong>跌倒发作(drops attacks)</strong><br>表现：表现为突然出现<span class="answer-text">双下肢失去张力</span>而跌倒，<span class="answer-text">无意识丧失</span>，可以很快自行站立。<br>病因：是<span class="answer-text">椎动脉缺血</span>导致<span class="answer-text">低位脑干网状结构</span>受累所致，有时见于患者转头或者仰头时。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>143</td>
+                            <td>142. <strong>暂时性全面遗忘症(transient global amnesia,TGA)</strong><br>定义：TIA发作时出现<span class="blur-text">短时间记忆丧失</span>，患者对此有<span class="blur-text">自知力</span>，持续<span class="blur-text">数分钟至数小时</span>，发作时<span class="blur-text">不能记忆新事物</span>，伴<span class="blur-text">时间、空间定向力障碍</span>，较复杂的皮层高级活动保留完整，无神经系统的其他异常表现。<br>病因：是<span class="blur-text">大脑后动脉缺血</span>累及<span class="blur-text">边缘系统额叶内侧、海马、海马旁回和穹隆</span>所致。</td>
+                            <td>142. <strong>暂时性全面遗忘症(transient global amnesia,TGA)</strong><br>定义：TIA发作时出现<span class="answer-text">短时间记忆丧失</span>，患者对此有<span class="answer-text">自知力</span>，持续<span class="answer-text">数分钟至数小时</span>，发作时<span class="answer-text">不能记忆新事物</span>，伴<span class="answer-text">时间、空间定向力障碍</span>，较复杂的皮层高级活动保留完整，无神经系统的其他异常表现。<br>病因：是<span class="answer-text">大脑后动脉缺血</span>累及<span class="answer-text">边缘系统额叶内侧、海马、海马旁回和穹隆</span>所致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>144</td>
+                            <td>143. <strong>Horner综合征</strong><br>病因：<span class="blur-text">颈交感神经麻痹</span>引起。<br>表现：出现<span class="blur-text">同侧瞳孔缩小、眼裂变小、眼球轻度凹陷</span>和<span class="blur-text">同侧面部无汗</span>。</td>
+                            <td>143. <strong>Horner综合征</strong><br>病因：<span class="answer-text">颈交感神经麻痹</span>引起。<br>表现：出现<span class="answer-text">同侧瞳孔缩小、眼裂变小、眼球轻度凹陷</span>和<span class="answer-text">同侧面部无汗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>145</td>
+                            <td>144. <strong>黄斑回避</strong><br>表现：<span class="blur-text">枕叶视中枢损害</span>，一侧完全损害引起<span class="blur-text">偏盲</span>，但偏盲侧<span class="blur-text">对光反射存在</span>，同侧视野的<span class="blur-text">中心部常保存</span>。</td>
+                            <td>144. <strong>黄斑回避</strong><br>表现：<span class="answer-text">枕叶视中枢损害</span>，一侧完全损害引起<span class="answer-text">偏盲</span>，但偏盲侧<span class="answer-text">对光反射存在</span>，同侧视野的<span class="answer-text">中心部常保存</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>146</td>
+                            <td>145. <strong>延髓外侧综合征Wallenberg syndrome</strong><br>病因：在<span class="blur-text">小脑后下动脉</span>，或<span class="blur-text">椎动脉</span>供应延髓外侧的分支闭塞时发生。<br>表现：临床表现为<span class="blur-text">1眩晕、恶心、呕吐、眼震</span>（前庭神经核受损）；<span class="blur-text">2声音嘶哑、吞咽困难及饮水呛咳</span>（舌咽、迷走神经，疑核受损）；<span class="blur-text">3病灶侧共济失调</span>（绳状体或小脑损伤）；<span class="blur-text">4交叉性感觉障碍</span>：病灶同侧面部痛温觉丧失、对侧偏身痛温觉丧失；<span class="blur-text">5病灶同侧Horner综合征</span>。</td>
+                            <td>145. <strong>延髓外侧综合征Wallenberg syndrome</strong><br>病因：在<span class="answer-text">小脑后下动脉</span>，或<span class="answer-text">椎动脉</span>供应延髓外侧的分支闭塞时发生。<br>表现：临床表现为<span class="answer-text">1眩晕、恶心、呕吐、眼震</span>（前庭神经核受损）；<span class="answer-text">2声音嘶哑、吞咽困难及饮水呛咳</span>（舌咽、迷走神经，疑核受损）；<span class="answer-text">3病灶侧共济失调</span>（绳状体或小脑损伤）；<span class="answer-text">4交叉性感觉障碍</span>：病灶同侧面部痛温觉丧失、对侧偏身痛温觉丧失；<span class="answer-text">5病灶同侧Horner综合征</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>147</td>
+                            <td>146. <strong>脑桥前下部综合征Millard-Gubler</strong><br>病因：是<span class="blur-text">基底动脉的短旋支闭塞</span>。<br>表现：表现为<span class="blur-text">病灶同侧面神经和展神经麻痹</span>，<span class="blur-text">对侧偏瘫</span>。</td>
+                            <td>146. <strong>脑桥前下部综合征Millard-Gubler</strong><br>病因：是<span class="answer-text">基底动脉的短旋支闭塞</span>。<br>表现：表现为<span class="answer-text">病灶同侧面神经和展神经麻痹</span>，<span class="answer-text">对侧偏瘫</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>148</td>
+                            <td>147. <strong>Foville综合征</strong><br>病因：是<span class="blur-text">基底动脉的旁正中支闭塞</span>。<br>表现：表现为<span class="blur-text">双眼不能向病灶侧同向运动</span>，<span class="blur-text">病灶侧面神经和展神经麻痹</span>，<span class="blur-text">对侧偏瘫</span>。</td>
+                            <td>147. <strong>Foville综合征</strong><br>病因：是<span class="answer-text">基底动脉的旁正中支闭塞</span>。<br>表现：表现为<span class="answer-text">双眼不能向病灶侧同向运动</span>，<span class="answer-text">病灶侧面神经和展神经麻痹</span>，<span class="answer-text">对侧偏瘫</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>149</td>
+                            <td>148. <strong>闭锁综合征(locked-in syndrome)</strong><br>病因：<span class="blur-text">脑桥基底部双侧脑梗死</span>。<br>表现：表现为<span class="blur-text">双侧面瘫、延髓麻痹、四肢瘫、不能讲话</span>，但因<span class="blur-text">脑干网状结构未受累</span>，患者<span class="blur-text">意识清楚</span>，能随意睁闭眼，可通过<span class="blur-text">睁闭眼及眼球垂直运动</span>来表达自己的意愿。</td>
+                            <td>148. <strong>闭锁综合征(locked-in syndrome)</strong><br>病因：<span class="answer-text">脑桥基底部双侧脑梗死</span>。<br>表现：表现为<span class="answer-text">双侧面瘫、延髓麻痹、四肢瘫、不能讲话</span>，但因<span class="answer-text">脑干网状结构未受累</span>，患者<span class="answer-text">意识清楚</span>，能随意睁闭眼，可通过<span class="answer-text">睁闭眼及眼球垂直运动</span>来表达自己的意愿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>150</td>
+                            <td>149. <strong>基底动脉尖综合征(top of basilar syndrome,TO-BS)</strong><br>供血：<span class="blur-text">基底动脉尖端</span>分出两对动脉，即<span class="blur-text">大脑后动脉和小脑上动脉</span>，供血区域包括<span class="blur-text">中脑、丘脑、小脑上部、颞叶内侧和枕叶</span>。<br>表现：临床表现为<span class="blur-text">眼球运动障碍、瞳孔异常、觉醒和行为障碍、严重记忆力丧失及对侧偏盲或皮质盲</span>，少数患者可出现大脑脚幻觉。</td>
+                            <td>149. <strong>基底动脉尖综合征(top of basilar syndrome,TO-BS)</strong><br>供血：<span class="answer-text">基底动脉尖端</span>分出两对动脉，即<span class="answer-text">大脑后动脉和小脑上动脉</span>，供血区域包括<span class="answer-text">中脑、丘脑、小脑上部、颞叶内侧和枕叶</span>。<br>表现：临床表现为<span class="answer-text">眼球运动障碍、瞳孔异常、觉醒和行为障碍、严重记忆力丧失及对侧偏盲或皮质盲</span>，少数患者可出现大脑脚幻觉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>151</td>
+                            <td>150. <strong>脑分水岭梗死</strong><br>别名：<span class="blur-text">边缘带梗死</span>。<br>机制：相邻脑动脉末梢交接区<span class="blur-text">局限性缺血</span>造成的梗死。</td>
+                            <td>150. <strong>脑分水岭梗死</strong><br>别名：<span class="answer-text">边缘带梗死</span>。<br>机制：相邻脑动脉末梢交接区<span class="answer-text">局限性缺血</span>造成的梗死。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>152</td>
+                            <td>151. <strong>缺血半暗带</strong><br>位置：位于<span class="blur-text">缺血中心区与正常脑组织之间</span>。<br>特点：其中仍然有<span class="blur-text">神经元存活</span>，损伤具有<span class="blur-text">可逆性</span>。</td>
+                            <td>151. <strong>缺血半暗带</strong><br>位置：位于<span class="answer-text">缺血中心区与正常脑组织之间</span>。<br>特点：其中仍然有<span class="answer-text">神经元存活</span>，损伤具有<span class="answer-text">可逆性</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>153</td>
+                            <td>152. <strong>脑栓塞(cerebral embolism)</strong><br>定义：是指血液中的<span class="blur-text">各种栓子</span>随血流进入<span class="blur-text">脑动脉</span>而阻塞血管，当<span class="blur-text">侧支循环不能代偿</span>时，引起该动脉供血区域<span class="blur-text">脑组织缺血性坏死</span>。</td>
+                            <td>152. <strong>脑栓塞(cerebral embolism)</strong><br>定义：是指血液中的<span class="answer-text">各种栓子</span>随血流进入<span class="answer-text">脑动脉</span>而阻塞血管，当<span class="answer-text">侧支循环不能代偿</span>时，引起该动脉供血区域<span class="answer-text">脑组织缺血性坏死</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>154</td>
+                            <td>153. <strong>体象障碍</strong><br>病变：病变位于<span class="blur-text">非优势半球顶叶</span>。<br>表现：表现为<span class="blur-text">偏侧忽视、病觉缺失</span>（患者对对侧肢体的偏瘫全然否认）、<span class="blur-text">手指失认、自体认识不能、幻肢症</span>。</td>
+                            <td>153. <strong>体象障碍</strong><br>病变：病变位于<span class="answer-text">非优势半球顶叶</span>。<br>表现：表现为<span class="answer-text">偏侧忽视、病觉缺失</span>（患者对对侧肢体的偏瘫全然否认）、<span class="answer-text">手指失认、自体认识不能、幻肢症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>155</td>
+                            <td>154. <strong>颅内压增高</strong><br>定义：各种疾病引起<span class="blur-text">颅腔内容物体积增加</span>，或<span class="blur-text">颅腔容积缩小</span>，导致<span class="blur-text">颅内压持续升高超过15mmHg</span>时，并引起相应的综合征。<br>三主征：颅内压增高的三主征为<span class="blur-text">头痛、呕吐、视神经乳头水肿</span>。</td>
+                            <td>154. <strong>颅内压增高</strong><br>定义：各种疾病引起<span class="answer-text">颅腔内容物体积增加</span>，或<span class="answer-text">颅腔容积缩小</span>，导致<span class="answer-text">颅内压持续升高超过15mmHg</span>时，并引起相应的综合征。<br>三主征：颅内压增高的三主征为<span class="answer-text">头痛、呕吐、视神经乳头水肿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>156</td>
+                            <td>155. <strong>脑疝(herniation)</strong><br>定义：指<span class="blur-text">脑组织</span>从<span class="blur-text">高压力区</span>向<span class="blur-text">低压力区</span>移位，并被挤到<span class="blur-text">颅内附近的生理孔道</span>，导致<span class="blur-text">部分脑组织、颅神经及血管等重要结构受压</span>，<span class="blur-text">脑脊液循环发生障碍</span>，从而出现一系列严重临床症状和体征。</td>
+                            <td>155. <strong>脑疝(herniation)</strong><br>定义：指<span class="answer-text">脑组织</span>从<span class="answer-text">高压力区</span>向<span class="answer-text">低压力区</span>移位，并被挤到<span class="answer-text">颅内附近的生理孔道</span>，导致<span class="answer-text">部分脑组织、颅神经及血管等重要结构受压</span>，<span class="answer-text">脑脊液循环发生障碍</span>，从而出现一系列严重临床症状和体征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>157</td>
+                            <td>156. <strong>库欣反应</strong><br>定义：<span class="blur-text">颅内压急剧增高</span>时，患者出现<span class="blur-text">血压升高、心跳和脉搏缓慢、呼吸节律减慢及体温升高</span>等各项生命体征发生变化。</td>
+                            <td>156. <strong>库欣反应</strong><br>定义：<span class="answer-text">颅内压急剧增高</span>时，患者出现<span class="answer-text">血压升高、心跳和脉搏缓慢、呼吸节律减慢及体温升高</span>等各项生命体征发生变化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>158</td>
+                            <td>157. <strong>熊猫眼/"眼睛征"</strong><br>病因：<span class="blur-text">颅前窝骨折</span>时，骨折出血进入<span class="blur-text">眶内</span>，在<span class="blur-text">眼睑和球结膜下</span>形成淤血斑。</td>
+                            <td>157. <strong>熊猫眼/"眼睛征"</strong><br>病因：<span class="answer-text">颅前窝骨折</span>时，骨折出血进入<span class="answer-text">眶内</span>，在<span class="answer-text">眼睑和球结膜下</span>形成淤血斑。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>159</td>
+                            <td>158. <strong>Battle征</strong><br>病因：<span class="blur-text">颅后窝骨折</span>时，在<span class="blur-text">乳突和枕骨下部</span>可见皮下淤血。</td>
+                            <td>158. <strong>Battle征</strong><br>病因：<span class="answer-text">颅后窝骨折</span>时，在<span class="answer-text">乳突和枕骨下部</span>可见皮下淤血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>160</td>
+                            <td>159. <strong>弥漫性轴索损伤(DAI)</strong><br>机制：是<span class="blur-text">外力促使头部发生成角或旋转加(减)速运动</span>所造成的<span class="blur-text">广泛白质损伤</span>。</td>
+                            <td>159. <strong>弥漫性轴索损伤(DAI)</strong><br>机制：是<span class="answer-text">外力促使头部发生成角或旋转加(减)速运动</span>所造成的<span class="answer-text">广泛白质损伤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>161</td>
+                            <td>160. <strong>癫痫发作</strong><br>定义：由<span class="blur-text">不同病因</span>所引起的，<span class="blur-text">脑部神经元高度同步化异常放电</span>所导致的，<span class="blur-text">反复、发作性、短暂性</span>，通常也是<span class="blur-text">刻板性</span>的脑功能失调。</td>
+                            <td>160. <strong>癫痫发作</strong><br>定义：由<span class="answer-text">不同病因</span>所引起的，<span class="answer-text">脑部神经元高度同步化异常放电</span>所导致的，<span class="answer-text">反复、发作性、短暂性</span>，通常也是<span class="answer-text">刻板性</span>的脑功能失调。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>162</td>
+                            <td>161. <strong>癫痫</strong><br>定义：表现为<span class="blur-text">反复癫痫发作</span>的慢性脑部疾病。</td>
+                            <td>161. <strong>癫痫</strong><br>定义：表现为<span class="answer-text">反复癫痫发作</span>的慢性脑部疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>163</td>
+                            <td>162. <strong>Todd麻痹</strong><br>定义：严重的<span class="blur-text">局灶性运动发作</span>后，可留下<span class="blur-text">短暂性肢体瘫痪</span>，称为Todd麻痹。</td>
+                            <td>162. <strong>Todd麻痹</strong><br>定义：严重的<span class="answer-text">局灶性运动发作</span>后，可留下<span class="answer-text">短暂性肢体瘫痪</span>，称为Todd麻痹。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>164</td>
+                            <td>163. <strong>Jackson发作</strong><br>定义：癫痫<span class="blur-text">局限性运动性发作</span>时，异常运动从<span class="blur-text">局部</span>开始，沿<span class="blur-text">皮层功能区</span>移动，如从<span class="blur-text">手指→腕部→前臂→肘→肩→口角→面部</span>逐渐发展。</td>
+                            <td>163. <strong>Jackson发作</strong><br>定义：癫痫<span class="answer-text">局限性运动性发作</span>时，异常运动从<span class="answer-text">局部</span>开始，沿<span class="answer-text">皮层功能区</span>移动，如从<span class="answer-text">手指→腕部→前臂→肘→肩→口角→面部</span>逐渐发展。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>165</td>
+                            <td>164. <strong>自动症(automatism)</strong><br>特征：<span class="blur-text">意识障碍</span>和看起来有目的，但实际上没有目的的发生性行为异常是自动症的主要特征。<br>表现：患者发作前有感觉和运动先兆，随后出现一些看起来有目的，但实际上无目的的活动。发作后患者<span class="blur-text">意识模糊</span>，常有<span class="blur-text">头昏</span>，<span class="blur-text">不能回忆</span>发作中的情况。</td>
+                            <td>164. <strong>自动症(automatism)</strong><br>特征：<span class="answer-text">意识障碍</span>和看起来有目的，但实际上没有目的的发生性行为异常是自动症的主要特征。<br>表现：患者发作前有感觉和运动先兆，随后出现一些看起来有目的，但实际上无目的的活动。发作后患者<span class="answer-text">意识模糊</span>，常有<span class="answer-text">头昏</span>，<span class="answer-text">不能回忆</span>发作中的情况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>166</td>
+                            <td>165. <strong>全面性发作</strong><br>定义：起源于<span class="blur-text">双侧脑部</span>，且在<span class="blur-text">双侧脑部网络内</span>扩布者。多在发作初期有<span class="blur-text">意识丧失</span>。</td>
+                            <td>165. <strong>全面性发作</strong><br>定义：起源于<span class="answer-text">双侧脑部</span>，且在<span class="answer-text">双侧脑部网络内</span>扩布者。多在发作初期有<span class="answer-text">意识丧失</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>167</td>
+                            <td>166. <strong>典型失神发作</strong><br>表现：活动<span class="blur-text">突然停止</span>，<span class="blur-text">呼之不应、发呆、手中物体落地</span>，部分患者可机械性重复原有动作。发作后<span class="blur-text">立即清醒</span>无不适感，但醒后<span class="blur-text">不能回忆</span>。</td>
+                            <td>166. <strong>典型失神发作</strong><br>表现：活动<span class="answer-text">突然停止</span>，<span class="answer-text">呼之不应、发呆、手中物体落地</span>，部分患者可机械性重复原有动作。发作后<span class="answer-text">立即清醒</span>无不适感，但醒后<span class="answer-text">不能回忆</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>168</td>
+                            <td>167. A <strong>全身强直-阵挛性发作(癫痫大发作)</strong><br>表现：<span class="blur-text">意识丧失</span>，双侧<span class="blur-text">强直后紧跟有阵挛</span>的序列活动。<br>分期：分为<span class="blur-text">强直期、阵挛期、发作后期</span>三期。</td>
+                            <td>167. A <strong>全身强直-阵挛性发作(癫痫大发作)</strong><br>表现：<span class="answer-text">意识丧失</span>，双侧<span class="answer-text">强直后紧跟有阵挛</span>的序列活动。<br>分期：分为<span class="answer-text">强直期、阵挛期、发作后期</span>三期。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>169</td>
+                            <td>168. <strong>难治性癫痫</strong><br>定义：<span class="blur-text">20%左右</span>的癫痫患者对目前的<span class="blur-text">治疗（包括药物、手术、迷走神经刺激术）</span>无效，这部分癫痫称为难治性癫痫。</td>
+                            <td>168. <strong>难治性癫痫</strong><br>定义：<span class="answer-text">20%左右</span>的癫痫患者对目前的<span class="answer-text">治疗（包括药物、手术、迷走神经刺激术）</span>无效，这部分癫痫称为难治性癫痫。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>170</td>
+                            <td>169. A <strong>癫痫持续状态</strong><br>定义：超过<span class="blur-text">大多数这种发作类型患者的发作持续时间</span>后，发作仍然<span class="blur-text">没有停止</span>的临床征象；或反复的癫痫发作，在<span class="blur-text">发作间期</span>，中枢神经系统的功能<span class="blur-text">没有恢复到正常基线</span>。</td>
+                            <td>169. A <strong>癫痫持续状态</strong><br>定义：超过<span class="answer-text">大多数这种发作类型患者的发作持续时间</span>后，发作仍然<span class="answer-text">没有停止</span>的临床征象；或反复的癫痫发作，在<span class="answer-text">发作间期</span>，中枢神经系统的功能<span class="answer-text">没有恢复到正常基线</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>171</td>
+                            <td>170. <strong>耐药性癫痫</strong><br>定义：用<span class="blur-text">两种能耐受的抗癫痫药</span>单用或联合应用后仍然<span class="blur-text">不能终止癫痫发作</span>。</td>
+                            <td>170. <strong>耐药性癫痫</strong><br>定义：用<span class="answer-text">两种能耐受的抗癫痫药</span>单用或联合应用后仍然<span class="answer-text">不能终止癫痫发作</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>172</td>
+                            <td>171. <strong>假性发作</strong><br>定义：<span class="blur-text">非癫痫性</span>的发作性疾病，为<span class="blur-text">心理因素</span>而非电紊乱引起的脑部功能异常。</td>
+                            <td>171. <strong>假性发作</strong><br>定义：<span class="answer-text">非癫痫性</span>的发作性疾病，为<span class="answer-text">心理因素</span>而非电紊乱引起的脑部功能异常。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>173</td>
+                            <td>172. <strong>阿尔兹海默症(AD)</strong><br>特点：是一种<span class="blur-text">起病隐匿，缓慢进展</span>，以<span class="blur-text">进行性记忆衰退，精神行为异常和日常生活能力障碍</span>为主要表现的<span class="blur-text">中枢神经系统变性疾病</span>。</td>
+                            <td>172. <strong>阿尔兹海默症(AD)</strong><br>特点：是一种<span class="answer-text">起病隐匿，缓慢进展</span>，以<span class="answer-text">进行性记忆衰退，精神行为异常和日常生活能力障碍</span>为主要表现的<span class="answer-text">中枢神经系统变性疾病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>174</td>
+                            <td>173. A <strong>多发性硬化(MS)</strong><br>性质：是一类<span class="blur-text">病因未明</span>的<span class="blur-text">中枢神经自身免疫性、炎症脱髓鞘</span>疾病。</td>
+                            <td>173. A <strong>多发性硬化(MS)</strong><br>性质：是一类<span class="answer-text">病因未明</span>的<span class="answer-text">中枢神经自身免疫性、炎症脱髓鞘</span>疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>175</td>
+                            <td>174. <strong>核间性眼肌麻痹</strong><br>表现：患者双眼向<span class="blur-text">病变对侧</span>注视时，<span class="blur-text">患侧眼球不能内收</span>，<span class="blur-text">对侧眼球外展时伴震颤</span>，双眼<span class="blur-text">内聚正常</span>。<br>意义：提示<span class="blur-text">内侧纵束</span>受累，是<span class="blur-text">多发性硬化</span>的重要体征之一，高度提示本病。</td>
+                            <td>174. <strong>核间性眼肌麻痹</strong><br>表现：患者双眼向<span class="answer-text">病变对侧</span>注视时，<span class="answer-text">患侧眼球不能内收</span>，<span class="answer-text">对侧眼球外展时伴震颤</span>，双眼<span class="answer-text">内聚正常</span>。<br>意义：提示<span class="answer-text">内侧纵束</span>受累，是<span class="answer-text">多发性硬化</span>的重要体征之一，高度提示本病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>176</td>
+                            <td>175. <strong>Lhermitte sign</strong><br>表现：<span class="blur-text">颈部过屈</span>可诱发出<span class="blur-text">刺痛或闪电样感觉异常</span>，通常由<span class="blur-text">颈部沿脊椎放射至下肢</span>，少数情况可放射至上肢。<br>意义：是<span class="blur-text">颈段脊髓受累</span>的征象之一，也是<span class="blur-text">多发性硬化</span>较为特征性的表现。</td>
+                            <td>175. <strong>Lhermitte sign</strong><br>表现：<span class="answer-text">颈部过屈</span>可诱发出<span class="answer-text">刺痛或闪电样感觉异常</span>，通常由<span class="answer-text">颈部沿脊椎放射至下肢</span>，少数情况可放射至上肢。<br>意义：是<span class="answer-text">颈段脊髓受累</span>的征象之一，也是<span class="answer-text">多发性硬化</span>较为特征性的表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>177</td>
+                            <td>176. <strong>急性脊髓炎(acute myelitis)</strong><br>性质：是一种<span class="blur-text">急性横贯性脊髓炎性病变</span>。<br>病因：多为<span class="blur-text">各种感染后或疫苗接种后</span>所致的变态反应。<br>表现：表现为<span class="blur-text">病变水平以下肢体瘫痪、各种感觉缺失、自主神经功能障碍</span>。</td>
+                            <td>176. <strong>急性脊髓炎(acute myelitis)</strong><br>性质：是一种<span class="answer-text">急性横贯性脊髓炎性病变</span>。<br>病因：多为<span class="answer-text">各种感染后或疫苗接种后</span>所致的变态反应。<br>表现：表现为<span class="answer-text">病变水平以下肢体瘫痪、各种感觉缺失、自主神经功能障碍</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>178</td>
+                            <td>177. <strong>脊髓休克</strong><br>定义：指<span class="blur-text">严重脊髓横断裂伤</span>，在损伤水平以下<span class="blur-text">所有神经活动的丧失</span>、<span class="blur-text">肌张力低下、腱反射消失、病理征阴性</span>，可以持续<span class="blur-text">3-4周</span>。</td>
+                            <td>177. <strong>脊髓休克</strong><br>定义：指<span class="answer-text">严重脊髓横断裂伤</span>，在损伤水平以下<span class="answer-text">所有神经活动的丧失</span>、<span class="answer-text">肌张力低下、腱反射消失、病理征阴性</span>，可以持续<span class="answer-text">3-4周</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>179</td>
+                            <td>178. <strong>上升性脊髓炎</strong><br>定义：急性脊髓炎起病急骤者，感觉障碍平面在<span class="blur-text">1~2天</span>甚至<span class="blur-text">数小时内</span>上升到<span class="blur-text">高颈髓、延髓</span>，瘫痪由下肢迅速波及上肢，甚至<span class="blur-text">咽喉肌肉</span>，出现<span class="blur-text">吞咽困难、构音不清</span>，可导致<span class="blur-text">呼吸肌麻痹而死亡</span>。</td>
+                            <td>178. <strong>上升性脊髓炎</strong><br>定义：急性脊髓炎起病急骤者，感觉障碍平面在<span class="answer-text">1~2天</span>甚至<span class="answer-text">数小时内</span>上升到<span class="answer-text">高颈髓、延髓</span>，瘫痪由下肢迅速波及上肢，甚至<span class="answer-text">咽喉肌肉</span>，出现<span class="answer-text">吞咽困难、构音不清</span>，可导致<span class="answer-text">呼吸肌麻痹而死亡</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>180</td>
+                            <td>179. <strong>上运动神经元性瘫痪</strong><br>别名：也称<span class="blur-text">痉挛性瘫痪</span>。<br>病因：是由于<span class="blur-text">上运动神经元</span>，即<span class="blur-text">大脑皮质运动区神经元及其发出的下行纤维</span>病变导致。<br>表现：常表现为<span class="blur-text">肌力减弱，肌张力增高，腱反射亢进，浅反射减弱，病理反射</span>，<span class="blur-text">无明显肌萎缩</span>。</td>
+                            <td>179. <strong>上运动神经元性瘫痪</strong><br>别名：也称<span class="answer-text">痉挛性瘫痪</span>。<br>病因：是由于<span class="answer-text">上运动神经元</span>，即<span class="answer-text">大脑皮质运动区神经元及其发出的下行纤维</span>病变导致。<br>表现：常表现为<span class="answer-text">肌力减弱，肌张力增高，腱反射亢进，浅反射减弱，病理反射</span>，<span class="answer-text">无明显肌萎缩</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>181</td>
+                            <td>180. <strong>下运动神经元性瘫痪</strong><br>别名：即<span class="blur-text">弛缓性瘫痪</span>。<br>病因：指<span class="blur-text">脊髓前角运动神经元以及它们的轴突组成的前根、神经丛及周围神经</span>损害导致。<br>表现：常表现为<span class="blur-text">相应肌群肌力减退、肌张力减低、腱反射减弱、肌肉明显萎缩</span>。</td>
+                            <td>180. <strong>下运动神经元性瘫痪</strong><br>别名：即<span class="answer-text">弛缓性瘫痪</span>。<br>病因：指<span class="answer-text">脊髓前角运动神经元以及它们的轴突组成的前根、神经丛及周围神经</span>损害导致。<br>表现：常表现为<span class="answer-text">相应肌群肌力减退、肌张力减低、腱反射减弱、肌肉明显萎缩</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>182</td>
+                            <td>181. <strong>鞍区回避</strong><br>机制：<span class="blur-text">髓内病变早期</span>出现<span class="blur-text">病变节段支配区分离性感觉障碍</span>，累及<span class="blur-text">脊髓丘脑束</span>时，痛温觉减退或消失，自<span class="blur-text">病变节段向下发展</span>，<span class="blur-text">鞍区保留</span>至最后受累。</td>
+                            <td>181. <strong>鞍区回避</strong><br>机制：<span class="answer-text">髓内病变早期</span>出现<span class="answer-text">病变节段支配区分离性感觉障碍</span>，累及<span class="answer-text">脊髓丘脑束</span>时，痛温觉减退或消失，自<span class="answer-text">病变节段向下发展</span>，<span class="answer-text">鞍区保留</span>至最后受累。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>183</td>
+                            <td>182. <strong>特发性面神经麻痹(idiopathic facial palsy)</strong><br>别名：称<span class="blur-text">Bell麻痹或面神经炎</span>。<br>性质：是<span class="blur-text">面神经管中面神经</span>经<span class="blur-text">特异性炎症</span>引起的<span class="blur-text">周围性面神经麻痹</span>。</td>
+                            <td>182. <strong>特发性面神经麻痹(idiopathic facial palsy)</strong><br>别名：称<span class="answer-text">Bell麻痹或面神经炎</span>。<br>性质：是<span class="answer-text">面神经管中面神经</span>经<span class="answer-text">特异性炎症</span>引起的<span class="answer-text">周围性面神经麻痹</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>184</td>
+                            <td>183. <strong>Bell麻痹</strong><br>表现：患者一侧<span class="blur-text">眼睑闭合不全</span>，闭目时眼球<span class="blur-text">向上外方转动</span>而露出<span class="blur-text">巩膜</span>。</td>
+                            <td>183. <strong>Bell麻痹</strong><br>表现：患者一侧<span class="answer-text">眼睑闭合不全</span>，闭目时眼球<span class="answer-text">向上外方转动</span>而露出<span class="answer-text">巩膜</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>185</td>
+                            <td>184. <strong>亨特综合征(Ramsay-Hunt syndrome)</strong><br>病因：如果<span class="blur-text">疱疹病毒</span>感染<span class="blur-text">膝状神经节</span>。<br>表现：除<span class="blur-text">同侧面神经麻痹，同侧舌前2/3味觉丧失，唾液减少，听觉过敏，耳廓和外耳道感觉迟钝</span>外，还有<span class="blur-text">患侧乳突部疼痛，外耳道或鼓膜疱疹</span>。</td>
+                            <td>184. <strong>亨特综合征(Ramsay-Hunt syndrome)</strong><br>病因：如果<span class="answer-text">疱疹病毒</span>感染<span class="answer-text">膝状神经节</span>。<br>表现：除<span class="answer-text">同侧面神经麻痹，同侧舌前2/3味觉丧失，唾液减少，听觉过敏，耳廓和外耳道感觉迟钝</span>外，还有<span class="answer-text">患侧乳突部疼痛，外耳道或鼓膜疱疹</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>186</td>
+                            <td>185. <strong>三叉神经痛(trigeminal neuralgia)</strong><br>定义：指<span class="blur-text">三叉神经分布区内</span>反复发作的<span class="blur-text">短暂的、阵发性剧痛</span>，<span class="blur-text">不伴有三叉神经功能破坏</span>的症状，成年人及老年人多见。</td>
+                            <td>185. <strong>三叉神经痛(trigeminal neuralgia)</strong><br>定义：指<span class="answer-text">三叉神经分布区内</span>反复发作的<span class="answer-text">短暂的、阵发性剧痛</span>，<span class="answer-text">不伴有三叉神经功能破坏</span>的症状，成年人及老年人多见。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>187</td>
+                            <td>186. <strong>扳机点</strong><br>定义：在三叉神经疼痛发作的范围内，常有一些<span class="blur-text">特别敏感的区域</span>稍受触动即引起发作。</td>
+                            <td>186. <strong>扳机点</strong><br>定义：在三叉神经疼痛发作的范围内，常有一些<span class="answer-text">特别敏感的区域</span>稍受触动即引起发作。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>188</td>
+                            <td>187. <strong>吉兰-巴雷综合征(Guillain-Barre syndrome,GBS)</strong><br>性质：是一种<span class="blur-text">急性炎症性脱髓鞘性多发性神经根神经病</span>，主要累及<span class="blur-text">周围神经</span>疾病。</td>
+                            <td>187. <strong>吉兰-巴雷综合征(Guillain-Barre syndrome,GBS)</strong><br>性质：是一种<span class="answer-text">急性炎症性脱髓鞘性多发性神经根神经病</span>，主要累及<span class="answer-text">周围神经</span>疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>189</td>
+                            <td>188. <strong>蛋白-细胞分离(protein-cell dissociation)</strong><br>定义：脑脊液检查发现<span class="blur-text">蛋白含量增高</span>而<span class="blur-text">白细胞计数正常</span>的现象，是<span class="blur-text">吉兰-巴雷综合征</span>的特征性表现。</td>
+                            <td>188. <strong>蛋白-细胞分离(protein-cell dissociation)</strong><br>定义：脑脊液检查发现<span class="answer-text">蛋白含量增高</span>而<span class="answer-text">白细胞计数正常</span>的现象，是<span class="answer-text">吉兰-巴雷综合征</span>的特征性表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>190</td>
+                            <td>189. <strong>Miller-Fisher综合征</strong><br>表现：表现为<span class="blur-text">眼外肌麻痹、共济失调及腱反射消失三联征</span>，伴<span class="blur-text">脑脊液蛋白-细胞分离</span>。</td>
+                            <td>189. <strong>Miller-Fisher综合征</strong><br>表现：表现为<span class="answer-text">眼外肌麻痹、共济失调及腱反射消失三联征</span>，伴<span class="answer-text">脑脊液蛋白-细胞分离</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>191</td>
+                            <td>190. <strong>重症肌无力(myasthenia gravis,MG)</strong><br>性质：是<span class="blur-text">神经-肌肉接头处传递障碍</span>的<span class="blur-text">获得性自身免疫性疾病</span>。<br>特征：其临床特征为<span class="blur-text">部分或全身骨骼肌易疲劳</span>，<span class="blur-text">活动后加重，休息后减轻</span>。呈<span class="blur-text">波动性肌无力</span>，具有<span class="blur-text">晨轻暮重</span>的特点。</td>
+                            <td>190. <strong>重症肌无力(myasthenia gravis,MG)</strong><br>性质：是<span class="answer-text">神经-肌肉接头处传递障碍</span>的<span class="answer-text">获得性自身免疫性疾病</span>。<br>特征：其临床特征为<span class="answer-text">部分或全身骨骼肌易疲劳</span>，<span class="answer-text">活动后加重，休息后减轻</span>。呈<span class="answer-text">波动性肌无力</span>，具有<span class="answer-text">晨轻暮重</span>的特点。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>192</td>
+                            <td>191. <strong>重症肌无力危象(MG crisis)</strong><br>定义：指<span class="blur-text">呼吸肌受累</span>而出现<span class="blur-text">呼吸困难</span>，乃至需借助<span class="blur-text">呼吸机辅助呼吸</span>，约<span class="blur-text">10%</span>的重症肌无力患者出现危象，为<span class="blur-text">致死的主要原因</span>。<br>诱因：常由<span class="blur-text">呼吸道感染、手术、紧张、全身疾病</span>等诱发。</td>
+                            <td>191. <strong>重症肌无力危象(MG crisis)</strong><br>定义：指<span class="answer-text">呼吸肌受累</span>而出现<span class="answer-text">呼吸困难</span>，乃至需借助<span class="answer-text">呼吸机辅助呼吸</span>，约<span class="answer-text">10%</span>的重症肌无力患者出现危象，为<span class="answer-text">致死的主要原因</span>。<br>诱因：常由<span class="answer-text">呼吸道感染、手术、紧张、全身疾病</span>等诱发。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>193</td>
+                            <td>192. <strong>周期性麻痹(periodic paralysis,PP)</strong><br>特征：是以<span class="blur-text">反复发作的迟缓性瘫痪</span>为特征的一种<span class="blur-text">骨骼肌肌病</span>，肌无力可持续<span class="blur-text">数小时至数周</span>，发作间歇期<span class="blur-text">完全正常</span>，严重者伴<span class="blur-text">心律失常、心源性猝死</span>。</td>
+                            <td>192. <strong>周期性麻痹(periodic paralysis,PP)</strong><br>特征：是以<span class="answer-text">反复发作的迟缓性瘫痪</span>为特征的一种<span class="answer-text">骨骼肌肌病</span>，肌无力可持续<span class="answer-text">数小时至数周</span>，发作间歇期<span class="answer-text">完全正常</span>，严重者伴<span class="answer-text">心律失常、心源性猝死</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>194</td>
+                            <td>193. <strong>齿轮样强直</strong><br>机制：<span class="blur-text">肌强直合并震颤</span>，在伸曲肢体过程中感受到在<span class="blur-text">均匀阻力的基础上出现断续的停顿</span>，如齿轮转动一样。</td>
+                            <td>193. <strong>齿轮样强直</strong><br>机制：<span class="answer-text">肌强直合并震颤</span>，在伸曲肢体过程中感受到在<span class="answer-text">均匀阻力的基础上出现断续的停顿</span>，如齿轮转动一样。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>195</td>
+                            <td>194. <strong>铅管样强直</strong><br>检查：检查者同时运动患者的<span class="blur-text">腕关节和肘关节</span>，可感受到<span class="blur-text">均匀一致的阻力增高</span>。</td>
+                            <td>194. <strong>铅管样强直</strong><br>检查：检查者同时运动患者的<span class="answer-text">腕关节和肘关节</span>，可感受到<span class="answer-text">均匀一致的阻力增高</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>196</td>
+                            <td>195. <strong>剂末恶化</strong><br>定义：每次用药的<span class="blur-text">有效作用时间缩短</span>，症状随<span class="blur-text">血液药物浓度</span>发生规律性波动。</td>
+                            <td>195. <strong>剂末恶化</strong><br>定义：每次用药的<span class="answer-text">有效作用时间缩短</span>，症状随<span class="answer-text">血液药物浓度</span>发生规律性波动。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>197</td>
+                            <td>196. <strong>开关现象</strong><br>定义：症状在忽然<span class="blur-text">缓解（开期）</span>与<span class="blur-text">加重（关期）</span>间波动，开期多伴有<span class="blur-text">异动症</span>，<span class="blur-text">无法预测</span>关期到来时间，关期患者表现为<span class="blur-text">严重帕金森症状</span>，伴有明显的<span class="blur-text">运动不能</span>，持续<span class="blur-text">数秒到数分钟</span>后突然转为开期。<br>多见于：多见于<span class="blur-text">病情严重的患者</span>。</td>
+                            <td>196. <strong>开关现象</strong><br>定义：症状在忽然<span class="answer-text">缓解（开期）</span>与<span class="answer-text">加重（关期）</span>间波动，开期多伴有<span class="answer-text">异动症</span>，<span class="answer-text">无法预测</span>关期到来时间，关期患者表现为<span class="answer-text">严重帕金森症状</span>，伴有明显的<span class="answer-text">运动不能</span>，持续<span class="answer-text">数秒到数分钟</span>后突然转为开期。<br>多见于：多见于<span class="answer-text">病情严重的患者</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>198</td>
+                            <td>197. <strong>Beevor征</strong><br>检查：当病变者<span class="blur-text">T10-11</span>时，下半部<span class="blur-text">腹直肌无力</span>，上半部<span class="blur-text">肌力正常</span>，仰卧用力抬头时可见<span class="blur-text">肚脐被上半部腹直肌牵拉而向上移动</span>。</td>
+                            <td>197. <strong>Beevor征</strong><br>检查：当病变者<span class="answer-text">T10-11</span>时，下半部<span class="answer-text">腹直肌无力</span>，上半部<span class="answer-text">肌力正常</span>，仰卧用力抬头时可见<span class="answer-text">肚脐被上半部腹直肌牵拉而向上移动</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>199</td>
+                            <td>198. <strong>人工冬眠合剂</strong><br>组成：由<span class="blur-text">哌替啶、氯丙嗪和异丙嗪</span>三种药物组成。</td>
+                            <td>198. <strong>人工冬眠合剂</strong><br>组成：由<span class="answer-text">哌替啶、氯丙嗪和异丙嗪</span>三种药物组成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>200</td>
+                            <td>199. <strong>精神病(psychosis)</strong><br>定义：是指在<span class="blur-text">认知、情感、意志和行为</span>等方面有明显障碍，致使患者<span class="blur-text">歪曲的反应现实</span>，不能适应<span class="blur-text">正常的生活</span>，具有<span class="blur-text">危害自身和社会的行为</span>者，临床上又称<span class="blur-text">重性精神障碍</span>。</td>
+                            <td>199. <strong>精神病(psychosis)</strong><br>定义：是指在<span class="answer-text">认知、情感、意志和行为</span>等方面有明显障碍，致使患者<span class="answer-text">歪曲的反应现实</span>，不能适应<span class="answer-text">正常的生活</span>，具有<span class="answer-text">危害自身和社会的行为</span>者，临床上又称<span class="answer-text">重性精神障碍</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>201</td>
+                            <td>200. <strong>精神障碍(mental disorders)</strong><br>定义：是指各种<span class="blur-text">致病因素</span>（包括<span class="blur-text">物理化学、生物、心理和社会</span>等方面的因素）影响下所导致的<span class="blur-text">精神活动的失调或异常活动</span>的总称。</td>
+                            <td>200. <strong>精神障碍(mental disorders)</strong><br>定义：是指各种<span class="answer-text">致病因素</span>（包括<span class="answer-text">物理化学、生物、心理和社会</span>等方面的因素）影响下所导致的<span class="answer-text">精神活动的失调或异常活动</span>的总称。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>202</td>
+                            <td>201. <strong>错觉(illusion)</strong><br>定义：是对<span class="blur-text">客观事物</span>的歪曲的知觉。</td>
+                            <td>201. <strong>错觉(illusion)</strong><br>定义：是对<span class="answer-text">客观事物</span>的歪曲的知觉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>203</td>
+                            <td>202. <strong>幻觉(hallucination)</strong><br>定义：指<span class="blur-text">无相应客观刺激</span>作用于感觉器官而产生的<span class="blur-text">知觉体验</span>，是一种<span class="blur-text">虚幻的知觉</span>。</td>
+                            <td>202. <strong>幻觉(hallucination)</strong><br>定义：指<span class="answer-text">无相应客观刺激</span>作用于感觉器官而产生的<span class="answer-text">知觉体验</span>，是一种<span class="answer-text">虚幻的知觉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>204</td>
+                            <td>203. <strong>感知综合障碍</strong><br>定义：对<span class="blur-text">客观事物能感知</span>，但对<span class="blur-text">某些个别属性</span>如<span class="blur-text">大小、形状、颜色、距离、空间位置</span>等产生错误的感知。</td>
+                            <td>203. <strong>感知综合障碍</strong><br>定义：对<span class="answer-text">客观事物能感知</span>，但对<span class="answer-text">某些个别属性</span>如<span class="answer-text">大小、形状、颜色、距离、空间位置</span>等产生错误的感知。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>205</td>
+                            <td>204. <strong>思维奔逸</strong><br>定义：指<span class="blur-text">联想速度加快</span>，<span class="blur-text">数量增多</span>，<span class="blur-text">内容丰富生动</span>。患者表现为<span class="blur-text">健谈</span>，说话<span class="blur-text">滔滔不绝</span>，口若悬河。</td>
+                            <td>204. <strong>思维奔逸</strong><br>定义：指<span class="answer-text">联想速度加快</span>，<span class="answer-text">数量增多</span>，<span class="answer-text">内容丰富生动</span>。患者表现为<span class="answer-text">健谈</span>，说话<span class="answer-text">滔滔不绝</span>，口若悬河。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>206</td>
+                            <td>205. <strong>思维云集</strong><br>别名：又称<span class="blur-text">强制性思维(forced thinking)</span>。<br>定义：是指<span class="blur-text">思潮不受患者意愿的支配</span>，强制性的<span class="blur-text">大量涌现</span>在脑内，内容往往<span class="blur-text">杂乱无章</span>，多见于<span class="blur-text">精神分裂症</span>。</td>
+                            <td>205. <strong>思维云集</strong><br>别名：又称<span class="answer-text">强制性思维(forced thinking)</span>。<br>定义：是指<span class="answer-text">思潮不受患者意愿的支配</span>，强制性的<span class="answer-text">大量涌现</span>在脑内，内容往往<span class="answer-text">杂乱无章</span>，多见于<span class="answer-text">精神分裂症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>207</td>
+                            <td>206. <strong>病理性象征性思维</strong><br>性质：属于<span class="blur-text">概念转换</span>，以<span class="blur-text">无关的具体概念</span>代替<span class="blur-text">某一抽象概念</span>，<span class="blur-text">不经患者解释，旁人无法理解</span>。</td>
+                            <td>206. <strong>病理性象征性思维</strong><br>性质：属于<span class="answer-text">概念转换</span>，以<span class="answer-text">无关的具体概念</span>代替<span class="answer-text">某一抽象概念</span>，<span class="answer-text">不经患者解释，旁人无法理解</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>208</td>
+                            <td>207. <strong>思维化声(Thought Hearing)</strong><br>定义：患者感觉到<span class="blur-text">思维活动</span>的同时，其脑内有<span class="blur-text">与思维一样的言语</span>伴随着思维活动而出现，因此患者觉得自己的思维是<span class="blur-text">听得到</span>的。多见于<span class="blur-text">精神分裂症</span>。</td>
+                            <td>207. <strong>思维化声(Thought Hearing)</strong><br>定义：患者感觉到<span class="answer-text">思维活动</span>的同时，其脑内有<span class="answer-text">与思维一样的言语</span>伴随着思维活动而出现，因此患者觉得自己的思维是<span class="answer-text">听得到</span>的。多见于<span class="answer-text">精神分裂症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>209</td>
+                            <td>208. <strong>妄想(delusion)</strong><br>定义：是一种<span class="blur-text">病理基础上</span>产生的<span class="blur-text">歪曲信念</span>，发生在<span class="blur-text">意识清晰</span>的情况下，是<span class="blur-text">病态推理和判断</span>的结果。</td>
+                            <td>208. <strong>妄想(delusion)</strong><br>定义：是一种<span class="answer-text">病理基础上</span>产生的<span class="answer-text">歪曲信念</span>，发生在<span class="answer-text">意识清晰</span>的情况下，是<span class="answer-text">病态推理和判断</span>的结果。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>210</td>
+                            <td>209. <strong>被害妄想</strong><br>表现：坚信<span class="blur-text">自己和亲人</span>受到<span class="blur-text">打击、陷害、跟踪、监视</span>等，最常见，见于<span class="blur-text">精神分裂症</span>。</td>
+                            <td>209. <strong>被害妄想</strong><br>表现：坚信<span class="answer-text">自己和亲人</span>受到<span class="answer-text">打击、陷害、跟踪、监视</span>等，最常见，见于<span class="answer-text">精神分裂症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>211</td>
+                            <td>210. <strong>关系妄想</strong><br>表现：将环境中与患者<span class="blur-text">无关的事物</span>认为是与他有关的，如<span class="blur-text">别人讲话、咳嗽、一举一动都是与他有关</span>，常见于<span class="blur-text">精神分裂症</span>。</td>
+                            <td>210. <strong>关系妄想</strong><br>表现：将环境中与患者<span class="answer-text">无关的事物</span>认为是与他有关的，如<span class="answer-text">别人讲话、咳嗽、一举一动都是与他有关</span>，常见于<span class="answer-text">精神分裂症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>212</td>
+                            <td>211. <strong>被控制妄想</strong><br>表现：病人体验到自己的<span class="blur-text">思想、情感、行为</span>被某种力量<span class="blur-text">控制、取代</span>，不受自己的意识控制。</td>
+                            <td>211. <strong>被控制妄想</strong><br>表现：病人体验到自己的<span class="answer-text">思想、情感、行为</span>被某种力量<span class="answer-text">控制、取代</span>，不受自己的意识控制。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>213</td>
+                            <td>212. <strong>夸大妄想</strong><br>内容：指毫无根据坚信自己有<span class="blur-text">非凡才智、地位和权利</span>，多见于<span class="blur-text">躁狂状态、精神分裂症</span>。</td>
+                            <td>212. <strong>夸大妄想</strong><br>内容：指毫无根据坚信自己有<span class="answer-text">非凡才智、地位和权利</span>，多见于<span class="answer-text">躁狂状态、精神分裂症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>214</td>
+                            <td>213. <strong>罪恶妄想</strong><br>表现：毫无根据的认为自己犯了<span class="blur-text">严重错误或罪行</span>，应受到<span class="blur-text">严厉惩罚</span>，认为自己<span class="blur-text">罪大恶极、死有余辜</span>，以致<span class="blur-text">自责甚至自杀</span>。多见于<span class="blur-text">抑郁状态、精神分裂症</span>。</td>
+                            <td>213. <strong>罪恶妄想</strong><br>表现：毫无根据的认为自己犯了<span class="answer-text">严重错误或罪行</span>，应受到<span class="answer-text">严厉惩罚</span>，认为自己<span class="answer-text">罪大恶极、死有余辜</span>，以致<span class="answer-text">自责甚至自杀</span>。多见于<span class="answer-text">抑郁状态、精神分裂症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>215</td>
+                            <td>214. <strong>钟情妄想</strong><br>表现：病人坚信<span class="blur-text">自己被异性钟情</span>，即使对方<span class="blur-text">严词拒绝</span>，也认为是对方在<span class="blur-text">考验自己</span>，仍纠缠不已，多见于<span class="blur-text">精神分裂症</span>。</td>
+                            <td>214. <strong>钟情妄想</strong><br>表现：病人坚信<span class="answer-text">自己被异性钟情</span>，即使对方<span class="answer-text">严词拒绝</span>，也认为是对方在<span class="answer-text">考验自己</span>，仍纠缠不已，多见于<span class="answer-text">精神分裂症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>216</td>
+                            <td>215. <strong>嫉妒妄想</strong><br>表现：坚信<span class="blur-text">自己的配偶对自己不忠</span>而另有外遇，常见于<span class="blur-text">慢性酒精中毒伴有性功能减退的男性患者</span>及<span class="blur-text">更年期女性患者</span>。</td>
+                            <td>215. <strong>嫉妒妄想</strong><br>表现：坚信<span class="answer-text">自己的配偶对自己不忠</span>而另有外遇，常见于<span class="answer-text">慢性酒精中毒伴有性功能减退的男性患者</span>及<span class="answer-text">更年期女性患者</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>217</td>
+                            <td>216. <strong>疑病妄想</strong><br>表现：病人毫无根据的坚信自己患了<span class="blur-text">某种严重疾病</span>，即使通过<span class="blur-text">医学检查否定</span>，仍不能纠正。多见于<span class="blur-text">心境障碍（抑郁发作）</span>，也可见于<span class="blur-text">精神分裂症</span>。</td>
+                            <td>216. <strong>疑病妄想</strong><br>表现：病人毫无根据的坚信自己患了<span class="answer-text">某种严重疾病</span>，即使通过<span class="answer-text">医学检查否定</span>，仍不能纠正。多见于<span class="answer-text">心境障碍（抑郁发作）</span>，也可见于<span class="answer-text">精神分裂症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>218</td>
+                            <td>217. <strong>被洞悉感</strong><br>别名：或称<span class="blur-text">内心被揭露感</span>。<br>表现：病人认为其<span class="blur-text">内心所想的事情</span>没有经<span class="blur-text">语言文字表达</span>，就被<span class="blur-text">周围人知道了</span>，是<span class="blur-text">精神分裂症的典型症状</span>。</td>
+                            <td>217. <strong>被洞悉感</strong><br>别名：或称<span class="answer-text">内心被揭露感</span>。<br>表现：病人认为其<span class="answer-text">内心所想的事情</span>没有经<span class="answer-text">语言文字表达</span>，就被<span class="answer-text">周围人知道了</span>，是<span class="answer-text">精神分裂症的典型症状</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>219</td>
+                            <td>218. <strong>强迫观念(obsessive idea)</strong><br>别名：即<span class="blur-text">强迫性思维</span>。<br>定义：指<span class="blur-text">某一观念或概念</span>多次重复出现在患者的思想，患者感觉这一思想是<span class="blur-text">没有意义和必要</span>，虽<span class="blur-text">力图摆脱</span>，但仍<span class="blur-text">控制不住的去想</span>，患者感觉到<span class="blur-text">被迫感和痛苦感</span>。</td>
+                            <td>218. <strong>强迫观念(obsessive idea)</strong><br>别名：即<span class="answer-text">强迫性思维</span>。<br>定义：指<span class="answer-text">某一观念或概念</span>多次重复出现在患者的思想，患者感觉这一思想是<span class="answer-text">没有意义和必要</span>，虽<span class="answer-text">力图摆脱</span>，但仍<span class="answer-text">控制不住的去想</span>，患者感觉到<span class="answer-text">被迫感和痛苦感</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>220</td>
+                            <td>219. <strong>超价观念(overvalued idea)</strong><br>定义：是在意识中占<span class="blur-text">主导地位的观念</span>，带有<span class="blur-text">强烈的情感色彩</span>，<span class="blur-text">片面而偏激</span>。<br>特点：超价观念并不一定是错误观念，只是某些观念带有<span class="blur-text">明显的错误与荒谬的色彩</span>。</td>
+                            <td>219. <strong>超价观念(overvalued idea)</strong><br>定义：是在意识中占<span class="answer-text">主导地位的观念</span>，带有<span class="answer-text">强烈的情感色彩</span>，<span class="answer-text">片面而偏激</span>。<br>特点：超价观念并不一定是错误观念，只是某些观念带有<span class="answer-text">明显的错误与荒谬的色彩</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>221</td>
+                            <td>220. <strong>自知力(insight)</strong><br>定义：指患者<span class="blur-text">对自己所患精神疾病的认识与判断能力</span>。<br>临床：临床上一般以<span class="blur-text">精神症状消失</span>，并能对<span class="blur-text">自己的精神症状及疾病的发展</span>作出正确的判断，即为自知力恢复。</td>
+                            <td>220. <strong>自知力(insight)</strong><br>定义：指患者<span class="answer-text">对自己所患精神疾病的认识与判断能力</span>。<br>临床：临床上一般以<span class="answer-text">精神症状消失</span>，并能对<span class="answer-text">自己的精神症状及疾病的发展</span>作出正确的判断，即为自知力恢复。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>222</td>
+                            <td>221. <strong>木僵(stupor)</strong><br>定义：患者的<span class="blur-text">动作和行为</span>明显减少或抑制，并常常保持一种<span class="blur-text">固定姿势</span>。</td>
+                            <td>221. <strong>木僵(stupor)</strong><br>定义：患者的<span class="answer-text">动作和行为</span>明显减少或抑制，并常常保持一种<span class="answer-text">固定姿势</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>223</td>
+                            <td>222. <strong>蜡样屈曲(waxy flexibility)</strong><br>定义：指在<span class="blur-text">木僵</span>的基础上出现，患者的肢体<span class="blur-text">任人摆布</span>成任何姿态，哪怕是<span class="blur-text">极不舒服的姿势</span>，也可<span class="blur-text">长时间保持不变</span>。</td>
+                            <td>222. <strong>蜡样屈曲(waxy flexibility)</strong><br>定义：指在<span class="answer-text">木僵</span>的基础上出现，患者的肢体<span class="answer-text">任人摆布</span>成任何姿态，哪怕是<span class="answer-text">极不舒服的姿势</span>，也可<span class="answer-text">长时间保持不变</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>224</td>
+                            <td>223. <strong>违拗症(negativism)</strong><br>定义：指患者对所有<span class="blur-text">外来指令或要求</span>的一种不自主的<span class="blur-text">抗拒</span>，并非有意的不合作。</td>
+                            <td>223. <strong>违拗症(negativism)</strong><br>定义：指患者对所有<span class="answer-text">外来指令或要求</span>的一种不自主的<span class="answer-text">抗拒</span>，并非有意的不合作。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>225</td>
+                            <td>224. <strong>急性脑病综合征(acute brain syndrome)</strong><br>别名：又称<span class="blur-text">谵妄(delirium)</span>。<br>性质：是一组<span class="blur-text">急性、广泛性的认知功能障碍</span>。<br>特征：以<span class="blur-text">意识障碍</span>为主要特征，<span class="blur-text">定向障碍、感知觉障碍、昼轻夜重</span>，起病<span class="blur-text">急</span>，病程<span class="blur-text">短</span>，发展<span class="blur-text">快</span>，<span class="blur-text">可逆</span>。</td>
+                            <td>224. <strong>急性脑病综合征(acute brain syndrome)</strong><br>别名：又称<span class="answer-text">谵妄(delirium)</span>。<br>性质：是一组<span class="answer-text">急性、广泛性的认知功能障碍</span>。<br>特征：以<span class="answer-text">意识障碍</span>为主要特征，<span class="answer-text">定向障碍、感知觉障碍、昼轻夜重</span>，起病<span class="answer-text">急</span>，病程<span class="answer-text">短</span>，发展<span class="answer-text">快</span>，<span class="answer-text">可逆</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>226</td>
+                            <td>225. <strong>慢性脑病综合征</strong><br>表现：以<span class="blur-text">痴呆</span>为主要表现，明显的<span class="blur-text">人格改变</span>和<span class="blur-text">遗忘综合征</span>，伴<span class="blur-text">慢性精神病症状</span>，起病<span class="blur-text">缓慢</span>，病程<span class="blur-text">长</span>，通常<span class="blur-text">不伴有意识障碍</span>。</td>
+                            <td>225. <strong>慢性脑病综合征</strong><br>表现：以<span class="answer-text">痴呆</span>为主要表现，明显的<span class="answer-text">人格改变</span>和<span class="answer-text">遗忘综合征</span>，伴<span class="answer-text">慢性精神病症状</span>，起病<span class="answer-text">缓慢</span>，病程<span class="answer-text">长</span>，通常<span class="answer-text">不伴有意识障碍</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>227</td>
+                            <td>226. <strong>遗忘综合征(amenestic syndrome)</strong><br>别名：又称<span class="blur-text">科萨科夫综合征(Korsakoff syndrome)</span>。<br>定义：指的是由<span class="blur-text">器质性疾病</span>所导致的一种<span class="blur-text">选择或局灶性</span>认知功能障碍。<br>表现：主要表现为<span class="blur-text">近事遗忘、定向力障碍和虚构</span>，患者虽有<span class="blur-text">定向力障碍</span>，但<span class="blur-text">无意识障碍</span>，<span class="blur-text">智能也相对完好</span>。</td>
+                            <td>226. <strong>遗忘综合征(amenestic syndrome)</strong><br>别名：又称<span class="answer-text">科萨科夫综合征(Korsakoff syndrome)</span>。<br>定义：指的是由<span class="answer-text">器质性疾病</span>所导致的一种<span class="answer-text">选择或局灶性</span>认知功能障碍。<br>表现：主要表现为<span class="answer-text">近事遗忘、定向力障碍和虚构</span>，患者虽有<span class="answer-text">定向力障碍</span>，但<span class="answer-text">无意识障碍</span>，<span class="answer-text">智能也相对完好</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>228</td>
+                            <td>227. <strong>心境障碍(Mood disorders)</strong><br>别名：又称<span class="blur-text">情感性精神障碍</span>。<br>性质：是一组<span class="blur-text">病因未明</span>的<span class="blur-text">重性精神疾病</span>。<br>特征：以<span class="blur-text">严重而持久的情感或心境改变</span>为主要特征。分为<span class="blur-text">抑郁障碍和双相及相关障碍</span>。</td>
+                            <td>227. <strong>心境障碍(Mood disorders)</strong><br>别名：又称<span class="answer-text">情感性精神障碍</span>。<br>性质：是一组<span class="answer-text">病因未明</span>的<span class="answer-text">重性精神疾病</span>。<br>特征：以<span class="answer-text">严重而持久的情感或心境改变</span>为主要特征。分为<span class="answer-text">抑郁障碍和双相及相关障碍</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>229</td>
+                            <td>228. <strong>心境发作(mood episodes)</strong><br>定义：心境发作是<span class="blur-text">心境障碍的基本组成部分</span>，包括<span class="blur-text">抑郁发作、躁狂发作、轻躁狂发作和混合发作</span>。</td>
+                            <td>228. <strong>心境发作(mood episodes)</strong><br>定义：心境发作是<span class="answer-text">心境障碍的基本组成部分</span>，包括<span class="answer-text">抑郁发作、躁狂发作、轻躁狂发作和混合发作</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>230</td>
+                            <td>229. <strong>抑郁障碍(Depressive disorders)</strong><br>地位：是<span class="blur-text">心境障碍的主要亚组</span>。<br>特征：以<span class="blur-text">心境低落和快感缺失</span>为主要临床特征，伴有<span class="blur-text">认知、行为和自主神经系统症状</span>，并对<span class="blur-text">个体功能水平</span>产生影响。</td>
+                            <td>229. <strong>抑郁障碍(Depressive disorders)</strong><br>地位：是<span class="answer-text">心境障碍的主要亚组</span>。<br>特征：以<span class="answer-text">心境低落和快感缺失</span>为主要临床特征，伴有<span class="answer-text">认知、行为和自主神经系统症状</span>，并对<span class="answer-text">个体功能水平</span>产生影响。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>231</td>
+                            <td>230. <strong>依赖(dependence)</strong><br>定义：是一种<span class="blur-text">认知、行为和生理症状群</span>，个体尽管明白使用<span class="blur-text">成瘾物质</span>会带来明显的问题，但还在继续使用。<br>表现：表现为<span class="blur-text">耐受性增加、戒断症状和强制性觅药行为</span>。</td>
+                            <td>230. <strong>依赖(dependence)</strong><br>定义：是一种<span class="answer-text">认知、行为和生理症状群</span>，个体尽管明白使用<span class="answer-text">成瘾物质</span>会带来明显的问题，但还在继续使用。<br>表现：表现为<span class="answer-text">耐受性增加、戒断症状和强制性觅药行为</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>232</td>
+                            <td>231. <strong>滥用(abuse)</strong><br>定义：是一种<span class="blur-text">适应不良方式</span>，由于<span class="blur-text">反复使用药物</span>导致了明显的不良后果，如不能完成<span class="blur-text">重要的工作学业</span>，损害了<span class="blur-text">躯体、心理健康</span>，导致<span class="blur-text">法律上的问题</span>等。</td>
+                            <td>231. <strong>滥用(abuse)</strong><br>定义：是一种<span class="answer-text">适应不良方式</span>，由于<span class="answer-text">反复使用药物</span>导致了明显的不良后果，如不能完成<span class="answer-text">重要的工作学业</span>，损害了<span class="answer-text">躯体、心理健康</span>，导致<span class="answer-text">法律上的问题</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>233</td>
+                            <td>232. <strong>惊恐障碍</strong><br>表现：<span class="blur-text">极度焦虑状态的突然出现</span>，通常伴有一些<span class="blur-text">具体症状和灾难临头的想法</span>。</td>
+                            <td>232. <strong>惊恐障碍</strong><br>表现：<span class="answer-text">极度焦虑状态的突然出现</span>，通常伴有一些<span class="answer-text">具体症状和灾难临头的想法</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>234</td>
+                            <td>233. <strong>恐怖症(phobia)</strong><br>定义：是指接触到<span class="blur-text">特定事物或处境</span>时具有的<span class="blur-text">强烈的恐惧情绪</span>，患者采取<span class="blur-text">回避行为</span>，并有<span class="blur-text">焦虑症状和植物性神经功能障碍</span>的一类心理障碍。</td>
+                            <td>233. <strong>恐怖症(phobia)</strong><br>定义：是指接触到<span class="answer-text">特定事物或处境</span>时具有的<span class="answer-text">强烈的恐惧情绪</span>，患者采取<span class="answer-text">回避行为</span>，并有<span class="answer-text">焦虑症状和植物性神经功能障碍</span>的一类心理障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>235</td>
+                            <td>234. <strong>分离转换性障碍(dissociative conversion disorders)</strong><br>原名：原名<span class="blur-text">癔症</span>。<br>性质：是一类由于<span class="blur-text">精神因素</span>作用于<span class="blur-text">易病个体</span>引起的精神障碍。<br>表现：主要表现为<span class="blur-text">意识范围、选择性遗忘</span>等精神症状或<span class="blur-text">各种各样的躯体症状</span>，无相应的<span class="blur-text">器质性损害</span>。有<span class="blur-text">做作、夸大、富有情感色彩</span>等特点，可由<span class="blur-text">暗示诱发或消除</span>，有<span class="blur-text">反复发作</span>的倾向。</td>
+                            <td>234. <strong>分离转换性障碍(dissociative conversion disorders)</strong><br>原名：原名<span class="answer-text">癔症</span>。<br>性质：是一类由于<span class="answer-text">精神因素</span>作用于<span class="answer-text">易病个体</span>引起的精神障碍。<br>表现：主要表现为<span class="answer-text">意识范围、选择性遗忘</span>等精神症状或<span class="answer-text">各种各样的躯体症状</span>，无相应的<span class="answer-text">器质性损害</span>。有<span class="answer-text">做作、夸大、富有情感色彩</span>等特点，可由<span class="answer-text">暗示诱发或消除</span>，有<span class="answer-text">反复发作</span>的倾向。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>236</td>
+                            <td>235. <strong>急性应激障碍(acute stress disorder,ASD)</strong><br>病因：<span class="blur-text">急剧、严重的精神打击</span>作为直接原因。<br>表现：患者在受刺激之后<span class="blur-text">数分钟至数小时</span>出现的短暂的<span class="blur-text">精神障碍</span>。</td>
+                            <td>235. <strong>急性应激障碍(acute stress disorder,ASD)</strong><br>病因：<span class="answer-text">急剧、严重的精神打击</span>作为直接原因。<br>表现：患者在受刺激之后<span class="answer-text">数分钟至数小时</span>出现的短暂的<span class="answer-text">精神障碍</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>237</td>
+                            <td>236. <strong>创伤后应急障碍(Posttraumatic Stress disorder,PTSD)</strong><br>病因：是由于受到<span class="blur-text">异乎寻常的威胁性或灾难性心理创伤</span>。<br>特点：导致<span class="blur-text">延迟出现和长期持续</span>（至少<span class="blur-text">几周</span>）的精神障碍。</td>
+                            <td>236. <strong>创伤后应急障碍(Posttraumatic Stress disorder,PTSD)</strong><br>病因：是由于受到<span class="answer-text">异乎寻常的威胁性或灾难性心理创伤</span>。<br>特点：导致<span class="answer-text">延迟出现和长期持续</span>（至少<span class="answer-text">几周</span>）的精神障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>238</td>
+                            <td>237. <strong>适应障碍(adjustment disorder,AD)</strong><br>基础：指具有<span class="blur-text">易感个性</span>（敏感、胆小、情绪不稳定的人格素质）的个体。<br>诱因：在明显的<span class="blur-text">生活环境改变或应激性生活事件</span>的影响下。<br>表现：出现的<span class="blur-text">反应性情绪障碍、适应不良性行为障碍</span>，伴有<span class="blur-text">社会功能受损</span>，通常在遭遇生活事件后<span class="blur-text">一个月内</span>起病，病程一般不超过<span class="blur-text">半年</span>。</td>
+                            <td>237. <strong>适应障碍(adjustment disorder,AD)</strong><br>基础：指具有<span class="answer-text">易感个性</span>（敏感、胆小、情绪不稳定的人格素质）的个体。<br>诱因：在明显的<span class="answer-text">生活环境改变或应激性生活事件</span>的影响下。<br>表现：出现的<span class="answer-text">反应性情绪障碍、适应不良性行为障碍</span>，伴有<span class="answer-text">社会功能受损</span>，通常在遭遇生活事件后<span class="answer-text">一个月内</span>起病，病程一般不超过<span class="answer-text">半年</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>239</td>
+                            <td>238. <strong>神经性厌食(anorexia nervosa)</strong><br>定义：是指在<span class="blur-text">心理因素</span>作用下<span class="blur-text">有意节制饮食</span>，导致<span class="blur-text">体重明显低于正常标准</span>的一种<span class="blur-text">精神进食障碍</span>。</td>
+                            <td>238. <strong>神经性厌食(anorexia nervosa)</strong><br>定义：是指在<span class="answer-text">心理因素</span>作用下<span class="answer-text">有意节制饮食</span>，导致<span class="answer-text">体重明显低于正常标准</span>的一种<span class="answer-text">精神进食障碍</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>240</td>
+                            <td>239. <strong>神经性贪食(bulimia nervosa)</strong><br>特征：是指<span class="blur-text">反复发作的不可抗拒的冲动性的摄食欲望</span>，以及<span class="blur-text">多食或暴食行为</span>，继之<span class="blur-text">担心发胖</span>，而采用<span class="blur-text">自我诱吐、导泻、利尿、禁食或过度运动</span>来抵消体重增加为特征的一组<span class="blur-text">进食障碍</span>。</td>
+                            <td>239. <strong>神经性贪食(bulimia nervosa)</strong><br>特征：是指<span class="answer-text">反复发作的不可抗拒的冲动性的摄食欲望</span>，以及<span class="answer-text">多食或暴食行为</span>，继之<span class="answer-text">担心发胖</span>，而采用<span class="answer-text">自我诱吐、导泻、利尿、禁食或过度运动</span>来抵消体重增加为特征的一组<span class="answer-text">进食障碍</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>241</td>
+                            <td>240. <strong>失眠症(insomnia)</strong><br>地位：是最普遍的<span class="blur-text">睡眠觉醒障碍</span>。<br>特征：特征是对<span class="blur-text">睡眠质量不满意</span>。<br>症状：主要症状为<span class="blur-text">入睡困难、夜间易醒、早醒</span>，伴<span class="blur-text">次日功能损害</span>。</td>
+                            <td>240. <strong>失眠症(insomnia)</strong><br>地位：是最普遍的<span class="answer-text">睡眠觉醒障碍</span>。<br>特征：特征是对<span class="answer-text">睡眠质量不满意</span>。<br>症状：主要症状为<span class="answer-text">入睡困难、夜间易醒、早醒</span>，伴<span class="answer-text">次日功能损害</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>242</td>
+                            <td>241. <strong>嗜睡症(hypersomnia)</strong><br>定义：指<span class="blur-text">白天睡眠过多</span>，这种睡眠过多<span class="blur-text">并非由于睡眠不足</span>或者<span class="blur-text">药物、酒精、躯体疾病</span>所致，也不是<span class="blur-text">某种精神障碍</span>的一部分。</td>
+                            <td>241. <strong>嗜睡症(hypersomnia)</strong><br>定义：指<span class="answer-text">白天睡眠过多</span>，这种睡眠过多<span class="answer-text">并非由于睡眠不足</span>或者<span class="answer-text">药物、酒精、躯体疾病</span>所致，也不是<span class="answer-text">某种精神障碍</span>的一部分。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>243</td>
+                            <td>242. <strong>睡行症(Sleep walking)</strong><br>别名：又称<span class="blur-text">夜游症</span>。<br>定义：指一种在睡眠过程中<span class="blur-text">起床在室内或户外行走</span>，或做一些<span class="blur-text">简单活动</span>的<span class="blur-text">睡眠和清醒同时存在</span>的一种意识改变的状态，发生于<span class="blur-text">非快速动眼睡眠的3-4期</span>。</td>
+                            <td>242. <strong>睡行症(Sleep walking)</strong><br>别名：又称<span class="answer-text">夜游症</span>。<br>定义：指一种在睡眠过程中<span class="answer-text">起床在室内或户外行走</span>，或做一些<span class="answer-text">简单活动</span>的<span class="answer-text">睡眠和清醒同时存在</span>的一种意识改变的状态，发生于<span class="answer-text">非快速动眼睡眠的3-4期</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>244</td>
+                            <td>243. <strong>梦魇(nightmare)</strong><br>定义：是<span class="blur-text">焦虑或恐惧</span>所占据的梦境体验，事后患者能够<span class="blur-text">详细回忆</span>。<br>发生：可发生于任何年龄，儿童发生梦魇的高峰年龄为<span class="blur-text">5~6岁</span>，梦魇发生在<span class="blur-text">快动眼睡眠阶段</span>。</td>
+                            <td>243. <strong>梦魇(nightmare)</strong><br>定义：是<span class="answer-text">焦虑或恐惧</span>所占据的梦境体验，事后患者能够<span class="answer-text">详细回忆</span>。<br>发生：可发生于任何年龄，儿童发生梦魇的高峰年龄为<span class="answer-text">5~6岁</span>，梦魇发生在<span class="answer-text">快动眼睡眠阶段</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>245</td>
+                            <td>244. <strong>精神发育迟滞(mental retardation,MR)</strong><br>定义：是指个体在<span class="blur-text">发育阶段</span>（通常指<span class="blur-text">18岁以前</span>）由<span class="blur-text">先天或后天的，生物学方面或社会、心理方面</span>的不利因素，造成<span class="blur-text">精神发育受阻及停滞</span>，导致<span class="blur-text">智力不足及社会适应障碍</span>。</td>
+                            <td>244. <strong>精神发育迟滞(mental retardation,MR)</strong><br>定义：是指个体在<span class="answer-text">发育阶段</span>（通常指<span class="answer-text">18岁以前</span>）由<span class="answer-text">先天或后天的，生物学方面或社会、心理方面</span>的不利因素，造成<span class="answer-text">精神发育受阻及停滞</span>，导致<span class="answer-text">智力不足及社会适应障碍</span>。</td>
+                        </tr>
+                     
+                        <tr>
+                            <td>246</td>
+                            <td>245. A <strong>孤独症谱系障碍(autism spectrum disorder,ASD)</strong><br>性质：是一组以<span class="blur-text">社交障碍、语言交流障碍、兴趣或活动范围狭窄以及重复刻板行为</span>为主要特征的<span class="blur-text">精神发育性疾病</span>。</td>
+                            <td>245. A <strong>孤独症谱系障碍(autism spectrum disorder,ASD)</strong><br>性质：是一组以<span class="answer-text">社交障碍、语言交流障碍、兴趣或活动范围狭窄以及重复刻板行为</span>为主要特征的<span class="answer-text">精神发育性疾病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>247</td>
+                            <td>246. <strong>注意缺陷多动障碍(attention deficit hyperactivity disorder)</strong><br>别名：也称为<span class="blur-text">多动症</span>。<br>定义：主要是指发生于<span class="blur-text">儿童时期</span>，表现为与年龄不相称的<span class="blur-text">注意力不集中、不分场合的过度活动、情绪不稳定及冲动</span>并影响其<span class="blur-text">社交、家庭和学业</span>等社会功能，<span class="blur-text">智力正常或接近正常</span>。</td>
+                            <td>246. <strong>注意缺陷多动障碍(attention deficit hyperactivity disorder)</strong><br>别名：也称为<span class="answer-text">多动症</span>。<br>定义：主要是指发生于<span class="answer-text">儿童时期</span>，表现为与年龄不相称的<span class="answer-text">注意力不集中、不分场合的过度活动、情绪不稳定及冲动</span>并影响其<span class="answer-text">社交、家庭和学业</span>等社会功能，<span class="answer-text">智力正常或接近正常</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>
