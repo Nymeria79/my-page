@@ -4,103 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的医学博客 - 个人主页</title>
-    <!-- 引入外部样式 -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 密码门专用样式 */
+        #gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        #blog-content { 
+            display: none; 
+        }
+        .error {
+            color: #c45c5c;
+            display: none;
+            margin-top: 12px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- 密码大门 -->
+    <!-- 密码门 -->
     <div id="gate">
-        <h2>🔐 私人领域</h2>
-        <p>请输入密码进入小c的空间</p>
-        <input type="password" id="pwd" placeholder="输入密码..." onkeypress="if(event.key==='Enter')unlock()">
-        <button onclick="unlock()">进入</button>
-        <p class="error" id="err">密码错误，请重试</p>
+        <div class="card" style="width: 100%; max-width: 400px; text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 10px;">🔐</div>
+            <h2 style="margin-bottom: 8px; color: var(--text-primary);">私人领域</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">请输入密码进入小c的空间</p>
+            
+            <input type="password" id="pwd" placeholder="输入密码..." 
+                   style="width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid var(--link-border); 
+                          border-radius: var(--radius-sm); font-family: inherit; font-size: 1rem; outline: none;"
+                   onkeypress="if(event.key==='Enter')unlock()">
+            
+            <button onclick="unlock()" 
+                    style="width: 100%; padding: 14px; background: var(--link-color); color: white; border: none; 
+                           border-radius: var(--radius-sm); cursor: pointer; font-weight: 500; font-size: 1rem;
+                           transition: background 0.3s;">
+                进入
+            </button>
+            
+            <p class="error" id="err">密码错误，请重试</p>
+        </div>
     </div>
 
     <!-- 博客内容 -->
     <div id="blog-content">
-        <header>
-            <h1>我的医学博客</h1>
-            <p>记录学医路上的点滴思考</p>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="#home">首页</a></li>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#blog">博客</a></li>
-                <li><a href="#contact">联系方式</a></li>
-            </ul>
-        </nav>
-        
         <div class="container">
-            <section id="about" class="about-section">
-                <h2>关于我</h2>
-                <p>你好！我是一名大四医学生。这个博客是我用来整理学习体会、分享医学见解的地方。</p>
-                <p style="margin-top: 1rem;">欢迎你的到来，希望我们能够一起交流学习！</p>
-            </section>
+            
+            <!-- 头部 -->
+            <div class="card header-card">
+                <h1>🩺 我的医学博客</h1>
+                <p class="subtitle">记录学医路上的点滴思考</p>
+                
+                <!-- 简版导航 -->
+                <div style="margin-top: 20px; display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+                    <a href="#about" style="color: var(--link-color); text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: background 0.2s;" onmouseover="this.style.background='var(--link-bg)'" onmouseout="this.style.background='transparent'">关于我</a>
+                    <a href="#blog" style="color: var(--link-color); text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: background 0.2s;" onmouseover="this.style.background='var(--link-bg)'" onmouseout="this.style.background='transparent'">博客</a>
+                    <a href="#contact" style="color: var(--link-color); text-decoration: none; font-weight: 500; padding: 6px 12px; border-radius: 20px; transition: background 0.2s;" onmouseover="this.style.background='var(--link-bg)'" onmouseout="this.style.background='transparent'">联系方式</a>
+                </div>
+            </div>
+
+            <!-- 关于我 -->
+            <div class="card" id="about">
+                <div class="card-title">👋 关于我</div>
+                <div class="card-desc">
+                    你好！我是一名大四医学生。这个博客是我用来整理学习体会、分享医学见解的地方。
+                    <br><br>
+                    欢迎你的到来，希望我们能够一起交流学习！
+                </div>
+            </div>
 
             <!-- 医疗免责声明 -->
-            <section class="medical-disclaimer">
-                <h3>⚠️ 医疗免责声明</h3>
-                <p>本网站所有内容（包括但不限于文字、图表、笔记、链接）仅供<strong>教育参考与信息分享</strong>，不构成任何形式的医疗建议、诊断或治疗方案。</p>
-                <p>浏览本网站不建立医患关系；内容不能替代专业医疗人员的面诊、诊断或治疗建议；<br>如有健康疑虑，请咨询具有执业资质的医疗卫生提供者。</p>
-            </section>
-            
-            <section id="blog">
-                <h2 style="margin-bottom: 1.5rem; color: #6A5A7A;">最新文章</h2>
-                <div class="blog-posts">
-                    
-                    <!-- 文章1：data-file标记文件名，脚本会自动抓取时间 -->
-                    <article class="post-card">
-                        <h3>我的第一篇博客</h3>
-                        <div class="post-meta">
-                            发布于 2026-02-01 · 
-                            <span class="update-time" data-file="post1.html">获取时间...</span>
-                        </div>
-                        <p class="post-excerpt">今天终于搭建起了自己的个人博客！作为一名医学生，我希望通过这个平台记录学习过程中的收获与感悟...</p>
-                        <a href="post1.html" class="read-more" data-file="post1.html">阅读全文 →</a>
-                    </article>
-                    
-                    <!-- 文章2：外链，不加data-file，保持静态时间 -->
-                    <article class="post-card">
-                        <h3>医学学习方法及笔记分享</h3>
-                        <div class="post-meta">发布于 2026-02-02</div>
-                        <p class="post-excerpt">经过几年的医学学习，我正在总结一些对我来说比较有效的学习方法<br>也开始整理存储一些笔记，分享在此...</p>
-                        <a href="https://nymeria79.github.io/anki-viewer/" target="_blank" class="read-more">访问网站 →</a>
-                    </article>
-                    
-                    <!-- 文章3：本地文件，自动获取时间 -->
-                    <article class="post-card">
-                        <h3>示教/实习见闻</h3>
-                        <div class="post-meta">
-                            发布于 2026-02-02 · 
-                            <span class="update-time" data-file="post3.html">获取时间...</span>
-                        </div>
-                        <p class="post-excerpt">此处存放示教课/实习期间的见闻和思考</p>
-                        <a href="post3.html" class="read-more" data-file="post3.html">阅读全文 →</a>
-                    </article>
-
-                    <!-- 示例：如何添加新文章（带自动时间） -->
-                    <article class="post-card">
-                        <h3>新文章标题</h3>
-                        <div class="post-meta">
-                            发布于 2026-02-02 · 
-                            <span class="update-time" data-file="post4.html">获取时间...</span>
-                        </div>
-                        <p class="post-excerpt">文章摘要...</p>
-                        <a href="post4.html" class="read-more" data-file="post4.html">阅读全文 →</a>
-                    </article>
-
+            <div class="card disclaimer-card">
+                <div class="medical-disclaimer">
+                    <strong>⚠️ 医疗免责声明</strong>
+                    <p>本网站所有内容（包括但不限于文字、图表、笔记、链接）仅供<strong>教育参考与信息分享</strong>，不构成任何形式的医疗建议、诊断或治疗方案。</p>
+                    <p>浏览本网站不建立医患关系；内容不能替代专业医疗人员的面诊、诊断或治疗建议；如有健康疑虑，请咨询具有执业资质的医疗卫生提供者。</p>
                 </div>
-            </section>
+            </div>
+
+            <!-- 博客文章列表 -->
+            <div class="card" id="blog">
+                <div class="card-title" style="margin-bottom: 24px;">📝 最新文章</div>
+                
+                <!-- 文章1 -->
+                <article style="border-bottom: 1px solid var(--link-border); padding-bottom: 20px; margin-bottom: 20px;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text-primary); font-weight: 600;">我的第一篇博客</h3>
+                    <div class="card-meta" style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                        <span>发布于 2026-02-01</span>
+                        <span style="color: var(--text-muted);">·</span>
+                        <span class="update-time" data-file="post1.html" style="color: var(--text-muted);">获取时间...</span>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.6;">
+                        今天终于搭建起了自己的个人博客！作为一名医学生，我希望通过这个平台记录学习过程中的收获与感悟...
+                    </p>
+                    <a href="post1.html" class="link-item" data-file="post1.html" style="display: inline-flex; width: auto; padding: 10px 20px;">
+                        <span>阅读全文</span>
+                    </a>
+                </article>
+
+                <!-- 文章2：外链 -->
+                <article style="border-bottom: 1px solid var(--link-border); padding-bottom: 20px; margin-bottom: 20px;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text-primary); font-weight: 600;">医学学习方法及笔记分享</h3>
+                    <div class="card-meta" style="margin-bottom: 12px;">
+                        发布于 2026-02-02
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.6;">
+                        经过几年的医学学习，我正在总结一些对我来说比较有效的学习方法，也开始整理存储一些笔记，分享在此...
+                    </p>
+                    <a href="https://nymeria79.github.io/anki-viewer/" target="_blank" class="link-item" style="display: inline-flex; width: auto; padding: 10px 20px;">
+                        <span>访问笔记导航 →</span>
+                    </a>
+                </article>
+
+                <!-- 文章3 -->
+                <article style="border-bottom: 1px solid var(--link-border); padding-bottom: 20px; margin-bottom: 20px;">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text-primary); font-weight: 600;">示教/实习见闻</h3>
+                    <div class="card-meta" style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                        <span>发布于 2026-02-02</span>
+                        <span style="color: var(--text-muted);">·</span>
+                        <span class="update-time" data-file="post3.html" style="color: var(--text-muted);">获取时间...</span>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.6;">
+                        此处存放示教课/实习期间的见闻和思考
+                    </p>
+                    <a href="post3.html" class="link-item" data-file="post3.html" style="display: inline-flex; width: auto; padding: 10px 20px;">
+                        <span>阅读全文</span>
+                    </a>
+                </article>
+
+                <!-- 文章4 -->
+                <article>
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text-primary); font-weight: 600;">新文章标题</h3>
+                    <div class="card-meta" style="margin-bottom: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                        <span>发布于 2026-02-02</span>
+                        <span style="color: var(--text-muted);">·</span>
+                        <span class="update-time" data-file="post4.html" style="color: var(--text-muted);">获取时间...</span>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.6;">
+                        文章摘要...
+                    </p>
+                    <a href="post4.html" class="link-item" data-file="post4.html" style="display: inline-flex; width: auto; padding: 10px 20px;">
+                        <span>阅读全文</span>
+                    </a>
+                </article>
+            </div>
+
+            <!-- 页脚 -->
+            <div id="contact" style="text-align: center; padding: 20px; color: var(--text-muted); font-size: 0.9rem; margin-top: 20px;">
+                <p style="margin-bottom: 8px;">© 2026 xiaoc的医学博客 | 用心记录，与你分享</p>
+                <p>yejingyang163@163.com</p>
+            </div>
+
         </div>
-        
-        <footer id="contact">
-            <p>© 2026 xiaoc的医学博客 | 用心记录，与你分享</p>
-            <p>yejingyang163@163.com</p>
-        </footer>
     </div>
 
     <script>
@@ -123,44 +188,41 @@
             }
         }
 
-        // ===== 自动获取GitHub最后修改时间 =====
-        // 配置（已按你的仓库设置好）
-        const GITHUB_USER = 'Nymeria79';
-        const GITHUB_REPO = 'my-page';
-        const CACHE_KEY = 'blog_update_times';
-        const CACHE_MINUTES = 30; // 缓存30分钟，避免频繁请求
+        // ===== GitHub 最后修改时间（带缓存） =====
+        const CONFIG = {
+            user: 'Nymeria79',
+            repo: 'my-page',
+            cacheKey: 'blog_update_times',
+            cacheMinutes: 30
+        };
 
-        // 读取缓存
         function getCache() {
             try {
-                const data = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}');
-                if (Date.now() - (data.ts || 0) < CACHE_MINUTES * 60000) {
+                const data = JSON.parse(localStorage.getItem(CONFIG.cacheKey) || '{}');
+                if (Date.now() - (data.ts || 0) < CONFIG.cacheMinutes * 60000) {
                     return data.times || {};
                 }
             } catch(e) {}
             return {};
         }
 
-        // 保存缓存
         function saveCache(times) {
-            localStorage.setItem(CACHE_KEY, JSON.stringify({
+            localStorage.setItem(CONFIG.cacheKey, JSON.stringify({
                 ts: Date.now(),
                 times: times
             }));
         }
 
-        // 获取单个文件时间
         async function fetchTime(filename) {
             const cache = getCache();
             if (cache[filename]) return cache[filename];
 
             try {
-                const res = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/commits?path=${filename}&per_page=1`);
-                if (!res.ok) throw new Error('API错误');
+                const res = await fetch(`https://api.github.com/repos/${CONFIG.user}/${CONFIG.repo}/commits?path=${filename}&per_page=1`);
+                if (!res.ok) throw new Error('API限制');
                 const data = await res.json();
                 if (data.length > 0) {
                     const date = new Date(data[0].commit.committer.date);
-                    // 格式：02-02 14:30
                     const str = `${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')} ${String(date.getHours()).padStart(2,'0')}:${String(date.getMinutes()).padStart(2,'0')}`;
                     cache[filename] = str;
                     saveCache(cache);
@@ -172,7 +234,7 @@
             return null;
         }
 
-        // 页面加载后自动获取所有时间
+        // 页面加载后获取时间
         document.addEventListener('DOMContentLoaded', async () => {
             const timeElements = document.querySelectorAll('.update-time[data-file]');
             
@@ -181,10 +243,10 @@
                 const time = await fetchTime(file);
                 if (time) {
                     el.textContent = '最后修改：' + time;
-                    el.style.color = '#7A6A8A'; // 成功获取后加深颜色
+                    el.classList.add('file-time');
+                    el.style.cssText = 'font-size: 0.75rem; color: var(--text-muted); background: rgba(0,0,0,0.03); padding: 2px 8px; border-radius: 10px;';
                 } else {
-                    el.textContent = '最后修改：未知';
-                    el.style.color = '#bbb';
+                    el.textContent = '';
                 }
             }
         });
