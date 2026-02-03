@@ -4,42 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的第一篇博客 - 小c的空间</title>
-    <!-- 同一套样式 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- 未授权提示 -->
-    <div id="blocked">
-        <h2>🔒 请先通过首页进入</h2>
-        <a href="index.html">← 返回首页输入密码</a>
+    <div id="blocked" style="display:none;">
+        <div class="container">
+            <div class="card header-card">
+                <h1>🔒 请先通过首页进入</h1>
+                <p class="subtitle">此页面需要密码验证</p>
+                <div class="links-grid" style="margin-top: 24px;">
+                    <a href="index.html" class="link-item">← 返回首页输入密码</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- 文章内容 -->
     <div id="article" style="display:none;">
-        <div class="article-container">
-            <a href="index.html" class="back-link">← 返回首页</a>
-            
-            <h1 class="article-title">我的第一篇博客</h1>
-            <div class="article-meta">发布于 2026-02-01 | 小c</div>
-            
-            <div class="article-body">
-                <p>今天终于搭建起了自己的个人博客！作为一名医学生，我希望通过这个平台记录学习过程中的收获与感悟。</p>
+        <div class="container">
+            <!-- 返回导航 -->
+            <div class="card" style="padding: 16px 24px; margin-bottom: 16px;">
+                <a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px;">
+                    <span style="color: var(--link-color);">←</span> 返回首页
+                </a>
+            </div>
+
+            <!-- 文章头部 -->
+            <div class="card header-card" style="text-align: left; padding-bottom: 20px;">
+                <h1 style="font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 12px;">我的第一篇博客</h1>
+                <div style="color: var(--text-muted); font-size: 0.9rem;">
+                    发布于 2026-02-01 <span style="margin: 0 8px;">|</span> 小c
+                </div>
+            </div>
+
+            <!-- 文章正文 -->
+            <div class="card" style="line-height: 1.8; color: var(--text-primary);">
+                <p style="margin-bottom: 1.2em;">今天终于搭建起了自己的个人博客！作为一名医学生，我希望通过这个平台记录学习过程中的收获与感悟。</p>
                 
-                <p>其实做这个网站的过程中，我发现前端比想象中要有趣。那些代码就像是积木，一块一块搭建成自己想要的样子。</p>
+                <p style="margin-bottom: 1.2em;">其实做这个网站的过程中，我发现前端比想象中要有趣。那些代码就像是积木，一块一块搭建成自己想要的样子。</p>
                 
-                <p>虽然我现在还只学会了最基础的HTML和CSS，但通过Claude sonnet3.5和kimi2.5已经足够做出一个像模像样的页面了。</p>
+                <p style="margin-bottom: 1.2em;">虽然我现在还只学会了最基础的HTML和CSS，但通过Claude sonnet3.5和kimi2.5已经足够做出一个像模像样的页面了。</p>
                 
-                <p>接下来我打算在这里记录：</p>
-                <ul>
-                    <li>实习期间的见闻和思考</li>
-                    <li>医学知识点的整理</li>
-                    <li>以及偶尔的生活随笔</li>
+                <p style="margin-bottom: 0.8em;">接下来我打算在这里记录：</p>
+                <ul style="margin-left: 1.5em; margin-bottom: 1.2em; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.4em;">实习期间的见闻和思考</li>
+                    <li style="margin-bottom: 0.4em;">医学知识点的整理</li>
+                    <li style="margin-bottom: 0.4em;">以及偶尔的生活随笔</li>
                 </ul>
                    
-                <p>如果你看到了这篇文字，说明你已经通过了密码验证——这说明你对我来说是很重要的人。</p>
+                <p style="margin-bottom: 1.2em;">如果你看到了这篇文字，说明你已经通过了密码验证——这说明你对我来说是很重要的人。</p>
                 
                 <p>欢迎常来。</p>
+            </div>
+
+            <!-- 医学免责声明 -->
+            <div class="card disclaimer-card">
+                <div class="medical-disclaimer">
+                    <strong>⚠️ 医学内容免责声明</strong>
+                    本博客中涉及的医学知识仅供学习交流使用，不构成医疗建议。如有健康问题，请咨询专业医疗机构。
+                </div>
             </div>
         </div>
     </div>
@@ -47,7 +72,7 @@
     <script>
         // 检查授权
         if(localStorage.getItem("unlocked") !== "yes") {
-            document.getElementById("blocked").style.display = "flex";
+            document.getElementById("blocked").style.display = "block";
         } else {
             document.getElementById("article").style.display = "block";
         }
