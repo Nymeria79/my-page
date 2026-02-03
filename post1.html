@@ -4,66 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的第一篇博客 - 小c的空间</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: "Microsoft YaHei", sans-serif; line-height: 1.8; color: #333; background-color: #f5f5f5; }
-        
-        /* 未授权提示样式 */
-        #blocked {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: #333;
-            color: white;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #blocked h2 { margin-bottom: 20px; }
-        #blocked a { color: #667eea; text-decoration: none; font-size: 1.2rem; }
-        
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 3rem; min-height: 100vh; }
-        .back-link { display: inline-block; margin-bottom: 2rem; color: #667eea; text-decoration: none; }
-        .back-link:hover { color: #764ba2; }
-        h1 { color: #333; margin-bottom: 1rem; font-size: 2rem; }
-        .meta { color: #999; margin-bottom: 2rem; font-size: 0.9rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
-        p { margin-bottom: 1.5rem; color: #555; }
-    </style>
+    <!-- 同一套样式 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- 未授权提示 -->
     <div id="blocked">
         <h2>🔒 请先通过首页进入</h2>
-        <a href="index.html">返回首页输入密码</a>
+        <a href="index.html">← 返回首页输入密码</a>
     </div>
 
     <!-- 文章内容 -->
     <div id="article" style="display:none;">
-        <div class="container">
+        <div class="article-container">
             <a href="index.html" class="back-link">← 返回首页</a>
             
-            <h1>我的第一篇博客</h1>
-            <div class="meta">发布于 2026-02-01 | 小c</div>
+            <h1 class="article-title">我的第一篇博客</h1>
+            <div class="article-meta">发布于 2026-02-01 | 小c</div>
             
-            <p>今天终于搭建起了自己的个人博客！作为一名医学生，我希望通过这个平台记录学习过程中的收获与感悟。</p>
-            
-            <p>其实做这个网站的过程中，我发现前端比想象中要有趣。那些代码就像是积木，一块一块搭建成自己想要的样子。</p>
-            <p>虽然我现在还只学会了最基础的HTML和CSS，但通过Claude sonnet3.5和kimi2.5已经足够做出一个像模像样的页面了。</p>
-            
-            <p>接下来我打算在这里记录：</p>
-            <p>• 实习期间的见闻和思考<br>
-               • 医学知识点的整理<br>
-               • 以及偶尔的生活随笔</p>
-               
-            <p>如果你看到了这篇文字，说明你已经通过了密码验证——这说明你对我来说是很重要的人。</p>
-            
-            <p>欢迎常来。</p>
+            <div class="article-body">
+                <p>今天终于搭建起了自己的个人博客！作为一名医学生，我希望通过这个平台记录学习过程中的收获与感悟。</p>
+                
+                <p>其实做这个网站的过程中，我发现前端比想象中要有趣。那些代码就像是积木，一块一块搭建成自己想要的样子。</p>
+                
+                <p>虽然我现在还只学会了最基础的HTML和CSS，但通过Claude sonnet3.5和kimi2.5已经足够做出一个像模像样的页面了。</p>
+                
+                <p>接下来我打算在这里记录：</p>
+                <ul>
+                    <li>实习期间的见闻和思考</li>
+                    <li>医学知识点的整理</li>
+                    <li>以及偶尔的生活随笔</li>
+                </ul>
+                   
+                <p>如果你看到了这篇文字，说明你已经通过了密码验证——这说明你对我来说是很重要的人。</p>
+                
+                <p>欢迎常来。</p>
+            </div>
         </div>
     </div>
 
     <script>
-        // 检查是否已解锁，没解锁就显示提示
+        // 检查授权
         if(localStorage.getItem("unlocked") !== "yes") {
             document.getElementById("blocked").style.display = "flex";
         } else {
