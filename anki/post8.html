@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <div class="medical-disclaimer">
+                <strong>⚠️ 医疗免责声明</strong>
+                <p>本站所有内容仅供教育参考与信息分享，不构成医疗建议、诊断或治疗方案。浏览本站不建立医患关系，如有健康疑虑请咨询执业医疗人员。</p>
+            </div>
+                        
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3"><strong>传染病学大题</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1. A <strong>流行过程的基本条件</strong><br>① <span class="blur-text">传染源</span>：患者、隐性感染者、病原携带者、受感染的动物<br>② <span class="blur-text">传播途径</span>：呼吸道传播、消化道传播、接触传播、虫媒传播、血液体液传播、医源性传播<br>③ <span class="blur-text">易感人群</span></td>
+                            <td>1. A <strong>流行过程的基本条件</strong><br>① <span class="answer-text">传染源</span>：患者、隐性感染者、病原携带者、受感染的动物<br>② <span class="answer-text">传播途径</span>：呼吸道传播、消化道传播、接触传播、虫媒传播、血液体液传播、医源性传播<br>③ <span class="answer-text">易感人群</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>1. B <strong>流行过程的基本条件（续）</strong><br>传播途径具体包括：<span class="blur-text">呼吸道传播</span>、<span class="blur-text">消化道传播</span>、<span class="blur-text">接触传播</span>、<span class="blur-text">虫媒传播</span>、<span class="blur-text">血液体液传播</span>、<span class="blur-text">医源性传播</span>。</td>
+                            <td>1. B <strong>流行过程的基本条件（续）</strong><br>传播途径具体包括：<span class="answer-text">呼吸道传播</span>、<span class="answer-text">消化道传播</span>、<span class="answer-text">接触传播</span>、<span class="answer-text">虫媒传播</span>、<span class="answer-text">血液体液传播</span>、<span class="answer-text">医源性传播</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2. A <strong>传染病的特征——基本特征</strong><br>① <span class="blur-text">有病原体</span><br>② <span class="blur-text">有传染性</span><br>③ <span class="blur-text">流行病学特征</span>：流行性、季节性、地方性、外来性</td>
+                            <td>2. A <strong>传染病的特征——基本特征</strong><br>① <span class="answer-text">有病原体</span><br>② <span class="answer-text">有传染性</span><br>③ <span class="answer-text">流行病学特征</span>：流行性、季节性、地方性、外来性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>2. B <strong>传染病的特征——基本特征（续）</strong><br>④ <span class="blur-text">感染后免疫</span></td>
+                            <td>2. B <strong>传染病的特征——基本特征（续）</strong><br>④ <span class="answer-text">感染后免疫</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>2. C <strong>传染病的特征——临床特征</strong><br>① <span class="blur-text">病程发展的阶段性</span>：潜伏期、前驱期、症状明显期、恢复期<br>② <span class="blur-text">常见的症状与体征</span>：发热、皮疹、毒血症状、单核巨噬细胞系统反应<br>③ <span class="blur-text">临床类型</span>：急性、亚急性、慢性；轻型、典型、重型、爆发型</td>
+                            <td>2. C <strong>传染病的特征——临床特征</strong><br>① <span class="answer-text">病程发展的阶段性</span>：潜伏期、前驱期、症状明显期、恢复期<br>② <span class="answer-text">常见的症状与体征</span>：发热、皮疹、毒血症状、单核巨噬细胞系统反应<br>③ <span class="answer-text">临床类型</span>：急性、亚急性、慢性；轻型、典型、重型、爆发型</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>3. A <strong>典型急性黄疸型肝炎的临床表现——黄疸前期</strong><br>持续约<span class="blur-text">5~7d</span>。<br>表现为<span class="blur-text">畏寒</span>、<span class="blur-text">发热</span>、<span class="blur-text">疲乏</span>及全身不适等。<br>消化系统症状有<span class="blur-text">食欲减退</span>、<span class="blur-text">厌油</span>、<span class="blur-text">恶心</span>、呕吐、腹胀、腹痛和腹泻等。</td>
+                            <td>3. A <strong>典型急性黄疸型肝炎的临床表现——黄疸前期</strong><br>持续约<span class="answer-text">5~7d</span>。<br>表现为<span class="answer-text">畏寒</span>、<span class="answer-text">发热</span>、<span class="answer-text">疲乏</span>及全身不适等。<br>消化系统症状有<span class="answer-text">食欲减退</span>、<span class="answer-text">厌油</span>、<span class="answer-text">恶心</span>、呕吐、腹胀、腹痛和腹泻等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>3. B <strong>典型急性黄疸型肝炎的临床表现——黄疸前期（续）</strong><br>本期末出现<span class="blur-text">尿黄</span>。<br>此期已可有明显<span class="blur-text">肝功能异常</span>，尤其是<span class="blur-text">转氨酶的升高</span>。</td>
+                            <td>3. B <strong>典型急性黄疸型肝炎的临床表现——黄疸前期（续）</strong><br>本期末出现<span class="answer-text">尿黄</span>。<br>此期已可有明显<span class="answer-text">肝功能异常</span>，尤其是<span class="answer-text">转氨酶的升高</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>3. C <strong>典型急性黄疸型肝炎的临床表现——黄疸期</strong><br>可持续<span class="blur-text">2~6周</span>。<br>黄疸逐渐加深，尿色加深如<span class="blur-text">浓茶样</span>，巩膜和皮肤黄染，约<span class="blur-text">2周</span>到达高峰，而黄疸前期的症状好转。</td>
+                            <td>3. C <strong>典型急性黄疸型肝炎的临床表现——黄疸期</strong><br>可持续<span class="answer-text">2~6周</span>。<br>黄疸逐渐加深，尿色加深如<span class="answer-text">浓茶样</span>，巩膜和皮肤黄染，约<span class="answer-text">2周</span>到达高峰，而黄疸前期的症状好转。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>3. D <strong>典型急性黄疸型肝炎的临床表现——黄疸期（续）</strong><br>部分患者可有<span class="blur-text">粪便颜色变浅</span>、<span class="blur-text">皮肤瘙痒</span>、<span class="blur-text">心动过缓</span>等肝内阻塞性黄疸的表现。<br>体检常见<span class="blur-text">肝大</span>，质地软，有压痛及叩击痛。<br>部分患者有轻度脾大。</td>
+                            <td>3. D <strong>典型急性黄疸型肝炎的临床表现——黄疸期（续）</strong><br>部分患者可有<span class="answer-text">粪便颜色变浅</span>、<span class="answer-text">皮肤瘙痒</span>、<span class="answer-text">心动过缓</span>等肝内阻塞性黄疸的表现。<br>体检常见<span class="answer-text">肝大</span>，质地软，有压痛及叩击痛。<br>部分患者有轻度脾大。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>3. E <strong>典型急性黄疸型肝炎的临床表现——恢复期</strong><br>黄疸逐渐消退，症状减轻，肝脾大回缩，<span class="blur-text">肝功能逐渐恢复正常</span>。</td>
+                            <td>3. E <strong>典型急性黄疸型肝炎的临床表现——恢复期</strong><br>黄疸逐渐消退，症状减轻，肝脾大回缩，<span class="answer-text">肝功能逐渐恢复正常</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>4. A <strong>重型肝炎（肝衰竭）主要的临床表现</strong><br>① 有典型的<span class="blur-text">肝衰竭的临床表现</span>：极度疲乏、明显恶心呕吐、<span class="blur-text">重度黄疸</span>，伴有相关并发症的表现，如<span class="blur-text">精神神经症状</span>、<span class="blur-text">少尿或无尿</span>、<span class="blur-text">腹水</span>、感染等。<br>② <span class="blur-text">血清胆红素高于171μmol/L</span>或每天上升><span class="blur-text">17.1μmol/L</span>。</td>
+                            <td>4. A <strong>重型肝炎（肝衰竭）主要的临床表现</strong><br>① 有典型的<span class="answer-text">肝衰竭的临床表现</span>：极度疲乏、明显恶心呕吐、<span class="answer-text">重度黄疸</span>，伴有相关并发症的表现，如<span class="answer-text">精神神经症状</span>、<span class="answer-text">少尿或无尿</span>、<span class="answer-text">腹水</span>、感染等。<br>② <span class="answer-text">血清胆红素高于171μmol/L</span>或每天上升><span class="answer-text">17.1μmol/L</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>4. B <strong>重型肝炎（肝衰竭）主要的临床表现（续）</strong><br>③ <span class="blur-text">PTA<40%</span>或<span class="blur-text">INR>1.5</span>。<br>根据发生的时间及是否有基础疾病不同，分为<span class="blur-text">急性</span>、<span class="blur-text">亚急性</span>、<span class="blur-text">慢加急性</span>、<span class="blur-text">慢性肝衰竭</span>。<br>根据临床表现的严重程度，各型肝衰竭可分为<span class="blur-text">早期</span>、<span class="blur-text">中期</span>和<span class="blur-text">晚期</span>。</td>
+                            <td>4. B <strong>重型肝炎（肝衰竭）主要的临床表现（续）</strong><br>③ <span class="answer-text">PTA<40%</span>或<span class="answer-text">INR>1.5</span>。<br>根据发生的时间及是否有基础疾病不同，分为<span class="answer-text">急性</span>、<span class="answer-text">亚急性</span>、<span class="answer-text">慢加急性</span>、<span class="answer-text">慢性肝衰竭</span>。<br>根据临床表现的严重程度，各型肝衰竭可分为<span class="answer-text">早期</span>、<span class="answer-text">中期</span>和<span class="answer-text">晚期</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>5. A <strong>重型肝炎（肝衰竭）的治疗——支持和对症治疗</strong><br><span class="blur-text">卧床休息</span>，<span class="blur-text">合理膳食</span>，输注<span class="blur-text">白蛋白</span>及<span class="blur-text">新鲜血浆</span>。</td>
+                            <td>5. A <strong>重型肝炎（肝衰竭）的治疗——支持和对症治疗</strong><br><span class="answer-text">卧床休息</span>，<span class="answer-text">合理膳食</span>，输注<span class="answer-text">白蛋白</span>及<span class="answer-text">新鲜血浆</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>5. B <strong>重型肝炎（肝衰竭）的治疗——抗病毒治疗</strong><br><span class="blur-text">HBV DNA≥10^5/ml</span>时，<span class="blur-text">核苷类药物</span>为主。</td>
+                            <td>5. B <strong>重型肝炎（肝衰竭）的治疗——抗病毒治疗</strong><br><span class="answer-text">HBV DNA≥10^5/ml</span>时，<span class="answer-text">核苷类药物</span>为主。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>5. C <strong>重型肝炎（肝衰竭）的治疗——促进肝细胞再生</strong><br>可选用<span class="blur-text">肝细胞生长因子</span>、<span class="blur-text">前列腺素E1</span>，或肝细胞及肝干细胞或干细胞移植等。</td>
+                            <td>5. C <strong>重型肝炎（肝衰竭）的治疗——促进肝细胞再生</strong><br>可选用<span class="answer-text">肝细胞生长因子</span>、<span class="answer-text">前列腺素E1</span>，或肝细胞及肝干细胞或干细胞移植等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>5. D <strong>重型肝炎（肝衰竭）的治疗——免疫调节治疗</strong><br>疾病早期可考虑<span class="blur-text">短程</span>、<span class="blur-text">小剂量激素</span>进行免疫抑制治疗，晚期适当给予<span class="blur-text">免疫增强治疗</span>。</td>
+                            <td>5. D <strong>重型肝炎（肝衰竭）的治疗——免疫调节治疗</strong><br>疾病早期可考虑<span class="answer-text">短程</span>、<span class="answer-text">小剂量激素</span>进行免疫抑制治疗，晚期适当给予<span class="answer-text">免疫增强治疗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>5. E <strong>重型肝炎（肝衰竭）的治疗——人工肝和肝移植</strong><br><span class="blur-text">人工肝支持系统(ALSS)</span>：目的是替代已丧失的肝功能，延长患者生存的时间。<br><span class="blur-text">肝移植</span>：用于终末期肝病如晚期肝硬化和肝衰竭患者。</td>
+                            <td>5. E <strong>重型肝炎（肝衰竭）的治疗——人工肝和肝移植</strong><br><span class="answer-text">人工肝支持系统(ALSS)</span>：目的是替代已丧失的肝功能，延长患者生存的时间。<br><span class="answer-text">肝移植</span>：用于终末期肝病如晚期肝硬化和肝衰竭患者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>5. F <strong>重型肝炎（肝衰竭）的治疗——对症防治</strong><br>① <span class="blur-text">肝性脑病</span>：低蛋白饮食，保持粪便通畅<br>② <span class="blur-text">上消化道出血</span>：<span class="blur-text">PPI</span>，<span class="blur-text">H2受体拮抗剂</span>等<br>③ <span class="blur-text">继发感染</span>：加强护理，严格消毒隔离，选用敏感抗生素<br>④ <span class="blur-text">肝肾综合征</span>：避免使用肾损害药物</td>
+                            <td>5. F <strong>重型肝炎（肝衰竭）的治疗——对症防治</strong><br>① <span class="answer-text">肝性脑病</span>：低蛋白饮食，保持粪便通畅<br>② <span class="answer-text">上消化道出血</span>：<span class="answer-text">PPI</span>，<span class="answer-text">H2受体拮抗剂</span>等<br>③ <span class="answer-text">继发感染</span>：加强护理，严格消毒隔离，选用敏感抗生素<br>④ <span class="answer-text">肝肾综合征</span>：避免使用肾损害药物</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>5. G <strong>重型肝炎（肝衰竭）的治疗——肝移植</strong><br>用于<span class="blur-text">终末期肝病</span>如<span class="blur-text">晚期肝硬化</span>和<span class="blur-text">肝衰竭</span>患者。</td>
+                            <td>5. G <strong>重型肝炎（肝衰竭）的治疗——肝移植</strong><br>用于<span class="answer-text">终末期肝病</span>如<span class="answer-text">晚期肝硬化</span>和<span class="answer-text">肝衰竭</span>患者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>6. A <strong>HBV DNA定量检测的临床意义——诊断方面</strong><br>① <span class="blur-text">HBV DNA是HBV存在最直接的依据</span><br>② <span class="blur-text">HBV DNA是HBV复制的标志</span><br>③ <span class="blur-text">HBV DNA是患者具有传染性的标志</span></td>
+                            <td>6. A <strong>HBV DNA定量检测的临床意义——诊断方面</strong><br>① <span class="answer-text">HBV DNA是HBV存在最直接的依据</span><br>② <span class="answer-text">HBV DNA是HBV复制的标志</span><br>③ <span class="answer-text">HBV DNA是患者具有传染性的标志</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>6. B <strong>HBV DNA定量检测的临床意义——诊断方面（续）</strong><br>④ 对血清学标志起<span class="blur-text">补充诊断作用</span>：<br>a. <span class="blur-text">HBeAg(-)或抗HBe(+)</span>，乙型肝炎（前C区变异）<br>b. <span class="blur-text">HBsAg(-)</span>乙型肝炎（S区变异）<br>c. <span class="blur-text">低水平感染</span>，如单项抗HBc(+)乙型肝炎</td>
+                            <td>6. B <strong>HBV DNA定量检测的临床意义——诊断方面（续）</strong><br>④ 对血清学标志起<span class="answer-text">补充诊断作用</span>：<br>a. <span class="answer-text">HBeAg(-)或抗HBe(+)</span>，乙型肝炎（前C区变异）<br>b. <span class="answer-text">HBsAg(-)</span>乙型肝炎（S区变异）<br>c. <span class="answer-text">低水平感染</span>，如单项抗HBc(+)乙型肝炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>6. C <strong>HBV DNA定量检测的临床意义——治疗方面</strong><br>① 作为<span class="blur-text">用药指征</span>，HBV DNA是决定是否用抗病毒药的重要因素<br>② 用于<span class="blur-text">疗效预测</span>，一般情况下，<span class="blur-text">HBV DNA低滴度（载量）</span>的患者，抗病毒药的疗效较好<br>③ 用于<span class="blur-text">疗效评估</span>，HBV DNA是目前判断乙型肝炎抗病毒药物疗效最敏感的指标</td>
+                            <td>6. C <strong>HBV DNA定量检测的临床意义——治疗方面</strong><br>① 作为<span class="answer-text">用药指征</span>，HBV DNA是决定是否用抗病毒药的重要因素<br>② 用于<span class="answer-text">疗效预测</span>，一般情况下，<span class="answer-text">HBV DNA低滴度（载量）</span>的患者，抗病毒药的疗效较好<br>③ 用于<span class="answer-text">疗效评估</span>，HBV DNA是目前判断乙型肝炎抗病毒药物疗效最敏感的指标</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>7. A <strong>乙肝抗原抗体标记物（乙肝两对半）解读——HBsAg</strong><br>见于<span class="blur-text">HBV现症感染者</span>，但HBsAg阴性<span class="blur-text">不能完全排除HBV的现症感染</span>。</td>
+                            <td>7. A <strong>乙肝抗原抗体标记物（乙肝两对半）解读——HBsAg</strong><br>见于<span class="answer-text">HBV现症感染者</span>，但HBsAg阴性<span class="answer-text">不能完全排除HBV的现症感染</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>7. B <strong>乙肝抗原抗体标记物（乙肝两对半）解读——抗HBs</strong><br>阳性主要见于<span class="blur-text">接种乙肝疫苗后</span>或<span class="blur-text">过去感染HBV并产生免疫力的恢复者</span>。</td>
+                            <td>7. B <strong>乙肝抗原抗体标记物（乙肝两对半）解读——抗HBs</strong><br>阳性主要见于<span class="answer-text">接种乙肝疫苗后</span>或<span class="answer-text">过去感染HBV并产生免疫力的恢复者</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>7. C <strong>乙肝抗原抗体标记物（乙肝两对半）解读——HBeAg</strong><br>阳性提示<span class="blur-text">HBV复制活跃</span>，<span class="blur-text">传染性较强</span>。</td>
+                            <td>7. C <strong>乙肝抗原抗体标记物（乙肝两对半）解读——HBeAg</strong><br>阳性提示<span class="answer-text">HBV复制活跃</span>，<span class="answer-text">传染性较强</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>7. D <strong>乙肝抗原抗体标记物（乙肝两对半）解读——抗HBe</strong><br>阳性临床上有两种可能性：<br>一是<span class="blur-text">HBV复制的减少或停止</span><br>二是<span class="blur-text">HBV前c区基因发生变异</span>，HBV仍然复制活跃。</td>
+                            <td>7. D <strong>乙肝抗原抗体标记物（乙肝两对半）解读——抗HBe</strong><br>阳性临床上有两种可能性：<br>一是<span class="answer-text">HBV复制的减少或停止</span><br>二是<span class="answer-text">HBV前c区基因发生变异</span>，HBV仍然复制活跃。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>7. E <strong>乙肝抗原抗体标记物（乙肝两对半）解读——抗HBc</strong><br><span class="blur-text">抗HBcIgM</span>是HBV感染后<span class="blur-text">较早出现</span>的抗体。<br><span class="blur-text">抗HBcIgG</span>在血清中可<span class="blur-text">长期存在</span>，<span class="blur-text">高滴度</span>的抗HBcIgG表示<span class="blur-text">现症感染</span>，常与HBsAg并存；<span class="blur-text">低滴度</span>的抗HBcIgG表示<span class="blur-text">过去感染</span>，常与抗HBs并存。</td>
+                            <td>7. E <strong>乙肝抗原抗体标记物（乙肝两对半）解读——抗HBc</strong><br><span class="answer-text">抗HBcIgM</span>是HBV感染后<span class="answer-text">较早出现</span>的抗体。<br><span class="answer-text">抗HBcIgG</span>在血清中可<span class="answer-text">长期存在</span>，<span class="answer-text">高滴度</span>的抗HBcIgG表示<span class="answer-text">现症感染</span>，常与HBsAg并存；<span class="answer-text">低滴度</span>的抗HBcIgG表示<span class="answer-text">过去感染</span>，常与抗HBs并存。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>8. A <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——IFN-α优点</strong><br>疗程相对<span class="blur-text">固定</span>，<span class="blur-text">HBeAg血清学转换率较高</span>，疗效相对<span class="blur-text">持久</span>，<span class="blur-text">耐药变异较少</span>。</td>
+                            <td>8. A <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——IFN-α优点</strong><br>疗程相对<span class="answer-text">固定</span>，<span class="answer-text">HBeAg血清学转换率较高</span>，疗效相对<span class="answer-text">持久</span>，<span class="answer-text">耐药变异较少</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>8. B <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——IFN-α缺点</strong><br>需要<span class="blur-text">注射给药</span>，<span class="blur-text">不良反应明显</span>，<span class="blur-text">不适于肝功能失代偿者</span>。</td>
+                            <td>8. B <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——IFN-α缺点</strong><br>需要<span class="answer-text">注射给药</span>，<span class="answer-text">不良反应明显</span>，<span class="answer-text">不适于肝功能失代偿者</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>8. C <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——核苷（酸）类似物优点</strong><br><span class="blur-text">口服给药</span>，<span class="blur-text">抑制病毒作用强</span>，<span class="blur-text">不良反应少而轻微</span>，<span class="blur-text">可用于肝功能失代偿者</span>。</td>
+                            <td>8. C <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——核苷（酸）类似物优点</strong><br><span class="answer-text">口服给药</span>，<span class="answer-text">抑制病毒作用强</span>，<span class="answer-text">不良反应少而轻微</span>，<span class="answer-text">可用于肝功能失代偿者</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>8. D <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——核苷（酸）类似物缺点</strong><br>疗程相对<span class="blur-text">不固定</span>，<span class="blur-text">HBeAg血清学转换率稍低</span>，疗效<span class="blur-text">不够持久</span>，长期应用可产生<span class="blur-text">耐药变异</span>，停药后可出现<span class="blur-text">病情恶化</span>等。</td>
+                            <td>8. D <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——核苷（酸）类似物缺点</strong><br>疗程相对<span class="answer-text">不固定</span>，<span class="answer-text">HBeAg血清学转换率稍低</span>，疗效<span class="answer-text">不够持久</span>，长期应用可产生<span class="answer-text">耐药变异</span>，停药后可出现<span class="answer-text">病情恶化</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>8. E <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——选择原则</strong><br>选择何种药物应根据患者具体情况，如<span class="blur-text">病毒载量高低</span>、<span class="blur-text">肝功能损害程度</span>、是否有<span class="blur-text">肝硬化</span>等，采取<span class="blur-text">个体化方案</span>。</td>
+                            <td>8. E <strong>IFN-α和核苷（酸）类似物治疗慢性乙型肝炎的比较——选择原则</strong><br>选择何种药物应根据患者具体情况，如<span class="answer-text">病毒载量高低</span>、<span class="answer-text">肝功能损害程度</span>、是否有<span class="answer-text">肝硬化</span>等，采取<span class="answer-text">个体化方案</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>9. A <strong>丙型肝炎的抗病毒治疗——干扰素联合利巴韦林</strong><br>丙型肝炎<span class="blur-text">HCV RNA阳性</span>，无失代偿性肝硬化者可联合应用<span class="blur-text">干扰素</span>和<span class="blur-text">利巴韦林</span>，疗程<span class="blur-text">6个月~1年</span>。</td>
+                            <td>9. A <strong>丙型肝炎的抗病毒治疗——干扰素联合利巴韦林</strong><br>丙型肝炎<span class="answer-text">HCV RNA阳性</span>，无失代偿性肝硬化者可联合应用<span class="answer-text">干扰素</span>和<span class="answer-text">利巴韦林</span>，疗程<span class="answer-text">6个月~1年</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>9. B <strong>丙型肝炎的抗病毒治疗——直接抗病毒药物（DAAs）</strong><br><span class="blur-text">抗-HCV直接抗病毒药物(DAAs)</span>。<br>不同类型DAA有不同的<span class="blur-text">联合方案</span>，DAA与不同药物联合后适用的感染人群受<span class="blur-text">病毒基因型</span>限制。</td>
+                            <td>9. B <strong>丙型肝炎的抗病毒治疗——直接抗病毒药物（DAAs）</strong><br><span class="answer-text">抗-HCV直接抗病毒药物(DAAs)</span>。<br>不同类型DAA有不同的<span class="answer-text">联合方案</span>，DAA与不同药物联合后适用的感染人群受<span class="answer-text">病毒基因型</span>限制。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>9. C <strong>丙型肝炎的抗病毒治疗——DAAs注意事项</strong><br>有的适用于<span class="blur-text">所有基因型</span>，有的仅适用于<span class="blur-text">部分基因型</span>。<br><span class="blur-text">蛋白酶抑制剂</span>不能用于<span class="blur-text">失代偿期肝硬化</span>。<br>使用DAA时注意与其他药物同时使用所产生的<span class="blur-text">药物相互作用</span>影响。<br>完成<span class="blur-text">3~6个月</span>的疗程，绝大部分丙肝患者可以清除丙肝病毒。</td>
+                            <td>9. C <strong>丙型肝炎的抗病毒治疗——DAAs注意事项</strong><br>有的适用于<span class="answer-text">所有基因型</span>，有的仅适用于<span class="answer-text">部分基因型</span>。<br><span class="answer-text">蛋白酶抑制剂</span>不能用于<span class="answer-text">失代偿期肝硬化</span>。<br>使用DAA时注意与其他药物同时使用所产生的<span class="answer-text">药物相互作用</span>影响。<br>完成<span class="answer-text">3~6个月</span>的疗程，绝大部分丙肝患者可以清除丙肝病毒。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>10. A <strong>阻断乙型肝炎病毒母婴传播——妊娠期抗病毒</strong><br>妊娠中后期<span class="blur-text">HBV DNA载量大于1×10^7拷贝/ml</span>，在充分沟通、权衡利弊的情况下，可于妊娠第<span class="blur-text">28周</span>开始给予<span class="blur-text">替诺福韦</span>、<span class="blur-text">替比夫定</span>或<span class="blur-text">拉米夫定</span>。</td>
+                            <td>10. A <strong>阻断乙型肝炎病毒母婴传播——妊娠期抗病毒</strong><br>妊娠中后期<span class="answer-text">HBV DNA载量大于1×10^7拷贝/ml</span>，在充分沟通、权衡利弊的情况下，可于妊娠第<span class="answer-text">28周</span>开始给予<span class="answer-text">替诺福韦</span>、<span class="answer-text">替比夫定</span>或<span class="answer-text">拉米夫定</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>10. B <strong>阻断乙型肝炎病毒母婴传播——妊娠期抗病毒（续）</strong><br>建议于产后<span class="blur-text">1~3个月</span>停药，停药后可以<span class="blur-text">母乳喂养</span>。</td>
+                            <td>10. B <strong>阻断乙型肝炎病毒母婴传播——妊娠期抗病毒（续）</strong><br>建议于产后<span class="answer-text">1~3个月</span>停药，停药后可以<span class="answer-text">母乳喂养</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>10. C <strong>阻断乙型肝炎病毒母婴传播——产程和产后保护</strong><br>加强产程和产后的<span class="blur-text">卫生保护</span>，在分娩过程中尽量避免<span class="blur-text">血液和阴道分泌物</span>污染新生儿的<span class="blur-text">消化道</span>、<span class="blur-text">皮肤</span>和<span class="blur-text">黏膜</span>。</td>
+                            <td>10. C <strong>阻断乙型肝炎病毒母婴传播——产程和产后保护</strong><br>加强产程和产后的<span class="answer-text">卫生保护</span>，在分娩过程中尽量避免<span class="answer-text">血液和阴道分泌物</span>污染新生儿的<span class="answer-text">消化道</span>、<span class="answer-text">皮肤</span>和<span class="answer-text">黏膜</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>10. D <strong>阻断乙型肝炎病毒母婴传播——新生儿免疫</strong><br>新生儿出生后<span class="blur-text">立即</span>注射<span class="blur-text">HBIG</span>。<br>乙肝疫苗按出生后<span class="blur-text">0、1、6月龄</span>的接种程序各注射一次疫苗。</td>
+                            <td>10. D <strong>阻断乙型肝炎病毒母婴传播——新生儿免疫</strong><br>新生儿出生后<span class="answer-text">立即</span>注射<span class="answer-text">HBIG</span>。<br>乙肝疫苗按出生后<span class="answer-text">0、1、6月龄</span>的接种程序各注射一次疫苗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>11. A <strong>慢性肝炎的治疗——一般治疗</strong><br><span class="blur-text">适当休息</span>，<span class="blur-text">合理饮食</span>，<span class="blur-text">心理平衡</span>。</td>
+                            <td>11. A <strong>慢性肝炎的治疗——一般治疗</strong><br><span class="answer-text">适当休息</span>，<span class="answer-text">合理饮食</span>，<span class="answer-text">心理平衡</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>11. B <strong>慢性肝炎的治疗——药物制剂</strong><br>① <span class="blur-text">改善和恢复肝功能</span>：非特异性保肝药、降酶药、退黄药<br>② <span class="blur-text">免疫调节</span><br>③ <span class="blur-text">抗肝纤维化</span><br>④ <span class="blur-text">抗病毒治疗</span>：<span class="blur-text">干扰素α</span>，<span class="blur-text">核苷类似物</span></td>
+                            <td>11. B <strong>慢性肝炎的治疗——药物制剂</strong><br>① <span class="answer-text">改善和恢复肝功能</span>：非特异性保肝药、降酶药、退黄药<br>② <span class="answer-text">免疫调节</span><br>③ <span class="answer-text">抗肝纤维化</span><br>④ <span class="answer-text">抗病毒治疗</span>：<span class="answer-text">干扰素α</span>，<span class="answer-text">核苷类似物</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">12. A <strong>细菌性痢疾的临床表现</strong><br>（图内容无法识别，建议参考教材图示：典型表现为发热、腹痛、腹泻、里急后重、黏液脓血便）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>13. A <strong>细菌性痢疾的诊断——流行病学史</strong><br><span class="blur-text">夏秋季</span>，<span class="blur-text">不洁饮食史</span>或与菌痢患者<span class="blur-text">接触史</span>。</td>
+                            <td>13. A <strong>细菌性痢疾的诊断——流行病学史</strong><br><span class="answer-text">夏秋季</span>，<span class="answer-text">不洁饮食史</span>或与菌痢患者<span class="answer-text">接触史</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>13. B <strong>细菌性痢疾的诊断——症状体征</strong><br><span class="blur-text">发热</span>、<span class="blur-text">腹痛</span>、<span class="blur-text">腹泻</span>、<span class="blur-text">里急后重</span>及<span class="blur-text">黏液脓血便</span>，<span class="blur-text">左下腹</span>明显压痛。</td>
+                            <td>13. B <strong>细菌性痢疾的诊断——症状体征</strong><br><span class="answer-text">发热</span>、<span class="answer-text">腹痛</span>、<span class="answer-text">腹泻</span>、<span class="answer-text">里急后重</span>及<span class="answer-text">黏液脓血便</span>，<span class="answer-text">左下腹</span>明显压痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>13. C <strong>细菌性痢疾的诊断——实验室检查</strong><br>血常规：<span class="blur-text">白细胞轻度升高</span>，<span class="blur-text">中性粒细胞</span>为主。<br>大便检查：外观为<span class="blur-text">黏液脓血便</span>，镜检<span class="blur-text">白细胞</span>，培养出<span class="blur-text">痢疾杆菌</span>可确诊。</td>
+                            <td>13. C <strong>细菌性痢疾的诊断——实验室检查</strong><br>血常规：<span class="answer-text">白细胞轻度升高</span>，<span class="answer-text">中性粒细胞</span>为主。<br>大便检查：外观为<span class="answer-text">黏液脓血便</span>，镜检<span class="answer-text">白细胞</span>，培养出<span class="answer-text">痢疾杆菌</span>可确诊。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">14. A <strong>急性菌痢与急性阿米巴痢疾的鉴别</strong><br>（图内容无法识别，建议参考教材图示：病原学、潜伏期、全身症状、腹痛腹泻、里急后重、压痛部位、粪便检查等鉴别点）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>15. A <strong>细菌性痢疾的治疗——一般治疗</strong><br>① <span class="blur-text">消化道隔离</span><br>② <span class="blur-text">清淡饮食</span><br>③ <span class="blur-text">口服或静脉补液</span>，保证水电解质平衡</td>
+                            <td>15. A <strong>细菌性痢疾的治疗——一般治疗</strong><br>① <span class="answer-text">消化道隔离</span><br>② <span class="answer-text">清淡饮食</span><br>③ <span class="answer-text">口服或静脉补液</span>，保证水电解质平衡</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>15. B <strong>细菌性痢疾的治疗——对症治疗</strong><br>① <span class="blur-text">降温</span><br>② <span class="blur-text">腹痛</span>等对症治疗</td>
+                            <td>15. B <strong>细菌性痢疾的治疗——对症治疗</strong><br>① <span class="answer-text">降温</span><br>② <span class="answer-text">腹痛</span>等对症治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>15. C <strong>细菌性痢疾的治疗——抗菌治疗</strong><br>根据药敏结果：<br>① 首选<span class="blur-text">喹诺酮类</span><br>② <span class="blur-text">三代头孢</span>（二线）：<span class="blur-text">小孩</span>、<span class="blur-text">孕妇</span><br>③ 中药：<span class="blur-text">黄连素</span></td>
+                            <td>15. C <strong>细菌性痢疾的治疗——抗菌治疗</strong><br>根据药敏结果：<br>① 首选<span class="answer-text">喹诺酮类</span><br>② <span class="answer-text">三代头孢</span>（二线）：<span class="answer-text">小孩</span>、<span class="answer-text">孕妇</span><br>③ 中药：<span class="answer-text">黄连素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>16. A <strong>中毒性菌痢的治疗——综合救治</strong><br>尽早采取综合救治措施（<span class="blur-text">抗菌</span>、<span class="blur-text">抗休克</span>、<span class="blur-text">防治脑病</span>）。</td>
+                            <td>16. A <strong>中毒性菌痢的治疗——综合救治</strong><br>尽早采取综合救治措施（<span class="answer-text">抗菌</span>、<span class="answer-text">抗休克</span>、<span class="answer-text">防治脑病</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>16. B <strong>中毒性菌痢的治疗——抗菌治疗</strong><br>选择<span class="blur-text">广谱抗生素</span>静脉滴注（可采用<span class="blur-text">三代头孢菌素类抗生素</span>）。</td>
+                            <td>16. B <strong>中毒性菌痢的治疗——抗菌治疗</strong><br>选择<span class="answer-text">广谱抗生素</span>静脉滴注（可采用<span class="answer-text">三代头孢菌素类抗生素</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>16. C <strong>中毒性菌痢的治疗——抗休克治疗</strong><br>① <span class="blur-text">扩容纠酸</span>，改善微循环，维持水电解质及酸碱平衡<br>② <span class="blur-text">解除血管痉挛</span>，改善微循环<br>③ 必要时用<span class="blur-text">升血压药</span><br>④ 防治<span class="blur-text">DIC</span>、保护重要脏器功能<br>⑤ 必要时使用<span class="blur-text">糖皮质激素</span></td>
+                            <td>16. C <strong>中毒性菌痢的治疗——抗休克治疗</strong><br>① <span class="answer-text">扩容纠酸</span>，改善微循环，维持水电解质及酸碱平衡<br>② <span class="answer-text">解除血管痉挛</span>，改善微循环<br>③ 必要时用<span class="answer-text">升血压药</span><br>④ 防治<span class="answer-text">DIC</span>、保护重要脏器功能<br>⑤ 必要时使用<span class="answer-text">糖皮质激素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>16. D <strong>中毒性菌痢的治疗——防治脑病</strong><br>① <span class="blur-text">降温</span>、<span class="blur-text">脱水</span>、<span class="blur-text">镇静</span>、防止抽搐<br>② 保持<span class="blur-text">呼吸道通畅</span>、<span class="blur-text">供氧</span>，防止呼吸衰竭<br>③ <span class="blur-text">糖皮质激素</span>的应用</td>
+                            <td>16. D <strong>中毒性菌痢的治疗——防治脑病</strong><br>① <span class="answer-text">降温</span>、<span class="answer-text">脱水</span>、<span class="answer-text">镇静</span>、防止抽搐<br>② 保持<span class="answer-text">呼吸道通畅</span>、<span class="answer-text">供氧</span>，防止呼吸衰竭<br>③ <span class="answer-text">糖皮质激素</span>的应用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>17. A <strong>细菌性痢疾的预防——管理传染源</strong><br><span class="blur-text">隔离患者</span>、发现管理及治疗<span class="blur-text">带菌者</span>。</td>
+                            <td>17. A <strong>细菌性痢疾的预防——管理传染源</strong><br><span class="answer-text">隔离患者</span>、发现管理及治疗<span class="answer-text">带菌者</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>17. B <strong>细菌性痢疾的预防——切断传播途径（最重要）</strong><br><span class="blur-text">三管一灭</span>。<br>养成良好的卫生习惯，注意<span class="blur-text">饮食</span>和<span class="blur-text">饮水</span>卫生。</td>
+                            <td>17. B <strong>细菌性痢疾的预防——切断传播途径（最重要）</strong><br><span class="answer-text">三管一灭</span>。<br>养成良好的卫生习惯，注意<span class="answer-text">饮食</span>和<span class="answer-text">饮水</span>卫生。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>17. C <strong>细菌性痢疾的预防——保护易感人群</strong><br>① <span class="blur-text">口服活菌苗</span><br>② WHO报告，目前<span class="blur-text">尚无获准生产的有效预防志贺菌感染疫苗</span>。</td>
+                            <td>17. C <strong>细菌性痢疾的预防——保护易感人群</strong><br>① <span class="answer-text">口服活菌苗</span><br>② WHO报告，目前<span class="answer-text">尚无获准生产的有效预防志贺菌感染疫苗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>18. A <strong>霍乱的病原学</strong><br><span class="blur-text">霍乱弧菌</span>，<span class="blur-text">革兰阴性弧菌</span>，<span class="blur-text">暗视野悬滴镜检</span>可见穿梭状运动，粪涂片呈<span class="blur-text">鱼群样排列</span>。<br>最主要的致病因素：<span class="blur-text">霍乱肠毒素(CT)</span>。</td>
+                            <td>18. A <strong>霍乱的病原学</strong><br><span class="answer-text">霍乱弧菌</span>，<span class="answer-text">革兰阴性弧菌</span>，<span class="answer-text">暗视野悬滴镜检</span>可见穿梭状运动，粪涂片呈<span class="answer-text">鱼群样排列</span>。<br>最主要的致病因素：<span class="answer-text">霍乱肠毒素(CT)</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>19. A <strong>霍乱的临床表现——泻吐期</strong><br>① <span class="blur-text">剧烈腹泻</span>：首发症状，多无<span class="blur-text">腹痛</span>，无<span class="blur-text">发热</span>，无<span class="blur-text">里急后重</span><br>② 大便次数：<span class="blur-text">数次甚至数十次</span>，重者溢出<br>③ 大便性状：多为<span class="blur-text">米泔水样便</span>或<span class="blur-text">洗肉水样便</span>，粪质少，无粪臭，无脓细胞<br>④ <span class="blur-text">呕吐</span>：多发生于腹泻之后，<span class="blur-text">喷射状</span>，少有恶心，呕吐物多为<span class="blur-text">米泔水样</span></td>
+                            <td>19. A <strong>霍乱的临床表现——泻吐期</strong><br>① <span class="answer-text">剧烈腹泻</span>：首发症状，多无<span class="answer-text">腹痛</span>，无<span class="answer-text">发热</span>，无<span class="answer-text">里急后重</span><br>② 大便次数：<span class="answer-text">数次甚至数十次</span>，重者溢出<br>③ 大便性状：多为<span class="answer-text">米泔水样便</span>或<span class="answer-text">洗肉水样便</span>，粪质少，无粪臭，无脓细胞<br>④ <span class="answer-text">呕吐</span>：多发生于腹泻之后，<span class="answer-text">喷射状</span>，少有恶心，呕吐物多为<span class="answer-text">米泔水样</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>19. B <strong>霍乱的临床表现——脱水虚脱期</strong><br>① 脱水表现：<span class="blur-text">口渴</span>、<span class="blur-text">眼眶凹陷</span>、<span class="blur-text">声嘶</span>、<span class="blur-text">舟状腹</span>、"<span class="blur-text">洗衣工</span>"手<br>② <span class="blur-text">急性肾衰</span>：少尿或无尿<br>③ <span class="blur-text">电解质紊乱</span>：低钠、低钾</td>
+                            <td>19. B <strong>霍乱的临床表现——脱水虚脱期</strong><br>① 脱水表现：<span class="answer-text">口渴</span>、<span class="answer-text">眼眶凹陷</span>、<span class="answer-text">声嘶</span>、<span class="answer-text">舟状腹</span>、"<span class="answer-text">洗衣工</span>"手<br>② <span class="answer-text">急性肾衰</span>：少尿或无尿<br>③ <span class="answer-text">电解质紊乱</span>：低钠、低钾</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>19. C <strong>霍乱的临床表现——脱水虚脱期（续）</strong><br>④ <span class="blur-text">腓肠肌痉挛</span><br>⑤ <span class="blur-text">循环衰竭</span>（脱水程度：轻度失水<span class="blur-text">1000ml</span>，儿童<span class="blur-text">70~80ml/kg</span>；中度失水<span class="blur-text">3000~3500ml</span>，儿童<span class="blur-text">80~100ml/kg</span>；重度失水><span class="blur-text">体重8%</span>，儿童><span class="blur-text">10%</span>，成人<span class="blur-text">4000ml</span>，儿童<span class="blur-text">100~120ml/kg</span>）</td>
+                            <td>19. C <strong>霍乱的临床表现——脱水虚脱期（续）</strong><br>④ <span class="answer-text">腓肠肌痉挛</span><br>⑤ <span class="answer-text">循环衰竭</span>（脱水程度：轻度失水<span class="answer-text">1000ml</span>，儿童<span class="answer-text">70~80ml/kg</span>；中度失水<span class="answer-text">3000~3500ml</span>，儿童<span class="answer-text">80~100ml/kg</span>；重度失水><span class="answer-text">体重8%</span>，儿童><span class="answer-text">10%</span>，成人<span class="answer-text">4000ml</span>，儿童<span class="answer-text">100~120ml/kg</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>19. D <strong>霍乱的临床表现——恢复期</strong><br>症状消失，<span class="blur-text">尿量增加</span>，体温正常，部分可有<span class="blur-text">反应性发热</span>。</td>
+                            <td>19. D <strong>霍乱的临床表现——恢复期</strong><br>症状消失，<span class="answer-text">尿量增加</span>，体温正常，部分可有<span class="answer-text">反应性发热</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>20. A <strong>霍乱的并发症</strong><br>① <span class="blur-text">急性肾功能衰竭</span><br>② <span class="blur-text">急性肺水肿</span>和<span class="blur-text">急性心衰</span><br>③ <span class="blur-text">低钾综合征</span>和<span class="blur-text">酸中毒</span><br>④ <span class="blur-text">循环衰竭</span></td>
+                            <td>20. A <strong>霍乱的并发症</strong><br>① <span class="answer-text">急性肾功能衰竭</span><br>② <span class="answer-text">急性肺水肿</span>和<span class="answer-text">急性心衰</span><br>③ <span class="answer-text">低钾综合征</span>和<span class="answer-text">酸中毒</span><br>④ <span class="answer-text">循环衰竭</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>21. A <strong>霍乱的实验室检查——血液检查</strong><br><span class="blur-text">血液浓缩</span></td>
+                            <td>21. A <strong>霍乱的实验室检查——血液检查</strong><br><span class="answer-text">血液浓缩</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>21. B <strong>霍乱的实验室检查——血清学检查</strong><br><span class="blur-text">抗凝集素抗体</span>双方血清滴度增加<span class="blur-text">4倍</span>有意义。</td>
+                            <td>21. B <strong>霍乱的实验室检查——血清学检查</strong><br><span class="answer-text">抗凝集素抗体</span>双方血清滴度增加<span class="answer-text">4倍</span>有意义。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>21. C <strong>霍乱的实验室检查——病原学检查</strong><br>① 粪便涂片染色：<span class="blur-text">革兰染色阴性弧菌</span><br>② <span class="blur-text">动力试验和制动试验</span>（首选检查）：粪便悬滴试验在暗视野下见<span class="blur-text">穿梭状快速运动的细菌</span>。制动试验—滴入<span class="blur-text">霍乱免疫血清</span>一滴，霍乱弧菌运动停止。<br>③ <span class="blur-text">粪便培养</span>：<span class="blur-text">碱性蛋白胨水培养基</span><br>④ <span class="blur-text">粪便PCR法</span></td>
+                            <td>21. C <strong>霍乱的实验室检查——病原学检查</strong><br>① 粪便涂片染色：<span class="answer-text">革兰染色阴性弧菌</span><br>② <span class="answer-text">动力试验和制动试验</span>（首选检查）：粪便悬滴试验在暗视野下见<span class="answer-text">穿梭状快速运动的细菌</span>。制动试验—滴入<span class="answer-text">霍乱免疫血清</span>一滴，霍乱弧菌运动停止。<br>③ <span class="answer-text">粪便培养</span>：<span class="answer-text">碱性蛋白胨水培养基</span><br>④ <span class="answer-text">粪便PCR法</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>22. A <strong>霍乱的诊断标准</strong><br>① 流行病学资料：<span class="blur-text">夏秋季</span>，急性起病，有<span class="blur-text">疫区接触史</span><br>② 临床特征：剧烈泄吐、<span class="blur-text">米泔水样便</span>或呕吐物，出现<span class="blur-text">脱水</span>或<span class="blur-text">循环衰竭</span>表现，无发热、腹痛、粘液脓血便及里急后重<br>③ 实验室检查：大便直接镜检染色可见<span class="blur-text">鱼群状排列G-弧菌</span>即可初步诊断，<span class="blur-text">粪便悬滴制动试验</span>可以初步分型，<span class="blur-text">粪便培养</span>可进一步确诊。</td>
+                            <td>22. A <strong>霍乱的诊断标准</strong><br>① 流行病学资料：<span class="answer-text">夏秋季</span>，急性起病，有<span class="answer-text">疫区接触史</span><br>② 临床特征：剧烈泄吐、<span class="answer-text">米泔水样便</span>或呕吐物，出现<span class="answer-text">脱水</span>或<span class="answer-text">循环衰竭</span>表现，无发热、腹痛、粘液脓血便及里急后重<br>③ 实验室检查：大便直接镜检染色可见<span class="answer-text">鱼群状排列G-弧菌</span>即可初步诊断，<span class="answer-text">粪便悬滴制动试验</span>可以初步分型，<span class="answer-text">粪便培养</span>可进一步确诊。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>23. A <strong>霍乱的治疗——严格隔离</strong><br>症状消失后<span class="blur-text">6天</span>，并隔日连续<span class="blur-text">三次粪便培养阴性</span>才能解除隔离。</td>
+                            <td>23. A <strong>霍乱的治疗——严格隔离</strong><br>症状消失后<span class="answer-text">6天</span>，并隔日连续<span class="answer-text">三次粪便培养阴性</span>才能解除隔离。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>23. B <strong>霍乱的治疗——补液治疗（关键）</strong><br>补液量：<br>成人：轻度失水<span class="blur-text">3000~4000ml/d</span>，中度失水<span class="blur-text">4000~8000ml/d</span>，重度失水<span class="blur-text">8000~12000ml/d</span><br>儿童：轻型<span class="blur-text">120~150ml/kg</span>，中型<span class="blur-text">150~200ml/kg</span>，重型<span class="blur-text">200~250ml/kg</span></td>
+                            <td>23. B <strong>霍乱的治疗——补液治疗（关键）</strong><br>补液量：<br>成人：轻度失水<span class="answer-text">3000~4000ml/d</span>，中度失水<span class="answer-text">4000~8000ml/d</span>，重度失水<span class="answer-text">8000~12000ml/d</span><br>儿童：轻型<span class="answer-text">120~150ml/kg</span>，中型<span class="answer-text">150~200ml/kg</span>，重型<span class="answer-text">200~250ml/kg</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>23. C <strong>霍乱的治疗——补液治疗（续）</strong><br>中度以上病人最初<span class="blur-text">1~2小时内</span>应快速输入<span class="blur-text">2000~4000ml</span>液体。</td>
+                            <td>23. C <strong>霍乱的治疗——补液治疗（续）</strong><br>中度以上病人最初<span class="answer-text">1~2小时内</span>应快速输入<span class="answer-text">2000~4000ml</span>液体。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>23. D <strong>霍乱的治疗——抗菌治疗</strong><br>液体疗法的辅助治疗：<br><span class="blur-text">环丙沙星</span>、<span class="blur-text">诺氟沙星</span>等。</td>
+                            <td>23. D <strong>霍乱的治疗——抗菌治疗</strong><br>液体疗法的辅助治疗：<br><span class="answer-text">环丙沙星</span>、<span class="answer-text">诺氟沙星</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>24. A <strong>肾综合征出血热的流行病学——传染源</strong><br><span class="blur-text">黑线姬鼠</span>、<span class="blur-text">褐家鼠</span>等（<span class="blur-text">人不是主要传染源</span>）。</td>
+                            <td>24. A <strong>肾综合征出血热的流行病学——传染源</strong><br><span class="answer-text">黑线姬鼠</span>、<span class="answer-text">褐家鼠</span>等（<span class="answer-text">人不是主要传染源</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>24. B <strong>肾综合征出血热的流行病学——传播途径</strong><br><span class="blur-text">呼吸道</span>、<span class="blur-text">消化道</span>、<span class="blur-text">接触传播</span>（主要）、<span class="blur-text">垂直传播</span>、<span class="blur-text">虫媒传播</span>。</td>
+                            <td>24. B <strong>肾综合征出血热的流行病学——传播途径</strong><br><span class="answer-text">呼吸道</span>、<span class="answer-text">消化道</span>、<span class="answer-text">接触传播</span>（主要）、<span class="answer-text">垂直传播</span>、<span class="answer-text">虫媒传播</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>24. C <strong>肾综合征出血热的流行病学——易感人群与流行特征</strong><br>人群<span class="blur-text">普遍易感</span>，感染后可获得<span class="blur-text">较稳固的免疫力</span>。<br>地区性：<span class="blur-text">我国疫情最重</span>。<br>季节性和周期性：<span class="blur-text">四季发病</span>，有高峰季节。<br>人群分布：<span class="blur-text">男性青壮年</span>，<span class="blur-text">农民</span>和<span class="blur-text">工人</span>。</td>
+                            <td>24. C <strong>肾综合征出血热的流行病学——易感人群与流行特征</strong><br>人群<span class="answer-text">普遍易感</span>，感染后可获得<span class="answer-text">较稳固的免疫力</span>。<br>地区性：<span class="answer-text">我国疫情最重</span>。<br>季节性和周期性：<span class="answer-text">四季发病</span>，有高峰季节。<br>人群分布：<span class="answer-text">男性青壮年</span>，<span class="answer-text">农民</span>和<span class="answer-text">工人</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>25. A <strong>肾综合征出血热的休克机制——原发性休克</strong><br>① <span class="blur-text">血管通透性增加</span>，<span class="blur-text">血浆外渗</span>，血容量下降<br>② <span class="blur-text">血液浓缩</span>，<span class="blur-text">血粘度升高</span>和<span class="blur-text">DIC</span>，有效循环血量进一步降低。</td>
+                            <td>25. A <strong>肾综合征出血热的休克机制——原发性休克</strong><br>① <span class="answer-text">血管通透性增加</span>，<span class="answer-text">血浆外渗</span>，血容量下降<br>② <span class="answer-text">血液浓缩</span>，<span class="answer-text">血粘度升高</span>和<span class="answer-text">DIC</span>，有效循环血量进一步降低。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>25. B <strong>肾综合征出血热的休克机制——继发性休克</strong><br><span class="blur-text">大出血</span>、<span class="blur-text">继发感染</span>、<span class="blur-text">水电解质补充不足</span>。</td>
+                            <td>25. B <strong>肾综合征出血热的休克机制——继发性休克</strong><br><span class="answer-text">大出血</span>、<span class="answer-text">继发感染</span>、<span class="answer-text">水电解质补充不足</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>26. A <strong>肾综合征出血热的临床表现——三大主症</strong><br><span class="blur-text">发热</span>、<span class="blur-text">出血</span>、<span class="blur-text">急性肾功衰</span>。</td>
+                            <td>26. A <strong>肾综合征出血热的临床表现——三大主症</strong><br><span class="answer-text">发热</span>、<span class="answer-text">出血</span>、<span class="answer-text">急性肾功衰</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>26. B <strong>肾综合征出血热的临床表现——五期经过</strong><br><span class="blur-text">发热期</span>、<span class="blur-text">低血压休克期</span>、<span class="blur-text">少尿期</span>、<span class="blur-text">多尿期</span>、<span class="blur-text">恢复期</span>。</td>
+                            <td>26. B <strong>肾综合征出血热的临床表现——五期经过</strong><br><span class="answer-text">发热期</span>、<span class="answer-text">低血压休克期</span>、<span class="answer-text">少尿期</span>、<span class="answer-text">多尿期</span>、<span class="answer-text">恢复期</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>26. C <strong>肾综合征出血热的临床表现——发热期</strong><br>① 发热：最早出现，<span class="blur-text">稽留热</span>和<span class="blur-text">弛张热</span>，热程<span class="blur-text">3-7天</span><br>② 全身中毒症状：<span class="blur-text">三痛</span>（头痛、腰痛、眼眶痛）、<span class="blur-text">三红</span>（颜面、颈、胸部潮红）、<span class="blur-text">酒醉貌</span>，消化道症状，神经精神症状<br>③ 肾损害：<span class="blur-text">蛋白尿</span>和<span class="blur-text">管型尿</span><br>④ 出血：腋下和胸背部<span class="blur-text">条索状或搔抓样瘀点</span></td>
+                            <td>26. C <strong>肾综合征出血热的临床表现——发热期</strong><br>① 发热：最早出现，<span class="answer-text">稽留热</span>和<span class="answer-text">弛张热</span>，热程<span class="answer-text">3-7天</span><br>② 全身中毒症状：<span class="answer-text">三痛</span>（头痛、腰痛、眼眶痛）、<span class="answer-text">三红</span>（颜面、颈、胸部潮红）、<span class="answer-text">酒醉貌</span>，消化道症状，神经精神症状<br>③ 肾损害：<span class="answer-text">蛋白尿</span>和<span class="answer-text">管型尿</span><br>④ 出血：腋下和胸背部<span class="answer-text">条索状或搔抓样瘀点</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>26. D <strong>肾综合征出血热的临床表现——低血压休克期</strong><br>时间：<span class="blur-text">发热末期或热退同时</span>，热退之后症状体征加重。<br>周围循环不足的表现：<span class="blur-text">脸色苍白</span>、<span class="blur-text">四肢厥冷</span>、<span class="blur-text">血压下降</span>、<span class="blur-text">尿量减少</span>等。</td>
+                            <td>26. D <strong>肾综合征出血热的临床表现——低血压休克期</strong><br>时间：<span class="answer-text">发热末期或热退同时</span>，热退之后症状体征加重。<br>周围循环不足的表现：<span class="answer-text">脸色苍白</span>、<span class="answer-text">四肢厥冷</span>、<span class="answer-text">血压下降</span>、<span class="answer-text">尿量减少</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>26. E <strong>肾综合征出血热的临床表现——少尿期</strong><br>时间：病程的<span class="blur-text">5-8天</span>，持续<span class="blur-text">2-5天</span>。<br>主要表现：<span class="blur-text">尿毒症</span>、<span class="blur-text">酸中毒</span>、<span class="blur-text">水电解质紊乱</span>、<span class="blur-text">高血容量综合征</span>及<span class="blur-text">肺水肿</span>、<span class="blur-text">DIC</span>。</td>
+                            <td>26. E <strong>肾综合征出血热的临床表现——少尿期</strong><br>时间：病程的<span class="answer-text">5-8天</span>，持续<span class="answer-text">2-5天</span>。<br>主要表现：<span class="answer-text">尿毒症</span>、<span class="answer-text">酸中毒</span>、<span class="answer-text">水电解质紊乱</span>、<span class="answer-text">高血容量综合征</span>及<span class="answer-text">肺水肿</span>、<span class="answer-text">DIC</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>26. F <strong>肾综合征出血热的临床表现——多尿期</strong><br>尿量增至<span class="blur-text">2000ml/d以上</span>。<br>移行期：尿量<span class="blur-text">400~2000ml/d</span><br>多尿早期：尿量><span class="blur-text">2000ml/d</span><br>多尿后期：尿量><span class="blur-text">3000ml/d</span></td>
+                            <td>26. F <strong>肾综合征出血热的临床表现——多尿期</strong><br>尿量增至<span class="answer-text">2000ml/d以上</span>。<br>移行期：尿量<span class="answer-text">400~2000ml/d</span><br>多尿早期：尿量><span class="answer-text">2000ml/d</span><br>多尿后期：尿量><span class="answer-text">3000ml/d</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>26. G <strong>肾综合征出血热的临床表现——恢复期</strong><br>尿量<span class="blur-text">2000ml/d以下</span>，一般情况恢复。</td>
+                            <td>26. G <strong>肾综合征出血热的临床表现——恢复期</strong><br>尿量<span class="answer-text">2000ml/d以下</span>，一般情况恢复。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>27. A <strong>肾综合征出血热的并发症</strong><br>① <span class="blur-text">腔道出血</span><br>② 中枢神经系统：<span class="blur-text">脑炎</span>、<span class="blur-text">脑膜炎</span>、<span class="blur-text">脑水肿</span>、<span class="blur-text">颅内出血</span><br>③ 肺水肿：<span class="blur-text">ARDS</span>、<span class="blur-text">心源性肺水肿</span><br>④ <span class="blur-text">肾破裂</span>（右侧多见）<br>⑤ <span class="blur-text">心肌炎</span>、<span class="blur-text">继发感染</span>等</td>
+                            <td>27. A <strong>肾综合征出血热的并发症</strong><br>① <span class="answer-text">腔道出血</span><br>② 中枢神经系统：<span class="answer-text">脑炎</span>、<span class="answer-text">脑膜炎</span>、<span class="answer-text">脑水肿</span>、<span class="answer-text">颅内出血</span><br>③ 肺水肿：<span class="answer-text">ARDS</span>、<span class="answer-text">心源性肺水肿</span><br>④ <span class="answer-text">肾破裂</span>（右侧多见）<br>⑤ <span class="answer-text">心肌炎</span>、<span class="answer-text">继发感染</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>28. A <strong>肾综合征出血热的实验室检查——血常规</strong><br><span class="blur-text">WBC</span>、<span class="blur-text">RBC</span>、<span class="blur-text">Hb升高</span>，<span class="blur-text">血小板减少</span>，较多<span class="blur-text">异性淋巴细胞</span>。</td>
+                            <td>28. A <strong>肾综合征出血热的实验室检查——血常规</strong><br><span class="answer-text">WBC</span>、<span class="answer-text">RBC</span>、<span class="answer-text">Hb升高</span>，<span class="answer-text">血小板减少</span>，较多<span class="answer-text">异性淋巴细胞</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>28. B <strong>肾综合征出血热的实验室检查——尿常规</strong><br><span class="blur-text">蛋白尿</span>、<span class="blur-text">血尿</span>、<span class="blur-text">管型</span>、<span class="blur-text">尿膜状物</span>。</td>
+                            <td>28. B <strong>肾综合征出血热的实验室检查——尿常规</strong><br><span class="answer-text">蛋白尿</span>、<span class="answer-text">血尿</span>、<span class="answer-text">管型</span>、<span class="answer-text">尿膜状物</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>28. C <strong>肾综合征出血热的实验室检查——血生化</strong><br><span class="blur-text">肾功能</span>、<span class="blur-text">血气分析</span>（发热期<span class="blur-text">呼碱</span>，休克期和少尿期<span class="blur-text">代酸</span>）、<span class="blur-text">肝功能</span>、<span class="blur-text">电解质</span>、<span class="blur-text">凝血功能</span>。</td>
+                            <td>28. C <strong>肾综合征出血热的实验室检查——血生化</strong><br><span class="answer-text">肾功能</span>、<span class="answer-text">血气分析</span>（发热期<span class="answer-text">呼碱</span>，休克期和少尿期<span class="answer-text">代酸</span>）、<span class="answer-text">肝功能</span>、<span class="answer-text">电解质</span>、<span class="answer-text">凝血功能</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>28. D <strong>肾综合征出血热的实验室检查——免疫学检查（诊断）</strong><br><span class="blur-text">特异性抗原</span>、<span class="blur-text">特异性IgM抗体</span>。</td>
+                            <td>28. D <strong>肾综合征出血热的实验室检查——免疫学检查（诊断）</strong><br><span class="answer-text">特异性抗原</span>、<span class="answer-text">特异性IgM抗体</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>29. A <strong>肾综合征出血热的治疗——发热期</strong><br>治疗原则：<span class="blur-text">抗病毒</span>、<span class="blur-text">减轻外渗</span>、<span class="blur-text">改善中毒症状</span>、<span class="blur-text">预防DIC</span>。<br>① 抗病毒：早期可给<span class="blur-text">利巴韦林</span>抑制病毒，减轻病情、缩短病程<br>② 减轻外渗：应用降低血管通透性的药物，如<span class="blur-text">路丁</span>、<span class="blur-text">维生素C</span>等<br>③ 改善中毒症状：高热以<span class="blur-text">物理降温</span>为主，忌用<span class="blur-text">强发汗退热药</span>，中毒症状重者给予<span class="blur-text">地塞米松</span>静脉滴注<br>④ 预防DIC：适当给予<span class="blur-text">低分子右旋糖酐</span>、<span class="blur-text">丹参注射液</span>静脉滴注，以降低血液黏滞性</td>
+                            <td>29. A <strong>肾综合征出血热的治疗——发热期</strong><br>治疗原则：<span class="answer-text">抗病毒</span>、<span class="answer-text">减轻外渗</span>、<span class="answer-text">改善中毒症状</span>、<span class="answer-text">预防DIC</span>。<br>① 抗病毒：早期可给<span class="answer-text">利巴韦林</span>抑制病毒，减轻病情、缩短病程<br>② 减轻外渗：应用降低血管通透性的药物，如<span class="answer-text">路丁</span>、<span class="answer-text">维生素C</span>等<br>③ 改善中毒症状：高热以<span class="answer-text">物理降温</span>为主，忌用<span class="answer-text">强发汗退热药</span>，中毒症状重者给予<span class="answer-text">地塞米松</span>静脉滴注<br>④ 预防DIC：适当给予<span class="answer-text">低分子右旋糖酐</span>、<span class="answer-text">丹参注射液</span>静脉滴注，以降低血液黏滞性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>29. B <strong>肾综合征出血热的治疗——低血压休克期</strong><br>治疗原则：<span class="blur-text">积极补充血容量</span>、<span class="blur-text">纠正酸中毒</span>、<span class="blur-text">改善微循环</span>。<br>① 补充血容量：宜<span class="blur-text">早期</span>、<span class="blur-text">快速</span>和<span class="blur-text">适量</span>。液体应<span class="blur-text">晶体和胶体结合</span>，以<span class="blur-text">平衡液</span>为主，切忌单纯输入<span class="blur-text">葡萄糖</span>。由于本期存在血液浓缩，因而不宜应用<span class="blur-text">全血</span>。<span class="blur-text">10%低分子右旋糖酐</span>每日输入量不宜超过<span class="blur-text">1000ml</span>。<br>② 纠正酸中毒：可使用<span class="blur-text">5%碳酸氢钠溶液</span>纠正酸中毒<br>③ <span class="blur-text">血管活性药物</span>和<span class="blur-text">肾上腺糖皮质激素</span>的应用</td>
+                            <td>29. B <strong>肾综合征出血热的治疗——低血压休克期</strong><br>治疗原则：<span class="answer-text">积极补充血容量</span>、<span class="answer-text">纠正酸中毒</span>、<span class="answer-text">改善微循环</span>。<br>① 补充血容量：宜<span class="answer-text">早期</span>、<span class="answer-text">快速</span>和<span class="answer-text">适量</span>。液体应<span class="answer-text">晶体和胶体结合</span>，以<span class="answer-text">平衡液</span>为主，切忌单纯输入<span class="answer-text">葡萄糖</span>。由于本期存在血液浓缩，因而不宜应用<span class="answer-text">全血</span>。<span class="answer-text">10%低分子右旋糖酐</span>每日输入量不宜超过<span class="answer-text">1000ml</span>。<br>② 纠正酸中毒：可使用<span class="answer-text">5%碳酸氢钠溶液</span>纠正酸中毒<br>③ <span class="answer-text">血管活性药物</span>和<span class="answer-text">肾上腺糖皮质激素</span>的应用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>29. C <strong>肾综合征出血热的治疗——少尿期</strong><br>治疗原则：<span class="blur-text">稳</span>、<span class="blur-text">促</span>、<span class="blur-text">导</span>、<span class="blur-text">透</span>。<br>① <span class="blur-text">稳</span>（稳定内环境）：控制<span class="blur-text">氮质血症</span>，维持水、电解质及酸碱平衡<br>② <span class="blur-text">促</span>（促进利尿）：少尿初期可用<span class="blur-text">20%甘露醇</span>静注，若利尿效果明显可重复使用；若不明显应停止使用<br>③ <span class="blur-text">导</span>（导泻）：预防高血容量综合征和高血钾，可使用<span class="blur-text">甘露醇</span>、<span class="blur-text">硫酸镁</span>等进行导泻，但应无消化道出血<br>④ <span class="blur-text">透</span>（透析治疗）：适应证为：少尿持续<span class="blur-text">4天以上</span>或无尿<span class="blur-text">24小时以上</span>；血浆尿素氮><span class="blur-text">28.56mmol/L</span>；每日血浆尿素氮升高><span class="blur-text">7.14mmol/L</span>；血钾><span class="blur-text">6mmol/L</span>；<span class="blur-text">高血容量综合征</span></td>
+                            <td>29. C <strong>肾综合征出血热的治疗——少尿期</strong><br>治疗原则：<span class="answer-text">稳</span>、<span class="answer-text">促</span>、<span class="answer-text">导</span>、<span class="answer-text">透</span>。<br>① <span class="answer-text">稳</span>（稳定内环境）：控制<span class="answer-text">氮质血症</span>，维持水、电解质及酸碱平衡<br>② <span class="answer-text">促</span>（促进利尿）：少尿初期可用<span class="answer-text">20%甘露醇</span>静注，若利尿效果明显可重复使用；若不明显应停止使用<br>③ <span class="answer-text">导</span>（导泻）：预防高血容量综合征和高血钾，可使用<span class="answer-text">甘露醇</span>、<span class="answer-text">硫酸镁</span>等进行导泻，但应无消化道出血<br>④ <span class="answer-text">透</span>（透析治疗）：适应证为：少尿持续<span class="answer-text">4天以上</span>或无尿<span class="answer-text">24小时以上</span>；血浆尿素氮><span class="answer-text">28.56mmol/L</span>；每日血浆尿素氮升高><span class="answer-text">7.14mmol/L</span>；血钾><span class="answer-text">6mmol/L</span>；<span class="answer-text">高血容量综合征</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>29. D <strong>肾综合征出血热的治疗——多尿期</strong><br>移行期和多尿早期的治疗<span class="blur-text">同少尿期</span>。<br>多尿后期主要是维持<span class="blur-text">水和电解质平衡</span>，防治<span class="blur-text">继发感染</span>。</td>
+                            <td>29. D <strong>肾综合征出血热的治疗——多尿期</strong><br>移行期和多尿早期的治疗<span class="answer-text">同少尿期</span>。<br>多尿后期主要是维持<span class="answer-text">水和电解质平衡</span>，防治<span class="answer-text">继发感染</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>29. E <strong>肾综合征出血热的治疗——恢复期</strong><br>补充<span class="blur-text">营养</span>，恢复<span class="blur-text">工作</span>，定期复查<span class="blur-text">肝肾功能</span>。</td>
+                            <td>29. E <strong>肾综合征出血热的治疗——恢复期</strong><br>补充<span class="answer-text">营养</span>，恢复<span class="answer-text">工作</span>，定期复查<span class="answer-text">肝肾功能</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>30. A <strong>败血症的主要临床表现</strong><br>① <span class="blur-text">原发病灶</span><br>② <span class="blur-text">毒血症症状</span><br>③ <span class="blur-text">皮疹</span><br>④ <span class="blur-text">关节症状</span><br>⑤ <span class="blur-text">肝脾肿大</span><br>⑥ <span class="blur-text">迁徙性病灶</span></td>
+                            <td>30. A <strong>败血症的主要临床表现</strong><br>① <span class="answer-text">原发病灶</span><br>② <span class="answer-text">毒血症症状</span><br>③ <span class="answer-text">皮疹</span><br>④ <span class="answer-text">关节症状</span><br>⑤ <span class="answer-text">肝脾肿大</span><br>⑥ <span class="answer-text">迁徙性病灶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>31. A <strong>金葡菌败血症的特点</strong><br>① 原发病灶：<span class="blur-text">皮肤粘膜</span>、<span class="blur-text">骨关节化脓性炎症</span><br>② <span class="blur-text">皮疹瘀点</span>多见，<span class="blur-text">脓疱疹</span>有利于诊断<br>③ <span class="blur-text">关节症状</span>明显<br>④ 易发生<span class="blur-text">迁徙性病灶</span>，如<span class="blur-text">肺炎</span>、<span class="blur-text">脑膜炎</span>、<span class="blur-text">心内膜炎</span>等。</td>
+                            <td>31. A <strong>金葡菌败血症的特点</strong><br>① 原发病灶：<span class="answer-text">皮肤粘膜</span>、<span class="answer-text">骨关节化脓性炎症</span><br>② <span class="answer-text">皮疹瘀点</span>多见，<span class="answer-text">脓疱疹</span>有利于诊断<br>③ <span class="answer-text">关节症状</span>明显<br>④ 易发生<span class="answer-text">迁徙性病灶</span>，如<span class="answer-text">肺炎</span>、<span class="answer-text">脑膜炎</span>、<span class="answer-text">心内膜炎</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>31. B <strong>革兰阴性杆菌败血症的特点</strong><br>① 原发病灶：<span class="blur-text">泌尿道</span>、<span class="blur-text">呼吸道</span>等感染<br>② 发热，伴<span class="blur-text">寒战</span>、<span class="blur-text">大汗</span><br>③ <span class="blur-text">早期出现感染性休克</span></td>
+                            <td>31. B <strong>革兰阴性杆菌败血症的特点</strong><br>① 原发病灶：<span class="answer-text">泌尿道</span>、<span class="answer-text">呼吸道</span>等感染<br>② 发热，伴<span class="answer-text">寒战</span>、<span class="answer-text">大汗</span><br>③ <span class="answer-text">早期出现感染性休克</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>31. C <strong>厌氧菌败血症的特点</strong><br>① 多为<span class="blur-text">脆弱类杆菌</span><br>② 患者多为<span class="blur-text">新生儿</span>及<span class="blur-text">慢性病人</span><br>③ 原发炎症主要为<span class="blur-text">胃肠道感染</span><br>④ 部分出现<span class="blur-text">黄疸</span><br>⑤ 易引起<span class="blur-text">血栓性静脉炎</span>和<span class="blur-text">迁徙性脓肿</span><br>⑥ 易并发<span class="blur-text">肺炎</span></td>
+                            <td>31. C <strong>厌氧菌败血症的特点</strong><br>① 多为<span class="answer-text">脆弱类杆菌</span><br>② 患者多为<span class="answer-text">新生儿</span>及<span class="answer-text">慢性病人</span><br>③ 原发炎症主要为<span class="answer-text">胃肠道感染</span><br>④ 部分出现<span class="answer-text">黄疸</span><br>⑤ 易引起<span class="answer-text">血栓性静脉炎</span>和<span class="answer-text">迁徙性脓肿</span><br>⑥ 易并发<span class="answer-text">肺炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>31. D <strong>真菌败血症的特点</strong><br>① <span class="blur-text">老年</span>及<span class="blur-text">小儿</span>多见<br>② 多为<span class="blur-text">院内感染</span></td>
+                            <td>31. D <strong>真菌败血症的特点</strong><br>① <span class="answer-text">老年</span>及<span class="answer-text">小儿</span>多见<br>② 多为<span class="answer-text">院内感染</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>31. E <strong>特殊类型败血症</strong><br><span class="blur-text">L型败血症</span>（抗菌药无效）、<span class="blur-text">老年败血症</span>、<span class="blur-text">院内感染败血症</span>、<span class="blur-text">新生儿败血症</span>、<span class="blur-text">烧伤后败血症</span>、<span class="blur-text">免疫功能低下患者的败血症</span>。</td>
+                            <td>31. E <strong>特殊类型败血症</strong><br><span class="answer-text">L型败血症</span>（抗菌药无效）、<span class="answer-text">老年败血症</span>、<span class="answer-text">院内感染败血症</span>、<span class="answer-text">新生儿败血症</span>、<span class="answer-text">烧伤后败血症</span>、<span class="answer-text">免疫功能低下患者的败血症</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">32. A <strong>革兰阳性球菌和革兰阴性杆菌败血症的鉴别要点</strong><br>（图内容无法识别，建议参考教材图示：原发病灶、热型、皮疹、关节症状、迁徙病灶、感染性休克等鉴别点）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>33. A <strong>败血症的治疗——一般治疗</strong><br><span class="blur-text">对症治疗</span>，<span class="blur-text">休息营养</span>，<span class="blur-text">水电解质酸碱平衡</span>。</td>
+                            <td>33. A <strong>败血症的治疗——一般治疗</strong><br><span class="answer-text">对症治疗</span>，<span class="answer-text">休息营养</span>，<span class="answer-text">水电解质酸碱平衡</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>33. B <strong>败血症的治疗——抗菌药物的应用</strong><br>① 革兰阳性球菌：<span class="blur-text">青霉素</span>（链球菌）、<span class="blur-text">一代头孢</span>（葡萄球菌）、<span class="blur-text">糖肽类</span>（MRSA肠球菌）<br>② MRSA：<span class="blur-text">万古霉素</span>、<span class="blur-text">替考拉宁</span><br>③ 革兰阴性杆菌：<span class="blur-text">半合成青霉素</span>、<span class="blur-text">三四代头孢</span>、<span class="blur-text">喹诺酮类</span>、<span class="blur-text">氨基糖苷类</span>、<span class="blur-text">碳青霉烯类</span></td>
+                            <td>33. B <strong>败血症的治疗——抗菌药物的应用</strong><br>① 革兰阳性球菌：<span class="answer-text">青霉素</span>（链球菌）、<span class="answer-text">一代头孢</span>（葡萄球菌）、<span class="answer-text">糖肽类</span>（MRSA肠球菌）<br>② MRSA：<span class="answer-text">万古霉素</span>、<span class="answer-text">替考拉宁</span><br>③ 革兰阴性杆菌：<span class="answer-text">半合成青霉素</span>、<span class="answer-text">三四代头孢</span>、<span class="answer-text">喹诺酮类</span>、<span class="answer-text">氨基糖苷类</span>、<span class="answer-text">碳青霉烯类</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>33. C <strong>败血症的治疗——抗菌药物的应用（续）</strong><br>④ 绿脓杆菌：<span class="blur-text">抗绿脓杆菌青霉素</span>、<span class="blur-text">三四代头孢</span>、<span class="blur-text">喹诺酮类</span>、<span class="blur-text">氨基糖苷类</span>、<span class="blur-text">碳青霉烯类</span><br>⑤ 厌氧菌：<span class="blur-text">青霉素</span>、<span class="blur-text">头孢菌素类</span>、<span class="blur-text">大环内酯类</span>、<span class="blur-text">林可霉素类</span>、<span class="blur-text">甲硝唑</span><br>⑥ 真菌：<span class="blur-text">氟康唑</span>、<span class="blur-text">两性霉素B</span>、<span class="blur-text">卡泊芬净</span></td>
+                            <td>33. C <strong>败血症的治疗——抗菌药物的应用（续）</strong><br>④ 绿脓杆菌：<span class="answer-text">抗绿脓杆菌青霉素</span>、<span class="answer-text">三四代头孢</span>、<span class="answer-text">喹诺酮类</span>、<span class="answer-text">氨基糖苷类</span>、<span class="answer-text">碳青霉烯类</span><br>⑤ 厌氧菌：<span class="answer-text">青霉素</span>、<span class="answer-text">头孢菌素类</span>、<span class="answer-text">大环内酯类</span>、<span class="answer-text">林可霉素类</span>、<span class="answer-text">甲硝唑</span><br>⑥ 真菌：<span class="answer-text">氟康唑</span>、<span class="answer-text">两性霉素B</span>、<span class="answer-text">卡泊芬净</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>33. D <strong>败血症的治疗——局部处理与支持治疗</strong><br>局部处理：<span class="blur-text">化脓病灶切开引流</span>。<br>支持治疗：输<span class="blur-text">新鲜血浆</span>、<span class="blur-text">白蛋白</span>、<span class="blur-text">丙种球蛋白</span>。</td>
+                            <td>33. D <strong>败血症的治疗——局部处理与支持治疗</strong><br>局部处理：<span class="answer-text">化脓病灶切开引流</span>。<br>支持治疗：输<span class="answer-text">新鲜血浆</span>、<span class="answer-text">白蛋白</span>、<span class="answer-text">丙种球蛋白</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>34. A <strong>治疗败血症选择抗菌药物的原则</strong><br>① 细菌培养阳性，按<span class="blur-text">药敏试验</span>选用<br>② 考虑败血症，病原菌不能确定，病情严重时，可先选用<span class="blur-text">革兰阳性球菌</span>和<span class="blur-text">革兰阴性杆菌</span>的广谱抗菌药物<br>③ 诊断基本明确，病原菌短期无法查明，可根据患者<span class="blur-text">年龄</span>、<span class="blur-text">原发病灶性质</span>、<span class="blur-text">机体免疫情况</span>等初步估计病原菌种类，选择适当的抗菌药物<br>④ 抗菌治疗可采用<span class="blur-text">两种有效抗菌药物联合使用</span><br>⑤ <span class="blur-text">静脉给药</span>，剂量宜大，间隔为<span class="blur-text">PAE</span>和<span class="blur-text">半衰期</span><br>⑥ 疗程一般<span class="blur-text">3周以上</span>或热退后继续用药<span class="blur-text">7-10天</span>，有迁徙病灶时延长疗程。</td>
+                            <td>34. A <strong>治疗败血症选择抗菌药物的原则</strong><br>① 细菌培养阳性，按<span class="answer-text">药敏试验</span>选用<br>② 考虑败血症，病原菌不能确定，病情严重时，可先选用<span class="answer-text">革兰阳性球菌</span>和<span class="answer-text">革兰阴性杆菌</span>的广谱抗菌药物<br>③ 诊断基本明确，病原菌短期无法查明，可根据患者<span class="answer-text">年龄</span>、<span class="answer-text">原发病灶性质</span>、<span class="answer-text">机体免疫情况</span>等初步估计病原菌种类，选择适当的抗菌药物<br>④ 抗菌治疗可采用<span class="answer-text">两种有效抗菌药物联合使用</span><br>⑤ <span class="answer-text">静脉给药</span>，剂量宜大，间隔为<span class="answer-text">PAE</span>和<span class="answer-text">半衰期</span><br>⑥ 疗程一般<span class="answer-text">3周以上</span>或热退后继续用药<span class="answer-text">7-10天</span>，有迁徙病灶时延长疗程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>35. A <strong>伤寒的临床表现——初期（第1周）</strong><br><span class="blur-text">发热</span>（最早症状），可伴<span class="blur-text">寒战</span>、<span class="blur-text">恶心呕吐</span>、<span class="blur-text">食欲减退</span>、<span class="blur-text">肝脾肿大</span>。</td>
+                            <td>35. A <strong>伤寒的临床表现——初期（第1周）</strong><br><span class="answer-text">发热</span>（最早症状），可伴<span class="answer-text">寒战</span>、<span class="answer-text">恶心呕吐</span>、<span class="answer-text">食欲减退</span>、<span class="answer-text">肝脾肿大</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>35. B <strong>伤寒的临床表现——极期（第2-3周）</strong><br><span class="blur-text">稽留热</span>，持续<span class="blur-text">10-14天</span>，<span class="blur-text">相对脉缓</span>，<span class="blur-text">玫瑰疹</span>，<span class="blur-text">表情淡漠</span>、<span class="blur-text">反应迟钝</span>、<span class="blur-text">谵妄</span>、<span class="blur-text">昏迷</span>、<span class="blur-text">耳鸣或听力减退</span>，<span class="blur-text">右下腹痛</span>，<span class="blur-text">便秘</span>多见，少数<span class="blur-text">腹泻</span>，<span class="blur-text">肝脾肿大</span>。</td>
+                            <td>35. B <strong>伤寒的临床表现——极期（第2-3周）</strong><br><span class="answer-text">稽留热</span>，持续<span class="answer-text">10-14天</span>，<span class="answer-text">相对脉缓</span>，<span class="answer-text">玫瑰疹</span>，<span class="answer-text">表情淡漠</span>、<span class="answer-text">反应迟钝</span>、<span class="answer-text">谵妄</span>、<span class="answer-text">昏迷</span>、<span class="answer-text">耳鸣或听力减退</span>，<span class="answer-text">右下腹痛</span>，<span class="answer-text">便秘</span>多见，少数<span class="answer-text">腹泻</span>，<span class="answer-text">肝脾肿大</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>35. C <strong>伤寒的临床表现——缓解期（病程第4周）</strong><br>体温下降，<span class="blur-text">神经系统</span>、<span class="blur-text">消化系统症状</span>减轻，但可能发生<span class="blur-text">肠出血</span>或<span class="blur-text">肠穿孔</span>。</td>
+                            <td>35. C <strong>伤寒的临床表现——缓解期（病程第4周）</strong><br>体温下降，<span class="answer-text">神经系统</span>、<span class="answer-text">消化系统症状</span>减轻，但可能发生<span class="answer-text">肠出血</span>或<span class="answer-text">肠穿孔</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>35. D <strong>伤寒的临床表现——恢复期（病程第5周）</strong><br>症状消失，部分患者可能成为<span class="blur-text">慢性携带者</span>。</td>
+                            <td>35. D <strong>伤寒的临床表现——恢复期（病程第5周）</strong><br>症状消失，部分患者可能成为<span class="answer-text">慢性携带者</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>36. A <strong>伤寒的并发症</strong><br>① <span class="blur-text">肠出血</span>（最常见）<br>② <span class="blur-text">肠穿孔</span>（最严重）<br>③ <span class="blur-text">中毒性肝炎</span><br>④ <span class="blur-text">中毒性心肌炎</span><br>⑤ <span class="blur-text">肾盂肾炎</span>、<span class="blur-text">肺炎</span>等</td>
+                            <td>36. A <strong>伤寒的并发症</strong><br>① <span class="answer-text">肠出血</span>（最常见）<br>② <span class="answer-text">肠穿孔</span>（最严重）<br>③ <span class="answer-text">中毒性肝炎</span><br>④ <span class="answer-text">中毒性心肌炎</span><br>⑤ <span class="answer-text">肾盂肾炎</span>、<span class="answer-text">肺炎</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>37. A <strong>伤寒的实验室检查——血常规</strong><br><span class="blur-text">白细胞</span>、<span class="blur-text">中性粒细胞</span>、<span class="blur-text">嗜酸性粒细胞</span>均减少。</td>
+                            <td>37. A <strong>伤寒的实验室检查——血常规</strong><br><span class="answer-text">白细胞</span>、<span class="answer-text">中性粒细胞</span>、<span class="answer-text">嗜酸性粒细胞</span>均减少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>37. B <strong>伤寒的实验室检查——尿常规与大便常规</strong><br>尿常规：少量<span class="blur-text">蛋白尿</span>或少量<span class="blur-text">管型</span>。<br>大便常规：少许<span class="blur-text">白细胞</span>，部分患者可能出现<span class="blur-text">隐血阳性</span>。</td>
+                            <td>37. B <strong>伤寒的实验室检查——尿常规与大便常规</strong><br>尿常规：少量<span class="answer-text">蛋白尿</span>或少量<span class="answer-text">管型</span>。<br>大便常规：少许<span class="answer-text">白细胞</span>，部分患者可能出现<span class="answer-text">隐血阳性</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>37. C <strong>伤寒的实验室检查——微生物培养</strong><br><span class="blur-text">1-2周</span>：首选<span class="blur-text">血培养</span>，次选<span class="blur-text">骨髓培养</span><br><span class="blur-text">3-4周</span>：首选<span class="blur-text">粪便培养</span><br><span class="blur-text">4-5周</span>：首选<span class="blur-text">肥达试验</span>（抗O≥<span class="blur-text">1:80</span>，抗H≥<span class="blur-text">1:160</span>或恢复期效价抗O增高<span class="blur-text">4倍以上</span>）</td>
+                            <td>37. C <strong>伤寒的实验室检查——微生物培养</strong><br><span class="answer-text">1-2周</span>：首选<span class="answer-text">血培养</span>，次选<span class="answer-text">骨髓培养</span><br><span class="answer-text">3-4周</span>：首选<span class="answer-text">粪便培养</span><br><span class="answer-text">4-5周</span>：首选<span class="answer-text">肥达试验</span>（抗O≥<span class="answer-text">1:80</span>，抗H≥<span class="answer-text">1:160</span>或恢复期效价抗O增高<span class="answer-text">4倍以上</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>38. A <strong>伤寒的治疗——一般治疗与对症治疗</strong><br>一般治疗：<span class="blur-text">消毒隔离</span>，<span class="blur-text">休息</span>，<span class="blur-text">护理</span>。<br>对症治疗：<span class="blur-text">降温</span>、<span class="blur-text">便秘</span>、<span class="blur-text">腹泻</span>、<span class="blur-text">糖皮质激素</span>（严重毒血症时）。</td>
+                            <td>38. A <strong>伤寒的治疗——一般治疗与对症治疗</strong><br>一般治疗：<span class="answer-text">消毒隔离</span>，<span class="answer-text">休息</span>，<span class="answer-text">护理</span>。<br>对症治疗：<span class="answer-text">降温</span>、<span class="answer-text">便秘</span>、<span class="answer-text">腹泻</span>、<span class="answer-text">糖皮质激素</span>（严重毒血症时）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>38. B <strong>伤寒的治疗——病原治疗</strong><br>① 首选<span class="blur-text">第三代喹诺酮类</span>：<span class="blur-text">左氧氟沙星</span>、<span class="blur-text">氧氟沙星</span>、<span class="blur-text">环丙沙星</span>等<br>② <span class="blur-text">儿童</span>和<span class="blur-text">孕妇</span>首选<span class="blur-text">第三代头孢菌素</span>：<span class="blur-text">头孢他啶</span>、<span class="blur-text">头孢曲松</span>等<br>③ 疗程：<span class="blur-text">14天</span></td>
+                            <td>38. B <strong>伤寒的治疗——病原治疗</strong><br>① 首选<span class="answer-text">第三代喹诺酮类</span>：<span class="answer-text">左氧氟沙星</span>、<span class="answer-text">氧氟沙星</span>、<span class="answer-text">环丙沙星</span>等<br>② <span class="answer-text">儿童</span>和<span class="answer-text">孕妇</span>首选<span class="answer-text">第三代头孢菌素</span>：<span class="answer-text">头孢他啶</span>、<span class="answer-text">头孢曲松</span>等<br>③ 疗程：<span class="answer-text">14天</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>39. A <strong>流行性脑脊髓膜炎的病原学</strong><br><span class="blur-text">脑膜炎奈瑟菌</span>，<span class="blur-text">革兰阴性双球菌</span>，有<span class="blur-text">荚膜</span>，无<span class="blur-text">芽胞</span>，<span class="blur-text">巧克力或血培养基</span>。<br>我国以<span class="blur-text">A群</span>为主。</td>
+                            <td>39. A <strong>流行性脑脊髓膜炎的病原学</strong><br><span class="answer-text">脑膜炎奈瑟菌</span>，<span class="answer-text">革兰阴性双球菌</span>，有<span class="answer-text">荚膜</span>，无<span class="answer-text">芽胞</span>，<span class="answer-text">巧克力或血培养基</span>。<br>我国以<span class="answer-text">A群</span>为主。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">40. A <strong>流行性脑脊髓膜炎的临床表现——普通型</strong><br>（图内容无法识别，建议参考教材图示：前驱期、败血症期、脑膜炎期、恢复期的表现）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>40. B <strong>流行性脑脊髓膜炎的临床表现——暴发型</strong><br>起病<span class="blur-text">急骤</span>，病情变化<span class="blur-text">迅速</span>，病势<span class="blur-text">凶险</span>。<br>① <span class="blur-text">休克型</span>：短时间内出现广泛<span class="blur-text">瘀点瘀斑</span>，迅速出现<span class="blur-text">周围循环衰竭</span>，表现为<span class="blur-text">面色苍白</span>、<span class="blur-text">口唇发绀</span>、<span class="blur-text">肢端厥冷</span>、<span class="blur-text">皮肤花斑</span>、<span class="blur-text">血压下降</span>、<span class="blur-text">尿量减少</span>、<span class="blur-text">昏迷</span></td>
+                            <td>40. B <strong>流行性脑脊髓膜炎的临床表现——暴发型</strong><br>起病<span class="answer-text">急骤</span>，病情变化<span class="answer-text">迅速</span>，病势<span class="answer-text">凶险</span>。<br>① <span class="answer-text">休克型</span>：短时间内出现广泛<span class="answer-text">瘀点瘀斑</span>，迅速出现<span class="answer-text">周围循环衰竭</span>，表现为<span class="answer-text">面色苍白</span>、<span class="answer-text">口唇发绀</span>、<span class="answer-text">肢端厥冷</span>、<span class="answer-text">皮肤花斑</span>、<span class="answer-text">血压下降</span>、<span class="answer-text">尿量减少</span>、<span class="answer-text">昏迷</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>40. C <strong>流行性脑脊髓膜炎的临床表现——暴发型（续）</strong><br>② <span class="blur-text">脑膜脑炎型</span>：<span class="blur-text">2天内</span>出现严重神经系统症状，患者<span class="blur-text">高热</span>、<span class="blur-text">剧烈头痛</span>、<span class="blur-text">频繁呕吐</span>、<span class="blur-text">意识障碍</span>、<span class="blur-text">惊厥</span>，迅速出现<span class="blur-text">脑疝</span><br>③ <span class="blur-text">混合型</span>：可先后或同时出现<span class="blur-text">休克型</span>和<span class="blur-text">脑膜脑炎型</span>的症状</td>
+                            <td>40. C <strong>流行性脑脊髓膜炎的临床表现——暴发型（续）</strong><br>② <span class="answer-text">脑膜脑炎型</span>：<span class="answer-text">2天内</span>出现严重神经系统症状，患者<span class="answer-text">高热</span>、<span class="answer-text">剧烈头痛</span>、<span class="answer-text">频繁呕吐</span>、<span class="answer-text">意识障碍</span>、<span class="answer-text">惊厥</span>，迅速出现<span class="answer-text">脑疝</span><br>③ <span class="answer-text">混合型</span>：可先后或同时出现<span class="answer-text">休克型</span>和<span class="answer-text">脑膜脑炎型</span>的症状</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>40. D <strong>流行性脑脊髓膜炎的临床表现——轻型与慢性型</strong><br><span class="blur-text">轻型</span>：多见于流脑流行后期，病变轻微，表现为<span class="blur-text">低热</span>、<span class="blur-text">轻微头痛</span>、<span class="blur-text">上感症状</span>，脑脊液无明显改变。<br><span class="blur-text">慢性型</span>：不多见，成人患者较多，病程迁延<span class="blur-text">数周或数月</span>。</td>
+                            <td>40. D <strong>流行性脑脊髓膜炎的临床表现——轻型与慢性型</strong><br><span class="answer-text">轻型</span>：多见于流脑流行后期，病变轻微，表现为<span class="answer-text">低热</span>、<span class="answer-text">轻微头痛</span>、<span class="answer-text">上感症状</span>，脑脊液无明显改变。<br><span class="answer-text">慢性型</span>：不多见，成人患者较多，病程迁延<span class="answer-text">数周或数月</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>41. A <strong>流行性脑脊髓膜炎的实验室检查——血象</strong><br><span class="blur-text">化脓菌感染</span>的表现，<span class="blur-text">白细胞升高</span>，<span class="blur-text">中性粒细胞80%~90%</span>。</td>
+                            <td>41. A <strong>流行性脑脊髓膜炎的实验室检查——血象</strong><br><span class="answer-text">化脓菌感染</span>的表现，<span class="answer-text">白细胞升高</span>，<span class="answer-text">中性粒细胞80%~90%</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>41. B <strong>流行性脑脊髓膜炎的实验室检查——脑脊液检查（确诊）</strong><br>脑脊液压力<span class="blur-text">升高</span>，外观<span class="blur-text">浑浊呈米汤样</span>，<span class="blur-text">白细胞>1000×10^6/L</span>，<span class="blur-text">糖及氯化物明显减少</span>，<span class="blur-text">蛋白质含量升高</span>。</td>
+                            <td>41. B <strong>流行性脑脊髓膜炎的实验室检查——脑脊液检查（确诊）</strong><br>脑脊液压力<span class="answer-text">升高</span>，外观<span class="answer-text">浑浊呈米汤样</span>，<span class="answer-text">白细胞>1000×10^6/L</span>，<span class="answer-text">糖及氯化物明显减少</span>，<span class="answer-text">蛋白质含量升高</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>41. C <strong>流行性脑脊髓膜炎的实验室检查——细菌学检查</strong><br><span class="blur-text">皮肤瘀点</span>（早期诊断）的组织液或离心沉淀的脑脊液涂片。</td>
+                            <td>41. C <strong>流行性脑脊髓膜炎的实验室检查——细菌学检查</strong><br><span class="answer-text">皮肤瘀点</span>（早期诊断）的组织液或离心沉淀的脑脊液涂片。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>41. D <strong>流行性脑脊髓膜炎的实验室检查——血清免疫学检查</strong><br><span class="blur-text">脑膜炎球菌抗原</span>。</td>
+                            <td>41. D <strong>流行性脑脊髓膜炎的实验室检查——血清免疫学检查</strong><br><span class="answer-text">脑膜炎球菌抗原</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>42. A <strong>流行性脑脊髓膜炎的治疗——病原治疗</strong><br>① 首选<span class="blur-text">青霉素</span><br>② <span class="blur-text">三代头孢</span>、<span class="blur-text">氯霉素</span></td>
+                            <td>42. A <strong>流行性脑脊髓膜炎的治疗——病原治疗</strong><br>① 首选<span class="answer-text">青霉素</span><br>② <span class="answer-text">三代头孢</span>、<span class="answer-text">氯霉素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>42. B <strong>流行性脑脊髓膜炎的治疗——爆发型流脑的治疗</strong><br>① <span class="blur-text">休克型</span>的治疗：<span class="blur-text">抗菌药物</span>、<span class="blur-text">纠正休克</span>（扩容、纠酸、血管活性药物）、<span class="blur-text">防治DIC</span>、<span class="blur-text">糖皮质激素</span><br>② <span class="blur-text">脑膜脑炎型</span>的治疗：<span class="blur-text">抗生素</span>、<span class="blur-text">防治脑水肿</span>、<span class="blur-text">脑疝</span>及<span class="blur-text">呼吸衰竭</span></td>
+                            <td>42. B <strong>流行性脑脊髓膜炎的治疗——爆发型流脑的治疗</strong><br>① <span class="answer-text">休克型</span>的治疗：<span class="answer-text">抗菌药物</span>、<span class="answer-text">纠正休克</span>（扩容、纠酸、血管活性药物）、<span class="answer-text">防治DIC</span>、<span class="answer-text">糖皮质激素</span><br>② <span class="answer-text">脑膜脑炎型</span>的治疗：<span class="answer-text">抗生素</span>、<span class="answer-text">防治脑水肿</span>、<span class="answer-text">脑疝</span>及<span class="answer-text">呼吸衰竭</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>43. A <strong>艾滋病的病原学——HIV结构</strong><br>① 核心：<span class="blur-text">p24</span>包裹<span class="blur-text">两条RNA</span>（单股正链，<span class="blur-text">逆转录</span>）<br>② 包膜：<span class="blur-text">gp120</span>、<span class="blur-text">gp41</span><br>③ 基因组</td>
+                            <td>43. A <strong>艾滋病的病原学——HIV结构</strong><br>① 核心：<span class="answer-text">p24</span>包裹<span class="answer-text">两条RNA</span>（单股正链，<span class="answer-text">逆转录</span>）<br>② 包膜：<span class="answer-text">gp120</span>、<span class="answer-text">gp41</span><br>③ 基因组</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>43. B <strong>艾滋病的病原学——HIV基因组</strong><br>三个结构基因：<span class="blur-text">群抗原基因(gag)</span>、<span class="blur-text">多聚酶基因(pol)</span>、<span class="blur-text">包膜蛋白基因(env)</span><br>六个调控基因：<span class="blur-text">反式激活基因(tat)</span>、<span class="blur-text">病毒蛋白调节因子(rev)</span>、<span class="blur-text">病毒感染因子(vif)</span>、<span class="blur-text">负调节子(nef)</span>、<span class="blur-text">病毒蛋白R基因(vpr)</span>、<span class="blur-text">U基因和X基因(vpu,vpx)</span></td>
+                            <td>43. B <strong>艾滋病的病原学——HIV基因组</strong><br>三个结构基因：<span class="answer-text">群抗原基因(gag)</span>、<span class="answer-text">多聚酶基因(pol)</span>、<span class="answer-text">包膜蛋白基因(env)</span><br>六个调控基因：<span class="answer-text">反式激活基因(tat)</span>、<span class="answer-text">病毒蛋白调节因子(rev)</span>、<span class="answer-text">病毒感染因子(vif)</span>、<span class="answer-text">负调节子(nef)</span>、<span class="answer-text">病毒蛋白R基因(vpr)</span>、<span class="answer-text">U基因和X基因(vpu,vpx)</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>44. A <strong>艾滋病的流行病学——传染源与传播途径</strong><br>传染源：<span class="blur-text">AIDS病人</span>和<span class="blur-text">携带者</span>。<br>传播途径：<span class="blur-text">性接触传播</span>、<span class="blur-text">血液传播</span>、<span class="blur-text">母婴传播</span>、其他（<span class="blur-text">医源性感染</span>、<span class="blur-text">器官移植</span>等）。</td>
+                            <td>44. A <strong>艾滋病的流行病学——传染源与传播途径</strong><br>传染源：<span class="answer-text">AIDS病人</span>和<span class="answer-text">携带者</span>。<br>传播途径：<span class="answer-text">性接触传播</span>、<span class="answer-text">血液传播</span>、<span class="answer-text">母婴传播</span>、其他（<span class="answer-text">医源性感染</span>、<span class="answer-text">器官移植</span>等）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>44. B <strong>艾滋病的流行病学——高危人群</strong><br>① <span class="blur-text">性乱者</span><br>② <span class="blur-text">静脉药瘾者</span><br>③ <span class="blur-text">血友病</span>、多次接受<span class="blur-text">输血或血制品</span>者<br>④ <span class="blur-text">艾滋病及HIV感染者所生的婴儿</span></td>
+                            <td>44. B <strong>艾滋病的流行病学——高危人群</strong><br>① <span class="answer-text">性乱者</span><br>② <span class="answer-text">静脉药瘾者</span><br>③ <span class="answer-text">血友病</span>、多次接受<span class="answer-text">输血或血制品</span>者<br>④ <span class="answer-text">艾滋病及HIV感染者所生的婴儿</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>45. A <strong>艾滋病的治疗——抗病毒治疗药物</strong><br>① <span class="blur-text">核苷类逆转录酶抑制剂(NRTI)</span>：<span class="blur-text">齐多夫定</span>、<span class="blur-text">拉米夫定</span><br>② <span class="blur-text">非核苷类逆转录酶抑制剂(NNRTI)</span>：<span class="blur-text">奈韦拉平</span><br>③ <span class="blur-text">蛋白酶抑制剂(PI)</span>：<span class="blur-text">利托那韦</span>、<span class="blur-text">英地那韦</span></td>
+                            <td>45. A <strong>艾滋病的治疗——抗病毒治疗药物</strong><br>① <span class="answer-text">核苷类逆转录酶抑制剂(NRTI)</span>：<span class="answer-text">齐多夫定</span>、<span class="answer-text">拉米夫定</span><br>② <span class="answer-text">非核苷类逆转录酶抑制剂(NNRTI)</span>：<span class="answer-text">奈韦拉平</span><br>③ <span class="answer-text">蛋白酶抑制剂(PI)</span>：<span class="answer-text">利托那韦</span>、<span class="answer-text">英地那韦</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>45. B <strong>艾滋病的治疗——联合方案（鸡尾酒疗法/HAART）</strong><br>由<span class="blur-text">美籍华裔科学家何大一</span>于<span class="blur-text">1996年</span>提出，是通过<span class="blur-text">三种或三种以上的抗病毒药物</span>联合使用来治疗艾滋病。<br>常用方案：<span class="blur-text">2种核苷类逆转录酶抑制剂+1种非核苷类逆转录酶抑制剂</span>（或<span class="blur-text">蛋白酶抑制剂</span>）。</td>
+                            <td>45. B <strong>艾滋病的治疗——联合方案（鸡尾酒疗法/HAART）</strong><br>由<span class="answer-text">美籍华裔科学家何大一</span>于<span class="answer-text">1996年</span>提出，是通过<span class="answer-text">三种或三种以上的抗病毒药物</span>联合使用来治疗艾滋病。<br>常用方案：<span class="answer-text">2种核苷类逆转录酶抑制剂+1种非核苷类逆转录酶抑制剂</span>（或<span class="answer-text">蛋白酶抑制剂</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>45. C <strong>艾滋病的治疗——鸡尾酒疗法优点</strong><br>a. <span class="blur-text">药物分布广</span>，达到靶细胞<br>b. 起<span class="blur-text">协同作用</span>，持续抑制病毒复制<br>c. <span class="blur-text">延缓或阻断HIV变异产生耐药性</span></td>
+                            <td>45. C <strong>艾滋病的治疗——鸡尾酒疗法优点</strong><br>a. <span class="answer-text">药物分布广</span>，达到靶细胞<br>b. 起<span class="answer-text">协同作用</span>，持续抑制病毒复制<br>c. <span class="answer-text">延缓或阻断HIV变异产生耐药性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>46. A <strong>艾滋病的预防——管理传染源</strong><br>① 发现HIV感染者，按<span class="blur-text">乙类传染病</span>报告当地<span class="blur-text">CDC</span><br>② <span class="blur-text">高危人群普查HIV</span><br>③ <span class="blur-text">隔离治疗病人</span><br>④ 监控<span class="blur-text">无症状HIV感染者</span><br>⑤ 加强<span class="blur-text">国境检疫</span></td>
+                            <td>46. A <strong>艾滋病的预防——管理传染源</strong><br>① 发现HIV感染者，按<span class="answer-text">乙类传染病</span>报告当地<span class="answer-text">CDC</span><br>② <span class="answer-text">高危人群普查HIV</span><br>③ <span class="answer-text">隔离治疗病人</span><br>④ 监控<span class="answer-text">无症状HIV感染者</span><br>⑤ 加强<span class="answer-text">国境检疫</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>46. B <strong>艾滋病的预防——切断传播途径</strong><br>① <span class="blur-text">广泛宣传教育</span><br>② <span class="blur-text">静脉吸毒者的行为干预</span><br>③ 严禁<span class="blur-text">性乱</span>，高危人群使用<span class="blur-text">安全套</span><br>④ <span class="blur-text">规范性病治疗</span><br>⑤ 控制HIV的<span class="blur-text">医源性传播</span><br>⑥ <span class="blur-text">预防母婴传播</span></td>
+                            <td>46. B <strong>艾滋病的预防——切断传播途径</strong><br>① <span class="answer-text">广泛宣传教育</span><br>② <span class="answer-text">静脉吸毒者的行为干预</span><br>③ 严禁<span class="answer-text">性乱</span>，高危人群使用<span class="answer-text">安全套</span><br>④ <span class="answer-text">规范性病治疗</span><br>⑤ 控制HIV的<span class="answer-text">医源性传播</span><br>⑥ <span class="answer-text">预防母婴传播</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>46. C <strong>艾滋病的预防——保护易感人群</strong><br><span class="blur-text">疫苗研制</span>。</td>
+                            <td>46. C <strong>艾滋病的预防——保护易感人群</strong><br><span class="answer-text">疫苗研制</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

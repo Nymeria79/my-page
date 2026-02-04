@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <div class="medical-disclaimer">
+                <strong>⚠️ 医疗免责声明</strong>
+                <p>本站所有内容仅供教育参考与信息分享，不构成医疗建议、诊断或治疗方案。浏览本站不建立医患关系，如有健康疑虑请咨询执业医疗人员。</p>
+            </div>       
+                     
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3"><strong>全科医学概论大题</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1..<strong>全科医学产生的基础</strong><br>① <span class="blur-text">人口迅速增长与老龄化</span><br>② <span class="blur-text">疾病谱与死因谱的变化</span><br>③ <span class="blur-text">医学模式的转变</span><br>④ <span class="blur-text">医疗费用的快速上涨</span></td>
+                            <td>1..<strong>全科医学产生的基础</strong><br>① <span class="answer-text">人口迅速增长与老龄化</span><br>② <span class="answer-text">疾病谱与死因谱的变化</span><br>③ <span class="answer-text">医学模式的转变</span><br>④ <span class="answer-text">医疗费用的快速上涨</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2..<strong>全科医学的特点</strong><br>① 一门<span class="blur-text">综合性的临床医学学科</span><br>② 具有<span class="blur-text">地域和民族特点</span>的现代服务模式<br>③ 强调<span class="blur-text">整体性</span>的临床思维方法<br>④ 高度重视<span class="blur-text">服务艺术</span></td>
+                            <td>2..<strong>全科医学的特点</strong><br>① 一门<span class="answer-text">综合性的临床医学学科</span><br>② 具有<span class="answer-text">地域和民族特点</span>的现代服务模式<br>③ 强调<span class="answer-text">整体性</span>的临床思维方法<br>④ 高度重视<span class="answer-text">服务艺术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3..<strong>全科医师应具有的基本能力</strong><br>① 处理<span class="blur-text">常见健康和疾病问题</span>的能力<br>② 评价个人<span class="blur-text">心理</span>、<span class="blur-text">行为问题</span>的能力<br>③ <span class="blur-text">家庭评估</span>、<span class="blur-text">家庭访视</span>的能力<br>④ <span class="blur-text">服务社区</span>的能力<br>⑤ 处理<span class="blur-text">医疗相关问题</span>的能力<br>⑥ <span class="blur-text">自我完善与发展</span>的能力</td>
+                            <td>3..<strong>全科医师应具有的基本能力</strong><br>① 处理<span class="answer-text">常见健康和疾病问题</span>的能力<br>② 评价个人<span class="answer-text">心理</span>、<span class="answer-text">行为问题</span>的能力<br>③ <span class="answer-text">家庭评估</span>、<span class="answer-text">家庭访视</span>的能力<br>④ <span class="answer-text">服务社区</span>的能力<br>⑤ 处理<span class="answer-text">医疗相关问题</span>的能力<br>⑥ <span class="answer-text">自我完善与发展</span>的能力</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4..<strong>全科医疗的特点</strong><br>① 强调<span class="blur-text">连续性</span>、<span class="blur-text">综合性</span>、<span class="blur-text">个体化</span>的照顾<br>② 强调<span class="blur-text">早期发现</span>并处理病患<br>③ 强调<span class="blur-text">预防疾病</span>和<span class="blur-text">维持促进健康</span><br>④ 强调在<span class="blur-text">社区场所</span>对病人提供服务，并在必要时协调利用<span class="blur-text">社区内外的其他资源</span><br>⑤ 其最大的特点是强调对当事人的"<span class="blur-text">长期负责式</span>照顾"</td>
+                            <td>4..<strong>全科医疗的特点</strong><br>① 强调<span class="answer-text">连续性</span>、<span class="answer-text">综合性</span>、<span class="answer-text">个体化</span>的照顾<br>② 强调<span class="answer-text">早期发现</span>并处理病患<br>③ 强调<span class="answer-text">预防疾病</span>和<span class="answer-text">维持促进健康</span><br>④ 强调在<span class="answer-text">社区场所</span>对病人提供服务，并在必要时协调利用<span class="answer-text">社区内外的其他资源</span><br>⑤ 其最大的特点是强调对当事人的"<span class="answer-text">长期负责式</span>照顾"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5..A <strong>全科医学科学研究的目的</strong><br>根本目的：更好的促进<span class="blur-text">全科医学的发展</span><br>① 确定和修订<span class="blur-text">全科/家庭医疗服务的内容和范围</span>，并为<span class="blur-text">教学服务</span><br>② 发展和完善<span class="blur-text">全科医学的理论体系</span>，提高全科/家庭医疗的<span class="blur-text">效率</span>和<span class="blur-text">品质</span><br>③ 巩固全科医学的<span class="blur-text">专业地位</span>和<span class="blur-text">专科地位</span></td>
+                            <td>5..A <strong>全科医学科学研究的目的</strong><br>根本目的：更好的促进<span class="answer-text">全科医学的发展</span><br>① 确定和修订<span class="answer-text">全科/家庭医疗服务的内容和范围</span>，并为<span class="answer-text">教学服务</span><br>② 发展和完善<span class="answer-text">全科医学的理论体系</span>，提高全科/家庭医疗的<span class="answer-text">效率</span>和<span class="answer-text">品质</span><br>③ 巩固全科医学的<span class="answer-text">专业地位</span>和<span class="answer-text">专科地位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5..B <strong>全科医学科学研究的目的（续）</strong><br>④ 指导<span class="blur-text">全科医学教育</span>与<span class="blur-text">服务</span>的开展<br>⑤ 评价<span class="blur-text">全科医学教育的培训计划</span>以提高教育和培训的实效</td>
+                            <td>5..B <strong>全科医学科学研究的目的（续）</strong><br>④ 指导<span class="answer-text">全科医学教育</span>与<span class="answer-text">服务</span>的开展<br>⑤ 评价<span class="answer-text">全科医学教育的培训计划</span>以提高教育和培训的实效</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>6..A <strong>全科医学科学研究的范畴</strong><br>（1）<span class="blur-text">专业性研究</span>：<br>① <span class="blur-text">全科医学基础理论</span>研究<br>② <span class="blur-text">教育研究</span>和<span class="blur-text">临床医疗服务</span>研究<br>③ 多为从事全科医学<span class="blur-text">教育</span>、<span class="blur-text">服务</span>和<span class="blur-text">研究</span>的人员</td>
+                            <td>6..A <strong>全科医学科学研究的范畴</strong><br>（1）<span class="answer-text">专业性研究</span>：<br>① <span class="answer-text">全科医学基础理论</span>研究<br>② <span class="answer-text">教育研究</span>和<span class="answer-text">临床医疗服务</span>研究<br>③ 多为从事全科医学<span class="answer-text">教育</span>、<span class="answer-text">服务</span>和<span class="answer-text">研究</span>的人员</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>6..B <strong>全科医学科学研究的范畴（续）</strong><br>（2）<span class="blur-text">非专业性研究</span>：<br>① <span class="blur-text">家庭社会学</span>、<span class="blur-text">行为医学</span>、<span class="blur-text">儿童教育学</span>等<br>② 多由全科医学<span class="blur-text">相关领域的专家</span>来承担</td>
+                            <td>6..B <strong>全科医学科学研究的范畴（续）</strong><br>（2）<span class="answer-text">非专业性研究</span>：<br>① <span class="answer-text">家庭社会学</span>、<span class="answer-text">行为医学</span>、<span class="answer-text">儿童教育学</span>等<br>② 多由全科医学<span class="answer-text">相关领域的专家</span>来承担</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>7..<strong>全科医学科学研究的内容</strong><br>① <span class="blur-text">全科医学临床问题</span>研究<br>② <span class="blur-text">流行病学</span>研究<br>③ <span class="blur-text">卫生服务</span>研究<br>④ <span class="blur-text">全科医学教育</span>研究<br>⑤ <span class="blur-text">行为学</span>、<span class="blur-text">心理学</span>及<span class="blur-text">社会学</span>方面的研究<br>⑥ <span class="blur-text">人类学</span>研究</td>
+                            <td>7..<strong>全科医学科学研究的内容</strong><br>① <span class="answer-text">全科医学临床问题</span>研究<br>② <span class="answer-text">流行病学</span>研究<br>③ <span class="answer-text">卫生服务</span>研究<br>④ <span class="answer-text">全科医学教育</span>研究<br>⑤ <span class="answer-text">行为学</span>、<span class="answer-text">心理学</span>及<span class="answer-text">社会学</span>方面的研究<br>⑥ <span class="answer-text">人类学</span>研究</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>8..<strong>全科医学科学研究的学科基础</strong><br>① <span class="blur-text">循证医学</span><br>② <span class="blur-text">临床流行病学</span><br>③ <span class="blur-text">社会医学</span>：立足于社区是全科医学区别于其他医学专科的显著特点之一<br>④ <span class="blur-text">卫生经济学</span></td>
+                            <td>8..<strong>全科医学科学研究的学科基础</strong><br>① <span class="answer-text">循证医学</span><br>② <span class="answer-text">临床流行病学</span><br>③ <span class="answer-text">社会医学</span>：立足于社区是全科医学区别于其他医学专科的显著特点之一<br>④ <span class="answer-text">卫生经济学</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>9..<strong>全科医学科学研究的基本步骤和程序</strong><br>① <span class="blur-text">研究问题的确立</span><br>② <span class="blur-text">研究设计</span><br>统计学设计的基本原则：<span class="blur-text">对照</span>、<span class="blur-text">随机</span>、<span class="blur-text">重复</span>、<span class="blur-text">盲法</span><br>③ <span class="blur-text">预实验</span><br>④ 资料的<span class="blur-text">收集</span>、<span class="blur-text">整理</span>和<span class="blur-text">分析</span><br>⑤ <span class="blur-text">研究报告</span>与<span class="blur-text">论文撰写</span><br>⑥ 研究结果的<span class="blur-text">发表</span>、<span class="blur-text">推广</span>与<span class="blur-text">应用</span></td>
+                            <td>9..<strong>全科医学科学研究的基本步骤和程序</strong><br>① <span class="answer-text">研究问题的确立</span><br>② <span class="answer-text">研究设计</span><br>统计学设计的基本原则：<span class="answer-text">对照</span>、<span class="answer-text">随机</span>、<span class="answer-text">重复</span>、<span class="answer-text">盲法</span><br>③ <span class="answer-text">预实验</span><br>④ 资料的<span class="answer-text">收集</span>、<span class="answer-text">整理</span>和<span class="answer-text">分析</span><br>⑤ <span class="answer-text">研究报告</span>与<span class="answer-text">论文撰写</span><br>⑥ 研究结果的<span class="answer-text">发表</span>、<span class="answer-text">推广</span>与<span class="answer-text">应用</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10..<strong>病例对照研究和队列研究</strong><br>（1）<span class="blur-text">病例对照研究</span>：<span class="blur-text">回顾性</span>研究，<span class="blur-text">由果到因</span><br>（2）<span class="blur-text">队列研究</span>：<span class="blur-text">前瞻性</span>研究，<span class="blur-text">由因到果</span></td>
+                            <td>10..<strong>病例对照研究和队列研究</strong><br>（1）<span class="answer-text">病例对照研究</span>：<span class="answer-text">回顾性</span>研究，<span class="answer-text">由果到因</span><br>（2）<span class="answer-text">队列研究</span>：<span class="answer-text">前瞻性</span>研究，<span class="answer-text">由因到果</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>11..<strong>全科医学科学研究中的伦理原则</strong><br>① 恪守<span class="blur-text">尊重自主</span><br>② <span class="blur-text">有利不伤害</span>：不能逾越受试者的权利及利益之上<br>③ <span class="blur-text">公平正义</span><br>④ <span class="blur-text">医疗为善</span><br>⑤ <span class="blur-text">知情同意</span><br>⑥ <span class="blur-text">生命价值</span><br>⑦ <span class="blur-text">保密原则</span></td>
+                            <td>11..<strong>全科医学科学研究中的伦理原则</strong><br>① 恪守<span class="answer-text">尊重自主</span><br>② <span class="answer-text">有利不伤害</span>：不能逾越受试者的权利及利益之上<br>③ <span class="answer-text">公平正义</span><br>④ <span class="answer-text">医疗为善</span><br>⑤ <span class="answer-text">知情同意</span><br>⑥ <span class="answer-text">生命价值</span><br>⑦ <span class="answer-text">保密原则</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>12..A <strong>基于循证医学的全科医生</strong><br>① <span class="blur-text">提出明确的临床问题</span><br>② <span class="blur-text">系统全面查找证据</span><br>③ <span class="blur-text">严格评估证据</span><br>④ <span class="blur-text">应用最佳证据</span>协助临床决策<br>⑤ <span class="blur-text">后效评估</span>，止于至善</td>
+                            <td>12..A <strong>基于循证医学的全科医生</strong><br>① <span class="answer-text">提出明确的临床问题</span><br>② <span class="answer-text">系统全面查找证据</span><br>③ <span class="answer-text">严格评估证据</span><br>④ <span class="answer-text">应用最佳证据</span>协助临床决策<br>⑤ <span class="answer-text">后效评估</span>，止于至善</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>13..<strong>全科医学的责任和面临的挑战</strong><br>① 不仅是对<span class="blur-text">病种</span>或<span class="blur-text">知识技术</span>负责，更必须对<span class="blur-text">人</span>负责<br>② 必须与服务对象建立<span class="blur-text">互动式的医患关系</span>，提供<span class="blur-text">人格化的服务</span>或称人格化的照顾<br>③ 熟悉服务人群的<span class="blur-text">生活习惯</span>、<span class="blur-text">环境因素</span>和<span class="blur-text">人文地理</span>等，这样有助于全科医师有的放矢的工作<br>④ 有<span class="blur-text">群体观念</span>，其实践应着眼于人群，而不仅仅是病人个体<br>⑤ 具有<span class="blur-text">预防观念</span>和<span class="blur-text">卫生经济学观念</span>，通过预防疾病和杜绝浪费，使有限的卫生资源得到合理的使用</td>
+                            <td>13..<strong>全科医学的责任和面临的挑战</strong><br>① 不仅是对<span class="answer-text">病种</span>或<span class="answer-text">知识技术</span>负责，更必须对<span class="answer-text">人</span>负责<br>② 必须与服务对象建立<span class="answer-text">互动式的医患关系</span>，提供<span class="answer-text">人格化的服务</span>或称人格化的照顾<br>③ 熟悉服务人群的<span class="answer-text">生活习惯</span>、<span class="answer-text">环境因素</span>和<span class="answer-text">人文地理</span>等，这样有助于全科医师有的放矢的工作<br>④ 有<span class="answer-text">群体观念</span>，其实践应着眼于人群，而不仅仅是病人个体<br>⑤ 具有<span class="answer-text">预防观念</span>和<span class="answer-text">卫生经济学观念</span>，通过预防疾病和杜绝浪费，使有限的卫生资源得到合理的使用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>14..<strong>三级预防</strong><br>（1）<span class="blur-text">一级预防</span>：<span class="blur-text">无疾病时</span>（发病前期）提供预防保健包括<span class="blur-text">特异性疾病的预防措施</span>和<span class="blur-text">非特异性的健康促进</span>，如健康咨询、生活方式指导、关系协调等整体性照顾，防止疾病发生。<br>（2）<span class="blur-text">二级预防</span>：<span class="blur-text">症状早期</span>，疾病尚未分化（临床前期或发病早期）<span class="blur-text">早发现</span>、<span class="blur-text">早诊断</span>、<span class="blur-text">早治疗</span>。<br>（3）<span class="blur-text">三级预防</span>：<span class="blur-text">疾病确诊时</span>（临床期或发病后期）减少<span class="blur-text">并发症</span>和<span class="blur-text">后遗症</span>，避免<span class="blur-text">残障</span>，提供<span class="blur-text">康复</span>和<span class="blur-text">临终关怀</span>服务。</td>
+                            <td>14..<strong>三级预防</strong><br>（1）<span class="answer-text">一级预防</span>：<span class="answer-text">无疾病时</span>（发病前期）提供预防保健包括<span class="answer-text">特异性疾病的预防措施</span>和<span class="answer-text">非特异性的健康促进</span>，如健康咨询、生活方式指导、关系协调等整体性照顾，防止疾病发生。<br>（2）<span class="answer-text">二级预防</span>：<span class="answer-text">症状早期</span>，疾病尚未分化（临床前期或发病早期）<span class="answer-text">早发现</span>、<span class="answer-text">早诊断</span>、<span class="answer-text">早治疗</span>。<br>（3）<span class="answer-text">三级预防</span>：<span class="answer-text">疾病确诊时</span>（临床期或发病后期）减少<span class="answer-text">并发症</span>和<span class="answer-text">后遗症</span>，避免<span class="answer-text">残障</span>，提供<span class="answer-text">康复</span>和<span class="answer-text">临终关怀</span>服务。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>15..<strong>全科医生应诊中的4项主要任务</strong><br>① <span class="blur-text">确认和处理现患问题</span>（核心任务）<br>② <span class="blur-text">连续性的问题管理</span><br>③ <span class="blur-text">预防性的照顾</span><br>④ <span class="blur-text">改善就医遵医行为</span></td>
+                            <td>15..<strong>全科医生应诊中的4项主要任务</strong><br>① <span class="answer-text">确认和处理现患问题</span>（核心任务）<br>② <span class="answer-text">连续性的问题管理</span><br>③ <span class="answer-text">预防性的照顾</span><br>④ <span class="answer-text">改善就医遵医行为</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>16..<strong>以病人为中心的接诊模式LEARN</strong><br>① <span class="blur-text">Listen</span> 倾听<br>② <span class="blur-text">Explain</span> 解释<br>③ <span class="blur-text">Acknowledge</span> 容许<br>④ <span class="blur-text">Recommend</span> 建议<br>⑤ <span class="blur-text">Negotiate</span> 协商</td>
+                            <td>16..<strong>以病人为中心的接诊模式LEARN</strong><br>① <span class="answer-text">Listen</span> 倾听<br>② <span class="answer-text">Explain</span> 解释<br>③ <span class="answer-text">Acknowledge</span> 容许<br>④ <span class="answer-text">Recommend</span> 建议<br>⑤ <span class="answer-text">Negotiate</span> 协商</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>17..A <strong>全科医疗的问诊方式</strong><br>（1）<span class="blur-text">BATHE</span>：<br>① <span class="blur-text">Background</span> 背景：了解可能的<span class="blur-text">心理</span>或<span class="blur-text">社会因素</span><br>② <span class="blur-text">Affect</span> 情感：了解病人的<span class="blur-text">情绪状态</span><br>③ <span class="blur-text">Trouble</span> 烦恼：了解问题对病人的<span class="blur-text">影响程度</span></td>
+                            <td>17..A <strong>全科医疗的问诊方式</strong><br>（1）<span class="answer-text">BATHE</span>：<br>① <span class="answer-text">Background</span> 背景：了解可能的<span class="answer-text">心理</span>或<span class="answer-text">社会因素</span><br>② <span class="answer-text">Affect</span> 情感：了解病人的<span class="answer-text">情绪状态</span><br>③ <span class="answer-text">Trouble</span> 烦恼：了解问题对病人的<span class="answer-text">影响程度</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>17..B <strong>全科医疗的问诊方式（续）</strong><br>④ <span class="blur-text">Handing</span> 处理：了解病人的<span class="blur-text">自我管理能力</span><br>⑤ <span class="blur-text">Empathy</span> 移情：对病人的不幸表示<span class="blur-text">理解</span>和<span class="blur-text">同情</span>，使他感受到医生的支持<br>（2）<span class="blur-text">RICE</span>：<br>① <span class="blur-text">Reason</span> 原因：病人今天为什么来？<br>② <span class="blur-text">Idea</span> 想法：病人认为自己出了什么问题？<br>③ <span class="blur-text">Concern</span> 担心：病人忧虑什么？<br>④ <span class="blur-text">Expectation</span> 期望：病人认为医生可以帮助他做什么？</td>
+                            <td>17..B <strong>全科医疗的问诊方式（续）</strong><br>④ <span class="answer-text">Handing</span> 处理：了解病人的<span class="answer-text">自我管理能力</span><br>⑤ <span class="answer-text">Empathy</span> 移情：对病人的不幸表示<span class="answer-text">理解</span>和<span class="answer-text">同情</span>，使他感受到医生的支持<br>（2）<span class="answer-text">RICE</span>：<br>① <span class="answer-text">Reason</span> 原因：病人今天为什么来？<br>② <span class="answer-text">Idea</span> 想法：病人认为自己出了什么问题？<br>③ <span class="answer-text">Concern</span> 担心：病人忧虑什么？<br>④ <span class="answer-text">Expectation</span> 期望：病人认为医生可以帮助他做什么？</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>18..<strong>影响人们采取健康行为的因素</strong><br>① 对疾病的<span class="blur-text">严重程度</span>和<span class="blur-text">易感性</span>的认识<br>② 采取相应预防措施的<span class="blur-text">利弊得失</span>，及采取行动所存在的<span class="blur-text">障碍</span><br>③ 患者采取行动的<span class="blur-text">可能性</span><br>④ 将思想转化为实际行动的<span class="blur-text">触发因素</span></td>
+                            <td>18..<strong>影响人们采取健康行为的因素</strong><br>① 对疾病的<span class="answer-text">严重程度</span>和<span class="answer-text">易感性</span>的认识<br>② 采取相应预防措施的<span class="answer-text">利弊得失</span>，及采取行动所存在的<span class="answer-text">障碍</span><br>③ 患者采取行动的<span class="answer-text">可能性</span><br>④ 将思想转化为实际行动的<span class="answer-text">触发因素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>19..<strong>医患关系的内容</strong><br>① <span class="blur-text">技术关系</span>：是医患关系最基本和最主要的表现形式，是非技术关系产生和形成的基础<br>② <span class="blur-text">非技术关系</span>：<span class="blur-text">道德关系</span>、<span class="blur-text">价值关系</span>、<span class="blur-text">情感关系</span>、<span class="blur-text">经济关系</span>、<span class="blur-text">法律关系</span></td>
+                            <td>19..<strong>医患关系的内容</strong><br>① <span class="answer-text">技术关系</span>：是医患关系最基本和最主要的表现形式，是非技术关系产生和形成的基础<br>② <span class="answer-text">非技术关系</span>：<span class="answer-text">道德关系</span>、<span class="answer-text">价值关系</span>、<span class="answer-text">情感关系</span>、<span class="answer-text">经济关系</span>、<span class="answer-text">法律关系</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>20..<strong>医患关系的特征</strong><br>① 双方目的的<span class="blur-text">统一性</span><br>② 双方利益的<span class="blur-text">一致性</span><br>③ 双方信息的<span class="blur-text">不对称性</span><br>④ 医疗过程的<span class="blur-text">互动性</span></td>
+                            <td>20..<strong>医患关系的特征</strong><br>① 双方目的的<span class="answer-text">统一性</span><br>② 双方利益的<span class="answer-text">一致性</span><br>③ 双方信息的<span class="answer-text">不对称性</span><br>④ 医疗过程的<span class="answer-text">互动性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>21..<strong>家庭的类型</strong><br>（1）<span class="blur-text">核心家庭</span>：由<span class="blur-text">父母及其未婚子女</span>组成的家庭或/和<span class="blur-text">无子女夫妇</span>组成的家庭，也包括<span class="blur-text">养父母及养子女</span>组成的家庭<br>（2）<span class="blur-text">主干家庭</span>：由<span class="blur-text">一对已婚子女</span>同其<span class="blur-text">父母</span>、<span class="blur-text">未婚子女</span>或<span class="blur-text">未婚兄弟</span>组成，又称"<span class="blur-text">直系家庭</span>"，家有两代以上的成员，同代只有一对结婚<br>（3）<span class="blur-text">联合家庭</span>：同代有<span class="blur-text">2对以上已婚</span>（含2对）及其他成员组成的家庭。又称"<span class="blur-text">复式家庭</span>"或"<span class="blur-text">大家庭</span>"<br>（4）<span class="blur-text">其他家庭类型</span>：<span class="blur-text">单亲家庭</span>、<span class="blur-text">单身家庭</span>、<span class="blur-text">同居家庭</span>、<span class="blur-text">群居体</span>、<span class="blur-text">同性恋家庭</span>等</td>
+                            <td>21..<strong>家庭的类型</strong><br>（1）<span class="answer-text">核心家庭</span>：由<span class="answer-text">父母及其未婚子女</span>组成的家庭或/和<span class="answer-text">无子女夫妇</span>组成的家庭，也包括<span class="answer-text">养父母及养子女</span>组成的家庭<br>（2）<span class="answer-text">主干家庭</span>：由<span class="answer-text">一对已婚子女</span>同其<span class="answer-text">父母</span>、<span class="answer-text">未婚子女</span>或<span class="answer-text">未婚兄弟</span>组成，又称"<span class="answer-text">直系家庭</span>"，家有两代以上的成员，同代只有一对结婚<br>（3）<span class="answer-text">联合家庭</span>：同代有<span class="answer-text">2对以上已婚</span>（含2对）及其他成员组成的家庭。又称"<span class="answer-text">复式家庭</span>"或"<span class="answer-text">大家庭</span>"<br>（4）<span class="answer-text">其他家庭类型</span>：<span class="answer-text">单亲家庭</span>、<span class="answer-text">单身家庭</span>、<span class="answer-text">同居家庭</span>、<span class="answer-text">群居体</span>、<span class="answer-text">同性恋家庭</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>22..<strong>家庭权力结构</strong><br>① <span class="blur-text">传统权威型</span>：<span class="blur-text">父权</span><br>② <span class="blur-text">工具权威型</span>：负责<span class="blur-text">供养家庭</span>，掌握<span class="blur-text">经济大权</span>的人<br>③ <span class="blur-text">感情权威型</span>：在家庭感情生活中起决定作用的人主宰大权，其他家庭成员因对他/她的<span class="blur-text">感情</span>而承认其权威<br>④ <span class="blur-text">分享权威型</span>：家庭成员均可<span class="blur-text">分享权利</span>，<span class="blur-text">共同决策</span>，共同承担家庭义务，以个人的<span class="blur-text">兴趣</span>和<span class="blur-text">能力</span>为家庭贡献力量——<span class="blur-text">理想的家庭权力类型</span></td>
+                            <td>22..<strong>家庭权力结构</strong><br>① <span class="answer-text">传统权威型</span>：<span class="answer-text">父权</span><br>② <span class="answer-text">工具权威型</span>：负责<span class="answer-text">供养家庭</span>，掌握<span class="answer-text">经济大权</span>的人<br>③ <span class="answer-text">感情权威型</span>：在家庭感情生活中起决定作用的人主宰大权，其他家庭成员因对他/她的<span class="answer-text">感情</span>而承认其权威<br>④ <span class="answer-text">分享权威型</span>：家庭成员均可<span class="answer-text">分享权利</span>，<span class="answer-text">共同决策</span>，共同承担家庭义务，以个人的<span class="answer-text">兴趣</span>和<span class="answer-text">能力</span>为家庭贡献力量——<span class="answer-text">理想的家庭权力类型</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>23..<strong>家庭的功能</strong><br>① <span class="blur-text">感情需求</span><br>② <span class="blur-text">性和生殖</span>的需求<br>③ <span class="blur-text">抚养和赡养</span><br>④ <span class="blur-text">社会化</span>功能<br>⑤ <span class="blur-text">经济</span>功能<br>⑥ <span class="blur-text">赋予成员地位</span></td>
+                            <td>23..<strong>家庭的功能</strong><br>① <span class="answer-text">感情需求</span><br>② <span class="answer-text">性和生殖</span>的需求<br>③ <span class="answer-text">抚养和赡养</span><br>④ <span class="answer-text">社会化</span>功能<br>⑤ <span class="answer-text">经济</span>功能<br>⑥ <span class="answer-text">赋予成员地位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>24..A <strong>新婚期家庭主要面临的问题及保健特点</strong><br>（1）主要面临的问题：<br>① <span class="blur-text">适应人际关系</span><br>② 双方<span class="blur-text">互相适应</span>及<span class="blur-text">沟通</span><br>③ <span class="blur-text">预备做父母</span><br>④ <span class="blur-text">性生活协调</span>和<span class="blur-text">计划生育</span></td>
+                            <td>24..A <strong>新婚期家庭主要面临的问题及保健特点</strong><br>（1）主要面临的问题：<br>① <span class="answer-text">适应人际关系</span><br>② 双方<span class="answer-text">互相适应</span>及<span class="answer-text">沟通</span><br>③ <span class="answer-text">预备做父母</span><br>④ <span class="answer-text">性生活协调</span>和<span class="answer-text">计划生育</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>24..B <strong>新婚期家庭主要面临的问题及保健特点（续）</strong><br>（2）保健服务重点：<br>① <span class="blur-text">沟通与咨询</span><br>② <span class="blur-text">性生活与生育指导</span></td>
+                            <td>24..B <strong>新婚期家庭主要面临的问题及保健特点（续）</strong><br>（2）保健服务重点：<br>① <span class="answer-text">沟通与咨询</span><br>② <span class="answer-text">性生活与生育指导</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">25..<strong>第一个孩子出生期、学龄前儿童期、学龄儿童期、青少年期、孩子离家期、空巢期、退休期</strong><br>（图示题，原文未提供详细内容，保留标题）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>26..<strong>了解家庭生活周期的意义</strong><br>① 家庭医生鉴别家庭发展状态<span class="blur-text">正常</span>、<span class="blur-text">异常</span>的依据<br>② <span class="blur-text">预测</span>、<span class="blur-text">识别</span>家庭在特定阶段可能（已经）出现的问题<br>③ 根据生活周期及时进行相应的<span class="blur-text">教育</span>和<span class="blur-text">咨询</span><br>④ 采取相应的<span class="blur-text">预防</span>和<span class="blur-text">干预</span>措施，避免出现严重后果</td>
+                            <td>26..<strong>了解家庭生活周期的意义</strong><br>① 家庭医生鉴别家庭发展状态<span class="answer-text">正常</span>、<span class="answer-text">异常</span>的依据<br>② <span class="answer-text">预测</span>、<span class="answer-text">识别</span>家庭在特定阶段可能（已经）出现的问题<br>③ 根据生活周期及时进行相应的<span class="answer-text">教育</span>和<span class="answer-text">咨询</span><br>④ 采取相应的<span class="answer-text">预防</span>和<span class="answer-text">干预</span>措施，避免出现严重后果</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>27..<strong>家庭关怀度指数测评量表(APGAR量表)</strong><br>简便反映家庭成员对家庭功能的<span class="blur-text">主观满意度</span><br>① <span class="blur-text">适应度</span>：家庭危机时利用家庭内外资源<span class="blur-text">解决问题</span>的能力<br>② <span class="blur-text">合作度</span>：家庭成员<span class="blur-text">分担责任</span>和<span class="blur-text">共同做出决定</span>的程度<br>③ <span class="blur-text">成熟度</span>：家庭成员通过相互支持所达到的<span class="blur-text">身心成熟程度</span>和<span class="blur-text">自我实现</span>的程度<br>④ <span class="blur-text">情感度</span>：家庭成员间<span class="blur-text">相爱</span>的程度<br>⑤ <span class="blur-text">亲密度</span>：家庭成员<span class="blur-text">共同作决定</span>的程度（行为）（相聚、共享时光、金钱和空间）</td>
+                            <td>27..<strong>家庭关怀度指数测评量表(APGAR量表)</strong><br>简便反映家庭成员对家庭功能的<span class="answer-text">主观满意度</span><br>① <span class="answer-text">适应度</span>：家庭危机时利用家庭内外资源<span class="answer-text">解决问题</span>的能力<br>② <span class="answer-text">合作度</span>：家庭成员<span class="answer-text">分担责任</span>和<span class="answer-text">共同做出决定</span>的程度<br>③ <span class="answer-text">成熟度</span>：家庭成员通过相互支持所达到的<span class="answer-text">身心成熟程度</span>和<span class="answer-text">自我实现</span>的程度<br>④ <span class="answer-text">情感度</span>：家庭成员间<span class="answer-text">相爱</span>的程度<br>⑤ <span class="answer-text">亲密度</span>：家庭成员<span class="answer-text">共同作决定</span>的程度（行为）（相聚、共享时光、金钱和空间）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>28..A <strong>家庭的内外资源</strong><br>（1）<span class="blur-text">家庭内资源（FAMLIS）</span>：<br>① <span class="blur-text">经济支持（Financial）</span>：家庭对成员提供的各种<span class="blur-text">金钱</span>、<span class="blur-text">财物</span>的支持<br>② <span class="blur-text">维护支持（Advocacy）</span>：家庭对其成员<span class="blur-text">名誉</span>、<span class="blur-text">地位</span>、<span class="blur-text">权利</span>和<span class="blur-text">健康</span>的维护和支持<br>③ <span class="blur-text">医疗处理（Medical management）</span>：为家人提供和安排<span class="blur-text">医疗照顾</span>的能力<br>④ <span class="blur-text">情感支持（Love support）</span>：家庭对成员的<span class="blur-text">关爱</span>及<span class="blur-text">精神</span>支持<br>⑤ <span class="blur-text">信息和教育（Information and education）</span>：为提供<span class="blur-text">医疗信息</span>及<span class="blur-text">建议</span>，家庭内部的<span class="blur-text">健康教育</span><br>⑥ <span class="blur-text">结构支持（Structural support）</span>：家庭<span class="blur-text">住所</span>或<span class="blur-text">设施</span>的改变，以适应患病成员的需求</td>
+                            <td>28..A <strong>家庭的内外资源</strong><br>（1）<span class="answer-text">家庭内资源（FAMLIS）</span>：<br>① <span class="answer-text">经济支持（Financial）</span>：家庭对成员提供的各种<span class="answer-text">金钱</span>、<span class="answer-text">财物</span>的支持<br>② <span class="answer-text">维护支持（Advocacy）</span>：家庭对其成员<span class="answer-text">名誉</span>、<span class="answer-text">地位</span>、<span class="answer-text">权利</span>和<span class="answer-text">健康</span>的维护和支持<br>③ <span class="answer-text">医疗处理（Medical management）</span>：为家人提供和安排<span class="answer-text">医疗照顾</span>的能力<br>④ <span class="answer-text">情感支持（Love support）</span>：家庭对成员的<span class="answer-text">关爱</span>及<span class="answer-text">精神</span>支持<br>⑤ <span class="answer-text">信息和教育（Information and education）</span>：为提供<span class="answer-text">医疗信息</span>及<span class="answer-text">建议</span>，家庭内部的<span class="answer-text">健康教育</span><br>⑥ <span class="answer-text">结构支持（Structural support）</span>：家庭<span class="answer-text">住所</span>或<span class="answer-text">设施</span>的改变，以适应患病成员的需求</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>28..B <strong>家庭的内外资源（续）</strong><br>（2）<span class="blur-text">家庭外资源（SCREEEM）</span>：<br>① <span class="blur-text">社会资源（Social resources）</span>：<span class="blur-text">亲朋好友</span>及<span class="blur-text">社会团体</span>的关怀和支持<br>② <span class="blur-text">文化资源（Cultural resources）</span>：<span class="blur-text">文化</span>、<span class="blur-text">传统</span>、<span class="blur-text">习俗教育</span>等方面的支持<br>③ <span class="blur-text">宗教资源（Religious resources）</span>：来自<span class="blur-text">宗教信仰</span>及<span class="blur-text">宗教团体</span>的支持<br>④ <span class="blur-text">经济资源（Economic resources）</span>：来自家庭之外的<span class="blur-text">收入</span>、<span class="blur-text">赞助</span>、<span class="blur-text">保险</span>、<span class="blur-text">福利</span>等支持<br>⑤ <span class="blur-text">教育资源（Educational resources）</span>：<span class="blur-text">教育制度</span>、<span class="blur-text">方式</span>、<span class="blur-text">水平</span>、<span class="blur-text">机会</span>等<br>⑥ <span class="blur-text">环境资源（Environmental resources）</span>：所居社区的<span class="blur-text">医疗设施</span>、<span class="blur-text">居家环境</span>、<span class="blur-text">公共环境</span>等<br>⑦ <span class="blur-text">医疗资源（Medical resources）</span>：<span class="blur-text">医疗保健机构</span>、<span class="blur-text">卫生保健制度</span>及<span class="blur-text">卫生服务的可及性</span>、<span class="blur-text">可用性</span></td>
+                            <td>28..B <strong>家庭的内外资源（续）</strong><br>（2）<span class="answer-text">家庭外资源（SCREEEM）</span>：<br>① <span class="answer-text">社会资源（Social resources）</span>：<span class="answer-text">亲朋好友</span>及<span class="answer-text">社会团体</span>的关怀和支持<br>② <span class="answer-text">文化资源（Cultural resources）</span>：<span class="answer-text">文化</span>、<span class="answer-text">传统</span>、<span class="answer-text">习俗教育</span>等方面的支持<br>③ <span class="answer-text">宗教资源（Religious resources）</span>：来自<span class="answer-text">宗教信仰</span>及<span class="answer-text">宗教团体</span>的支持<br>④ <span class="answer-text">经济资源（Economic resources）</span>：来自家庭之外的<span class="answer-text">收入</span>、<span class="answer-text">赞助</span>、<span class="answer-text">保险</span>、<span class="answer-text">福利</span>等支持<br>⑤ <span class="answer-text">教育资源（Educational resources）</span>：<span class="answer-text">教育制度</span>、<span class="answer-text">方式</span>、<span class="answer-text">水平</span>、<span class="answer-text">机会</span>等<br>⑥ <span class="answer-text">环境资源（Environmental resources）</span>：所居社区的<span class="answer-text">医疗设施</span>、<span class="answer-text">居家环境</span>、<span class="answer-text">公共环境</span>等<br>⑦ <span class="answer-text">医疗资源（Medical resources）</span>：<span class="answer-text">医疗保健机构</span>、<span class="answer-text">卫生保健制度</span>及<span class="answer-text">卫生服务的可及性</span>、<span class="answer-text">可用性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>29..<strong>家庭凝聚度和适应度</strong><br>（1）<span class="blur-text">凝聚度</span>：反映成员间的<span class="blur-text">亲密</span>及其<span class="blur-text">自主性</span>，凝聚度异常往往是家庭功能不良的原因。异常凝聚度：<span class="blur-text">缠结型</span>、<span class="blur-text">联结型</span>、<span class="blur-text">分离型</span>、<span class="blur-text">破碎型</span><br>（2）<span class="blur-text">适应度</span>：描述了成员的<span class="blur-text">适应力</span>及家庭对生活压力的反应和调适能力。分为：<span class="blur-text">混乱型</span>、<span class="blur-text">灵活型</span>、<span class="blur-text">结构型</span>、<span class="blur-text">僵硬型</span></td>
+                            <td>29..<strong>家庭凝聚度和适应度</strong><br>（1）<span class="answer-text">凝聚度</span>：反映成员间的<span class="answer-text">亲密</span>及其<span class="answer-text">自主性</span>，凝聚度异常往往是家庭功能不良的原因。异常凝聚度：<span class="answer-text">缠结型</span>、<span class="answer-text">联结型</span>、<span class="answer-text">分离型</span>、<span class="answer-text">破碎型</span><br>（2）<span class="answer-text">适应度</span>：描述了成员的<span class="answer-text">适应力</span>及家庭对生活压力的反应和调适能力。分为：<span class="answer-text">混乱型</span>、<span class="answer-text">灵活型</span>、<span class="answer-text">结构型</span>、<span class="answer-text">僵硬型</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>30..<strong>家庭访视的类型</strong><br>① <span class="blur-text">评估性访视</span><br>② <span class="blur-text">连续性访视</span><br>③ <span class="blur-text">急诊性访视</span><br>④ <span class="blur-text">随机性访视</span></td>
+                            <td>30..<strong>家庭访视的类型</strong><br>① <span class="answer-text">评估性访视</span><br>② <span class="answer-text">连续性访视</span><br>③ <span class="answer-text">急诊性访视</span><br>④ <span class="answer-text">随机性访视</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>31..<strong>社区的基本要素</strong><br>① 一定的<span class="blur-text">人口数量</span>（第一要素）：约<span class="blur-text">10万~30万</span><br>② 一定的<span class="blur-text">地域空间</span>：面积<span class="blur-text">5000~50000km2</span><br>③ 一定的<span class="blur-text">生活服务设施</span><br>④ <span class="blur-text">心理认同感</span>、<span class="blur-text">归属感</span><br>⑤ 相应的<span class="blur-text">管理机构</span>和<span class="blur-text">制度</span></td>
+                            <td>31..<strong>社区的基本要素</strong><br>① 一定的<span class="answer-text">人口数量</span>（第一要素）：约<span class="answer-text">10万~30万</span><br>② 一定的<span class="answer-text">地域空间</span>：面积<span class="answer-text">5000~50000km2</span><br>③ 一定的<span class="answer-text">生活服务设施</span><br>④ <span class="answer-text">心理认同感</span>、<span class="answer-text">归属感</span><br>⑤ 相应的<span class="answer-text">管理机构</span>和<span class="answer-text">制度</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>32..<strong>COPC的基本要素</strong><br>① <span class="blur-text">基层医疗单位</span><br>② <span class="blur-text">特定的人群</span><br>③ <span class="blur-text">确认</span>和<span class="blur-text">解决健康问题</span>的过程</td>
+                            <td>32..<strong>COPC的基本要素</strong><br>① <span class="answer-text">基层医疗单位</span><br>② <span class="answer-text">特定的人群</span><br>③ <span class="answer-text">确认</span>和<span class="answer-text">解决健康问题</span>的过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>33..<strong>以社区为导向的意义</strong><br>① 通过以社区为范围的服务，了解人群健康问题的<span class="blur-text">缘由</span><br>② 社区是<span class="blur-text">健康隐患</span>的重要背景<br>③ 以社区为范围，医生关心<span class="blur-text">健康人群</span>、<span class="blur-text">求助者</span>和<span class="blur-text">病人</span>，这样方能完整地维护居民健康，将<span class="blur-text">预防</span>、<span class="blur-text">病患</span>、<span class="blur-text">传播方式</span>包围其中。社区预防比个体诊治对人群更有意义<br>④ 以社区为范围的服务，能<span class="blur-text">合理利用有限的卫生资源</span>，动员<span class="blur-text">群防群治</span>，最大限度满足居民的健康需求<br>⑤ 以社区为范围的服务，有效的<span class="blur-text">控制疾病</span>在社区的流行<br>⑥ 以社区为主体的基层医疗，是"<span class="blur-text">人人享有卫生保健</span>"的途径</td>
+                            <td>33..<strong>以社区为导向的意义</strong><br>① 通过以社区为范围的服务，了解人群健康问题的<span class="answer-text">缘由</span><br>② 社区是<span class="answer-text">健康隐患</span>的重要背景<br>③ 以社区为范围，医生关心<span class="answer-text">健康人群</span>、<span class="answer-text">求助者</span>和<span class="answer-text">病人</span>，这样方能完整地维护居民健康，将<span class="answer-text">预防</span>、<span class="answer-text">病患</span>、<span class="answer-text">传播方式</span>包围其中。社区预防比个体诊治对人群更有意义<br>④ 以社区为范围的服务，能<span class="answer-text">合理利用有限的卫生资源</span>，动员<span class="answer-text">群防群治</span>，最大限度满足居民的健康需求<br>⑤ 以社区为范围的服务，有效的<span class="answer-text">控制疾病</span>在社区的流行<br>⑥ 以社区为主体的基层医疗，是"<span class="answer-text">人人享有卫生保健</span>"的途径</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>34..<strong>COPC的实施分级</strong><br>① <span class="blur-text">0级</span>：提供<span class="blur-text">非连续性</span>的医疗服务<br>② <span class="blur-text">1级</span>：无<span class="blur-text">第一手健康问题资料</span>，以主观印象推断解决问题的方案<br>③ <span class="blur-text">2级</span>：有健康问题的<span class="blur-text">二手资料</span>，具备<span class="blur-text">制定计划</span>和<span class="blur-text">评估</span>的能力<br>④ <span class="blur-text">3级</span>：有健康问题的<span class="blur-text">一手资料</span>，能针对社区问题采取<span class="blur-text">对策</span>，缺乏<span class="blur-text">预防策略</span><br>⑤ <span class="blur-text">4级</span>：建立<span class="blur-text">资料收集系统</span>，具有有效的<span class="blur-text">预防保健</span>和<span class="blur-text">疾病治疗</span>措施</td>
+                            <td>34..<strong>COPC的实施分级</strong><br>① <span class="answer-text">0级</span>：提供<span class="answer-text">非连续性</span>的医疗服务<br>② <span class="answer-text">1级</span>：无<span class="answer-text">第一手健康问题资料</span>，以主观印象推断解决问题的方案<br>③ <span class="answer-text">2级</span>：有健康问题的<span class="answer-text">二手资料</span>，具备<span class="answer-text">制定计划</span>和<span class="answer-text">评估</span>的能力<br>④ <span class="answer-text">3级</span>：有健康问题的<span class="answer-text">一手资料</span>，能针对社区问题采取<span class="answer-text">对策</span>，缺乏<span class="answer-text">预防策略</span><br>⑤ <span class="answer-text">4级</span>：建立<span class="answer-text">资料收集系统</span>，具有有效的<span class="answer-text">预防保健</span>和<span class="answer-text">疾病治疗</span>措施</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>35..<strong>社区诊断的步骤</strong><br>① <span class="blur-text">收集整理资料</span><br>② 确定社区<span class="blur-text">主要健康问题</span>及<span class="blur-text">优先解决问题的顺序</span><br>③ 做出<span class="blur-text">社区诊断报告</span>，制定<span class="blur-text">社区卫生计划</span><br>④ <span class="blur-text">实施社区计划</span><br>⑤ <span class="blur-text">计划效果评估</span></td>
+                            <td>35..<strong>社区诊断的步骤</strong><br>① <span class="answer-text">收集整理资料</span><br>② 确定社区<span class="answer-text">主要健康问题</span>及<span class="answer-text">优先解决问题的顺序</span><br>③ 做出<span class="answer-text">社区诊断报告</span>，制定<span class="answer-text">社区卫生计划</span><br>④ <span class="answer-text">实施社区计划</span><br>⑤ <span class="answer-text">计划效果评估</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>36..<strong>社区诊断的目的</strong><br>① 找出本社区人群的<span class="blur-text">主要的健康问题</span><br>② 找出造成这些健康问题的可能<span class="blur-text">原因</span>和<span class="blur-text">影响因素</span><br>③ 确定本社区卫生服务需要<span class="blur-text">优先解决的健康问题</span><br>④ 了解本社区<span class="blur-text">基本状况</span>及<span class="blur-text">卫生服务需求</span><br>⑤ 为社区卫生服务<span class="blur-text">效果的评价</span>提供依据</td>
+                            <td>36..<strong>社区诊断的目的</strong><br>① 找出本社区人群的<span class="answer-text">主要的健康问题</span><br>② 找出造成这些健康问题的可能<span class="answer-text">原因</span>和<span class="answer-text">影响因素</span><br>③ 确定本社区卫生服务需要<span class="answer-text">优先解决的健康问题</span><br>④ 了解本社区<span class="answer-text">基本状况</span>及<span class="answer-text">卫生服务需求</span><br>⑤ 为社区卫生服务<span class="answer-text">效果的评价</span>提供依据</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>37..<strong>临床预防医学服务的内容与方法</strong><br>① <span class="blur-text">健康咨询</span><br>② <span class="blur-text">筛检试验</span>：<span class="blur-text">周期性健康检查</span>、<span class="blur-text">病例发现</span>（发现患者除就诊原因以外的其他疾病）<br>③ <span class="blur-text">免疫预防</span>：<span class="blur-text">第一级预防</span>措施<br>④ <span class="blur-text">化学预防</span>：<span class="blur-text">无症状者</span></td>
+                            <td>37..<strong>临床预防医学服务的内容与方法</strong><br>① <span class="answer-text">健康咨询</span><br>② <span class="answer-text">筛检试验</span>：<span class="answer-text">周期性健康检查</span>、<span class="answer-text">病例发现</span>（发现患者除就诊原因以外的其他疾病）<br>③ <span class="answer-text">免疫预防</span>：<span class="answer-text">第一级预防</span>措施<br>④ <span class="answer-text">化学预防</span>：<span class="answer-text">无症状者</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>38..<strong>健康管理的基本步骤</strong><br>① 了解<span class="blur-text">个体健康情况</span>：<span class="blur-text">健康状况监测</span>和<span class="blur-text">信息收集</span>，建立<span class="blur-text">健康档案</span><br>② <span class="blur-text">健康和疾病风险性评估</span>，<span class="blur-text">量化评估</span><br>③ 开展<span class="blur-text">健康危险因素干预</span>：<span class="blur-text">个体化的干预计划</span><br>④ 进行<span class="blur-text">干预效果评价</span></td>
+                            <td>38..<strong>健康管理的基本步骤</strong><br>① 了解<span class="answer-text">个体健康情况</span>：<span class="answer-text">健康状况监测</span>和<span class="answer-text">信息收集</span>，建立<span class="answer-text">健康档案</span><br>② <span class="answer-text">健康和疾病风险性评估</span>，<span class="answer-text">量化评估</span><br>③ 开展<span class="answer-text">健康危险因素干预</span>：<span class="answer-text">个体化的干预计划</span><br>④ 进行<span class="answer-text">干预效果评价</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>39..A <strong>健康管理PDCA循环</strong><br>① <span class="blur-text">Plan</span> 健康计划：<span class="blur-text">健康档案建立</span>、<span class="blur-text">危险因素评估</span>、制定<span class="blur-text">干预计划</span><br>② <span class="blur-text">Do</span> 健康干预：<br><span class="blur-text">医生干预</span>：<span class="blur-text">营养素</span>及<span class="blur-text">药物</span>干预<br><span class="blur-text">生活干预</span>：<span class="blur-text">膳食</span>和<span class="blur-text">运动</span>管理<br><span class="blur-text">心理干预</span>：<span class="blur-text">个性化</span></td>
+                            <td>39..A <strong>健康管理PDCA循环</strong><br>① <span class="answer-text">Plan</span> 健康计划：<span class="answer-text">健康档案建立</span>、<span class="answer-text">危险因素评估</span>、制定<span class="answer-text">干预计划</span><br>② <span class="answer-text">Do</span> 健康干预：<br><span class="answer-text">医生干预</span>：<span class="answer-text">营养素</span>及<span class="answer-text">药物</span>干预<br><span class="answer-text">生活干预</span>：<span class="answer-text">膳食</span>和<span class="answer-text">运动</span>管理<br><span class="answer-text">心理干预</span>：<span class="answer-text">个性化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>39..B <strong>健康管理PDCA循环（续）</strong><br>③ <span class="blur-text">Check</span> 检查：<br><span class="blur-text">跟踪监测</span>：医生定期跟踪监测实际执行情况<br><span class="blur-text">信息反馈</span><br>④ <span class="blur-text">Action</span> 效果评价、改进干预：对总结检查的结果进行处理</td>
+                            <td>39..B <strong>健康管理PDCA循环（续）</strong><br>③ <span class="answer-text">Check</span> 检查：<br><span class="answer-text">跟踪监测</span>：医生定期跟踪监测实际执行情况<br><span class="answer-text">信息反馈</span><br>④ <span class="answer-text">Action</span> 效果评价、改进干预：对总结检查的结果进行处理</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>40..<strong>健康促进的领域</strong><br>① 制定<span class="blur-text">促进健康的公共政策</span><br>② 创造<span class="blur-text">支持性环境</span><br>③ 加强<span class="blur-text">社区行动</span><br>④ 发展<span class="blur-text">个人技能</span><br>⑤ <span class="blur-text">调整卫生服务方向</span></td>
+                            <td>40..<strong>健康促进的领域</strong><br>① 制定<span class="answer-text">促进健康的公共政策</span><br>② 创造<span class="answer-text">支持性环境</span><br>③ 加强<span class="answer-text">社区行动</span><br>④ 发展<span class="answer-text">个人技能</span><br>⑤ <span class="answer-text">调整卫生服务方向</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>41..A <strong>全科医学临床思维特征</strong><br>（1）<span class="blur-text">以病人为中心的系统思维模式</span>：<br>① 充分了解<span class="blur-text">病人</span><br>② 关注病人的<span class="blur-text">就医背景</span><br>③ 以<span class="blur-text">生物-心理-社会</span>的医学模式确认现存问题<br>④ 体现<span class="blur-text">全人照顾</span>的特点</td>
+                            <td>41..A <strong>全科医学临床思维特征</strong><br>（1）<span class="answer-text">以病人为中心的系统思维模式</span>：<br>① 充分了解<span class="answer-text">病人</span><br>② 关注病人的<span class="answer-text">就医背景</span><br>③ 以<span class="answer-text">生物-心理-社会</span>的医学模式确认现存问题<br>④ 体现<span class="answer-text">全人照顾</span>的特点</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>41..B <strong>全科医学临床思维特征（续）</strong><br>（2）<span class="blur-text">以问题为导向的诊疗思维模式</span><br>（3）<span class="blur-text">以证据为基础的临床思维模式</span>：<span class="blur-text">5A程序</span><br>① <span class="blur-text">提出问题</span><br>② <span class="blur-text">寻找证据</span><br>③ <span class="blur-text">评价证据</span><br>④ <span class="blur-text">应用证据</span><br>⑤ <span class="blur-text">评价结果</span></td>
+                            <td>41..B <strong>全科医学临床思维特征（续）</strong><br>（2）<span class="answer-text">以问题为导向的诊疗思维模式</span><br>（3）<span class="answer-text">以证据为基础的临床思维模式</span>：<span class="answer-text">5A程序</span><br>① <span class="answer-text">提出问题</span><br>② <span class="answer-text">寻找证据</span><br>③ <span class="answer-text">评价证据</span><br>④ <span class="answer-text">应用证据</span><br>⑤ <span class="answer-text">评价结果</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>42..<strong>社区常见健康问题的临床特点</strong><br>① 大部分健康问题属于疾病的<span class="blur-text">早期</span>和<span class="blur-text">未分化阶段</span><br>② 常伴随大量的<span class="blur-text">心理</span>、<span class="blur-text">社会</span>问题<br>③ 疾病和健康问题具有很大的<span class="blur-text">变异性</span>和<span class="blur-text">隐蔽性</span><br>④ <span class="blur-text">慢性疾病</span>多见，就诊频率高<br>⑤ 健康问题的成因和影响是<span class="blur-text">多维度</span>和<span class="blur-text">错综复杂</span>的<br>⑥ 健康问题分类特征：<span class="blur-text">健康问题</span>多于<span class="blur-text">疾病</span>，<span class="blur-text">常见病</span>多于<span class="blur-text">罕见病</span></td>
+                            <td>42..<strong>社区常见健康问题的临床特点</strong><br>① 大部分健康问题属于疾病的<span class="answer-text">早期</span>和<span class="answer-text">未分化阶段</span><br>② 常伴随大量的<span class="answer-text">心理</span>、<span class="answer-text">社会</span>问题<br>③ 疾病和健康问题具有很大的<span class="answer-text">变异性</span>和<span class="answer-text">隐蔽性</span><br>④ <span class="answer-text">慢性疾病</span>多见，就诊频率高<br>⑤ 健康问题的成因和影响是<span class="answer-text">多维度</span>和<span class="answer-text">错综复杂</span>的<br>⑥ 健康问题分类特征：<span class="answer-text">健康问题</span>多于<span class="answer-text">疾病</span>，<span class="answer-text">常见病</span>多于<span class="answer-text">罕见病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>43..<strong>全科医生应特别的最重要的技能</strong><br>① 能够在疾病的早期将<span class="blur-text">严重的</span>、<span class="blur-text">威胁生命的疾病</span>从<span class="blur-text">一过性</span>、<span class="blur-text">轻微的疾患</span>中鉴别出来<br>② 具备从<span class="blur-text">心理</span>、<span class="blur-text">生理</span>、<span class="blur-text">社会</span>维度对疾病或健康问题进行诊断的知识和技能，能够从问题产生的<span class="blur-text">生物源性</span>、<span class="blur-text">心理</span>及<span class="blur-text">社会源性</span>着手对问题进行分析、鉴定及有效的干预</td>
+                            <td>43..<strong>全科医生应特别的最重要的技能</strong><br>① 能够在疾病的早期将<span class="answer-text">严重的</span>、<span class="answer-text">威胁生命的疾病</span>从<span class="answer-text">一过性</span>、<span class="answer-text">轻微的疾患</span>中鉴别出来<br>② 具备从<span class="answer-text">心理</span>、<span class="answer-text">生理</span>、<span class="answer-text">社会</span>维度对疾病或健康问题进行诊断的知识和技能，能够从问题产生的<span class="answer-text">生物源性</span>、<span class="answer-text">心理</span>及<span class="answer-text">社会源性</span>着手对问题进行分析、鉴定及有效的干预</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>44..<strong>全科医生诊断方法</strong><br>① <span class="blur-text">病因的初步诊断</span>方法<br>② 掌握基本的<span class="blur-text">临床诊断思维</span>方法<br>③ 实施<span class="blur-text">临床推理</span>的基本方法<br>④ 运用<span class="blur-text">疾病概率</span>的方法进行推理和判断<br>⑤ 掌握对<span class="blur-text">假设进行验证</span>的基本方法</td>
+                            <td>44..<strong>全科医生诊断方法</strong><br>① <span class="answer-text">病因的初步诊断</span>方法<br>② 掌握基本的<span class="answer-text">临床诊断思维</span>方法<br>③ 实施<span class="answer-text">临床推理</span>的基本方法<br>④ 运用<span class="answer-text">疾病概率</span>的方法进行推理和判断<br>⑤ 掌握对<span class="answer-text">假设进行验证</span>的基本方法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>45..<strong>Muragh安全诊断策略</strong><br>① 什么是<span class="blur-text">最可能的诊断</span>？<br>② 哪些是<span class="blur-text">不能漏诊的重要疾病</span>？<br>③ 哪些是<span class="blur-text">经常被漏诊的疾病</span>？<br>④ 这位病人是否患有能<span class="blur-text">伪装其他病情</span>的疾病？<br>⑤ 该病人就诊是否还有<span class="blur-text">另外一层原因</span>？</td>
+                            <td>45..<strong>Muragh安全诊断策略</strong><br>① 什么是<span class="answer-text">最可能的诊断</span>？<br>② 哪些是<span class="answer-text">不能漏诊的重要疾病</span>？<br>③ 哪些是<span class="answer-text">经常被漏诊的疾病</span>？<br>④ 这位病人是否患有能<span class="answer-text">伪装其他病情</span>的疾病？<br>⑤ 该病人就诊是否还有<span class="answer-text">另外一层原因</span>？</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

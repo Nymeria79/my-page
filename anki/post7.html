@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <div class="medical-disclaimer">
+                <strong>⚠️ 医疗免责声明</strong>
+                <p>本站所有内容仅供教育参考与信息分享，不构成医疗建议、诊断或治疗方案。浏览本站不建立医患关系，如有健康疑虑请咨询执业医疗人员。</p>
+            </div>
+
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3"><strong>传染病学名词解释</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1..<strong>感染</strong><br>病原体和人体之间<span class="blur-text">相互作用</span>，<span class="blur-text">相互斗争</span>的过程。</td>
+                            <td>1..<strong>感染</strong><br>病原体和人体之间<span class="answer-text">相互作用</span>，<span class="answer-text">相互斗争</span>的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2..<strong>共生状态</strong><br>微生物、寄生虫与人体之间达到了<span class="blur-text">相互适应</span>、<span class="blur-text">互不损害</span>的共生状态。</td>
+                            <td>2..<strong>共生状态</strong><br>微生物、寄生虫与人体之间达到了<span class="answer-text">相互适应</span>、<span class="answer-text">互不损害</span>的共生状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3..<strong>机会性感染</strong><br>某些因素导致宿主<span class="blur-text">免疫功能受损</span>或大量应用<span class="blur-text">抗菌药物</span>引起的菌群失调症，或机械损伤使寄生物离开其固有的寄生部位而达到其他寄生部位，引起损伤。</td>
+                            <td>3..<strong>机会性感染</strong><br>某些因素导致宿主<span class="answer-text">免疫功能受损</span>或大量应用<span class="answer-text">抗菌药物</span>引起的菌群失调症，或机械损伤使寄生物离开其固有的寄生部位而达到其他寄生部位，引起损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4..<strong><span class="blur-text">首发感染</span> (primary infection)</strong><br>人体<span class="blur-text">初次</span>被某种病原体感染。</td>
+                            <td>4..<strong><span class="answer-text">首发感染</span> (primary infection)</strong><br>人体<span class="answer-text">初次</span>被某种病原体感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5..<strong><span class="blur-text">重复感染</span> (re-infection)</strong><br>人体在某种病原体感染的基础上，<span class="blur-text">再次被同一病原体</span>感染。</td>
+                            <td>5..<strong><span class="answer-text">重复感染</span> (re-infection)</strong><br>人体在某种病原体感染的基础上，<span class="answer-text">再次被同一病原体</span>感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6..<strong><span class="blur-text">混合感染</span> (co-infection)</strong><br><span class="blur-text">同时</span>被<span class="blur-text">两种或两种以上</span>的病原体感染。</td>
+                            <td>6..<strong><span class="answer-text">混合感染</span> (co-infection)</strong><br><span class="answer-text">同时</span>被<span class="answer-text">两种或两种以上</span>的病原体感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7..<strong><span class="blur-text">重叠感染</span> (super infection)</strong><br>人体在某种病原体感染的基础上，<span class="blur-text">再被另外的病原体</span>感染。</td>
+                            <td>7..<strong><span class="answer-text">重叠感染</span> (super infection)</strong><br>人体在某种病原体感染的基础上，<span class="answer-text">再被另外的病原体</span>感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8..<strong><span class="blur-text">继发感染</span> (secondary infection)</strong><br>发生于<span class="blur-text">原发感染后</span>的其他病原体感染。</td>
+                            <td>8..<strong><span class="answer-text">继发感染</span> (secondary infection)</strong><br>发生于<span class="answer-text">原发感染后</span>的其他病原体感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9..A <strong>感染谱</strong><br>病原体进入人体后，由于<span class="blur-text">适应程度</span>的不同，在双方相互斗争的过程中可产生不同的表现。<br>包括：<span class="blur-text">病原体被清除</span>、<span class="blur-text">隐性感染</span>、<span class="blur-text">显性感染</span>、病原携带状态和潜伏性感染。</td>
+                            <td>9..A <strong>感染谱</strong><br>病原体进入人体后，由于<span class="answer-text">适应程度</span>的不同，在双方相互斗争的过程中可产生不同的表现。<br>包括：<span class="answer-text">病原体被清除</span>、<span class="answer-text">隐性感染</span>、<span class="answer-text">显性感染</span>、病原携带状态和潜伏性感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>9..B <strong>感染谱（续）</strong><br>感染谱的五种表现：<br>① <span class="blur-text">病原体被清除</span><br>② <span class="blur-text">隐性感染</span><br>③ <span class="blur-text">显性感染</span><br>④ 病原携带状态<br>⑤ 潜伏性感染</td>
+                            <td>9..B <strong>感染谱（续）</strong><br>感染谱的五种表现：<br>① <span class="answer-text">病原体被清除</span><br>② <span class="answer-text">隐性感染</span><br>③ <span class="answer-text">显性感染</span><br>④ 病原携带状态<br>⑤ 潜伏性感染</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>10..A <strong><span class="blur-text">隐性感染</span> (covert infection)</strong><br>指病原体侵入人体后仅引起机体发生<span class="blur-text">特异性免疫应答</span>而不引起或只引起轻微的<span class="blur-text">组织损伤</span>，因而在临床上不显出任何症状、体征，只有通过<span class="blur-text">免疫学检查</span>才能发现。</td>
+                            <td>10..A <strong><span class="answer-text">隐性感染</span> (covert infection)</strong><br>指病原体侵入人体后仅引起机体发生<span class="answer-text">特异性免疫应答</span>而不引起或只引起轻微的<span class="answer-text">组织损伤</span>，因而在临床上不显出任何症状、体征，只有通过<span class="answer-text">免疫学检查</span>才能发现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10..B <strong><span class="blur-text">隐性感染</span> (covert infection)（续）</strong><br>隐性感染是<span class="blur-text">最常见</span>的表现。<br>隐性感染过程结束后，大多数人获得不同程度的<span class="blur-text">特异性免疫</span>，病原体被清除，少数人转变为<span class="blur-text">病原携带状态</span>（无症状携带者）。</td>
+                            <td>10..B <strong><span class="answer-text">隐性感染</span> (covert infection)（续）</strong><br>隐性感染是<span class="answer-text">最常见</span>的表现。<br>隐性感染过程结束后，大多数人获得不同程度的<span class="answer-text">特异性免疫</span>，病原体被清除，少数人转变为<span class="answer-text">病原携带状态</span>（无症状携带者）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>11..A <strong><span class="blur-text">显性感染</span> (overt infection)</strong><br>指病原体侵入人体后，不但引起机体发生<span class="blur-text">免疫应答</span>，而且通过病原体本身的作用或机体的<span class="blur-text">变态反应</span>而导致<span class="blur-text">组织损伤</span>，引起病理改变和临床表现。</td>
+                            <td>11..A <strong><span class="answer-text">显性感染</span> (overt infection)</strong><br>指病原体侵入人体后，不但引起机体发生<span class="answer-text">免疫应答</span>，而且通过病原体本身的作用或机体的<span class="answer-text">变态反应</span>而导致<span class="answer-text">组织损伤</span>，引起病理改变和临床表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>12..A <strong><span class="blur-text">病原携带状态</span> (carrier state)</strong><br>是指病原体侵入人体后，停留在人体内而<span class="blur-text">无临床症状</span>，<span class="blur-text">携带并排出病原体</span>，病原携带者成为重要的<span class="blur-text">传染源</span>。</td>
+                            <td>12..A <strong><span class="answer-text">病原携带状态</span> (carrier state)</strong><br>是指病原体侵入人体后，停留在人体内而<span class="answer-text">无临床症状</span>，<span class="answer-text">携带并排出病原体</span>，病原携带者成为重要的<span class="answer-text">传染源</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>13..A <strong><span class="blur-text">潜伏性感染</span> (latent infection)</strong><br>病原体感染人体后寄生在机体中某些部位，由于机体<span class="blur-text">免疫功能足以将病原体局限化</span>而不引起显性感染，但又<span class="blur-text">不足以将病原体清除</span>时，病原体便可长期潜伏起来。</td>
+                            <td>13..A <strong><span class="answer-text">潜伏性感染</span> (latent infection)</strong><br>病原体感染人体后寄生在机体中某些部位，由于机体<span class="answer-text">免疫功能足以将病原体局限化</span>而不引起显性感染，但又<span class="answer-text">不足以将病原体清除</span>时，病原体便可长期潜伏起来。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>13..B <strong><span class="blur-text">潜伏性感染</span> (latent infection)（续）</strong><br>待机体<span class="blur-text">免疫功能下降</span>时，这才引起显性感染病。<br>潜伏性感染期间，病原体一般<span class="blur-text">不排出体外</span>。<br>常见的有<span class="blur-text">疱疹病毒</span>。</td>
+                            <td>13..B <strong><span class="answer-text">潜伏性感染</span> (latent infection)（续）</strong><br>待机体<span class="answer-text">免疫功能下降</span>时，这才引起显性感染病。<br>潜伏性感染期间，病原体一般<span class="answer-text">不排出体外</span>。<br>常见的有<span class="answer-text">疱疹病毒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>14..A <strong>传染源</strong><br>是病原体已在体内<span class="blur-text">生长繁殖</span>并能将其<span class="blur-text">排出体外</span>的人和动物。<br>包括：<span class="blur-text">患者</span>、<span class="blur-text">隐性感染者</span>、病原携带者和受感染的动物。</td>
+                            <td>14..A <strong>传染源</strong><br>是病原体已在体内<span class="answer-text">生长繁殖</span>并能将其<span class="answer-text">排出体外</span>的人和动物。<br>包括：<span class="answer-text">患者</span>、<span class="answer-text">隐性感染者</span>、病原携带者和受感染的动物。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">15..<strong>传播途径</strong><br>病原体从传染源排出后，侵入新的易感宿主所经历的一切途径。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>16..<strong>易感人群</strong><br>对某种传染病缺乏<span class="blur-text">特异性免疫</span>的人群。</td>
+                            <td>16..<strong>易感人群</strong><br>对某种传染病缺乏<span class="answer-text">特异性免疫</span>的人群。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>17..<strong>潜伏期</strong><br>从<span class="blur-text">病原体侵入人体</span>至<span class="blur-text">开始出现临床症状</span>为止的时期。</td>
+                            <td>17..<strong>潜伏期</strong><br>从<span class="answer-text">病原体侵入人体</span>至<span class="answer-text">开始出现临床症状</span>为止的时期。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>18..<strong>前驱期</strong><br>从<span class="blur-text">起病</span>至<span class="blur-text">症状明显开始</span>为止的时期。</td>
+                            <td>18..<strong>前驱期</strong><br>从<span class="answer-text">起病</span>至<span class="answer-text">症状明显开始</span>为止的时期。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>19..<strong><span class="blur-text">再燃</span> (recrudescence)</strong><br>传染病患者的临床症状和体征逐渐减轻，但体温尚未恢复正常的缓解阶段，由于潜伏于<span class="blur-text">血液和组织中的病原体</span>再度繁殖，使体温升高，初发的症状与体征<span class="blur-text">再度出现</span>。</td>
+                            <td>19..<strong><span class="answer-text">再燃</span> (recrudescence)</strong><br>传染病患者的临床症状和体征逐渐减轻，但体温尚未恢复正常的缓解阶段，由于潜伏于<span class="answer-text">血液和组织中的病原体</span>再度繁殖，使体温升高，初发的症状与体征<span class="answer-text">再度出现</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>20..<strong><span class="blur-text">复发</span> (relapse)</strong><br>有些传染病患者进入恢复期后已稳定退热一段时间，<span class="blur-text">初发病的症状再度出现</span>，机理为潜伏于<span class="blur-text">组织内的病原体</span>再度繁殖至一定程度。</td>
+                            <td>20..<strong><span class="answer-text">复发</span> (relapse)</strong><br>有些传染病患者进入恢复期后已稳定退热一段时间，<span class="answer-text">初发病的症状再度出现</span>，机理为潜伏于<span class="answer-text">组织内的病原体</span>再度繁殖至一定程度。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>21..<strong><span class="blur-text">后遗症</span> (sequela)</strong><br>恢复期结束后，某些器官功能仍<span class="blur-text">长期未能恢复正常</span>，称为后遗症，多见于<span class="blur-text">中枢神经系统感染</span>。</td>
+                            <td>21..<strong><span class="answer-text">后遗症</span> (sequela)</strong><br>恢复期结束后，某些器官功能仍<span class="answer-text">长期未能恢复正常</span>，称为后遗症，多见于<span class="answer-text">中枢神经系统感染</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>22..A <strong>自然疫源性疾病</strong><br>某些动物源性传染病经常存在于某地区，是由于该地区具有该病的<span class="blur-text">动物传染源</span>、<span class="blur-text">传播媒介</span>及病原体在动物间传播的<span class="blur-text">自然条件</span>。</td>
+                            <td>22..A <strong>自然疫源性疾病</strong><br>某些动物源性传染病经常存在于某地区，是由于该地区具有该病的<span class="answer-text">动物传染源</span>、<span class="answer-text">传播媒介</span>及病原体在动物间传播的<span class="answer-text">自然条件</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">22..B <strong>自然疫源性疾病（续）</strong><br>当人类进入这种地区时可以被感染得病，这些疾病称为自然疫源性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>23..<strong><span class="blur-text">黄疸</span> (jaundice)</strong><br>由于<span class="blur-text">胆红素代谢障碍</span>而引起血清内<span class="blur-text">胆红素浓度升高</span>所致巩膜、黏膜、皮肤及其他组织被染成黄色。</td>
+                            <td>23..<strong><span class="answer-text">黄疸</span> (jaundice)</strong><br>由于<span class="answer-text">胆红素代谢障碍</span>而引起血清内<span class="answer-text">胆红素浓度升高</span>所致巩膜、黏膜、皮肤及其他组织被染成黄色。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>24..A <strong><span class="blur-text">肝性脑病</span> (hepatic encephalopathy)</strong><br>由于<span class="blur-text">肝功能严重损害</span>而导致<span class="blur-text">中枢神经系统功能障碍</span>，出现<span class="blur-text">意识障碍</span>、扑翼样震颤、昏睡或昏迷等的临床表现。</td>
+                            <td>24..A <strong><span class="answer-text">肝性脑病</span> (hepatic encephalopathy)</strong><br>由于<span class="answer-text">肝功能严重损害</span>而导致<span class="answer-text">中枢神经系统功能障碍</span>，出现<span class="answer-text">意识障碍</span>、扑翼样震颤、昏睡或昏迷等的临床表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>25..A <strong><span class="blur-text">肝肾综合征</span></strong><br>重型肝炎或肝硬化时，由于<span class="blur-text">内毒素血症</span>、<span class="blur-text">肾血管收缩</span>、<span class="blur-text">有效血容量下降</span>等因素导致肾小球滤过率和肾血浆流量降低，引起急性肾功能不全。</td>
+                            <td>25..A <strong><span class="answer-text">肝肾综合征</span></strong><br>重型肝炎或肝硬化时，由于<span class="answer-text">内毒素血症</span>、<span class="answer-text">肾血管收缩</span>、<span class="answer-text">有效血容量下降</span>等因素导致肾小球滤过率和肾血浆流量降低，引起急性肾功能不全。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>26..A <strong><span class="blur-text">肝肺综合征</span></strong><br>重型肝炎和肝硬化患者可出现肺水肿、间质性肺炎、胸腔积液和<span class="blur-text">低氧血症</span>等改变，统称为肝肺综合征。<br>产生的根本原因是<span class="blur-text">肺内毛细血管扩张</span>，出现<span class="blur-text">动静脉分流</span>，严重影响气体交换功能所致。</td>
+                            <td>26..A <strong><span class="answer-text">肝肺综合征</span></strong><br>重型肝炎和肝硬化患者可出现肺水肿、间质性肺炎、胸腔积液和<span class="answer-text">低氧血症</span>等改变，统称为肝肺综合征。<br>产生的根本原因是<span class="answer-text">肺内毛细血管扩张</span>，出现<span class="answer-text">动静脉分流</span>，严重影响气体交换功能所致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>27..<strong><span class="blur-text">腹水</span> (ascites)</strong><br>重型肝炎和肝硬化时，由于<span class="blur-text">醛固酮分泌增多</span>和<span class="blur-text">利钠激素的减少</span>导致钠潴留。</td>
+                            <td>27..<strong><span class="answer-text">腹水</span> (ascites)</strong><br>重型肝炎和肝硬化时，由于<span class="answer-text">醛固酮分泌增多</span>和<span class="answer-text">利钠激素的减少</span>导致钠潴留。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>28..A <strong><span class="blur-text">慢性重型肝炎</span>（<span class="blur-text">慢性肝衰竭</span>）</strong><br>在<span class="blur-text">肝硬化</span>基础上，肝功能进行性减退导致的以<span class="blur-text">腹水或门脉高压</span>、<span class="blur-text">凝血功能障碍</span>和肝性脑病等为主要表现的慢性肝功能失代偿。</td>
+                            <td>28..A <strong><span class="answer-text">慢性重型肝炎</span>（<span class="answer-text">慢性肝衰竭</span>）</strong><br>在<span class="answer-text">肝硬化</span>基础上，肝功能进行性减退导致的以<span class="answer-text">腹水或门脉高压</span>、<span class="answer-text">凝血功能障碍</span>和肝性脑病等为主要表现的慢性肝功能失代偿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>29..<strong><span class="blur-text">慢性HBsAg携带者</span></strong><br>无任何症状和体征，肝功能正常，<span class="blur-text">HBsAg持续阳性6个月以上</span>。</td>
+                            <td>29..<strong><span class="answer-text">慢性HBsAg携带者</span></strong><br>无任何症状和体征，肝功能正常，<span class="answer-text">HBsAg持续阳性6个月以上</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>30..A <strong><span class="blur-text">慢性HBV携带者</span></strong><br>是指血清<span class="blur-text">HBsAg和HBV DNA阳性</span>，<span class="blur-text">HBeAg或抗-HBe阳性</span>，但1年内连续随访3次以上，<span class="blur-text">ALT和AST均在正常范围</span>。</td>
+                            <td>30..A <strong><span class="answer-text">慢性HBV携带者</span></strong><br>是指血清<span class="answer-text">HBsAg和HBV DNA阳性</span>，<span class="answer-text">HBeAg或抗-HBe阳性</span>，但1年内连续随访3次以上，<span class="answer-text">ALT和AST均在正常范围</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>31..A <strong><span class="blur-text">隐匿性慢性乙型肝炎</span></strong><br>血清HBsAg阴性，但血清和/或肝组织中<span class="blur-text">HBV DNA阳性</span>，并且有<span class="blur-text">慢性乙型肝炎的临床表现</span>。<br>可伴有血清抗-HBs、抗-HBe和/或抗-HBc阳性。</td>
+                            <td>31..A <strong><span class="answer-text">隐匿性慢性乙型肝炎</span></strong><br>血清HBsAg阴性，但血清和/或肝组织中<span class="answer-text">HBV DNA阳性</span>，并且有<span class="answer-text">慢性乙型肝炎的临床表现</span>。<br>可伴有血清抗-HBs、抗-HBe和/或抗-HBc阳性。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>32..A <strong><span class="blur-text">肝衰竭</span>（<span class="blur-text">重型肝炎</span>）</strong><br>表现为一系列肝衰竭综合征，<span class="blur-text">凝血酶原活动度PTA<40%</span>。<br>包括：<span class="blur-text">急性肝衰竭</span>（2周内）、<span class="blur-text">亚急性肝衰竭</span>（2周~6月）、<span class="blur-text">慢加急性肝衰竭</span>（6月以上）和慢性肝衰竭（肝硬化）。</td>
+                            <td>32..A <strong><span class="answer-text">肝衰竭</span>（<span class="answer-text">重型肝炎</span>）</strong><br>表现为一系列肝衰竭综合征，<span class="answer-text">凝血酶原活动度PTA<40%</span>。<br>包括：<span class="answer-text">急性肝衰竭</span>（2周内）、<span class="answer-text">亚急性肝衰竭</span>（2周~6月）、<span class="answer-text">慢加急性肝衰竭</span>（6月以上）和慢性肝衰竭（肝硬化）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>33..A <strong><span class="blur-text">淤胆型肝炎</span></strong><br>以<span class="blur-text">肝内淤胆</span>为主要表现的一种特殊临床类型，又称为<span class="blur-text">毛细胆管炎型肝炎</span>。<br>有梗阻性黄疸的临床表现：皮肤瘙痒、粪便颜色变浅、肝大。</td>
+                            <td>33..A <strong><span class="answer-text">淤胆型肝炎</span></strong><br>以<span class="answer-text">肝内淤胆</span>为主要表现的一种特殊临床类型，又称为<span class="answer-text">毛细胆管炎型肝炎</span>。<br>有梗阻性黄疸的临床表现：皮肤瘙痒、粪便颜色变浅、肝大。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>33..B <strong><span class="blur-text">淤胆型肝炎</span>（续）</strong><br>特点：<span class="blur-text">黄疸深</span>，<span class="blur-text">消化道症状较轻</span>，<span class="blur-text">ALT和AST升高不明显</span>，<span class="blur-text">PTA>60%</span>。</td>
+                            <td>33..B <strong><span class="answer-text">淤胆型肝炎</span>（续）</strong><br>特点：<span class="answer-text">黄疸深</span>，<span class="answer-text">消化道症状较轻</span>，<span class="answer-text">ALT和AST升高不明显</span>，<span class="answer-text">PTA>60%</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>34..<strong><span class="blur-text">胆酶分离</span></strong><br>重型肝炎患者由于肝细胞大量坏死，出现<span class="blur-text">ALT快速下降</span>，<span class="blur-text">胆红素不断升高</span>的现象，提示<span class="blur-text">肝功能恶化</span>，肝损害严重。</td>
+                            <td>34..<strong><span class="answer-text">胆酶分离</span></strong><br>重型肝炎患者由于肝细胞大量坏死，出现<span class="answer-text">ALT快速下降</span>，<span class="answer-text">胆红素不断升高</span>的现象，提示<span class="answer-text">肝功能恶化</span>，肝损害严重。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>35..A <strong><span class="blur-text">细菌性痢疾</span> (Bacillary Dysentery)</strong><br>是由<span class="blur-text">志贺菌</span>引起的肠道传染病，主要通过<span class="blur-text">消化道传播</span>，终年散发，夏秋流行。<br>主要病理变化为<span class="blur-text">直肠、乙状结肠的炎症与溃疡</span>。</td>
+                            <td>35..A <strong><span class="answer-text">细菌性痢疾</span> (Bacillary Dysentery)</strong><br>是由<span class="answer-text">志贺菌</span>引起的肠道传染病，主要通过<span class="answer-text">消化道传播</span>，终年散发，夏秋流行。<br>主要病理变化为<span class="answer-text">直肠、乙状结肠的炎症与溃疡</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>35..B <strong><span class="blur-text">细菌性痢疾</span> (Bacillary Dysentery)（续）</strong><br>主要表现为<span class="blur-text">腹痛</span>、<span class="blur-text">腹泻</span>、<span class="blur-text">里急后重</span>和排<span class="blur-text">黏液脓血便</span>，可伴有发热和全身毒血症症状，严重者可有感染性休克和/或中毒性脑病。</td>
+                            <td>35..B <strong><span class="answer-text">细菌性痢疾</span> (Bacillary Dysentery)（续）</strong><br>主要表现为<span class="answer-text">腹痛</span>、<span class="answer-text">腹泻</span>、<span class="answer-text">里急后重</span>和排<span class="answer-text">黏液脓血便</span>，可伴有发热和全身毒血症症状，严重者可有感染性休克和/或中毒性脑病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>36..<strong><span class="blur-text">里急后重</span></strong><br>表现为下腹部不适，很想解大便，然而又无法一泄为快。<br>"里急"即形容大便在腹内急迫，欲解下为爽；"后重"形容大便至肛门，有<span class="blur-text">重滞欲下不下之感</span>，肛门、直肠及髓尾部坠胀，总有"<span class="blur-text">排便不尽感</span>"。</td>
+                            <td>36..<strong><span class="answer-text">里急后重</span></strong><br>表现为下腹部不适，很想解大便，然而又无法一泄为快。<br>"里急"即形容大便在腹内急迫，欲解下为爽；"后重"形容大便至肛门，有<span class="answer-text">重滞欲下不下之感</span>，肛门、直肠及髓尾部坠胀，总有"<span class="answer-text">排便不尽感</span>"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>37..A <strong><span class="blur-text">中毒性菌痢</span></strong><br>多见于<span class="blur-text">2-7岁儿童</span>，其特点为：起病急骤，突起畏寒高热，病势凶险，<span class="blur-text">全身中毒症状严重</span>，但<span class="blur-text">肠道症状轻微</span>。</td>
+                            <td>37..A <strong><span class="answer-text">中毒性菌痢</span></strong><br>多见于<span class="answer-text">2-7岁儿童</span>，其特点为：起病急骤，突起畏寒高热，病势凶险，<span class="answer-text">全身中毒症状严重</span>，但<span class="answer-text">肠道症状轻微</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>37..B <strong><span class="blur-text">中毒性菌痢</span>（续）</strong><br>可有嗜睡、昏迷、抽搐，迅速发生<span class="blur-text">循环和呼吸衰竭</span>，临床上以<span class="blur-text">严重毒血症</span>、<span class="blur-text">休克</span>、<span class="blur-text">中毒性脑病</span>为主，而局部肠道症状轻微或缺如。<br>开始时无腹痛、腹泻症状，但发病<span class="blur-text">24小时内</span>可出现痢疾样粪便。</td>
+                            <td>37..B <strong><span class="answer-text">中毒性菌痢</span>（续）</strong><br>可有嗜睡、昏迷、抽搐，迅速发生<span class="answer-text">循环和呼吸衰竭</span>，临床上以<span class="answer-text">严重毒血症</span>、<span class="answer-text">休克</span>、<span class="answer-text">中毒性脑病</span>为主，而局部肠道症状轻微或缺如。<br>开始时无腹痛、腹泻症状，但发病<span class="answer-text">24小时内</span>可出现痢疾样粪便。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>37..C <strong><span class="blur-text">中毒性菌痢</span>（再续）</strong><br>按临床表现可分为<span class="blur-text">休克型</span>、<span class="blur-text">脑型</span>和<span class="blur-text">混合型</span>。</td>
+                            <td>37..C <strong><span class="answer-text">中毒性菌痢</span>（再续）</strong><br>按临床表现可分为<span class="answer-text">休克型</span>、<span class="answer-text">脑型</span>和<span class="answer-text">混合型</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>38..<strong><span class="blur-text">慢性菌痢</span></strong><br>菌痢反复发作或迁延不愈达<span class="blur-text">两个月以上</span>者，根据临床表现可分为<span class="blur-text">慢性迁延型</span>、<span class="blur-text">急性发作型</span>和<span class="blur-text">慢性隐匿型</span>。</td>
+                            <td>38..<strong><span class="answer-text">慢性菌痢</span></strong><br>菌痢反复发作或迁延不愈达<span class="answer-text">两个月以上</span>者，根据临床表现可分为<span class="answer-text">慢性迁延型</span>、<span class="answer-text">急性发作型</span>和<span class="answer-text">慢性隐匿型</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>39..<strong><span class="blur-text">干性霍乱</span>（<span class="blur-text">爆发型霍乱</span>）</strong><br>起病急骤，尚未出现<span class="blur-text">腹泻和呕吐症状</span>，即迅速出现<span class="blur-text">重度性休克</span>而死亡。</td>
+                            <td>39..<strong><span class="answer-text">干性霍乱</span>（<span class="answer-text">爆发型霍乱</span>）</strong><br>起病急骤，尚未出现<span class="answer-text">腹泻和呕吐症状</span>，即迅速出现<span class="answer-text">重度性休克</span>而死亡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>40..A <strong><span class="blur-text">肾综合征出血热</span> (HFRS)</strong><br>是由<span class="blur-text">汉坦病毒属</span>的各型病毒引起的，以<span class="blur-text">鼠类</span>为主要传染源的一种自然疫源性疾病。<br>主要病理变化是<span class="blur-text">全身小血管和毛细血管广泛性损害</span>。</td>
+                            <td>40..A <strong><span class="answer-text">肾综合征出血热</span> (HFRS)</strong><br>是由<span class="answer-text">汉坦病毒属</span>的各型病毒引起的，以<span class="answer-text">鼠类</span>为主要传染源的一种自然疫源性疾病。<br>主要病理变化是<span class="answer-text">全身小血管和毛细血管广泛性损害</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>40..B <strong><span class="blur-text">肾综合征出血热</span> (HFRS)（续）</strong><br>临床上以<span class="blur-text">发热</span>、<span class="blur-text">低血压休克</span>、<span class="blur-text">充血出血</span>和<span class="blur-text">肾损害</span>为主要表现。</td>
+                            <td>40..B <strong><span class="answer-text">肾综合征出血热</span> (HFRS)（续）</strong><br>临床上以<span class="answer-text">发热</span>、<span class="answer-text">低血压休克</span>、<span class="answer-text">充血出血</span>和<span class="answer-text">肾损害</span>为主要表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>41..<strong><span class="blur-text">高血容量综合征</span></strong><br>少尿期水钠潴留而导致血容量增加，表现为<span class="blur-text">体表静脉充盈</span>、<span class="blur-text">脉搏洪大</span>、<span class="blur-text">脉压差增大</span>和心率增快。</td>
+                            <td>41..<strong><span class="answer-text">高血容量综合征</span></strong><br>少尿期水钠潴留而导致血容量增加，表现为<span class="answer-text">体表静脉充盈</span>、<span class="answer-text">脉搏洪大</span>、<span class="answer-text">脉压差增大</span>和心率增快。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>42..<strong><span class="blur-text">败血症</span> (septicemia)</strong><br>是病原菌侵入<span class="blur-text">血液循环</span>并在其中<span class="blur-text">生长繁殖</span>，产生<span class="blur-text">大量毒素</span>并诱发<span class="blur-text">全身炎症反应综合征</span>的急性全身性感染。</td>
+                            <td>42..<strong><span class="answer-text">败血症</span> (septicemia)</strong><br>是病原菌侵入<span class="answer-text">血液循环</span>并在其中<span class="answer-text">生长繁殖</span>，产生<span class="answer-text">大量毒素</span>并诱发<span class="answer-text">全身炎症反应综合征</span>的急性全身性感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>43..<strong><span class="blur-text">复数菌败血症</span></strong><br>在同一血培养或<span class="blur-text">72小时内</span>从同一个病人不同血培养标本检出<span class="blur-text">两个或两个以上的致病菌</span>。</td>
+                            <td>43..<strong><span class="answer-text">复数菌败血症</span></strong><br>在同一血培养或<span class="answer-text">72小时内</span>从同一个病人不同血培养标本检出<span class="answer-text">两个或两个以上的致病菌</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>44..<strong><span class="blur-text">菌血症</span></strong><br>病原菌侵入血液循环，但未在血液中生长繁殖，只是短暂出现，无明显毒血症症状。</td>
+                            <td>44..<strong><span class="answer-text">菌血症</span></strong><br>病原菌侵入血液循环，但未在血液中生长繁殖，只是短暂出现，无明显毒血症症状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>45..<strong><span class="blur-text">毒血症</span></strong><br>细菌产生的<span class="blur-text">毒素吸收入血</span>，而<span class="blur-text">病原菌不入血</span>。</td>
+                            <td>45..<strong><span class="answer-text">毒血症</span></strong><br>细菌产生的<span class="answer-text">毒素吸收入血</span>，而<span class="answer-text">病原菌不入血</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>46..<strong><span class="blur-text">脓毒败血症</span> (sepsis)</strong><br>当败血症患者存在<span class="blur-text">原发性/迁徙性化脓性病灶</span>。</td>
+                            <td>46..<strong><span class="answer-text">脓毒败血症</span> (sepsis)</strong><br>当败血症患者存在<span class="answer-text">原发性/迁徙性化脓性病灶</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>47..A <strong><span class="blur-text">全身炎症反应综合征</span> (SIRS)</strong><br>指人体对各种损害因素所引起的<span class="blur-text">全身性炎症反应</span>，临床符合以下<span class="blur-text">2条及以上</span>者：<br>① 体温><span class="blur-text">38°C</span>或<<span class="blur-text">36°C</span><br>② 心率><span class="blur-text">90次/分</span></td>
+                            <td>47..A <strong><span class="answer-text">全身炎症反应综合征</span> (SIRS)</strong><br>指人体对各种损害因素所引起的<span class="answer-text">全身性炎症反应</span>，临床符合以下<span class="answer-text">2条及以上</span>者：<br>① 体温><span class="answer-text">38°C</span>或<<span class="answer-text">36°C</span><br>② 心率><span class="answer-text">90次/分</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>47..B <strong><span class="blur-text">全身炎症反应综合征</span> (SIRS)（续）</strong><br>③ 呼吸频率><span class="blur-text">20次/分</span>或PaCO2<<span class="blur-text">32mmHg</span><br>④ WBC><span class="blur-text">12×10^9/L</span>或<<span class="blur-text">4×10^9/L</span>，或<span class="blur-text">不成熟中性粒细胞>10%</span>。</td>
+                            <td>47..B <strong><span class="answer-text">全身炎症反应综合征</span> (SIRS)（续）</strong><br>③ 呼吸频率><span class="answer-text">20次/分</span>或PaCO2<<span class="answer-text">32mmHg</span><br>④ WBC><span class="answer-text">12×10^9/L</span>或<<span class="answer-text">4×10^9/L</span>，或<span class="answer-text">不成熟中性粒细胞>10%</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>48..A <strong><span class="blur-text">感染性休克</span></strong><br>是指由<span class="blur-text">微生物及其毒素</span>等产物所引起的脓毒病综合征伴休克。<br>感染灶中的微生物及其毒素等侵入血循环，激活宿主的<span class="blur-text">各种细胞和体液免疫系统</span>，产生<span class="blur-text">细胞因子和内源性介质</span>。</td>
+                            <td>48..A <strong><span class="answer-text">感染性休克</span></strong><br>是指由<span class="answer-text">微生物及其毒素</span>等产物所引起的脓毒病综合征伴休克。<br>感染灶中的微生物及其毒素等侵入血循环，激活宿主的<span class="answer-text">各种细胞和体液免疫系统</span>，产生<span class="answer-text">细胞因子和内源性介质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>48..B <strong><span class="blur-text">感染性休克</span>（续）</strong><br>作用于机体各种器官、系统，影响其灌注，导致组织细胞<span class="blur-text">缺血缺氧</span>、<span class="blur-text">代谢紊乱</span>、<span class="blur-text">功能障碍</span>，甚至多器官功能衰竭。<br>多见于<span class="blur-text">严重的革兰阴性菌感染</span>。</td>
+                            <td>48..B <strong><span class="answer-text">感染性休克</span>（续）</strong><br>作用于机体各种器官、系统，影响其灌注，导致组织细胞<span class="answer-text">缺血缺氧</span>、<span class="answer-text">代谢紊乱</span>、<span class="answer-text">功能障碍</span>，甚至多器官功能衰竭。<br>多见于<span class="answer-text">严重的革兰阴性菌感染</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>49..A <strong><span class="blur-text">伤寒</span> (Typhoid fever)</strong><br>是由<span class="blur-text">伤寒杆菌</span>引起的急性肠道传染病，临床表现为<span class="blur-text">稽留热</span>、<span class="blur-text">表情淡漠</span>、<span class="blur-text">相对脉缓</span>、<span class="blur-text">玫瑰疹</span>、<span class="blur-text">肝脾肿大</span>和<span class="blur-text">白细胞减少</span>。</td>
+                            <td>49..A <strong><span class="answer-text">伤寒</span> (Typhoid fever)</strong><br>是由<span class="answer-text">伤寒杆菌</span>引起的急性肠道传染病，临床表现为<span class="answer-text">稽留热</span>、<span class="answer-text">表情淡漠</span>、<span class="answer-text">相对脉缓</span>、<span class="answer-text">玫瑰疹</span>、<span class="answer-text">肝脾肿大</span>和<span class="answer-text">白细胞减少</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>49..B <strong><span class="blur-text">伤寒</span> (Typhoid fever)（续）</strong><br>可出现<span class="blur-text">肠出血</span>和<span class="blur-text">肠穿孔</span>等严重并发症。</td>
+                            <td>49..B <strong><span class="answer-text">伤寒</span> (Typhoid fever)（续）</strong><br>可出现<span class="answer-text">肠出血</span>和<span class="answer-text">肠穿孔</span>等严重并发症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>50..A <strong><span class="blur-text">伤寒小结</span> (typhoid nodule)/<span class="blur-text">伤寒肉芽肿</span> (typhoid granuloma)</strong><br>伤寒杆菌引起<span class="blur-text">巨噬细胞增生</span>为特征的急性增生性炎。<br>增生活跃时巨噬细胞的浆内吞噬有<span class="blur-text">伤寒杆菌</span>、<span class="blur-text">红细胞</span>和<span class="blur-text">细胞碎片</span>，而吞噬红细胞的作用尤为明显。</td>
+                            <td>50..A <strong><span class="answer-text">伤寒小结</span> (typhoid nodule)/<span class="answer-text">伤寒肉芽肿</span> (typhoid granuloma)</strong><br>伤寒杆菌引起<span class="answer-text">巨噬细胞增生</span>为特征的急性增生性炎。<br>增生活跃时巨噬细胞的浆内吞噬有<span class="answer-text">伤寒杆菌</span>、<span class="answer-text">红细胞</span>和<span class="answer-text">细胞碎片</span>，而吞噬红细胞的作用尤为明显。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>50..B <strong><span class="blur-text">伤寒小结</span>/<span class="blur-text">伤寒肉芽肿</span>（续）</strong><br>这种巨噬细胞称为<span class="blur-text">伤寒细胞</span>。<br>伤寒细胞聚集成团，形成小结节称为<span class="blur-text">伤寒肉芽肿</span>。</td>
+                            <td>50..B <strong><span class="answer-text">伤寒小结</span>/<span class="answer-text">伤寒肉芽肿</span>（续）</strong><br>这种巨噬细胞称为<span class="answer-text">伤寒细胞</span>。<br>伤寒细胞聚集成团，形成小结节称为<span class="answer-text">伤寒肉芽肿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>51..<strong><span class="blur-text">肥达试验</span></strong><br>是一种<span class="blur-text">试管凝集反应</span>，用已知的<span class="blur-text">伤寒杆菌O、H抗原</span>和<span class="blur-text">甲、乙型副伤寒杆菌H抗原</span>，与待测血清作试管或微孔板凝集实验，以测定血清中有无相应抗体存在，作为<span class="blur-text">伤寒、副伤寒诊断的参考</span>。</td>
+                            <td>51..<strong><span class="answer-text">肥达试验</span></strong><br>是一种<span class="answer-text">试管凝集反应</span>，用已知的<span class="answer-text">伤寒杆菌O、H抗原</span>和<span class="answer-text">甲、乙型副伤寒杆菌H抗原</span>，与待测血清作试管或微孔板凝集实验，以测定血清中有无相应抗体存在，作为<span class="answer-text">伤寒、副伤寒诊断的参考</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>52..A <strong><span class="blur-text">流行性脑脊髓膜炎</span> (Epidemic Cerebrospinal Meningitis)</strong><br>是由<span class="blur-text">脑膜炎奈瑟菌</span>引起的急性化脓性脑膜炎，主要临床表现是<span class="blur-text">突发高热</span>、<span class="blur-text">剧烈头痛</span>、<span class="blur-text">频繁呕吐</span>、<span class="blur-text">皮肤黏膜瘀点瘀斑</span>、<span class="blur-text">脑膜刺激症</span>。</td>
+                            <td>52..A <strong><span class="answer-text">流行性脑脊髓膜炎</span> (Epidemic Cerebrospinal Meningitis)</strong><br>是由<span class="answer-text">脑膜炎奈瑟菌</span>引起的急性化脓性脑膜炎，主要临床表现是<span class="answer-text">突发高热</span>、<span class="answer-text">剧烈头痛</span>、<span class="answer-text">频繁呕吐</span>、<span class="answer-text">皮肤黏膜瘀点瘀斑</span>、<span class="answer-text">脑膜刺激症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>52..B <strong><span class="blur-text">流行性脑脊髓膜炎</span> (Epidemic Cerebrospinal Meningitis)（续）</strong><br>严重者可有<span class="blur-text">败血症休克</span>和<span class="blur-text">脑实质损害</span>，常可危及生命。</td>
+                            <td>52..B <strong><span class="answer-text">流行性脑脊髓膜炎</span> (Epidemic Cerebrospinal Meningitis)（续）</strong><br>严重者可有<span class="answer-text">败血症休克</span>和<span class="answer-text">脑实质损害</span>，常可危及生命。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>53..<strong><span class="blur-text">华弗综合征</span> (Waterhouse-Friderichsen syndrome)</strong><br>是由于<span class="blur-text">暴发型脑膜炎球菌感染</span>引起的败血症累及<span class="blur-text">肾上腺</span>，从而引起<span class="blur-text">肾上腺皮质出血性坏死</span>和<span class="blur-text">急性肾上腺皮质功能衰竭</span>的临床症状。</td>
+                            <td>53..<strong><span class="answer-text">华弗综合征</span> (Waterhouse-Friderichsen syndrome)</strong><br>是由于<span class="answer-text">暴发型脑膜炎球菌感染</span>引起的败血症累及<span class="answer-text">肾上腺</span>，从而引起<span class="answer-text">肾上腺皮质出血性坏死</span>和<span class="answer-text">急性肾上腺皮质功能衰竭</span>的临床症状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>54..A <strong><span class="blur-text">获得性免疫缺陷综合征</span> (AIDS)</strong><br>是由<span class="blur-text">人类免疫缺陷病毒</span> (<span class="blur-text">HIV</span>) 引起的慢性传染病，主要经<span class="blur-text">性传播</span>、<span class="blur-text">血液</span>和<span class="blur-text">母婴传播</span>。</td>
+                            <td>54..A <strong><span class="answer-text">获得性免疫缺陷综合征</span> (AIDS)</strong><br>是由<span class="answer-text">人类免疫缺陷病毒</span> (<span class="answer-text">HIV</span>) 引起的慢性传染病，主要经<span class="answer-text">性传播</span>、<span class="answer-text">血液</span>和<span class="answer-text">母婴传播</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>54..B <strong><span class="blur-text">获得性免疫缺陷综合征</span> (AIDS)（续）</strong><br>HIV主要侵犯、破坏<span class="blur-text">CD4+T淋巴细胞</span>，导致机体<span class="blur-text">免疫细胞功能受损乃至缺陷</span>，最终并发各种严重<span class="blur-text">机会性感染</span>和<span class="blur-text">肿瘤</span>。</td>
+                            <td>54..B <strong><span class="answer-text">获得性免疫缺陷综合征</span> (AIDS)（续）</strong><br>HIV主要侵犯、破坏<span class="answer-text">CD4+T淋巴细胞</span>，导致机体<span class="answer-text">免疫细胞功能受损乃至缺陷</span>，最终并发各种严重<span class="answer-text">机会性感染</span>和<span class="answer-text">肿瘤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>55..A <strong><span class="blur-text">鸡尾酒疗法</span></strong><br>指"<span class="blur-text">高效抗逆转录病毒治疗</span>" (<span class="blur-text">HAART</span>)，由<span class="blur-text">美籍华裔科学家何大一</span>于<span class="blur-text">1996年</span>提出，是通过<span class="blur-text">三种或三种以上的抗病毒药物</span>联合使用来治疗艾滋病。</td>
+                            <td>55..A <strong><span class="answer-text">鸡尾酒疗法</span></strong><br>指"<span class="answer-text">高效抗逆转录病毒治疗</span>" (<span class="answer-text">HAART</span>)，由<span class="answer-text">美籍华裔科学家何大一</span>于<span class="answer-text">1996年</span>提出，是通过<span class="answer-text">三种或三种以上的抗病毒药物</span>联合使用来治疗艾滋病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>55..B <strong><span class="blur-text">鸡尾酒疗法</span>（续）</strong><br>常用方案为<span class="blur-text">2种核苷类逆转录酶抑制剂+1种非核苷类逆转录酶抑制剂</span>（或<span class="blur-text">蛋白酶抑制剂</span>）。<br>该疗法的优点：a..<span class="blur-text">药物分布广</span>，达到靶细胞；b..起<span class="blur-text">协同作用</span>，持续抑制病毒复制；c..<span class="blur-text">延缓或阻断HIV变异产生耐药性</span>。</td>
+                            <td>55..B <strong><span class="answer-text">鸡尾酒疗法</span>（续）</strong><br>常用方案为<span class="answer-text">2种核苷类逆转录酶抑制剂+1种非核苷类逆转录酶抑制剂</span>（或<span class="answer-text">蛋白酶抑制剂</span>）。<br>该疗法的优点：a..<span class="answer-text">药物分布广</span>，达到靶细胞；b..起<span class="answer-text">协同作用</span>，持续抑制病毒复制；c..<span class="answer-text">延缓或阻断HIV变异产生耐药性</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

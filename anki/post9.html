@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <div class="medical-disclaimer">
+                <strong>⚠️ 医疗免责声明</strong>
+                <p>本站所有内容仅供教育参考与信息分享，不构成医疗建议、诊断或治疗方案。浏览本站不建立医患关系，如有健康疑虑请咨询执业医疗人员。</p>
+            </div>
+
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3"><strong>全科医学概论名词解释</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1. <strong>全科医学</strong><br>是一个面向 <span class="blur-text">个人</span> 、 <span class="blur-text">社区</span> 与 <span class="blur-text">家庭</span> ，整合临床医学、预防医学、康复医学以及人文社会学科相关内容于一体的综合性临床 <span class="blur-text">二级专业学科</span> ，其范围涵盖了各种年龄、性别，各个器官系统以及各类健康问题或疾病。其主旨是强调以 <span class="blur-text">人</span> 为中心，以 <span class="blur-text">家庭</span> 为单位，以整体健康的维护与促进为方向的 <span class="blur-text">长期负责式照顾</span> ，并将个体与群体健康照顾防和治有机地结合融为一体。</td>
+                            <td>1. <strong>全科医学</strong><br>是一个面向 <span class="answer-text">个人</span> 、 <span class="answer-text">社区</span> 与 <span class="answer-text">家庭</span> ，整合临床医学、预防医学、康复医学以及人文社会学科相关内容于一体的综合性临床 <span class="answer-text">二级专业学科</span> ，其范围涵盖了各种年龄、性别，各个器官系统以及各类健康问题或疾病。其主旨是强调以 <span class="answer-text">人</span> 为中心，以 <span class="answer-text">家庭</span> 为单位，以整体健康的维护与促进为方向的 <span class="answer-text">长期负责式照顾</span> ，并将个体与群体健康照顾防和治有机地结合融为一体。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. <strong>全科医生</strong><br>是对个人、家庭和社区提供 <span class="blur-text">优质方便</span> 、 <span class="blur-text">经济有效</span> 的、 <span class="blur-text">一体化</span> 的基本医疗服务，进行生命、健康与疾病的全过程、全方位负责式管理的医生。</td>
+                            <td>2. <strong>全科医生</strong><br>是对个人、家庭和社区提供 <span class="answer-text">优质方便</span> 、 <span class="answer-text">经济有效</span> 的、 <span class="answer-text">一体化</span> 的基本医疗服务，进行生命、健康与疾病的全过程、全方位负责式管理的医生。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. <strong>全科医疗</strong><br>是将全科/家庭医学理论应用于病人、家庭和社区照顾的一种 <span class="blur-text">基层医疗专业服务</span> ，是 <span class="blur-text">社区卫生服务</span> 中的主要医疗服务形式。</td>
+                            <td>3. <strong>全科医疗</strong><br>是将全科/家庭医学理论应用于病人、家庭和社区照顾的一种 <span class="answer-text">基层医疗专业服务</span> ，是 <span class="answer-text">社区卫生服务</span> 中的主要医疗服务形式。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. <strong>循证医学 (EBM)</strong><br><span class="blur-text">慎重</span> 、 <span class="blur-text">准确</span> 、 <span class="blur-text">明智</span> 的应用当前所能获得的最佳研究证据，结合临床医生个人的技能和经验，并充分考虑病人的价值和期望，从而做出合理的医疗决策。</td>
+                            <td>4. <strong>循证医学 (EBM)</strong><br><span class="answer-text">慎重</span> 、 <span class="answer-text">准确</span> 、 <span class="answer-text">明智</span> 的应用当前所能获得的最佳研究证据，结合临床医生个人的技能和经验，并充分考虑病人的价值和期望，从而做出合理的医疗决策。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. <strong>生物-心理-社会医学模式</strong><br>主要思想是把人理解为 <span class="blur-text">生物的</span> 、 <span class="blur-text">心理的</span> 、 <span class="blur-text">社会的</span> 三种属性的统一体，人的健康和疾病不仅是生物学过程，而且有心理和社会的因素，要从生物、心理、社会相统一的整体水平来理解和防治疾病。它主张在已有生物医学的基础上，加强心理和社会因素的研究和调控。</td>
+                            <td>5. <strong>生物-心理-社会医学模式</strong><br>主要思想是把人理解为 <span class="answer-text">生物的</span> 、 <span class="answer-text">心理的</span> 、 <span class="answer-text">社会的</span> 三种属性的统一体，人的健康和疾病不仅是生物学过程，而且有心理和社会的因素，要从生物、心理、社会相统一的整体水平来理解和防治疾病。它主张在已有生物医学的基础上，加强心理和社会因素的研究和调控。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. <strong>健康信念</strong><br>即人如何看待 <span class="blur-text">健康与疾病</span> ，如何认识疾病的 <span class="blur-text">严重程度</span> 和 <span class="blur-text">易感性</span> ，如何认识采取预防措施后的效果和采取预防措施所遇到的障碍，其在人们是否会采取预防措施中起十分重要的作用。</td>
+                            <td>6. <strong>健康信念</strong><br>即人如何看待 <span class="answer-text">健康与疾病</span> ，如何认识疾病的 <span class="answer-text">严重程度</span> 和 <span class="answer-text">易感性</span> ，如何认识采取预防措施后的效果和采取预防措施所遇到的障碍，其在人们是否会采取预防措施中起十分重要的作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. <strong>健康信念模式</strong><br>是运用 <span class="blur-text">社会心理学</span> 方法解释健康相关行为的理论模式，主要用于预测人的 <span class="blur-text">预防性健康行为</span> 和实施 <span class="blur-text">健康教育</span> 。</td>
+                            <td>7. <strong>健康信念模式</strong><br>是运用 <span class="answer-text">社会心理学</span> 方法解释健康相关行为的理论模式，主要用于预测人的 <span class="answer-text">预防性健康行为</span> 和实施 <span class="answer-text">健康教育</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. <strong>医患关系</strong><br>是指在医学实践活动中所产生的 <span class="blur-text">人际关系</span> 。狭义的医患关系是指医生与病人及其关系人之间形成的与人际关系。</td>
+                            <td>8. <strong>医患关系</strong><br>是指在医学实践活动中所产生的 <span class="answer-text">人际关系</span> 。狭义的医患关系是指医生与病人及其关系人之间形成的与人际关系。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. <strong>家庭</strong><br>是 <span class="blur-text">一起的社会团体</span> 。</td>
+                            <td>9. <strong>家庭</strong><br>是 <span class="answer-text">一起的社会团体</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. <strong>家庭结构</strong><br>是指家庭组合类型及各成员间的相互关系，包括家庭的 <span class="blur-text">外在结构</span> 和 <span class="blur-text">内在结构</span> 。外在结构即家庭的 <span class="blur-text">类型</span> ，内在结构包括家庭的 <span class="blur-text">角色</span> 、 <span class="blur-text">权力构成</span> 、 <span class="blur-text">沟通形式</span> 和家庭的 <span class="blur-text">价值观</span> 。</td>
+                            <td>10. <strong>家庭结构</strong><br>是指家庭组合类型及各成员间的相互关系，包括家庭的 <span class="answer-text">外在结构</span> 和 <span class="answer-text">内在结构</span> 。外在结构即家庭的 <span class="answer-text">类型</span> ，内在结构包括家庭的 <span class="answer-text">角色</span> 、 <span class="answer-text">权力构成</span> 、 <span class="answer-text">沟通形式</span> 和家庭的 <span class="answer-text">价值观</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. <strong>家庭角色</strong><br>是家庭成员在家庭中的 <span class="blur-text">特定身份</span> ，代表着他/她在家庭中所应承担的 <span class="blur-text">职能</span> ，反映出他/她在家庭中的相对位置及与其他成员间的相互关系。</td>
+                            <td>11. <strong>家庭角色</strong><br>是家庭成员在家庭中的 <span class="answer-text">特定身份</span> ，代表着他/她在家庭中所应承担的 <span class="answer-text">职能</span> ，反映出他/她在家庭中的相对位置及与其他成员间的相互关系。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. <strong>角色期待</strong><br>家庭对成员所期待的 <span class="blur-text">特定行为模式</span> 。</td>
+                            <td>12. <strong>角色期待</strong><br>家庭对成员所期待的 <span class="answer-text">特定行为模式</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. <strong>角色学习</strong><br>是一种综合性的学习角色的 <span class="blur-text">情感</span> 、 <span class="blur-text">态度</span> 及拥有的 <span class="blur-text">权利和责任</span> 的行为。角色学习在人与人的互动和角色互补中进行，传统的角色模式也树立了效仿的榜样。</td>
+                            <td>13. <strong>角色学习</strong><br>是一种综合性的学习角色的 <span class="answer-text">情感</span> 、 <span class="answer-text">态度</span> 及拥有的 <span class="answer-text">权利和责任</span> 的行为。角色学习在人与人的互动和角色互补中进行，传统的角色模式也树立了效仿的榜样。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">14. <strong>角色冲突</strong><br>（原文缺失，跳过或保留原数字序号）<br>发生冲突和矛盾。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>15. <strong>家庭沟通</strong><br>是家庭成员间相互交换 <span class="blur-text">信息</span> ，沟通 <span class="blur-text">感情</span> ，调控 <span class="blur-text">行为</span> 和维持家庭稳定的有效手段，也是评价家庭功能状态的重要指标。</td>
+                            <td>15. <strong>家庭沟通</strong><br>是家庭成员间相互交换 <span class="answer-text">信息</span> ，沟通 <span class="answer-text">感情</span> ，调控 <span class="answer-text">行为</span> 和维持家庭稳定的有效手段，也是评价家庭功能状态的重要指标。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>16. <strong>家庭价值观</strong><br>家庭成员对家庭活动的行为准则及生活目标所持有的 <span class="blur-text">态度</span> ，以及对具体事件的价值所持的态度。</td>
+                            <td>16. <strong>家庭价值观</strong><br>家庭成员对家庭活动的行为准则及生活目标所持有的 <span class="answer-text">态度</span> ，以及对具体事件的价值所持的态度。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>17. <strong>家庭生活周期</strong><br>指家庭遵循社会与自然的规律所产生、发展与消亡的过程。通常经历 <span class="blur-text">恋爱</span> 、 <span class="blur-text">结婚</span> 、 <span class="blur-text">怀孕</span> 、 <span class="blur-text">抚养孩子</span> 、 <span class="blur-text">孩子成家</span> 、 <span class="blur-text">空巢</span> 、 <span class="blur-text">退休</span> 、 <span class="blur-text">丧偶独居</span> 等时期。</td>
+                            <td>17. <strong>家庭生活周期</strong><br>指家庭遵循社会与自然的规律所产生、发展与消亡的过程。通常经历 <span class="answer-text">恋爱</span> 、 <span class="answer-text">结婚</span> 、 <span class="answer-text">怀孕</span> 、 <span class="answer-text">抚养孩子</span> 、 <span class="answer-text">孩子成家</span> 、 <span class="answer-text">空巢</span> 、 <span class="answer-text">退休</span> 、 <span class="answer-text">丧偶独居</span> 等时期。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>18. <strong>家庭资源</strong><br>家庭为维持其基本功能，应付紧张事件和危机状态所需要的 <span class="blur-text">物质</span> 和 <span class="blur-text">精神上</span> 的支持，被称为家庭资源，可分为 <span class="blur-text">家庭内资源</span> 和 <span class="blur-text">家庭外资源</span> 。</td>
+                            <td>18. <strong>家庭资源</strong><br>家庭为维持其基本功能，应付紧张事件和危机状态所需要的 <span class="answer-text">物质</span> 和 <span class="answer-text">精神上</span> 的支持，被称为家庭资源，可分为 <span class="answer-text">家庭内资源</span> 和 <span class="answer-text">家庭外资源</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>19. <strong>家庭圈</strong><br>是以 <span class="blur-text">病人的观点</span> 看待家庭成员与自己的关系，自绘的图形圈。是一种病人 <span class="blur-text">主观评价</span> 的方法。</td>
+                            <td>19. <strong>家庭圈</strong><br>是以 <span class="answer-text">病人的观点</span> 看待家庭成员与自己的关系，自绘的图形圈。是一种病人 <span class="answer-text">主观评价</span> 的方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>20. <strong>家庭访视</strong><br>简称 <span class="blur-text">家访</span> ，指在 <span class="blur-text">服务对象的家庭里</span> ，为了维持和促进个人、家庭和社区的健康，而对服务对象及其家庭成员所提供的服务活动。</td>
+                            <td>20. <strong>家庭访视</strong><br>简称 <span class="answer-text">家访</span> ，指在 <span class="answer-text">服务对象的家庭里</span> ，为了维持和促进个人、家庭和社区的健康，而对服务对象及其家庭成员所提供的服务活动。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>21. <strong>家庭治疗</strong><br>是指对家庭的 <span class="blur-text">功能</span> 、 <span class="blur-text">角色</span> 、 <span class="blur-text">互动模式</span> 的调适。</td>
+                            <td>21. <strong>家庭治疗</strong><br>是指对家庭的 <span class="answer-text">功能</span> 、 <span class="answer-text">角色</span> 、 <span class="answer-text">互动模式</span> 的调适。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>22. <strong>临终关怀</strong><br>是以提高 <span class="blur-text">临终的生命质量</span> 为宗旨，控制 <span class="blur-text">疼痛</span> ，缓解 <span class="blur-text">症状</span> ，慰藉心灵，提供身心一体的照顾性治疗，使临终者安详的度过最后的时光。</td>
+                            <td>22. <strong>临终关怀</strong><br>是以提高 <span class="answer-text">临终的生命质量</span> 为宗旨，控制 <span class="answer-text">疼痛</span> ，缓解 <span class="answer-text">症状</span> ，慰藉心灵，提供身心一体的照顾性治疗，使临终者安详的度过最后的时光。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>23. <strong>总疼痛</strong><br>是指 <span class="blur-text">躯体疼痛</span> 、 <span class="blur-text">心理疼痛</span> 、 <span class="blur-text">社会疼痛</span> 、 <span class="blur-text">灵魂疼痛</span> 和 <span class="blur-text">经济疼痛</span> 等多种疼痛的总体感受。</td>
+                            <td>23. <strong>总疼痛</strong><br>是指 <span class="answer-text">躯体疼痛</span> 、 <span class="answer-text">心理疼痛</span> 、 <span class="answer-text">社会疼痛</span> 、 <span class="answer-text">灵魂疼痛</span> 和 <span class="answer-text">经济疼痛</span> 等多种疼痛的总体感受。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>24. <strong>社区</strong><br>以 <span class="blur-text">家庭</span> 为基础的历史共同体，是 <span class="blur-text">血缘共同体</span> 和 <span class="blur-text">地缘共同体</span> 的结合。</td>
+                            <td>24. <strong>社区</strong><br>以 <span class="answer-text">家庭</span> 为基础的历史共同体，是 <span class="answer-text">血缘共同体</span> 和 <span class="answer-text">地缘共同体</span> 的结合。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>25. <strong>社区医学</strong><br>是充分发掘利用 <span class="blur-text">社区资源</span> ，突出 <span class="blur-text">社区特点</span> ，满足 <span class="blur-text">社区卫生需求</span> 的医学。特点：把人群个体（健康人和病人）的卫生需求（医疗、预防、保健和康复）问题回归到 <span class="blur-text">群体的高度</span> ，与他们生活的家庭、社区和社会联系起来去认识、分析和处理。</td>
+                            <td>25. <strong>社区医学</strong><br>是充分发掘利用 <span class="answer-text">社区资源</span> ，突出 <span class="answer-text">社区特点</span> ，满足 <span class="answer-text">社区卫生需求</span> 的医学。特点：把人群个体（健康人和病人）的卫生需求（医疗、预防、保健和康复）问题回归到 <span class="answer-text">群体的高度</span> ，与他们生活的家庭、社区和社会联系起来去认识、分析和处理。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>26. <strong>以社区为导向的基层医疗 (COPC)</strong><br>基层医疗保健服务应立足于 <span class="blur-text">社区</span> 、以 <span class="blur-text">预防</span> 为导向，将 <span class="blur-text">个人的健康照顾</span> 、 <span class="blur-text">家庭及社区人群的健康照顾</span> 结合起来，为社区全体居民提供 <span class="blur-text">连续性</span> 、 <span class="blur-text">综合性</span> 、 <span class="blur-text">协调性</span> 的医疗保健服务。COPC 即立足于社区，将个人健康照顾与群体健康照顾相结合，核心是把传统的 <span class="blur-text">临床医疗工作</span> 和人群的 <span class="blur-text">公共卫生工作</span> 结合起来。</td>
+                            <td>26. <strong>以社区为导向的基层医疗 (COPC)</strong><br>基层医疗保健服务应立足于 <span class="answer-text">社区</span> 、以 <span class="answer-text">预防</span> 为导向，将 <span class="answer-text">个人的健康照顾</span> 、 <span class="answer-text">家庭及社区人群的健康照顾</span> 结合起来，为社区全体居民提供 <span class="answer-text">连续性</span> 、 <span class="answer-text">综合性</span> 、 <span class="answer-text">协调性</span> 的医疗保健服务。COPC 即立足于社区，将个人健康照顾与群体健康照顾相结合，核心是把传统的 <span class="answer-text">临床医疗工作</span> 和人群的 <span class="answer-text">公共卫生工作</span> 结合起来。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>27. <strong>社区诊断</strong><br>是社区卫生服务机构通过 <span class="blur-text">社区卫生调查</span> 收集社区有关资料，并进行 <span class="blur-text">科学</span> 、 <span class="blur-text">系统</span> 的分析，以确定影响社区人群的 <span class="blur-text">主要健康问题</span> 及其 <span class="blur-text">影响因素</span> ，为社区卫生服务计划的制定提供决策依据。</td>
+                            <td>27. <strong>社区诊断</strong><br>是社区卫生服务机构通过 <span class="answer-text">社区卫生调查</span> 收集社区有关资料，并进行 <span class="answer-text">科学</span> 、 <span class="answer-text">系统</span> 的分析，以确定影响社区人群的 <span class="answer-text">主要健康问题</span> 及其 <span class="answer-text">影响因素</span> ，为社区卫生服务计划的制定提供决策依据。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>28. <strong>临床预防医学</strong><br>通过 <span class="blur-text">临床场所</span> 评估和干预疾病的 <span class="blur-text">发病危险因素</span> 来实施，是对 <span class="blur-text">健康人</span> 和 <span class="blur-text">无症状的"病人"</span> 采取的个体化预防措施，使临床医疗服务中 <span class="blur-text">第二级预防</span> 与 <span class="blur-text">第一级预防</span> 有机结合。</td>
+                            <td>28. <strong>临床预防医学</strong><br>通过 <span class="answer-text">临床场所</span> 评估和干预疾病的 <span class="answer-text">发病危险因素</span> 来实施，是对 <span class="answer-text">健康人</span> 和 <span class="answer-text">无症状的"病人"</span> 采取的个体化预防措施，使临床医疗服务中 <span class="answer-text">第二级预防</span> 与 <span class="answer-text">第一级预防</span> 有机结合。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>29. <strong>健康管理</strong><br>针对 <span class="blur-text">健康需求</span> 对健康资源进行 <span class="blur-text">计划</span> 、 <span class="blur-text">组织</span> 、 <span class="blur-text">指挥</span> 、 <span class="blur-text">协调</span> 和 <span class="blur-text">控制</span> ，达到最大健康效果的过程。</td>
+                            <td>29. <strong>健康管理</strong><br>针对 <span class="answer-text">健康需求</span> 对健康资源进行 <span class="answer-text">计划</span> 、 <span class="answer-text">组织</span> 、 <span class="answer-text">指挥</span> 、 <span class="answer-text">协调</span> 和 <span class="answer-text">控制</span> ，达到最大健康效果的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>30. <strong>健康危险因素</strong><br>指在机体内外环境中存在的，与疾病 <span class="blur-text">发生</span> 、 <span class="blur-text">发展</span> 及 <span class="blur-text">死亡</span> 有关的诱发因素，即导致疾病或死亡发生可能性增加的因素。</td>
+                            <td>30. <strong>健康危险因素</strong><br>指在机体内外环境中存在的，与疾病 <span class="answer-text">发生</span> 、 <span class="answer-text">发展</span> 及 <span class="answer-text">死亡</span> 有关的诱发因素，即导致疾病或死亡发生可能性增加的因素。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>31. <strong>健康教育</strong><br>通过<span class="blur-text">有计划</span>、<span class="blur-text">有组织</span>、<span class="blur-text">有系统</span>的社会教育活动，使人们自觉的采纳有益于健康的行为和生活方式，消除或减轻影响健康的危险因素，预防疾病，促进健康，提高生活质量，并对教育的过程和效果作出评价。</td>
+                            <td>31. <strong>健康教育</strong><br>通过<span class="answer-text">有计划</span>、<span class="answer-text">有组织</span>、<span class="answer-text">有系统</span>的社会教育活动，使人们自觉的采纳有益于健康的行为和生活方式，消除或减轻影响健康的危险因素，预防疾病，促进健康，提高生活质量，并对教育的过程和效果作出评价。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>32. <strong>健康促进</strong><br>促使人们<span class="blur-text">维护</span>和<span class="blur-text">改善</span>他们自身健康的过程。</td>
+                            <td>32. <strong>健康促进</strong><br>促使人们<span class="answer-text">维护</span>和<span class="answer-text">改善</span>他们自身健康的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>33. <strong>临床思维</strong><br>指临床医生运用<span class="blur-text">医学科学</span>、<span class="blur-text">自然科学</span>、<span class="blur-text">人文社会科学</span>和<span class="blur-text">行为科学</span>的知识，对临床资料进行综合分析，逻辑推理，从错综复杂的线索中找出主要矛盾并加以解决的过程。</td>
+                            <td>33. <strong>临床思维</strong><br>指临床医生运用<span class="answer-text">医学科学</span>、<span class="answer-text">自然科学</span>、<span class="answer-text">人文社会科学</span>和<span class="answer-text">行为科学</span>的知识，对临床资料进行综合分析，逻辑推理，从错综复杂的线索中找出主要矛盾并加以解决的过程。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

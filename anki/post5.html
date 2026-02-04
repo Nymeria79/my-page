@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <div class="medical-disclaimer">
+                <strong>⚠️ 医疗免责声明</strong>
+                <p>本站所有内容仅供教育参考与信息分享，不构成医疗建议、诊断或治疗方案。浏览本站不建立医患关系，如有健康疑虑请咨询执业医疗人员。</p>
+            </div>
+
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3"><strong>儿科学名词解释</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><strong>1. 生长水平</strong><br>将某一时间点所获得的某一单项体格生长指标测量值与 <span class="blur-text">参考人群值</span> 比较，得到该个体在同质人群中所处的 <span class="blur-text">位置</span> 。</td>
+                            <td><strong>1. 生长水平</strong><br>将某一时间点所获得的某一单项体格生长指标测量值与 <span class="answer-text">参考人群值</span> 比较，得到该个体在同质人群中所处的 <span class="answer-text">位置</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td><strong>2. 生长速度</strong><br>对某一单项体格生长指标定期连续测量，获得该项指标在某一时间段中的 <span class="blur-text">增长值</span> ，与 <span class="blur-text">参照人群值</span> 比较。</td>
+                            <td><strong>2. 生长速度</strong><br>对某一单项体格生长指标定期连续测量，获得该项指标在某一时间段中的 <span class="answer-text">增长值</span> ，与 <span class="answer-text">参照人群值</span> 比较。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td><strong>3. 过渡期食物（转乳期食物）</strong><br>除乳类以外，为过渡到成人固体食物所添加的富含 <span class="blur-text">能量</span> 和各种 <span class="blur-text">营养素</span> 的 <span class="blur-text">半固体食物</span> 和固体食物。</td>
+                            <td><strong>3. 过渡期食物（转乳期食物）</strong><br>除乳类以外，为过渡到成人固体食物所添加的富含 <span class="answer-text">能量</span> 和各种 <span class="answer-text">营养素</span> 的 <span class="answer-text">半固体食物</span> 和固体食物。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td><strong>4. <span class="blur-text">新生儿缺氧缺血性脑病</span> （HIE）</strong><br>围生期 <span class="blur-text">窒息</span> 引起的部分或完全缺氧、 <span class="blur-text">脑血流减少</span> 或暂停而导致胎儿或新生儿 <span class="blur-text">脑损伤</span> 。</td>
+                            <td><strong>4. <span class="answer-text">新生儿缺氧缺血性脑病</span> （HIE）</strong><br>围生期 <span class="answer-text">窒息</span> 引起的部分或完全缺氧、 <span class="answer-text">脑血流减少</span> 或暂停而导致胎儿或新生儿 <span class="answer-text">脑损伤</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td><strong>5. A 选择性易损区</strong><br>由于脑组织 <span class="blur-text">内在特性</span> 不同而具有对损害特有的 <span class="blur-text">高危性</span> 。<br>足月儿的易损区在 <span class="blur-text">大脑矢状旁区的脑组织</span> ，早产儿的易损区则位于 <span class="blur-text">脑室周围的白质区</span> 。</td>
+                            <td><strong>5. A 选择性易损区</strong><br>由于脑组织 <span class="answer-text">内在特性</span> 不同而具有对损害特有的 <span class="answer-text">高危性</span> 。<br>足月儿的易损区在 <span class="answer-text">大脑矢状旁区的脑组织</span> ，早产儿的易损区则位于 <span class="answer-text">脑室周围的白质区</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td><strong>6. <span class="blur-text">新生儿败血症</span> （Neonatal Septicemia）</strong><br><span class="blur-text">病原体</span> 侵入新生儿血液循环，并在其中 <span class="blur-text">生长繁殖</span> ，产生 <span class="blur-text">毒素</span> 而造成的全身炎症反应综合征。</td>
+                            <td><strong>6. <span class="answer-text">新生儿败血症</span> （Neonatal Septicemia）</strong><br><span class="answer-text">病原体</span> 侵入新生儿血液循环，并在其中 <span class="answer-text">生长繁殖</span> ，产生 <span class="answer-text">毒素</span> 而造成的全身炎症反应综合征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td><strong>7. 新生儿黄疸</strong><br>是因 <span class="blur-text">胆红素</span> 在体内积聚，引起的 <span class="blur-text">皮肤</span> 或其他器官 <span class="blur-text">黄染</span> 。</td>
+                            <td><strong>7. 新生儿黄疸</strong><br>是因 <span class="answer-text">胆红素</span> 在体内积聚，引起的 <span class="answer-text">皮肤</span> 或其他器官 <span class="answer-text">黄染</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td><strong>8. 胆红素脑病</strong><br>当 <span class="blur-text">未结合胆红素</span> 水平过高，透过 <span class="blur-text">血脑屏障</span> ，可造成 <span class="blur-text">中枢神经系统功能障碍</span> ，如不经治疗干预，可造成永久性损害。</td>
+                            <td><strong>8. 胆红素脑病</strong><br>当 <span class="answer-text">未结合胆红素</span> 水平过高，透过 <span class="answer-text">血脑屏障</span> ，可造成 <span class="answer-text">中枢神经系统功能障碍</span> ，如不经治疗干预，可造成永久性损害。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td><strong>9. <span class="blur-text">新生儿溶血病</span> （HAD）</strong><br>指 <span class="blur-text">母、子血型不合</span> 引起的 <span class="blur-text">同族免疫性溶血</span> 。</td>
+                            <td><strong>9. <span class="answer-text">新生儿溶血病</span> （HAD）</strong><br>指 <span class="answer-text">母、子血型不合</span> 引起的 <span class="answer-text">同族免疫性溶血</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td><strong>10. <span class="blur-text">急性肾小球肾炎</span> （AGN）</strong><br>是一组 <span class="blur-text">病因不一</span> ， <span class="blur-text">发病机制不清</span> ，急性起病，以 <span class="blur-text">血尿</span> 为主，伴有不同程度蛋白尿，可有水肿、高血压、肾功能不全等特点的肾小球病变。</td>
+                            <td><strong>10. <span class="answer-text">急性肾小球肾炎</span> （AGN）</strong><br>是一组 <span class="answer-text">病因不一</span> ， <span class="answer-text">发病机制不清</span> ，急性起病，以 <span class="answer-text">血尿</span> 为主，伴有不同程度蛋白尿，可有水肿、高血压、肾功能不全等特点的肾小球病变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td><strong>11. A <span class="blur-text">肾病综合征</span> （NS）- 定义与四大特征</strong><br>一组多种原因引起的 <span class="blur-text">肾小球基底膜通透性增加</span> ，导致血浆内大量蛋白质从尿中丢失的临床综合征。<br>临床出现：① <span class="blur-text">大量蛋白尿</span> ② <span class="blur-text">低蛋白血症</span> ③ <span class="blur-text">高脂血症</span> ④ <span class="blur-text">水肿</span></td>
+                            <td><strong>11. A <span class="answer-text">肾病综合征</span> （NS）- 定义与四大特征</strong><br>一组多种原因引起的 <span class="answer-text">肾小球基底膜通透性增加</span> ，导致血浆内大量蛋白质从尿中丢失的临床综合征。<br>临床出现：① <span class="answer-text">大量蛋白尿</span> ② <span class="answer-text">低蛋白血症</span> ③ <span class="answer-text">高脂血症</span> ④ <span class="answer-text">水肿</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td><strong>11. B 肾病综合征（NS）- 发病机制</strong><br>大量蛋白尿原因： <span class="blur-text">肾小球滤过膜静电屏障或分子屏障受损</span> ， <span class="blur-text">肾小球基底膜通透性增加</span> 。<br>标准：24 小时蛋白定量≥ <span class="blur-text">50mg/kg</span> ；尿蛋白/尿肌酐≥ <span class="blur-text">2.0</span><br>低蛋白血症原因：尿中丢失大量 <span class="blur-text">白蛋白</span> （主要）；合成减慢，分解增多；肠道丢失。诊断标准：血清白蛋白≤ <span class="blur-text">25g/L</span></td>
+                            <td><strong>11. B 肾病综合征（NS）- 发病机制</strong><br>大量蛋白尿原因： <span class="answer-text">肾小球滤过膜静电屏障或分子屏障受损</span> ， <span class="answer-text">肾小球基底膜通透性增加</span> 。<br>标准：24 小时蛋白定量≥ <span class="answer-text">50mg/kg</span> ；尿蛋白/尿肌酐≥ <span class="answer-text">2.0</span><br>低蛋白血症原因：尿中丢失大量 <span class="answer-text">白蛋白</span> （主要）；合成减慢，分解增多；肠道丢失。诊断标准：血清白蛋白≤ <span class="answer-text">25g/L</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td><strong>12. 肾炎性肾病</strong><br>是肾病综合症的一种型别，除了具备"三高一低"外，还具有 <span class="blur-text">高血压</span> 、 <span class="blur-text">血尿</span> 、 <span class="blur-text">氮质血症</span> 、 <span class="blur-text">补体降低</span> 的任何一种改变。<br>此型多发生在 <span class="blur-text">学龄期</span> ，病理改变多为 <span class="blur-text">非微小病变型</span> ，多对激素治疗 <span class="blur-text">不敏感</span> ，预后较 <span class="blur-text">差</span> 。</td>
+                            <td><strong>12. 肾炎性肾病</strong><br>是肾病综合症的一种型别，除了具备"三高一低"外，还具有 <span class="answer-text">高血压</span> 、 <span class="answer-text">血尿</span> 、 <span class="answer-text">氮质血症</span> 、 <span class="answer-text">补体降低</span> 的任何一种改变。<br>此型多发生在 <span class="answer-text">学龄期</span> ，病理改变多为 <span class="answer-text">非微小病变型</span> ，多对激素治疗 <span class="answer-text">不敏感</span> ，预后较 <span class="answer-text">差</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td><strong>13. 单纯性肾病</strong><br>是肾病综合症的一种型别，只具备典型的"三高一低"，不具有高血压、血尿、氮质血症、补体降低的任何一种改变。<br>此型多发生在 <span class="blur-text">学龄前期</span> ，病理改变多为 <span class="blur-text">微小病变型</span> ，多对激素治疗 <span class="blur-text">敏感</span> ，预后较 <span class="blur-text">好</span> 。</td>
+                            <td><strong>13. 单纯性肾病</strong><br>是肾病综合症的一种型别，只具备典型的"三高一低"，不具有高血压、血尿、氮质血症、补体降低的任何一种改变。<br>此型多发生在 <span class="answer-text">学龄前期</span> ，病理改变多为 <span class="answer-text">微小病变型</span> ，多对激素治疗 <span class="answer-text">敏感</span> ，预后较 <span class="answer-text">好</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td><strong>14. A <span class="blur-text">肺炎</span> （pneumonia）- 定义与临床表现</strong><br>是指不同 <span class="blur-text">病原体</span> 或其他因素所引起的 <span class="blur-text">肺实质的炎症</span> 。<br>主要临床表现为：① <span class="blur-text">发热</span> ② <span class="blur-text">咳嗽</span> ③ <span class="blur-text">气促</span> ④ <span class="blur-text">呼吸困难</span> ⑤ 肺部固定 <span class="blur-text">中、细湿罗音</span></td>
+                            <td><strong>14. A <span class="answer-text">肺炎</span> （pneumonia）- 定义与临床表现</strong><br>是指不同 <span class="answer-text">病原体</span> 或其他因素所引起的 <span class="answer-text">肺实质的炎症</span> 。<br>主要临床表现为：① <span class="answer-text">发热</span> ② <span class="answer-text">咳嗽</span> ③ <span class="answer-text">气促</span> ④ <span class="answer-text">呼吸困难</span> ⑤ 肺部固定 <span class="answer-text">中、细湿罗音</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td><strong>15. <span class="blur-text">缺铁性贫血</span> （IDA）</strong><br>由于体内 <span class="blur-text">铁的缺乏</span> 导致 <span class="blur-text">血红蛋白合成减少</span> 所致的贫血性疾病。<br>临床特点为 <span class="blur-text">小细胞低色素性贫血</span> ， <span class="blur-text">血清铁蛋白减少</span> ， <span class="blur-text">铁剂治疗有效</span> 。</td>
+                            <td><strong>15. <span class="answer-text">缺铁性贫血</span> （IDA）</strong><br>由于体内 <span class="answer-text">铁的缺乏</span> 导致 <span class="answer-text">血红蛋白合成减少</span> 所致的贫血性疾病。<br>临床特点为 <span class="answer-text">小细胞低色素性贫血</span> ， <span class="answer-text">血清铁蛋白减少</span> ， <span class="answer-text">铁剂治疗有效</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td><strong>16. 先天性心脏病</strong><br>是 <span class="blur-text">胚胎期</span> 心脏及大血管 <span class="blur-text">发育异常</span> 所致的先天性畸形，是最常见的 <span class="blur-text">出生缺陷</span> 。</td>
+                            <td><strong>16. 先天性心脏病</strong><br>是 <span class="answer-text">胚胎期</span> 心脏及大血管 <span class="answer-text">发育异常</span> 所致的先天性畸形，是最常见的 <span class="answer-text">出生缺陷</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td><strong>17. <span class="blur-text">法洛四联症</span> （Tetralogy of Fallot）</strong><br>是由于 <span class="blur-text">胚胎早期动脉圆锥发育异常</span> 造成的，包括：① <span class="blur-text">右心室流出道梗阻</span> ② <span class="blur-text">室间隔缺损</span> ③ <span class="blur-text">主动脉骑跨</span> ④ <span class="blur-text">右心室肥厚</span></td>
+                            <td><strong>17. <span class="answer-text">法洛四联症</span> （Tetralogy of Fallot）</strong><br>是由于 <span class="answer-text">胚胎早期动脉圆锥发育异常</span> 造成的，包括：① <span class="answer-text">右心室流出道梗阻</span> ② <span class="answer-text">室间隔缺损</span> ③ <span class="answer-text">主动脉骑跨</span> ④ <span class="answer-text">右心室肥厚</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td><strong>18. <span class="blur-text">艾森曼格综合征</span> （Eisenmenger Syndrome）</strong><br><span class="blur-text">不可逆的梗阻性肺动脉高压</span> 导致右室收缩压超过左室收缩压，出现 <span class="blur-text">双向分流</span> 或 <span class="blur-text">右向左分流</span> 。<br>主要表现为 <span class="blur-text">持续性青紫</span> ，是所有 <span class="blur-text">左向右分流型先心病</span> 的晚期病变。</td>
+                            <td><strong>18. <span class="answer-text">艾森曼格综合征</span> （Eisenmenger Syndrome）</strong><br><span class="answer-text">不可逆的梗阻性肺动脉高压</span> 导致右室收缩压超过左室收缩压，出现 <span class="answer-text">双向分流</span> 或 <span class="answer-text">右向左分流</span> 。<br>主要表现为 <span class="answer-text">持续性青紫</span> ，是所有 <span class="answer-text">左向右分流型先心病</span> 的晚期病变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td><strong>19. <span class="blur-text">杵状指</span> （clubbed finger）</strong><br>长期缺氧（> <span class="blur-text">6个月</span> ）导致指趾端 <span class="blur-text">毛细血管增生</span> ，局部 <span class="blur-text">软组织</span> 和 <span class="blur-text">骨组织</span> 增生肥大，表现为指趾端膨大。</td>
+                            <td><strong>19. <span class="answer-text">杵状指</span> （clubbed finger）</strong><br>长期缺氧（> <span class="answer-text">6个月</span> ）导致指趾端 <span class="answer-text">毛细血管增生</span> ，局部 <span class="answer-text">软组织</span> 和 <span class="answer-text">骨组织</span> 增生肥大，表现为指趾端膨大。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td><strong>20. <span class="blur-text">惊厥</span> （convulsion）</strong><br><span class="blur-text">大脑皮层运动区神经元异常放电</span> 引起的暂时性 <span class="blur-text">脑功能障碍</span> ，表现为 <span class="blur-text">运动异常（抽搐）</span> ，可伴有不同程度意识障碍。</td>
+                            <td><strong>20. <span class="answer-text">惊厥</span> （convulsion）</strong><br><span class="answer-text">大脑皮层运动区神经元异常放电</span> 引起的暂时性 <span class="answer-text">脑功能障碍</span> ，表现为 <span class="answer-text">运动异常（抽搐）</span> ，可伴有不同程度意识障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td><strong>21. <span class="blur-text">惊厥持续状态</span> （status convulsion, SC）</strong><br>一次惊厥发作持续大于 <span class="blur-text">30分钟</span> 或反复多次惊厥发作间歇期 <span class="blur-text">意识无好转</span> 大于 <span class="blur-text">30分钟</span> 。</td>
+                            <td><strong>21. <span class="answer-text">惊厥持续状态</span> （status convulsion, SC）</strong><br>一次惊厥发作持续大于 <span class="answer-text">30分钟</span> 或反复多次惊厥发作间歇期 <span class="answer-text">意识无好转</span> 大于 <span class="answer-text">30分钟</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td><strong>22. A <span class="blur-text">热性惊厥</span> （Febrile seizures, FS）- 定义与特征</strong><br><span class="blur-text">颅外感染性疾病的发热过程中</span> 出现的惊厥发作，是婴幼儿时期 <span class="blur-text">最常见</span> 的惊厥性疾病。<br>特征：① 年龄依赖性：发生于 <span class="blur-text">3月～5岁</span> ② 惊厥发作常于 <span class="blur-text">发热初期</span> 或 <span class="blur-text">体温突然升高时</span> 出现</td>
+                            <td><strong>22. A <span class="answer-text">热性惊厥</span> （Febrile seizures, FS）- 定义与特征</strong><br><span class="answer-text">颅外感染性疾病的发热过程中</span> 出现的惊厥发作，是婴幼儿时期 <span class="answer-text">最常见</span> 的惊厥性疾病。<br>特征：① 年龄依赖性：发生于 <span class="answer-text">3月～5岁</span> ② 惊厥发作常于 <span class="answer-text">发热初期</span> 或 <span class="answer-text">体温突然升高时</span> 出现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td><strong>22. B 热性惊厥（Febrile seizures, FS）- 分型鉴别</strong><br>单纯型：① <span class="blur-text">全面性发作</span> ② 短时程发作< <span class="blur-text">15分钟</span> ③ 一次热程/24 小时内发作 <span class="blur-text">1次</span> ④ 复发< <span class="blur-text">5次</span> <br>复杂型：① <span class="blur-text">局灶性发作</span> ② 长时程发作≥ <span class="blur-text">15分钟</span> ③ 一次热程/24 小时内发作≥ <span class="blur-text">2次</span> ④ 复发≥ <span class="blur-text">5次</span></td>
+                            <td><strong>22. B 热性惊厥（Febrile seizures, FS）- 分型鉴别</strong><br>单纯型：① <span class="answer-text">全面性发作</span> ② 短时程发作< <span class="answer-text">15分钟</span> ③ 一次热程/24 小时内发作 <span class="answer-text">1次</span> ④ 复发< <span class="answer-text">5次</span> <br>复杂型：① <span class="answer-text">局灶性发作</span> ② 长时程发作≥ <span class="answer-text">15分钟</span> ③ 一次热程/24 小时内发作≥ <span class="answer-text">2次</span> ④ 复发≥ <span class="answer-text">5次</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td><strong>23. A <span class="blur-text">川崎病</span> - 定义与病理</strong><br>是一种 <span class="blur-text">病因未明</span> 的 <span class="blur-text">全身性血管炎综合征</span> ，主要影响 <span class="blur-text">中小动脉</span> ，尤其是心脏的 <span class="blur-text">冠状动脉</span> ，又称为 <span class="blur-text">皮肤粘膜淋巴结综合征</span> ，是最常见的 <span class="blur-text">后天性心脏病</span> 之一。<br>病理分期：Ⅰ期（ <span class="blur-text">1-9天</span> ）小动脉周围炎症；Ⅱ期（ <span class="blur-text">12-25天</span> ）冠状动脉全层血管炎</td>
+                            <td><strong>23. A <span class="answer-text">川崎病</span> - 定义与病理</strong><br>是一种 <span class="answer-text">病因未明</span> 的 <span class="answer-text">全身性血管炎综合征</span> ，主要影响 <span class="answer-text">中小动脉</span> ，尤其是心脏的 <span class="answer-text">冠状动脉</span> ，又称为 <span class="answer-text">皮肤粘膜淋巴结综合征</span> ，是最常见的 <span class="answer-text">后天性心脏病</span> 之一。<br>病理分期：Ⅰ期（ <span class="answer-text">1-9天</span> ）小动脉周围炎症；Ⅱ期（ <span class="answer-text">12-25天</span> ）冠状动脉全层血管炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td><strong>23. B 川崎病 - 临床表现与诊断</strong><br>主要表现：① <span class="blur-text">发热</span> （≥ <span class="blur-text">5天</span> ，抗生素治疗无效）② <span class="blur-text">球结膜充血</span> （对称性、非化脓性）③ <span class="blur-text">口唇及口腔表现</span> （唇充血皲裂、杨梅舌）④ <span class="blur-text">皮肤表现</span> （多形性皮疹）⑤ <span class="blur-text">手足症状</span> （掌跖红斑、肢端硬肿、膜状脱皮）⑥ <span class="blur-text">颈淋巴结肿大</span><br>诊断：发热≥5 天+上述 <span class="blur-text">5项中4项</span> ，除外其他疾病</td>
+                            <td><strong>23. B 川崎病 - 临床表现与诊断</strong><br>主要表现：① <span class="answer-text">发热</span> （≥ <span class="answer-text">5天</span> ，抗生素治疗无效）② <span class="answer-text">球结膜充血</span> （对称性、非化脓性）③ <span class="answer-text">口唇及口腔表现</span> （唇充血皲裂、杨梅舌）④ <span class="answer-text">皮肤表现</span> （多形性皮疹）⑤ <span class="answer-text">手足症状</span> （掌跖红斑、肢端硬肿、膜状脱皮）⑥ <span class="answer-text">颈淋巴结肿大</span><br>诊断：发热≥5 天+上述 <span class="answer-text">5项中4项</span> ，除外其他疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td><strong>24. A <span class="blur-text">先天性甲状腺功能减退症</span> （CH）- 定义与病因</strong><br>先天因素致 <span class="blur-text">甲状腺激素合成不足</span> 或其 <span class="blur-text">受体缺陷</span> 所造成的一种疾病。<br>最常见病因： <span class="blur-text">甲状腺不发育/发育不全</span> ， <span class="blur-text">异位甲状腺</span><br>是最常见的 <span class="blur-text">儿童先天性内分泌系统疾病</span> ；最常见的 <span class="blur-text">可预防的智力低下</span> 的原因</td>
+                            <td><strong>24. A <span class="answer-text">先天性甲状腺功能减退症</span> （CH）- 定义与病因</strong><br>先天因素致 <span class="answer-text">甲状腺激素合成不足</span> 或其 <span class="answer-text">受体缺陷</span> 所造成的一种疾病。<br>最常见病因： <span class="answer-text">甲状腺不发育/发育不全</span> ， <span class="answer-text">异位甲状腺</span><br>是最常见的 <span class="answer-text">儿童先天性内分泌系统疾病</span> ；最常见的 <span class="answer-text">可预防的智力低下</span> 的原因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td><strong>24. B 先天性甲状腺功能减退症（CH）- 临床表现与治疗</strong><br>典型表现：① <span class="blur-text">呆</span> （智力低下）② <span class="blur-text">小</span> （生长发育迟缓，上部量/下部量> <span class="blur-text">1.5</span> ）③ <span class="blur-text">特</span> （特殊面容：眼睑水肿、眼距宽、鼻梁低平、舌大宽厚）④ <span class="blur-text">蔫</span> （生理功能低下）<br>治疗原则： <span class="blur-text">早</span> （一旦确诊尽早治疗）、 <span class="blur-text">终</span> （终身替代治疗）、 <span class="blur-text">足</span> （药物剂量足量）、 <span class="blur-text">调</span> （定期调整）</td>
+                            <td><strong>24. B 先天性甲状腺功能减退症（CH）- 临床表现与治疗</strong><br>典型表现：① <span class="answer-text">呆</span> （智力低下）② <span class="answer-text">小</span> （生长发育迟缓，上部量/下部量> <span class="answer-text">1.5</span> ）③ <span class="answer-text">特</span> （特殊面容：眼睑水肿、眼距宽、鼻梁低平、舌大宽厚）④ <span class="answer-text">蔫</span> （生理功能低下）<br>治疗原则： <span class="answer-text">早</span> （一旦确诊尽早治疗）、 <span class="answer-text">终</span> （终身替代治疗）、 <span class="answer-text">足</span> （药物剂量足量）、 <span class="answer-text">调</span> （定期调整）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td><strong>25. A <span class="blur-text">生长激素缺乏症</span> （GHD）- 定义与临床表现</strong><br>由于 <span class="blur-text">腺垂体合成和分泌生长激素部分或完全缺乏</span> ，或由于 <span class="blur-text">生长激素分子结构异常</span> 等所导致的生长发育障碍性疾病。<br>临床表现：① <span class="blur-text">矮</span> （生长速度< <span class="blur-text">5cm/年</span> ）② <span class="blur-text">幼</span> （幼稚面容、皮下脂肪较多）③ <span class="blur-text">不呆</span> （智力正常）</td>
+                            <td><strong>25. A <span class="answer-text">生长激素缺乏症</span> （GHD）- 定义与临床表现</strong><br>由于 <span class="answer-text">腺垂体合成和分泌生长激素部分或完全缺乏</span> ，或由于 <span class="answer-text">生长激素分子结构异常</span> 等所导致的生长发育障碍性疾病。<br>临床表现：① <span class="answer-text">矮</span> （生长速度< <span class="answer-text">5cm/年</span> ）② <span class="answer-text">幼</span> （幼稚面容、皮下脂肪较多）③ <span class="answer-text">不呆</span> （智力正常）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td><strong>25. B 生长激素缺乏症（GHD）- 诊断标准</strong><br>诊断标准： <span class="blur-text">矮幼不呆</span> + <span class="blur-text">两种药物刺激GH峰值<10ug/L</span> +排除其他<br>GH 刺激试验判断：① GH 峰值< <span class="blur-text">5ug/L</span> →生长激素缺乏 ② GH 峰值 <span class="blur-text">5~10ug/L</span> →部分缺乏 ③ GH 峰值> <span class="blur-text">10ug/L</span> →不缺乏</td>
+                            <td><strong>25. B 生长激素缺乏症（GHD）- 诊断标准</strong><br>诊断标准： <span class="answer-text">矮幼不呆</span> + <span class="answer-text">两种药物刺激GH峰值<10ug/L</span> +排除其他<br>GH 刺激试验判断：① GH 峰值< <span class="answer-text">5ug/L</span> →生长激素缺乏 ② GH 峰值 <span class="answer-text">5~10ug/L</span> →部分缺乏 ③ GH 峰值> <span class="answer-text">10ug/L</span> →不缺乏</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td><strong>26. A <span class="blur-text">小儿腹泻病</span> - 定义与病因</strong><br>一组由多种 <span class="blur-text">因素</span> 、多种 <span class="blur-text">病原体</span> 引起的以 <span class="blur-text">大便次数增多</span> 和 <span class="blur-text">大便性状改变</span> 为主要特点的消化道综合征。<br>最常见病毒： <span class="blur-text">轮状病毒</span> ；最常见细菌： <span class="blur-text">产毒性大肠埃希氏菌</span></td>
+                            <td><strong>26. A <span class="answer-text">小儿腹泻病</span> - 定义与病因</strong><br>一组由多种 <span class="answer-text">因素</span> 、多种 <span class="answer-text">病原体</span> 引起的以 <span class="answer-text">大便次数增多</span> 和 <span class="answer-text">大便性状改变</span> 为主要特点的消化道综合征。<br>最常见病毒： <span class="answer-text">轮状病毒</span> ；最常见细菌： <span class="answer-text">产毒性大肠埃希氏菌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td><strong>26. B 小儿腹泻病 - 发病机制分型</strong><br>① <span class="blur-text">渗透性腹泻</span> （各种病毒，水样泻，大便镜检无异常）<br>② <span class="blur-text">分泌性腹泻</span> （产毒性大肠杆菌、霍乱弧菌，大量水样泻）<br>③ <span class="blur-text">渗出性腹泻</span> （志贺氏菌等，痢疾样泻，脓血便，镜检大量白细胞）</td>
+                            <td><strong>26. B 小儿腹泻病 - 发病机制分型</strong><br>① <span class="answer-text">渗透性腹泻</span> （各种病毒，水样泻，大便镜检无异常）<br>② <span class="answer-text">分泌性腹泻</span> （产毒性大肠杆菌、霍乱弧菌，大量水样泻）<br>③ <span class="answer-text">渗出性腹泻</span> （志贺氏菌等，痢疾样泻，脓血便，镜检大量白细胞）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td><strong>27. A <span class="blur-text">脱水</span> （dehydration）- 定义与程度评估</strong><br><span class="blur-text">水分摄入不足</span> 或 <span class="blur-text">丢失过多</span> 所引起的 <span class="blur-text">体液总量</span> ，尤其是 <span class="blur-text">细胞外液量</span> 的减少。<br>轻度：体液丢失 <span class="blur-text">3-5%</span> ，意识正常/稍差，皮肤弹性 <span class="blur-text">好</span><br>中度：体液丢失 <span class="blur-text">5-10%</span> ，烦躁/激惹，皮肤弹性 <span class="blur-text">差</span><br>重度：体液丢失 <span class="blur-text">>10%</span> ，萎靡/昏睡，皮肤弹性 <span class="blur-text">极差</span> ，有 <span class="blur-text">休克</span></td>
+                            <td><strong>27. A <span class="answer-text">脱水</span> （dehydration）- 定义与程度评估</strong><br><span class="answer-text">水分摄入不足</span> 或 <span class="answer-text">丢失过多</span> 所引起的 <span class="answer-text">体液总量</span> ，尤其是 <span class="answer-text">细胞外液量</span> 的减少。<br>轻度：体液丢失 <span class="answer-text">3-5%</span> ，意识正常/稍差，皮肤弹性 <span class="answer-text">好</span><br>中度：体液丢失 <span class="answer-text">5-10%</span> ，烦躁/激惹，皮肤弹性 <span class="answer-text">差</span><br>重度：体液丢失 <span class="answer-text">>10%</span> ，萎靡/昏睡，皮肤弹性 <span class="answer-text">极差</span> ，有 <span class="answer-text">休克</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td><strong>28. <span class="blur-text">多核巨细胞/华-佛细胞</span> （MGC）</strong><br>由 <span class="blur-text">麻疹病毒</span> 感染的相邻细胞相互融合而成，分布广泛，是 <span class="blur-text">麻疹</span> 典型的病理特征，具有 <span class="blur-text">早期诊断</span> 价值。</td>
+                            <td><strong>28. <span class="answer-text">多核巨细胞/华-佛细胞</span> （MGC）</strong><br>由 <span class="answer-text">麻疹病毒</span> 感染的相邻细胞相互融合而成，分布广泛，是 <span class="answer-text">麻疹</span> 典型的病理特征，具有 <span class="answer-text">早期诊断</span> 价值。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td><strong>29. <span class="blur-text">麻疹黏膜斑/柯氏斑</span> （Koplik's spot）</strong><br>位于 <span class="blur-text">第二磨牙对应的颊粘膜</span> 上，形态为 <span class="blur-text">砂砾大小的白色斑点</span> ，周围有 <span class="blur-text">红晕</span> 。<br>在麻疹出疹前 <span class="blur-text">1~2天</span> 出现，出疹后 <span class="blur-text">1~2天</span> 内消退，是麻疹早期 <span class="blur-text">特征性体征</span> ，对麻疹有 <span class="blur-text">诊断价值</span> 。</td>
+                            <td><strong>29. <span class="answer-text">麻疹黏膜斑/柯氏斑</span> （Koplik's spot）</strong><br>位于 <span class="answer-text">第二磨牙对应的颊粘膜</span> 上，形态为 <span class="answer-text">砂砾大小的白色斑点</span> ，周围有 <span class="answer-text">红晕</span> 。<br>在麻疹出疹前 <span class="answer-text">1~2天</span> 出现，出疹后 <span class="answer-text">1~2天</span> 内消退，是麻疹早期 <span class="answer-text">特征性体征</span> ，对麻疹有 <span class="answer-text">诊断价值</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td><strong>30. 原发综合征</strong><br><span class="blur-text">原发性肺结核</span> 时， <span class="blur-text">肺部原发病灶</span> 、 <span class="blur-text">淋巴管炎</span> 和 <span class="blur-text">肺门淋巴结肿大</span> 称为原发综合征，X 线呈 <span class="blur-text">哑铃状阴影</span> 。</td>
+                            <td><strong>30. 原发综合征</strong><br><span class="answer-text">原发性肺结核</span> 时， <span class="answer-text">肺部原发病灶</span> 、 <span class="answer-text">淋巴管炎</span> 和 <span class="answer-text">肺门淋巴结肿大</span> 称为原发综合征，X 线呈 <span class="answer-text">哑铃状阴影</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td><strong>31. <span class="blur-text">肠无神经节细胞症</span> （Aganglionosis）</strong><br>是以 <span class="blur-text">便秘</span> 为主要临床表现，病变肠管 <span class="blur-text">神经节细胞缺如</span> 的一种消化道畸形。<br>又称为 <span class="blur-text">Hirschsprung Disease（HD）</span> ， <span class="blur-text">先天性巨结肠</span> （congenital megacolon）。</td>
+                            <td><strong>31. <span class="answer-text">肠无神经节细胞症</span> （Aganglionosis）</strong><br>是以 <span class="answer-text">便秘</span> 为主要临床表现，病变肠管 <span class="answer-text">神经节细胞缺如</span> 的一种消化道畸形。<br>又称为 <span class="answer-text">Hirschsprung Disease（HD）</span> ， <span class="answer-text">先天性巨结肠</span> （congenital megacolon）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td><strong>32. <span class="blur-text">新生儿坏死性小肠结肠炎</span> （Neonatal Necrotizing Enterocolitis）</strong><br>新生儿期特有的一种累及 <span class="blur-text">回肠和/或结肠</span> 的肠道炎症坏死性疾病，以 <span class="blur-text">腹胀</span> 、 <span class="blur-text">呕吐</span> 、 <span class="blur-text">便血</span> 为主要表现。<br>腹部 X 线检查以 <span class="blur-text">肠壁囊样积气</span> 为特征。在 <span class="blur-text">早产儿</span> 中多见，是严重威胁新生儿生命的常见疾病。</td>
+                            <td><strong>32. <span class="answer-text">新生儿坏死性小肠结肠炎</span> （Neonatal Necrotizing Enterocolitis）</strong><br>新生儿期特有的一种累及 <span class="answer-text">回肠和/或结肠</span> 的肠道炎症坏死性疾病，以 <span class="answer-text">腹胀</span> 、 <span class="answer-text">呕吐</span> 、 <span class="answer-text">便血</span> 为主要表现。<br>腹部 X 线检查以 <span class="answer-text">肠壁囊样积气</span> 为特征。在 <span class="answer-text">早产儿</span> 中多见，是严重威胁新生儿生命的常见疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td><strong>33. <span class="blur-text">先天性肥厚性幽门狭窄</span> </strong><br>由于 <span class="blur-text">幽门环肌增生肥厚</span> ，使 <span class="blur-text">幽门管腔狭窄</span> 而引起的上消化道 <span class="blur-text">不完全梗阻</span> 性疾病。</td>
+                            <td><strong>33. <span class="answer-text">先天性肥厚性幽门狭窄</span> </strong><br>由于 <span class="answer-text">幽门环肌增生肥厚</span> ，使 <span class="answer-text">幽门管腔狭窄</span> 而引起的上消化道 <span class="answer-text">不完全梗阻</span> 性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td><strong>34. " <span class="blur-text">鸟嘴</span> "征</strong><br>先天性肥厚性幽门狭窄病人行 X 线钡餐检查可见 <span class="blur-text">幽门管延长</span> ，向头侧弯曲，幽门胃窦部呈 <span class="blur-text">鸟嘴状改变</span> ，管腔狭窄如线状。<br>"鸟嘴"征是先天性肥厚性幽门狭窄 <span class="blur-text">特征性的X线征象</span> 。</td>
+                            <td><strong>34. " <span class="answer-text">鸟嘴</span> "征</strong><br>先天性肥厚性幽门狭窄病人行 X 线钡餐检查可见 <span class="answer-text">幽门管延长</span> ，向头侧弯曲，幽门胃窦部呈 <span class="answer-text">鸟嘴状改变</span> ，管腔狭窄如线状。<br>"鸟嘴"征是先天性肥厚性幽门狭窄 <span class="answer-text">特征性的X线征象</span> 。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>
