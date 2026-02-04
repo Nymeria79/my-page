@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小c的笔记导航</title>
-    <link rel="stylesheet" href="https://nymeria79.github.io/my-page/style.css">
+    <link rel="stylesheet" href="https://nymeria79.github.io/my-page/style.css ">
 </head>
 <body>
 
@@ -26,7 +26,7 @@
             <div class="card-title">📝 个人博客</div>
             <div class="card-desc">最初的主页，存放见闻思考和综合内容</div>
             <div class="card-meta" style="margin-bottom: 16px;">更新：2025-02-01</div>
-            <a href="https://nymeria79.github.io/my-page/" target="_blank" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px;">访问网站</a>
+            <a href="https://nymeria79.github.io/my-page/ " target="_blank" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px;">访问网站</a>
         </div>
 
         <!-- 卡片3：Anki可视化工具 -->
@@ -133,6 +133,9 @@
         }
         
         document.addEventListener('DOMContentLoaded', async () => {
+            // 清除旧缓存确保获取最新数据
+            localStorage.removeItem('page_times');
+            
             // 处理卡片3的单文件时间
             const meta2 = document.getElementById('time-post2');
             if (meta2) {
@@ -141,21 +144,22 @@
                 else meta2.textContent = '更新：近期';
             }
             
-            // 处理所有链接的时间标签
-            const fileElements = document.querySelectorAll('[data-file]');
+            // 处理所有带 data-file 的链接
+            const fileElements = document.querySelectorAll('a[data-file]');
             let latestTime = '';
             let latestFile = '';
             
             for (let el of fileElements) {
                 const file = el.getAttribute('data-file');
-                if (!file || file === 'post2.html') continue; // 跳过已经处理的post2
+                if (!file) continue;
                 
                 const time = await fetchTime(file);
                 if (time) {
-                    // 在链接内添加时间标签（使用CSS类）
+                    // 在链接内添加时间标签
                     const span = document.createElement('span');
                     span.className = 'file-time';
                     span.textContent = time;
+                    span.style.cssText = 'display:block;font-size:0.75rem;color:var(--text-muted);margin-top:4px;font-weight:normal;';
                     el.appendChild(span);
                     
                     // 记录最新时间
@@ -166,7 +170,7 @@
                 }
             }
             
-            // 更新卡片3顶部的整体时间
+            // 更新卡片4顶部的整体时间
             const mainMeta = document.getElementById('time-main');
             if (mainMeta && latestTime) {
                 mainMeta.textContent = `最近更新：${latestFile.replace('.html','')} (${latestTime})`;
