@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3">github初学理解名词解释</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1. <span class="blur-text">仓库</span> (Repository / Repo)<br>解释：一个 <span class="blur-text">项目文件夹</span> ，包含所有项目文件和历史记录。<br>例子：你创建的 <span class="blur-text">my-first-repo</span> 就是一个仓库。</td>
+                            <td>1. <span class="answer-text">仓库</span> (Repository / Repo)<br>解释：一个 <span class="answer-text">项目文件夹</span> ，包含所有项目文件和历史记录。<br>例子：你创建的 <span class="answer-text">my-first-repo</span> 就是一个仓库。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>"2. <span class="blur-text">提交</span> (Commit)<br>解释：一次 <span class="blur-text">版本保存</span> ，就像游戏存档点。<br>例子：`git commit -<span class="blur-text">m ""添加登录功能""</span>` 就是创建一个提交。"</td>
+                            <td>"2. <span class="answer-text">提交</span> (Commit)<br>解释：一次 <span class="answer-text">版本保存</span> ，就像游戏存档点。<br>例子：`git commit -<span class="answer-text">m ""添加登录功能""</span>` 就是创建一个提交。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. <span class="blur-text">推送</span> (Push)<br>解释：把<span class="blur-text">本地的提交</span> 上传 到GitHub<span class="blur-text">网站</span>。<br>命令：`<span class="blur-text">git push</span>`&nbsp;。</td>
+                            <td>3. <span class="answer-text">推送</span> (Push)<br>解释：把<span class="answer-text">本地的提交</span> 上传 到GitHub<span class="answer-text">网站</span>。<br>命令：`<span class="answer-text">git push</span>`&nbsp;。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. <span class="blur-text">拉取</span> (Pull)<br>解释：把GitHub网站上的代码 <span class="blur-text">下载</span> 到电脑。<br>命令：<span class="blur-text">`git pull`</span> 。</td>
+                            <td>4. <span class="answer-text">拉取</span> (Pull)<br>解释：把GitHub网站上的代码 <span class="answer-text">下载</span> 到电脑。<br>命令：<span class="answer-text">`git pull`</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. <span class="blur-text">克隆</span> (Clone)<br>解释：把GitHub上的仓库<span class="blur-text">完整</span>下载到本地（<span class="blur-text">第一次</span>获取时用）。<br>命令：`git clone` <span class="blur-text">仓库地址</span>。</td>
+                            <td>5. <span class="answer-text">克隆</span> (Clone)<br>解释：把GitHub上的仓库<span class="answer-text">完整</span>下载到本地（<span class="answer-text">第一次</span>获取时用）。<br>命令：`git clone` <span class="answer-text">仓库地址</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. <span class="blur-text">分支</span> (Branch)<br>解释：代码的平行宇宙，不影响主线。<br>类比：主分支是 <span class="blur-text">正式版</span> ，新分支是 <span class="blur-text">测试版</span> 。</td>
+                            <td>6. <span class="answer-text">分支</span> (Branch)<br>解释：代码的平行宇宙，不影响主线。<br>类比：主分支是 <span class="answer-text">正式版</span> ，新分支是 <span class="answer-text">测试版</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. <span class="blur-text">合并</span> (Merge)<br>解释：把一个分支的修改 <span class="blur-text">合并</span> 到另一个分支。<br>例子：把<span class="blur-text">测试版的新功能</span>合并到<span class="blur-text">正式版</span>。</td>
+                            <td>7. <span class="answer-text">合并</span> (Merge)<br>解释：把一个分支的修改 <span class="answer-text">合并</span> 到另一个分支。<br>例子：把<span class="answer-text">测试版的新功能</span>合并到<span class="answer-text">正式版</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. Fork<br>解释：复制别人的<span class="blur-text">仓库</span>到你账号下（GitHub特有功能）。<br>例子：看到别人的<span class="blur-text">好项目</span>，点 <span class="blur-text">Fork</span> 按钮就能复制一份给自己。</td>
+                            <td>8. Fork<br>解释：复制别人的<span class="answer-text">仓库</span>到你账号下（GitHub特有功能）。<br>例子：看到别人的<span class="answer-text">好项目</span>，点 <span class="answer-text">Fork</span> 按钮就能复制一份给自己。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. <span class="blur-text">Pull Request</span> (PR)<br>解释：请求别人 <span class="blur-text">合并</span> 你的代码（开源协作主要方式）。<br>例子：你改进了别人的项目，发PR请作者<span class="blur-text">采纳</span>你的修改。</td>
+                            <td>9. <span class="answer-text">Pull Request</span> (PR)<br>解释：请求别人 <span class="answer-text">合并</span> 你的代码（开源协作主要方式）。<br>例子：你改进了别人的项目，发PR请作者<span class="answer-text">采纳</span>你的修改。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. README.md<br>解释：<span class="blur-text">项目说明书</span>，用 <span class="blur-text">Markdown</span> 格式写。<br>位置：每个仓库最显眼的位置，别人第一眼看到的。</td>
+                            <td>10. README.md<br>解释：<span class="answer-text">项目说明书</span>，用 <span class="answer-text">Markdown</span> 格式写。<br>位置：每个仓库最显眼的位置，别人第一眼看到的。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. .gitignore<br>解释：一个文件，告诉Git哪些文件 <span class="blur-text">不需要管理</span> 。<br>例子：<span class="blur-text">临时</span>文件、<span class="blur-text">密码</span>文件、<span class="blur-text">编译</span>生成的文件。</td>
+                            <td>11. .gitignore<br>解释：一个文件，告诉Git哪些文件 <span class="answer-text">不需要管理</span> 。<br>例子：<span class="answer-text">临时</span>文件、<span class="answer-text">密码</span>文件、<span class="answer-text">编译</span>生成的文件。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. License<br>解释：<span class="blur-text">许可证</span>，声明别人<span class="blur-text">如何使用</span>你的代码。<br>常用：<span class="blur-text">MIT</span>（最宽松）、<span class="blur-text">GPL</span>（要求开源）。</td>
+                            <td>12. License<br>解释：<span class="answer-text">许可证</span>，声明别人<span class="answer-text">如何使用</span>你的代码。<br>常用：<span class="answer-text">MIT</span>（最宽松）、<span class="answer-text">GPL</span>（要求开源）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. Star (<span class="blur-text">星标</span>)<br>解释：给项目 <span class="blur-text">点赞/收藏</span> 。<br>作用：表示你喜欢这个项目，也方便以后找到。</td>
+                            <td>13. Star (<span class="answer-text">星标</span>)<br>解释：给项目 <span class="answer-text">点赞/收藏</span> 。<br>作用：表示你喜欢这个项目，也方便以后找到。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. Watch (<span class="blur-text">关注</span>)<br>解释：关注项目动态，有<span class="blur-text">更新</span>会收到通知。<br>级别：Not watching（不关注）←→ <span class="blur-text">Watching</span>（关注所有）。</td>
+                            <td>14. Watch (<span class="answer-text">关注</span>)<br>解释：关注项目动态，有<span class="answer-text">更新</span>会收到通知。<br>级别：Not watching（不关注）←→ <span class="answer-text">Watching</span>（关注所有）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. Issue (<span class="blur-text">问题</span>)<br>解释：项目的任务/讨论/问题追踪。<br>用途：报告<span class="blur-text">bug</span>、提新功能<span class="blur-text">建议</span>、问<span class="blur-text">问题</span>。</td>
+                            <td>15. Issue (<span class="answer-text">问题</span>)<br>解释：项目的任务/讨论/问题追踪。<br>用途：报告<span class="answer-text">bug</span>、提新功能<span class="answer-text">建议</span>、问<span class="answer-text">问题</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. Git和GitHub的区别<br>Git是 <span class="blur-text">版本控制</span> 软件（装在你<span class="blur-text">电脑</span>上）。<br>GitHub是 <span class="blur-text">代码托管</span> 网站（用<span class="blur-text">浏览器</span>访问）。<br>关系：Git管理版本，GitHub存放代码 + 协作。</td>
+                            <td>16. Git和GitHub的区别<br>Git是 <span class="answer-text">版本控制</span> 软件（装在你<span class="answer-text">电脑</span>上）。<br>GitHub是 <span class="answer-text">代码托管</span> 网站（用<span class="answer-text">浏览器</span>访问）。<br>关系：Git管理版本，GitHub存放代码 + 协作。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. 为什么用GitHub而不是网盘<br>网盘：只能存文件，不知道谁改了哪里。<br>GitHub：能看到每次<span class="blur-text">修改</span>内容、谁改的、为什么改。<br>协作：多人同时修改<span class="blur-text">不会覆盖</span>，可以 <span class="blur-text">合并</span> 。</td>
+                            <td>17. 为什么用GitHub而不是网盘<br>网盘：只能存文件，不知道谁改了哪里。<br>GitHub：能看到每次<span class="answer-text">修改</span>内容、谁改的、为什么改。<br>协作：多人同时修改<span class="answer-text">不会覆盖</span>，可以 <span class="answer-text">合并</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. Public和Private仓库的区别<br>Public：全世界都能看到（<span class="blur-text">开源</span>）。<br>Private：只有你和你指定的人能看到。<br>免费账户：Public免费，Private有限制。</td>
+                            <td>18. Public和Private仓库的区别<br>Public：全世界都能看到（<span class="answer-text">开源</span>）。<br>Private：只有你和你指定的人能看到。<br>免费账户：Public免费，Private有限制。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. 第一次使用GitHub的完整步骤<br>1. 注册GitHub<span class="blur-text">账号</span><br>2. 安装Git<span class="blur-text">软件</span><br>3. <span class="blur-text">配置</span>Git（设置用户名邮箱）<br>4. 在GitHub创建新<span class="blur-text">仓库</span><br>5. 在电脑上<span class="blur-text">克隆</span>仓库（或初始化本地仓库）<br>6. <span class="blur-text">修改</span>文件 → {{c2::`git add`}} → {{c2::`git commit`}} → {{c2::`git push`}}</td>
+                            <td>19. 第一次使用GitHub的完整步骤<br>1. 注册GitHub<span class="answer-text">账号</span><br>2. 安装Git<span class="answer-text">软件</span><br>3. <span class="answer-text">配置</span>Git（设置用户名邮箱）<br>4. 在GitHub创建新<span class="answer-text">仓库</span><br>5. 在电脑上<span class="answer-text">克隆</span>仓库（或初始化本地仓库）<br>6. <span class="answer-text">修改</span>文件 → {{c2::`git add`}} → {{c2::`git commit`}} → {{c2::`git push`}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>"20. 日常开发的基本工作流程<br>1. <span class="blur-text">`git pull`</span> （先更新到最新）<br>2. 写代码/修改文件<br>3. <span class="blur-text">`git add 文件名`</span> （添加要提交的文件）<br>4. <span class="blur-text">`git commit -m ""描述""`</span> （创建提交）<br>5. <span class="blur-text">`git push`</span> （推送到GitHub）<br>循环1-5步。"</td>
+                            <td>"20. 日常开发的基本工作流程<br>1. <span class="answer-text">`git pull`</span> （先更新到最新）<br>2. 写代码/修改文件<br>3. <span class="answer-text">`git add 文件名`</span> （添加要提交的文件）<br>4. <span class="answer-text">`git commit -m ""描述""`</span> （创建提交）<br>5. <span class="answer-text">`git push`</span> （推送到GitHub）<br>循环1-5步。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. 多人修改同一个文件冲突怎么办<br>1. 先 `<span class="blur-text">git pull</span>`&nbsp;更新<br><br>2. 如果提示冲突，{{c2::打开冲突文件}}<br>3. 手动{{c2::决定保留/合并}}哪部分<br>4. {{c2::删除冲突标记}}（&lt;&lt;&lt; === &gt;&gt;&gt;）<br><br>5. `<span class="blur-text">git add</span>`&nbsp;→ `<span class="blur-text">git commit</span>`&nbsp;→ `<span class="blur-text">git push</span>`</td>
+                            <td>21. 多人修改同一个文件冲突怎么办<br>1. 先 `<span class="answer-text">git pull</span>`&nbsp;更新<br><br>2. 如果提示冲突，{{c2::打开冲突文件}}<br>3. 手动{{c2::决定保留/合并}}哪部分<br>4. {{c2::删除冲突标记}}（&lt;&lt;&lt; === &gt;&gt;&gt;）<br><br>5. `<span class="answer-text">git add</span>`&nbsp;→ `<span class="answer-text">git commit</span>`&nbsp;→ `<span class="answer-text">git push</span>`</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. 参与开源项目的步骤<br>1. <span class="blur-text">Fork</span> 项目（复制到你的账号）<br>2. 克隆到本地：<span class="blur-text">`git clone`</span> 你的仓库地址<br>3. 创建新分支：<span class="blur-text">`git checkout -b 新功能名`</span><br>4. 修改代码<br>5. 推送到你的仓库：<span class="blur-text">`git push origin 新功能名`</span><br>6. 在GitHub上发起 <span class="blur-text">Pull Request</span>。</td>
+                            <td>22. 参与开源项目的步骤<br>1. <span class="answer-text">Fork</span> 项目（复制到你的账号）<br>2. 克隆到本地：<span class="answer-text">`git clone`</span> 你的仓库地址<br>3. 创建新分支：<span class="answer-text">`git checkout -b 新功能名`</span><br>4. 修改代码<br>5. 推送到你的仓库：<span class="answer-text">`git push origin 新功能名`</span><br>6. 在GitHub上发起 <span class="answer-text">Pull Request</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. 如何回退到上一个版本<br>查看历史：<span class="blur-text">`git log`</span> （看到commitID）<br>回退：<span class="blur-text">`git reset --hard commitID`</span><br>注意：小心使用，会<span class="blur-text">删除</span>之后的提交。</td>
+                            <td>23. 如何回退到上一个版本<br>查看历史：<span class="answer-text">`git log`</span> （看到commitID）<br>回退：<span class="answer-text">`git reset --hard commitID`</span><br>注意：小心使用，会<span class="answer-text">删除</span>之后的提交。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. 不小心把密码提交到GitHub了怎么办<br>1. 立即<span class="blur-text">修改</span>密码<br>2. 从GitHub历史中<span class="blur-text">删除</span>敏感信息（用{{c2::git filter-branch}}或{{c2::BFG}}工具）<br>3. <span class="blur-text">强制推送</span>：{{c2::`git push --force`}}<br>4. <span class="blur-text">添加到</span> {{c2::`.gitignore`}} 避免再次提交。</td>
+                            <td>24. 不小心把密码提交到GitHub了怎么办<br>1. 立即<span class="answer-text">修改</span>密码<br>2. 从GitHub历史中<span class="answer-text">删除</span>敏感信息（用{{c2::git filter-branch}}或{{c2::BFG}}工具）<br>3. <span class="answer-text">强制推送</span>：{{c2::`git push --force`}}<br>4. <span class="answer-text">添加到</span> {{c2::`.gitignore`}} 避免再次提交。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>"25. 如何在GitHub网页上快速创建项目<br>1. 点右上角""+"" → ""<span class="blur-text">New repository</span>""<br><br>2. 填<span class="blur-text">仓库名</span><br>3. 勾选 <span class="blur-text">""Add a README""</span> （最重要！）<br>4. 选择<span class="blur-text">许可证</span>（可选）<br><br>5. 点""<span class="blur-text">Create repository</span>""。<br><br><br><br>re- (回/再)<br>pos (放置)<br>-itory (表场所)<br>repository <span class="blur-text">仓库/储藏库</span><br>compose 组成/作曲<br>deposit 存入/沉积物<br>propose 提议<br>position 位置"</td>
+                            <td>"25. 如何在GitHub网页上快速创建项目<br>1. 点右上角""+"" → ""<span class="answer-text">New repository</span>""<br><br>2. 填<span class="answer-text">仓库名</span><br>3. 勾选 <span class="answer-text">""Add a README""</span> （最重要！）<br>4. 选择<span class="answer-text">许可证</span>（可选）<br><br>5. 点""<span class="answer-text">Create repository</span>""。<br><br><br><br>re- (回/再)<br>pos (放置)<br>-itory (表场所)<br>repository <span class="answer-text">仓库/储藏库</span><br>compose 组成/作曲<br>deposit 存入/沉积物<br>propose 提议<br>position 位置"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>"26. 如何让别人参与你的项目<br><span class="blur-text">项目</span>页面 → <span class="blur-text">""Settings""</span> <br>→ <span class="blur-text">""Collaborators""</span> →输入对方的GitHub<span class="blur-text">用户名</span><br>对方会收到邀请邮件<br>接受后就能直接推送代码。"</td>
+                            <td>"26. 如何让别人参与你的项目<br><span class="answer-text">项目</span>页面 → <span class="answer-text">""Settings""</span> <br>→ <span class="answer-text">""Collaborators""</span> →输入对方的GitHub<span class="answer-text">用户名</span><br>对方会收到邀请邮件<br>接受后就能直接推送代码。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27. GitHub Pages是什么和怎么用<br>是什么：免费的 <span class="blur-text">静态网站</span> 托管服务。<br>怎么用：<br>1. 创建名为 <span class="blur-text">`用户名.github.io`</span> 的仓库<br>2. 添加HTML文件<br>3. 访问 <span class="blur-text">`https://用户名.github.io`</span><br><br>用途：<span class="blur-text">个人</span>博客、<span class="blur-text">项目</span>文档、<span class="blur-text">简历</span>网站。</td>
+                            <td>27. GitHub Pages是什么和怎么用<br>是什么：免费的 <span class="answer-text">静态网站</span> 托管服务。<br>怎么用：<br>1. 创建名为 <span class="answer-text">`用户名.github.io`</span> 的仓库<br>2. 添加HTML文件<br>3. 访问 <span class="answer-text">`https://用户名.github.io`</span><br><br>用途：<span class="answer-text">个人</span>博客、<span class="answer-text">项目</span>文档、<span class="answer-text">简历</span>网站。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3">github-pages个人博客 名词解释</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1. <b>什么是静态网站</b><br>定义：网页内容 <span class="blur-text">固定</span> ，写死在 <span class="blur-text">代码</span> 里<br>特点：用户只能 <span class="blur-text">看</span> ，不能交互（评论、登录等）<br>修改方式：需要 <span class="blur-text">改代码</span> 、 <span class="blur-text">重新上传</span></td>
+                            <td>1. <b>什么是静态网站</b><br>定义：网页内容 <span class="answer-text">固定</span> ，写死在 <span class="answer-text">代码</span> 里<br>特点：用户只能 <span class="answer-text">看</span> ，不能交互（评论、登录等）<br>修改方式：需要 <span class="answer-text">改代码</span> 、 <span class="answer-text">重新上传</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. <b>静态网站的优缺点</b><br>优点：①<span class="blur-text">简单</span> ②<span class="blur-text">免费</span> ③<span class="blur-text">速度快</span><br>缺点：<span class="blur-text">更新麻烦</span><br>典型例子：公司介绍页、<span class="blur-text">个人博客</span></td>
+                            <td>2. <b>静态网站的优缺点</b><br>优点：①<span class="answer-text">简单</span> ②<span class="answer-text">免费</span> ③<span class="answer-text">速度快</span><br>缺点：<span class="answer-text">更新麻烦</span><br>典型例子：公司介绍页、<span class="answer-text">个人博客</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. <b>什么是动态网站</b><br>定义：内容存在<span class="blur-text">数据库</span>里，可以<span class="blur-text">随时更新</span><br>管理方式：有<span class="blur-text">后台管理界面</span>，不用改代码<br>功能：可以有<span class="blur-text">用户系统</span>、<span class="blur-text">评论</span>等交互功能</td>
+                            <td>3. <b>什么是动态网站</b><br>定义：内容存在<span class="answer-text">数据库</span>里，可以<span class="answer-text">随时更新</span><br>管理方式：有<span class="answer-text">后台管理界面</span>，不用改代码<br>功能：可以有<span class="answer-text">用户系统</span>、<span class="answer-text">评论</span>等交互功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. <b>动态网站的优缺点</b><br>优点：①功能<span class="blur-text">强大</span> ②更新<span class="blur-text">方便</span><br>缺点：①需要<span class="blur-text">服务器</span>（要花钱） ②技术门槛<span class="blur-text">高</span><br>典型例子：微博、知乎、<span class="blur-text">WordPress博客</span></td>
+                            <td>4. <b>动态网站的优缺点</b><br>优点：①功能<span class="answer-text">强大</span> ②更新<span class="answer-text">方便</span><br>缺点：①需要<span class="answer-text">服务器</span>（要花钱） ②技术门槛<span class="answer-text">高</span><br>典型例子：微博、知乎、<span class="answer-text">WordPress博客</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. <b>GitHub Pages定义与功能</b><br>定义：GitHub提供的免费<span class="blur-text">静态网站</span>托管服务<br>使用方式：只需上传<span class="blur-text">HTML文件</span>就能生成网站<br>网址格式：<span class="blur-text">用户名.github.io</span></td>
+                            <td>5. <b>GitHub Pages定义与功能</b><br>定义：GitHub提供的免费<span class="answer-text">静态网站</span>托管服务<br>使用方式：只需上传<span class="answer-text">HTML文件</span>就能生成网站<br>网址格式：<span class="answer-text">用户名.github.io</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. <b>GitHub Pages的优缺点</b><br>优点：①完全<span class="blur-text">免费</span> ②<span class="blur-text">稳定</span> ③不限<span class="blur-text">流量</span><br>缺点：只能托管<span class="blur-text">静态网站</span><br>限制：不能运行<span class="blur-text">服务器端</span>代码（PHP、数据库等）	"<div><strong>PHP</strong>：在服务器上运行的编程语言，执行算账、验证等逻辑，只把结果（HTML）发给浏览器，源码不暴露。</div><div><strong>数据库</strong>（如MySQL）：远程电子档案柜，持久化存储密码、记录等数据，支持高并发查询。</div><div><strong>为何不能本地完成：</strong></div><ul><li><div><strong>安全</strong>：密码比对必须在服务器进行，否则发到你电脑里的验证逻辑会被看见</div></li><li><div><strong>状态</strong>：服务器需发""通行证""（Cookie）记住你登录了，纯网页做不到</div></li><li><div><strong>共享</strong>：A用户的数据要给B看，必须经中央服务器中转，本地文件互不可见</div></li><li><div><strong>沙箱</strong>：浏览器被设计为禁止网页直接操作硬盘或数据库，防数据被盗</div></li></ul></td>
+                            <td>6. <b>GitHub Pages的优缺点</b><br>优点：①完全<span class="answer-text">免费</span> ②<span class="answer-text">稳定</span> ③不限<span class="answer-text">流量</span><br>缺点：只能托管<span class="answer-text">静态网站</span><br>限制：不能运行<span class="answer-text">服务器端</span>代码（PHP、数据库等）	"<div><strong>PHP</strong>：在服务器上运行的编程语言，执行算账、验证等逻辑，只把结果（HTML）发给浏览器，源码不暴露。</div><div><strong>数据库</strong>（如MySQL）：远程电子档案柜，持久化存储密码、记录等数据，支持高并发查询。</div><div><strong>为何不能本地完成：</strong></div><ul><li><div><strong>安全</strong>：密码比对必须在服务器进行，否则发到你电脑里的验证逻辑会被看见</div></li><li><div><strong>状态</strong>：服务器需发""通行证""（Cookie）记住你登录了，纯网页做不到</div></li><li><div><strong>共享</strong>：A用户的数据要给B看，必须经中央服务器中转，本地文件互不可见</div></li><li><div><strong>沙箱</strong>：浏览器被设计为禁止网页直接操作硬盘或数据库，防数据被盗</div></li></ul></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. <b>前端三件套-HTML</b><br>作用：网页的<span class="blur-text">骨架结构</span><br>职责：定义<span class="blur-text">内容是什么</span><br>比喻：盖房子中的<span class="blur-text">钢筋水泥</span>（结构）<br><br><div><strong>HTML</strong></div><ul><li><div><strong>英文</strong>：HyperText Markup Language</div></li><li><div><strong>全称</strong>：超文本标记语言</div></li><li><div><strong>简略</strong>：用标签（如&nbsp;<code>&lt;h1&gt;</code>、<code>&lt;p&gt;</code>）描述网页结构和内容的语言，浏览器据此渲染页面。</div></li><li><div><strong>不是编程语言</strong>，是""标记""语言（Markup = 用标签做记号）。</div></li></ul>"</td>
+                            <td>7. <b>前端三件套-HTML</b><br>作用：网页的<span class="answer-text">骨架结构</span><br>职责：定义<span class="answer-text">内容是什么</span><br>比喻：盖房子中的<span class="answer-text">钢筋水泥</span>（结构）<br><br><div><strong>HTML</strong></div><ul><li><div><strong>英文</strong>：HyperText Markup Language</div></li><li><div><strong>全称</strong>：超文本标记语言</div></li><li><div><strong>简略</strong>：用标签（如&nbsp;<code>&lt;h1&gt;</code>、<code>&lt;p&gt;</code>）描述网页结构和内容的语言，浏览器据此渲染页面。</div></li><li><div><strong>不是编程语言</strong>，是""标记""语言（Markup = 用标签做记号）。</div></li></ul>"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. <b>前端三件套-CSS</b><br>作用：网页的<span class="blur-text">外观样式</span><br>职责：定义<span class="blur-text">长什么样</span><br>比喻：盖房子中的<span class="blur-text">装修</span>（美化）</td>
+                            <td>8. <b>前端三件套-CSS</b><br>作用：网页的<span class="answer-text">外观样式</span><br>职责：定义<span class="answer-text">长什么样</span><br>比喻：盖房子中的<span class="answer-text">装修</span>（美化）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. <b>前端三件套-JavaScript</b><br>作用：网页的<span class="blur-text">交互行为</span><br>职责：定义<span class="blur-text">能做什么</span><br>比喻：盖房子中的<span class="blur-text">电器开关</span>（功能）	"<div><strong>Java</strong></div><ul><li><div>英文：爪哇（岛）</div></li><li><div>词源：<strong>Java</strong>（印尼岛屿，盛产咖啡）→ Sun公司咖啡杯logo的编程语言 → 网景公司蹭热度借用其名</div></li><li><div>中文：商标借名，与""爪哇咖啡""同源，与语言本身无关</div></li></ul><div><strong>Script</strong></div><ul><li><div>英文：脚本；剧本</div></li><li><div>词根：<strong>script</strong>（写下的文字）← <strong>scribere</strong>（拉丁语""写""）+ <strong>-pt</strong>（完成式后缀，表""已被写""）</div></li><li><div>中文：写成的文本；剧本；脚本</div></li></ul><div><strong>合起来</strong>：JavaScript = 蹭Java热度的""浏览器小剧本""语言（实则与Java无血缘，仅名字碰瓷，如同""海马""与""马""）</div>"</td>
+                            <td>9. <b>前端三件套-JavaScript</b><br>作用：网页的<span class="answer-text">交互行为</span><br>职责：定义<span class="answer-text">能做什么</span><br>比喻：盖房子中的<span class="answer-text">电器开关</span>（功能）	"<div><strong>Java</strong></div><ul><li><div>英文：爪哇（岛）</div></li><li><div>词源：<strong>Java</strong>（印尼岛屿，盛产咖啡）→ Sun公司咖啡杯logo的编程语言 → 网景公司蹭热度借用其名</div></li><li><div>中文：商标借名，与""爪哇咖啡""同源，与语言本身无关</div></li></ul><div><strong>Script</strong></div><ul><li><div>英文：脚本；剧本</div></li><li><div>词根：<strong>script</strong>（写下的文字）← <strong>scribere</strong>（拉丁语""写""）+ <strong>-pt</strong>（完成式后缀，表""已被写""）</div></li><li><div>中文：写成的文本；剧本；脚本</div></li></ul><div><strong>合起来</strong>：JavaScript = 蹭Java热度的""浏览器小剧本""语言（实则与Java无血缘，仅名字碰瓷，如同""海马""与""马""）</div>"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. A <b>HTML基本结构-文档声明与根元素</b><br>第一行： <span class="blur-text">< !DOCTYPE html></span> （文档类型声明）<br>根元素： <span class="blur-text"><  html></span> 标签包裹所有内容<br>作用：告诉浏览器这是 <span class="blur-text">HTML5</span> 文档</td>
+                            <td>10. A <b>HTML基本结构-文档声明与根元素</b><br>第一行： <span class="answer-text">< !DOCTYPE html></span> （文档类型声明）<br>根元素： <span class="answer-text"><  html></span> 标签包裹所有内容<br>作用：告诉浏览器这是 <span class="answer-text">HTML5</span> 文档</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. B <b>HTML基本结构-头部与主体</b><br>头部：<span class="blur-text">&lt; head&gt;</span>标签（放{{c2::设置、引用}}）<br>标题：<span class="blur-text">&lt; title&gt;</span>标签（浏览器{{c2::标签页}}显示）<br>主体：<span class="blur-text">&lt; body&gt;</span>标签（用户{{c2::看到}}的内容）</td>
+                            <td>11. B <b>HTML基本结构-头部与主体</b><br>头部：<span class="answer-text">&lt; head&gt;</span>标签（放{{c2::设置、引用}}）<br>标题：<span class="answer-text">&lt; title&gt;</span>标签（浏览器{{c2::标签页}}显示）<br>主体：<span class="answer-text">&lt; body&gt;</span>标签（用户{{c2::看到}}的内容）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. <b>HTML标题标签</b><br>标签范围：从<span class="blur-text">&lt; h1&gt;</span>到<span class="blur-text">&lt; h6&gt;</span><br>大小关系：<span class="blur-text">h1</span>最大，<span class="blur-text">h6</span>最小<br>语义：表示<span class="blur-text">标题层级</span></td>
+                            <td>12. <b>HTML标题标签</b><br>标签范围：从<span class="answer-text">&lt; h1&gt;</span>到<span class="answer-text">&lt; h6&gt;</span><br>大小关系：<span class="answer-text">h1</span>最大，<span class="answer-text">h6</span>最小<br>语义：表示<span class="answer-text">标题层级</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. <b>HTML基础标签-文本相关</b><br>段落：<span class="blur-text">&lt; p&gt;</span>标签<br>加粗：<span class="blur-text">&lt; strong&gt;</span>标签<br>换行：<span class="blur-text">&lt; br&gt;</span>标签</td>
+                            <td>13. <b>HTML基础标签-文本相关</b><br>段落：<span class="answer-text">&lt; p&gt;</span>标签<br>加粗：<span class="answer-text">&lt; strong&gt;</span>标签<br>换行：<span class="answer-text">&lt; br&gt;</span>标签</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. <b>HTML基础标签-链接与图片</b><br>超链接：<span class="blur-text">< a href=""链接""></span>文字<span class="blur-text">< /a></span><br>图片：<span class="blur-text">< img src=""图片地址""></span><br>注意：图片标签<span class="blur-text">不需要</span>闭合"</td>
+                            <td>14. <b>HTML基础标签-链接与图片</b><br>超链接：<span class="answer-text">< a href=""链接""></span>文字<span class="answer-text">< /a></span><br>图片：<span class="answer-text">< img src=""图片地址""></span><br>注意：图片标签<span class="answer-text">不需要</span>闭合"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. <b>HTML容器与列表</b><br>容器盒子：<span class="blur-text">< div></span>标签<br>无序列表：<span class="blur-text">< ul></span>+<span class="blur-text">< li></span>组合<br>有序列表：<span class="blur-text">< ol></span>+<span class="blur-text">< li></span>组合</td>
+                            <td>15. <b>HTML容器与列表</b><br>容器盒子：<span class="answer-text">< div></span>标签<br>无序列表：<span class="answer-text">< ul></span>+<span class="answer-text">< li></span>组合<br>有序列表：<span class="answer-text">< ol></span>+<span class="answer-text">< li></span>组合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. <b>CSS的定义与作用</b><br>定义：<span class="blur-text">层叠样式表</span>（<span class="blur-text">Cascading Style Sheets</span>）<br>作用：控制网页<span class="blur-text">样式</span>（颜色、大小、布局）<br>关系：与HTML<span class="blur-text">分离</span>，实现内容与样式分离	<div><div><div><div><div><div><div><div><div><div><strong>cascading</strong></div><ul><li><div>英文：像瀑布般倾泻的；层叠的</div></li><li><div>词根：<strong>cascade</strong>（瀑布）+ <strong>-ing</strong>（进行中）</div></li><li><div>中文：如瀑布一样一层层连续落下、向下传递的</div></li></ul><div><em>（在 CSS 中：样式像水流一样，从上游到下游层层叠加，最终汇合呈现）</em></div></div></div></div><div></div><div><div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div></div></div></div><div><div><div></div></div><div></div><div><div><br></div></div></div></td>
+                            <td>16. <b>CSS的定义与作用</b><br>定义：<span class="answer-text">层叠样式表</span>（<span class="answer-text">Cascading Style Sheets</span>）<br>作用：控制网页<span class="answer-text">样式</span>（颜色、大小、布局）<br>关系：与HTML<span class="answer-text">分离</span>，实现内容与样式分离	<div><div><div><div><div><div><div><div><div><div><strong>cascading</strong></div><ul><li><div>英文：像瀑布般倾泻的；层叠的</div></li><li><div>词根：<strong>cascade</strong>（瀑布）+ <strong>-ing</strong>（进行中）</div></li><li><div>中文：如瀑布一样一层层连续落下、向下传递的</div></li></ul><div><em>（在 CSS 中：样式像水流一样，从上游到下游层层叠加，最终汇合呈现）</em></div></div></div></div><div></div><div><div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div></div></div></div><div><div><div></div></div><div></div><div><div><br></div></div></div></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. A <b>CSS使用方式-内联与内部</b><br>内联样式：在标签内写<span class="blur-text">style</span>属性<br>格式：<span class="blur-text">&lt; p style=""color: red;""&gt;</span>文字&lt; /p&gt;<br>内部样式：在<span class="blur-text">&lt; head&gt;</span>里写<span class="blur-text">&lt; style&gt;</span>标签<br>nidd1769687302746</td>
+                            <td>17. A <b>CSS使用方式-内联与内部</b><br>内联样式：在标签内写<span class="answer-text">style</span>属性<br>格式：<span class="answer-text">&lt; p style=""color: red;""&gt;</span>文字&lt; /p&gt;<br>内部样式：在<span class="answer-text">&lt; head&gt;</span>里写<span class="answer-text">&lt; style&gt;</span>标签<br>nidd1769687302746</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. B <b>CSS使用方式-外部样式</b><br>方式：单独的<span class="blur-text">.css</span>文件<br>引入：<span class="blur-text">&lt; link rel=""stylesheet"" href=""style.css""&gt;</span><br>优点：样式<span class="blur-text">可复用</span>、代码更清晰<br>nidd1769687302745"</td>
+                            <td>18. B <b>CSS使用方式-外部样式</b><br>方式：单独的<span class="answer-text">.css</span>文件<br>引入：<span class="answer-text">&lt; link rel=""stylesheet"" href=""style.css""&gt;</span><br>优点：样式<span class="answer-text">可复用</span>、代码更清晰<br>nidd1769687302745"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. <b>CSS基本语法</b><br>结构：<span class="blur-text">选择器</span>&nbsp; <span class="blur-text"> { 属性: 值; } </span><br>示例：p { <span class="blur-text">color:red; </span>&nbsp;&nbsp;}<br>注意：属性和值之间用<span class="blur-text">冒号</span>，结尾用<span class="blur-text">分号</span></td>
+                            <td>19. <b>CSS基本语法</b><br>结构：<span class="answer-text">选择器</span>&nbsp; <span class="answer-text"> { 属性: 值; } </span><br>示例：p { <span class="answer-text">color:red; </span>&nbsp;&nbsp;}<br>注意：属性和值之间用<span class="answer-text">冒号</span>，结尾用<span class="answer-text">分号</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. <b>CSS标签选择器</b><br>格式：<span class="blur-text">标签名</span> { ... }<br>示例：<span class="blur-text">p</span> { color: red; }<br>作用：选中<span class="blur-text">所有该标签</span>的元素	""21. <b>CSS类选择器</b><br>格式：<span class="blur-text">.类名&nbsp;{ ... } </span><br>HTML使用：<span class="blur-text">class=""类名""</span><br>使用场景：<span class="blur-text">可复用</span>的样式（最常用）</td>
+                            <td>20. <b>CSS标签选择器</b><br>格式：<span class="answer-text">标签名</span> { ... }<br>示例：<span class="answer-text">p</span> { color: red; }<br>作用：选中<span class="answer-text">所有该标签</span>的元素	""21. <b>CSS类选择器</b><br>格式：<span class="answer-text">.类名&nbsp;{ ... } </span><br>HTML使用：<span class="answer-text">class=""类名""</span><br>使用场景：<span class="answer-text">可复用</span>的样式（最常用）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>22. <b>CSS ID选择器</b><br>格式：<span class="blur-text">#ID名</span> { ... }<br>HTML使用：<span class="blur-text">id=""ID名""</span><br>使用场景：<span class="blur-text">唯一</span>的元素</td>
+                            <td>22. <b>CSS ID选择器</b><br>格式：<span class="answer-text">#ID名</span> { ... }<br>HTML使用：<span class="answer-text">id=""ID名""</span><br>使用场景：<span class="answer-text">唯一</span>的元素</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>23. <b>JavaScript的定义与作用</b><br>定义：一种<span class="blur-text">编程语言</span>，运行在<span class="blur-text">浏览器</span>中<br>作用：让网页<span class="blur-text">""动起来""</span><br>特点：可以响应用户<span class="blur-text">操作</span>"</td>
+                            <td>23. <b>JavaScript的定义与作用</b><br>定义：一种<span class="answer-text">编程语言</span>，运行在<span class="answer-text">浏览器</span>中<br>作用：让网页<span class="answer-text">""动起来""</span><br>特点：可以响应用户<span class="answer-text">操作</span>"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>24. A <b>JavaScript能做什么-交互功能</b><br>用户<span class="blur-text">交互</span>：响应{{c2::点击}}、{{c2::输入}}等操作<br>内容<span class="blur-text">修改</span>：动态修改网页{{c2::内容}}和{{c2::样式}}<br>表单<span class="blur-text">验证</span>：验证用户输入是否{{c2::合法}}</td>
+                            <td>24. A <b>JavaScript能做什么-交互功能</b><br>用户<span class="answer-text">交互</span>：响应{{c2::点击}}、{{c2::输入}}等操作<br>内容<span class="answer-text">修改</span>：动态修改网页{{c2::内容}}和{{c2::样式}}<br>表单<span class="answer-text">验证</span>：验证用户输入是否{{c2::合法}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>25. B <b>JavaScript能做什么-高级功能</b><br>网络请求：发送<span class="blur-text">网络请求</span>获取数据<br>动画效果：制作<span class="blur-text">动画</span>效果<br>本地存储：保存数据到<span class="blur-text">浏览器</span></td>
+                            <td>25. B <b>JavaScript能做什么-高级功能</b><br>网络请求：发送<span class="answer-text">网络请求</span>获取数据<br>动画效果：制作<span class="answer-text">动画</span>效果<br>本地存储：保存数据到<span class="answer-text">浏览器</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>26. <b>JavaScript基本语法示例</b><br>弹出提示框：<span class="blur-text">alert</span>(""你好！"");<br>修改内容：document.<span class="blur-text">getElementById</span>(""demo"").<span class="blur-text">innerHTML</span> = ""新内容"";<br>注意：JavaScript语句以<span class="blur-text">分号</span>结尾"</td>
+                            <td>26. <b>JavaScript基本语法示例</b><br>弹出提示框：<span class="answer-text">alert</span>(""你好！"");<br>修改内容：document.<span class="answer-text">getElementById</span>(""demo"").<span class="answer-text">innerHTML</span> = ""新内容"";<br>注意：JavaScript语句以<span class="answer-text">分号</span>结尾"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>27. <b>CSS引入方式-内部样式</b><br>位置：写在<span class="blur-text">&lt; head&gt;</span>标签内<br>格式：<span class="blur-text">&lt; style&gt;</span>...<span class="blur-text">&lt; /style&gt;</span><br>适用：样式只在<span class="blur-text">当前页面</span>使用</td>
+                            <td>27. <b>CSS引入方式-内部样式</b><br>位置：写在<span class="answer-text">&lt; head&gt;</span>标签内<br>格式：<span class="answer-text">&lt; style&gt;</span>...<span class="answer-text">&lt; /style&gt;</span><br>适用：样式只在<span class="answer-text">当前页面</span>使用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>28. <b>CSS引入方式-外部样式</b><br>标签：<span class="blur-text">&lt; link&gt;</span>标签<br>完整格式：&lt; <span class="blur-text">link</span> <span class="blur-text">rel=""stylesheet""</span> <span class="blur-text">href=""style.css""</span>&gt;<br>优点：多个页面<span class="blur-text">共用</span>一套样式</td>
+                            <td>28. <b>CSS引入方式-外部样式</b><br>标签：<span class="answer-text">&lt; link&gt;</span>标签<br>完整格式：&lt; <span class="answer-text">link</span> <span class="answer-text">rel=""stylesheet""</span> <span class="answer-text">href=""style.css""</span>&gt;<br>优点：多个页面<span class="answer-text">共用</span>一套样式</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>29. <b>JavaScript引入方式-内部脚本</b><br>位置：写在<span class="blur-text">< body></span>底部（推荐）<br>格式：<span class="blur-text">< script></span>...<span class="blur-text">< /script></span><br>原因：确保HTML<span class="blur-text">加载完</span>再执行脚本</td>
+                            <td>29. <b>JavaScript引入方式-内部脚本</b><br>位置：写在<span class="answer-text">< body></span>底部（推荐）<br>格式：<span class="answer-text">< script></span>...<span class="answer-text">< /script></span><br>原因：确保HTML<span class="answer-text">加载完</span>再执行脚本</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>30. <b>JavaScript引入方式-外部脚本</b><br>标签：<span class="blur-text">&lt; script&gt;</span>标签<br>格式：&lt; script <span class="blur-text">src=""script.js""</span>&gt;&lt; /script&gt;<br>优点：代码<span class="blur-text">可复用</span>、便于{{c1::维护}</td>
+                            <td>30. <b>JavaScript引入方式-外部脚本</b><br>标签：<span class="answer-text">&lt; script&gt;</span>标签<br>格式：&lt; script <span class="answer-text">src=""script.js""</span>&gt;&lt; /script&gt;<br>优点：代码<span class="answer-text">可复用</span>、便于{{c1::维护}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>31. A <b>创建GitHub Pages网站-准备工作</b><br>第一步：<span class="blur-text">登录GitHub</span>账号<br>第二步：点击<span class="blur-text">New repository</span>（新建仓库）<br>仓库命名规则：必须是<span class="blur-text">用户名.github.io</span></td>
+                            <td>31. A <b>创建GitHub Pages网站-准备工作</b><br>第一步：<span class="answer-text">登录GitHub</span>账号<br>第二步：点击<span class="answer-text">New repository</span>（新建仓库）<br>仓库命名规则：必须是<span class="answer-text">用户名.github.io</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>32. B <b>创建GitHub Pages网站-上传部署</b><br>第三步：上传<span class="blur-text">index.html</span>文件<br>第四步：等待<span class="blur-text">1-2分钟</span>部署完成<br>访问地址：https://<span class="blur-text">用户名</span>.github.io</td>
+                            <td>32. B <b>创建GitHub Pages网站-上传部署</b><br>第三步：上传<span class="answer-text">index.html</span>文件<br>第四步：等待<span class="answer-text">1-2分钟</span>部署完成<br>访问地址：https://<span class="answer-text">用户名</span>.github.io</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>33. <b>GitHub Pages关键注意事项</b><br>仓库名要求：必须是<span class="blur-text">用户名.github.io</span>格式<br>主页文件名：必须叫<span class="blur-text">index.html</span><br>部署时间：首次部署可能需要<span class="blur-text">几分钟</span></td>
+                            <td>33. <b>GitHub Pages关键注意事项</b><br>仓库名要求：必须是<span class="answer-text">用户名.github.io</span>格式<br>主页文件名：必须叫<span class="answer-text">index.html</span><br>部署时间：首次部署可能需要<span class="answer-text">几分钟</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>34. A <b>更新GitHub Pages内容-网页端操作</b><br>第一步：进入<span class="blur-text">仓库</span>页面<br>第二步：点击要修改的<span class="blur-text">文件</span><br>第三步：点击<span class="blur-text">铅笔图标</span>（编辑按钮）</td>
+                            <td>34. A <b>更新GitHub Pages内容-网页端操作</b><br>第一步：进入<span class="answer-text">仓库</span>页面<br>第二步：点击要修改的<span class="answer-text">文件</span><br>第三步：点击<span class="answer-text">铅笔图标</span>（编辑按钮）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>35. B <b>更新GitHub Pages内容-保存发布</b><br>第四步：<span class="blur-text">修改</span>内容<br>第五步：滚动到底部，点击<span class="blur-text">Commit changes</span><br>等待时间：更新会在<span class="blur-text">几分钟</span>内生效</td>
+                            <td>35. B <b>更新GitHub Pages内容-保存发布</b><br>第四步：<span class="answer-text">修改</span>内容<br>第五步：滚动到底部，点击<span class="answer-text">Commit changes</span><br>等待时间：更新会在<span class="answer-text">几分钟</span>内生效</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>36. <b>修改博客标题和副标题</b><br>找到代码：<span class="blur-text">< h1></span>我的医学博客<span class="blur-text">< /h1></span><br>找到代码：<span class="blur-text">< p></span>记录学医路上的点滴思考<span class="blur-text">< /p></span><br>位置：在<span class="blur-text">< header></span>标签内</td>
+                            <td>36. <b>修改博客标题和副标题</b><br>找到代码：<span class="answer-text">< h1></span>我的医学博客<span class="answer-text">< /h1></span><br>找到代码：<span class="answer-text">< p></span>记录学医路上的点滴思考<span class="answer-text">< /p></span><br>位置：在<span class="answer-text">< header></span>标签内</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>37. <b>修改导航菜单</b><br>找到代码：<span class="blur-text">&lt; nav&gt;</span>标签内的<span class="blur-text">&lt; ul&gt;</span>列表<br>菜单项格式：<span class="blur-text">&lt; li&gt;</span>&lt; a href=""#""&gt;菜单名&lt; /a&gt;<span class="blur-text">&lt; /li&gt;</span><br>注意：href后面是<span class="blur-text">跳转链接</span>"	"<div>这就像<strong>外卖APP的底部导航栏</strong>：</div><div><strong>结构拆解</strong>：</div><ul><li><div><strong><code>&lt;nav&gt;</code></strong>：整个导航栏的""盒子""</div></li><li><div><strong><code>&lt;ul&gt;</code></strong>：无序列表（就像菜单列表，前面不带1、2、3编号）</div></li><li><div><strong><code>&lt;li&gt;</code></strong>：列表里的<strong>每一项</strong>（单个菜单按钮）</div></li><li><div><strong><code>&lt;a&gt;</code></strong>：可点击的链接（Anchor，锚点）</div></li><li><div><strong><code>href</code></strong>：点击后要<strong>跳到哪里</strong>（Hypertext Reference）</td>
+                            <td>37. <b>修改导航菜单</b><br>找到代码：<span class="answer-text">&lt; nav&gt;</span>标签内的<span class="answer-text">&lt; ul&gt;</span>列表<br>菜单项格式：<span class="answer-text">&lt; li&gt;</span>&lt; a href=""#""&gt;菜单名&lt; /a&gt;<span class="answer-text">&lt; /li&gt;</span><br>注意：href后面是<span class="answer-text">跳转链接</span>"	"<div>这就像<strong>外卖APP的底部导航栏</strong>：</div><div><strong>结构拆解</strong>：</div><ul><li><div><strong><code>&lt;nav&gt;</code></strong>：整个导航栏的""盒子""</div></li><li><div><strong><code>&lt;ul&gt;</code></strong>：无序列表（就像菜单列表，前面不带1、2、3编号）</div></li><li><div><strong><code>&lt;li&gt;</code></strong>：列表里的<strong>每一项</strong>（单个菜单按钮）</div></li><li><div><strong><code>&lt;a&gt;</code></strong>：可点击的链接（Anchor，锚点）</div></li><li><div><strong><code>href</code></strong>：点击后要<strong>跳到哪里</strong>（Hypertext Reference）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>38. <b>修改""关于我""内容</b><br>找到标记：<span class="blur-text">id=""about""</span>的section<br>找到代码：<span class="blur-text">< p></span>标签内的文字<br>直接替换：把文字改成<span class="blur-text">自己的介绍</span></td>
+                            <td>38. <b>修改""关于我""内容</b><br>找到标记：<span class="answer-text">id=""about""</span>的section<br>找到代码：<span class="answer-text">< p></span>标签内的文字<br>直接替换：把文字改成<span class="answer-text">自己的介绍</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>39. <b>添加新文章</b><br>找到位置：<span class="blur-text">&lt; article class=""post-card""&gt;</span>代码块<br>操作方法：<span class="blur-text">复制整个article块</span>，修改内容<br>需要改的：<span class="blur-text">&lt; h3&gt;</span>标题、日期、正文</td>
+                            <td>39. <b>添加新文章</b><br>找到位置：<span class="answer-text">&lt; article class=""post-card""&gt;</span>代码块<br>操作方法：<span class="answer-text">复制整个article块</span>，修改内容<br>需要改的：<span class="answer-text">&lt; h3&gt;</span>标题、日期、正文</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>40. <b>修改网站配色-渐变色</b><br>找到代码：<span class="blur-text">background: linear-gradient</span> (135deg, # 667eea 0%, # 764ba2 100%);<br>颜色代码： #667eea 和 #764ba2 是<span class="blur-text">十六</span>进制颜色<br>工具推荐： <span class="blur-text">uiGradients.com</span> 选配色"	<div><div><div><div><div><div><div><div><strong>linear</strong></div><ul><li><div>英文：线的；直线的</div></li><li><div>词根：<strong>line</strong>（线）+ <strong>-ar</strong>（…的）</div></li><li><div>中文：像一条线那样笔直延伸的</div></li></ul><div><strong>gradient</strong></div><ul><li><div>英文：渐变；坡度</div></li><li><div>词根：<strong>grad</strong>（步，级）+ <strong>-ient</strong>（状态）</div></li><li><div>中文：一级一级逐步变化的</div></li></ul><div><strong>合起来</strong>：<code>linear-gradient</code> = 像画一条直线那样，颜色一步步连续变化（而不是圆形/径向变化）</div></div></div></div><div></div><div><div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div></div><div><div><div><div><div><br></div></div></div></div></div></td>
+                            <td>40. <b>修改网站配色-渐变色</b><br>找到代码：<span class="answer-text">background: linear-gradient</span> (135deg, # 667eea 0%, # 764ba2 100%);<br>颜色代码： #667eea 和 #764ba2 是<span class="answer-text">十六</span>进制颜色<br>工具推荐： <span class="answer-text">uiGradients.com</span> 选配色"	<div><div><div><div><div><div><div><div><strong>linear</strong></div><ul><li><div>英文：线的；直线的</div></li><li><div>词根：<strong>line</strong>（线）+ <strong>-ar</strong>（…的）</div></li><li><div>中文：像一条线那样笔直延伸的</div></li></ul><div><strong>gradient</strong></div><ul><li><div>英文：渐变；坡度</div></li><li><div>词根：<strong>grad</strong>（步，级）+ <strong>-ient</strong>（状态）</div></li><li><div>中文：一级一级逐步变化的</div></li></ul><div><strong>合起来</strong>：<code>linear-gradient</code> = 像画一条直线那样，颜色一步步连续变化（而不是圆形/径向变化）</div></div></div></div><div></div><div><div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div></div><div><div><div><div><div><br></div></div></div></div></div></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>41. <b>修改字体和字号</b><br>字体属性：<span class="blur-text">font-family</span><br>字号属性：<span class="blur-text">font-size</span><br>示例：font-size <span class="blur-text"> :2.5rem</span>;（rem是相对单位）	"<div><div><div><div><div><div><div><div><div><div><strong>font</strong></div><ul><li><div>英文：字体</div></li><li><div>词源：<strong>fons</strong>（拉丁语""喷泉、源头""）→ 活字印刷时代浇铸铅字的<strong>熔炉/字模源头</strong></div></li><li><div>中文：字模的铸造源头，引申为字体</div></li></ul><div><strong>rem</strong></div><ul><li><div>英文：根 em（root em）</div></li><li><div>词根：<strong>r</strong>（root，根）+ <strong>em</strong>（排版单位）</div><ul><li><div><strong>em</strong>：<strong>M</strong>（大写字母M的宽度）← 活字印刷金属活字方块基准</div></li></ul></li><li><div>中文：相对于根元素（html）的""M宽""倍数（1rem = html字体大小）</div></li></ul></div></div></div><div></div><div><div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div></div></div></div><div><div><div></div></div><div></div><div><div><br></div></div></div></td>
+                            <td>41. <b>修改字体和字号</b><br>字体属性：<span class="answer-text">font-family</span><br>字号属性：<span class="answer-text">font-size</span><br>示例：font-size <span class="answer-text"> :2.5rem</span>;（rem是相对单位）	"<div><div><div><div><div><div><div><div><div><div><strong>font</strong></div><ul><li><div>英文：字体</div></li><li><div>词源：<strong>fons</strong>（拉丁语""喷泉、源头""）→ 活字印刷时代浇铸铅字的<strong>熔炉/字模源头</strong></div></li><li><div>中文：字模的铸造源头，引申为字体</div></li></ul><div><strong>rem</strong></div><ul><li><div>英文：根 em（root em）</div></li><li><div>词根：<strong>r</strong>（root，根）+ <strong>em</strong>（排版单位）</div><ul><li><div><strong>em</strong>：<strong>M</strong>（大写字母M的宽度）← 活字印刷金属活字方块基准</div></li></ul></li><li><div>中文：相对于根元素（html）的""M宽""倍数（1rem = html字体大小）</div></li></ul></div></div></div><div></div><div><div><div></div><div></div><div></div><div></div><div></div></div></div></div></div></div></div></div></div><div><div><div></div></div><div></div><div><div><br></div></div></div></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>42. <b>给博客加简单密码-原理</b><br>方法：用<span class="blur-text">JavaScript</span>在页面加载时检查密码<br>安全性：<span class="blur-text">不安全</span>，但够用（代码可见）<br>适用场景：<span class="blur-text">朋友圈分享</span>，不是机密内容</td>
+                            <td>42. <b>给博客加简单密码-原理</b><br>方法：用<span class="answer-text">JavaScript</span>在页面加载时检查密码<br>安全性：<span class="answer-text">不安全</span>，但够用（代码可见）<br>适用场景：<span class="answer-text">朋友圈分享</span>，不是机密内容</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>43. <b>给博客加简单密码-代码位置</b><br>插入位置： <span class="blur-text">< script></span> 标签内<br>代码结构：用 <span class="blur-text">prompt</span> 函数弹出输入框<br>验证方式：if (密码 <span class="blur-text">!= =</span> ""正确密码"") 跳转</td>
+                            <td>43. <b>给博客加简单密码-代码位置</b><br>插入位置： <span class="answer-text">< script></span> 标签内<br>代码结构：用 <span class="answer-text">prompt</span> 函数弹出输入框<br>验证方式：if (密码 <span class="answer-text">!= =</span> ""正确密码"") 跳转</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>44. <b>常见问题-网站打不开</b><br>检查项1：网址拼写是否是<span class="blur-text">用户名.github.io</span><br>检查项2：是否等待<span class="blur-text">几分钟</span>让部署完成<br>检查项3：仓库名是否<span class="blur-text">正确</span>（用户名.github.io）</td>
+                            <td>44. <b>常见问题-网站打不开</b><br>检查项1：网址拼写是否是<span class="answer-text">用户名.github.io</span><br>检查项2：是否等待<span class="answer-text">几分钟</span>让部署完成<br>检查项3：仓库名是否<span class="answer-text">正确</span>（用户名.github.io）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>45. <b>常见问题-修改不生效</b><br>原因1：浏览器<span class="blur-text">缓存</span>，需要<span class="blur-text">强制刷新</span>（{{c2::Ctrl+F5}}）<br>原因2：GitHub还没<span class="blur-text">部署</span>完成，等{{c2::几分钟}}<br>原因3：代码有<span class="blur-text">语法错误</span>，检查{{c2::拼写}}</td>
+                            <td>45. <b>常见问题-修改不生效</b><br>原因1：浏览器<span class="answer-text">缓存</span>，需要<span class="answer-text">强制刷新</span>（{{c2::Ctrl+F5}}）<br>原因2：GitHub还没<span class="answer-text">部署</span>完成，等{{c2::几分钟}}<br>原因3：代码有<span class="answer-text">语法错误</span>，检查{{c2::拼写}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>46. <b>常见问题-样式乱了</b><br>常见原因：<span class="blur-text">标签</span>没有闭合<br>检查方法：每个<span class="blur-text">< div></span>要有对应的<span class="blur-text">< /div></span><br>工具：用浏览器<span class="blur-text">F12</span>开发者工具检查</td>
+                            <td>46. <b>常见问题-样式乱了</b><br>常见原因：<span class="answer-text">标签</span>没有闭合<br>检查方法：每个<span class="answer-text">< div></span>要有对应的<span class="answer-text">< /div></span><br>工具：用浏览器<span class="answer-text">F12</span>开发者工具检查</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>47. <b>新手学习路径-第一周</b><br>任务：<span class="blur-text">部署</span>第一个博客<br>学习：HTML<span class="blur-text">基础标签</span>（h1, p, a, img）<br>练习：修改<span class="blur-text">标题</span>和<span class="blur-text">内容</span></td>
+                            <td>47. <b>新手学习路径-第一周</b><br>任务：<span class="answer-text">部署</span>第一个博客<br>学习：HTML<span class="answer-text">基础标签</span>（h1, p, a, img）<br>练习：修改<span class="answer-text">标题</span>和<span class="answer-text">内容</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>48. <b>新手学习路径-第二周</b><br>任务：<span class="blur-text">美化</span>博客样式<br>学习：CSS<span class="blur-text">颜色</span>、<span class="blur-text">字体</span>、<span class="blur-text">间距</span><br>练习：换<span class="blur-text">配色方案</span></td>
+                            <td>48. <b>新手学习路径-第二周</b><br>任务：<span class="answer-text">美化</span>博客样式<br>学习：CSS<span class="answer-text">颜色</span>、<span class="answer-text">字体</span>、<span class="answer-text">间距</span><br>练习：换<span class="answer-text">配色方案</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>49. <b>新手学习路径-第一个月</b><br>目标：能<span class="blur-text">独立修改</span>现有博客<br>掌握：HTML结构、CSS<span class="blur-text">基础样式</span><br>了解：JavaScript<span class="blur-text">基本概念</span>（不强求）</td>
+                            <td>49. <b>新手学习路径-第一个月</b><br>目标：能<span class="answer-text">独立修改</span>现有博客<br>掌握：HTML结构、CSS<span class="answer-text">基础样式</span><br>了解：JavaScript<span class="answer-text">基本概念</span>（不强求）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>50. <b>长期学习建议</b><br>原则：<span class="blur-text">按需学习</span>，不追求全面<br>重点：先会<span class="blur-text">用</span>，再理解<span class="blur-text">原理</span><br>心态：<span class="blur-text">不要急</span>，医学才是主业</td>
+                            <td>50. <b>长期学习建议</b><br>原则：<span class="answer-text">按需学习</span>，不追求全面<br>重点：先会<span class="answer-text">用</span>，再理解<span class="answer-text">原理</span><br>心态：<span class="answer-text">不要急</span>，医学才是主业</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3">github非开发者名词解释</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1. GitHub 首页主要区域<br>GitHub 登录后首页有四个主要区域：<br>左上角是 <span class="blur-text">身份区</span> （点击用户名进入{{c2::个人主页}}）<br>顶部黑色导航栏是 <span class="blur-text">工具区</span> （{{c2::搜索、通知、设置}}）<br>左侧边栏是 <span class="blur-text">内容区</span> （{{c2::仓库、星标、关注}}）<br>主面板是 <span class="blur-text">动态区</span> （可忽略）。</td>
+                            <td>1. GitHub 首页主要区域<br>GitHub 登录后首页有四个主要区域：<br>左上角是 <span class="answer-text">身份区</span> （点击用户名进入{{c2::个人主页}}）<br>顶部黑色导航栏是 <span class="answer-text">工具区</span> （{{c2::搜索、通知、设置}}）<br>左侧边栏是 <span class="answer-text">内容区</span> （{{c2::仓库、星标、关注}}）<br>主面板是 <span class="answer-text">动态区</span> （可忽略）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>"2. 搜索项目的三种方法<br>在 GitHub 搜索框中可以：<br>1. 搜索 <span class="blur-text">仓库名</span> （如""{{c2::vscode}}""）<br>2. 搜索 <span class="blur-text">用户名</span> （如""{{c2::microsoft}}""）<br>3. 搜索 <span class="blur-text">话题标签</span> （如""{{c2::machine-learning}}""）。"</td>
+                            <td>"2. 搜索项目的三种方法<br>在 GitHub 搜索框中可以：<br>1. 搜索 <span class="answer-text">仓库名</span> （如""{{c2::vscode}}""）<br>2. 搜索 <span class="answer-text">用户名</span> （如""{{c2::microsoft}}""）<br>3. 搜索 <span class="answer-text">话题标签</span> （如""{{c2::machine-learning}}""）。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. 查看他人项目的主页<br>要查看别人的 GitHub 主页：<br>1. 在搜索框输入 <span class="blur-text">用户名</span><br>2. 点击搜索结果中的用户<br>3. 查看他们的 <span class="blur-text">Repositories</span> 标签页可以看到所有项目。</td>
+                            <td>3. 查看他人项目的主页<br>要查看别人的 GitHub 主页：<br>1. 在搜索框输入 <span class="answer-text">用户名</span><br>2. 点击搜索结果中的用户<br>3. 查看他们的 <span class="answer-text">Repositories</span> 标签页可以看到所有项目。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. 项目页面的核心区域<br>打开一个项目页面后，主要看：<br>1. <span class="blur-text">Code</span> 标签页：项目{{c2::文件列表}}<br>2. <span class="blur-text">README.md</span> ：项目{{c2::说明文档}}<br><br>3. <span class="blur-text">Releases</span> ：发布的{{c2::正式版本}}<br>4. <span class="blur-text">Issues</span> ：{{c2::问题&amp;讨论}}。</td>
+                            <td>4. 项目页面的核心区域<br>打开一个项目页面后，主要看：<br>1. <span class="answer-text">Code</span> 标签页：项目{{c2::文件列表}}<br>2. <span class="answer-text">README.md</span> ：项目{{c2::说明文档}}<br><br>3. <span class="answer-text">Releases</span> ：发布的{{c2::正式版本}}<br>4. <span class="answer-text">Issues</span> ：{{c2::问题&amp;讨论}}。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. 如何阅读 README 文件<br>README 是项目的说明书，通常包含：<br>1. 项目 <span class="blur-text">介绍</span> 和用途<br>2. <span class="blur-text">安装</span> 和使用方法<br>3. <span class="blur-text">截图</span> 或示例<br>4. 常见问题 <span class="blur-text">解答</span> 。</td>
+                            <td>5. 如何阅读 README 文件<br>README 是项目的说明书，通常包含：<br>1. 项目 <span class="answer-text">介绍</span> 和用途<br>2. <span class="answer-text">安装</span> 和使用方法<br>3. <span class="answer-text">截图</span> 或示例<br>4. 常见问题 <span class="answer-text">解答</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. 识别项目质量的关键指标<br>判断一个项目是否可靠看：<br>1. <span class="blur-text">Star</span> 数量（受欢迎程度）<br><br>2. 最近 <span class="blur-text">提交</span> 时间（是否活跃）<br>3. <span class="blur-text">Issues</span> 和 <span class="blur-text">Pull Requests</span> 的处理情况<br><br>4. <span class="blur-text">License</span> 是否明确。</td>
+                            <td>6. 识别项目质量的关键指标<br>判断一个项目是否可靠看：<br>1. <span class="answer-text">Star</span> 数量（受欢迎程度）<br><br>2. 最近 <span class="answer-text">提交</span> 时间（是否活跃）<br>3. <span class="answer-text">Issues</span> 和 <span class="answer-text">Pull Requests</span> 的处理情况<br><br>4. <span class="answer-text">License</span> 是否明确。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. 找到可执行文件或安装包<br>对于非开发者，在项目中找：<br>1. <span class="blur-text">Releases</span> 页面（点击查看）2. 找到最新 <span class="blur-text">版本号</span><br>3. 下载 <span class="blur-text">Assets</span> 中的文件（通常是. Zip 或. Exe）<br>4. 查看 <span class="blur-text">安装说明</span> 。</td>
+                            <td>7. 找到可执行文件或安装包<br>对于非开发者，在项目中找：<br>1. <span class="answer-text">Releases</span> 页面（点击查看）2. 找到最新 <span class="answer-text">版本号</span><br>3. 下载 <span class="answer-text">Assets</span> 中的文件（通常是. Zip 或. Exe）<br>4. 查看 <span class="answer-text">安装说明</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. 理解不同文件类型<br>在 Releases 中常见的文件：<br><span class="blur-text">.exe</span> ：Windows 可执行文件<br><span class="blur-text">.dmg</span> ：Mac 安装包<br><span class="blur-text">.deb</span> / <span class="blur-text">. Rpm</span>：Linux 安装包<br><br><span class="blur-text">.zip</span> /<span class="blur-text">. Tar</span> / <span class="blur-text">. Gz</span>：压缩包。</td>
+                            <td>8. 理解不同文件类型<br>在 Releases 中常见的文件：<br><span class="answer-text">.exe</span> ：Windows 可执行文件<br><span class="answer-text">.dmg</span> ：Mac 安装包<br><span class="answer-text">.deb</span> / <span class="answer-text">. Rpm</span>：Linux 安装包<br><br><span class="answer-text">.zip</span> /<span class="answer-text">. Tar</span> / <span class="answer-text">. Gz</span>：压缩包。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. 安全下载的注意事项<br>下载开源软件时注意：<br>1. 查看项目的 <span class="blur-text">Stars</span> 数（越多越可靠）<br>2. 阅读 <span class="blur-text">Issues</span> 中是否有安全问题报告‘<br><br>3. 优先从官方 <span class="blur-text">Releases</span> 页面下载<br>4. 避免下载来源不明的 <span class="blur-text">构建版本</span> 。</td>
+                            <td>9. 安全下载的注意事项<br>下载开源软件时注意：<br>1. 查看项目的 <span class="answer-text">Stars</span> 数（越多越可靠）<br>2. 阅读 <span class="answer-text">Issues</span> 中是否有安全问题报告‘<br><br>3. 优先从官方 <span class="answer-text">Releases</span> 页面下载<br>4. 避免下载来源不明的 <span class="answer-text">构建版本</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>"10. 报告问题的正确方式<br>想要报告问题或建议时：<br>1. 先查看 <span class="blur-text">Issues</span> 是否已有类似问题<br><br>2. 点击""<span class="blur-text">New issue</span>""按钮<br>3. 选择 <span class="blur-text">问题模板</span> （如果有）<br>4. 详细描述问题并附上 <span class="blur-text">截图</span> 。"</td>
+                            <td>"10. 报告问题的正确方式<br>想要报告问题或建议时：<br>1. 先查看 <span class="answer-text">Issues</span> 是否已有类似问题<br><br>2. 点击""<span class="answer-text">New issue</span>""按钮<br>3. 选择 <span class="answer-text">问题模板</span> （如果有）<br>4. 详细描述问题并附上 <span class="answer-text">截图</span> 。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. 关注感兴趣的项目<br>想要跟踪项目更新：<br>点击项目右上角的 <span class="blur-text">Watch</span> 按钮<br>选择 <span class="blur-text">All activity</span> 接收所有通知<br>或选择 <span class="blur-text">Releases only</span> 只接收版本更新通知。</td>
+                            <td>11. 关注感兴趣的项目<br>想要跟踪项目更新：<br>点击项目右上角的 <span class="answer-text">Watch</span> 按钮<br>选择 <span class="answer-text">All activity</span> 接收所有通知<br>或选择 <span class="answer-text">Releases only</span> 只接收版本更新通知。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. 收藏优秀项目<br>发现有用项目时：<br>点击右上角的 <span class="blur-text">Star</span> 按钮收藏<br>之后可以在 <span class="blur-text">个人主页</span> → <span class="blur-text">Stars</span> 中找到所有收藏<br>方便以后 <span class="blur-text">快速访问</span> 。</td>
+                            <td>12. 收藏优秀项目<br>发现有用项目时：<br>点击右上角的 <span class="answer-text">Star</span> 按钮收藏<br>之后可以在 <span class="answer-text">个人主页</span> → <span class="answer-text">Stars</span> 中找到所有收藏<br>方便以后 <span class="answer-text">快速访问</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. 搜索特定类型的项目<br>搜索时可以使用筛选条件：<br>1. `{{c2::stars}}:&gt;1000` 查找 <span class="blur-text">受欢迎</span> 的项目<br>2. `{{c2::pushed}}:&gt;2023-01-01` 查找 <span class="blur-text">活跃</span> 的项目<br>3. `{{c2::language}}:python` 查找 <span class="blur-text">Python</span> 项目<br>4. `{{c2::topic}}:gui` 查找 <span class="blur-text">图形界面</span> 工具。</td>
+                            <td>13. 搜索特定类型的项目<br>搜索时可以使用筛选条件：<br>1. `{{c2::stars}}:&gt;1000` 查找 <span class="answer-text">受欢迎</span> 的项目<br>2. `{{c2::pushed}}:&gt;2023-01-01` 查找 <span class="answer-text">活跃</span> 的项目<br>3. `{{c2::language}}:python` 查找 <span class="answer-text">Python</span> 项目<br>4. `{{c2::topic}}:gui` 查找 <span class="answer-text">图形界面</span> 工具。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>"14. 寻找替代工具<br>想要找某个工具的替代品：<br>1. 搜索关键词+"" <span class="blur-text">alternative</span> ""<br>2. 查看项目的 <span class="blur-text">相关项目</span> 部分<br>3. 查看 GitHub 的 <span class="blur-text">话题页面</span> <br>（{{c2::github. Com/topics/关键词}}）。"</td>
+                            <td>"14. 寻找替代工具<br>想要找某个工具的替代品：<br>1. 搜索关键词+"" <span class="answer-text">alternative</span> ""<br>2. 查看项目的 <span class="answer-text">相关项目</span> 部分<br>3. 查看 GitHub 的 <span class="answer-text">话题页面</span> <br>（{{c2::github. Com/topics/关键词}}）。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>"15. 按用途搜索工具<br>搜索工具时可以这样描述：<br>"" <span class="blur-text">screenshot tool</span>&nbsp;&nbsp;&nbsp;<span class="blur-text">for Windows</span>""（Windows 截图工具）<br>"" <span class="blur-text">PDF editor</span>&nbsp;&nbsp;&nbsp;<span class="blur-text">open source</span>""（开源 PDF 编辑器）<br>"" <span class="blur-text">video converter</span>&nbsp; &nbsp;<span class="blur-text">GUI</span>""（视频转换器图形界面）。"</td>
+                            <td>"15. 按用途搜索工具<br>搜索工具时可以这样描述：<br>"" <span class="answer-text">screenshot tool</span>&nbsp;&nbsp;&nbsp;<span class="answer-text">for Windows</span>""（Windows 截图工具）<br>"" <span class="answer-text">PDF editor</span>&nbsp;&nbsp;&nbsp;<span class="answer-text">open source</span>""（开源 PDF 编辑器）<br>"" <span class="answer-text">video converter</span>&nbsp; &nbsp;<span class="answer-text">GUI</span>""（视频转换器图形界面）。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>"16. 发现工具的平台<br>除了 GitHub 搜索，还可以访问：<br>1. GitHub <span class="blur-text">Trending</span> 页面（看热门项目）<br>2. GitHub <span class="blur-text">Topics</span> 页面（按分类浏览）<br>3. 第三方网站如"" <span class="blur-text">Awesome</span> ""系列<br>4. 技术博客和 <span class="blur-text">推荐列表</span> 。"</td>
+                            <td>"16. 发现工具的平台<br>除了 GitHub 搜索，还可以访问：<br>1. GitHub <span class="answer-text">Trending</span> 页面（看热门项目）<br>2. GitHub <span class="answer-text">Topics</span> 页面（按分类浏览）<br>3. 第三方网站如"" <span class="answer-text">Awesome</span> ""系列<br>4. 技术博客和 <span class="answer-text">推荐列表</span> 。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. 常见工具类别<br>GitHub 上常见的实用工具包括：<br>1. <span class="blur-text">开发</span> 工具（{{c2::编辑器、调试器}}）<br>2. <span class="blur-text">设计</span> 工具（{{c2::图标、UI 组件}}）<br>3. <span class="blur-text">办公</span> 工具（{{c2::文档转换、效率工具}}）<br>4. <span class="blur-text">系统</span> 工具（{{c2::清理、优化、备份}}）。</td>
+                            <td>17. 常见工具类别<br>GitHub 上常见的实用工具包括：<br>1. <span class="answer-text">开发</span> 工具（{{c2::编辑器、调试器}}）<br>2. <span class="answer-text">设计</span> 工具（{{c2::图标、UI 组件}}）<br>3. <span class="answer-text">办公</span> 工具（{{c2::文档转换、效率工具}}）<br>4. <span class="answer-text">系统</span> 工具（{{c2::清理、优化、备份}}）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. 判断工具是否适合自己<br>选择工具时考虑：<br>1. 支持的 <span class="blur-text">操作系统</span> （Windows/Mac/Linux）<br>2. 是否有 <span class="blur-text">图形界面</span> （GUI）<br>3. <span class="blur-text">文档 完整</span> 与否<br>4. <span class="blur-text">社区 支持</span> 情况。</td>
+                            <td>18. 判断工具是否适合自己<br>选择工具时考虑：<br>1. 支持的 <span class="answer-text">操作系统</span> （Windows/Mac/Linux）<br>2. 是否有 <span class="answer-text">图形界面</span> （GUI）<br>3. <span class="answer-text">文档 完整</span> 与否<br>4. <span class="answer-text">社区 支持</span> 情况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>"19. 查找并下载一个工具的实际步骤<br>1. 在 GitHub 搜索"" <span class="blur-text">screenshot tool</span>""<br><br>2. 按 <span class="blur-text">Stars</span> 排序查看前几个结果<br>3. 打开项目查看 <span class="blur-text">README</span> 和<span class="blur-text">截图</span><br><br>4. 点击 <span class="blur-text">Releases</span> 查看可下载文件<br>5. 下载合适的 <span class="blur-text">安装包</span> 并安装。"</td>
+                            <td>"19. 查找并下载一个工具的实际步骤<br>1. 在 GitHub 搜索"" <span class="answer-text">screenshot tool</span>""<br><br>2. 按 <span class="answer-text">Stars</span> 排序查看前几个结果<br>3. 打开项目查看 <span class="answer-text">README</span> 和<span class="answer-text">截图</span><br><br>4. 点击 <span class="answer-text">Releases</span> 查看可下载文件<br>5. 下载合适的 <span class="answer-text">安装包</span> 并安装。"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. 学习使用新工具的流程<br>拿到一个新工具后：<br>1. 仔细阅读 <span class="blur-text">README.md</span><br>2. 查看 <span class="blur-text">Wiki</span> 或文档页面<br><br>3. 尝试 <span class="blur-text">基本功能</span><br>4. 遇到问题查看 <span class="blur-text">Issues</span> 或提问。</td>
+                            <td>20. 学习使用新工具的流程<br>拿到一个新工具后：<br>1. 仔细阅读 <span class="answer-text">README.md</span><br>2. 查看 <span class="answer-text">Wiki</span> 或文档页面<br><br>3. 尝试 <span class="answer-text">基本功能</span><br>4. 遇到问题查看 <span class="answer-text">Issues</span> 或提问。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. 构建自己的工具箱<br>建议创建自己的 GitHub 工具箱：<br>1. 创建一个 <span class="blur-text">新仓库</span> 或 {{c2::Gist}} 记录好用的工具<br><br>2. 按 <span class="blur-text">类别</span> 整理（{{c2::开发、设计、办公}}等）<br>3. 添加 <span class="blur-text">简短描述</span> 和<span class="blur-text">下载链接</span><br>4. 定期 <span class="blur-text">更新&amp;维护</span> 。<br><br>Gist 是 GitHub 提供的、<br>用于快速{{c2::保存&amp;分享}}独立{{c2::代码片段or文本}}的轻量级工具。</td>
+                            <td>21. 构建自己的工具箱<br>建议创建自己的 GitHub 工具箱：<br>1. 创建一个 <span class="answer-text">新仓库</span> 或 {{c2::Gist}} 记录好用的工具<br><br>2. 按 <span class="answer-text">类别</span> 整理（{{c2::开发、设计、办公}}等）<br>3. 添加 <span class="answer-text">简短描述</span> 和<span class="answer-text">下载链接</span><br>4. 定期 <span class="answer-text">更新&amp;维护</span> 。<br><br>Gist 是 GitHub 提供的、<br>用于快速{{c2::保存&amp;分享}}独立{{c2::代码片段or文本}}的轻量级工具。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. 使用开源工具的安全准则<br>1. 只从 <span class="blur-text">官方渠道</span> 下载<br><br>2. 检查文件的 <span class="blur-text">哈希值</span> （如果提供）<br>3. 在 <span class="blur-text">沙箱环境</span> 中先测试<br><br>4. 关注项目的 <span class="blur-text">安全公告</span> 。</td>
+                            <td>22. 使用开源工具的安全准则<br>1. 只从 <span class="answer-text">官方渠道</span> 下载<br><br>2. 检查文件的 <span class="answer-text">哈希值</span> （如果提供）<br>3. 在 <span class="answer-text">沙箱环境</span> 中先测试<br><br>4. 关注项目的 <span class="answer-text">安全公告</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. 给予反馈的正确方式<br>使用工具后想反馈时：<br>1. 确认是 <span class="blur-text">软件问题</span> 而非使用问题<br>2. 提供 <span class="blur-text">详细</span> 的系统<span class="blur-text">环境&amp;操作</span>步骤<br><br>3. 如果是<span class="blur-text">建议</span>功能，说明使用<span class="blur-text">场景&amp;价值</span><br>4. 保持 <span class="blur-text">礼貌&amp;耐心</span> 。</td>
+                            <td>23. 给予反馈的正确方式<br>使用工具后想反馈时：<br>1. 确认是 <span class="answer-text">软件问题</span> 而非使用问题<br>2. 提供 <span class="answer-text">详细</span> 的系统<span class="answer-text">环境&amp;操作</span>步骤<br><br>3. 如果是<span class="answer-text">建议</span>功能，说明使用<span class="answer-text">场景&amp;价值</span><br>4. 保持 <span class="answer-text">礼貌&amp;耐心</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. 如何开始贡献（非代码方式）<br>即使不会编程也可以贡献：<br>1. 报告 <span class="blur-text">bug</span> 和问题<br>2. 改进 <span class="blur-text">文档</span> 和翻译<br><br>3. 回答其他用户的 <span class="blur-text">问题</span><br>4. 分享 <span class="blur-text">使用经验</span> 和教程。</td>
+                            <td>24. 如何开始贡献（非代码方式）<br>即使不会编程也可以贡献：<br>1. 报告 <span class="answer-text">bug</span> 和问题<br>2. 改进 <span class="answer-text">文档</span> 和翻译<br><br>3. 回答其他用户的 <span class="answer-text">问题</span><br>4. 分享 <span class="answer-text">使用经验</span> 和教程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25. 支持开源项目的方式<br>支持喜欢项目的方式：<br>1. 给予 <span class="blur-text">Star</span> 表示认可<br>2. 在社交媒体上 <span class="blur-text">分享</span><br><br>3. 通过 <span class="blur-text">赞助</span> 支持开发者<br>4. 帮助 <span class="blur-text">推广</span> 和宣传。</td>
+                            <td>25. 支持开源项目的方式<br>支持喜欢项目的方式：<br>1. 给予 <span class="answer-text">Star</span> 表示认可<br>2. 在社交媒体上 <span class="answer-text">分享</span><br><br>3. 通过 <span class="answer-text">赞助</span> 支持开发者<br>4. 帮助 <span class="answer-text">推广</span> 和宣传。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>
