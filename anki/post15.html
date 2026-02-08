@@ -163,10 +163,64 @@
                 font-size: 0.9rem;
             }
         }
+    
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 100;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+        .sticky-nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .sticky-nav a:hover {
+            background: var(--accent-red);
+            color: white;
+        }
+    
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 100;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+        .sticky-nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .sticky-nav a:hover {
+            background: var(--accent-red);
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <nav class="sticky-nav"><a href="#12-1">12月1日</a> | <a href="#12-22">12月22日</a> | <a href="#12-3">12月3日</a> | <a href="#12-5">12月5日</a> | <a href="#12-6">12月6日</a> | <a href="#12-8">12月8日</a> | <a href="#12-10">12月10日</a> | <a href="#12-12">12月12日</a> | <a href="#12-13">12月13日</a> | <a href="#12-15">12月15日</a> | <a href="#12-17">12月17日</a> | <a href="#12-18">12月18日</a> | <a href="#12-19">12月19日</a></nav>
+        <nav class="sticky-nav"><a href="#12-1">12月1日</a> | <a href="#12-22">12月22日</a> | <a href="#12-3">12月3日</a> | <a href="#12-5">12月5日</a> | <a href="#12-6">12月6日</a> | <a href="#12-8">12月8日</a> | <a href="#12-10">12月10日</a> | <a href="#12-12">12月12日</a> | <a href="#12-13">12月13日</a> | <a href="#12-15">12月15日</a> | <a href="#12-17">12月17日</a> | <a href="#12-18">12月18日</a> | <a href="#12-19">12月19日</a></nav>
         <div class="content-section">
             <h3 class="section-title">📚 学习对照表</h3>
             
@@ -180,8 +234,7 @@
                     </thead>
                     <tbody>
             
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月1日】27直播病理带读课第1课思考题 （答案） ===</td>
+                        <tr class="title-row" id="12-1"><td colspan="3">=== 【12月1日】27直播病理带读课第1课思考题 （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -340,8 +393,7 @@
                             <td>20.. <strong>病理性钙化</strong><br>部位：<span class="answer-text">细胞内</span>、<span class="answer-text">细胞间质</span><br>蓄积物：<span class="answer-text">磷酸钙</span>、<span class="answer-text">碳酸钙</span><br>病因：<span class="answer-text">甲状旁腺功能亢进</span>、骨肿瘤、<span class="answer-text">维生素D摄入过多</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月22日】27直播病理学带读第13课思考题（答案） ===</td>
+                        <tr class="title-row" id="12-22"><td colspan="3">=== 【12月22日】27直播病理学带读第13课思考题（答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -410,8 +462,7 @@
                             <td>10.. <strong>血吸虫病导致门静脉高压的类型</strong><br>类型：<span class="answer-text">窦前性门静脉高压</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月3日】27直播病理带读课第2课思考题 （答案） ===</td>
+                        <tr class="title-row" id="12-3"><td colspan="3">=== 【12月3日】27直播病理带读课第2课思考题 （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -450,8 +501,7 @@
                             <td>5.. <strong>新生血管形成的重要细胞因子</strong><br>细胞因子：① <span class="answer-text">血管内皮生长因子</span>（<span class="answer-text">VEGF</span>） ② <span class="answer-text">血管生成素</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月5日】27直播病理学带读第3课思考题 （答案） ===</td>
+                        <tr class="title-row" id="12-5"><td colspan="3">=== 【12月5日】27直播病理学带读第3课思考题 （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -490,8 +540,7 @@
                             <td>3.. C <strong>红色血栓与透明血栓</strong><br>红色血栓：<span class="answer-text">纤维蛋白</span>+<span class="answer-text">血细胞</span>，静脉延续性血栓的<span class="answer-text">尾部</span><br>透明血栓：由<span class="answer-text">纤维蛋白</span>构成，又称为<span class="answer-text">微血栓</span>、<span class="answer-text">纤维素性血栓</span>，发生于<span class="answer-text">微循环</span>的血管内，以<span class="answer-text">毛细血管</span>为主，最常见于<span class="answer-text">DIC</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月6日】27直播病理学带读第4课思考题  （答案） ===</td>
+                        <tr class="title-row" id="12-6"><td colspan="3">=== 【12月6日】27直播病理学带读第4课思考题  （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -584,8 +633,7 @@
                             <td>7.. B <strong>蜂窝织炎和脓肿的区别——脓肿</strong><br>特点：感染<span class="answer-text">重</span>、毒力<span class="answer-text">重</span><br>致病菌：<span class="answer-text">金黄色葡萄球菌</span><br>分泌物：<span class="answer-text">凝血酶</span><br>好发部位：<span class="answer-text">肺小叶性肺炎</span>、<span class="answer-text">肝</span>、皮下的<span class="answer-text">疖</span>、<span class="answer-text">痈</span>、<span class="answer-text">淋病</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月8日】27直播病理学带读第5课思考题  （答案） ===</td>
+                        <tr class="title-row" id="12-8"><td colspan="3">=== 【12月8日】27直播病理学带读第5课思考题  （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -660,8 +708,7 @@
                             <td>10.. B <strong>TNM分期的分期标准——M</strong><br>M：指<span class="answer-text">远处转移</span>（通常是<span class="answer-text">血道转移</span>）</td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月10日】27直播病理学带读第6课思考题  （答案） ===</td>
+                        <tr class="title-row" id="12-10"><td colspan="3">=== 【12月10日】27直播病理学带读第6课思考题  （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -700,8 +747,7 @@
                             <td>5.. B <strong>急性排斥反应——体液免疫为主</strong><br>特点：主要表现为<span class="answer-text">亚急性血管炎</span>，<span class="answer-text">血管内膜增厚</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月12日】27直播病理学带读第7课思考题  （答案） ===</td>
+                        <tr class="title-row" id="12-12"><td colspan="3">=== 【12月12日】27直播病理学带读第7课思考题  （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -740,8 +786,7 @@
                             <td>2.. D <strong>动脉粥样硬化的分期——继发病变期</strong><br>① <span class="answer-text">斑块内出血</span>：<span class="answer-text">新生毛细血管</span>破裂成血肿，血肿隆起闭塞血管<br>② <span class="answer-text">斑块破裂</span>：<span class="answer-text">溃疡</span>+<span class="answer-text">栓子</span>形成<br>③ <span class="answer-text">血栓形成</span><br>④ <span class="answer-text">管腔狭窄</span><br>⑤ <span class="answer-text">动脉瘤</span>形成：SMC变薄导致<br>⑥ 可发生<span class="answer-text">钙化</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月13日】27直播病理学带读第8课思考题  （答案） ===</td>
+                        <tr class="title-row" id="12-13"><td colspan="3">=== 【12月13日】27直播病理学带读第8课思考题  （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -792,8 +837,7 @@
                             <td>2.. D <strong>病毒性肺炎、支原体肺炎的特点</strong><br>特点：为<span class="answer-text">间质性肺炎</span>，肺泡腔内<span class="answer-text">很少有渗出</span>，浸润炎细胞主要是<span class="answer-text">慢性炎症细胞</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月15日】27直播病理学带读第9课思考题（答案） ===</td>
+                        <tr class="title-row" id="12-15"><td colspan="3">=== 【12月15日】27直播病理学带读第9课思考题（答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -838,8 +882,7 @@
                             <td>6.. <strong>肝硬化门静脉高压的表现</strong><br>表现：① <span class="answer-text">腹水</span> ② <span class="answer-text">侧支循环</span>的形成 ③ <span class="answer-text">脾大</span>/<span class="answer-text">脾功能亢进</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月17日】27直播病理学带读第10课思考题（答案） ===</td>
+                        <tr class="title-row" id="12-17"><td colspan="3">=== 【12月17日】27直播病理学带读第10课思考题（答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -884,8 +927,7 @@
                             <td>7.. <strong>惰性淋巴瘤包括哪些</strong><br>包括：① <span class="answer-text">小淋巴细胞淋巴瘤</span> ② <span class="answer-text">淋巴浆细胞淋巴瘤</span> ③ <span class="answer-text">边缘区淋巴瘤</span> ④ <span class="answer-text">滤泡性淋巴瘤</span> ⑤ <span class="answer-text">Sézary综合征</span></td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月18日】27直播病理学带读第11课思考题  （答案） ===</td>
+                        <tr class="title-row" id="12-18"><td colspan="3">=== 【12月18日】27直播病理学带读第11课思考题  （答案） ===</td>
                         </tr>
                     
                         <tr>
@@ -936,8 +978,7 @@
                             <td>7.. <strong>局灶节段性硬化性肾小球肾炎的病理变化</strong><br>变化：① <span class="answer-text">系膜基质</span>增多，<span class="answer-text">基膜塌陷</span>，严重者<span class="answer-text">管腔闭塞</span> ② <span class="answer-text">弥漫性脏层上皮足突消失</span>，部分上皮细胞从<span class="answer-text">肾小球基膜</span>剥脱</td>
                         </tr>
                     
-                        <tr class="title-row">
-                            <td colspan="3">=== 【12月19日】27直播病理学带读第12课思考题  （答案） ===</td>
+                        <tr class="title-row" id="12-19"><td colspan="3">=== 【12月19日】27直播病理学带读第12课思考题  （答案） ===</td>
                         </tr>
                     
                         <tr>
