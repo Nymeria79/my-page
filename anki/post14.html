@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 100;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+        .sticky-nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .sticky-nav a:hover {
+            background: var(--accent-red);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sticky-nav"><a href="#11-3">11月3日</a> | <a href="#11-5">11月5日</a> | <a href="#11-06">11月06日</a> | <a href="#11-07">11月07日</a> | <a href="#11-09">11月09日</a> | <a href="#11-10">11月10日</a> | <a href="#11-12">11月12日</a> | <a href="#11-13">11月13日</a> | <a href="#11-14">11月14日</a> | <a href="#11-16">11月16日</a> | <a href="#11-17">11月17日</a> | <a href="#11-19">11月19日</a> | <a href="#11-20">11月20日</a> | <a href="#11-21">11月21日</a> | <a href="#11-23">11月23日</a> | <a href="#11-24">11月24日</a></nav>
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row" id="11-3"><td colspan="3"><strong>【11月3日】27直播生物化学带读第1课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1.. A <strong>非极性脂肪族氨基酸</strong><br>包括：<span class="blur-text">脯氨酸</span>、<span class="blur-text">缬氨酸</span>、<span class="blur-text">异亮氨酸</span>、亮氨酸、甲硫氨酸、丙氨酸、甘氨酸</td>
+                            <td>1.. A <strong>非极性脂肪族氨基酸</strong><br>包括：<span class="answer-text">脯氨酸</span>、<span class="answer-text">缬氨酸</span>、<span class="answer-text">异亮氨酸</span>、亮氨酸、甲硫氨酸、丙氨酸、甘氨酸</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>1.. B <strong>非极性脂肪族氨基酸（续）</strong><br>包括：脯氨酸、缬氨酸、异亮氨酸、<span class="blur-text">亮氨酸</span>、<span class="blur-text">甲硫氨酸</span>、<span class="blur-text">丙氨酸</span>、<span class="blur-text">甘氨酸</span></td>
+                            <td>1.. B <strong>非极性脂肪族氨基酸（续）</strong><br>包括：脯氨酸、缬氨酸、异亮氨酸、<span class="answer-text">亮氨酸</span>、<span class="answer-text">甲硫氨酸</span>、<span class="answer-text">丙氨酸</span>、<span class="answer-text">甘氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2.. <strong>含芳香环的氨基酸</strong><br>包括：<span class="blur-text">苯丙氨酸</span>、<span class="blur-text">酪氨酸</span>、<span class="blur-text">色氨酸</span></td>
+                            <td>2.. <strong>含芳香环的氨基酸</strong><br>包括：<span class="answer-text">苯丙氨酸</span>、<span class="answer-text">酪氨酸</span>、<span class="answer-text">色氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3.. <strong>酸性氨基酸</strong><br>包括：<span class="blur-text">谷氨酸</span>、<span class="blur-text">天冬氨酸</span></td>
+                            <td>3.. <strong>酸性氨基酸</strong><br>包括：<span class="answer-text">谷氨酸</span>、<span class="answer-text">天冬氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>4.. <strong>碱性氨基酸</strong><br>包括：<span class="blur-text">赖氨酸</span>、<span class="blur-text">组氨酸</span>、<span class="blur-text">精氨酸</span></td>
+                            <td>4.. <strong>碱性氨基酸</strong><br>包括：<span class="answer-text">赖氨酸</span>、<span class="answer-text">组氨酸</span>、<span class="answer-text">精氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5.. A <strong>极性中性氨基酸</strong><br>包括：<span class="blur-text">丝氨酸</span>、<span class="blur-text">苏氨酸</span>、<span class="blur-text">天冬酰胺</span>、谷氨酰胺、半胱氨酸</td>
+                            <td>5.. A <strong>极性中性氨基酸</strong><br>包括：<span class="answer-text">丝氨酸</span>、<span class="answer-text">苏氨酸</span>、<span class="answer-text">天冬酰胺</span>、谷氨酰胺、半胱氨酸</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>5.. B <strong>极性中性氨基酸（续）</strong><br>包括：丝氨酸、苏氨酸、天冬酰胺、<span class="blur-text">谷氨酰胺</span>、<span class="blur-text">半胱氨酸</span></td>
+                            <td>5.. B <strong>极性中性氨基酸（续）</strong><br>包括：丝氨酸、苏氨酸、天冬酰胺、<span class="answer-text">谷氨酰胺</span>、<span class="answer-text">半胱氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>6.. <strong>亚氨基酸</strong><br>是：<span class="blur-text">脯氨酸</span></td>
+                            <td>6.. <strong>亚氨基酸</strong><br>是：<span class="answer-text">脯氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>7.. <strong>极性最强的氨基酸</strong><br>是：<span class="blur-text">半胱氨酸</span></td>
+                            <td>7.. <strong>极性最强的氨基酸</strong><br>是：<span class="answer-text">半胱氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>8.. <strong>有两个羧基的氨基酸</strong><br>包括：<span class="blur-text">谷氨酸</span>、<span class="blur-text">天冬氨酸</span></td>
+                            <td>8.. <strong>有两个羧基的氨基酸</strong><br>包括：<span class="answer-text">谷氨酸</span>、<span class="answer-text">天冬氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>9.. <strong>有两个氨基的氨基酸</strong><br>是：<span class="blur-text">赖氨酸</span></td>
+                            <td>9.. <strong>有两个氨基的氨基酸</strong><br>是：<span class="answer-text">赖氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10.. <strong>最大吸收峰在280nm处的氨基酸</strong><br>是：<span class="blur-text">酪氨酸</span>、<span class="blur-text">色氨酸</span></td>
+                            <td>10.. <strong>最大吸收峰在280nm处的氨基酸</strong><br>是：<span class="answer-text">酪氨酸</span>、<span class="answer-text">色氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>11.. A <strong>不参与蛋白质合成的氨基酸</strong><br>常见：<span class="blur-text">同型半胱氨酸</span>、<span class="blur-text">鸟氨酸</span>、<span class="blur-text">瓜氨酸</span>、精氨酸代琥珀酸等</td>
+                            <td>11.. A <strong>不参与蛋白质合成的氨基酸</strong><br>常见：<span class="answer-text">同型半胱氨酸</span>、<span class="answer-text">鸟氨酸</span>、<span class="answer-text">瓜氨酸</span>、精氨酸代琥珀酸等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>11.. B <strong>不参与蛋白质合成的本质原因</strong><br>不能形成对应的<span class="blur-text">氨酰-tRNA</span></td>
+                            <td>11.. B <strong>不参与蛋白质合成的本质原因</strong><br>不能形成对应的<span class="answer-text">氨酰-tRNA</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>12.. A <strong>蛋白质一级结构定义</strong><br>蛋白质分子中从<span class="blur-text">N-端</span>至<span class="blur-text">C-端</span>的<span class="blur-text">氨基酸排列顺序</span></td>
+                            <td>12.. A <strong>蛋白质一级结构定义</strong><br>蛋白质分子中从<span class="answer-text">N-端</span>至<span class="answer-text">C-端</span>的<span class="answer-text">氨基酸排列顺序</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>12.. B <strong>维系一级结构的键</strong><br>主要：<span class="blur-text">肽键</span>和<span class="blur-text">二硫键</span></td>
+                            <td>12.. B <strong>维系一级结构的键</strong><br>主要：<span class="answer-text">肽键</span>和<span class="answer-text">二硫键</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>13.. A <strong>蛋白质二级结构定义</strong><br>某一段肽链的<span class="blur-text">局部空间结构</span>，即该段肽链主链骨架原子的相对空间位置，不涉及氨基酸残基侧链的构象</td>
+                            <td>13.. A <strong>蛋白质二级结构定义</strong><br>某一段肽链的<span class="answer-text">局部空间结构</span>，即该段肽链主链骨架原子的相对空间位置，不涉及氨基酸残基侧链的构象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>13.. B <strong>二级结构具体例子</strong><br>主要包括：<span class="blur-text">α-螺旋</span>、<span class="blur-text">β-折叠</span>、<span class="blur-text">β-转角</span>和Ω环</td>
+                            <td>13.. B <strong>二级结构具体例子</strong><br>主要包括：<span class="answer-text">α-螺旋</span>、<span class="answer-text">β-折叠</span>、<span class="answer-text">β-转角</span>和Ω环</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>14.. A <strong>蛋白质超二级结构定义</strong><br>由<span class="blur-text">2个或2个以上</span>具有二级结构的肽段在空间上相互接近，形成一个有规则的二级结构组合</td>
+                            <td>14.. A <strong>蛋白质超二级结构定义</strong><br>由<span class="answer-text">2个或2个以上</span>具有二级结构的肽段在空间上相互接近，形成一个有规则的二级结构组合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>14.. B <strong>结构模体常见例子</strong><br>包括：<span class="blur-text">亮氨酸拉链</span>、<span class="blur-text">锌指结构</span>、<span class="blur-text">α-螺旋-β-转角(或环)-α-螺旋模体</span>等</td>
+                            <td>14.. B <strong>结构模体常见例子</strong><br>包括：<span class="answer-text">亮氨酸拉链</span>、<span class="answer-text">锌指结构</span>、<span class="answer-text">α-螺旋-β-转角(或环)-α-螺旋模体</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>15.. A <strong>蛋白质三级结构定义</strong><br>整条肽链中全部<span class="blur-text">氨基酸残基</span>的相对空间位置，即整条肽链所有原子在三维空间的排布位置</td>
+                            <td>15.. A <strong>蛋白质三级结构定义</strong><br>整条肽链中全部<span class="answer-text">氨基酸残基</span>的相对空间位置，即整条肽链所有原子在三维空间的排布位置</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>15.. B <strong>结构域与三级结构关系</strong><br>分子量较大的蛋白质常折叠成多个结构较为紧密且稳定的区域，各行其功能，称为<span class="blur-text">结构域</span>；通常可把<span class="blur-text">结构域</span>看成三级结构</td>
+                            <td>15.. B <strong>结构域与三级结构关系</strong><br>分子量较大的蛋白质常折叠成多个结构较为紧密且稳定的区域，各行其功能，称为<span class="answer-text">结构域</span>；通常可把<span class="answer-text">结构域</span>看成三级结构</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>16.. <strong>分子伴侣的作用</strong><br>使蛋白质折叠成正确的<span class="blur-text">空间构象</span>，协助形成<span class="blur-text">三级结构</span>；只有形成正确的空间构象的蛋白质才具有<span class="blur-text">生物学功能</span></td>
+                            <td>16.. <strong>分子伴侣的作用</strong><br>使蛋白质折叠成正确的<span class="answer-text">空间构象</span>，协助形成<span class="answer-text">三级结构</span>；只有形成正确的空间构象的蛋白质才具有<span class="answer-text">生物学功能</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>17.. <strong>四级结构的定义</strong><br><span class="blur-text">亚基</span>与亚基之间呈特定的三维空间排布，并以<span class="blur-text">非共价键</span>相连接；蛋白质分子中各个亚基的空间排布及亚基接触部位的布局和相互作用</td>
+                            <td>17.. <strong>四级结构的定义</strong><br><span class="answer-text">亚基</span>与亚基之间呈特定的三维空间排布，并以<span class="answer-text">非共价键</span>相连接；蛋白质分子中各个亚基的空间排布及亚基接触部位的布局和相互作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>18.. <strong>蛋白质空间构象的基础</strong><br>是：<span class="blur-text">蛋白质的一级结构</span></td>
+                            <td>18.. <strong>蛋白质空间构象的基础</strong><br>是：<span class="answer-text">蛋白质的一级结构</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>19.. A <strong>蛋白质一级结构改变造成的疾病-镰状细胞贫血</strong><br>正常人血红蛋白β亚基的第6位氨基酸是<span class="blur-text">谷氨酸</span>，而病人变成了<span class="blur-text">缬氨酸</span></td>
+                            <td>19.. A <strong>蛋白质一级结构改变造成的疾病-镰状细胞贫血</strong><br>正常人血红蛋白β亚基的第6位氨基酸是<span class="answer-text">谷氨酸</span>，而病人变成了<span class="answer-text">缬氨酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>19.. B <strong>蛋白质一级结构改变造成的疾病-肌营养不良症</strong><br><span class="blur-text">基因</span>大片段碱基缺失导致大片段肽链的缺失</td>
+                            <td>19.. B <strong>蛋白质一级结构改变造成的疾病-肌营养不良症</strong><br><span class="answer-text">基因</span>大片段碱基缺失导致大片段肽链的缺失</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>20.. <strong>蛋白质高级结构改变造成的疾病</strong><br>包括：<span class="blur-text">人纹状体脊髓变性病</span>、<span class="blur-text">阿尔茨海默病</span>、<span class="blur-text">亨廷顿病</span>、疯牛病</td>
+                            <td>20.. <strong>蛋白质高级结构改变造成的疾病</strong><br>包括：<span class="answer-text">人纹状体脊髓变性病</span>、<span class="answer-text">阿尔茨海默病</span>、<span class="answer-text">亨廷顿病</span>、疯牛病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>21.. <strong>判断蛋白质解离成正/负离子的方法</strong><br>用蛋白质的<span class="blur-text">等电点</span>减去溶液的<span class="blur-text">pH值</span>；若为正值，则解离成<span class="blur-text">正离子</span>，反之则为负离子</td>
+                            <td>21.. <strong>判断蛋白质解离成正/负离子的方法</strong><br>用蛋白质的<span class="answer-text">等电点</span>减去溶液的<span class="answer-text">pH值</span>；若为正值，则解离成<span class="answer-text">正离子</span>，反之则为负离子</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>22.. A <strong>蛋白质变性的定义</strong><br>在某些物理和化学因素作用下，蛋白质特定的<span class="blur-text">空间构象</span>被破坏，也即有序的空间结构变成无序的空间结构，导致其<span class="blur-text">理化性质</span>的改变和<span class="blur-text">生物学活性</span>的丧失</td>
+                            <td>22.. A <strong>蛋白质变性的定义</strong><br>在某些物理和化学因素作用下，蛋白质特定的<span class="answer-text">空间构象</span>被破坏，也即有序的空间结构变成无序的空间结构，导致其<span class="answer-text">理化性质</span>的改变和<span class="answer-text">生物学活性</span>的丧失</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>22.. B <strong>蛋白质变性实际发生的改变</strong><br>主要发生<span class="blur-text">二硫键</span>和<span class="blur-text">非共价键</span>的破坏，不涉及<span class="blur-text">一级结构</span>中氨基酸序列的改变</td>
+                            <td>22.. B <strong>蛋白质变性实际发生的改变</strong><br>主要发生<span class="answer-text">二硫键</span>和<span class="answer-text">非共价键</span>的破坏，不涉及<span class="answer-text">一级结构</span>中氨基酸序列的改变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>23.. <strong>蛋白质变性后的理化性质改变</strong><br>包括：<span class="blur-text">溶解度降低</span>、<span class="blur-text">黏度增加</span>、<span class="blur-text">结晶能力消失</span>、生物学活性丧失、易被蛋白酶水解等</td>
+                            <td>23.. <strong>蛋白质变性后的理化性质改变</strong><br>包括：<span class="answer-text">溶解度降低</span>、<span class="answer-text">黏度增加</span>、<span class="answer-text">结晶能力消失</span>、生物学活性丧失、易被蛋白酶水解等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>24.. <strong>蛋白质变性和沉淀的关系</strong><br><span class="blur-text">变性的蛋白质</span>易于沉淀，有时蛋白质发生沉淀，但<span class="blur-text">并不变性</span></td>
+                            <td>24.. <strong>蛋白质变性和沉淀的关系</strong><br><span class="answer-text">变性的蛋白质</span>易于沉淀，有时蛋白质发生沉淀，但<span class="answer-text">并不变性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>25.. A <strong>茚三酮反应和双缩脲反应的主要对象</strong><br>茚三酮反应主要对<span class="blur-text">氨基</span>进行反应；双缩脲反应是对<span class="blur-text">肽键</span>进行反应</td>
+                            <td>25.. A <strong>茚三酮反应和双缩脲反应的主要对象</strong><br>茚三酮反应主要对<span class="answer-text">氨基</span>进行反应；双缩脲反应是对<span class="answer-text">肽键</span>进行反应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>25.. B <strong>两反应在氨基酸和蛋白质中的不同</strong><br>氨基酸：仅有<span class="blur-text">茚三酮反应</span>为阳性，双缩脲反应阴性<br>蛋白质：<span class="blur-text">二者均为阳性</span></td>
+                            <td>25.. B <strong>两反应在氨基酸和蛋白质中的不同</strong><br>氨基酸：仅有<span class="answer-text">茚三酮反应</span>为阳性，双缩脲反应阴性<br>蛋白质：<span class="answer-text">二者均为阳性</span></td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-5"><td colspan="3"><strong>【11月5日】27直播生物化学带读第2课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>1.. <strong>酶的概念</strong><br>酶是<span class="blur-text">催化特定反应的蛋白质</span>，能够<span class="blur-text">降低反应活化能</span>，加快反应速率，<span class="blur-text">不改变反应平衡</span></td>
+                            <td>1.. <strong>酶的概念</strong><br>酶是<span class="answer-text">催化特定反应的蛋白质</span>，能够<span class="answer-text">降低反应活化能</span>，加快反应速率，<span class="answer-text">不改变反应平衡</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>2.. <strong>单体酶与寡聚酶</strong><br>单体酶：由<span class="blur-text">一条肽链</span>构成的酶<br>寡聚酶：由<span class="blur-text">多个相同或不同的肽链</span>（即亚基）以<span class="blur-text">非共价键</span>连接组成的酶</td>
+                            <td>2.. <strong>单体酶与寡聚酶</strong><br>单体酶：由<span class="answer-text">一条肽链</span>构成的酶<br>寡聚酶：由<span class="answer-text">多个相同或不同的肽链</span>（即亚基）以<span class="answer-text">非共价键</span>连接组成的酶</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>3.. A <strong>多酶复合物与多功能酶</strong><br>多酶复合物/多酶体系：在某一代谢途径中，按序催化完成一组连续反应的几种具有不同催化功能的酶彼此聚合形成的<span class="blur-text">一个结构和功能上的整体</span><br>多功能酶/串联酶：在<span class="blur-text">一条肽链</span>上同时具有<span class="blur-text">多种不同的催化功能</span>的酶</td>
+                            <td>3.. A <strong>多酶复合物与多功能酶</strong><br>多酶复合物/多酶体系：在某一代谢途径中，按序催化完成一组连续反应的几种具有不同催化功能的酶彼此聚合形成的<span class="answer-text">一个结构和功能上的整体</span><br>多功能酶/串联酶：在<span class="answer-text">一条肽链</span>上同时具有<span class="answer-text">多种不同的催化功能</span>的酶</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>3.. B <strong>单纯酶与缀合酶</strong><br>单纯酶：水解后仅有<span class="blur-text">氨基酸组分</span>而无其他组分的酶<br>缀合酶/结合酶：由<span class="blur-text">蛋白质部分</span>和<span class="blur-text">非蛋白质部分</span>共同组成</td>
+                            <td>3.. B <strong>单纯酶与缀合酶</strong><br>单纯酶：水解后仅有<span class="answer-text">氨基酸组分</span>而无其他组分的酶<br>缀合酶/结合酶：由<span class="answer-text">蛋白质部分</span>和<span class="answer-text">非蛋白质部分</span>共同组成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>4.. <strong>金属酶与金属激活酶</strong><br>金属酶：<span class="blur-text">金属离子与酶结合紧密</span>，提取过程中不易丢失<br>金属激活酶：为酶的活性所必需，但与酶的结合是<span class="blur-text">可逆结合</span></td>
+                            <td>4.. <strong>金属酶与金属激活酶</strong><br>金属酶：<span class="answer-text">金属离子与酶结合紧密</span>，提取过程中不易丢失<br>金属激活酶：为酶的活性所必需，但与酶的结合是<span class="answer-text">可逆结合</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>5.. <strong>全酶</strong><br>全酶 = <span class="blur-text">酶蛋白</span> + <span class="blur-text">辅因子</span></td>
+                            <td>5.. <strong>全酶</strong><br>全酶 = <span class="answer-text">酶蛋白</span> + <span class="answer-text">辅因子</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>6.. <strong>辅酶与辅基的区别</strong><br>辅酶：结合<span class="blur-text">疏松</span>，可以<span class="blur-text">超滤除去</span>，反应中<span class="blur-text">离开酶蛋白</span><br>辅基：结合<span class="blur-text">紧密</span>，<span class="blur-text">共价结合</span>，不易除去，反应中<span class="blur-text">不能离开</span></td>
+                            <td>6.. <strong>辅酶与辅基的区别</strong><br>辅酶：结合<span class="answer-text">疏松</span>，可以<span class="answer-text">超滤除去</span>，反应中<span class="answer-text">离开酶蛋白</span><br>辅基：结合<span class="answer-text">紧密</span>，<span class="answer-text">共价结合</span>，不易除去，反应中<span class="answer-text">不能离开</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>7.. <strong>酶活性中心的必需基团</strong><br>位于酶的活性中心的必需基团包括：<span class="blur-text">结合基团</span>、<span class="blur-text">催化基团</span><br>可位于酶活性中心之外的必需基团：<span class="blur-text">调节位点</span></td>
+                            <td>7.. <strong>酶活性中心的必需基团</strong><br>位于酶的活性中心的必需基团包括：<span class="answer-text">结合基团</span>、<span class="answer-text">催化基团</span><br>可位于酶活性中心之外的必需基团：<span class="answer-text">调节位点</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>8.. <strong>同工酶的定义</strong><br>同工酶是指催化<span class="blur-text">相同化学反应</span>，但<span class="blur-text">酶蛋白的分子结构</span>、<span class="blur-text">理化性质</span>乃至<span class="blur-text">免疫学性质</span>不同的一组酶</td>
+                            <td>8.. <strong>同工酶的定义</strong><br>同工酶是指催化<span class="answer-text">相同化学反应</span>，但<span class="answer-text">酶蛋白的分子结构</span>、<span class="answer-text">理化性质</span>乃至<span class="answer-text">免疫学性质</span>不同的一组酶</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>9.. <strong>肌酸激酶同工酶的分布</strong><br>CK-BB：<span class="blur-text">脑</span>；CK-MB：<span class="blur-text">心</span>；CK-MM：<span class="blur-text">骨骼肌</span></td>
+                            <td>9.. <strong>肌酸激酶同工酶的分布</strong><br>CK-BB：<span class="answer-text">脑</span>；CK-MB：<span class="answer-text">心</span>；CK-MM：<span class="answer-text">骨骼肌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>10.. A <strong>酶的特异性-绝对特异性</strong><br>绝对特异性：有的酶只作用于<span class="blur-text">特定结构的底物分子</span>，进行一种专一的反应，生成<span class="blur-text">一种特定结构的产物</span></td>
+                            <td>10.. A <strong>酶的特异性-绝对特异性</strong><br>绝对特异性：有的酶只作用于<span class="answer-text">特定结构的底物分子</span>，进行一种专一的反应，生成<span class="answer-text">一种特定结构的产物</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>10.. B <strong>酶的特异性-相对特异性</strong><br>相对特异性：有些酶对底物的特异性不是依据整个底物分子结构，而是依据底物分子中<span class="blur-text">特定的化学键</span>或<span class="blur-text">特定的基团</span>，因而可以作用于含有相同化学键或化学基团的<span class="blur-text">一类化合物</span></td>
+                            <td>10.. B <strong>酶的特异性-相对特异性</strong><br>相对特异性：有些酶对底物的特异性不是依据整个底物分子结构，而是依据底物分子中<span class="answer-text">特定的化学键</span>或<span class="answer-text">特定的基团</span>，因而可以作用于含有相同化学键或化学基团的<span class="answer-text">一类化合物</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>11.. <strong>酶的不稳定性</strong><br>酶的本质是<span class="blur-text">蛋白质</span>，在某些理化因素（如<span class="blur-text">高温</span>、<span class="blur-text">强酸</span>、<span class="blur-text">强碱</span>等）的作用下，酶会发生<span class="blur-text">变性</span>而失去催化活性</td>
+                            <td>11.. <strong>酶的不稳定性</strong><br>酶的本质是<span class="answer-text">蛋白质</span>，在某些理化因素（如<span class="answer-text">高温</span>、<span class="answer-text">强酸</span>、<span class="answer-text">强碱</span>等）的作用下，酶会发生<span class="answer-text">变性</span>而失去催化活性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>12.. <strong>酶与底物结合形成中间产物的过程</strong><br>① <span class="blur-text">诱导契合作用</span>，使酶与底物密切结合<br>② <span class="blur-text">邻近效应与定向排列</span>，使诸底物正确定位于酶的活性中心<br>③ <span class="blur-text">表面效应</span>使底物分子去溶剂化</td>
+                            <td>12.. <strong>酶与底物结合形成中间产物的过程</strong><br>① <span class="answer-text">诱导契合作用</span>，使酶与底物密切结合<br>② <span class="answer-text">邻近效应与定向排列</span>，使诸底物正确定位于酶的活性中心<br>③ <span class="answer-text">表面效应</span>使底物分子去溶剂化</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>13.. <strong>酶的催化机制分类</strong><br>根据转移的物质不同大致可分为：<span class="blur-text">普通酸碱催化</span>（转移质子）；<span class="blur-text">共价催化</span>（转移基团）</td>
+                            <td>13.. <strong>酶的催化机制分类</strong><br>根据转移的物质不同大致可分为：<span class="answer-text">普通酸碱催化</span>（转移质子）；<span class="answer-text">共价催化</span>（转移基团）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>14.. A <strong>米曼氏方程-底物浓度影响</strong><br>当［S］很低时，v 随［S］的增加而升高，呈<span class="blur-text">一级反应</span>；当［S］很大，以至于所有酶的活性中心均被底物所饱和，v 便不再增加，此时 v 达<span class="blur-text">最大反应速率（Vmax）</span>，此时的反应可视为<span class="blur-text">零级反应</span></td>
+                            <td>14.. A <strong>米曼氏方程-底物浓度影响</strong><br>当［S］很低时，v 随［S］的增加而升高，呈<span class="answer-text">一级反应</span>；当［S］很大，以至于所有酶的活性中心均被底物所饱和，v 便不再增加，此时 v 达<span class="answer-text">最大反应速率（Vmax）</span>，此时的反应可视为<span class="answer-text">零级反应</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>14.. B <strong>Km值的定义与意义</strong><br>Km 值等于酶促反应速率为<span class="blur-text">最大反应速率一半时</span>的底物浓度<br>Km 越大，表示酶对底物的亲和力<span class="blur-text">越小</span>；Km 越小，酶对底物的亲和力<span class="blur-text">越大</span></td>
+                            <td>14.. B <strong>Km值的定义与意义</strong><br>Km 值等于酶促反应速率为<span class="answer-text">最大反应速率一半时</span>的底物浓度<br>Km 越大，表示酶对底物的亲和力<span class="answer-text">越小</span>；Km 越小，酶对底物的亲和力<span class="answer-text">越大</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>15.. <strong>Vmax的定义</strong><br>Vmax 是酶被底物<span class="blur-text">完全饱和时</span>的反应速率</td>
+                            <td>15.. <strong>Vmax的定义</strong><br>Vmax 是酶被底物<span class="answer-text">完全饱和时</span>的反应速率</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>16.. <strong>酶的抑制剂的定义</strong><br>凡能使酶活性<span class="blur-text">下降</span>而又<span class="blur-text">不引起酶蛋白变性</span>的物质统称为酶的抑制剂</td>
+                            <td>16.. <strong>酶的抑制剂的定义</strong><br>凡能使酶活性<span class="answer-text">下降</span>而又<span class="answer-text">不引起酶蛋白变性</span>的物质统称为酶的抑制剂</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>17.. <strong>不可逆抑制剂的作用机制</strong><br>不可逆性抑制剂和酶活性中心的<span class="blur-text">必需基团共价结合</span>，使酶<span class="blur-text">失活</span></td>
+                            <td>17.. <strong>不可逆抑制剂的作用机制</strong><br>不可逆性抑制剂和酶活性中心的<span class="answer-text">必需基团共价结合</span>，使酶<span class="answer-text">失活</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>18.. A <strong>竞争性抑制</strong><br>机制：抑制剂和酶的底物在结构上<span class="blur-text">相似</span>，可与底物<span class="blur-text">竞争结合酶的活性中心</span><br>改变：Km <span class="blur-text">增大</span>，Vmax <span class="blur-text">不变</span><br>举例：<span class="blur-text">丙二酸</span>对琥珀酸脱氢酶的抑制作用；<span class="blur-text">磺胺类药物</span>竞争性地与二氢蝶酸合酶结合</td>
+                            <td>18.. A <strong>竞争性抑制</strong><br>机制：抑制剂和酶的底物在结构上<span class="answer-text">相似</span>，可与底物<span class="answer-text">竞争结合酶的活性中心</span><br>改变：Km <span class="answer-text">增大</span>，Vmax <span class="answer-text">不变</span><br>举例：<span class="answer-text">丙二酸</span>对琥珀酸脱氢酶的抑制作用；<span class="answer-text">磺胺类药物</span>竞争性地与二氢蝶酸合酶结合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>18.. B <strong>非竞争性抑制</strong><br>机制：抑制剂与酶活性中心<span class="blur-text">外的结合位点</span>相结合，<span class="blur-text">不影响</span>酶与底物的结合，底物也不影响酶与抑制剂的结合，底物和抑制剂之间<span class="blur-text">无竞争关系</span><br>改变：Km <span class="blur-text">不变</span>，Vmax <span class="blur-text">降低</span><br>举例：<span class="blur-text">亮氨酸</span>对精氨酸酶的抑制；<span class="blur-text">哇巴因</span>对细胞膜 Na+,K+-ATP 酶的抑制</td>
+                            <td>18.. B <strong>非竞争性抑制</strong><br>机制：抑制剂与酶活性中心<span class="answer-text">外的结合位点</span>相结合，<span class="answer-text">不影响</span>酶与底物的结合，底物也不影响酶与抑制剂的结合，底物和抑制剂之间<span class="answer-text">无竞争关系</span><br>改变：Km <span class="answer-text">不变</span>，Vmax <span class="answer-text">降低</span><br>举例：<span class="answer-text">亮氨酸</span>对精氨酸酶的抑制；<span class="answer-text">哇巴因</span>对细胞膜 Na+,K+-ATP 酶的抑制</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>18.. C <strong>反竞争性抑制</strong><br>机制：抑制剂与酶活性中心外的<span class="blur-text">调节位点</span>结合，抑制剂仅与<span class="blur-text">酶-底物复合物</span>结合<br>改变：Km <span class="blur-text">降低</span>，Vmax <span class="blur-text">降低</span><br>举例：<span class="blur-text">苯丙氨酸</span>对胎盘型碱性磷酸酶的抑制</td>
+                            <td>18.. C <strong>反竞争性抑制</strong><br>机制：抑制剂与酶活性中心外的<span class="answer-text">调节位点</span>结合，抑制剂仅与<span class="answer-text">酶-底物复合物</span>结合<br>改变：Km <span class="answer-text">降低</span>，Vmax <span class="answer-text">降低</span><br>举例：<span class="answer-text">苯丙氨酸</span>对胎盘型碱性磷酸酶的抑制</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>19.. <strong>酶促反应速率的快速调节</strong><br>可通过以下方式实现：<span class="blur-text">别构调节</span>、<span class="blur-text">化学修饰</span>、<span class="blur-text">酶原的激活</span></td>
+                            <td>19.. <strong>酶促反应速率的快速调节</strong><br>可通过以下方式实现：<span class="answer-text">别构调节</span>、<span class="answer-text">化学修饰</span>、<span class="answer-text">酶原的激活</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>20.. <strong>酶促反应的缓慢调节</strong><br>可通过以下方式实现：酶蛋白合成可被<span class="blur-text">诱导或阻碍</span>；<span class="blur-text">调节酶的降解途径</span></td>
+                            <td>20.. <strong>酶促反应的缓慢调节</strong><br>可通过以下方式实现：酶蛋白合成可被<span class="answer-text">诱导或阻碍</span>；<span class="answer-text">调节酶的降解途径</span></td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-06"><td colspan="3"><strong>【11月06日】27直播生物化学教材带读第3课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>1.. 糖无氧氧化<span class="blur-text">图略</span></td>
+                            <td>1.. 糖无氧氧化<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>2.. 柠檬酸循环<span class="blur-text">图略</span></td>
+                            <td>2.. 柠檬酸循环<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>3. 糖原合成<span class="blur-text">图略</span></td>
+                            <td>3. 糖原合成<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>4.. <strong>糖无氧氧化的两个阶段</strong><br><span class="blur-text">糖酵解</span> + <span class="blur-text">乳酸生成</span></td>
+                            <td>4.. <strong>糖无氧氧化的两个阶段</strong><br><span class="answer-text">糖酵解</span> + <span class="answer-text">乳酸生成</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>5.. <strong>糖酵解的关键酶</strong><br><span class="blur-text">己糖激酶</span>、<span class="blur-text">磷酸果糖激酶-1</span>、<span class="blur-text">丙酮酸激酶</span></td>
+                            <td>5.. <strong>糖酵解的关键酶</strong><br><span class="answer-text">己糖激酶</span>、<span class="answer-text">磷酸果糖激酶-1</span>、<span class="answer-text">丙酮酸激酶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>6.. <strong>糖酵解的生理意义</strong><br>不利用氧迅速提供能量，对于<span class="blur-text">肌肉收缩</span>更为重要；当机体缺氧或剧烈运动局部肌肉血供不足时，能量主要通过<span class="blur-text">无氧氧化</span>获得；<span class="blur-text">成熟红细胞</span>没有线粒体，只能通过无氧氧化提供能量</td>
+                            <td>6.. <strong>糖酵解的生理意义</strong><br>不利用氧迅速提供能量，对于<span class="answer-text">肌肉收缩</span>更为重要；当机体缺氧或剧烈运动局部肌肉血供不足时，能量主要通过<span class="answer-text">无氧氧化</span>获得；<span class="answer-text">成熟红细胞</span>没有线粒体，只能通过无氧氧化提供能量</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>7.. <strong>糖有氧氧化的三个阶段</strong><br><span class="blur-text">糖酵解</span>、<span class="blur-text">丙酮酸进入线粒体生成乙酰CoA</span>、<span class="blur-text">乙酰CoA进入三羧酸循环彻底分解氧化</span></td>
+                            <td>7.. <strong>糖有氧氧化的三个阶段</strong><br><span class="answer-text">糖酵解</span>、<span class="answer-text">丙酮酸进入线粒体生成乙酰CoA</span>、<span class="answer-text">乙酰CoA进入三羧酸循环彻底分解氧化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>8.. <strong>丙酮酸与乙酰CoA的ATP产量</strong><br>一分子丙酮酸彻底氧化分解可生成 <span class="blur-text">12.5</span> 分子 ATP<br>一分子乙酰CoA彻底氧化分解可生成 <span class="blur-text">10</span> 分子 ATP</td>
+                            <td>8.. <strong>丙酮酸与乙酰CoA的ATP产量</strong><br>一分子丙酮酸彻底氧化分解可生成 <span class="answer-text">12.5</span> 分子 ATP<br>一分子乙酰CoA彻底氧化分解可生成 <span class="answer-text">10</span> 分子 ATP</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>9.. <strong>磷酸戊糖途径的阶段与意义</strong><br>共计有 <span class="blur-text">2</span> 个阶段<br>第一阶段：产生 <span class="blur-text">核糖</span> 和 <span class="blur-text">NADPH</span><br>第二阶段：让多余的戊糖回 <span class="blur-text">糖酵解</span></td>
+                            <td>9.. <strong>磷酸戊糖途径的阶段与意义</strong><br>共计有 <span class="answer-text">2</span> 个阶段<br>第一阶段：产生 <span class="answer-text">核糖</span> 和 <span class="answer-text">NADPH</span><br>第二阶段：让多余的戊糖回 <span class="answer-text">糖酵解</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>10.. <strong>磷酸戊糖的生理意义与组织差异</strong><br>意义：参与 <span class="blur-text">核酸的合成</span><br>区别：人体主要通过 <span class="blur-text">第一阶段</span> 合成，但肌肉缺乏 <span class="blur-text">葡萄糖-6-磷酸脱氢酶</span> 只能通过第二阶段来合成磷酸戊糖</td>
+                            <td>10.. <strong>磷酸戊糖的生理意义与组织差异</strong><br>意义：参与 <span class="answer-text">核酸的合成</span><br>区别：人体主要通过 <span class="answer-text">第一阶段</span> 合成，但肌肉缺乏 <span class="answer-text">葡萄糖-6-磷酸脱氢酶</span> 只能通过第二阶段来合成磷酸戊糖</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>11.. A <strong>糖原合成的酶-糖原蛋白与糖原合酶</strong><br>糖原蛋白：自身糖基化形成 <span class="blur-text">八糖引物</span>，通过 <span class="blur-text">1,4糖苷键</span> 连接<br>糖原合酶：在糖原引物基础上继续延长，以 <span class="blur-text">UDPG</span> 为原料，通过 <span class="blur-text">1,4糖苷键</span> 连接</td>
+                            <td>11.. A <strong>糖原合成的酶-糖原蛋白与糖原合酶</strong><br>糖原蛋白：自身糖基化形成 <span class="answer-text">八糖引物</span>，通过 <span class="answer-text">1,4糖苷键</span> 连接<br>糖原合酶：在糖原引物基础上继续延长，以 <span class="answer-text">UDPG</span> 为原料，通过 <span class="answer-text">1,4糖苷键</span> 连接</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>11.. B <strong>糖原合成的酶-分支酶</strong><br>分支酶：当糖链到一定长度后，将末端的 <span class="blur-text">6~7个葡萄糖基</span> 转移到附近的糖链上，通过 <span class="blur-text">1,6糖苷键</span> 连接</td>
+                            <td>11.. B <strong>糖原合成的酶-分支酶</strong><br>分支酶：当糖链到一定长度后，将末端的 <span class="answer-text">6~7个葡萄糖基</span> 转移到附近的糖链上，通过 <span class="answer-text">1,6糖苷键</span> 连接</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>12.. A <strong>糖原分解的酶-糖原磷酸化酶</strong><br>从糖链的 <span class="blur-text">非还原性末端</span> 开始，水解 <span class="blur-text">1,4糖苷键</span>，生成 <span class="blur-text">葡糖-1-磷酸</span>；对 <span class="blur-text">1,6糖苷键</span> 无效</td>
+                            <td>12.. A <strong>糖原分解的酶-糖原磷酸化酶</strong><br>从糖链的 <span class="answer-text">非还原性末端</span> 开始，水解 <span class="answer-text">1,4糖苷键</span>，生成 <span class="answer-text">葡糖-1-磷酸</span>；对 <span class="answer-text">1,6糖苷键</span> 无效</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>12.. B <strong>糖原分解的酶-脱支酶</strong><br>当分支只剩 <span class="blur-text">4个葡萄糖基</span> 时，由脱支酶（<span class="blur-text">葡聚糖转移酶</span>）催化，将 <span class="blur-text">3个葡萄糖基</span> 转移到邻近糖链末端；剩下的 <span class="blur-text">1,6糖苷键</span> 在脱支酶（<span class="blur-text">1,6糖苷酶</span>）作用下水解</td>
+                            <td>12.. B <strong>糖原分解的酶-脱支酶</strong><br>当分支只剩 <span class="answer-text">4个葡萄糖基</span> 时，由脱支酶（<span class="answer-text">葡聚糖转移酶</span>）催化，将 <span class="answer-text">3个葡萄糖基</span> 转移到邻近糖链末端；剩下的 <span class="answer-text">1,6糖苷键</span> 在脱支酶（<span class="answer-text">1,6糖苷酶</span>）作用下水解</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>13.. <strong>肝糖原与肌糖原分解的生理意义差异</strong><br>肝糖原分解：为机体提供 <span class="blur-text">血糖</span> 来源<br>肌糖原分解：由于缺乏 <span class="blur-text">葡萄糖-6-磷酸酶</span>，不能转变为葡萄糖提供血糖，只能进行 <span class="blur-text">糖酵解</span> 为肌肉供能</td>
+                            <td>13.. <strong>肝糖原与肌糖原分解的生理意义差异</strong><br>肝糖原分解：为机体提供 <span class="answer-text">血糖</span> 来源<br>肌糖原分解：由于缺乏 <span class="answer-text">葡萄糖-6-磷酸酶</span>，不能转变为葡萄糖提供血糖，只能进行 <span class="answer-text">糖酵解</span> 为肌肉供能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>14.. <strong>葡萄糖→UDPG的能量消耗</strong><br>需要消耗 <span class="blur-text">2分子ATP</span><br>第一次：<span class="blur-text">葡萄糖变为G-6-P</span> 的时候<br>第二次：<span class="blur-text">G-6-P和UTP合成UDPG</span> 时生成的PPi自发性水解</td>
+                            <td>14.. <strong>葡萄糖→UDPG的能量消耗</strong><br>需要消耗 <span class="answer-text">2分子ATP</span><br>第一次：<span class="answer-text">葡萄糖变为G-6-P</span> 的时候<br>第二次：<span class="answer-text">G-6-P和UTP合成UDPG</span> 时生成的PPi自发性水解</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>15.. A <strong>糖异生的关键步骤与酶-丙酮酸→果糖-6-磷酸</strong><br>丙酮酸→磷酸烯醇式丙酮酸：<span class="blur-text">丙酮酸羧化酶</span>、<span class="blur-text">磷酸烯醇式丙酮酸羧激酶</span><br>果糖-1,6-二磷酸→果糖-6-磷酸：<span class="blur-text">果糖二磷酸酶-1</span></td>
+                            <td>15.. A <strong>糖异生的关键步骤与酶-丙酮酸→果糖-6-磷酸</strong><br>丙酮酸→磷酸烯醇式丙酮酸：<span class="answer-text">丙酮酸羧化酶</span>、<span class="answer-text">磷酸烯醇式丙酮酸羧激酶</span><br>果糖-1,6-二磷酸→果糖-6-磷酸：<span class="answer-text">果糖二磷酸酶-1</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>15.. B <strong>糖异生的关键步骤与酶-葡糖-6-磷酸→葡萄糖</strong><br>葡糖-6-磷酸→葡萄糖：<span class="blur-text">葡糖-6-磷酸酶</span>（<span class="blur-text">肌肉内缺乏</span>）</td>
+                            <td>15.. B <strong>糖异生的关键步骤与酶-葡糖-6-磷酸→葡萄糖</strong><br>葡糖-6-磷酸→葡萄糖：<span class="answer-text">葡糖-6-磷酸酶</span>（<span class="answer-text">肌肉内缺乏</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>16.. <strong>草酰乙酸穿越线粒体膜的机制</strong><br>机制一：通过 <span class="blur-text">还原</span> 生成 <span class="blur-text">苹果酸</span>，带着 <span class="blur-text">还原当量</span> 的形式<br>机制二：通过 <span class="blur-text">转氨基</span> 生成 <span class="blur-text">天冬氨酸</span> 的形式</td>
+                            <td>16.. <strong>草酰乙酸穿越线粒体膜的机制</strong><br>机制一：通过 <span class="answer-text">还原</span> 生成 <span class="answer-text">苹果酸</span>，带着 <span class="answer-text">还原当量</span> 的形式<br>机制二：通过 <span class="answer-text">转氨基</span> 生成 <span class="answer-text">天冬氨酸</span> 的形式</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>17.. <strong>乳酸循环（Cori循环）的意义</strong><br>回收乳酸中的 <span class="blur-text">能量</span>，避免乳酸堆积引起 <span class="blur-text">酸中毒</span></td>
+                            <td>17.. <strong>乳酸循环（Cori循环）的意义</strong><br>回收乳酸中的 <span class="answer-text">能量</span>，避免乳酸堆积引起 <span class="answer-text">酸中毒</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>18.. <strong>2分子乳酸→1分子葡萄糖的能量消耗</strong><br>需要消耗 <span class="blur-text">6分子ATP</span><br>丙酮酸→草酰乙酸：<span class="blur-text">1分子ATP</span><br>草酰乙酸→磷酸烯醇式丙酮酸：<span class="blur-text">1分子ATP</span><br>3-磷酸甘油酸→1,3-二磷酸甘油酸：<span class="blur-text">1分子ATP</span>（共3分子ATP形成一个3-磷酸甘油醛，2个3C形成葡萄糖，3×2=6）</td>
+                            <td>18.. <strong>2分子乳酸→1分子葡萄糖的能量消耗</strong><br>需要消耗 <span class="answer-text">6分子ATP</span><br>丙酮酸→草酰乙酸：<span class="answer-text">1分子ATP</span><br>草酰乙酸→磷酸烯醇式丙酮酸：<span class="answer-text">1分子ATP</span><br>3-磷酸甘油酸→1,3-二磷酸甘油酸：<span class="answer-text">1分子ATP</span>（共3分子ATP形成一个3-磷酸甘油醛，2个3C形成葡萄糖，3×2=6）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>19.. A <strong>代谢途径关键酶影响因素-位置与代谢类型</strong><br>① 在该酶的 <span class="blur-text">上游还是下游</span>？（上游<span class="blur-text">别构激活</span>，下游<span class="blur-text">别构抑制</span>，<span class="blur-text">磷酸果糖激酶</span> 例外）<br>② 该代谢是 <span class="blur-text">产能</span> 还是 <span class="blur-text">储能</span>？（<span class="blur-text">ATP</span> 对产能代谢是抑制效应，<span class="blur-text">ADP</span>、<span class="blur-text">AMP</span> 对产能代谢是促进效应）</td>
+                            <td>19.. A <strong>代谢途径关键酶影响因素-位置与代谢类型</strong><br>① 在该酶的 <span class="answer-text">上游还是下游</span>？（上游<span class="answer-text">别构激活</span>，下游<span class="answer-text">别构抑制</span>，<span class="answer-text">磷酸果糖激酶</span> 例外）<br>② 该代谢是 <span class="answer-text">产能</span> 还是 <span class="answer-text">储能</span>？（<span class="answer-text">ATP</span> 对产能代谢是抑制效应，<span class="answer-text">ADP</span>、<span class="answer-text">AMP</span> 对产能代谢是促进效应）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>19.. B <strong>代谢途径关键酶影响因素-升糖与降糖</strong><br>③ 该代谢是 <span class="blur-text">升糖</span> 还是 <span class="blur-text">降糖</span>？<br><span class="blur-text">胰岛素</span> 促进降糖代谢，关键酶 <span class="blur-text">去磷酸化</span> 为活性形式<br><span class="blur-text">胰高血糖素</span> 促进升糖代谢，关键酶 <span class="blur-text">磷酸化</span> 为活性形式</td>
+                            <td>19.. B <strong>代谢途径关键酶影响因素-升糖与降糖</strong><br>③ 该代谢是 <span class="answer-text">升糖</span> 还是 <span class="answer-text">降糖</span>？<br><span class="answer-text">胰岛素</span> 促进降糖代谢，关键酶 <span class="answer-text">去磷酸化</span> 为活性形式<br><span class="answer-text">胰高血糖素</span> 促进升糖代谢，关键酶 <span class="answer-text">磷酸化</span> 为活性形式</td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-07"><td colspan="3"><strong>【11月07日】27直播生物化学教材带读第4课思考题（答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>1.. <strong>氧化呼吸链（图略）</strong><br><span class="blur-text">图略</span></td>
+                            <td>1.. <strong>氧化呼吸链（图略）</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>2.. <strong>氧化呼吸链的传递体</strong><br>两H+和2电子：<span class="blur-text">NAD</span>、<span class="blur-text">FMN</span>、<span class="blur-text">FAD</span>、<span class="blur-text">CoQ</span><br>单电子：<span class="blur-text">细胞色素</span>、<span class="blur-text">Fe-S</span></td>
+                            <td>2.. <strong>氧化呼吸链的传递体</strong><br>两H+和2电子：<span class="answer-text">NAD</span>、<span class="answer-text">FMN</span>、<span class="answer-text">FAD</span>、<span class="answer-text">CoQ</span><br>单电子：<span class="answer-text">细胞色素</span>、<span class="answer-text">Fe-S</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>3.. <strong>将H+从线粒体基质泵至膜间隙的结构及特点</strong><br><span class="blur-text">复合体Ⅰ</span>（<span class="blur-text">4</span>个H+）、<span class="blur-text">复合体Ⅲ</span>（<span class="blur-text">4</span>个H+）、<span class="blur-text">复合体Ⅳ</span>（<span class="blur-text">2</span>个H+）</td>
+                            <td>3.. <strong>将H+从线粒体基质泵至膜间隙的结构及特点</strong><br><span class="answer-text">复合体Ⅰ</span>（<span class="answer-text">4</span>个H+）、<span class="answer-text">复合体Ⅲ</span>（<span class="answer-text">4</span>个H+）、<span class="answer-text">复合体Ⅳ</span>（<span class="answer-text">2</span>个H+）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>4.. <strong>耦联磷酸化生成ATP的阶段</strong><br>① <span class="blur-text">电子传递释放能量</span><br>② <span class="blur-text">复合体Ⅰ、Ⅲ、Ⅳ</span>将电子传递的能量转变为线粒体基质和膜间隙的<span class="blur-text">H+浓度差</span><br>③ <span class="blur-text">H+通过ATP合酶回流</span>，将H+的浓度差势能以高能磷酸键的形式存储于ATP</td>
+                            <td>4.. <strong>耦联磷酸化生成ATP的阶段</strong><br>① <span class="answer-text">电子传递释放能量</span><br>② <span class="answer-text">复合体Ⅰ、Ⅲ、Ⅳ</span>将电子传递的能量转变为线粒体基质和膜间隙的<span class="answer-text">H+浓度差</span><br>③ <span class="answer-text">H+通过ATP合酶回流</span>，将H+的浓度差势能以高能磷酸键的形式存储于ATP</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>5.. <strong>CN-和CO阻断的Cyt a3类型</strong><br><span class="blur-text">CN-</span>阻断的是<span class="blur-text">氧化型</span>Cyt a3<br><span class="blur-text">CO</span>阻断的是<span class="blur-text">还原型</span>Cyt a3</td>
+                            <td>5.. <strong>CN-和CO阻断的Cyt a3类型</strong><br><span class="answer-text">CN-</span>阻断的是<span class="answer-text">氧化型</span>Cyt a3<br><span class="answer-text">CO</span>阻断的是<span class="answer-text">还原型</span>Cyt a3</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>6.. <strong>P/O比值的定义</strong><br>每消耗<span class="blur-text">1/2摩尔O2</span>，所产生的<span class="blur-text">ATP的数量</span>（一对电子通过氧化呼吸链传递给一个氧原子，生成<span class="blur-text">1分子H2O</span>所能产生的ATP数）</td>
+                            <td>6.. <strong>P/O比值的定义</strong><br>每消耗<span class="answer-text">1/2摩尔O2</span>，所产生的<span class="answer-text">ATP的数量</span>（一对电子通过氧化呼吸链传递给一个氧原子，生成<span class="answer-text">1分子H2O</span>所能产生的ATP数）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>7.. A <strong>FAD、NAD、抗坏血酸进入呼吸链的ATP数及本质原因</strong><br>本质原因：通过氧化呼吸链不同的组分进来，最终传递给O的时候从基质里<span class="blur-text">泵出的H+数量不同</span>，平均每<span class="blur-text">4个H+</span>回流产生<span class="blur-text">1分子ATP</span></td>
+                            <td>7.. A <strong>FAD、NAD、抗坏血酸进入呼吸链的ATP数及本质原因</strong><br>本质原因：通过氧化呼吸链不同的组分进来，最终传递给O的时候从基质里<span class="answer-text">泵出的H+数量不同</span>，平均每<span class="answer-text">4个H+</span>回流产生<span class="answer-text">1分子ATP</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>7.. B <strong>各物质产生的ATP数</strong><br><span class="blur-text">FAD</span>：泵<span class="blur-text">6个H+</span>，生成<span class="blur-text">1.5分子ATP</span><br><span class="blur-text">NAD</span>：泵<span class="blur-text">10个H+</span>，生成<span class="blur-text">2.5分子ATP</span><br><span class="blur-text">抗坏血酸</span>：泵<span class="blur-text">2个H+</span>，理论上<span class="blur-text">0.5分子ATP</span>，实际<span class="blur-text">0.6~0.8</span>，教材取<span class="blur-text">1分子ATP</span></td>
+                            <td>7.. B <strong>各物质产生的ATP数</strong><br><span class="answer-text">FAD</span>：泵<span class="answer-text">6个H+</span>，生成<span class="answer-text">1.5分子ATP</span><br><span class="answer-text">NAD</span>：泵<span class="answer-text">10个H+</span>，生成<span class="answer-text">2.5分子ATP</span><br><span class="answer-text">抗坏血酸</span>：泵<span class="answer-text">2个H+</span>，理论上<span class="answer-text">0.5分子ATP</span>，实际<span class="answer-text">0.6~0.8</span>，教材取<span class="answer-text">1分子ATP</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>8.. <strong>ATP合酶Fo和F1亚基的功能区别</strong><br><span class="blur-text">Fo</span>亚基：<span class="blur-text">寡霉素敏感</span>，作为<span class="blur-text">H+跨越线粒体内膜回流</span>的通道<br><span class="blur-text">F1</span>亚基：作为<span class="blur-text">发动机转子</span>部分将<span class="blur-text">ADP和磷酸</span>合成ATP</td>
+                            <td>8.. <strong>ATP合酶Fo和F1亚基的功能区别</strong><br><span class="answer-text">Fo</span>亚基：<span class="answer-text">寡霉素敏感</span>，作为<span class="answer-text">H+跨越线粒体内膜回流</span>的通道<br><span class="answer-text">F1</span>亚基：作为<span class="answer-text">发动机转子</span>部分将<span class="answer-text">ADP和磷酸</span>合成ATP</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>9.. <strong>常见的高能化合物</strong><br>底物水平磷酸化前体：<span class="blur-text">磷酸烯醇式丙酮酸</span>、<span class="blur-text">1,3-二磷酸甘油酸</span>、<span class="blur-text">琥珀酰CoA</span>（高能硫酯键）<br>供能体：<span class="blur-text">ATP</span>、<span class="blur-text">ADP</span>、<span class="blur-text">磷酸肌酸</span>、<span class="blur-text">焦磷酸</span>、<span class="blur-text">G-1-P</span>、<span class="blur-text">乙酰CoA</span>（高能硫酯键）</td>
+                            <td>9.. <strong>常见的高能化合物</strong><br>底物水平磷酸化前体：<span class="answer-text">磷酸烯醇式丙酮酸</span>、<span class="answer-text">1,3-二磷酸甘油酸</span>、<span class="answer-text">琥珀酰CoA</span>（高能硫酯键）<br>供能体：<span class="answer-text">ATP</span>、<span class="answer-text">ADP</span>、<span class="answer-text">磷酸肌酸</span>、<span class="answer-text">焦磷酸</span>、<span class="answer-text">G-1-P</span>、<span class="answer-text">乙酰CoA</span>（高能硫酯键）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>10.. <strong>调节氧化磷酸化速率的重要因素</strong><br><span class="blur-text">ATP/ADP的比值</span></td>
+                            <td>10.. <strong>调节氧化磷酸化速率的重要因素</strong><br><span class="answer-text">ATP/ADP的比值</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>11.. <strong>内源性和外源性解偶联剂</strong><br>内源性：<span class="blur-text">解偶联蛋白1（UCP1）</span><br>外源性：<span class="blur-text">二硝基苯酚</span></td>
+                            <td>11.. <strong>内源性和外源性解偶联剂</strong><br>内源性：<span class="answer-text">解偶联蛋白1（UCP1）</span><br>外源性：<span class="answer-text">二硝基苯酚</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>12.. <strong>ATP合酶抑制剂</strong><br><span class="blur-text">寡霉素</span>、<span class="blur-text">二环己基碳二亚胺（DCCD）</span></td>
+                            <td>12.. <strong>ATP合酶抑制剂</strong><br><span class="answer-text">寡霉素</span>、<span class="answer-text">二环己基碳二亚胺（DCCD）</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>13.. <strong>甲状腺激素影响氧化磷酸化的机制</strong><br>① 增加<span class="blur-text">Na-K-ATP酶</span>活性，消耗ATP<br>② 通过消耗ATP，促进<span class="blur-text">氧化呼吸链的电子传递</span><br>③ 增加<span class="blur-text">解偶联蛋白</span>的表达，让氧化和磷酸化<span class="blur-text">解偶联</span>，能量全部转化为<span class="blur-text">热能</span></td>
+                            <td>13.. <strong>甲状腺激素影响氧化磷酸化的机制</strong><br>① 增加<span class="answer-text">Na-K-ATP酶</span>活性，消耗ATP<br>② 通过消耗ATP，促进<span class="answer-text">氧化呼吸链的电子传递</span><br>③ 增加<span class="answer-text">解偶联蛋白</span>的表达，让氧化和磷酸化<span class="answer-text">解偶联</span>，能量全部转化为<span class="answer-text">热能</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>14.. A <strong>胞质NADH+H+穿越线粒体膜的方式-α-磷酸甘油穿梭</strong><br>将细胞质内NADH上的<span class="blur-text">还原当量</span>，传递给线粒体内的<span class="blur-text">FAD</span>，从<span class="blur-text">复合体Ⅱ</span>进入氧化呼吸链，产生<span class="blur-text">1.5分子ATP</span></td>
+                            <td>14.. A <strong>胞质NADH+H+穿越线粒体膜的方式-α-磷酸甘油穿梭</strong><br>将细胞质内NADH上的<span class="answer-text">还原当量</span>，传递给线粒体内的<span class="answer-text">FAD</span>，从<span class="answer-text">复合体Ⅱ</span>进入氧化呼吸链，产生<span class="answer-text">1.5分子ATP</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>14.. B <strong>胞质NADH+H+穿越线粒体膜的方式-苹果酸-天冬氨酸穿梭</strong><br>将细胞质内NADH上的<span class="blur-text">还原当量</span>，传递给线粒体内的<span class="blur-text">NAD</span>，从<span class="blur-text">复合体Ⅰ</span>进入氧化呼吸链，产生<span class="blur-text">2.5分子ATP</span></td>
+                            <td>14.. B <strong>胞质NADH+H+穿越线粒体膜的方式-苹果酸-天冬氨酸穿梭</strong><br>将细胞质内NADH上的<span class="answer-text">还原当量</span>，传递给线粒体内的<span class="answer-text">NAD</span>，从<span class="answer-text">复合体Ⅰ</span>进入氧化呼吸链，产生<span class="answer-text">2.5分子ATP</span></td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-09"><td colspan="3"><strong>【11月09日】27直播生物化学教材带读第5课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>1.. <strong>甘油三酯在脂肪细胞分解的第一步酶</strong><br><span class="blur-text">脂肪组织甘油三酯脂肪酶（ATGL）</span></td>
+                            <td>1.. <strong>甘油三酯在脂肪细胞分解的第一步酶</strong><br><span class="answer-text">脂肪组织甘油三酯脂肪酶（ATGL）</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>2.. <strong>甘油激酶主要存在的部位</strong><br><span class="blur-text">肝</span>、<span class="blur-text">肾</span></td>
+                            <td>2.. <strong>甘油激酶主要存在的部位</strong><br><span class="answer-text">肝</span>、<span class="answer-text">肾</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>3.. <strong>脂肪酸β氧化的关键酶</strong><br><span class="blur-text">肉碱脂肪酰转移酶I</span></td>
+                            <td>3.. <strong>脂肪酸β氧化的关键酶</strong><br><span class="answer-text">肉碱脂肪酰转移酶I</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>4.. <strong>一分子软脂酸β氧化的产物与净生成ATP</strong><br>生成：<span class="blur-text">7分子FADH2</span>、<span class="blur-text">7分子NADH</span>、<span class="blur-text">8分子乙酰CoA</span><br>净生成：<span class="blur-text">106分子ATP</span></td>
+                            <td>4.. <strong>一分子软脂酸β氧化的产物与净生成ATP</strong><br>生成：<span class="answer-text">7分子FADH2</span>、<span class="answer-text">7分子NADH</span>、<span class="answer-text">8分子乙酰CoA</span><br>净生成：<span class="answer-text">106分子ATP</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>5.. <strong>奇数碳原子脂肪酸的β氧化</strong><br>经β氧化生成<span class="blur-text">丙酰CoA</span>，丙酰CoA转变为<span class="blur-text">琥珀酰CoA</span>进入三羧酸循环</td>
+                            <td>5.. <strong>奇数碳原子脂肪酸的β氧化</strong><br>经β氧化生成<span class="answer-text">丙酰CoA</span>，丙酰CoA转变为<span class="answer-text">琥珀酰CoA</span>进入三羧酸循环</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>6.. <strong>酮体的生成场所与利用关键酶</strong><br>生成场所：<span class="blur-text">肝细胞线粒体</span><br>利用关键酶：<span class="blur-text">琥珀酰CoA转硫酶</span>、<span class="blur-text">乙酰乙酸硫激酶</span></td>
+                            <td>6.. <strong>酮体的生成场所与利用关键酶</strong><br>生成场所：<span class="answer-text">肝细胞线粒体</span><br>利用关键酶：<span class="answer-text">琥珀酰CoA转硫酶</span>、<span class="answer-text">乙酰乙酸硫激酶</span></td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-10"><td colspan="3"><strong>【11月10日】27直播生物化学教材带读第6课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>1.. <strong>脂肪合成的场所与途径</strong><br>① 主要场所：<span class="blur-text">肝</span> 和 <span class="blur-text">脂肪组织</span><br>② 合成途径：<span class="blur-text">甘油二酯途径</span><br>③ 小肠特有途径：<span class="blur-text">甘油一酯途径</span></td>
+                            <td>1.. <strong>脂肪合成的场所与途径</strong><br>① 主要场所：<span class="answer-text">肝</span> 和 <span class="answer-text">脂肪组织</span><br>② 合成途径：<span class="answer-text">甘油二酯途径</span><br>③ 小肠特有途径：<span class="answer-text">甘油一酯途径</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>2.. <strong>脂肪合成的关键酶</strong><br>关键酶为 <span class="blur-text">乙酰CoA羧化酶</span></td>
+                            <td>2.. <strong>脂肪合成的关键酶</strong><br>关键酶为 <span class="answer-text">乙酰CoA羧化酶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>3.. <strong>柠檬酸-丙酮酸循环的作用</strong><br>作用是将 <span class="blur-text">乙酰CoA</span> 从 <span class="blur-text">线粒体内</span> 转运至 <span class="blur-text">胞质</span></td>
+                            <td>3.. <strong>柠檬酸-丙酮酸循环的作用</strong><br>作用是将 <span class="answer-text">乙酰CoA</span> 从 <span class="answer-text">线粒体内</span> 转运至 <span class="answer-text">胞质</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>4.. A <strong>乙酰CoA羧化酶的别构调节（激活剂）</strong><br>别构激活剂：<span class="blur-text">柠檬酸</span>、<span class="blur-text">异柠檬酸</span></td>
+                            <td>4.. A <strong>乙酰CoA羧化酶的别构调节（激活剂）</strong><br>别构激活剂：<span class="answer-text">柠檬酸</span>、<span class="answer-text">异柠檬酸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>4.. B <strong>乙酰CoA羧化酶的别构调节（抑制剂）</strong><br>别构抑制剂：<span class="blur-text">脂肪酰CoA</span></td>
+                            <td>4.. B <strong>乙酰CoA羧化酶的别构调节（抑制剂）</strong><br>别构抑制剂：<span class="answer-text">脂肪酰CoA</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>5.. <strong>软脂酸合成的2碳单位来源</strong><br>提供2碳单位的物质是 <span class="blur-text">丙二酸单酰CoA</span></td>
+                            <td>5.. <strong>软脂酸合成的2碳单位来源</strong><br>提供2碳单位的物质是 <span class="answer-text">丙二酸单酰CoA</span></td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-12"><td colspan="3"><strong>【11月12日】27直播生物化学教材带读第7课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>1.. <strong>DNA复制的特点</strong><br>① <span class="blur-text">半保留复制</span><br>② <span class="blur-text">双向复制</span><br>③ <span class="blur-text">半不连续复制</span><br>④ <span class="blur-text">高保真性</span></td>
+                            <td>1.. <strong>DNA复制的特点</strong><br>① <span class="answer-text">半保留复制</span><br>② <span class="answer-text">双向复制</span><br>③ <span class="answer-text">半不连续复制</span><br>④ <span class="answer-text">高保真性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>2.. <strong>原核生物与真核生物DNA形态及复制起点的区别</strong><br>① 原核生物：<span class="blur-text">环状DNA</span>，只有 <span class="blur-text">一个</span> 复制起点<br>② 真核生物：<span class="blur-text">线状DNA</span>，具备 <span class="blur-text">多个</span> 复制起点</td>
+                            <td>2.. <strong>原核生物与真核生物DNA形态及复制起点的区别</strong><br>① 原核生物：<span class="answer-text">环状DNA</span>，只有 <span class="answer-text">一个</span> 复制起点<br>② 真核生物：<span class="answer-text">线状DNA</span>，具备 <span class="answer-text">多个</span> 复制起点</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>3.. A <strong>DNA pol I的酶活性</strong><br>① 大片段（Klenow片段）：<span class="blur-text">5'-3'聚合酶活性</span>、<span class="blur-text">3'-5'核酸外切酶活性</span><br>② 小片段：<span class="blur-text">5'-3'核酸外切酶活性</span></td>
+                            <td>3.. A <strong>DNA pol I的酶活性</strong><br>① 大片段（Klenow片段）：<span class="answer-text">5'-3'聚合酶活性</span>、<span class="answer-text">3'-5'核酸外切酶活性</span><br>② 小片段：<span class="answer-text">5'-3'核酸外切酶活性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>3.. B <strong>DNA pol III的酶活性</strong><br>① <span class="blur-text">5'-3'聚合酶活性</span><br>② <span class="blur-text">3'-5'核酸外切酶活性</span></td>
+                            <td>3.. B <strong>DNA pol III的酶活性</strong><br>① <span class="answer-text">5'-3'聚合酶活性</span><br>② <span class="answer-text">3'-5'核酸外切酶活性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>4.. <strong>原核生物负责复制延长的主要酶</strong><br>主要酶是 <span class="blur-text">DNA pol III</span></td>
+                            <td>4.. <strong>原核生物负责复制延长的主要酶</strong><br>主要酶是 <span class="answer-text">DNA pol III</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>5.. <strong>原核生物负责识别复制起点的酶</strong><br>识别复制起点的酶是 <span class="blur-text">DnaA蛋白</span></td>
+                            <td>5.. <strong>原核生物负责识别复制起点的酶</strong><br>识别复制起点的酶是 <span class="answer-text">DnaA蛋白</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>6.. <strong>原核生物负责解链的酶</strong><br>负责解链的酶是 <span class="blur-text">DnaB蛋白</span></td>
+                            <td>6.. <strong>原核生物负责解链的酶</strong><br>负责解链的酶是 <span class="answer-text">DnaB蛋白</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>7.. <strong>原核生物负责引物合成的酶</strong><br>负责引物合成的酶是 <span class="blur-text">DnaG蛋白</span></td>
+                            <td>7.. <strong>原核生物负责引物合成的酶</strong><br>负责引物合成的酶是 <span class="answer-text">DnaG蛋白</span></td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-13"><td colspan="3"><strong>【11月13日】27直播生物化学教材带读第8课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>1.. A <strong>DNA合成的原料与构成成分</strong><br>① DNA合成的原料：<span class="blur-text">dNTPs</span><br>② DNA的构成成分：<span class="blur-text">dNMPs</span></td>
+                            <td>1.. A <strong>DNA合成的原料与构成成分</strong><br>① DNA合成的原料：<span class="answer-text">dNTPs</span><br>② DNA的构成成分：<span class="answer-text">dNMPs</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>1.. B <strong>DNA复制中β亚基的作用</strong><br>β亚基的作用：<span class="blur-text">固定模板链</span></td>
+                            <td>1.. B <strong>DNA复制中β亚基的作用</strong><br>β亚基的作用：<span class="answer-text">固定模板链</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>2.. A <strong>真核生物DNA pol α和β的功能</strong><br>① DNA pol α：<span class="blur-text">引物酶</span><br>② DNA pol β：<span class="blur-text">DNA修复</span></td>
+                            <td>2.. A <strong>真核生物DNA pol α和β的功能</strong><br>① DNA pol α：<span class="answer-text">引物酶</span><br>② DNA pol β：<span class="answer-text">DNA修复</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>2.. B <strong>真核生物DNA pol γ、δ、ε的功能</strong><br>① DNA pol γ：<span class="blur-text">线粒体DNA合成</span><br>② DNA pol δ：<span class="blur-text">后随链合成</span><br>③ DNA pol ε：<span class="blur-text">前导链合成</span></td>
+                            <td>2.. B <strong>真核生物DNA pol γ、δ、ε的功能</strong><br>① DNA pol γ：<span class="answer-text">线粒体DNA合成</span><br>② DNA pol δ：<span class="answer-text">后随链合成</span><br>③ DNA pol ε：<span class="answer-text">前导链合成</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>3.. A <strong>PCNA在起始阶段的作用</strong><br>类似原核生物<span class="blur-text">β亚基</span>的作用，<span class="blur-text">固定模板链</span></td>
+                            <td>3.. A <strong>PCNA在起始阶段的作用</strong><br>类似原核生物<span class="answer-text">β亚基</span>的作用，<span class="answer-text">固定模板链</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>3.. B <strong>PCNA在延长阶段的作用</strong><br>参与<span class="blur-text">α-δ转换</span>，使<span class="blur-text">后随链</span>的合成可以进行</td>
+                            <td>3.. B <strong>PCNA在延长阶段的作用</strong><br>参与<span class="answer-text">α-δ转换</span>，使<span class="answer-text">后随链</span>的合成可以进行</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>3.. C <strong>PCNA在合成后的作用</strong><br>参与协助组装<span class="blur-text">核小体</span></td>
+                            <td>3.. C <strong>PCNA在合成后的作用</strong><br>参与协助组装<span class="answer-text">核小体</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>4.. <strong>端粒酶解决的DNA复制问题</strong><br>解决了<span class="blur-text">线性DNA</span>在复制过程中，由于<span class="blur-text">5'端引物水解</span>带来的<span class="blur-text">DNA短缩</span>问题</td>
+                            <td>4.. <strong>端粒酶解决的DNA复制问题</strong><br>解决了<span class="answer-text">线性DNA</span>在复制过程中，由于<span class="answer-text">5'端引物水解</span>带来的<span class="answer-text">DNA短缩</span>问题</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>5.. <strong>端粒酶的构成</strong><br>① <span class="blur-text">端粒酶RNA</span><br>② <span class="blur-text">端粒酶逆转录酶</span><br>③ <span class="blur-text">端粒酶协同蛋白1</span></td>
+                            <td>5.. <strong>端粒酶的构成</strong><br>① <span class="answer-text">端粒酶RNA</span><br>② <span class="answer-text">端粒酶逆转录酶</span><br>③ <span class="answer-text">端粒酶协同蛋白1</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>6.. <strong>端粒酶延长母链的机制</strong><br>机制称为<span class="blur-text">爬行模型</span></td>
+                            <td>6.. <strong>端粒酶延长母链的机制</strong><br>机制称为<span class="answer-text">爬行模型</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>7.. A <strong>端粒酶延长母链的步骤</strong><br>① 端粒酶延长母链（<span class="blur-text">爬行模型</span>），延长后端粒酶脱离母链<br>② <span class="blur-text">引物酶</span>合成引物</td>
+                            <td>7.. A <strong>端粒酶延长母链的步骤</strong><br>① 端粒酶延长母链（<span class="answer-text">爬行模型</span>），延长后端粒酶脱离母链<br>② <span class="answer-text">引物酶</span>合成引物</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>7.. B <strong>端粒酶延长子链的步骤</strong><br>① <span class="blur-text">DNA聚合酶</span>延伸引物填充子链<br>② <span class="blur-text">RNA水解酶</span>去除RNA引物，母链上的单链部分自然水解</td>
+                            <td>7.. B <strong>端粒酶延长子链的步骤</strong><br>① <span class="answer-text">DNA聚合酶</span>延伸引物填充子链<br>② <span class="answer-text">RNA水解酶</span>去除RNA引物，母链上的单链部分自然水解</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>8.. <strong>端粒酶逆转录酶的活性</strong><br>活性是<span class="blur-text">RNA指导的DNA聚合酶活性</span></td>
+                            <td>8.. <strong>端粒酶逆转录酶的活性</strong><br>活性是<span class="answer-text">RNA指导的DNA聚合酶活性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>9.. A <strong>逆转录酶的活性（1-2）</strong><br>① <span class="blur-text">RNA指导的DNA聚合酶活性</span><br>② <span class="blur-text">RNase H活性</span></td>
+                            <td>9.. A <strong>逆转录酶的活性（1-2）</strong><br>① <span class="answer-text">RNA指导的DNA聚合酶活性</span><br>② <span class="answer-text">RNase H活性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>9.. B <strong>逆转录酶的活性（3）</strong><br>③ <span class="blur-text">DNA指导的DNA聚合酶活性</span></td>
+                            <td>9.. B <strong>逆转录酶的活性（3）</strong><br>③ <span class="answer-text">DNA指导的DNA聚合酶活性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>10.. <strong>逆转录病毒合成DNA第二链时3'-OH的来源</strong><br>可来源于病毒自己的<span class="blur-text">tRNA</span>或者单链DNA<span class="blur-text">3'端</span>形成<span class="blur-text">发卡状</span>的结构</td>
+                            <td>10.. <strong>逆转录病毒合成DNA第二链时3'-OH的来源</strong><br>可来源于病毒自己的<span class="answer-text">tRNA</span>或者单链DNA<span class="answer-text">3'端</span>形成<span class="answer-text">发卡状</span>的结构</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>11.. <strong>逆转录发现的意义</strong><br>① 发展了<span class="blur-text">中心法则</span><br>② 可以作为获取<span class="blur-text">基因工程目的基因</span>的重要方法</td>
+                            <td>11.. <strong>逆转录发现的意义</strong><br>① 发展了<span class="answer-text">中心法则</span><br>② 可以作为获取<span class="answer-text">基因工程目的基因</span>的重要方法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>137</td>
+                            <td>12.. <strong>低波长紫外线引起的DNA损伤类型</strong><br>引起<span class="blur-text">嘧啶二聚体</span></td>
+                            <td>12.. <strong>低波长紫外线引起的DNA损伤类型</strong><br>引起<span class="answer-text">嘧啶二聚体</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>138</td>
+                            <td>13.. <strong>嘧啶二聚体的损伤类型</strong><br>属于<span class="blur-text">DNA的共价交联</span></td>
+                            <td>13.. <strong>嘧啶二聚体的损伤类型</strong><br>属于<span class="answer-text">DNA的共价交联</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>139</td>
+                            <td>14.. <strong>嘧啶二聚体的修复方式</strong><br>可以通过<span class="blur-text">光复活</span>完成</td>
+                            <td>14.. <strong>嘧啶二聚体的修复方式</strong><br>可以通过<span class="answer-text">光复活</span>完成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>140</td>
+                            <td>15.. <strong>单链断裂的直接修复方式</strong><br>可以通过<span class="blur-text">DNA连接酶</span>完成</td>
+                            <td>15.. <strong>单链断裂的直接修复方式</strong><br>可以通过<span class="answer-text">DNA连接酶</span>完成</td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-14"><td colspan="3"><strong>【11月14日】27直播生物化学教材带读第9课思考题  （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>141</td>
+                            <td>1.. <strong>转录的定义</strong><br>生物体以 <span class="blur-text">DNA</span> 为模板合成 <span class="blur-text">RNA</span> 的过程称为转录</td>
+                            <td>1.. <strong>转录的定义</strong><br>生物体以 <span class="answer-text">DNA</span> 为模板合成 <span class="answer-text">RNA</span> 的过程称为转录</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>142</td>
+                            <td>2.. A <strong>DNA聚合酶与RNA聚合酶的功能区别（引物与原料）</strong><br>① DNA聚合酶合成起始需要 <span class="blur-text">引物</span>，而RNA聚合酶 <span class="blur-text">不需要</span><br>② DNA聚合酶以 <span class="blur-text">dNTPs</span> 为原料，而RNA聚合酶以 <span class="blur-text">NTPs</span> 为原料</td>
+                            <td>2.. A <strong>DNA聚合酶与RNA聚合酶的功能区别（引物与原料）</strong><br>① DNA聚合酶合成起始需要 <span class="answer-text">引物</span>，而RNA聚合酶 <span class="answer-text">不需要</span><br>② DNA聚合酶以 <span class="answer-text">dNTPs</span> 为原料，而RNA聚合酶以 <span class="answer-text">NTPs</span> 为原料</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>143</td>
+                            <td>2.. B <strong>DNA聚合酶与RNA聚合酶的功能区别（校对功能）</strong><br>DNA聚合酶有 <span class="blur-text">校对</span> 功能，而RNA聚合酶 <span class="blur-text">没有</span> 校对功能</td>
+                            <td>2.. B <strong>DNA聚合酶与RNA聚合酶的功能区别（校对功能）</strong><br>DNA聚合酶有 <span class="answer-text">校对</span> 功能，而RNA聚合酶 <span class="answer-text">没有</span> 校对功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>144</td>
+                            <td>3.. A <strong>原核生物RNA聚合酶各亚基功能（α、β）</strong><br>① α亚基：决定 <span class="blur-text">哪些基因被转录</span><br>② β亚基：与转录全过程有关（<span class="blur-text">催化</span>）</td>
+                            <td>3.. A <strong>原核生物RNA聚合酶各亚基功能（α、β）</strong><br>① α亚基：决定 <span class="answer-text">哪些基因被转录</span><br>② β亚基：与转录全过程有关（<span class="answer-text">催化</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>145</td>
+                            <td>3.. B <strong>原核生物RNA聚合酶各亚基功能（β'、ω、σ）</strong><br>① β'亚基：<span class="blur-text">结合DNA模板</span>（<span class="blur-text">开链</span>）<br>② ω亚基：β' <span class="blur-text">折叠和稳定性</span> / σ <span class="blur-text">募集</span><br>③ σ亚基：<span class="blur-text">辨认转录起始点</span></td>
+                            <td>3.. B <strong>原核生物RNA聚合酶各亚基功能（β'、ω、σ）</strong><br>① β'亚基：<span class="answer-text">结合DNA模板</span>（<span class="answer-text">开链</span>）<br>② ω亚基：β' <span class="answer-text">折叠和稳定性</span> / σ <span class="answer-text">募集</span><br>③ σ亚基：<span class="answer-text">辨认转录起始点</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>146</td>
+                            <td>4.. <strong>原核生物RNA聚合酶全酶与核心酶的区别</strong><br>全酶包括 <span class="blur-text">αββ'ωσ</span> 多个亚基，核心酶没有 <span class="blur-text">σ</span> 亚基</td>
+                            <td>4.. <strong>原核生物RNA聚合酶全酶与核心酶的区别</strong><br>全酶包括 <span class="answer-text">αββ'ωσ</span> 多个亚基，核心酶没有 <span class="answer-text">σ</span> 亚基</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>147</td>
+                            <td>5.. <strong>原核生物RNA聚合酶的特异性抑制剂及作用位点</strong><br>① 抑制剂：<span class="blur-text">利福平</span><br>② 作用位点：结合 <span class="blur-text">β亚基</span> 起到抑制 <span class="blur-text">催化</span> 的作用</td>
+                            <td>5.. <strong>原核生物RNA聚合酶的特异性抑制剂及作用位点</strong><br>① 抑制剂：<span class="answer-text">利福平</span><br>② 作用位点：结合 <span class="answer-text">β亚基</span> 起到抑制 <span class="answer-text">催化</span> 的作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>148</td>
+                            <td>6.. A <strong>原核生物DNA的-35区和-10区功能</strong><br>① -35区：由 <span class="blur-text">σ亚基</span> 最先辨认，结合 <span class="blur-text">疏松</span><br>② -10区：又称 <span class="blur-text">Pribnow盒</span>，此处与RNA聚合酶结合 <span class="blur-text">紧密</span>，在此位点 <span class="blur-text">解开双链</span></td>
+                            <td>6.. A <strong>原核生物DNA的-35区和-10区功能</strong><br>① -35区：由 <span class="answer-text">σ亚基</span> 最先辨认，结合 <span class="answer-text">疏松</span><br>② -10区：又称 <span class="answer-text">Pribnow盒</span>，此处与RNA聚合酶结合 <span class="answer-text">紧密</span>，在此位点 <span class="answer-text">解开双链</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>149</td>
+                            <td>6.. B <strong>原核生物DNA的+1区功能</strong><br>+1位点是开始转录的 <span class="blur-text">5'-端</span> 第一位 <span class="blur-text">核苷酸</span> 位置</td>
+                            <td>6.. B <strong>原核生物DNA的+1区功能</strong><br>+1位点是开始转录的 <span class="answer-text">5'-端</span> 第一位 <span class="answer-text">核苷酸</span> 位置</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>150</td>
+                            <td>7.. A <strong>原核生物转录起始步骤（第一步）</strong><br>RNA pol 识别并结合 <span class="blur-text">启动子</span>，形成 <span class="blur-text">闭合转录复合体</span>，最开始识别 <span class="blur-text">-35区</span>，在此处结合 <span class="blur-text">疏松</span>，接着酶向 <span class="blur-text">-10区</span> 进行移动并跨越 <span class="blur-text">转录起点</span>，形成与模板的稳定结合</td>
+                            <td>7.. A <strong>原核生物转录起始步骤（第一步）</strong><br>RNA pol 识别并结合 <span class="answer-text">启动子</span>，形成 <span class="answer-text">闭合转录复合体</span>，最开始识别 <span class="answer-text">-35区</span>，在此处结合 <span class="answer-text">疏松</span>，接着酶向 <span class="answer-text">-10区</span> 进行移动并跨越 <span class="answer-text">转录起点</span>，形成与模板的稳定结合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>151</td>
+                            <td>7.. B <strong>原核生物转录起始步骤（第二、三步）</strong><br>① 第二步：DNA双链打开（<span class="blur-text">-10区</span>），闭合转录复合体成为 <span class="blur-text">开放转录复合体</span><br>② 第三步：第一个 <span class="blur-text">磷酸二酯键</span> 的形成（<span class="blur-text">+1</span>）</td>
+                            <td>7.. B <strong>原核生物转录起始步骤（第二、三步）</strong><br>① 第二步：DNA双链打开（<span class="answer-text">-10区</span>），闭合转录复合体成为 <span class="answer-text">开放转录复合体</span><br>② 第三步：第一个 <span class="answer-text">磷酸二酯键</span> 的形成（<span class="answer-text">+1</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>152</td>
+                            <td>8.. A <strong>流产式起始的含义</strong><br>RNA pol 在进入延伸阶段前由于 <span class="blur-text">σ亚基</span> 并未脱落导致RNA pol无法向下游移动。此时不断的合成长度 <span class="blur-text">小于10个核苷酸</span> 的RNA分子，这个过程在进入转录延长阶段前重复多次，被认为是 <span class="blur-text">启动子校对</span> 的过程</td>
+                            <td>8.. A <strong>流产式起始的含义</strong><br>RNA pol 在进入延伸阶段前由于 <span class="answer-text">σ亚基</span> 并未脱落导致RNA pol无法向下游移动。此时不断的合成长度 <span class="answer-text">小于10个核苷酸</span> 的RNA分子，这个过程在进入转录延长阶段前重复多次，被认为是 <span class="answer-text">启动子校对</span> 的过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>153</td>
+                            <td>8.. B <strong>启动子清除的含义</strong><br>当一个聚合酶成功合成一条超过 <span class="blur-text">10个核苷酸</span> 的RNA时，便形成一个稳定包含有 <span class="blur-text">DNA模板</span>、<span class="blur-text">RNA pol</span> 和 <span class="blur-text">RNA片段</span> 的三重复合体，RNA pol离开 <span class="blur-text">启动子</span>，称为 <span class="blur-text">启动子解脱</span>，也叫启动子清除。启动子清除发生后转录进入 <span class="blur-text">延长</span> 阶段</td>
+                            <td>8.. B <strong>启动子清除的含义</strong><br>当一个聚合酶成功合成一条超过 <span class="answer-text">10个核苷酸</span> 的RNA时，便形成一个稳定包含有 <span class="answer-text">DNA模板</span>、<span class="answer-text">RNA pol</span> 和 <span class="answer-text">RNA片段</span> 的三重复合体，RNA pol离开 <span class="answer-text">启动子</span>，称为 <span class="answer-text">启动子解脱</span>，也叫启动子清除。启动子清除发生后转录进入 <span class="answer-text">延长</span> 阶段</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>154</td>
+                            <td>9.. <strong>原核生物转录延长阶段催化的酶</strong><br>是 <span class="blur-text">RNA聚合酶的核心酶</span></td>
+                            <td>9.. <strong>原核生物转录延长阶段催化的酶</strong><br>是 <span class="answer-text">RNA聚合酶的核心酶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>155</td>
+                            <td>10.. <strong>原核生物转录延长阶段RNA pol沿模板链的前进方向</strong><br><span class="blur-text">3'→5'</span> 方向</td>
+                            <td>10.. <strong>原核生物转录延长阶段RNA pol沿模板链的前进方向</strong><br><span class="answer-text">3'→5'</span> 方向</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>156</td>
+                            <td>11.. A <strong>原核生物转录延长阶段羽毛状图形的原因（1）</strong><br>同一个 <span class="blur-text">DNA模板</span> 分子上同时有 <span class="blur-text">多个转录复合体</span> 在工作</td>
+                            <td>11.. A <strong>原核生物转录延长阶段羽毛状图形的原因（1）</strong><br>同一个 <span class="answer-text">DNA模板</span> 分子上同时有 <span class="answer-text">多个转录复合体</span> 在工作</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>157</td>
+                            <td>11.. B <strong>原核生物转录延长阶段羽毛状图形的原因（2）</strong><br>新合成的 <span class="blur-text">mRNA</span> 转录和 <span class="blur-text">翻译</span> 是同时进行的</td>
+                            <td>11.. B <strong>原核生物转录延长阶段羽毛状图形的原因（2）</strong><br>新合成的 <span class="answer-text">mRNA</span> 转录和 <span class="answer-text">翻译</span> 是同时进行的</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>158</td>
+                            <td>12.. <strong>原核生物的转录终止方式</strong><br>① <span class="blur-text">依赖ρ因子</span> 的转录终止<br>② <span class="blur-text">非依赖ρ因子</span> 的转录终止</td>
+                            <td>12.. <strong>原核生物的转录终止方式</strong><br>① <span class="answer-text">依赖ρ因子</span> 的转录终止<br>② <span class="answer-text">非依赖ρ因子</span> 的转录终止</td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-16"><td colspan="3"><strong>【11月16日】27直播生物化学教材带读第10课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>159</td>
+                            <td>1.. A <strong>真核生物RNA pol I的功能</strong><br>催化合成 <span class="blur-text">rRNA</span> 的前体，再加工成 <span class="blur-text">28S</span>、<span class="blur-text">5.8S</span>、<span class="blur-text">18S</span>、<span class="blur-text">5S rRNA</span></td>
+                            <td>1.. A <strong>真核生物RNA pol I的功能</strong><br>催化合成 <span class="answer-text">rRNA</span> 的前体，再加工成 <span class="answer-text">28S</span>、<span class="answer-text">5.8S</span>、<span class="answer-text">18S</span>、<span class="answer-text">5S rRNA</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>160</td>
+                            <td>1.. B <strong>真核生物RNA pol II的功能</strong><br>在核内转录生成 <span class="blur-text">前体mRNA</span>，然后加工成 <span class="blur-text">mRNA</span> 并输送给胞质的蛋白质合成体系；也合成一些非编码RNA，如 <span class="blur-text">lncRNA</span>、<span class="blur-text">微小RNA</span> 和 <span class="blur-text">piRNA</span></td>
+                            <td>1.. B <strong>真核生物RNA pol II的功能</strong><br>在核内转录生成 <span class="answer-text">前体mRNA</span>，然后加工成 <span class="answer-text">mRNA</span> 并输送给胞质的蛋白质合成体系；也合成一些非编码RNA，如 <span class="answer-text">lncRNA</span>、<span class="answer-text">微小RNA</span> 和 <span class="answer-text">piRNA</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>161</td>
+                            <td>1.. C <strong>真核生物RNA pol III的功能</strong><br>催化 <span class="blur-text">tRNA</span>、<span class="blur-text">5S rRNA</span> 和一些 <span class="blur-text">snRNA</span> 的合成</td>
+                            <td>1.. C <strong>真核生物RNA pol III的功能</strong><br>催化 <span class="answer-text">tRNA</span>、<span class="answer-text">5S rRNA</span> 和一些 <span class="answer-text">snRNA</span> 的合成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>162</td>
+                            <td>2.. A <strong>顺式作用元件的概念</strong><br>指的是可影响 <span class="blur-text">自身基因</span> 表达活性的 <span class="blur-text">DNA序列</span></td>
+                            <td>2.. A <strong>顺式作用元件的概念</strong><br>指的是可影响 <span class="answer-text">自身基因</span> 表达活性的 <span class="answer-text">DNA序列</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>163</td>
+                            <td>2.. B <strong>反式作用因子的概念</strong><br>指的是可以特定识别并结合 <span class="blur-text">顺式作用元件</span> 而增强或降低相对应的 <span class="blur-text">基因表达</span> 的 <span class="blur-text">蛋白质</span></td>
+                            <td>2.. B <strong>反式作用因子的概念</strong><br>指的是可以特定识别并结合 <span class="answer-text">顺式作用元件</span> 而增强或降低相对应的 <span class="answer-text">基因表达</span> 的 <span class="answer-text">蛋白质</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>164</td>
+                            <td>3.. <strong>真核生物的启动子核心序列</strong><br>通常是 <span class="blur-text">Hognest盒</span>（<span class="blur-text">TATA盒</span>）</td>
+                            <td>3.. <strong>真核生物的启动子核心序列</strong><br>通常是 <span class="answer-text">Hognest盒</span>（<span class="answer-text">TATA盒</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>165</td>
+                            <td>4.. <strong>真核生物常见的启动子上游元件</strong><br>包括 <span class="blur-text">CAAT盒</span>、<span class="blur-text">GC盒</span></td>
+                            <td>4.. <strong>真核生物常见的启动子上游元件</strong><br>包括 <span class="answer-text">CAAT盒</span>、<span class="answer-text">GC盒</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>166</td>
+                            <td>5.. A <strong>真核生物RNA聚合酶II转录因子TF II A、B、D的功能</strong><br>① TF II A：辅助和加强 <span class="blur-text">TBP</span> 与DNA的结合<br>② TF II B：结合 <span class="blur-text">TF IID</span>，稳定TF IID-DNA复合物；介导 <span class="blur-text">RNA pol II</span> 的募集<br>③ TF II D：含 <span class="blur-text">TBP</span> 亚基，结合启动子的 <span class="blur-text">TATA盒</span> DNA序列；<span class="blur-text">TAFs</span> 对诱导引起的增强转录是必要的</td>
+                            <td>5.. A <strong>真核生物RNA聚合酶II转录因子TF II A、B、D的功能</strong><br>① TF II A：辅助和加强 <span class="answer-text">TBP</span> 与DNA的结合<br>② TF II B：结合 <span class="answer-text">TF IID</span>，稳定TF IID-DNA复合物；介导 <span class="answer-text">RNA pol II</span> 的募集<br>③ TF II D：含 <span class="answer-text">TBP</span> 亚基，结合启动子的 <span class="answer-text">TATA盒</span> DNA序列；<span class="answer-text">TAFs</span> 对诱导引起的增强转录是必要的</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>167</td>
+                            <td>5.. B <strong>真核生物RNA聚合酶II转录因子TF II E、F、H的功能</strong><br>① TF II E：募集 <span class="blur-text">TF IIH</span> 并调节其激酶和解螺旋酶活性；结合 <span class="blur-text">单链DNA</span>，稳定解链状态<br>② TF II F：结合 <span class="blur-text">RNA Pol II</span> 并随其进入转录延长阶段，防止其与DNA的接触<br>③ TF II H：<span class="blur-text">解旋酶</span> 和 <span class="blur-text">ATPase</span> 酶活性；作为蛋白激酶参与 <span class="blur-text">CTD磷酸化</span></td>
+                            <td>5.. B <strong>真核生物RNA聚合酶II转录因子TF II E、F、H的功能</strong><br>① TF II E：募集 <span class="answer-text">TF IIH</span> 并调节其激酶和解螺旋酶活性；结合 <span class="answer-text">单链DNA</span>，稳定解链状态<br>② TF II F：结合 <span class="answer-text">RNA Pol II</span> 并随其进入转录延长阶段，防止其与DNA的接触<br>③ TF II H：<span class="answer-text">解旋酶</span> 和 <span class="answer-text">ATPase</span> 酶活性；作为蛋白激酶参与 <span class="answer-text">CTD磷酸化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>168</td>
+                            <td>6.. <strong>真核生物RNA转录延长过程不与翻译同步的原因</strong><br>因有 <span class="blur-text">核膜</span> 的阻隔</td>
+                            <td>6.. <strong>真核生物RNA转录延长过程不与翻译同步的原因</strong><br>因有 <span class="answer-text">核膜</span> 的阻隔</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>169</td>
+                            <td>7.. <strong>真核生物RNA转录的终止机制</strong><br>真核生物的可读框下游，有一部分称为 <span class="blur-text">修饰点</span> 的序列。转录越过修饰点后，前体mRNA在修饰点处被 <span class="blur-text">切断</span>，随即加入 <span class="blur-text">poly(A)尾</span> 结构。而下游的RNA虽然继续转录，但是很快被 <span class="blur-text">RNA酶</span> 降解</td>
+                            <td>7.. <strong>真核生物RNA转录的终止机制</strong><br>真核生物的可读框下游，有一部分称为 <span class="answer-text">修饰点</span> 的序列。转录越过修饰点后，前体mRNA在修饰点处被 <span class="answer-text">切断</span>，随即加入 <span class="answer-text">poly(A)尾</span> 结构。而下游的RNA虽然继续转录，但是很快被 <span class="answer-text">RNA酶</span> 降解</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>170</td>
+                            <td>8.. <strong>真核生物转录后的RNA加工过程</strong><br>① <span class="blur-text">5'-端</span> 加入"帽"结构<br>② <span class="blur-text">3'-端</span> 加入多聚腺苷酸尾<br>③ 在 <span class="blur-text">剪接体</span> 内去除内含子<br>④ <span class="blur-text">RNA编辑</span></td>
+                            <td>8.. <strong>真核生物转录后的RNA加工过程</strong><br>① <span class="answer-text">5'-端</span> 加入"帽"结构<br>② <span class="answer-text">3'-端</span> 加入多聚腺苷酸尾<br>③ 在 <span class="answer-text">剪接体</span> 内去除内含子<br>④ <span class="answer-text">RNA编辑</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>171</td>
+                            <td>9.. <strong>剪接体的构成</strong><br>包括 <span class="blur-text">snRNA</span> + <span class="blur-text">蛋白质</span>【<span class="blur-text">snRNP</span>】</td>
+                            <td>9.. <strong>剪接体的构成</strong><br>包括 <span class="answer-text">snRNA</span> + <span class="answer-text">蛋白质</span>【<span class="answer-text">snRNP</span>】</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>172</td>
+                            <td>10.. A <strong>可变剪接的含义</strong><br>同一种 <span class="blur-text">hnRNA</span> 可以通过剪切、剪接加工成结构不同的 <span class="blur-text">mRNA</span></td>
+                            <td>10.. A <strong>可变剪接的含义</strong><br>同一种 <span class="answer-text">hnRNA</span> 可以通过剪切、剪接加工成结构不同的 <span class="answer-text">mRNA</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>173</td>
+                            <td>10.. B <strong>可变剪接的意义</strong><br>提高了有限 <span class="blur-text">基因数目</span> 的利用率，是增加生物 <span class="blur-text">蛋白质多样性</span> 的机制之一</td>
+                            <td>10.. B <strong>可变剪接的意义</strong><br>提高了有限 <span class="answer-text">基因数目</span> 的利用率，是增加生物 <span class="answer-text">蛋白质多样性</span> 的机制之一</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>174</td>
+                            <td>11.. <strong>RNA编辑的定义</strong><br>成熟的 <span class="blur-text">mRNA</span> 序列在转录后发生了改变，称为RNA编辑</td>
+                            <td>11.. <strong>RNA编辑的定义</strong><br>成熟的 <span class="answer-text">mRNA</span> 序列在转录后发生了改变，称为RNA编辑</td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-17"><td colspan="3"><strong>【11月17日】27直播生物化学教材带读第11课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>175</td>
+                            <td>1.. A <strong>终止密码子</strong><br><span class="blur-text">UAG</span>、<span class="blur-text">UAA</span>、<span class="blur-text">UGA</span> 代表终止密码子</td>
+                            <td>1.. A <strong>终止密码子</strong><br><span class="answer-text">UAG</span>、<span class="answer-text">UAA</span>、<span class="answer-text">UGA</span> 代表终止密码子</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>176</td>
+                            <td>1.. B <strong>起始密码子及其代表的氨基酸</strong><br><span class="blur-text">AUG</span> 不仅代表 <span class="blur-text">甲硫氨酸</span>，如果位于mRNA的翻译起始部位，它还代表肽链合成的 <span class="blur-text">起始密码子</span></td>
+                            <td>1.. B <strong>起始密码子及其代表的氨基酸</strong><br><span class="answer-text">AUG</span> 不仅代表 <span class="answer-text">甲硫氨酸</span>，如果位于mRNA的翻译起始部位，它还代表肽链合成的 <span class="answer-text">起始密码子</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>177</td>
+                            <td>2.. <strong>遗传密码的方向性</strong><br>翻译时的阅读方向只能从 <span class="blur-text">5'至3'</span></td>
+                            <td>2.. <strong>遗传密码的方向性</strong><br>翻译时的阅读方向只能从 <span class="answer-text">5'至3'</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>178</td>
+                            <td>3.. A <strong>移码的原因</strong><br>mRNA中密码子之间没有 <span class="blur-text">间隔核苷酸</span>；若可读框中插入或缺失了 <span class="blur-text">非3的倍数</span> 的核苷酸，将会引起mRNA可读框发生移动</td>
+                            <td>3.. A <strong>移码的原因</strong><br>mRNA中密码子之间没有 <span class="answer-text">间隔核苷酸</span>；若可读框中插入或缺失了 <span class="answer-text">非3的倍数</span> 的核苷酸，将会引起mRNA可读框发生移动</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>179</td>
+                            <td>3.. B <strong>移码的定义</strong><br>称为 <span class="blur-text">移码</span></td>
+                            <td>3.. B <strong>移码的定义</strong><br>称为 <span class="answer-text">移码</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>180</td>
+                            <td>4.. <strong>遗传密码的简并性</strong><br>有的氨基酸可由 <span class="blur-text">多个密码子</span> 编码，这种现象称为 <span class="blur-text">简并性</span></td>
+                            <td>4.. <strong>遗传密码的简并性</strong><br>有的氨基酸可由 <span class="answer-text">多个密码子</span> 编码，这种现象称为 <span class="answer-text">简并性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>181</td>
+                            <td>5.. A <strong>遗传密码摆动性的定义</strong><br>tRNA的反密码子的第 <span class="blur-text">1位</span> 碱基与密码子的第 <span class="blur-text">3位</span> 碱基配对不一定十分严格遵循碱基配对</td>
+                            <td>5.. A <strong>遗传密码摆动性的定义</strong><br>tRNA的反密码子的第 <span class="answer-text">1位</span> 碱基与密码子的第 <span class="answer-text">3位</span> 碱基配对不一定十分严格遵循碱基配对</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>182</td>
+                            <td>5.. B <strong>遗传密码摆动性的具体特点</strong><br><span class="blur-text">I</span> 可以和A、C、U配，<span class="blur-text">U</span> 可以和A、G配；<span class="blur-text">G</span> 可以和C、U配</td>
+                            <td>5.. B <strong>遗传密码摆动性的具体特点</strong><br><span class="answer-text">I</span> 可以和A、C、U配，<span class="answer-text">U</span> 可以和A、G配；<span class="answer-text">G</span> 可以和C、U配</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>183</td>
+                            <td>6.. <strong>遗传密码的通用性</strong><br>即从低等生物如 <span class="blur-text">细菌</span> 到 <span class="blur-text">人类</span> 都使用着同一套遗传密码</td>
+                            <td>6.. <strong>遗传密码的通用性</strong><br>即从低等生物如 <span class="answer-text">细菌</span> 到 <span class="answer-text">人类</span> 都使用着同一套遗传密码</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>184</td>
+                            <td>7.. <strong>原核生物蛋白质合成起始时需要的特殊氨酰-tRNA</strong><br>是 <span class="blur-text">fMet-tRNA^fMet</span></td>
+                            <td>7.. <strong>原核生物蛋白质合成起始时需要的特殊氨酰-tRNA</strong><br>是 <span class="answer-text">fMet-tRNA^fMet</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>185</td>
+                            <td>8.. A <strong>原核生物翻译起始因子IF1、IF2的作用</strong><br>① IF1：占据 <span class="blur-text">A位</span>，避免氨酰t-RNA提前进入<br>② IF2：<span class="blur-text">fMet-tRNA^fMet</span> 与结合了GTP的IF2一起，识别并结合与小亚基 <span class="blur-text">P位</span> 的mRNA的 <span class="blur-text">AUG</span> 处。组装完毕后水解GTP释放能量促使 <span class="blur-text">3种IF</span> 释放</td>
+                            <td>8.. A <strong>原核生物翻译起始因子IF1、IF2的作用</strong><br>① IF1：占据 <span class="answer-text">A位</span>，避免氨酰t-RNA提前进入<br>② IF2：<span class="answer-text">fMet-tRNA^fMet</span> 与结合了GTP的IF2一起，识别并结合与小亚基 <span class="answer-text">P位</span> 的mRNA的 <span class="answer-text">AUG</span> 处。组装完毕后水解GTP释放能量促使 <span class="answer-text">3种IF</span> 释放</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>186</td>
+                            <td>8.. B <strong>原核生物翻译起始因子IF3、SD序列的作用</strong><br>① IF3：防止 <span class="blur-text">大小亚基</span> 过早结合；增强P位结合fMet-tRNA^fMet的 <span class="blur-text">特异性</span><br>② SD序列：与 <span class="blur-text">16s rRNA</span> 通过碱基互补而精确识别，确保可读框的匹配的 <span class="blur-text">起始密码子</span> 而不是内部的AUG</td>
+                            <td>8.. B <strong>原核生物翻译起始因子IF3、SD序列的作用</strong><br>① IF3：防止 <span class="answer-text">大小亚基</span> 过早结合；增强P位结合fMet-tRNA^fMet的 <span class="answer-text">特异性</span><br>② SD序列：与 <span class="answer-text">16s rRNA</span> 通过碱基互补而精确识别，确保可读框的匹配的 <span class="answer-text">起始密码子</span> 而不是内部的AUG</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>187</td>
+                            <td>9.. A <strong>原核生物翻译延长阶段EF-T和肽酰转移酶的作用</strong><br>① EF-T：协助 <span class="blur-text">氨酰-tRNA</span> 进位，消耗 <span class="blur-text">1分子GTP</span><br>② 肽酰转移酶：核糖体A位和P位上的tRNA所携带的氨基酸缩合成肽（本质是 <span class="blur-text">核酶</span>）</td>
+                            <td>9.. A <strong>原核生物翻译延长阶段EF-T和肽酰转移酶的作用</strong><br>① EF-T：协助 <span class="answer-text">氨酰-tRNA</span> 进位，消耗 <span class="answer-text">1分子GTP</span><br>② 肽酰转移酶：核糖体A位和P位上的tRNA所携带的氨基酸缩合成肽（本质是 <span class="answer-text">核酶</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>188</td>
+                            <td>9.. B <strong>原核生物翻译延长阶段EF-G的作用</strong><br>协助 <span class="blur-text">mRNA-肽酰-tRNA</span> 由 <span class="blur-text">A位</span> 移至 <span class="blur-text">P位</span>，促进tRNA卸载与释放，消耗 <span class="blur-text">1分子GTP</span></td>
+                            <td>9.. B <strong>原核生物翻译延长阶段EF-G的作用</strong><br>协助 <span class="answer-text">mRNA-肽酰-tRNA</span> 由 <span class="answer-text">A位</span> 移至 <span class="answer-text">P位</span>，促进tRNA卸载与释放，消耗 <span class="answer-text">1分子GTP</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>189</td>
+                            <td>10.. A <strong>原核生物翻译终止阶段RF1、RF2的作用</strong><br>① RF1：识别 <span class="blur-text">UAA</span> 或 <span class="blur-text">UAG</span><br>② RF2：识别 <span class="blur-text">UAA</span> 或 <span class="blur-text">UGA</span><br>③ RF1/RF2识别终止密码子后，将肽酰转移酶转变为 <span class="blur-text">酯酶</span>，水解P位上肽链与tRNA的酯键，释放 <span class="blur-text">新生肽链</span></td>
+                            <td>10.. A <strong>原核生物翻译终止阶段RF1、RF2的作用</strong><br>① RF1：识别 <span class="answer-text">UAA</span> 或 <span class="answer-text">UAG</span><br>② RF2：识别 <span class="answer-text">UAA</span> 或 <span class="answer-text">UGA</span><br>③ RF1/RF2识别终止密码子后，将肽酰转移酶转变为 <span class="answer-text">酯酶</span>，水解P位上肽链与tRNA的酯键，释放 <span class="answer-text">新生肽链</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>190</td>
+                            <td>10.. B <strong>原核生物翻译终止阶段RF3的作用</strong><br>具有 <span class="blur-text">GTPase</span> 活性，当新生肽链从核糖体释放后，促进 <span class="blur-text">RF1</span> 或 <span class="blur-text">RF2</span> 与核糖体分离</td>
+                            <td>10.. B <strong>原核生物翻译终止阶段RF3的作用</strong><br>具有 <span class="answer-text">GTPase</span> 活性，当新生肽链从核糖体释放后，促进 <span class="answer-text">RF1</span> 或 <span class="answer-text">RF2</span> 与核糖体分离</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>191</td>
+                            <td>11.. A <strong>蛋白质翻译后1级结构加工</strong><br>包括：<span class="blur-text">肽链水解</span>、氨基酸残基修饰（<span class="blur-text">磷酸化</span>、<span class="blur-text">N-糖基化</span>、<span class="blur-text">O-糖基化</span>、<span class="blur-text">羟基化</span>、<span class="blur-text">甲基化</span>、<span class="blur-text">乙酰化</span>、<span class="blur-text">硒化</span>）、<span class="blur-text">二硫键异构酶</span>（链内或链间）</td>
+                            <td>11.. A <strong>蛋白质翻译后1级结构加工</strong><br>包括：<span class="answer-text">肽链水解</span>、氨基酸残基修饰（<span class="answer-text">磷酸化</span>、<span class="answer-text">N-糖基化</span>、<span class="answer-text">O-糖基化</span>、<span class="answer-text">羟基化</span>、<span class="answer-text">甲基化</span>、<span class="answer-text">乙酰化</span>、<span class="answer-text">硒化</span>）、<span class="answer-text">二硫键异构酶</span>（链内或链间）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>192</td>
+                            <td>11.. B <strong>蛋白质翻译后2-4级结构加工</strong><br>① 2级结构加工：<span class="blur-text">肽脯氨酰基顺-反异构酶</span><br>② 3级结构加工：新生肽链折叠需要 <span class="blur-text">分子伴侣</span><br>③ 4级结构加工：<span class="blur-text">亚基聚合</span> 形成具有四级结构的活性蛋白质</td>
+                            <td>11.. B <strong>蛋白质翻译后2-4级结构加工</strong><br>① 2级结构加工：<span class="answer-text">肽脯氨酰基顺-反异构酶</span><br>② 3级结构加工：新生肽链折叠需要 <span class="answer-text">分子伴侣</span><br>③ 4级结构加工：<span class="answer-text">亚基聚合</span> 形成具有四级结构的活性蛋白质</td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-19"><td colspan="3"><strong>【11月19日】27直播生物化学教材带读第12课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>193</td>
+                            <td>1.. <strong>原核生物操纵子的基本结构</strong><br>一般包括：<span class="blur-text">结构基因</span>、<span class="blur-text">调控序列</span>、<span class="blur-text">调节基因</span></td>
+                            <td>1.. <strong>原核生物操纵子的基本结构</strong><br>一般包括：<span class="answer-text">结构基因</span>、<span class="answer-text">调控序列</span>、<span class="answer-text">调节基因</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>194</td>
+                            <td>2.. <strong>乳糖操纵子的结构组成</strong><br>包括：结构基因（<span class="blur-text">Z</span>、<span class="blur-text">Y</span>、<span class="blur-text">A</span>）；<span class="blur-text">启动子(P)</span>；<span class="blur-text">操纵序列(O)</span>；<span class="blur-text">调节基因(I)</span>；<span class="blur-text">CAP结合位点</span></td>
+                            <td>2.. <strong>乳糖操纵子的结构组成</strong><br>包括：结构基因（<span class="answer-text">Z</span>、<span class="answer-text">Y</span>、<span class="answer-text">A</span>）；<span class="answer-text">启动子(P)</span>；<span class="answer-text">操纵序列(O)</span>；<span class="answer-text">调节基因(I)</span>；<span class="answer-text">CAP结合位点</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>195</td>
+                            <td>3.. A <strong>乳糖操纵子Z基因编码产物</strong><br><span class="blur-text">β-半乳糖苷酶</span></td>
+                            <td>3.. A <strong>乳糖操纵子Z基因编码产物</strong><br><span class="answer-text">β-半乳糖苷酶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>196</td>
+                            <td>3.. B <strong>乳糖操纵子Y基因和A基因编码产物</strong><br>① Y基因：<span class="blur-text">通透酶</span><br>② A基因：<span class="blur-text">乙酰基转移酶</span></td>
+                            <td>3.. B <strong>乳糖操纵子Y基因和A基因编码产物</strong><br>① Y基因：<span class="answer-text">通透酶</span><br>② A基因：<span class="answer-text">乙酰基转移酶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>197</td>
+                            <td>4.. <strong>乳糖操纵子I基因的作用</strong><br>合成 <span class="blur-text">阻遏蛋白</span> 结合 <span class="blur-text">O序列</span>，抑制 <span class="blur-text">转录启动</span></td>
+                            <td>4.. <strong>乳糖操纵子I基因的作用</strong><br>合成 <span class="answer-text">阻遏蛋白</span> 结合 <span class="answer-text">O序列</span>，抑制 <span class="answer-text">转录启动</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>198</td>
+                            <td>5.. A <strong>CAP的激活剂</strong><br>是 <span class="blur-text">cAMP</span></td>
+                            <td>5.. A <strong>CAP的激活剂</strong><br>是 <span class="answer-text">cAMP</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>199</td>
+                            <td>5.. B <strong>CAP被激活的条件</strong><br><span class="blur-text">无葡萄糖</span> 时</td>
+                            <td>5.. B <strong>CAP被激活的条件</strong><br><span class="answer-text">无葡萄糖</span> 时</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>200</td>
+                            <td>6.. <strong>乳糖操纵子表达最强的情况</strong><br><span class="blur-text">无葡萄糖</span>，<span class="blur-text">有乳糖</span> 时</td>
+                            <td>6.. <strong>乳糖操纵子表达最强的情况</strong><br><span class="answer-text">无葡萄糖</span>，<span class="answer-text">有乳糖</span> 时</td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-20"><td colspan="3"><strong>【11月20日】27直播生物化学教材带读第13课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>201</td>
+                            <td>1.. <strong>基因表达的定义</strong><br>基因表达就是基因 <span class="blur-text">转录</span> 及 <span class="blur-text">翻译</span> 的过程，也是基因所携带的遗传信息表现为 <span class="blur-text">表现型</span> 的过程，包括基因转录成互补的 <span class="blur-text">RNA序列</span>，对于蛋白质编码基因，<span class="blur-text">mRNA</span> 继而翻译成 <span class="blur-text">多肽链</span>，并装配加工成最终 <span class="blur-text">蛋白质产物</span></td>
+                            <td>1.. <strong>基因表达的定义</strong><br>基因表达就是基因 <span class="answer-text">转录</span> 及 <span class="answer-text">翻译</span> 的过程，也是基因所携带的遗传信息表现为 <span class="answer-text">表现型</span> 的过程，包括基因转录成互补的 <span class="answer-text">RNA序列</span>，对于蛋白质编码基因，<span class="answer-text">mRNA</span> 继而翻译成 <span class="answer-text">多肽链</span>，并装配加工成最终 <span class="answer-text">蛋白质产物</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>202</td>
+                            <td>2.. A <strong>基因表达时间特异性的定义</strong><br>是指基因表达按一定的 <span class="blur-text">时间顺序</span> 发生</td>
+                            <td>2.. A <strong>基因表达时间特异性的定义</strong><br>是指基因表达按一定的 <span class="answer-text">时间顺序</span> 发生</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>203</td>
+                            <td>2.. B <strong>基因表达时间特异性的举例</strong><br>编码 <span class="blur-text">AFP</span> 的基因在 <span class="blur-text">胎儿干细胞</span> 活跃表达，合成大量 <span class="blur-text">甲胎蛋白</span>，在成年后这一基因表达水平 <span class="blur-text">很低</span>，但是当肝细胞转化形成 <span class="blur-text">肝癌细胞</span> 时，编码AFP的基因又重新被激活，大量的AFP被合成</td>
+                            <td>2.. B <strong>基因表达时间特异性的举例</strong><br>编码 <span class="answer-text">AFP</span> 的基因在 <span class="answer-text">胎儿干细胞</span> 活跃表达，合成大量 <span class="answer-text">甲胎蛋白</span>，在成年后这一基因表达水平 <span class="answer-text">很低</span>，但是当肝细胞转化形成 <span class="answer-text">肝癌细胞</span> 时，编码AFP的基因又重新被激活，大量的AFP被合成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>204</td>
+                            <td>3.. A <strong>基因表达空间特异性的定义</strong><br>是指多细胞生物个体在特定生长发育阶段，同一基因在 <span class="blur-text">不同的组织器官</span> 表达</td>
+                            <td>3.. A <strong>基因表达空间特异性的定义</strong><br>是指多细胞生物个体在特定生长发育阶段，同一基因在 <span class="answer-text">不同的组织器官</span> 表达</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>205</td>
+                            <td>3.. B <strong>基因表达空间特异性的举例</strong><br>编码 <span class="blur-text">胰岛素</span> 的基因只在 <span class="blur-text">胰岛β细胞</span> 表达</td>
+                            <td>3.. B <strong>基因表达空间特异性的举例</strong><br>编码 <span class="answer-text">胰岛素</span> 的基因只在 <span class="answer-text">胰岛β细胞</span> 表达</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>206</td>
+                            <td>4.. A <strong>管家基因的定义</strong><br>有些基因几乎在 <span class="blur-text">所有细胞</span> 中持续表达，管家基因的表达水平受 <span class="blur-text">环境因素</span> 影响较小，而是在生物体各个生长阶段的 <span class="blur-text">大多数</span> 或 <span class="blur-text">几乎全部组织</span> 中持续表达，或变化很小。这类基因表达称为 <span class="blur-text">基本（或组成性）基因表达</span></td>
+                            <td>4.. A <strong>管家基因的定义</strong><br>有些基因几乎在 <span class="answer-text">所有细胞</span> 中持续表达，管家基因的表达水平受 <span class="answer-text">环境因素</span> 影响较小，而是在生物体各个生长阶段的 <span class="answer-text">大多数</span> 或 <span class="answer-text">几乎全部组织</span> 中持续表达，或变化很小。这类基因表达称为 <span class="answer-text">基本（或组成性）基因表达</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>207</td>
+                            <td>4.. B <strong>可诱导基因的定义</strong><br>在 <span class="blur-text">特定环境信号</span> 刺激下，相应的基因被 <span class="blur-text">激活</span>，基因表达产物 <span class="blur-text">增加</span>，即这种基因表达是 <span class="blur-text">可诱导</span> 的</td>
+                            <td>4.. B <strong>可诱导基因的定义</strong><br>在 <span class="answer-text">特定环境信号</span> 刺激下，相应的基因被 <span class="answer-text">激活</span>，基因表达产物 <span class="answer-text">增加</span>，即这种基因表达是 <span class="answer-text">可诱导</span> 的</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>208</td>
+                            <td>4.. C <strong>可阻遏基因的定义</strong><br>基因对环境信号应答时被 <span class="blur-text">抑制</span>，这种基因称为可阻遏基因</td>
+                            <td>4.. C <strong>可阻遏基因的定义</strong><br>基因对环境信号应答时被 <span class="answer-text">抑制</span>，这种基因称为可阻遏基因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>209</td>
+                            <td>5.. <strong>顺式作用元件的定义</strong><br>一般说来，调控序列与被调控的编码序列位于 <span class="blur-text">同一条DNA链</span> 上，也被称为顺式作用元件或顺式调节元件</td>
+                            <td>5.. <strong>顺式作用元件的定义</strong><br>一般说来，调控序列与被调控的编码序列位于 <span class="answer-text">同一条DNA链</span> 上，也被称为顺式作用元件或顺式调节元件</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>210</td>
+                            <td>6.. A <strong>调节蛋白的定义</strong><br>有一些调控基因 <span class="blur-text">远离</span> 被调控的编码序列，实际上是其他分子的编码基因，只能通过其 <span class="blur-text">表达产物</span> 来发挥作用。这类调控基因产物称为调节蛋白</td>
+                            <td>6.. A <strong>调节蛋白的定义</strong><br>有一些调控基因 <span class="answer-text">远离</span> 被调控的编码序列，实际上是其他分子的编码基因，只能通过其 <span class="answer-text">表达产物</span> 来发挥作用。这类调控基因产物称为调节蛋白</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>211</td>
+                            <td>6.. B <strong>反式作用因子的定义</strong><br>调节蛋白不仅能对处于同一条DNA链上的结构基因的表达进行调控，而且还能对 <span class="blur-text">不在一条DNA链上</span> 的结构基因的表达起到同样的作用。因此，这些蛋白质分子又被称为反式作用因子</td>
+                            <td>6.. B <strong>反式作用因子的定义</strong><br>调节蛋白不仅能对处于同一条DNA链上的结构基因的表达进行调控，而且还能对 <span class="answer-text">不在一条DNA链上</span> 的结构基因的表达起到同样的作用。因此，这些蛋白质分子又被称为反式作用因子</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>212</td>
+                            <td>7.. <strong>基因表达的基本控制点</strong><br>是 <span class="blur-text">转录起始</span></td>
+                            <td>7.. <strong>基因表达的基本控制点</strong><br>是 <span class="answer-text">转录起始</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>213</td>
+                            <td>8.. A <strong>真核基因组表达特点（1-2）</strong><br>① 真核基因组比原核基因组 <span class="blur-text">大得多</span><br>② 原核基因组的大部分序列都为 <span class="blur-text">编码基因</span>，而哺乳类基因组中大约只有 <span class="blur-text">10%</span> 的序列编码蛋白质、rRNA、tRNA等，其余 <span class="blur-text">90%</span> 的序列功能至今还不清楚，可能参与调控</td>
+                            <td>8.. A <strong>真核基因组表达特点（1-2）</strong><br>① 真核基因组比原核基因组 <span class="answer-text">大得多</span><br>② 原核基因组的大部分序列都为 <span class="answer-text">编码基因</span>，而哺乳类基因组中大约只有 <span class="answer-text">10%</span> 的序列编码蛋白质、rRNA、tRNA等，其余 <span class="answer-text">90%</span> 的序列功能至今还不清楚，可能参与调控</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>214</td>
+                            <td>8.. B <strong>真核基因组表达特点（3-4）</strong><br>③ 真核生物编码蛋白质的基因是 <span class="blur-text">不连续的</span>，转录后需要 <span class="blur-text">剪接</span> 去除内含子，这就增加了基因表达调控的层次<br>④ 真核生物则是一个结构基因转录生成 <span class="blur-text">一条mRNA</span>，即mRNA是 <span class="blur-text">单顺反子</span></td>
+                            <td>8.. B <strong>真核基因组表达特点（3-4）</strong><br>③ 真核生物编码蛋白质的基因是 <span class="answer-text">不连续的</span>，转录后需要 <span class="answer-text">剪接</span> 去除内含子，这就增加了基因表达调控的层次<br>④ 真核生物则是一个结构基因转录生成 <span class="answer-text">一条mRNA</span>，即mRNA是 <span class="answer-text">单顺反子</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>215</td>
+                            <td>8.. C <strong>真核基因组表达特点（5-6）</strong><br>⑤ 真核生物DNA在细胞核内与多种蛋白质结合构成 <span class="blur-text">染色质</span><br>⑥ 真核生物的遗传信息不仅存在于 <span class="blur-text">核DNA</span> 上，还存在于 <span class="blur-text">线粒体DNA</span> 上</td>
+                            <td>8.. C <strong>真核基因组表达特点（5-6）</strong><br>⑤ 真核生物DNA在细胞核内与多种蛋白质结合构成 <span class="answer-text">染色质</span><br>⑥ 真核生物的遗传信息不仅存在于 <span class="answer-text">核DNA</span> 上，还存在于 <span class="answer-text">线粒体DNA</span> 上</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>216</td>
+                            <td>9.. <strong>转录活化区的定义</strong><br>转录活化区域是缺乏或没有 <span class="blur-text">核小体蛋白</span> 结合的"裸露"DNA链</td>
+                            <td>9.. <strong>转录活化区的定义</strong><br>转录活化区域是缺乏或没有 <span class="answer-text">核小体蛋白</span> 结合的"裸露"DNA链</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>217</td>
+                            <td>10.. <strong>CpG岛甲基化水平与基因表达的关系</strong><br>CpG岛的 <span class="blur-text">高甲基化</span> 促进染色质形成 <span class="blur-text">致密结构</span>，因而不利于 <span class="blur-text">基因表达</span></td>
+                            <td>10.. <strong>CpG岛甲基化水平与基因表达的关系</strong><br>CpG岛的 <span class="answer-text">高甲基化</span> 促进染色质形成 <span class="answer-text">致密结构</span>，因而不利于 <span class="answer-text">基因表达</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>218</td>
+                            <td>11.. <strong>表观遗传学的定义</strong><br>染色质结构对基因表达的影响可以 <span class="blur-text">遗传给子代细胞</span>，称作表观遗传。表观遗传是指在 <span class="blur-text">DNA序列不发生改变</span> 的情况下，基因的表达水平与功能发生改变，并产生可遗传的 <span class="blur-text">表型</span></td>
+                            <td>11.. <strong>表观遗传学的定义</strong><br>染色质结构对基因表达的影响可以 <span class="answer-text">遗传给子代细胞</span>，称作表观遗传。表观遗传是指在 <span class="answer-text">DNA序列不发生改变</span> 的情况下，基因的表达水平与功能发生改变，并产生可遗传的 <span class="answer-text">表型</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>219</td>
+                            <td>12.. A <strong>转录因子的定义</strong><br>真核生物的转录调节蛋白又称 <span class="blur-text">转录因子</span>，转录因子也被称为 <span class="blur-text">反式作用蛋白</span> 或 <span class="blur-text">反式作用因子</span></td>
+                            <td>12.. A <strong>转录因子的定义</strong><br>真核生物的转录调节蛋白又称 <span class="answer-text">转录因子</span>，转录因子也被称为 <span class="answer-text">反式作用蛋白</span> 或 <span class="answer-text">反式作用因子</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>220</td>
+                            <td>12.. B <strong>通用转录因子的定义</strong><br>是RNA聚合酶介导基因转录时所必需的一类 <span class="blur-text">辅助蛋白质</span>，帮助聚合酶与 <span class="blur-text">启动子</span> 结合并起始转录，对所有基因都是 <span class="blur-text">必需的</span></td>
+                            <td>12.. B <strong>通用转录因子的定义</strong><br>是RNA聚合酶介导基因转录时所必需的一类 <span class="answer-text">辅助蛋白质</span>，帮助聚合酶与 <span class="answer-text">启动子</span> 结合并起始转录，对所有基因都是 <span class="answer-text">必需的</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>221</td>
+                            <td>12.. C <strong>特异转录因子的定义</strong><br>为 <span class="blur-text">个别基因</span> 转录所必需，决定该基因表达的 <span class="blur-text">时间空间特异性</span></td>
+                            <td>12.. C <strong>特异转录因子的定义</strong><br>为 <span class="answer-text">个别基因</span> 转录所必需，决定该基因表达的 <span class="answer-text">时间空间特异性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>222</td>
+                            <td>12.. D <strong>转录激活因子和转录抑制因子的定义</strong><br>① 转录激活因子：通常是一些 <span class="blur-text">增强子</span> 结合蛋白<br>② 转录抑制因子：多数是 <span class="blur-text">沉默子</span> 结合蛋白</td>
+                            <td>12.. D <strong>转录激活因子和转录抑制因子的定义</strong><br>① 转录激活因子：通常是一些 <span class="answer-text">增强子</span> 结合蛋白<br>② 转录抑制因子：多数是 <span class="answer-text">沉默子</span> 结合蛋白</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>223</td>
+                            <td>12.. E <strong>上游因子和可诱导因子的定义</strong><br>① 上游因子：与启动子上游元件（如 <span class="blur-text">GC盒</span>、<span class="blur-text">CAAT盒</span> 等顺式作用元件）结合的蛋白质<br>② 可诱导因子：是与 <span class="blur-text">增强子</span> 等远端调控序列结合的转录因子，它们能结合 <span class="blur-text">应答元件</span>，只在某些特殊生理或病理情况下才被诱导产生</td>
+                            <td>12.. E <strong>上游因子和可诱导因子的定义</strong><br>① 上游因子：与启动子上游元件（如 <span class="answer-text">GC盒</span>、<span class="answer-text">CAAT盒</span> 等顺式作用元件）结合的蛋白质<br>② 可诱导因子：是与 <span class="answer-text">增强子</span> 等远端调控序列结合的转录因子，它们能结合 <span class="answer-text">应答元件</span>，只在某些特殊生理或病理情况下才被诱导产生</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>224</td>
+                            <td>13.. A <strong>转录因子的DNA结合结构域</strong><br>包括：<span class="blur-text">锌指模体结构</span>、<span class="blur-text">碱性螺旋-环-螺旋模体结构</span>、<span class="blur-text">碱性亮氨酸拉链</span></td>
+                            <td>13.. A <strong>转录因子的DNA结合结构域</strong><br>包括：<span class="answer-text">锌指模体结构</span>、<span class="answer-text">碱性螺旋-环-螺旋模体结构</span>、<span class="answer-text">碱性亮氨酸拉链</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>225</td>
+                            <td>13.. B <strong>转录因子的转录激活结构域</strong><br>包括：<span class="blur-text">酸性激活结构域</span>、<span class="blur-text">富含谷氨酰胺结构域</span>、<span class="blur-text">富含脯氨酸结构域</span></td>
+                            <td>13.. B <strong>转录因子的转录激活结构域</strong><br>包括：<span class="answer-text">酸性激活结构域</span>、<span class="answer-text">富含谷氨酰胺结构域</span>、<span class="answer-text">富含脯氨酸结构域</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>226</td>
+                            <td>14.. A <strong>miRNA和siRNA的共同点（1-2）</strong><br>① 均由 <span class="blur-text">Dicer</span> 切割产生<br>② 长度都在 <span class="blur-text">22个碱基</span> 左右</td>
+                            <td>14.. A <strong>miRNA和siRNA的共同点（1-2）</strong><br>① 均由 <span class="answer-text">Dicer</span> 切割产生<br>② 长度都在 <span class="answer-text">22个碱基</span> 左右</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>227</td>
+                            <td>14.. B <strong>miRNA和siRNA的共同点（3）</strong><br>都与 <span class="blur-text">RISC</span>【RNA诱导的沉默复合体】形成复合体，与mRNA作用而引起 <span class="blur-text">基因沉默</span></td>
+                            <td>14.. B <strong>miRNA和siRNA的共同点（3）</strong><br>都与 <span class="answer-text">RISC</span>【RNA诱导的沉默复合体】形成复合体，与mRNA作用而引起 <span class="answer-text">基因沉默</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>228</td>
+                            <td>15.. A <strong>miRNA和siRNA的不同点（前体与结构）</strong><br>① 前体不同：siRNA是 <span class="blur-text">内源或外源长双链RNA</span> 诱导产生，而miRNA是 <span class="blur-text">内源性发夹环结构</span> 的转录产物<br>② 结构不同：siRNA <span class="blur-text">双链</span> 分子，而miRNA是 <span class="blur-text">单链</span> 分子</td>
+                            <td>15.. A <strong>miRNA和siRNA的不同点（前体与结构）</strong><br>① 前体不同：siRNA是 <span class="answer-text">内源或外源长双链RNA</span> 诱导产生，而miRNA是 <span class="answer-text">内源性发夹环结构</span> 的转录产物<br>② 结构不同：siRNA <span class="answer-text">双链</span> 分子，而miRNA是 <span class="answer-text">单链</span> 分子</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>229</td>
+                            <td>15.. B <strong>miRNA和siRNA的不同点（功能与结合）</strong><br>③ 功能不同：siRNA是 <span class="blur-text">降解mRNA</span>，而miRNA是 <span class="blur-text">阻遏其翻译</span><br>④ 与靶mRNA结合的过程不同：siRNA需要 <span class="blur-text">完全互补</span>，而miRNA <span class="blur-text">不需要</span></td>
+                            <td>15.. B <strong>miRNA和siRNA的不同点（功能与结合）</strong><br>③ 功能不同：siRNA是 <span class="answer-text">降解mRNA</span>，而miRNA是 <span class="answer-text">阻遏其翻译</span><br>④ 与靶mRNA结合的过程不同：siRNA需要 <span class="answer-text">完全互补</span>，而miRNA <span class="answer-text">不需要</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>230</td>
+                            <td>15.. C <strong>miRNA和siRNA的不同点（生物学效应）</strong><br>⑤ 生物学效应不同：siRNA可以抑制 <span class="blur-text">转座子活性</span> 和 <span class="blur-text">病毒感染</span>，而miRNA是参与 <span class="blur-text">发育过程</span> 的调节</td>
+                            <td>15.. C <strong>miRNA和siRNA的不同点（生物学效应）</strong><br>⑤ 生物学效应不同：siRNA可以抑制 <span class="answer-text">转座子活性</span> 和 <span class="answer-text">病毒感染</span>，而miRNA是参与 <span class="answer-text">发育过程</span> 的调节</td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-21"><td colspan="3"><strong>【11月21日】27直播生物化学教材带读第14课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>231</td>
+                            <td>1.. <strong>成熟红细胞与有核红细胞的结构特点</strong><br>成熟红细胞除 <span class="blur-text">质膜</span> 和 <span class="blur-text">胞质</span> 外，无 <span class="blur-text">细胞核</span> 和 <span class="blur-text">线粒体</span> 等细胞器</td>
+                            <td>1.. <strong>成熟红细胞与有核红细胞的结构特点</strong><br>成熟红细胞除 <span class="answer-text">质膜</span> 和 <span class="answer-text">胞质</span> 外，无 <span class="answer-text">细胞核</span> 和 <span class="answer-text">线粒体</span> 等细胞器</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>232</td>
+                            <td>2.. <strong>成熟红细胞的代谢特点</strong><br>仅有 <span class="blur-text">糖酵解</span> 以及 <span class="blur-text">磷酸戊糖途径</span></td>
+                            <td>2.. <strong>成熟红细胞的代谢特点</strong><br>仅有 <span class="answer-text">糖酵解</span> 以及 <span class="answer-text">磷酸戊糖途径</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>233</td>
+                            <td>3.. A <strong>红细胞内ATP的主要来源</strong><br><span class="blur-text">糖酵解</span> 是红细胞获得能量的 <span class="blur-text">唯一途径</span></td>
+                            <td>3.. A <strong>红细胞内ATP的主要来源</strong><br><span class="answer-text">糖酵解</span> 是红细胞获得能量的 <span class="answer-text">唯一途径</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>234</td>
+                            <td>3.. B <strong>红细胞内ATP的主要用途</strong><br>① 红细胞膜上 <span class="blur-text">Na泵</span>、<span class="blur-text">Ca2+泵</span> 的运转<br>② 维持红细胞膜上 <span class="blur-text">脂质</span> 与血浆蛋白中的脂质交换<br>③ 少量用于 <span class="blur-text">谷胱甘肽</span>、<span class="blur-text">NAD+/NADP+</span> 的生物合成<br>④ 用于 <span class="blur-text">葡萄糖</span> 的活化，启动糖酵解过程</td>
+                            <td>3.. B <strong>红细胞内ATP的主要用途</strong><br>① 红细胞膜上 <span class="answer-text">Na泵</span>、<span class="answer-text">Ca2+泵</span> 的运转<br>② 维持红细胞膜上 <span class="answer-text">脂质</span> 与血浆蛋白中的脂质交换<br>③ 少量用于 <span class="answer-text">谷胱甘肽</span>、<span class="answer-text">NAD+/NADP+</span> 的生物合成<br>④ 用于 <span class="answer-text">葡萄糖</span> 的活化，启动糖酵解过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>235</td>
+                            <td>4.. <strong>红细胞内2-3-BPG支路的生理意义</strong><br>调节 <span class="blur-text">血红蛋白</span> 运氧的功能</td>
+                            <td>4.. <strong>红细胞内2-3-BPG支路的生理意义</strong><br>调节 <span class="answer-text">血红蛋白</span> 运氧的功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>236</td>
+                            <td>5.. <strong>磷酸戊糖途径提供的NADPH对红细胞的主要意义</strong><br>对抗 <span class="blur-text">氧化剂</span>，保护 <span class="blur-text">细胞膜</span>、<span class="blur-text">蛋白质</span>、<span class="blur-text">血红蛋白</span> 和 <span class="blur-text">酶蛋白</span> 的巯基不被氧化，维持红细胞的正常功能</td>
+                            <td>5.. <strong>磷酸戊糖途径提供的NADPH对红细胞的主要意义</strong><br>对抗 <span class="answer-text">氧化剂</span>，保护 <span class="answer-text">细胞膜</span>、<span class="answer-text">蛋白质</span>、<span class="answer-text">血红蛋白</span> 和 <span class="answer-text">酶蛋白</span> 的巯基不被氧化，维持红细胞的正常功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>237</td>
+                            <td>6.. <strong>请完成下图（血红素的合成）</strong><br><span class="blur-text">图略</span></td>
+                            <td>6.. <strong>请完成下图（血红素的合成）</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>238</td>
+                            <td>7.. <strong>血红素合成的限速酶及其辅酶</strong><br>① 限速酶：<span class="blur-text">ALA合酶</span><br>② 辅酶：<span class="blur-text">磷酸吡哆醛</span></td>
+                            <td>7.. <strong>血红素合成的限速酶及其辅酶</strong><br>① 限速酶：<span class="answer-text">ALA合酶</span><br>② 辅酶：<span class="answer-text">磷酸吡哆醛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>239</td>
+                            <td>8.. <strong>血红素合成的场所</strong><br><span class="blur-text">细胞质</span> + <span class="blur-text">线粒体</span></td>
+                            <td>8.. <strong>血红素合成的场所</strong><br><span class="answer-text">细胞质</span> + <span class="answer-text">线粒体</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>240</td>
+                            <td>9.. A <strong>血红素的构成</strong><br>血红素 = <span class="blur-text">Fe2+</span> + <span class="blur-text">卟啉</span></td>
+                            <td>9.. A <strong>血红素的构成</strong><br>血红素 = <span class="answer-text">Fe2+</span> + <span class="answer-text">卟啉</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>241</td>
+                            <td>9.. B <strong>血红蛋白的构成</strong><br>血红蛋白 = <span class="blur-text">血红素</span> + <span class="blur-text">珠蛋白</span></td>
+                            <td>9.. B <strong>血红蛋白的构成</strong><br>血红蛋白 = <span class="answer-text">血红素</span> + <span class="answer-text">珠蛋白</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>242</td>
+                            <td>9.. C <strong>血红蛋白在血液中的运输形式</strong><br>= <span class="blur-text">血红蛋白</span> + <span class="blur-text">结合珠蛋白</span></td>
+                            <td>9.. C <strong>血红蛋白在血液中的运输形式</strong><br>= <span class="answer-text">血红蛋白</span> + <span class="answer-text">结合珠蛋白</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>243</td>
+                            <td>10.. A <strong>血红素合成的原料</strong><br><span class="blur-text">琥珀酰CoA</span>、<span class="blur-text">甘氨酸</span>、<span class="blur-text">Fe2+</span></td>
+                            <td>10.. A <strong>血红素合成的原料</strong><br><span class="answer-text">琥珀酰CoA</span>、<span class="answer-text">甘氨酸</span>、<span class="answer-text">Fe2+</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>244</td>
+                            <td>10.. B <strong>血红素主要的合成部位</strong><br>是 <span class="blur-text">骨髓</span> 与 <span class="blur-text">肝</span></td>
+                            <td>10.. B <strong>血红素主要的合成部位</strong><br>是 <span class="answer-text">骨髓</span> 与 <span class="answer-text">肝</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>245</td>
+                            <td>11.. A <strong>抑制血红素合成的因素</strong><br><span class="blur-text">血红素</span>、<span class="blur-text">高铁血红素</span></td>
+                            <td>11.. A <strong>抑制血红素合成的因素</strong><br><span class="answer-text">血红素</span>、<span class="answer-text">高铁血红素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>246</td>
+                            <td>11.. B <strong>促进血红素合成的因素</strong><br><span class="blur-text">睾酮</span>、需要在肝中需要通过 <span class="blur-text">细胞色素P450</span> 进行生物转化的物质</td>
+                            <td>11.. B <strong>促进血红素合成的因素</strong><br><span class="answer-text">睾酮</span>、需要在肝中需要通过 <span class="answer-text">细胞色素P450</span> 进行生物转化的物质</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>247</td>
+                            <td>12.. <strong>可明显抑制ALA脱水酶与亚铁螯合酶的物质</strong><br><span class="blur-text">重金属</span></td>
+                            <td>12.. <strong>可明显抑制ALA脱水酶与亚铁螯合酶的物质</strong><br><span class="answer-text">重金属</span></td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-23"><td colspan="3"><strong>【11月23日】27直播生物化学教材带读第15课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>248</td>
+                            <td>1.. <strong>请填空完成下图（胆色素代谢）</strong><br><span class="blur-text">图略</span></td>
+                            <td>1.. <strong>请填空完成下图（胆色素代谢）</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>249</td>
+                            <td>2.. <strong>胆红素代谢的来源主要包括</strong><br><span class="blur-text">血红蛋白</span>、<span class="blur-text">肌红蛋白</span>、<span class="blur-text">细胞色素</span>、<span class="blur-text">过氧化氢酶</span>、<span class="blur-text">过氧化物酶</span></td>
+                            <td>2.. <strong>胆红素代谢的来源主要包括</strong><br><span class="answer-text">血红蛋白</span>、<span class="answer-text">肌红蛋白</span>、<span class="answer-text">细胞色素</span>、<span class="answer-text">过氧化氢酶</span>、<span class="answer-text">过氧化物酶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>250</td>
+                            <td>3.. A <strong>溶血性黄疸的胆红素代谢特点（来源与去路）</strong><br>① 未结合胆红素的来源：<span class="blur-text">增加↑↑↑</span><br>② 未结合胆红素的去路（肝细胞处理胆红素的能力）：<span class="blur-text">增加↑</span></td>
+                            <td>3.. A <strong>溶血性黄疸的胆红素代谢特点（来源与去路）</strong><br>① 未结合胆红素的来源：<span class="answer-text">增加↑↑↑</span><br>② 未结合胆红素的去路（肝细胞处理胆红素的能力）：<span class="answer-text">增加↑</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>251</td>
+                            <td>3.. B <strong>溶血性黄疸的胆红素代谢特点（血液与肝脏）</strong><br>① 血液中未结合胆红素的量：<span class="blur-text">增加</span><br>② 肝脏处理后生成的结合胆红素：<span class="blur-text">增加</span></td>
+                            <td>3.. B <strong>溶血性黄疸的胆红素代谢特点（血液与肝脏）</strong><br>① 血液中未结合胆红素的量：<span class="answer-text">增加</span><br>② 肝脏处理后生成的结合胆红素：<span class="answer-text">增加</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>252</td>
+                            <td>3.. C <strong>溶血性黄疸的胆红素代谢特点（排泄与肠道）</strong><br>① 血中结合胆红素：<span class="blur-text">无</span><br>② 排入肠道的结合胆红素：<span class="blur-text">增加</span><br>③ 尿胆红素：<span class="blur-text">无</span><br>④ 肠道内胆素原的量：<span class="blur-text">增加</span></td>
+                            <td>3.. C <strong>溶血性黄疸的胆红素代谢特点（排泄与肠道）</strong><br>① 血中结合胆红素：<span class="answer-text">无</span><br>② 排入肠道的结合胆红素：<span class="answer-text">增加</span><br>③ 尿胆红素：<span class="answer-text">无</span><br>④ 肠道内胆素原的量：<span class="answer-text">增加</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>253</td>
+                            <td>3.. D <strong>溶血性黄疸的胆红素代谢特点（粪便与尿液）</strong><br>① 粪便颜色：<span class="blur-text">加深</span><br>② 经肠道吸收的胆素原量：<span class="blur-text">增加</span><br>③ 入血后滤过生成尿胆素原的比例：<span class="blur-text">不变</span><br>④ 尿胆素原的量：<span class="blur-text">增加</span><br>⑤ 尿液颜色：<span class="blur-text">加深</span></td>
+                            <td>3.. D <strong>溶血性黄疸的胆红素代谢特点（粪便与尿液）</strong><br>① 粪便颜色：<span class="answer-text">加深</span><br>② 经肠道吸收的胆素原量：<span class="answer-text">增加</span><br>③ 入血后滤过生成尿胆素原的比例：<span class="answer-text">不变</span><br>④ 尿胆素原的量：<span class="answer-text">增加</span><br>⑤ 尿液颜色：<span class="answer-text">加深</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>254</td>
+                            <td>3.. E <strong>阻塞性黄疸的胆红素代谢特点（来源与去路）</strong><br>① 未结合胆红素的来源：<span class="blur-text">不变</span><br>② 未结合胆红素的去路（肝细胞处理胆红素的能力）：<span class="blur-text">不变</span></td>
+                            <td>3.. E <strong>阻塞性黄疸的胆红素代谢特点（来源与去路）</strong><br>① 未结合胆红素的来源：<span class="answer-text">不变</span><br>② 未结合胆红素的去路（肝细胞处理胆红素的能力）：<span class="answer-text">不变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>255</td>
+                            <td>3.. F <strong>阻塞性黄疸的胆红素代谢特点（血液与肝脏）</strong><br>① 血液中未结合胆红素的量：<span class="blur-text">不变</span><br>② 肝脏处理后生成的结合胆红素：<span class="blur-text">不变</span></td>
+                            <td>3.. F <strong>阻塞性黄疸的胆红素代谢特点（血液与肝脏）</strong><br>① 血液中未结合胆红素的量：<span class="answer-text">不变</span><br>② 肝脏处理后生成的结合胆红素：<span class="answer-text">不变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>256</td>
+                            <td>3.. G <strong>阻塞性黄疸的胆红素代谢特点（排泄与肠道）</strong><br>① 血中结合胆红素：<span class="blur-text">出现</span><br>② 排入肠道的结合胆红素：<span class="blur-text">减少</span><br>③ 尿胆红素：<span class="blur-text">出现</span><br>④ 肠道内胆素原的量：<span class="blur-text">减少</span></td>
+                            <td>3.. G <strong>阻塞性黄疸的胆红素代谢特点（排泄与肠道）</strong><br>① 血中结合胆红素：<span class="answer-text">出现</span><br>② 排入肠道的结合胆红素：<span class="answer-text">减少</span><br>③ 尿胆红素：<span class="answer-text">出现</span><br>④ 肠道内胆素原的量：<span class="answer-text">减少</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>257</td>
+                            <td>3.. H <strong>阻塞性黄疸的胆红素代谢特点（粪便与尿液）</strong><br>① 粪便颜色：<span class="blur-text">变浅（完全阻塞时白陶土色）</span><br>② 经肠道吸收的胆素原量：<span class="blur-text">减少</span><br>③ 入血后滤过生成尿胆素原的比例：<span class="blur-text">不变</span><br>④ 尿胆素原的量：<span class="blur-text">减少</span><br>⑤ 尿液颜色：<span class="blur-text">通常加深</span></td>
+                            <td>3.. H <strong>阻塞性黄疸的胆红素代谢特点（粪便与尿液）</strong><br>① 粪便颜色：<span class="answer-text">变浅（完全阻塞时白陶土色）</span><br>② 经肠道吸收的胆素原量：<span class="answer-text">减少</span><br>③ 入血后滤过生成尿胆素原的比例：<span class="answer-text">不变</span><br>④ 尿胆素原的量：<span class="answer-text">减少</span><br>⑤ 尿液颜色：<span class="answer-text">通常加深</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>258</td>
+                            <td>3.. I <strong>肝细胞性黄疸的胆红素代谢特点（来源与去路）</strong><br>① 未结合胆红素的来源：<span class="blur-text">不变</span><br>② 未结合胆红素的去路（肝细胞处理胆红素的能力）：<span class="blur-text">减少</span></td>
+                            <td>3.. I <strong>肝细胞性黄疸的胆红素代谢特点（来源与去路）</strong><br>① 未结合胆红素的来源：<span class="answer-text">不变</span><br>② 未结合胆红素的去路（肝细胞处理胆红素的能力）：<span class="answer-text">减少</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>259</td>
+                            <td>3.. J <strong>肝细胞性黄疸的胆红素代谢特点（血液与肝脏）</strong><br>① 血液中未结合胆红素的量：<span class="blur-text">增加</span><br>② 肝脏处理后生成的结合胆红素：<span class="blur-text">减少</span></td>
+                            <td>3.. J <strong>肝细胞性黄疸的胆红素代谢特点（血液与肝脏）</strong><br>① 血液中未结合胆红素的量：<span class="answer-text">增加</span><br>② 肝脏处理后生成的结合胆红素：<span class="answer-text">减少</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>260</td>
+                            <td>3.. K <strong>肝细胞性黄疸的胆红素代谢特点（排泄与肠道）</strong><br>① 血中结合胆红素：<span class="blur-text">出现</span><br>② 排入肠道的结合胆红素：<span class="blur-text">减少</span><br>③ 尿胆红素：<span class="blur-text">出现</span><br>④ 肠道内胆素原的量：<span class="blur-text">减少</span></td>
+                            <td>3.. K <strong>肝细胞性黄疸的胆红素代谢特点（排泄与肠道）</strong><br>① 血中结合胆红素：<span class="answer-text">出现</span><br>② 排入肠道的结合胆红素：<span class="answer-text">减少</span><br>③ 尿胆红素：<span class="answer-text">出现</span><br>④ 肠道内胆素原的量：<span class="answer-text">减少</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>261</td>
+                            <td>3.. L <strong>肝细胞性黄疸的胆红素代谢特点（粪便与尿液）</strong><br>① 粪便颜色：<span class="blur-text">变浅</span><br>② 经肠道吸收的胆素原量：<span class="blur-text">减少</span><br>③ 入血后滤过生成尿胆素原的比例：<span class="blur-text">增加</span><br>④ 尿胆素原的量：<span class="blur-text">不一定</span><br>⑤ 尿液颜色：<span class="blur-text">变深</span></td>
+                            <td>3.. L <strong>肝细胞性黄疸的胆红素代谢特点（粪便与尿液）</strong><br>① 粪便颜色：<span class="answer-text">变浅</span><br>② 经肠道吸收的胆素原量：<span class="answer-text">减少</span><br>③ 入血后滤过生成尿胆素原的比例：<span class="answer-text">增加</span><br>④ 尿胆素原的量：<span class="answer-text">不一定</span><br>⑤ 尿液颜色：<span class="answer-text">变深</span></td>
+                        </tr>
+                    
+                        <tr class="title-row" id="11-24"><td colspan="3"><strong>【11月24日】27直播生物化学教材带读第16课思考题 （答案）</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>262</td>
+                            <td>1.. A <strong>癌基因的基本概念</strong><br>是能导致细胞发生 <span class="blur-text">恶性转化</span> 和诱发 <span class="blur-text">癌症</span> 的基因</td>
+                            <td>1.. A <strong>癌基因的基本概念</strong><br>是能导致细胞发生 <span class="answer-text">恶性转化</span> 和诱发 <span class="answer-text">癌症</span> 的基因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>263</td>
+                            <td>1.. B <strong>原癌基因的基本概念</strong><br>所编码的蛋白质在正常条件下并不具 <span class="blur-text">致癌活性</span>，原癌基因只有经过 <span class="blur-text">突变</span> 等被活化后才有致癌活性，转变为 <span class="blur-text">癌基因</span></td>
+                            <td>1.. B <strong>原癌基因的基本概念</strong><br>所编码的蛋白质在正常条件下并不具 <span class="answer-text">致癌活性</span>，原癌基因只有经过 <span class="answer-text">突变</span> 等被活化后才有致癌活性，转变为 <span class="answer-text">癌基因</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>264</td>
+                            <td>1.. C <strong>原癌基因表达产物的作用</strong><br>对细胞 <span class="blur-text">正常生长</span>、<span class="blur-text">增殖</span> 和 <span class="blur-text">分化</span> 起着精确的调控作用</td>
+                            <td>1.. C <strong>原癌基因表达产物的作用</strong><br>对细胞 <span class="answer-text">正常生长</span>、<span class="answer-text">增殖</span> 和 <span class="answer-text">分化</span> 起着精确的调控作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>265</td>
+                            <td>2.. A <strong>SRC原癌基因家族</strong><br>该基因家族的产物具有 <span class="blur-text">酪氨酸激酶</span> 活性，在细胞内常位于 <span class="blur-text">膜的内侧部分</span></td>
+                            <td>2.. A <strong>SRC原癌基因家族</strong><br>该基因家族的产物具有 <span class="answer-text">酪氨酸激酶</span> 活性，在细胞内常位于 <span class="answer-text">膜的内侧部分</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>266</td>
+                            <td>2.. B <strong>RAS原癌基因家族</strong><br>RAS基因编码 <span class="blur-text">低分子量G蛋白</span></td>
+                            <td>2.. B <strong>RAS原癌基因家族</strong><br>RAS基因编码 <span class="answer-text">低分子量G蛋白</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>267</td>
+                            <td>2.. C <strong>MYC原癌基因家族</strong><br>MYC基因家族编码 <span class="blur-text">转录因子</span></td>
+                            <td>2.. C <strong>MYC原癌基因家族</strong><br>MYC基因家族编码 <span class="answer-text">转录因子</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>268</td>
+                            <td>3.. A <strong>病毒导致肿瘤的方式（含癌基因）</strong><br>某些病毒的基因组中含有 <span class="blur-text">癌基因</span></td>
+                            <td>3.. A <strong>病毒导致肿瘤的方式（含癌基因）</strong><br>某些病毒的基因组中含有 <span class="answer-text">癌基因</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>269</td>
+                            <td>3.. B <strong>病毒导致肿瘤的方式（启动子转移）</strong><br>某些病毒可以将其较强的 <span class="blur-text">启动子</span> 转移到宿主的 <span class="blur-text">原癌基因</span> 附近从而将其激活为癌基因</td>
+                            <td>3.. B <strong>病毒导致肿瘤的方式（启动子转移）</strong><br>某些病毒可以将其较强的 <span class="answer-text">启动子</span> 转移到宿主的 <span class="answer-text">原癌基因</span> 附近从而将其激活为癌基因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>270</td>
+                            <td>4.. A <strong>原癌基因活化方式——基因突变举例</strong><br><span class="blur-text">膀胱癌</span>【<span class="blur-text">H-RAS</span> 中的GGC突变为GTC】</td>
+                            <td>4.. A <strong>原癌基因活化方式——基因突变举例</strong><br><span class="answer-text">膀胱癌</span>【<span class="answer-text">H-RAS</span> 中的GGC突变为GTC】</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>271</td>
+                            <td>4.. B <strong>原癌基因活化方式——基因扩增举例</strong><br><span class="blur-text">小细胞肺癌</span>【<span class="blur-text">MYC</span> 的扩增】、<span class="blur-text">乳腺癌</span>【<span class="blur-text">HER2</span> 的扩增】</td>
+                            <td>4.. B <strong>原癌基因活化方式——基因扩增举例</strong><br><span class="answer-text">小细胞肺癌</span>【<span class="answer-text">MYC</span> 的扩增】、<span class="answer-text">乳腺癌</span>【<span class="answer-text">HER2</span> 的扩增】</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>272</td>
+                            <td>4.. C <strong>原癌基因活化方式——染色体易位举例</strong><br>原癌基因表达增强【<span class="blur-text">Burkitt淋巴瘤</span> 细胞】、产生新的融合基因【<span class="blur-text">髓性白血病(CML)</span>，产生<span class="blur-text">BCR-ABL</span> 融合基因】</td>
+                            <td>4.. C <strong>原癌基因活化方式——染色体易位举例</strong><br>原癌基因表达增强【<span class="answer-text">Burkitt淋巴瘤</span> 细胞】、产生新的融合基因【<span class="answer-text">髓性白血病(CML)</span>，产生<span class="answer-text">BCR-ABL</span> 融合基因】</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>273</td>
+                            <td>4.. D <strong>原癌基因活化方式——获得启动子或增强子</strong><br>获得 <span class="blur-text">启动子</span> 或 <span class="blur-text">增强子</span></td>
+                            <td>4.. D <strong>原癌基因活化方式——获得启动子或增强子</strong><br>获得 <span class="answer-text">启动子</span> 或 <span class="answer-text">增强子</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>274</td>
+                            <td>5.. <strong>生长因子的定义</strong><br>是一类由 <span class="blur-text">细胞分泌</span> 的、类似于 <span class="blur-text">激素</span> 的信号分子，多数为 <span class="blur-text">肽类</span> 或 <span class="blur-text">蛋白质类</span> 物质，具有调节细胞 <span class="blur-text">生长</span> 与 <span class="blur-text">分化</span> 的作用</td>
+                            <td>5.. <strong>生长因子的定义</strong><br>是一类由 <span class="answer-text">细胞分泌</span> 的、类似于 <span class="answer-text">激素</span> 的信号分子，多数为 <span class="answer-text">肽类</span> 或 <span class="answer-text">蛋白质类</span> 物质，具有调节细胞 <span class="answer-text">生长</span> 与 <span class="answer-text">分化</span> 的作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>275</td>
+                            <td>6.. A <strong>生长因子的作用模式</strong><br>包括 <span class="blur-text">内分泌方式</span>、<span class="blur-text">旁分泌方式</span>、<span class="blur-text">自分泌方式</span></td>
+                            <td>6.. A <strong>生长因子的作用模式</strong><br>包括 <span class="answer-text">内分泌方式</span>、<span class="answer-text">旁分泌方式</span>、<span class="answer-text">自分泌方式</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>276</td>
+                            <td>6.. B <strong>生长因子主要的模式</strong><br>以 <span class="blur-text">旁分泌方式</span> 和 <span class="blur-text">自分泌方式</span> 为主</td>
+                            <td>6.. B <strong>生长因子主要的模式</strong><br>以 <span class="answer-text">旁分泌方式</span> 和 <span class="answer-text">自分泌方式</span> 为主</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>277</td>
+                            <td>7.. A <strong>生长因子信号转导——细胞外生长因子</strong><br><span class="blur-text">SIS</span>、<span class="blur-text">INT-2</span></td>
+                            <td>7.. A <strong>生长因子信号转导——细胞外生长因子</strong><br><span class="answer-text">SIS</span>、<span class="answer-text">INT-2</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>278</td>
+                            <td>7.. B <strong>生长因子信号转导——跨膜生长因子受体</strong><br><span class="blur-text">EGFR</span>、<span class="blur-text">HER2</span>、<span class="blur-text">FMS</span>、<span class="blur-text">KIT</span>、<span class="blur-text">TRK</span></td>
+                            <td>7.. B <strong>生长因子信号转导——跨膜生长因子受体</strong><br><span class="answer-text">EGFR</span>、<span class="answer-text">HER2</span>、<span class="answer-text">FMS</span>、<span class="answer-text">KIT</span>、<span class="answer-text">TRK</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>279</td>
+                            <td>7.. C <strong>生长因子信号转导——细胞内信号转导分子</strong><br>非受体酪氨酸激酶 <span class="blur-text">SRC</span>、<span class="blur-text">ABL</span> 等，丝/苏氨酸激酶 <span class="blur-text">RAF</span> 等，低分子量G蛋白 <span class="blur-text">RAS</span> 等</td>
+                            <td>7.. C <strong>生长因子信号转导——细胞内信号转导分子</strong><br>非受体酪氨酸激酶 <span class="answer-text">SRC</span>、<span class="answer-text">ABL</span> 等，丝/苏氨酸激酶 <span class="answer-text">RAF</span> 等，低分子量G蛋白 <span class="answer-text">RAS</span> 等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>280</td>
+                            <td>7.. D <strong>生长因子信号转导——核内转录因子</strong><br><span class="blur-text">MYC</span>、<span class="blur-text">FOS</span>、<span class="blur-text">JUN</span></td>
+                            <td>7.. D <strong>生长因子信号转导——核内转录因子</strong><br><span class="answer-text">MYC</span>、<span class="answer-text">FOS</span>、<span class="answer-text">JUN</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>281</td>
+                            <td>8.. A <strong>作为肿瘤治疗分子靶点的癌基因——BRAF</strong><br>是 <span class="blur-text">黑素瘤</span> 治疗的重要分子靶点</td>
+                            <td>8.. A <strong>作为肿瘤治疗分子靶点的癌基因——BRAF</strong><br>是 <span class="answer-text">黑素瘤</span> 治疗的重要分子靶点</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>282</td>
+                            <td>8.. B <strong>作为肿瘤治疗分子靶点的癌基因——HER2</strong><br>是 <span class="blur-text">乳腺癌</span> 治疗的重要分子靶点</td>
+                            <td>8.. B <strong>作为肿瘤治疗分子靶点的癌基因——HER2</strong><br>是 <span class="answer-text">乳腺癌</span> 治疗的重要分子靶点</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>283</td>
+                            <td>8.. C <strong>作为肿瘤治疗分子靶点的癌基因——BCR-ABL</strong><br>是 <span class="blur-text">慢性髓性白血病</span> 治疗的重要分子靶点</td>
+                            <td>8.. C <strong>作为肿瘤治疗分子靶点的癌基因——BCR-ABL</strong><br>是 <span class="answer-text">慢性髓性白血病</span> 治疗的重要分子靶点</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>284</td>
+                            <td>9.. <strong>抑癌基因的基本概念</strong><br>也称 <span class="blur-text">肿瘤抑制基因</span>，是 <span class="blur-text">防止</span> 或 <span class="blur-text">阻止</span> 癌症发生的基因。与原癌基因活化诱发癌变的作用相反，抑癌基因的部分或全部失活可显著增加 <span class="blur-text">癌症发生风险</span></td>
+                            <td>9.. <strong>抑癌基因的基本概念</strong><br>也称 <span class="answer-text">肿瘤抑制基因</span>，是 <span class="answer-text">防止</span> 或 <span class="answer-text">阻止</span> 癌症发生的基因。与原癌基因活化诱发癌变的作用相反，抑癌基因的部分或全部失活可显著增加 <span class="answer-text">癌症发生风险</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>285</td>
+                            <td>10.. <strong>抑癌基因失活的特点</strong><br>原癌基因的两个等位基因只要激活 <span class="blur-text">一个</span> 就能发挥促癌作用，而抑癌基因则往往需要两个等位基因都 <span class="blur-text">失活</span> 才会导致其抑癌功能完全丧失</td>
+                            <td>10.. <strong>抑癌基因失活的特点</strong><br>原癌基因的两个等位基因只要激活 <span class="answer-text">一个</span> 就能发挥促癌作用，而抑癌基因则往往需要两个等位基因都 <span class="answer-text">失活</span> 才会导致其抑癌功能完全丧失</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>286</td>
+                            <td>11.. A <strong>抑癌基因失活方式——基因突变举例</strong><br><span class="blur-text">TP53</span> 基因</td>
+                            <td>11.. A <strong>抑癌基因失活方式——基因突变举例</strong><br><span class="answer-text">TP53</span> 基因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>287</td>
+                            <td>11.. B <strong>抑癌基因失活方式——杂合丢失举例</strong><br><span class="blur-text">RB</span> 基因</td>
+                            <td>11.. B <strong>抑癌基因失活方式——杂合丢失举例</strong><br><span class="answer-text">RB</span> 基因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>288</td>
+                            <td>11.. C <strong>抑癌基因失活方式——启动子区甲基化举例</strong><br><span class="blur-text">VHL</span> 基因、<span class="blur-text">APC</span> 基因</td>
+                            <td>11.. C <strong>抑癌基因失活方式——启动子区甲基化举例</strong><br><span class="answer-text">VHL</span> 基因、<span class="answer-text">APC</span> 基因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>289</td>
+                            <td>12.. <strong>RB基因的抑癌机制</strong><br>主要通过调控 <span class="blur-text">细胞周期检查点</span> 而发挥其抑癌功能</td>
+                            <td>12.. <strong>RB基因的抑癌机制</strong><br>主要通过调控 <span class="answer-text">细胞周期检查点</span> 而发挥其抑癌功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>290</td>
+                            <td>13.. <strong>TP53基因的抑癌机制</strong><br>主要通过调控 <span class="blur-text">DNA损伤应答</span> 和诱发 <span class="blur-text">细胞凋亡</span> 而发挥其抑癌功能</td>
+                            <td>13.. <strong>TP53基因的抑癌机制</strong><br>主要通过调控 <span class="answer-text">DNA损伤应答</span> 和诱发 <span class="answer-text">细胞凋亡</span> 而发挥其抑癌功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>291</td>
+                            <td>14.. <strong>PTEN基因的抑癌机制</strong><br>主要通过抑制 <span class="blur-text">PI3K/AKT信号通路</span> 而发挥其抑癌功能</td>
+                            <td>14.. <strong>PTEN基因的抑癌机制</strong><br>主要通过抑制 <span class="answer-text">PI3K/AKT信号通路</span> 而发挥其抑癌功能</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

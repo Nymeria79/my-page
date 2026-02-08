@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月1日】27直播病理带读课第1课思考题 （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>生理性萎缩</strong><br>定义：人体的许多组织器官随<span class="blur-text">年龄增长</span>发生的萎缩<br>举例：① <span class="blur-text">胸腺</span>的青春期萎缩 ② <span class="blur-text">生殖系统</span>的更年期后萎缩</td>
+                            <td>1.. <strong>生理性萎缩</strong><br>定义：人体的许多组织器官随<span class="answer-text">年龄增长</span>发生的萎缩<br>举例：① <span class="answer-text">胸腺</span>的青春期萎缩 ② <span class="answer-text">生殖系统</span>的更年期后萎缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>营养不良性萎缩</strong><br>定义：因<span class="blur-text">蛋白质摄入不足</span>、消耗过多和<span class="blur-text">血液供应不足</span>所致的萎缩<br>举例：① <span class="blur-text">慢性消耗性疾病</span>肌肉萎缩 ② <span class="blur-text">脑动脉硬化</span>→脑萎缩</td>
+                            <td>2.. <strong>营养不良性萎缩</strong><br>定义：因<span class="answer-text">蛋白质摄入不足</span>、消耗过多和<span class="answer-text">血液供应不足</span>所致的萎缩<br>举例：① <span class="answer-text">慢性消耗性疾病</span>肌肉萎缩 ② <span class="answer-text">脑动脉硬化</span>→脑萎缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>压迫性萎缩</strong><br>定义：组织与器官<span class="blur-text">长期受压</span>产生的萎缩<br>举例：<span class="blur-text">尿路梗阻</span>→肾萎缩</td>
+                            <td>3.. <strong>压迫性萎缩</strong><br>定义：组织与器官<span class="answer-text">长期受压</span>产生的萎缩<br>举例：<span class="answer-text">尿路梗阻</span>→肾萎缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>失用性萎缩</strong><br>定义：因器官组织<span class="blur-text">长期工作负荷减少</span>和功能低下所致的萎缩<br>举例：<span class="blur-text">久卧不动</span>→肌肉萎缩</td>
+                            <td>4.. <strong>失用性萎缩</strong><br>定义：因器官组织<span class="answer-text">长期工作负荷减少</span>和功能低下所致的萎缩<br>举例：<span class="answer-text">久卧不动</span>→肌肉萎缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>去神经性萎缩</strong><br>定义：因<span class="blur-text">运动神经元</span>或<span class="blur-text">轴突损害</span>引起的效应器萎缩<br>举例：① <span class="blur-text">脊髓损伤</span>→肌肉萎缩 ② <span class="blur-text">小儿麻痹症</span></td>
+                            <td>5.. <strong>去神经性萎缩</strong><br>定义：因<span class="answer-text">运动神经元</span>或<span class="answer-text">轴突损害</span>引起的效应器萎缩<br>举例：① <span class="answer-text">脊髓损伤</span>→肌肉萎缩 ② <span class="answer-text">小儿麻痹症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>内分泌性萎缩</strong><br>定义：因<span class="blur-text">内分泌腺功能下降</span>引起的靶器官细胞萎缩<br>举例：<span class="blur-text">垂体缺血</span>→肾上腺萎缩</td>
+                            <td>6.. <strong>内分泌性萎缩</strong><br>定义：因<span class="answer-text">内分泌腺功能下降</span>引起的靶器官细胞萎缩<br>举例：<span class="answer-text">垂体缺血</span>→肾上腺萎缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>老化和损伤性萎缩</strong><br>原因：<span class="blur-text">神经细胞</span>和<span class="blur-text">心肌细胞</span>的萎缩是常见原因，凋亡也可导致<br>举例：<span class="blur-text">阿尔茨海默病</span>的大脑萎缩</td>
+                            <td>7.. <strong>老化和损伤性萎缩</strong><br>原因：<span class="answer-text">神经细胞</span>和<span class="answer-text">心肌细胞</span>的萎缩是常见原因，凋亡也可导致<br>举例：<span class="answer-text">阿尔茨海默病</span>的大脑萎缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. A <strong>被覆上皮（一）</strong><br>单层扁平上皮（<span class="blur-text">单层鳞状上皮</span>）：① <span class="blur-text">内皮</span>——心脏、血管和淋巴管 ② <span class="blur-text">间皮</span>——胸膜腔、腹膜腔和心包腔</td>
+                            <td>8.. A <strong>被覆上皮（一）</strong><br>单层扁平上皮（<span class="answer-text">单层鳞状上皮</span>）：① <span class="answer-text">内皮</span>——心脏、血管和淋巴管 ② <span class="answer-text">间皮</span>——胸膜腔、腹膜腔和心包腔</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>8.. B <strong>被覆上皮（二）</strong><br>① <span class="blur-text">单层立方上皮</span>——甲状腺、肾小管的上皮等<br>② <span class="blur-text">单层柱状上皮</span>——胃肠道、子宫腔等<br>③ <span class="blur-text">假复层纤毛柱状上皮</span>——呼吸道</td>
+                            <td>8.. B <strong>被覆上皮（二）</strong><br>① <span class="answer-text">单层立方上皮</span>——甲状腺、肾小管的上皮等<br>② <span class="answer-text">单层柱状上皮</span>——胃肠道、子宫腔等<br>③ <span class="answer-text">假复层纤毛柱状上皮</span>——呼吸道</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>8.. C <strong>被覆上皮（三）</strong><br>① <span class="blur-text">复层扁平上皮</span>（复层鳞状上皮）——皮肤表面、口腔、食管、阴道等<br>② <span class="blur-text">变移上皮</span>（移行上皮）——输尿管、膀胱等</td>
+                            <td>8.. C <strong>被覆上皮（三）</strong><br>① <span class="answer-text">复层扁平上皮</span>（复层鳞状上皮）——皮肤表面、口腔、食管、阴道等<br>② <span class="answer-text">变移上皮</span>（移行上皮）——输尿管、膀胱等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>9.. <strong>腺上皮</strong><br>① <span class="blur-text">外分泌腺</span>（有管腺）：如汗腺、唾液腺、胃腺、胰腺等<br>② <span class="blur-text">内分泌腺</span>（无管腺）：如甲状腺、肾上腺等</td>
+                            <td>9.. <strong>腺上皮</strong><br>① <span class="answer-text">外分泌腺</span>（有管腺）：如汗腺、唾液腺、胃腺、胰腺等<br>② <span class="answer-text">内分泌腺</span>（无管腺）：如甲状腺、肾上腺等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10.. A <strong>上皮组织化生——鳞化（最常见）</strong><br>① 支气管<span class="blur-text">假复层纤毛柱状上皮</span>→鳞状上皮——<span class="blur-text">慢性支气管炎</span><br>② 宫颈<span class="blur-text">黏液柱状上皮</span>→鳞状上皮——<span class="blur-text">慢性宫颈炎</span><br>③ 膀胱、肾盂、输尿管<span class="blur-text">移行上皮</span>→鳞状上皮——尿路慢性炎、膀胱慢性炎</td>
+                            <td>10.. A <strong>上皮组织化生——鳞化（最常见）</strong><br>① 支气管<span class="answer-text">假复层纤毛柱状上皮</span>→鳞状上皮——<span class="answer-text">慢性支气管炎</span><br>② 宫颈<span class="answer-text">黏液柱状上皮</span>→鳞状上皮——<span class="answer-text">慢性宫颈炎</span><br>③ 膀胱、肾盂、输尿管<span class="answer-text">移行上皮</span>→鳞状上皮——尿路慢性炎、膀胱慢性炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>10.. B <strong>上皮组织化生——鳞化（胆囊）及其他</strong><br>① 胆囊<span class="blur-text">黏液柱状上皮</span>→鳞状上皮——<span class="blur-text">慢性胆囊炎</span>、胆结石<br>② <span class="blur-text">肠上皮化</span>：胃黏液柱状上皮→肠上皮——<span class="blur-text">慢性胃炎</span><br>③ <span class="blur-text">幽门腺化生</span>：胃窦胃体部腺体→幽门腺——慢性胃炎</td>
+                            <td>10.. B <strong>上皮组织化生——鳞化（胆囊）及其他</strong><br>① 胆囊<span class="answer-text">黏液柱状上皮</span>→鳞状上皮——<span class="answer-text">慢性胆囊炎</span>、胆结石<br>② <span class="answer-text">肠上皮化</span>：胃黏液柱状上皮→肠上皮——<span class="answer-text">慢性胃炎</span><br>③ <span class="answer-text">幽门腺化生</span>：胃窦胃体部腺体→幽门腺——慢性胃炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>10.. C <strong>上皮组织化生——Barrett食管及间叶组织化生</strong><br>① <span class="blur-text">Barrett食管炎</span>：食管下段的<span class="blur-text">鳞状上皮</span>→胃/肠型柱状上皮化生<br>② 间叶组织化生：幼稚的<span class="blur-text">成纤维细胞</span>→骨/软骨——<span class="blur-text">骨化性肌炎</span>、结缔组织损伤</td>
+                            <td>10.. C <strong>上皮组织化生——Barrett食管及间叶组织化生</strong><br>① <span class="answer-text">Barrett食管炎</span>：食管下段的<span class="answer-text">鳞状上皮</span>→胃/肠型柱状上皮化生<br>② 间叶组织化生：幼稚的<span class="answer-text">成纤维细胞</span>→骨/软骨——<span class="answer-text">骨化性肌炎</span>、结缔组织损伤</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>11.. A <strong>细胞内蓄积——玻璃样小滴与Russell小体</strong><br>① <span class="blur-text">玻璃样小滴</span>：<span class="blur-text">肾小管上皮</span>细胞，蓄积<span class="blur-text">原尿蛋白</span>——<span class="blur-text">肾病综合症</span><br>② <span class="blur-text">Russell小体</span>：<span class="blur-text">浆细胞</span>，蓄积<span class="blur-text">免疫球蛋白</span>——<span class="blur-text">慢性炎症</span></td>
+                            <td>11.. A <strong>细胞内蓄积——玻璃样小滴与Russell小体</strong><br>① <span class="answer-text">玻璃样小滴</span>：<span class="answer-text">肾小管上皮</span>细胞，蓄积<span class="answer-text">原尿蛋白</span>——<span class="answer-text">肾病综合症</span><br>② <span class="answer-text">Russell小体</span>：<span class="answer-text">浆细胞</span>，蓄积<span class="answer-text">免疫球蛋白</span>——<span class="answer-text">慢性炎症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>11.. B <strong>细胞内蓄积——Mallory小体与Councilman小体</strong><br>① <span class="blur-text">Mallory小体</span>：<span class="blur-text">肝细胞浆</span>，蓄积<span class="blur-text">前角蛋白</span>——<span class="blur-text">酒精性肝病</span><br>② <span class="blur-text">Councilman小体</span>：<span class="blur-text">细胞凋亡</span>形成的<span class="blur-text">嗜酸性小体</span>——<span class="blur-text">急性病毒肝炎</span></td>
+                            <td>11.. B <strong>细胞内蓄积——Mallory小体与Councilman小体</strong><br>① <span class="answer-text">Mallory小体</span>：<span class="answer-text">肝细胞浆</span>，蓄积<span class="answer-text">前角蛋白</span>——<span class="answer-text">酒精性肝病</span><br>② <span class="answer-text">Councilman小体</span>：<span class="answer-text">细胞凋亡</span>形成的<span class="answer-text">嗜酸性小体</span>——<span class="answer-text">急性病毒肝炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>11.. C <strong>细胞内蓄积——Negri小体与石棉小体</strong><br>① <span class="blur-text">Negri小体</span>：<span class="blur-text">神经细胞胞浆</span>，蓄积<span class="blur-text">病毒包涵体</span>——<span class="blur-text">狂犬病</span><br>② <span class="blur-text">石棉小体</span>（Ferruginous小体）：<span class="blur-text">肺泡巨噬细胞</span>，蓄积<span class="blur-text">铁蛋白</span>——<span class="blur-text">石棉肺</span></td>
+                            <td>11.. C <strong>细胞内蓄积——Negri小体与石棉小体</strong><br>① <span class="answer-text">Negri小体</span>：<span class="answer-text">神经细胞胞浆</span>，蓄积<span class="answer-text">病毒包涵体</span>——<span class="answer-text">狂犬病</span><br>② <span class="answer-text">石棉小体</span>（Ferruginous小体）：<span class="answer-text">肺泡巨噬细胞</span>，蓄积<span class="answer-text">铁蛋白</span>——<span class="answer-text">石棉肺</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>12.. <strong>营养不良性钙化</strong><br>定义：钙盐沉积于<span class="blur-text">坏死</span>、<span class="blur-text">出血</span>、<span class="blur-text">血栓</span>、粥样斑块或异物中<br>病因：局部<span class="blur-text">碱性磷酸酶</span>增多<br>常见部位：<span class="blur-text">结核病的干酪样坏死</span>、血栓、<span class="blur-text">动脉粥样硬化的粥样斑块</span>、瘢痕组织</td>
+                            <td>12.. <strong>营养不良性钙化</strong><br>定义：钙盐沉积于<span class="answer-text">坏死</span>、<span class="answer-text">出血</span>、<span class="answer-text">血栓</span>、粥样斑块或异物中<br>病因：局部<span class="answer-text">碱性磷酸酶</span>增多<br>常见部位：<span class="answer-text">结核病的干酪样坏死</span>、血栓、<span class="answer-text">动脉粥样硬化的粥样斑块</span>、瘢痕组织</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>13.. <strong>转移性钙化</strong><br>定义：由于全身<span class="blur-text">钙磷代谢失常</span>而致钙盐沉积于<span class="blur-text">正常组织内</span><br>病因：<span class="blur-text">甲旁亢</span>、骨肿瘤、<span class="blur-text">vitD摄入过多</span>、肾衰<br>常见部位：常见于<span class="blur-text">血管</span>及<span class="blur-text">肾</span>、<span class="blur-text">肺</span>、<span class="blur-text">胃</span>的间质组织（<span class="blur-text">排酸器官</span>）</td>
+                            <td>13.. <strong>转移性钙化</strong><br>定义：由于全身<span class="answer-text">钙磷代谢失常</span>而致钙盐沉积于<span class="answer-text">正常组织内</span><br>病因：<span class="answer-text">甲旁亢</span>、骨肿瘤、<span class="answer-text">vitD摄入过多</span>、肾衰<br>常见部位：常见于<span class="answer-text">血管</span>及<span class="answer-text">肾</span>、<span class="answer-text">肺</span>、<span class="answer-text">胃</span>的间质组织（<span class="answer-text">排酸器官</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>14.. <strong>细胞水肿</strong><br>部位：<span class="blur-text">细胞内</span><br>蓄积物：<span class="blur-text">水</span>和<span class="blur-text">Na+</span><br>组织器官：缺氧、感染、中毒时<span class="blur-text">肝</span>、<span class="blur-text">心</span>、<span class="blur-text">肾</span>的实质细胞</td>
+                            <td>14.. <strong>细胞水肿</strong><br>部位：<span class="answer-text">细胞内</span><br>蓄积物：<span class="answer-text">水</span>和<span class="answer-text">Na+</span><br>组织器官：缺氧、感染、中毒时<span class="answer-text">肝</span>、<span class="answer-text">心</span>、<span class="answer-text">肾</span>的实质细胞</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>15.. <strong>脂肪变</strong><br>部位：<span class="blur-text">细胞内</span><br>蓄积物：<span class="blur-text">甘油三酯</span><br>组织器官：<span class="blur-text">肝</span>（最常见）、<span class="blur-text">心</span>（<span class="blur-text">虎斑心</span>）、骨骼肌细胞、肾小管上皮</td>
+                            <td>15.. <strong>脂肪变</strong><br>部位：<span class="answer-text">细胞内</span><br>蓄积物：<span class="answer-text">甘油三酯</span><br>组织器官：<span class="answer-text">肝</span>（最常见）、<span class="answer-text">心</span>（<span class="answer-text">虎斑心</span>）、骨骼肌细胞、肾小管上皮</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>16.. <strong>玻璃样变</strong><br>部位：<span class="blur-text">细胞内</span>、<span class="blur-text">细胞间质</span><br>蓄积物：<span class="blur-text">蛋白质</span><br>组织器官：细胞内（<span class="blur-text">Mallory小体</span>、<span class="blur-text">Russell小体</span>）、<span class="blur-text">纤维结缔组织</span>、<span class="blur-text">细动脉壁</span></td>
+                            <td>16.. <strong>玻璃样变</strong><br>部位：<span class="answer-text">细胞内</span>、<span class="answer-text">细胞间质</span><br>蓄积物：<span class="answer-text">蛋白质</span><br>组织器官：细胞内（<span class="answer-text">Mallory小体</span>、<span class="answer-text">Russell小体</span>）、<span class="answer-text">纤维结缔组织</span>、<span class="answer-text">细动脉壁</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>17.. <strong>淀粉样变</strong><br>部位：<span class="blur-text">细胞间质</span><br>蓄积物：<span class="blur-text">蛋白质-黏多糖复合物</span><br>组织器官：皮肤、结膜、舌、喉、肺</td>
+                            <td>17.. <strong>淀粉样变</strong><br>部位：<span class="answer-text">细胞间质</span><br>蓄积物：<span class="answer-text">蛋白质-黏多糖复合物</span><br>组织器官：皮肤、结膜、舌、喉、肺</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>18.. <strong>黏液样变</strong><br>部位：<span class="blur-text">细胞间质</span><br>蓄积物：<span class="blur-text">蛋白质</span>和<span class="blur-text">黏多糖</span><br>组织器官：<span class="blur-text">间叶组织肿瘤</span>、<span class="blur-text">风湿病</span>、<span class="blur-text">动脉硬化</span></td>
+                            <td>18.. <strong>黏液样变</strong><br>部位：<span class="answer-text">细胞间质</span><br>蓄积物：<span class="answer-text">蛋白质</span>和<span class="answer-text">黏多糖</span><br>组织器官：<span class="answer-text">间叶组织肿瘤</span>、<span class="answer-text">风湿病</span>、<span class="answer-text">动脉硬化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>19.. <strong>病理性色素沉着</strong><br>部位：<span class="blur-text">细胞内</span>、<span class="blur-text">细胞间质</span><br>蓄积物：<span class="blur-text">有色物质</span><br>组织器官：图略</td>
+                            <td>19.. <strong>病理性色素沉着</strong><br>部位：<span class="answer-text">细胞内</span>、<span class="answer-text">细胞间质</span><br>蓄积物：<span class="answer-text">有色物质</span><br>组织器官：图略</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>20.. <strong>病理性钙化</strong><br>部位：<span class="blur-text">细胞内</span>、<span class="blur-text">细胞间质</span><br>蓄积物：<span class="blur-text">磷酸钙</span>、<span class="blur-text">碳酸钙</span><br>病因：<span class="blur-text">甲状旁腺功能亢进</span>、骨肿瘤、<span class="blur-text">维生素D摄入过多</span></td>
+                            <td>20.. <strong>病理性钙化</strong><br>部位：<span class="answer-text">细胞内</span>、<span class="answer-text">细胞间质</span><br>蓄积物：<span class="answer-text">磷酸钙</span>、<span class="answer-text">碳酸钙</span><br>病因：<span class="answer-text">甲状旁腺功能亢进</span>、骨肿瘤、<span class="answer-text">维生素D摄入过多</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月22日】27直播病理学带读第13课思考题（答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>1.. <strong>梅毒的病原体和主要传播途径</strong><br>病原体：<span class="blur-text">梅毒螺旋体</span><br>传播途径：<span class="blur-text">性传播</span></td>
+                            <td>1.. <strong>梅毒的病原体和主要传播途径</strong><br>病原体：<span class="answer-text">梅毒螺旋体</span><br>传播途径：<span class="answer-text">性传播</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>2.. A <strong>梅毒的基本病理变化</strong><br>变化：① <span class="blur-text">闭塞性动脉内膜炎</span> ② <span class="blur-text">小动脉周围炎</span> ③ <span class="blur-text">树胶样肿</span></td>
+                            <td>2.. A <strong>梅毒的基本病理变化</strong><br>变化：① <span class="answer-text">闭塞性动脉内膜炎</span> ② <span class="answer-text">小动脉周围炎</span> ③ <span class="answer-text">树胶样肿</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>2.. B <strong>三期梅毒特征性病变</strong><br>特征性病变：<span class="blur-text">树胶样肿</span></td>
+                            <td>2.. B <strong>三期梅毒特征性病变</strong><br>特征性病变：<span class="answer-text">树胶样肿</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>3.. <strong>形成树胶样肿的炎细胞</strong><br>主要炎细胞：<span class="blur-text">淋巴细胞</span>和<span class="blur-text">浆细胞</span></td>
+                            <td>3.. <strong>形成树胶样肿的炎细胞</strong><br>主要炎细胞：<span class="answer-text">淋巴细胞</span>和<span class="answer-text">浆细胞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>4.. <strong>梅毒传染性最强的阶段</strong><br>阶段：<span class="blur-text">二期梅毒</span></td>
+                            <td>4.. <strong>梅毒传染性最强的阶段</strong><br>阶段：<span class="answer-text">二期梅毒</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>5.. <strong>血吸虫感染人体及造成损害最严重的阶段</strong><br>感染人体阶段：<span class="blur-text">尾蚴</span><br>造成损害最严重阶段：<span class="blur-text">虫卵</span></td>
+                            <td>5.. <strong>血吸虫感染人体及造成损害最严重的阶段</strong><br>感染人体阶段：<span class="answer-text">尾蚴</span><br>造成损害最严重阶段：<span class="answer-text">虫卵</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>6.. <strong>形成嗜酸性脓肿的主要炎细胞</strong><br>主要炎细胞：<span class="blur-text">嗜酸性粒细胞</span></td>
+                            <td>6.. <strong>形成嗜酸性脓肿的主要炎细胞</strong><br>主要炎细胞：<span class="answer-text">嗜酸性粒细胞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>7.. <strong>急性虫卵结节周边的放射状嗜酸性物质</strong><br>物质：<span class="blur-text">抗原-抗体复合物</span></td>
+                            <td>7.. <strong>急性虫卵结节周边的放射状嗜酸性物质</strong><br>物质：<span class="answer-text">抗原-抗体复合物</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>8.. <strong>血吸虫病在结肠的并发症</strong><br>并发症：① <span class="blur-text">结肠溃疡</span> ② <span class="blur-text">肠梗阻</span> ③ <span class="blur-text">肠黏膜萎缩</span> ④ <span class="blur-text">结肠腺瘤</span> ⑤ <span class="blur-text">癌变</span></td>
+                            <td>8.. <strong>血吸虫病在结肠的并发症</strong><br>并发症：① <span class="answer-text">结肠溃疡</span> ② <span class="answer-text">肠梗阻</span> ③ <span class="answer-text">肠黏膜萎缩</span> ④ <span class="answer-text">结肠腺瘤</span> ⑤ <span class="answer-text">癌变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>9.. <strong>血吸虫病在肝脏的主要病变部位</strong><br>部位：<span class="blur-text">门管区</span></td>
+                            <td>9.. <strong>血吸虫病在肝脏的主要病变部位</strong><br>部位：<span class="answer-text">门管区</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>10.. <strong>血吸虫病导致门静脉高压的类型</strong><br>类型：<span class="blur-text">窦前性门静脉高压</span></td>
+                            <td>10.. <strong>血吸虫病导致门静脉高压的类型</strong><br>类型：<span class="answer-text">窦前性门静脉高压</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月3日】27直播病理带读课第2课思考题 （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>1.. <strong>肉芽组织的组成成分</strong><br>组成：① <span class="blur-text">新生毛细血管</span> ② <span class="blur-text">成纤维细胞</span> ③ <span class="blur-text">炎细胞</span></td>
+                            <td>1.. <strong>肉芽组织的组成成分</strong><br>组成：① <span class="answer-text">新生毛细血管</span> ② <span class="answer-text">成纤维细胞</span> ③ <span class="answer-text">炎细胞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>2.. <strong>肉芽组织中主要的炎细胞</strong><br>主要炎细胞：<span class="blur-text">巨噬细胞</span></td>
+                            <td>2.. <strong>肉芽组织中主要的炎细胞</strong><br>主要炎细胞：<span class="answer-text">巨噬细胞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>3.. <strong>肉芽组织最终的结局</strong><br>结局：<span class="blur-text">瘢痕组织</span></td>
+                            <td>3.. <strong>肉芽组织最终的结局</strong><br>结局：<span class="answer-text">瘢痕组织</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>4.. A <strong>肉芽组织成熟过程的特点（一）</strong><br>① <span class="blur-text">水分</span>减少<br>② <span class="blur-text">炎症细胞</span>减少<br>③ <span class="blur-text">毛细血管</span>的数量减少</td>
+                            <td>4.. A <strong>肉芽组织成熟过程的特点（一）</strong><br>① <span class="answer-text">水分</span>减少<br>② <span class="answer-text">炎症细胞</span>减少<br>③ <span class="answer-text">毛细血管</span>的数量减少</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>4.. B <strong>肉芽组织成熟过程的特点（二）</strong><br>④ 少数毛细血管改建为<span class="blur-text">小动脉</span>和<span class="blur-text">小静脉</span><br>⑤ <span class="blur-text">成纤维细胞</span>减少，<span class="blur-text">胶原纤维</span>越来越多，形成<span class="blur-text">玻璃样变</span></td>
+                            <td>4.. B <strong>肉芽组织成熟过程的特点（二）</strong><br>④ 少数毛细血管改建为<span class="answer-text">小动脉</span>和<span class="answer-text">小静脉</span><br>⑤ <span class="answer-text">成纤维细胞</span>减少，<span class="answer-text">胶原纤维</span>越来越多，形成<span class="answer-text">玻璃样变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>5.. <strong>新生血管形成的重要细胞因子</strong><br>细胞因子：① <span class="blur-text">血管内皮生长因子</span>（<span class="blur-text">VEGF</span>） ② <span class="blur-text">血管生成素</span></td>
+                            <td>5.. <strong>新生血管形成的重要细胞因子</strong><br>细胞因子：① <span class="answer-text">血管内皮生长因子</span>（<span class="answer-text">VEGF</span>） ② <span class="answer-text">血管生成素</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月5日】27直播病理学带读第3课思考题 （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>1.. <strong>血栓形成的定义</strong><br>定义：在<span class="blur-text">活体</span>、<span class="blur-text">心脏</span>和<span class="blur-text">血管内</span>，血液发生<span class="blur-text">凝固</span>或血液中某些<span class="blur-text">有形成分</span>凝集形成<span class="blur-text">固体质块</span>的过程</td>
+                            <td>1.. <strong>血栓形成的定义</strong><br>定义：在<span class="answer-text">活体</span>、<span class="answer-text">心脏</span>和<span class="answer-text">血管内</span>，血液发生<span class="answer-text">凝固</span>或血液中某些<span class="answer-text">有形成分</span>凝集形成<span class="answer-text">固体质块</span>的过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>2.. A <strong>血栓形成的高危因素（一）</strong><br>① <span class="blur-text">心血管内皮细胞损伤</span>——最重要和最常见的原因：<span class="blur-text">动静脉损伤</span>、<span class="blur-text">抽烟</span><br>② <span class="blur-text">血流状态改变</span>：<span class="blur-text">长期卧床</span>、形成<span class="blur-text">湍流</span></td>
+                            <td>2.. A <strong>血栓形成的高危因素（一）</strong><br>① <span class="answer-text">心血管内皮细胞损伤</span>——最重要和最常见的原因：<span class="answer-text">动静脉损伤</span>、<span class="answer-text">抽烟</span><br>② <span class="answer-text">血流状态改变</span>：<span class="answer-text">长期卧床</span>、形成<span class="answer-text">湍流</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>2.. B <strong>血栓形成的高危因素（二）</strong><br>③ <span class="blur-text">血液凝固性增加</span>：<span class="blur-text">肿瘤</span>、<span class="blur-text">化疗</span>、<span class="blur-text">烧伤</span>、<span class="blur-text">慢性疾病</span></td>
+                            <td>2.. B <strong>血栓形成的高危因素（二）</strong><br>③ <span class="answer-text">血液凝固性增加</span>：<span class="answer-text">肿瘤</span>、<span class="answer-text">化疗</span>、<span class="answer-text">烧伤</span>、<span class="answer-text">慢性疾病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>3.. A <strong>白色血栓（析出性血栓）</strong><br>组成成分：<span class="blur-text">血小板</span>+<span class="blur-text">纤维蛋白</span><br>特点：不易脱落<br>好发部位：血流较快的<span class="blur-text">心瓣膜</span>、<span class="blur-text">心腔内</span>和<span class="blur-text">动脉内</span>；构成静脉延续性血栓的<span class="blur-text">头部</span><br>常见疾病：<span class="blur-text">急性风湿性心内膜炎</span>（<span class="blur-text">二尖瓣</span>）、<span class="blur-text">非细菌性疣赘状心内膜炎</span>（二尖瓣和<span class="blur-text">三尖瓣</span>）</td>
+                            <td>3.. A <strong>白色血栓（析出性血栓）</strong><br>组成成分：<span class="answer-text">血小板</span>+<span class="answer-text">纤维蛋白</span><br>特点：不易脱落<br>好发部位：血流较快的<span class="answer-text">心瓣膜</span>、<span class="answer-text">心腔内</span>和<span class="answer-text">动脉内</span>；构成静脉延续性血栓的<span class="answer-text">头部</span><br>常见疾病：<span class="answer-text">急性风湿性心内膜炎</span>（<span class="answer-text">二尖瓣</span>）、<span class="answer-text">非细菌性疣赘状心内膜炎</span>（二尖瓣和<span class="answer-text">三尖瓣</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>3.. B <strong>混合血栓（层状血栓）</strong><br>组成成分：<span class="blur-text">血小板小梁</span>+梁间<span class="blur-text">纤维蛋白网</span>内<span class="blur-text">红细胞</span>+<span class="blur-text">白细胞</span>（纤维蛋白的分解产物趋化来的，主要是<span class="blur-text">中性粒细胞</span>）<br>好发部位：<span class="blur-text">心房</span>（<span class="blur-text">球状血栓</span>）、<span class="blur-text">动脉瘤</span>和<span class="blur-text">粥样斑块溃疡</span>处（<span class="blur-text">附壁血栓</span>）；构成静脉延续性血栓的<span class="blur-text">体部</span></td>
+                            <td>3.. B <strong>混合血栓（层状血栓）</strong><br>组成成分：<span class="answer-text">血小板小梁</span>+梁间<span class="answer-text">纤维蛋白网</span>内<span class="answer-text">红细胞</span>+<span class="answer-text">白细胞</span>（纤维蛋白的分解产物趋化来的，主要是<span class="answer-text">中性粒细胞</span>）<br>好发部位：<span class="answer-text">心房</span>（<span class="answer-text">球状血栓</span>）、<span class="answer-text">动脉瘤</span>和<span class="answer-text">粥样斑块溃疡</span>处（<span class="answer-text">附壁血栓</span>）；构成静脉延续性血栓的<span class="answer-text">体部</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>3.. C <strong>红色血栓与透明血栓</strong><br>红色血栓：<span class="blur-text">纤维蛋白</span>+<span class="blur-text">血细胞</span>，静脉延续性血栓的<span class="blur-text">尾部</span><br>透明血栓：由<span class="blur-text">纤维蛋白</span>构成，又称为<span class="blur-text">微血栓</span>、<span class="blur-text">纤维素性血栓</span>，发生于<span class="blur-text">微循环</span>的血管内，以<span class="blur-text">毛细血管</span>为主，最常见于<span class="blur-text">DIC</span></td>
+                            <td>3.. C <strong>红色血栓与透明血栓</strong><br>红色血栓：<span class="answer-text">纤维蛋白</span>+<span class="answer-text">血细胞</span>，静脉延续性血栓的<span class="answer-text">尾部</span><br>透明血栓：由<span class="answer-text">纤维蛋白</span>构成，又称为<span class="answer-text">微血栓</span>、<span class="answer-text">纤维素性血栓</span>，发生于<span class="answer-text">微循环</span>的血管内，以<span class="answer-text">毛细血管</span>为主，最常见于<span class="answer-text">DIC</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月6日】27直播病理学带读第4课思考题  （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>1.. <strong>炎症的概念</strong><br>定义：具有<span class="blur-text">血管系统</span>的<span class="blur-text">活体组织</span>对<span class="blur-text">损伤因子</span>的刺激发生的<span class="blur-text">复杂的防御反应</span></td>
+                            <td>1.. <strong>炎症的概念</strong><br>定义：具有<span class="answer-text">血管系统</span>的<span class="answer-text">活体组织</span>对<span class="answer-text">损伤因子</span>的刺激发生的<span class="answer-text">复杂的防御反应</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>2.. A <strong>炎症的三大基本病理表现——变质</strong><br>原因：① <span class="blur-text">致病因子</span>直接作用 ② <span class="blur-text">血液循环障碍</span> ③ <span class="blur-text">炎症介质</span>的作用<br>病理学变化：<span class="blur-text">实质细胞</span>——各种类型的变性和坏死；<span class="blur-text">间质细胞</span>——主要是黏液样变和<span class="blur-text">纤维素样坏死</span></td>
+                            <td>2.. A <strong>炎症的三大基本病理表现——变质</strong><br>原因：① <span class="answer-text">致病因子</span>直接作用 ② <span class="answer-text">血液循环障碍</span> ③ <span class="answer-text">炎症介质</span>的作用<br>病理学变化：<span class="answer-text">实质细胞</span>——各种类型的变性和坏死；<span class="answer-text">间质细胞</span>——主要是黏液样变和<span class="answer-text">纤维素样坏死</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>2.. B <strong>炎症的三大基本病理表现——渗出（最特征）</strong><br>渗出成分：① <span class="blur-text">血浆成分</span> ② <span class="blur-text">炎细胞</span>（最特征，<span class="blur-text">白细胞</span>主动游出的过程） ③ <span class="blur-text">红细胞</span><br>原因：<span class="blur-text">血管通透性增高</span>和<span class="blur-text">白细胞主动游出血管</span></td>
+                            <td>2.. B <strong>炎症的三大基本病理表现——渗出（最特征）</strong><br>渗出成分：① <span class="answer-text">血浆成分</span> ② <span class="answer-text">炎细胞</span>（最特征，<span class="answer-text">白细胞</span>主动游出的过程） ③ <span class="answer-text">红细胞</span><br>原因：<span class="answer-text">血管通透性增高</span>和<span class="answer-text">白细胞主动游出血管</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>2.. C <strong>炎症的三大基本病理表现——渗出特点与影响</strong><br>特点：① <span class="blur-text">蛋白</span>多 ② <span class="blur-text">细胞成分</span>多 ③ 渗出液比重><span class="blur-text">1.018</span><br>影响：积极意义——<span class="blur-text">中和毒素</span>、<span class="blur-text">杀灭病原体</span>、<span class="blur-text">限制扩散</span>；消极意义——渗出液过多<span class="blur-text">压迫和阻塞</span>，<span class="blur-text">纤维素</span>引起机化</td>
+                            <td>2.. C <strong>炎症的三大基本病理表现——渗出特点与影响</strong><br>特点：① <span class="answer-text">蛋白</span>多 ② <span class="answer-text">细胞成分</span>多 ③ 渗出液比重><span class="answer-text">1.018</span><br>影响：积极意义——<span class="answer-text">中和毒素</span>、<span class="answer-text">杀灭病原体</span>、<span class="answer-text">限制扩散</span>；消极意义——渗出液过多<span class="answer-text">压迫和阻塞</span>，<span class="answer-text">纤维素</span>引起机化</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>3.. A <strong>炎症引起渗出的机制——血管反应（中心环节）</strong><br>血流动力学改变（<span class="blur-text">血管口径</span>和<span class="blur-text">血流量</span>改变）：① <span class="blur-text">细动脉</span>短暂收缩 ② <span class="blur-text">血管扩张</span>和血流加速（血浆成分渗出） ③ 血流速度减慢（白细胞渗出→<span class="blur-text">边集</span>、<span class="blur-text">滚动</span>、<span class="blur-text">黏附</span>、<span class="blur-text">游出</span>）</td>
+                            <td>3.. A <strong>炎症引起渗出的机制——血管反应（中心环节）</strong><br>血流动力学改变（<span class="answer-text">血管口径</span>和<span class="answer-text">血流量</span>改变）：① <span class="answer-text">细动脉</span>短暂收缩 ② <span class="answer-text">血管扩张</span>和血流加速（血浆成分渗出） ③ 血流速度减慢（白细胞渗出→<span class="answer-text">边集</span>、<span class="answer-text">滚动</span>、<span class="answer-text">黏附</span>、<span class="answer-text">游出</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>3.. B <strong>炎症引起渗出的机制——血管通透性增加的机制</strong><br>A. <span class="blur-text">内皮细胞收缩</span>，在内皮间出现<span class="blur-text">0.5-1.0um</span>的缝隙（<span class="blur-text">炎症介质</span>）——速发短暂反应<br>B. <span class="blur-text">内皮细胞损伤</span>（直接损伤、白细胞介导）——<span class="blur-text">烧伤早期</span><br>C. <span class="blur-text">穿胞作用</span>增强（胞吞胞吐）<br>D. <span class="blur-text">新生毛细血管壁</span>的高通透性——<span class="blur-text">烧伤晚期</span></td>
+                            <td>3.. B <strong>炎症引起渗出的机制——血管通透性增加的机制</strong><br>A. <span class="answer-text">内皮细胞收缩</span>，在内皮间出现<span class="answer-text">0.5-1.0um</span>的缝隙（<span class="answer-text">炎症介质</span>）——速发短暂反应<br>B. <span class="answer-text">内皮细胞损伤</span>（直接损伤、白细胞介导）——<span class="answer-text">烧伤早期</span><br>C. <span class="answer-text">穿胞作用</span>增强（胞吞胞吐）<br>D. <span class="answer-text">新生毛细血管壁</span>的高通透性——<span class="answer-text">烧伤晚期</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>3.. C <strong>炎症引起渗出的机制——白细胞渗出</strong><br>定义：指<span class="blur-text">白细胞</span>通过<span class="blur-text">血管壁</span>游出到<span class="blur-text">血管外</span>的过程，是炎症反应<span class="blur-text">最重要的特征</span><br>过程：<span class="blur-text">边集</span>（<span class="blur-text">选择素</span>，内皮细胞表达）→<span class="blur-text">滚动</span>→<span class="blur-text">黏附</span>（<span class="blur-text">整合素</span>，白细胞表达）→<span class="blur-text">游出</span>→<span class="blur-text">趋化</span></td>
+                            <td>3.. C <strong>炎症引起渗出的机制——白细胞渗出</strong><br>定义：指<span class="answer-text">白细胞</span>通过<span class="answer-text">血管壁</span>游出到<span class="answer-text">血管外</span>的过程，是炎症反应<span class="answer-text">最重要的特征</span><br>过程：<span class="answer-text">边集</span>（<span class="answer-text">选择素</span>，内皮细胞表达）→<span class="answer-text">滚动</span>→<span class="answer-text">黏附</span>（<span class="answer-text">整合素</span>，白细胞表达）→<span class="answer-text">游出</span>→<span class="answer-text">趋化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>4.. A <strong>炎症介质的来源</strong><br>来源：① 来自于<span class="blur-text">血浆</span>的炎症介质：<span class="blur-text">激肽</span>、<span class="blur-text">补体</span>、<span class="blur-text">凝血</span>和<span class="blur-text">纤溶系统</span> ② 来自<span class="blur-text">炎症细胞分泌</span>（如<span class="blur-text">巨噬细胞</span>）</td>
+                            <td>4.. A <strong>炎症介质的来源</strong><br>来源：① 来自于<span class="answer-text">血浆</span>的炎症介质：<span class="answer-text">激肽</span>、<span class="answer-text">补体</span>、<span class="answer-text">凝血</span>和<span class="answer-text">纤溶系统</span> ② 来自<span class="answer-text">炎症细胞分泌</span>（如<span class="answer-text">巨噬细胞</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>4.. B <strong>炎症介质的功能——血管扩张与通透性增高</strong><br>血管扩张：<span class="blur-text">组胺</span>、<span class="blur-text">PG*前列腺素</span>、<span class="blur-text">NO</span><br>血管通透性增高：组胺、<span class="blur-text">缓激肽</span>、<span class="blur-text">C3a</span>、<span class="blur-text">C5s</span>、<span class="blur-text">LTC4</span>、<span class="blur-text">LTD4</span>、<span class="blur-text">LTE4</span>、<span class="blur-text">PAF</span>、<span class="blur-text">5-HT</span>、<span class="blur-text">P物质</span></td>
+                            <td>4.. B <strong>炎症介质的功能——血管扩张与通透性增高</strong><br>血管扩张：<span class="answer-text">组胺</span>、<span class="answer-text">PG*前列腺素</span>、<span class="answer-text">NO</span><br>血管通透性增高：组胺、<span class="answer-text">缓激肽</span>、<span class="answer-text">C3a</span>、<span class="answer-text">C5s</span>、<span class="answer-text">LTC4</span>、<span class="answer-text">LTD4</span>、<span class="answer-text">LTE4</span>、<span class="answer-text">PAF</span>、<span class="answer-text">5-HT</span>、<span class="answer-text">P物质</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>4.. C <strong>炎症介质的功能——趋化作用与发热疼痛</strong><br>趋化作用：<span class="blur-text">LTB4</span>、C3a、<span class="blur-text">C5a</span>、<span class="blur-text">细菌产物</span>、<span class="blur-text">中性粒细胞阳离子蛋白</span>、<span class="blur-text">IL-1</span>、<span class="blur-text">IL-8</span>、<span class="blur-text">TNF</span><br>发热：IL-1、TNF、<span class="blur-text">PG</span><br>疼痛：PG、缓激肽、P物质</td>
+                            <td>4.. C <strong>炎症介质的功能——趋化作用与发热疼痛</strong><br>趋化作用：<span class="answer-text">LTB4</span>、C3a、<span class="answer-text">C5a</span>、<span class="answer-text">细菌产物</span>、<span class="answer-text">中性粒细胞阳离子蛋白</span>、<span class="answer-text">IL-1</span>、<span class="answer-text">IL-8</span>、<span class="answer-text">TNF</span><br>发热：IL-1、TNF、<span class="answer-text">PG</span><br>疼痛：PG、缓激肽、P物质</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>4.. D <strong>炎症介质的功能——组织损伤与药物</strong><br>组织损伤：<span class="blur-text">活性氧</span>、<span class="blur-text">白细胞溶酶体酶</span>、NO<br>前列腺素产生抑制剂（<span class="blur-text">环氧化酶抑制剂</span>）：<span class="blur-text">阿司匹林</span>、<span class="blur-text">布洛芬</span>（解热、阵痛、抗炎）<br>选择性<span class="blur-text">Cox2</span>抑制剂：<span class="blur-text">塞来昔布</span>、<span class="blur-text">吡罗昔康</span></td>
+                            <td>4.. D <strong>炎症介质的功能——组织损伤与药物</strong><br>组织损伤：<span class="answer-text">活性氧</span>、<span class="answer-text">白细胞溶酶体酶</span>、NO<br>前列腺素产生抑制剂（<span class="answer-text">环氧化酶抑制剂</span>）：<span class="answer-text">阿司匹林</span>、<span class="answer-text">布洛芬</span>（解热、阵痛、抗炎）<br>选择性<span class="answer-text">Cox2</span>抑制剂：<span class="answer-text">塞来昔布</span>、<span class="answer-text">吡罗昔康</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>5.. <strong>急性变质性炎</strong><br>疾病：① <span class="blur-text">病毒性肝炎</span> ② <span class="blur-text">中毒性心肌炎</span> ③ <span class="blur-text">乙脑</span> ④ <span class="blur-text">阿米巴</span></td>
+                            <td>5.. <strong>急性变质性炎</strong><br>疾病：① <span class="answer-text">病毒性肝炎</span> ② <span class="answer-text">中毒性心肌炎</span> ③ <span class="answer-text">乙脑</span> ④ <span class="answer-text">阿米巴</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>6.. <strong>假膜性炎</strong><br>定义：<span class="blur-text">黏膜</span>——<span class="blur-text">伪膜性炎</span>，又称假膜性炎<br>疾病：如<span class="blur-text">菌痢</span>、<span class="blur-text">白喉</span></td>
+                            <td>6.. <strong>假膜性炎</strong><br>定义：<span class="answer-text">黏膜</span>——<span class="answer-text">伪膜性炎</span>，又称假膜性炎<br>疾病：如<span class="answer-text">菌痢</span>、<span class="answer-text">白喉</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>7.. A <strong>蜂窝织炎和脓肿的区别——蜂窝织炎</strong><br>特点：感染<span class="blur-text">轻</span>、毒力<span class="blur-text">轻</span>，好发于<span class="blur-text">疏松结缔组织</span>的<span class="blur-text">弥漫性化脓性炎症</span><br>致病菌：<span class="blur-text">溶血性链球菌</span><br>分泌物：<span class="blur-text">透明质酸酶</span>和<span class="blur-text">链激酶</span><br>好发部位：<span class="blur-text">皮肤</span>、<span class="blur-text">肌肉</span>、<span class="blur-text">阑尾</span>、<span class="blur-text">流行性脑膜炎</span></td>
+                            <td>7.. A <strong>蜂窝织炎和脓肿的区别——蜂窝织炎</strong><br>特点：感染<span class="answer-text">轻</span>、毒力<span class="answer-text">轻</span>，好发于<span class="answer-text">疏松结缔组织</span>的<span class="answer-text">弥漫性化脓性炎症</span><br>致病菌：<span class="answer-text">溶血性链球菌</span><br>分泌物：<span class="answer-text">透明质酸酶</span>和<span class="answer-text">链激酶</span><br>好发部位：<span class="answer-text">皮肤</span>、<span class="answer-text">肌肉</span>、<span class="answer-text">阑尾</span>、<span class="answer-text">流行性脑膜炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>7.. B <strong>蜂窝织炎和脓肿的区别——脓肿</strong><br>特点：感染<span class="blur-text">重</span>、毒力<span class="blur-text">重</span><br>致病菌：<span class="blur-text">金黄色葡萄球菌</span><br>分泌物：<span class="blur-text">凝血酶</span><br>好发部位：<span class="blur-text">肺小叶性肺炎</span>、<span class="blur-text">肝</span>、皮下的<span class="blur-text">疖</span>、<span class="blur-text">痈</span>、<span class="blur-text">淋病</span></td>
+                            <td>7.. B <strong>蜂窝织炎和脓肿的区别——脓肿</strong><br>特点：感染<span class="answer-text">重</span>、毒力<span class="answer-text">重</span><br>致病菌：<span class="answer-text">金黄色葡萄球菌</span><br>分泌物：<span class="answer-text">凝血酶</span><br>好发部位：<span class="answer-text">肺小叶性肺炎</span>、<span class="answer-text">肝</span>、皮下的<span class="answer-text">疖</span>、<span class="answer-text">痈</span>、<span class="answer-text">淋病</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月8日】27直播病理学带读第5课思考题  （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>1.. A <strong>肿瘤增殖的特征（一）</strong><br>① 与机体<span class="blur-text">不协调</span>，对机体<span class="blur-text">有害</span><br>② <span class="blur-text">单克隆性</span>增生</td>
+                            <td>1.. A <strong>肿瘤增殖的特征（一）</strong><br>① 与机体<span class="answer-text">不协调</span>，对机体<span class="answer-text">有害</span><br>② <span class="answer-text">单克隆性</span>增生</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>1.. B <strong>肿瘤增殖的特征（二）</strong><br>③ 肿瘤细胞在<span class="blur-text">形态</span>和<span class="blur-text">代谢的功能</span>与正常细胞有区别，失去了<span class="blur-text">分化</span>和<span class="blur-text">成熟</span>的能力<br>④ 肿瘤的生长失去了<span class="blur-text">控制</span>，具有相对的<span class="blur-text">自主性</span></td>
+                            <td>1.. B <strong>肿瘤增殖的特征（二）</strong><br>③ 肿瘤细胞在<span class="answer-text">形态</span>和<span class="answer-text">代谢的功能</span>与正常细胞有区别，失去了<span class="answer-text">分化</span>和<span class="answer-text">成熟</span>的能力<br>④ 肿瘤的生长失去了<span class="answer-text">控制</span>，具有相对的<span class="answer-text">自主性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>2.. <strong>决定肿瘤生物学行为的主要因素</strong><br>主要因素：<span class="blur-text">肿瘤实质</span>（<span class="blur-text">肿瘤细胞</span>）</td>
+                            <td>2.. <strong>决定肿瘤生物学行为的主要因素</strong><br>主要因素：<span class="answer-text">肿瘤实质</span>（<span class="answer-text">肿瘤细胞</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>3.. <strong>肿瘤的异型性</strong><br>定义：肿瘤<span class="blur-text">组织结构</span>和<span class="blur-text">细胞形态</span>与相应的正常组织有不同程度的差异<br>包括：① <span class="blur-text">结构异型性</span> ② <span class="blur-text">细胞异型性</span></td>
+                            <td>3.. <strong>肿瘤的异型性</strong><br>定义：肿瘤<span class="answer-text">组织结构</span>和<span class="answer-text">细胞形态</span>与相应的正常组织有不同程度的差异<br>包括：① <span class="answer-text">结构异型性</span> ② <span class="answer-text">细胞异型性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>4.. <strong>只存在于恶性肿瘤的异型性特征</strong><br>特征：<span class="blur-text">病理性核分裂象</span></td>
+                            <td>4.. <strong>只存在于恶性肿瘤的异型性特征</strong><br>特征：<span class="answer-text">病理性核分裂象</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>5.. <strong>间变性肿瘤</strong><br>定义：呈<span class="blur-text">显著异型性</span>，失去<span class="blur-text">分化状态</span>，多为<span class="blur-text">高度恶性</span><br>特点：肿瘤细胞呈<span class="blur-text">未分化</span>性的肿瘤</td>
+                            <td>5.. <strong>间变性肿瘤</strong><br>定义：呈<span class="answer-text">显著异型性</span>，失去<span class="answer-text">分化状态</span>，多为<span class="answer-text">高度恶性</span><br>特点：肿瘤细胞呈<span class="answer-text">未分化</span>性的肿瘤</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>6.. <strong>Krukenberg瘤</strong><br>来源：<span class="blur-text">胃肠道黏液癌</span>（<span class="blur-text">印戒细胞癌</span>）<br>转移方式：<span class="blur-text">种植性转移</span></td>
+                            <td>6.. <strong>Krukenberg瘤</strong><br>来源：<span class="answer-text">胃肠道黏液癌</span>（<span class="answer-text">印戒细胞癌</span>）<br>转移方式：<span class="answer-text">种植性转移</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>7.. <strong>胃肠道恶性肿瘤最常见的血行转移器官</strong><br>器官：<span class="blur-text">肝脏</span></td>
+                            <td>7.. <strong>胃肠道恶性肿瘤最常见的血行转移器官</strong><br>器官：<span class="answer-text">肝脏</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>8.. <strong>骨肉瘤最常见的血行转移器官</strong><br>器官：<span class="blur-text">肺</span></td>
+                            <td>8.. <strong>骨肉瘤最常见的血行转移器官</strong><br>器官：<span class="answer-text">肺</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>9.. <strong>前列腺癌导致椎体转移的途径</strong><br>途径：<span class="blur-text">脊椎静脉丛</span>（<span class="blur-text">Batson静脉系统</span>）</td>
+                            <td>9.. <strong>前列腺癌导致椎体转移的途径</strong><br>途径：<span class="answer-text">脊椎静脉丛</span>（<span class="answer-text">Batson静脉系统</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>10.. A <strong>TNM分期的分期标准——T和N</strong><br>T：指<span class="blur-text">肿瘤原发灶</span>的情况<br>N：指<span class="blur-text">区域淋巴结</span>受累情况</td>
+                            <td>10.. A <strong>TNM分期的分期标准——T和N</strong><br>T：指<span class="answer-text">肿瘤原发灶</span>的情况<br>N：指<span class="answer-text">区域淋巴结</span>受累情况</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>10.. B <strong>TNM分期的分期标准——M</strong><br>M：指<span class="blur-text">远处转移</span>（通常是<span class="blur-text">血道转移</span>）</td>
+                            <td>10.. B <strong>TNM分期的分期标准——M</strong><br>M：指<span class="answer-text">远处转移</span>（通常是<span class="answer-text">血道转移</span>）</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月10日】27直播病理学带读第6课思考题  （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>1.. <strong>系统性红斑狼疮导致组织损伤的变态反应类型</strong><br>类型：<span class="blur-text">III型</span>变态反应</td>
+                            <td>1.. <strong>系统性红斑狼疮导致组织损伤的变态反应类型</strong><br>类型：<span class="answer-text">III型</span>变态反应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>2.. <strong>血型不合导致溶血反应的变态反应类型</strong><br>类型：<span class="blur-text">II型</span>变态反应</td>
+                            <td>2.. <strong>血型不合导致溶血反应的变态反应类型</strong><br>类型：<span class="answer-text">II型</span>变态反应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>3.. <strong>超急性排斥反应的变态反应类型</strong><br>类型：<span class="blur-text">III型</span>变态反应</td>
+                            <td>3.. <strong>超急性排斥反应的变态反应类型</strong><br>类型：<span class="answer-text">III型</span>变态反应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>4.. <strong>超急性排斥反应镜下特点</strong><br>特点：表现为广泛的<span class="blur-text">急性小动脉炎</span>伴<span class="blur-text">血栓形成</span>及<span class="blur-text">缺血性坏死</span></td>
+                            <td>4.. <strong>超急性排斥反应镜下特点</strong><br>特点：表现为广泛的<span class="answer-text">急性小动脉炎</span>伴<span class="answer-text">血栓形成</span>及<span class="answer-text">缺血性坏死</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>5.. A <strong>急性排斥反应——细胞免疫为主</strong><br>特点：主要表现为间质内<span class="blur-text">CD4+</span>和<span class="blur-text">CD8+T细胞</span>为主的<span class="blur-text">单个核细胞</span>浸润</td>
+                            <td>5.. A <strong>急性排斥反应——细胞免疫为主</strong><br>特点：主要表现为间质内<span class="answer-text">CD4+</span>和<span class="answer-text">CD8+T细胞</span>为主的<span class="answer-text">单个核细胞</span>浸润</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>5.. B <strong>急性排斥反应——体液免疫为主</strong><br>特点：主要表现为<span class="blur-text">亚急性血管炎</span>，<span class="blur-text">血管内膜增厚</span></td>
+                            <td>5.. B <strong>急性排斥反应——体液免疫为主</strong><br>特点：主要表现为<span class="answer-text">亚急性血管炎</span>，<span class="answer-text">血管内膜增厚</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月12日】27直播病理学带读第7课思考题  （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>1.. A <strong>动脉粥样硬化的发病机制</strong><br>机制：<span class="blur-text">高血压</span>、<span class="blur-text">吸烟</span>→<span class="blur-text">内膜受损</span>→<span class="blur-text">LDL</span>→<span class="blur-text">OX-LDL</span>→沉积在受损的内膜下→<span class="blur-text">巨噬细胞</span>吞噬氧化的低密度脂蛋白、<span class="blur-text">平滑肌细胞</span>→<span class="blur-text">泡沫细胞</span>→<span class="blur-text">AS</span></td>
+                            <td>1.. A <strong>动脉粥样硬化的发病机制</strong><br>机制：<span class="answer-text">高血压</span>、<span class="answer-text">吸烟</span>→<span class="answer-text">内膜受损</span>→<span class="answer-text">LDL</span>→<span class="answer-text">OX-LDL</span>→沉积在受损的内膜下→<span class="answer-text">巨噬细胞</span>吞噬氧化的低密度脂蛋白、<span class="answer-text">平滑肌细胞</span>→<span class="answer-text">泡沫细胞</span>→<span class="answer-text">AS</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>1.. B <strong>动脉粥样硬化的高危因素</strong><br>① <span class="blur-text">原发性高脂血症</span><br>② <span class="blur-text">继发性高血压</span><br>③ <span class="blur-text">遗传性高脂血症</span></td>
+                            <td>1.. B <strong>动脉粥样硬化的高危因素</strong><br>① <span class="answer-text">原发性高脂血症</span><br>② <span class="answer-text">继发性高血压</span><br>③ <span class="answer-text">遗传性高脂血症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>2.. A <strong>动脉粥样硬化的分期——脂纹期</strong><br>肉眼：肉眼可见的<span class="blur-text">最早的改变</span><br>脂质沉积：<span class="blur-text">HE染色</span>橘红色，<span class="blur-text">苏丹III/IV</span>染色橘红色<br>镜下：① <span class="blur-text">内膜下</span>大量<span class="blur-text">泡沫细胞</span>聚集 ② 镜下有大量<span class="blur-text">空泡</span>形成 ③ 苏丹III染色呈<span class="blur-text">橘红色</span><br>电镜：① <span class="blur-text">巨噬细胞源性</span>泡沫细胞 ② <span class="blur-text">平滑肌细胞源性</span>泡沫细胞</td>
+                            <td>2.. A <strong>动脉粥样硬化的分期——脂纹期</strong><br>肉眼：肉眼可见的<span class="answer-text">最早的改变</span><br>脂质沉积：<span class="answer-text">HE染色</span>橘红色，<span class="answer-text">苏丹III/IV</span>染色橘红色<br>镜下：① <span class="answer-text">内膜下</span>大量<span class="answer-text">泡沫细胞</span>聚集 ② 镜下有大量<span class="answer-text">空泡</span>形成 ③ 苏丹III染色呈<span class="answer-text">橘红色</span><br>电镜：① <span class="answer-text">巨噬细胞源性</span>泡沫细胞 ② <span class="answer-text">平滑肌细胞源性</span>泡沫细胞</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>2.. B <strong>动脉粥样硬化的分期——纤维斑块期</strong><br>镜下：① 病灶表面为一层<span class="blur-text">纤维帽</span>：<span class="blur-text">SMC</span>+SMC释放的<span class="blur-text">胶原蛋白</span><br>② 帽下结构：<span class="blur-text">泡沫细胞</span>、SMC、<span class="blur-text">巨噬细胞</span>、<span class="blur-text">细胞外基质</span>、<span class="blur-text">炎症细胞</span></td>
+                            <td>2.. B <strong>动脉粥样硬化的分期——纤维斑块期</strong><br>镜下：① 病灶表面为一层<span class="answer-text">纤维帽</span>：<span class="answer-text">SMC</span>+SMC释放的<span class="answer-text">胶原蛋白</span><br>② 帽下结构：<span class="answer-text">泡沫细胞</span>、SMC、<span class="answer-text">巨噬细胞</span>、<span class="answer-text">细胞外基质</span>、<span class="answer-text">炎症细胞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>2.. C <strong>动脉粥样硬化的分期——粥样斑块期</strong><br>肉眼：<span class="blur-text">AS</span>的典型改变<br>镜下：① 纤维帽下大量<span class="blur-text">不定形的坏死崩解产物</span>，形成<span class="blur-text">胆固醇结晶</span>，有<span class="blur-text">钙盐沉积</span><br>② 从边缘开始长出<span class="blur-text">肉芽组织</span>，少量<span class="blur-text">淋巴细胞</span>、泡沫细胞浸润<br>③ <span class="blur-text">血管中层</span>受压，<span class="blur-text">平滑肌细胞</span>变薄、萎缩</td>
+                            <td>2.. C <strong>动脉粥样硬化的分期——粥样斑块期</strong><br>肉眼：<span class="answer-text">AS</span>的典型改变<br>镜下：① 纤维帽下大量<span class="answer-text">不定形的坏死崩解产物</span>，形成<span class="answer-text">胆固醇结晶</span>，有<span class="answer-text">钙盐沉积</span><br>② 从边缘开始长出<span class="answer-text">肉芽组织</span>，少量<span class="answer-text">淋巴细胞</span>、泡沫细胞浸润<br>③ <span class="answer-text">血管中层</span>受压，<span class="answer-text">平滑肌细胞</span>变薄、萎缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>2.. D <strong>动脉粥样硬化的分期——继发病变期</strong><br>① <span class="blur-text">斑块内出血</span>：<span class="blur-text">新生毛细血管</span>破裂成血肿，血肿隆起闭塞血管<br>② <span class="blur-text">斑块破裂</span>：<span class="blur-text">溃疡</span>+<span class="blur-text">栓子</span>形成<br>③ <span class="blur-text">血栓形成</span><br>④ <span class="blur-text">管腔狭窄</span><br>⑤ <span class="blur-text">动脉瘤</span>形成：SMC变薄导致<br>⑥ 可发生<span class="blur-text">钙化</span></td>
+                            <td>2.. D <strong>动脉粥样硬化的分期——继发病变期</strong><br>① <span class="answer-text">斑块内出血</span>：<span class="answer-text">新生毛细血管</span>破裂成血肿，血肿隆起闭塞血管<br>② <span class="answer-text">斑块破裂</span>：<span class="answer-text">溃疡</span>+<span class="answer-text">栓子</span>形成<br>③ <span class="answer-text">血栓形成</span><br>④ <span class="answer-text">管腔狭窄</span><br>⑤ <span class="answer-text">动脉瘤</span>形成：SMC变薄导致<br>⑥ 可发生<span class="answer-text">钙化</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月13日】27直播病理学带读第8课思考题  （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>1.. A <strong>大叶性肺炎——充血水肿期</strong><br>大体：<span class="blur-text">暗红色</span>，<span class="blur-text">体积增大</span>，切面流出<span class="blur-text">红色液体</span><br>镜下：<span class="blur-text">肺泡壁毛细血管</span>扩张充血，肺泡腔内<span class="blur-text">浆液</span>渗出，少量<span class="blur-text">红细胞</span>渗出。肺泡腔内有<span class="blur-text">肺炎链球菌</span><br>临床：<span class="blur-text">寒战</span>、<span class="blur-text">高热</span>、<span class="blur-text">白色浆液</span>/<span class="blur-text">淡红色泡沫痰</span></td>
+                            <td>1.. A <strong>大叶性肺炎——充血水肿期</strong><br>大体：<span class="answer-text">暗红色</span>，<span class="answer-text">体积增大</span>，切面流出<span class="answer-text">红色液体</span><br>镜下：<span class="answer-text">肺泡壁毛细血管</span>扩张充血，肺泡腔内<span class="answer-text">浆液</span>渗出，少量<span class="answer-text">红细胞</span>渗出。肺泡腔内有<span class="answer-text">肺炎链球菌</span><br>临床：<span class="answer-text">寒战</span>、<span class="answer-text">高热</span>、<span class="answer-text">白色浆液</span>/<span class="answer-text">淡红色泡沫痰</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>1.. B <strong>大叶性肺炎——红色肝样变期</strong><br>大体：<span class="blur-text">暗红色</span>，<span class="blur-text">质地变实</span>，切面<span class="blur-text">灰红</span>，似<span class="blur-text">肝脏</span><br>镜下：<span class="blur-text">毛细血管</span>仍扩张充血，肺泡腔充满大量<span class="blur-text">红细胞</span>及<span class="blur-text">纤维素</span>渗出<br>临床：<span class="blur-text">铁锈色痰</span>、<span class="blur-text">缺氧</span>症状</td>
+                            <td>1.. B <strong>大叶性肺炎——红色肝样变期</strong><br>大体：<span class="answer-text">暗红色</span>，<span class="answer-text">质地变实</span>，切面<span class="answer-text">灰红</span>，似<span class="answer-text">肝脏</span><br>镜下：<span class="answer-text">毛细血管</span>仍扩张充血，肺泡腔充满大量<span class="answer-text">红细胞</span>及<span class="answer-text">纤维素</span>渗出<br>临床：<span class="answer-text">铁锈色痰</span>、<span class="answer-text">缺氧</span>症状</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>1.. C <strong>大叶性肺炎——灰色肝样变期</strong><br>大体：<span class="blur-text">灰白色</span>，<span class="blur-text">质地如肝</span>，切面<span class="blur-text">颗粒状</span><br>镜下：<span class="blur-text">肺泡壁毛细血管</span>受压，腔内<span class="blur-text">纤维素</span>增多，肺泡腔内有大量纤维素、<span class="blur-text">中性粒细胞</span>，<span class="blur-text">无细菌</span><br>临床：含有<span class="blur-text">纤维素的脓痰</span>，<span class="blur-text">缺氧改善</span></td>
+                            <td>1.. C <strong>大叶性肺炎——灰色肝样变期</strong><br>大体：<span class="answer-text">灰白色</span>，<span class="answer-text">质地如肝</span>，切面<span class="answer-text">颗粒状</span><br>镜下：<span class="answer-text">肺泡壁毛细血管</span>受压，腔内<span class="answer-text">纤维素</span>增多，肺泡腔内有大量纤维素、<span class="answer-text">中性粒细胞</span>，<span class="answer-text">无细菌</span><br>临床：含有<span class="answer-text">纤维素的脓痰</span>，<span class="answer-text">缺氧改善</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>1.. D <strong>大叶性肺炎——溶解消散期</strong><br>大体：<span class="blur-text">质地变软</span>，切面<span class="blur-text">实变消失</span><br>镜下：<span class="blur-text">中性粒细胞</span>释放大量<span class="blur-text">蛋白水解酶</span>水解<span class="blur-text">纤维素</span><br>临床：<span class="blur-text">体温下降</span>，<span class="blur-text">症状消失</span></td>
+                            <td>1.. D <strong>大叶性肺炎——溶解消散期</strong><br>大体：<span class="answer-text">质地变软</span>，切面<span class="answer-text">实变消失</span><br>镜下：<span class="answer-text">中性粒细胞</span>释放大量<span class="answer-text">蛋白水解酶</span>水解<span class="answer-text">纤维素</span><br>临床：<span class="answer-text">体温下降</span>，<span class="answer-text">症状消失</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>2.. A <strong>大叶性肺炎与小叶性肺炎的区别（一）</strong><br>大叶性肺炎：好发人群<span class="blur-text">青壮年</span>，病原菌<span class="blur-text">肺炎链球菌</span>（最常见），病变性质<span class="blur-text">纤维素性炎</span><br>小叶性肺炎（<span class="blur-text">支气管肺炎</span>）：好发人群<span class="blur-text">儿童</span>、<span class="blur-text">体弱老人</span>及<span class="blur-text">久病卧床者</span>，病原菌<span class="blur-text">致病力弱的肺炎球菌</span>，病变性质<span class="blur-text">化脓性炎</span></td>
+                            <td>2.. A <strong>大叶性肺炎与小叶性肺炎的区别（一）</strong><br>大叶性肺炎：好发人群<span class="answer-text">青壮年</span>，病原菌<span class="answer-text">肺炎链球菌</span>（最常见），病变性质<span class="answer-text">纤维素性炎</span><br>小叶性肺炎（<span class="answer-text">支气管肺炎</span>）：好发人群<span class="answer-text">儿童</span>、<span class="answer-text">体弱老人</span>及<span class="answer-text">久病卧床者</span>，病原菌<span class="answer-text">致病力弱的肺炎球菌</span>，病变性质<span class="answer-text">化脓性炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>2.. B <strong>大叶性肺炎与小叶性肺炎的区别（二）</strong><br>大叶性肺炎：典型病变以<span class="blur-text">肺泡内弥漫纤维素渗出</span>为主的炎症，病变范围<span class="blur-text">肺大叶</span>，一般<span class="blur-text">支气管</span>不受累，好发部位<span class="blur-text">单侧肺</span>，<span class="blur-text">左肺</span>或<span class="blur-text">右下肺</span><br>小叶性肺炎：典型病变以<span class="blur-text">细支气管</span>为中心、<span class="blur-text">肺小叶</span>为病变单位灶状散布的肺组织<span class="blur-text">化脓性炎症</span>（<span class="blur-text">中性粒细胞</span>浸润为主），病变范围<span class="blur-text">肺小叶</span>，一般<span class="blur-text">胸膜</span>不受累，好发部位<span class="blur-text">双肺下叶</span>和<span class="blur-text">背侧</span></td>
+                            <td>2.. B <strong>大叶性肺炎与小叶性肺炎的区别（二）</strong><br>大叶性肺炎：典型病变以<span class="answer-text">肺泡内弥漫纤维素渗出</span>为主的炎症，病变范围<span class="answer-text">肺大叶</span>，一般<span class="answer-text">支气管</span>不受累，好发部位<span class="answer-text">单侧肺</span>，<span class="answer-text">左肺</span>或<span class="answer-text">右下肺</span><br>小叶性肺炎：典型病变以<span class="answer-text">细支气管</span>为中心、<span class="answer-text">肺小叶</span>为病变单位灶状散布的肺组织<span class="answer-text">化脓性炎症</span>（<span class="answer-text">中性粒细胞</span>浸润为主），病变范围<span class="answer-text">肺小叶</span>，一般<span class="answer-text">胸膜</span>不受累，好发部位<span class="answer-text">双肺下叶</span>和<span class="answer-text">背侧</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>2.. C <strong>大叶性肺炎与小叶性肺炎的区别（三）</strong><br>大叶性肺炎：临床表现<span class="blur-text">咳铁锈色痰</span>，并发症<span class="blur-text">肺肉质变</span>（<span class="blur-text">机化性肺炎</span>）、<span class="blur-text">胸膜肥厚</span>和<span class="blur-text">黏连</span>、<span class="blur-text">肺脓肿</span>及<span class="blur-text">脓毒败血症</span><br>小叶性肺炎：临床表现<span class="blur-text">咳脓痰</span>，并发症<span class="blur-text">呼吸功能不全</span>、<span class="blur-text">心力衰竭</span>、<span class="blur-text">脓毒血症</span>、<span class="blur-text">肺脓肿</span>、<span class="blur-text">脓胸</span></td>
+                            <td>2.. C <strong>大叶性肺炎与小叶性肺炎的区别（三）</strong><br>大叶性肺炎：临床表现<span class="answer-text">咳铁锈色痰</span>，并发症<span class="answer-text">肺肉质变</span>（<span class="answer-text">机化性肺炎</span>）、<span class="answer-text">胸膜肥厚</span>和<span class="answer-text">黏连</span>、<span class="answer-text">肺脓肿</span>及<span class="answer-text">脓毒败血症</span><br>小叶性肺炎：临床表现<span class="answer-text">咳脓痰</span>，并发症<span class="answer-text">呼吸功能不全</span>、<span class="answer-text">心力衰竭</span>、<span class="answer-text">脓毒血症</span>、<span class="answer-text">肺脓肿</span>、<span class="answer-text">脓胸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>2.. D <strong>病毒性肺炎、支原体肺炎的特点</strong><br>特点：为<span class="blur-text">间质性肺炎</span>，肺泡腔内<span class="blur-text">很少有渗出</span>，浸润炎细胞主要是<span class="blur-text">慢性炎症细胞</span></td>
+                            <td>2.. D <strong>病毒性肺炎、支原体肺炎的特点</strong><br>特点：为<span class="answer-text">间质性肺炎</span>，肺泡腔内<span class="answer-text">很少有渗出</span>，浸润炎细胞主要是<span class="answer-text">慢性炎症细胞</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月15日】27直播病理学带读第9课思考题（答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>1.. <strong>肝硬化的发病机制</strong><br>机制：① <span class="blur-text">肝细胞弥漫性损伤</span> ② <span class="blur-text">肝细胞结节再生</span> ③ <span class="blur-text">广泛的胶原纤维增生</span> ④ <span class="blur-text">假小叶</span>形成</td>
+                            <td>1.. <strong>肝硬化的发病机制</strong><br>机制：① <span class="answer-text">肝细胞弥漫性损伤</span> ② <span class="answer-text">肝细胞结节再生</span> ③ <span class="answer-text">广泛的胶原纤维增生</span> ④ <span class="answer-text">假小叶</span>形成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>2.. A <strong>肝硬化胶原纤维的来源（一）</strong><br>来源：① <span class="blur-text">肝小叶</span>内原有的<span class="blur-text">网状支架</span>塌陷、聚积、<span class="blur-text">胶原化</span> ② <span class="blur-text">肝星状细胞</span>转变为<span class="blur-text">肌纤维细胞样细胞</span>产生胶原纤维</td>
+                            <td>2.. A <strong>肝硬化胶原纤维的来源（一）</strong><br>来源：① <span class="answer-text">肝小叶</span>内原有的<span class="answer-text">网状支架</span>塌陷、聚积、<span class="answer-text">胶原化</span> ② <span class="answer-text">肝星状细胞</span>转变为<span class="answer-text">肌纤维细胞样细胞</span>产生胶原纤维</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>2.. B <strong>肝硬化胶原纤维的来源（二）</strong><br>来源：③ <span class="blur-text">门管区</span>的<span class="blur-text">成纤维细胞</span>增生并分泌胶原纤维</td>
+                            <td>2.. B <strong>肝硬化胶原纤维的来源（二）</strong><br>来源：③ <span class="answer-text">门管区</span>的<span class="answer-text">成纤维细胞</span>增生并分泌胶原纤维</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>3.. <strong>重型肝炎导致的肝硬化类型</strong><br>类型：<span class="blur-text">大结节型肝硬化</span></td>
+                            <td>3.. <strong>重型肝炎导致的肝硬化类型</strong><br>类型：<span class="answer-text">大结节型肝硬化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>4.. <strong>肝细胞羽毛状变性见于哪种肝硬化</strong><br>类型：<span class="blur-text">胆汁淤积性肝硬化</span></td>
+                            <td>4.. <strong>肝细胞羽毛状变性见于哪种肝硬化</strong><br>类型：<span class="answer-text">胆汁淤积性肝硬化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>5.. <strong>肝掌和蜘蛛痣发生的机制</strong><br>机制：<span class="blur-text">雌激素灭活障碍</span>，<span class="blur-text">外周小动脉末梢扩张</span></td>
+                            <td>5.. <strong>肝掌和蜘蛛痣发生的机制</strong><br>机制：<span class="answer-text">雌激素灭活障碍</span>，<span class="answer-text">外周小动脉末梢扩张</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>6.. <strong>肝硬化门静脉高压的表现</strong><br>表现：① <span class="blur-text">腹水</span> ② <span class="blur-text">侧支循环</span>的形成 ③ <span class="blur-text">脾大</span>/<span class="blur-text">脾功能亢进</span></td>
+                            <td>6.. <strong>肝硬化门静脉高压的表现</strong><br>表现：① <span class="answer-text">腹水</span> ② <span class="answer-text">侧支循环</span>的形成 ③ <span class="answer-text">脾大</span>/<span class="answer-text">脾功能亢进</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月17日】27直播病理学带读第10课思考题（答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>1.. <strong>B淋巴细胞常见免疫学标志</strong><br>标志：<span class="blur-text">CD19</span>、<span class="blur-text">CD20</span>、<span class="blur-text">CD79a</span>、<span class="blur-text">PAX5</span>和<span class="blur-text">表面Ig</span></td>
+                            <td>1.. <strong>B淋巴细胞常见免疫学标志</strong><br>标志：<span class="answer-text">CD19</span>、<span class="answer-text">CD20</span>、<span class="answer-text">CD79a</span>、<span class="answer-text">PAX5</span>和<span class="answer-text">表面Ig</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>2.. <strong>前体B和T细胞肿瘤常表达标记</strong><br>标记：<span class="blur-text">TdT</span>和<span class="blur-text">CD34</span></td>
+                            <td>2.. <strong>前体B和T细胞肿瘤常表达标记</strong><br>标记：<span class="answer-text">TdT</span>和<span class="answer-text">CD34</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>3.. <strong>非霍奇金淋巴瘤中最常见的类型</strong><br>类型：<span class="blur-text">弥漫大B细胞淋巴瘤</span></td>
+                            <td>3.. <strong>非霍奇金淋巴瘤中最常见的类型</strong><br>类型：<span class="answer-text">弥漫大B细胞淋巴瘤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>4.. <strong>滤泡性淋巴瘤遗传学特点</strong><br>特点：<span class="blur-text">t(14;18)</span>，<span class="blur-text">BCL-2基因</span>活化</td>
+                            <td>4.. <strong>滤泡性淋巴瘤遗传学特点</strong><br>特点：<span class="answer-text">t(14;18)</span>，<span class="answer-text">BCL-2基因</span>活化</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>5.. <strong>"满天星"图像见于哪种淋巴瘤及其遗传学特点</strong><br>淋巴瘤：<span class="blur-text">Burkitt淋巴瘤</span><br>遗传学特点：<span class="blur-text">t(8;14)</span>，<span class="blur-text">c-myc基因</span>活化</td>
+                            <td>5.. <strong>"满天星"图像见于哪种淋巴瘤及其遗传学特点</strong><br>淋巴瘤：<span class="answer-text">Burkitt淋巴瘤</span><br>遗传学特点：<span class="answer-text">t(8;14)</span>，<span class="answer-text">c-myc基因</span>活化</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>6.. <strong>套细胞性淋巴瘤较为特殊的免疫标志</strong><br>标志：<span class="blur-text">CD5</span>、<span class="blur-text">Cyclin D1</span></td>
+                            <td>6.. <strong>套细胞性淋巴瘤较为特殊的免疫标志</strong><br>标志：<span class="answer-text">CD5</span>、<span class="answer-text">Cyclin D1</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>7.. <strong>惰性淋巴瘤包括哪些</strong><br>包括：① <span class="blur-text">小淋巴细胞淋巴瘤</span> ② <span class="blur-text">淋巴浆细胞淋巴瘤</span> ③ <span class="blur-text">边缘区淋巴瘤</span> ④ <span class="blur-text">滤泡性淋巴瘤</span> ⑤ <span class="blur-text">Sézary综合征</span></td>
+                            <td>7.. <strong>惰性淋巴瘤包括哪些</strong><br>包括：① <span class="answer-text">小淋巴细胞淋巴瘤</span> ② <span class="answer-text">淋巴浆细胞淋巴瘤</span> ③ <span class="answer-text">边缘区淋巴瘤</span> ④ <span class="answer-text">滤泡性淋巴瘤</span> ⑤ <span class="answer-text">Sézary综合征</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月18日】27直播病理学带读第11课思考题  （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>1.. <strong>肾炎综合征和肾病综合征的区别</strong><br>肾病综合征：表现为<span class="blur-text">大量蛋白尿</span>（><span class="blur-text">3.5g/d</span>），<span class="blur-text">低蛋白血症</span>（<<span class="blur-text">30g/L</span>），常伴<span class="blur-text">水肿</span>和（或）<span class="blur-text">高脂血症</span><br>肾炎综合征：以<span class="blur-text">肾小球源性血尿</span>为特征，常伴<span class="blur-text">蛋白尿</span>。可有<span class="blur-text">水肿</span>、<span class="blur-text">高血压</span>和（或）<span class="blur-text">肾功能损害</span></td>
+                            <td>1.. <strong>肾炎综合征和肾病综合征的区别</strong><br>肾病综合征：表现为<span class="answer-text">大量蛋白尿</span>（><span class="answer-text">3.5g/d</span>），<span class="answer-text">低蛋白血症</span>（<<span class="answer-text">30g/L</span>），常伴<span class="answer-text">水肿</span>和（或）<span class="answer-text">高脂血症</span><br>肾炎综合征：以<span class="answer-text">肾小球源性血尿</span>为特征，常伴<span class="answer-text">蛋白尿</span>。可有<span class="answer-text">水肿</span>、<span class="answer-text">高血压</span>和（或）<span class="answer-text">肾功能损害</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>2.. <strong>引起肾病综合征最常累及的肾小球结构</strong><br>结构：① <span class="blur-text">系膜</span> ② <span class="blur-text">基膜</span> ③ <span class="blur-text">足细胞</span></td>
+                            <td>2.. <strong>引起肾病综合征最常累及的肾小球结构</strong><br>结构：① <span class="answer-text">系膜</span> ② <span class="answer-text">基膜</span> ③ <span class="answer-text">足细胞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>3.. <strong>系膜增生性肾小球肾炎的病理变化</strong><br>变化：<span class="blur-text">弥漫性系膜细胞增生</span>和<span class="blur-text">系膜基质增多</span></td>
+                            <td>3.. <strong>系膜增生性肾小球肾炎的病理变化</strong><br>变化：<span class="answer-text">弥漫性系膜细胞增生</span>和<span class="answer-text">系膜基质增多</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>4.. <strong>膜性肾病的病理变化</strong><br>变化：① <span class="blur-text">上皮细胞肿胀</span>，<span class="blur-text">足突消失</span> ② <span class="blur-text">免疫复合物</span>沉积在基膜形成<span class="blur-text">钉状突起</span>，呈<span class="blur-text">梳齿状</span> ③ <span class="blur-text">基膜增厚</span>，沉积物溶解形成<span class="blur-text">虫蚀样空隙</span></td>
+                            <td>4.. <strong>膜性肾病的病理变化</strong><br>变化：① <span class="answer-text">上皮细胞肿胀</span>，<span class="answer-text">足突消失</span> ② <span class="answer-text">免疫复合物</span>沉积在基膜形成<span class="answer-text">钉状突起</span>，呈<span class="answer-text">梳齿状</span> ③ <span class="answer-text">基膜增厚</span>，沉积物溶解形成<span class="answer-text">虫蚀样空隙</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>5.. <strong>微小病变性肾小球病的病理变化</strong><br>变化：① <span class="blur-text">脏层上皮细胞足突消失</span> ② <span class="blur-text">光镜</span>下肾小球基本正常 ③ 在<span class="blur-text">肾小管细胞</span>有<span class="blur-text">脂质沉积</span>（又称<span class="blur-text">脂性肾病</span>）</td>
+                            <td>5.. <strong>微小病变性肾小球病的病理变化</strong><br>变化：① <span class="answer-text">脏层上皮细胞足突消失</span> ② <span class="answer-text">光镜</span>下肾小球基本正常 ③ 在<span class="answer-text">肾小管细胞</span>有<span class="answer-text">脂质沉积</span>（又称<span class="answer-text">脂性肾病</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>6.. A <strong>膜增生性肾小球肾炎的分型</strong><br>I型：<span class="blur-text">电子致密物</span>沉积在<span class="blur-text">系膜区</span>和<span class="blur-text">内皮下</span>，<span class="blur-text">颗粒荧光</span><br>II型（<span class="blur-text">致密沉积物病</span>）：块状致密物带状沉积于<span class="blur-text">基膜</span>，<span class="blur-text">补体途径</span>异常激活<br>III型：<span class="blur-text">上皮下</span>和<span class="blur-text">内皮下</span>均有电子致密物沉积</td>
+                            <td>6.. A <strong>膜增生性肾小球肾炎的分型</strong><br>I型：<span class="answer-text">电子致密物</span>沉积在<span class="answer-text">系膜区</span>和<span class="answer-text">内皮下</span>，<span class="answer-text">颗粒荧光</span><br>II型（<span class="answer-text">致密沉积物病</span>）：块状致密物带状沉积于<span class="answer-text">基膜</span>，<span class="answer-text">补体途径</span>异常激活<br>III型：<span class="answer-text">上皮下</span>和<span class="answer-text">内皮下</span>均有电子致密物沉积</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>6.. B <strong>膜增生性肾小球肾炎的病理变化</strong><br>变化：① <span class="blur-text">系膜细胞</span>和<span class="blur-text">内皮细胞</span>增生（又称<span class="blur-text">系膜毛细血管性肾小球肾炎</span>） ② <span class="blur-text">系膜细胞</span>和<span class="blur-text">基质</span>增生插入增厚的<span class="blur-text">基底膜</span>呈<span class="blur-text">双线</span>或<span class="blur-text">双轨状</span></td>
+                            <td>6.. B <strong>膜增生性肾小球肾炎的病理变化</strong><br>变化：① <span class="answer-text">系膜细胞</span>和<span class="answer-text">内皮细胞</span>增生（又称<span class="answer-text">系膜毛细血管性肾小球肾炎</span>） ② <span class="answer-text">系膜细胞</span>和<span class="answer-text">基质</span>增生插入增厚的<span class="answer-text">基底膜</span>呈<span class="answer-text">双线</span>或<span class="answer-text">双轨状</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>7.. <strong>局灶节段性硬化性肾小球肾炎的病理变化</strong><br>变化：① <span class="blur-text">系膜基质</span>增多，<span class="blur-text">基膜塌陷</span>，严重者<span class="blur-text">管腔闭塞</span> ② <span class="blur-text">弥漫性脏层上皮足突消失</span>，部分上皮细胞从<span class="blur-text">肾小球基膜</span>剥脱</td>
+                            <td>7.. <strong>局灶节段性硬化性肾小球肾炎的病理变化</strong><br>变化：① <span class="answer-text">系膜基质</span>增多，<span class="answer-text">基膜塌陷</span>，严重者<span class="answer-text">管腔闭塞</span> ② <span class="answer-text">弥漫性脏层上皮足突消失</span>，部分上皮细胞从<span class="answer-text">肾小球基膜</span>剥脱</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">=== 【12月19日】27直播病理学带读第12课思考题  （答案） ===</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>1.. A <strong>葡萄胎——肉眼观</strong><br>特点：病变局限于<span class="blur-text">宫腔内</span>，不侵入<span class="blur-text">肌层</span>。<span class="blur-text">胎盘绒毛</span>高度水肿，形成<span class="blur-text">薄壁水泡</span>，内含<span class="blur-text">清亮液体</span>，有蒂相连，形似<span class="blur-text">葡萄</span></td>
+                            <td>1.. A <strong>葡萄胎——肉眼观</strong><br>特点：病变局限于<span class="answer-text">宫腔内</span>，不侵入<span class="answer-text">肌层</span>。<span class="answer-text">胎盘绒毛</span>高度水肿，形成<span class="answer-text">薄壁水泡</span>，内含<span class="answer-text">清亮液体</span>，有蒂相连，形似<span class="answer-text">葡萄</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>1.. B <strong>葡萄胎——镜下观</strong><br>特点：① 绒毛因<span class="blur-text">间质高度疏松水肿</span><span class="blur-text">黏液变性</span>而增大 ② 绒毛间质内<span class="blur-text">血管消失</span>，或见少量无功能毛细血管，内无<span class="blur-text">红细胞</span> ③ <span class="blur-text">滋养层细胞</span>有不同程度增生，增生的细胞包括<span class="blur-text">合体细胞滋养层细胞</span>和<span class="blur-text">细胞滋养层细胞</span>，并有轻度<span class="blur-text">异型性</span>。滋养层细胞增生是葡萄胎<span class="blur-text">最重要的特征</span></td>
+                            <td>1.. B <strong>葡萄胎——镜下观</strong><br>特点：① 绒毛因<span class="answer-text">间质高度疏松水肿</span><span class="answer-text">黏液变性</span>而增大 ② 绒毛间质内<span class="answer-text">血管消失</span>，或见少量无功能毛细血管，内无<span class="answer-text">红细胞</span> ③ <span class="answer-text">滋养层细胞</span>有不同程度增生，增生的细胞包括<span class="answer-text">合体细胞滋养层细胞</span>和<span class="answer-text">细胞滋养层细胞</span>，并有轻度<span class="answer-text">异型性</span>。滋养层细胞增生是葡萄胎<span class="answer-text">最重要的特征</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>1.. C <strong>葡萄胎——分型</strong><br>完全型：所有<span class="blur-text">绒毛</span>均呈葡萄状<br>部分型：部分绒毛呈葡萄状，仍保留部分<span class="blur-text">正常绒毛</span>，伴有或不伴有<span class="blur-text">胎儿</span>或其附属器官</td>
+                            <td>1.. C <strong>葡萄胎——分型</strong><br>完全型：所有<span class="answer-text">绒毛</span>均呈葡萄状<br>部分型：部分绒毛呈葡萄状，仍保留部分<span class="answer-text">正常绒毛</span>，伴有或不伴有<span class="answer-text">胎儿</span>或其附属器官</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>2.. A <strong>侵蚀性葡萄胎——概述</strong><br>概述：介于<span class="blur-text">葡萄胎</span>和<span class="blur-text">绒毛膜上皮癌</span>之间的<span class="blur-text">交界性肿瘤</span></td>
+                            <td>2.. A <strong>侵蚀性葡萄胎——概述</strong><br>概述：介于<span class="answer-text">葡萄胎</span>和<span class="answer-text">绒毛膜上皮癌</span>之间的<span class="answer-text">交界性肿瘤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>2.. B <strong>侵蚀性葡萄胎——病理特点</strong><br>镜下：滋养层细胞<span class="blur-text">增生程度</span>和<span class="blur-text">异型性</span>比良性葡萄胎显著。常见<span class="blur-text">出血坏死</span>，病变侵入<span class="blur-text">肌层</span>，其中可见<span class="blur-text">水泡状绒毛</span>或<span class="blur-text">坏死的绒毛</span></td>
+                            <td>2.. B <strong>侵蚀性葡萄胎——病理特点</strong><br>镜下：滋养层细胞<span class="answer-text">增生程度</span>和<span class="answer-text">异型性</span>比良性葡萄胎显著。常见<span class="answer-text">出血坏死</span>，病变侵入<span class="answer-text">肌层</span>，其中可见<span class="answer-text">水泡状绒毛</span>或<span class="answer-text">坏死的绒毛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>3.. A <strong>绒毛膜癌——概述</strong><br>概述：<span class="blur-text">绒毛滋养层上皮</span>的高度<span class="blur-text">侵袭性恶性肿瘤</span></td>
+                            <td>3.. A <strong>绒毛膜癌——概述</strong><br>概述：<span class="answer-text">绒毛滋养层上皮</span>的高度<span class="answer-text">侵袭性恶性肿瘤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>3.. B <strong>绒毛膜癌——肉眼观</strong><br>特点：癌结节呈<span class="blur-text">单个</span>或<span class="blur-text">多个</span>，位于<span class="blur-text">子宫</span>的不同部位，大者可突入<span class="blur-text">宫腔</span>，常侵入<span class="blur-text">深肌层</span>，甚至达<span class="blur-text">浆膜外</span>。正常组织可见明显<span class="blur-text">出血坏死</span>，癌结节质软，<span class="blur-text">暗红</span>或<span class="blur-text">紫蓝色</span></td>
+                            <td>3.. B <strong>绒毛膜癌——肉眼观</strong><br>特点：癌结节呈<span class="answer-text">单个</span>或<span class="answer-text">多个</span>，位于<span class="answer-text">子宫</span>的不同部位，大者可突入<span class="answer-text">宫腔</span>，常侵入<span class="answer-text">深肌层</span>，甚至达<span class="answer-text">浆膜外</span>。正常组织可见明显<span class="answer-text">出血坏死</span>，癌结节质软，<span class="answer-text">暗红</span>或<span class="answer-text">紫蓝色</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>3.. C <strong>绒毛膜癌——镜下观</strong><br>特点：瘤组织细胞<span class="blur-text">异型性</span>明显，<span class="blur-text">核分裂象</span>易见。细胞混合排列成<span class="blur-text">巢状</span>或<span class="blur-text">条索状</span>。肿瘤自身<span class="blur-text">不形成绒毛</span>，<span class="blur-text">无间质血管</span>，构成<span class="blur-text">三无现象</span></td>
+                            <td>3.. C <strong>绒毛膜癌——镜下观</strong><br>特点：瘤组织细胞<span class="answer-text">异型性</span>明显，<span class="answer-text">核分裂象</span>易见。细胞混合排列成<span class="answer-text">巢状</span>或<span class="answer-text">条索状</span>。肿瘤自身<span class="answer-text">不形成绒毛</span>，<span class="answer-text">无间质血管</span>，构成<span class="answer-text">三无现象</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>3.. D <strong>绒毛膜癌——临床特点</strong><br>特点：易经<span class="blur-text">血道转移</span>，以<span class="blur-text">肺</span>（<span class="blur-text">90%</span>以上）最常见。主要表现为<span class="blur-text">葡萄胎</span>、<span class="blur-text">流产</span>和<span class="blur-text">妊娠</span>数月甚至数年后，<span class="blur-text">阴道</span>出现持续不规则流血，<span class="blur-text">子宫增大</span>，血或尿中<span class="blur-text">hCG</span>显著升高，治疗方式以<span class="blur-text">化疗</span>为主</td>
+                            <td>3.. D <strong>绒毛膜癌——临床特点</strong><br>特点：易经<span class="answer-text">血道转移</span>，以<span class="answer-text">肺</span>（<span class="answer-text">90%</span>以上）最常见。主要表现为<span class="answer-text">葡萄胎</span>、<span class="answer-text">流产</span>和<span class="answer-text">妊娠</span>数月甚至数年后，<span class="answer-text">阴道</span>出现持续不规则流血，<span class="answer-text">子宫增大</span>，血或尿中<span class="answer-text">hCG</span>显著升高，治疗方式以<span class="answer-text">化疗</span>为主</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

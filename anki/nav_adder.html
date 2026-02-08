@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML导航栏添加器</title>
+    <style>
+        :root {
+            --bg: #f8f5f0;
+            --card: #ffffff;
+            --accent: #e63946;
+            --text: #2b2d42;
+            --border: #e9ecef;
+            --success: #27ae60;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        
+        h1 { 
+            text-align: center; 
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+        }
+        
+        .panel {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        .panel h2 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 300px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            resize: vertical;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-primary:hover { opacity: 0.9; }
+        
+        .btn-secondary {
+            background: var(--text);
+            color: white;
+        }
+        
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+        
+        .output-info {
+            margin-top: 15px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .success { color: var(--success); }
+        .error { color: var(--accent); }
+        
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📑 HTML 导航栏添加器</h1>
+        <p class="subtitle">自动识别 === 【日期】=== 格式，生成粘性导航栏</p>
+        
+        <div class="panel">
+            <h2>📥 粘贴你的 HTML</h2>
+            <textarea id="inputHtml" placeholder="<!DOCTYPE html>
+<html>
+...
+<tr class='title-row'>
+    <td colspan='3'>=== 【12月1日】标题 ===</td>
+</tr>
+...
+</html>"></textarea>
+            
+            <div class="btn-group">
+                <button class="btn-primary" onclick="addNavigation()">🚀 添加导航栏</button>
+                <button class="btn-secondary" onclick="clearInput()">🗑️ 清空</button>
+            </div>
+            
+            <div id="infoBox" class="output-info hidden"></div>
+        </div>
+        
+        <div class="panel hidden" id="resultPanel">
+            <h2>📤 处理结果</h2>
+            <textarea id="outputHtml" readonly></textarea>
+            
+            <div class="btn-group">
+                <button class="btn-success" onclick="copyResult()">📋 复制全部</button>
+                <button class="btn-primary" onclick="downloadResult()">💾 下载 HTML 文件</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addNavigation() {
+            let html = document.getElementById('inputHtml').value;
+            const infoBox = document.getElementById('infoBox');
+            
+            if (!html.trim()) {
+                showInfo('请先粘贴 HTML 代码', 'error');
+                return;
+            }
+            
+            // 检查是否有目标格式
+            if (!html.includes('===') || !html.includes('【')) {
+                showInfo('未找到 === 【日期】=== 格式的标题', 'error');
+                return;
+            }
+            
+            // 提取标题（支持 === 【日期】内容 === 格式）
+            const titleRegex = /=== 【(.*?)】/g;
+            const matches = [...html.matchAll(titleRegex)];
+            
+            if (matches.length === 0) {
+                showInfo('未找到 === 【日期】=== 格式的标题', 'error');
+                return;
+            }
+            
+            const titles = matches.map(m => m[1]);
+            
+            // 生成导航项
+            const navItems = titles.map(t => {
+                const anchor = t.replace(/月/g, '-').replace(/日/g, '').replace(/\s/g, '');
+                const display = t.split('】')[0] || t;
+                return `<a href="#${anchor}">${display}</a>`;
+            });
+            
+            const navHtml = `<nav class="sticky-nav">${navItems.join(' | ')}</nav>`;
+            
+            // 添加锚点到 title-row
+            html = html.replace(
+                /<tr\s+class="title-row"\s*>\s*<td\s+colspan="3"\s*>\s*=== 【(.*?)】/g,
+                (match, date) => {
+                    const anchor = date.replace(/月/g, '-').replace(/日/g, '').replace(/\s/g, '');
+                    return `<tr class="title-row" id="${anchor}"><td colspan="3">=== 【${date}】`;
+                }
+            );
+            
+            // 插入导航栏
+            html = html.replace(
+                /<div\s+class="container"\s*>/,
+                `<div class="container">\n        ${navHtml}`
+            );
+            
+            // 添加 CSS
+            const navCss = `
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 100;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+        .sticky-nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .sticky-nav a:hover {
+            background: var(--accent-red);
+            color: white;
+        }`;
+            
+            html = html.replace('</style>', navCss + '\n    </style>');
+            
+            // 显示结果
+            document.getElementById('outputHtml').value = html;
+            document.getElementById('resultPanel').classList.remove('hidden');
+            
+            showInfo(`✅ 成功！找到 ${titles.length} 个章节，已生成导航栏。<br>章节：${titles.map(t => '【' + t.split('】')[0] + '】').join('、')}`, 'success');
+        }
+        
+        function showInfo(msg, type) {
+            const box = document.getElementById('infoBox');
+            box.innerHTML = msg;
+            box.className = 'output-info ' + type;
+            box.classList.remove('hidden');
+        }
+        
+        function clearInput() {
+            document.getElementById('inputHtml').value = '';
+            document.getElementById('resultPanel').classList.add('hidden');
+            document.getElementById('infoBox').classList.add('hidden');
+        }
+        
+        function copyResult() {
+            const text = document.getElementById('outputHtml').value;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('已复制到剪贴板！');
+            });
+        }
+        
+        function downloadResult() {
+            const text = document.getElementById('outputHtml').value;
+            const blob = new Blob([text], {type: 'text/html'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'output_with_nav.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
