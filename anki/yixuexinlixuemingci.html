@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">医学心理学名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>医学心理学（名解）</strong><br>是<span class="blur-text">心理学</span>和<span class="blur-text">医学</span>相结合一门新兴交叉的学科，它是将心理学的理论和技术应用于医学领域，研究心理因素在健康和疾病相互转化中的作用及其规律的学科</td>
+                            <td>1.. <strong>医学心理学（名解）</strong><br>是<span class="answer-text">心理学</span>和<span class="answer-text">医学</span>相结合一门新兴交叉的学科，它是将心理学的理论和技术应用于医学领域，研究心理因素在健康和疾病相互转化中的作用及其规律的学科</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>医学模式（名解）</strong><br>是指医学的<span class="blur-text">主导思想</span>，包括疾病观、健康观等，并影响医学工作者的思想及行为方式，使之带有一定倾向性，也影响医学工作的结果</td>
+                            <td>2.. <strong>医学模式（名解）</strong><br>是指医学的<span class="answer-text">主导思想</span>，包括疾病观、健康观等，并影响医学工作者的思想及行为方式，使之带有一定倾向性，也影响医学工作的结果</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>生物医学模式</strong><br>用<span class="blur-text">自然科学</span>（物理、化学）方法研究生命现象，用"<span class="blur-text">实践加推理</span>"的认知论和方法论认识健康和疾病，使医疗活动带着明显的生物科学属性</td>
+                            <td>3.. <strong>生物医学模式</strong><br>用<span class="answer-text">自然科学</span>（物理、化学）方法研究生命现象，用"<span class="answer-text">实践加推理</span>"的认知论和方法论认识健康和疾病，使医疗活动带着明显的生物科学属性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>生物-心理-社会医学模式</strong><br><span class="blur-text">1977</span>年，<span class="blur-text">美国</span>，<span class="blur-text">恩格尔</span>（G.L Engel）提出，从生物、心理、社会三轴系统综合看待健康和疾病</td>
+                            <td>4.. <strong>生物-心理-社会医学模式</strong><br><span class="answer-text">1977</span>年，<span class="answer-text">美国</span>，<span class="answer-text">恩格尔</span>（G.L Engel）提出，从生物、心理、社会三轴系统综合看待健康和疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>感觉</strong><br>是人脑对直接作用于感觉器官的当前客观事物的<span class="blur-text">个别属性</span>的反映，是最基本的认知过程</td>
+                            <td>5.. <strong>感觉</strong><br>是人脑对直接作用于感觉器官的当前客观事物的<span class="answer-text">个别属性</span>的反映，是最基本的认知过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>感受性与感觉阈限</strong><br>感受性的高低与感觉阈限的大小成<span class="blur-text">反比</span>。差别感受性的高低与差别感觉阈限的大小成<span class="blur-text">反比</span></td>
+                            <td>6.. <strong>感受性与感觉阈限</strong><br>感受性的高低与感觉阈限的大小成<span class="answer-text">反比</span>。差别感受性的高低与差别感觉阈限的大小成<span class="answer-text">反比</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>感觉的适应</strong><br>由于刺激物对感受器的持续作用使<span class="blur-text">感受性</span>发生变化（感受性提高或降低）的现象。<span class="blur-text">听觉</span>、<span class="blur-text">疼痛觉</span>无适应现象</td>
+                            <td>7.. <strong>感觉的适应</strong><br>由于刺激物对感受器的持续作用使<span class="answer-text">感受性</span>发生变化（感受性提高或降低）的现象。<span class="answer-text">听觉</span>、<span class="answer-text">疼痛觉</span>无适应现象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>感觉的对比</strong><br>同一感觉器官在不同刺激物的作用下，<span class="blur-text">感受性</span>的性质和强度上发生变化的现象。包括<span class="blur-text">同时对比</span>和<span class="blur-text">继时对比</span></td>
+                            <td>8.. <strong>感觉的对比</strong><br>同一感觉器官在不同刺激物的作用下，<span class="answer-text">感受性</span>的性质和强度上发生变化的现象。包括<span class="answer-text">同时对比</span>和<span class="answer-text">继时对比</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>联觉</strong><br>一个刺激兼有<span class="blur-text">两种感觉</span>，如暖色（温度觉、颜色觉）</td>
+                            <td>9.. <strong>联觉</strong><br>一个刺激兼有<span class="answer-text">两种感觉</span>，如暖色（温度觉、颜色觉）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>知觉</strong><br>是直接作用于感觉器的客观事物的<span class="blur-text">整体属性</span>的反映，是对事物主观化的客观反映，是大脑的初步加工过程</td>
+                            <td>10.. <strong>知觉</strong><br>是直接作用于感觉器的客观事物的<span class="answer-text">整体属性</span>的反映，是对事物主观化的客观反映，是大脑的初步加工过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>知觉的选择性/相对性</strong><br>只有当刺激物之间有某种差别时，一部分刺激物才能成为知觉的<span class="blur-text">对象</span>，而另一部分刺激物便成为<span class="blur-text">背景</span></td>
+                            <td>11.. <strong>知觉的选择性/相对性</strong><br>只有当刺激物之间有某种差别时，一部分刺激物才能成为知觉的<span class="answer-text">对象</span>，而另一部分刺激物便成为<span class="answer-text">背景</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>知觉的整体性/组织性</strong><br>人的知觉系统具有把个别属性、个别部分综合成为<span class="blur-text">整体</span>的能力。包括<span class="blur-text">接近性</span>、<span class="blur-text">相似性</span>、<span class="blur-text">连续性</span>、<span class="blur-text">封闭性</span></td>
+                            <td>12.. <strong>知觉的整体性/组织性</strong><br>人的知觉系统具有把个别属性、个别部分综合成为<span class="answer-text">整体</span>的能力。包括<span class="answer-text">接近性</span>、<span class="answer-text">相似性</span>、<span class="answer-text">连续性</span>、<span class="answer-text">封闭性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>知觉的理解性</strong><br>人对于知觉的对象总是以自己<span class="blur-text">过去的经验</span>予以解释，并用词来标志它</td>
+                            <td>13.. <strong>知觉的理解性</strong><br>人对于知觉的对象总是以自己<span class="answer-text">过去的经验</span>予以解释，并用词来标志它</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>知觉的恒常性</strong><br>当知觉对象的物理特性在一定范围内发生了变化的时候，知觉形象并不发生相应的变化。包括<span class="blur-text">大小恒常性</span>、<span class="blur-text">形状恒常性</span>、<span class="blur-text">明度恒常性</span>、<span class="blur-text">颜色恒常性</span></td>
+                            <td>14.. <strong>知觉的恒常性</strong><br>当知觉对象的物理特性在一定范围内发生了变化的时候，知觉形象并不发生相应的变化。包括<span class="answer-text">大小恒常性</span>、<span class="answer-text">形状恒常性</span>、<span class="answer-text">明度恒常性</span>、<span class="answer-text">颜色恒常性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>错觉</strong><br>是对客观事物的<span class="blur-text">主观歪曲</span>的知觉，是不正确的知觉。<span class="blur-text">视觉</span>的错觉最常见</td>
+                            <td>15.. <strong>错觉</strong><br>是对客观事物的<span class="answer-text">主观歪曲</span>的知觉，是不正确的知觉。<span class="answer-text">视觉</span>的错觉最常见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>幻觉</strong><br>是根本没有<span class="blur-text">现实刺激</span>作用于感官而产生的感知体，<span class="blur-text">幻听</span>最常见</td>
+                            <td>16.. <strong>幻觉</strong><br>是根本没有<span class="answer-text">现实刺激</span>作用于感官而产生的感知体，<span class="answer-text">幻听</span>最常见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>注意</strong><br>是心理活动对一定对象的<span class="blur-text">指向</span>和<span class="blur-text">集中</span>。<span class="blur-text">指向性</span>和<span class="blur-text">集中性</span>是注意的基本特征</td>
+                            <td>17.. <strong>注意</strong><br>是心理活动对一定对象的<span class="answer-text">指向</span>和<span class="answer-text">集中</span>。<span class="answer-text">指向性</span>和<span class="answer-text">集中性</span>是注意的基本特征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>无意注意</strong><br>没有<span class="blur-text">预定目的</span>，也不需要<span class="blur-text">意志努力</span></td>
+                            <td>18.. <strong>无意注意</strong><br>没有<span class="answer-text">预定目的</span>，也不需要<span class="answer-text">意志努力</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>有意注意</strong><br>有<span class="blur-text">预定目的</span>，需要<span class="blur-text">一定意志努力</span></td>
+                            <td>19.. <strong>有意注意</strong><br>有<span class="answer-text">预定目的</span>，需要<span class="answer-text">一定意志努力</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>有意后注意</strong><br>有<span class="blur-text">预定目的</span>，但不需要<span class="blur-text">意志努力</span>（如，熟练打字、开车）</td>
+                            <td>20.. <strong>有意后注意</strong><br>有<span class="answer-text">预定目的</span>，但不需要<span class="answer-text">意志努力</span>（如，熟练打字、开车）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>注意的广度</strong><br>单位时间（<span class="blur-text">0.1秒</span>）所能把握到的事物的数量（正常人<span class="blur-text">5-9</span>）</td>
+                            <td>21.. <strong>注意的广度</strong><br>单位时间（<span class="answer-text">0.1秒</span>）所能把握到的事物的数量（正常人<span class="answer-text">5-9</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>记忆的分类（按内容）</strong><br>①<span class="blur-text">形象记忆</span>：是以感知过的客观事物在头脑中再现的具体形象为内容的记忆<br>②<span class="blur-text">词语逻辑记忆</span>：是以概念、公式、理论、推理等为内容的记忆<br>③<span class="blur-text">情绪记忆</span>：是以过去体验的情绪、情感为内容的记忆<br>④<span class="blur-text">运动记忆</span>：是对过去做过的运动或操作动作的记忆</td>
+                            <td>22.. <strong>记忆的分类（按内容）</strong><br>①<span class="answer-text">形象记忆</span>：是以感知过的客观事物在头脑中再现的具体形象为内容的记忆<br>②<span class="answer-text">词语逻辑记忆</span>：是以概念、公式、理论、推理等为内容的记忆<br>③<span class="answer-text">情绪记忆</span>：是以过去体验的情绪、情感为内容的记忆<br>④<span class="answer-text">运动记忆</span>：是对过去做过的运动或操作动作的记忆</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>记忆的分类（按时间）</strong><br>①<span class="blur-text">瞬时记忆</span>：信息在感觉系统存留时间仅为<span class="blur-text">0.25—2秒钟</span><br>②<span class="blur-text">短时记忆</span>：信息在头脑中存留<span class="blur-text">30秒—1分钟</span>，信息储存量有限，一般为<span class="blur-text">7±2</span>个记忆单位<br>③<span class="blur-text">长时记忆</span>：是指信息经过深入加工，在头脑中长期储存的记忆，大于<span class="blur-text">1分钟</span></td>
+                            <td>23.. <strong>记忆的分类（按时间）</strong><br>①<span class="answer-text">瞬时记忆</span>：信息在感觉系统存留时间仅为<span class="answer-text">0.25—2秒钟</span><br>②<span class="answer-text">短时记忆</span>：信息在头脑中存留<span class="answer-text">30秒—1分钟</span>，信息储存量有限，一般为<span class="answer-text">7±2</span>个记忆单位<br>③<span class="answer-text">长时记忆</span>：是指信息经过深入加工，在头脑中长期储存的记忆，大于<span class="answer-text">1分钟</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>遗忘规律【重点】</strong><br>①遗忘进程<span class="blur-text">先快后慢</span><br>②遗忘的多少与记忆材料的<span class="blur-text">性质</span>和<span class="blur-text">长度</span>有关，<span class="blur-text">意义材料</span>较<span class="blur-text">无意义的材料</span>遗忘慢，<span class="blur-text">抽象材料</span>比<span class="blur-text">形象材料</span>更易遗忘<br>③较长的材料<span class="blur-text">首尾</span>遗忘少，<span class="blur-text">中间</span>遗忘多</td>
+                            <td>24.. <strong>遗忘规律【重点】</strong><br>①遗忘进程<span class="answer-text">先快后慢</span><br>②遗忘的多少与记忆材料的<span class="answer-text">性质</span>和<span class="answer-text">长度</span>有关，<span class="answer-text">意义材料</span>较<span class="answer-text">无意义的材料</span>遗忘慢，<span class="answer-text">抽象材料</span>比<span class="answer-text">形象材料</span>更易遗忘<br>③较长的材料<span class="answer-text">首尾</span>遗忘少，<span class="answer-text">中间</span>遗忘多</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>思维的概念</strong>*<br>是指人脑对客观事物<span class="blur-text">间接地</span>、<span class="blur-text">概括地</span>反映，是在借助于概念，表象、动作，对事物的一般性、本质特征和规律的认识</td>
+                            <td>25.. <strong>思维的概念</strong>*<br>是指人脑对客观事物<span class="answer-text">间接地</span>、<span class="answer-text">概括地</span>反映，是在借助于概念，表象、动作，对事物的一般性、本质特征和规律的认识</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>思维的两个特性</strong><br>①<span class="blur-text">间接性</span>：以其他事物为媒介，间接地认识事物<br>②<span class="blur-text">概括性</span>：对同类事物的一般性、共同本质特征的认识；对事物之间规律性的内在联系的认识</td>
+                            <td>26.. <strong>思维的两个特性</strong><br>①<span class="answer-text">间接性</span>：以其他事物为媒介，间接地认识事物<br>②<span class="answer-text">概括性</span>：对同类事物的一般性、共同本质特征的认识；对事物之间规律性的内在联系的认识</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>想象的种类</strong><br>①<span class="blur-text">无意想象</span>：无目的性、无需意志参与（梦）<br>②<span class="blur-text">有意想象</span>：包括<span class="blur-text">再造想象</span>（语言、文字、图像作为参考）、<span class="blur-text">创造想象</span>（无明确的语言文字图像作为参考）、<span class="blur-text">幻想</span>（个体指向未来与自己需要相关）</td>
+                            <td>27.. <strong>想象的种类</strong><br>①<span class="answer-text">无意想象</span>：无目的性、无需意志参与（梦）<br>②<span class="answer-text">有意想象</span>：包括<span class="answer-text">再造想象</span>（语言、文字、图像作为参考）、<span class="answer-text">创造想象</span>（无明确的语言文字图像作为参考）、<span class="answer-text">幻想</span>（个体指向未来与自己需要相关）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>表象</strong>*<br>指曾经感知过的事物在大脑中留下的映象——<span class="blur-text">形象记忆</span></td>
+                            <td>28.. <strong>表象</strong>*<br>指曾经感知过的事物在大脑中留下的映象——<span class="answer-text">形象记忆</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>情绪和情感的概念</strong><br>是人对客观事物是否符合<span class="blur-text">自身需要</span>的主观态度的体验，情绪和情感统称<span class="blur-text">感情</span></td>
+                            <td>29.. <strong>情绪和情感的概念</strong><br>是人对客观事物是否符合<span class="answer-text">自身需要</span>的主观态度的体验，情绪和情感统称<span class="answer-text">感情</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>情绪和情感的区别【大题】</strong><br>①从需要的角度：情绪与<span class="blur-text">生理需要</span>相联，情感与<span class="blur-text">社会需要</span>相连<br>②从发生的角度：情绪发生<span class="blur-text">较早</span>，人和动物均有；情感发生<span class="blur-text">较晚</span>，仅人类独有<br>③从反应的角度：情绪带有<span class="blur-text">情境性</span>、<span class="blur-text">激动性</span>和<span class="blur-text">暂时性</span>的特点；情感则具有较大的<span class="blur-text">稳定性</span>、<span class="blur-text">深刻性</span>和<span class="blur-text">持久性</span><br>④从反应的强弱程度上：情绪比较<span class="blur-text">强烈</span>，具有冲动性和明显的外部表现；而情感体验<span class="blur-text">较弱</span>，也很少具有冲动性</td>
+                            <td>30.. <strong>情绪和情感的区别【大题】</strong><br>①从需要的角度：情绪与<span class="answer-text">生理需要</span>相联，情感与<span class="answer-text">社会需要</span>相连<br>②从发生的角度：情绪发生<span class="answer-text">较早</span>，人和动物均有；情感发生<span class="answer-text">较晚</span>，仅人类独有<br>③从反应的角度：情绪带有<span class="answer-text">情境性</span>、<span class="answer-text">激动性</span>和<span class="answer-text">暂时性</span>的特点；情感则具有较大的<span class="answer-text">稳定性</span>、<span class="answer-text">深刻性</span>和<span class="answer-text">持久性</span><br>④从反应的强弱程度上：情绪比较<span class="answer-text">强烈</span>，具有冲动性和明显的外部表现；而情感体验<span class="answer-text">较弱</span>，也很少具有冲动性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>基本的情绪形式</strong><br><span class="blur-text">快乐</span>、<span class="blur-text">愤怒</span>、<span class="blur-text">恐惧</span>、<span class="blur-text">悲哀</span></td>
+                            <td>31.. <strong>基本的情绪形式</strong><br><span class="answer-text">快乐</span>、<span class="answer-text">愤怒</span>、<span class="answer-text">恐惧</span>、<span class="answer-text">悲哀</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>情绪状态【掌握】</strong><br>①<span class="blur-text">心境</span>：是一种微弱而持久的、具有渲染性的一种情绪状态<br>②<span class="blur-text">激情</span>：是一种强烈而短促的情绪状态<br>③<span class="blur-text">应激</span>：是指个体对某种意料之外的环境刺激，个体觉察到威胁或挑战时所做出的适应性反应</td>
+                            <td>32.. <strong>情绪状态【掌握】</strong><br>①<span class="answer-text">心境</span>：是一种微弱而持久的、具有渲染性的一种情绪状态<br>②<span class="answer-text">激情</span>：是一种强烈而短促的情绪状态<br>③<span class="answer-text">应激</span>：是指个体对某种意料之外的环境刺激，个体觉察到威胁或挑战时所做出的适应性反应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>情感的分类【掌握】</strong><br>①<span class="blur-text">道德感</span>：是根据一定的道德标准在评价人的思想和行为时所产生的主观体验<br>②<span class="blur-text">理智感</span>：是在智力活动过程中所产生的情感体验，如人们的新奇感和好奇心、求知欲<br>③<span class="blur-text">美感</span>：是根据一定的审美标准评价事物时所产生的情感体验</td>
+                            <td>33.. <strong>情感的分类【掌握】</strong><br>①<span class="answer-text">道德感</span>：是根据一定的道德标准在评价人的思想和行为时所产生的主观体验<br>②<span class="answer-text">理智感</span>：是在智力活动过程中所产生的情感体验，如人们的新奇感和好奇心、求知欲<br>③<span class="answer-text">美感</span>：是根据一定的审美标准评价事物时所产生的情感体验</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>表情【掌握】</strong><br>情绪的外部表现又叫表情。主要有<span class="blur-text">面部表情</span>、<span class="blur-text">身段表情</span>和<span class="blur-text">言语表情</span></td>
+                            <td>34.. <strong>表情【掌握】</strong><br>情绪的外部表现又叫表情。主要有<span class="answer-text">面部表情</span>、<span class="answer-text">身段表情</span>和<span class="answer-text">言语表情</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>沙赫特-辛格情绪三因素理论</strong><br>情绪的产生是<span class="blur-text">刺激因素</span>、<span class="blur-text">生理因素</span>和<span class="blur-text">认知因素</span>协同作用的结果，<span class="blur-text">认知因素</span>在情绪的产生中具有决定性的作用</td>
+                            <td>35.. <strong>沙赫特-辛格情绪三因素理论</strong><br>情绪的产生是<span class="answer-text">刺激因素</span>、<span class="answer-text">生理因素</span>和<span class="answer-text">认知因素</span>协同作用的结果，<span class="answer-text">认知因素</span>在情绪的产生中具有决定性的作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>意志的概念</strong><br>是指人们自觉地明确目标，有意识地支配和调节行动，通过克服困难去实现预定目标的心理过程，是人类所特有的并和<span class="blur-text">第二信号系统</span>的作用是分不开的</td>
+                            <td>36.. <strong>意志的概念</strong><br>是指人们自觉地明确目标，有意识地支配和调节行动，通过克服困难去实现预定目标的心理过程，是人类所特有的并和<span class="answer-text">第二信号系统</span>的作用是分不开的</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>意志行动的基本特征【掌握】</strong><br>①<span class="blur-text">目的性</span>：是意志行动的前提<br>②<span class="blur-text">克服困难</span>：是意志行动的核心<br>③<span class="blur-text">随意运动</span>：是意志行动的基础</td>
+                            <td>37.. <strong>意志行动的基本特征【掌握】</strong><br>①<span class="answer-text">目的性</span>：是意志行动的前提<br>②<span class="answer-text">克服困难</span>：是意志行动的核心<br>③<span class="answer-text">随意运动</span>：是意志行动的基础</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>意志的品质【掌握】</strong><br>①<span class="blur-text">自觉性</span>：其相反品质为动摇性盲从和独断性<br>②<span class="blur-text">果断性</span>：其相反的品质为武断和优柔寡断<br>③<span class="blur-text">坚韧性</span>：又称顽强性或坚定性。其相反品质为动摇、虎头蛇尾、见异思迁和执拗<br>④<span class="blur-text">自制力</span>：其相反品质为任性、怯懦</td>
+                            <td>38.. <strong>意志的品质【掌握】</strong><br>①<span class="answer-text">自觉性</span>：其相反品质为动摇性盲从和独断性<br>②<span class="answer-text">果断性</span>：其相反的品质为武断和优柔寡断<br>③<span class="answer-text">坚韧性</span>：又称顽强性或坚定性。其相反品质为动摇、虎头蛇尾、见异思迁和执拗<br>④<span class="answer-text">自制力</span>：其相反品质为任性、怯懦</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>人格的概念【掌握】</strong><br>是指一个人的整个精神面貌，即具有一定<span class="blur-text">倾向性</span>的、<span class="blur-text">稳定</span>的心理特征的总和</td>
+                            <td>39.. <strong>人格的概念【掌握】</strong><br>是指一个人的整个精神面貌，即具有一定<span class="answer-text">倾向性</span>的、<span class="answer-text">稳定</span>的心理特征的总和</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>人格的特征【掌握大题/多选】</strong><br>①<span class="blur-text">独特性与共同性</span><br>②<span class="blur-text">生物性与社会性</span><br>③<span class="blur-text">稳定性与可变性</span><br>④<span class="blur-text">整体性</span></td>
+                            <td>40.. <strong>人格的特征【掌握大题/多选】</strong><br>①<span class="answer-text">独特性与共同性</span><br>②<span class="answer-text">生物性与社会性</span><br>③<span class="answer-text">稳定性与可变性</span><br>④<span class="answer-text">整体性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>人格心理结构</strong><br>①<span class="blur-text">人格倾向性</span>：个性中最活跃的因素<br>②<span class="blur-text">人格心理特征</span>：包括能力，气质，性格<br>③<span class="blur-text">自我意识</span>：对自我的认知、体验和调控</td>
+                            <td>41.. <strong>人格心理结构</strong><br>①<span class="answer-text">人格倾向性</span>：个性中最活跃的因素<br>②<span class="answer-text">人格心理特征</span>：包括能力，气质，性格<br>③<span class="answer-text">自我意识</span>：对自我的认知、体验和调控</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>影响人格形成的因素【掌握大题】</strong><br>人格是在先天<span class="blur-text">遗传素质</span>的基础上，在后天<span class="blur-text">社会环境</span>中，通过<span class="blur-text">社会实践</span>逐渐形成和发展起来的，其中<span class="blur-text">教育</span>发挥着主导作用</td>
+                            <td>42.. <strong>影响人格形成的因素【掌握大题】</strong><br>人格是在先天<span class="answer-text">遗传素质</span>的基础上，在后天<span class="answer-text">社会环境</span>中，通过<span class="answer-text">社会实践</span>逐渐形成和发展起来的，其中<span class="answer-text">教育</span>发挥着主导作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>需要的分类【熟悉】</strong><br>①根据起源：<span class="blur-text">生物性需要</span>（如空气、水、食物）和<span class="blur-text">社会性需要</span>（如交往、求知）<br>②根据对象：<span class="blur-text">物质需要</span>和<span class="blur-text">精神需要</span></td>
+                            <td>43.. <strong>需要的分类【熟悉】</strong><br>①根据起源：<span class="answer-text">生物性需要</span>（如空气、水、食物）和<span class="answer-text">社会性需要</span>（如交往、求知）<br>②根据对象：<span class="answer-text">物质需要</span>和<span class="answer-text">精神需要</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>马斯洛的需要层次论</strong><br>①<span class="blur-text">生理的需要</span><br>②<span class="blur-text">安全的需要</span><br>③<span class="blur-text">归属和爱的需要</span><br>④<span class="blur-text">尊重的需要</span><br>⑤<span class="blur-text">自我实现的需要</span></td>
+                            <td>44.. <strong>马斯洛的需要层次论</strong><br>①<span class="answer-text">生理的需要</span><br>②<span class="answer-text">安全的需要</span><br>③<span class="answer-text">归属和爱的需要</span><br>④<span class="answer-text">尊重的需要</span><br>⑤<span class="answer-text">自我实现的需要</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>动机的概念【掌握】</strong><br>是引起和维持个体活动，并使活动朝向某一目标的<span class="blur-text">内部动力</span>。<span class="blur-text">需要</span>和<span class="blur-text">诱因</span>是动机产生的两个必要条件</td>
+                            <td>45.. <strong>动机的概念【掌握】</strong><br>是引起和维持个体活动，并使活动朝向某一目标的<span class="answer-text">内部动力</span>。<span class="answer-text">需要</span>和<span class="answer-text">诱因</span>是动机产生的两个必要条件</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46.. <strong>动机的功能【熟悉多选】</strong><br><span class="blur-text">激活功能</span>、<span class="blur-text">指向功能</span>、<span class="blur-text">维持和调整功能</span></td>
+                            <td>46.. <strong>动机的功能【熟悉多选】</strong><br><span class="answer-text">激活功能</span>、<span class="answer-text">指向功能</span>、<span class="answer-text">维持和调整功能</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47.. <strong>动机的种类【熟悉】</strong><br>①根据性质：<span class="blur-text">生理性动机</span>和<span class="blur-text">心理性动机</span><br>②根据作用时间：<span class="blur-text">长远动机</span>和<span class="blur-text">短暂动机</span><br>③根据作用大小：<span class="blur-text">主导动机</span>（优势动机）和<span class="blur-text">辅助动机</span><br>④根据原因：<span class="blur-text">外部动机</span>和<span class="blur-text">内部动机</span></td>
+                            <td>47.. <strong>动机的种类【熟悉】</strong><br>①根据性质：<span class="answer-text">生理性动机</span>和<span class="answer-text">心理性动机</span><br>②根据作用时间：<span class="answer-text">长远动机</span>和<span class="answer-text">短暂动机</span><br>③根据作用大小：<span class="answer-text">主导动机</span>（优势动机）和<span class="answer-text">辅助动机</span><br>④根据原因：<span class="answer-text">外部动机</span>和<span class="answer-text">内部动机</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48.. <strong>动机冲突【掌握】</strong><br>①<span class="blur-text">双趋冲突</span><br>②<span class="blur-text">双避冲突</span><br>③<span class="blur-text">趋避冲突</span><br>④<span class="blur-text">双重趋避冲突</span></td>
+                            <td>48.. <strong>动机冲突【掌握】</strong><br>①<span class="answer-text">双趋冲突</span><br>②<span class="answer-text">双避冲突</span><br>③<span class="answer-text">趋避冲突</span><br>④<span class="answer-text">双重趋避冲突</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49.. <strong>能力的分类</strong>*<br>①<span class="blur-text">一般能力</span>：观察力、记忆力、运动能力等<br>②<span class="blur-text">特殊能力</span>：音乐表现能力、节奏感的能力、色彩的鉴别力等</td>
+                            <td>49.. <strong>能力的分类</strong>*<br>①<span class="answer-text">一般能力</span>：观察力、记忆力、运动能力等<br>②<span class="answer-text">特殊能力</span>：音乐表现能力、节奏感的能力、色彩的鉴别力等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50.. <strong>能力的形成和发展【大题】</strong><br>①<span class="blur-text">遗传因素</span>：是智力形成和发展的自然前提<br>②<span class="blur-text">早期环境</span>的影响<br>③<span class="blur-text">物质营养</span>的影响<br>④<span class="blur-text">教育训练</span>和实践活动的影响<br>⑤<span class="blur-text">非智力因素</span>的作用：勤奋和兴趣的影响</td>
+                            <td>50.. <strong>能力的形成和发展【大题】</strong><br>①<span class="answer-text">遗传因素</span>：是智力形成和发展的自然前提<br>②<span class="answer-text">早期环境</span>的影响<br>③<span class="answer-text">物质营养</span>的影响<br>④<span class="answer-text">教育训练</span>和实践活动的影响<br>⑤<span class="answer-text">非智力因素</span>的作用：勤奋和兴趣的影响</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51.. <strong>智力</strong><br>是指认识方面的各种能力，即<span class="blur-text">观察力</span>、<span class="blur-text">记忆力</span>、<span class="blur-text">思维力</span>、<span class="blur-text">想象力</span>的综合，其核心是<span class="blur-text">抽象思维能力</span></td>
+                            <td>51.. <strong>智力</strong><br>是指认识方面的各种能力，即<span class="answer-text">观察力</span>、<span class="answer-text">记忆力</span>、<span class="answer-text">思维力</span>、<span class="answer-text">想象力</span>的综合，其核心是<span class="answer-text">抽象思维能力</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52.. <strong>流体智力与晶体智力</strong><br><span class="blur-text">流体智力</span>：以生理为基础的认知能力，<span class="blur-text">三十岁</span>以后随年龄的增长而降低<br><span class="blur-text">晶体智力</span>：以学得的经验为基础的认知能力，随年龄的增加而增加</td>
+                            <td>52.. <strong>流体智力与晶体智力</strong><br><span class="answer-text">流体智力</span>：以生理为基础的认知能力，<span class="answer-text">三十岁</span>以后随年龄的增长而降低<br><span class="answer-text">晶体智力</span>：以学得的经验为基础的认知能力，随年龄的增加而增加</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>智力商数（IQ）</strong><br>是智力测验得出的结果，是对智力水平的间接的推测和评估。<span class="blur-text">年龄智商</span>：心理年龄/实际年龄*100；<span class="blur-text">离差智商</span>：15*(原始分数-平均分数)/标准差+100</td>
+                            <td>53.. <strong>智力商数（IQ）</strong><br>是智力测验得出的结果，是对智力水平的间接的推测和评估。<span class="answer-text">年龄智商</span>：心理年龄/实际年龄*100；<span class="answer-text">离差智商</span>：15*(原始分数-平均分数)/标准差+100</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>气质</strong><br>是一个人生来就具有的典型的、稳定的，表现在心理活动的<span class="blur-text">强度</span>、<span class="blur-text">速度</span>、<span class="blur-text">灵活性</span>和<span class="blur-text">指向性</span>等方面的动力特征</td>
+                            <td>54.. <strong>气质</strong><br>是一个人生来就具有的典型的、稳定的，表现在心理活动的<span class="answer-text">强度</span>、<span class="answer-text">速度</span>、<span class="answer-text">灵活性</span>和<span class="answer-text">指向性</span>等方面的动力特征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>气质的类型</strong>*<br>①<span class="blur-text">多血质</span>：灵活好动、精力充沛、直爽热情、容易适应环境<br>②<span class="blur-text">胆汁质</span>：动作迅速、情绪容易冲动，缺乏耐心<br>③<span class="blur-text">黏液质</span>：安静沉稳、动作反应慢，不灵活，情绪不易外露<br>④<span class="blur-text">抑郁质</span>：善于察觉小细节、孤僻、动作迟缓、多愁善感</td>
+                            <td>55.. <strong>气质的类型</strong>*<br>①<span class="answer-text">多血质</span>：灵活好动、精力充沛、直爽热情、容易适应环境<br>②<span class="answer-text">胆汁质</span>：动作迅速、情绪容易冲动，缺乏耐心<br>③<span class="answer-text">黏液质</span>：安静沉稳、动作反应慢，不灵活，情绪不易外露<br>④<span class="answer-text">抑郁质</span>：善于察觉小细节、孤僻、动作迟缓、多愁善感</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>气质类型的生理机制</strong><br>巴甫洛夫：<span class="blur-text">兴奋型</span>——胆汁质、<span class="blur-text">活泼型</span>——多血质、<span class="blur-text">安静型</span>——黏液质、<span class="blur-text">抑制型</span>——抑郁质</td>
+                            <td>56.. <strong>气质类型的生理机制</strong><br>巴甫洛夫：<span class="answer-text">兴奋型</span>——胆汁质、<span class="answer-text">活泼型</span>——多血质、<span class="answer-text">安静型</span>——黏液质、<span class="answer-text">抑制型</span>——抑郁质</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>气质的意义【掌握】</strong><br>①气质与<span class="blur-text">生物因素</span>有关，具有相对的稳定性，其可塑性较差<br>②气质本身<span class="blur-text">无好坏之分</span>，不决定成就的高低<br>③与<span class="blur-text">工作效率</span>有关，因此"事要择人，人要择事"——用于职业指导和人才选拔<br>④对个体的<span class="blur-text">心理健康</span>有不同的影响</td>
+                            <td>57.. <strong>气质的意义【掌握】</strong><br>①气质与<span class="answer-text">生物因素</span>有关，具有相对的稳定性，其可塑性较差<br>②气质本身<span class="answer-text">无好坏之分</span>，不决定成就的高低<br>③与<span class="answer-text">工作效率</span>有关，因此"事要择人，人要择事"——用于职业指导和人才选拔<br>④对个体的<span class="answer-text">心理健康</span>有不同的影响</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.. <strong>性格的概念</strong>*<br>是指一个人在社会生活实践中形成的对人、对现实的<span class="blur-text">稳定的态度</span>和<span class="blur-text">习惯化了的行为方式</span></td>
+                            <td>58.. <strong>性格的概念</strong>*<br>是指一个人在社会生活实践中形成的对人、对现实的<span class="answer-text">稳定的态度</span>和<span class="answer-text">习惯化了的行为方式</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59.. <strong>性格的特征【熟悉】</strong><br>①<span class="blur-text">态度特征</span>：对社会、集体、他人、对自己以及对待学习、工作、劳动的态度中表现出来的性格特征<br>②<span class="blur-text">理智特征</span>：在认知活动中表现出来的个别差异<br>③<span class="blur-text">情绪特征</span>：即情绪活动的强度、稳定性、持续性以及稳定心境方面的个别差异<br>④<span class="blur-text">意志特征</span>：表现在行动的目的性、对自己行为的自制力、在紧急或困难条件下的意志特征</td>
+                            <td>59.. <strong>性格的特征【熟悉】</strong><br>①<span class="answer-text">态度特征</span>：对社会、集体、他人、对自己以及对待学习、工作、劳动的态度中表现出来的性格特征<br>②<span class="answer-text">理智特征</span>：在认知活动中表现出来的个别差异<br>③<span class="answer-text">情绪特征</span>：即情绪活动的强度、稳定性、持续性以及稳定心境方面的个别差异<br>④<span class="answer-text">意志特征</span>：表现在行动的目的性、对自己行为的自制力、在紧急或困难条件下的意志特征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60.. <strong>性格的形成和发展</strong>*<br>①<span class="blur-text">家庭作用</span><br>②<span class="blur-text">学校教育</span><br>③<span class="blur-text">社会信息</span>的作用</td>
+                            <td>60.. <strong>性格的形成和发展</strong>*<br>①<span class="answer-text">家庭作用</span><br>②<span class="answer-text">学校教育</span><br>③<span class="answer-text">社会信息</span>的作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61.. <strong>社会化</strong><br>是指一个人在社会环境的影响下掌握<span class="blur-text">社会经验</span>和<span class="blur-text">行为规范</span>成为社会人同时也积极地反作用于社会环境的双向过程</td>
+                            <td>61.. <strong>社会化</strong><br>是指一个人在社会环境的影响下掌握<span class="answer-text">社会经验</span>和<span class="answer-text">行为规范</span>成为社会人同时也积极地反作用于社会环境的双向过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62.. <strong>毕生发展观（掌握）</strong><br>①发展是<span class="blur-text">毕生的</span>：人的一生都在发展<br>②发展是<span class="blur-text">多维和多向的</span>：发展的模式具有多样性，方向因人而异<br>③发展是<span class="blur-text">获得（成长）与丧失（衰退）的结合</span>——此消彼长</td>
+                            <td>62.. <strong>毕生发展观（掌握）</strong><br>①发展是<span class="answer-text">毕生的</span>：人的一生都在发展<br>②发展是<span class="answer-text">多维和多向的</span>：发展的模式具有多样性，方向因人而异<br>③发展是<span class="answer-text">获得（成长）与丧失（衰退）的结合</span>——此消彼长</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63.. <strong>心理健康的概念【掌握】</strong><br>是以积极的、有效的心理活动，平稳的、正常的心理状态，对当前和发展着的社会、自然环境以及自我环境的变化具有良好的<span class="blur-text">适应能力</span>，并由此不断的发展健全的<span class="blur-text">人格</span>，提高<span class="blur-text">生活质量</span>，保持旺盛的精力和愉快的情绪</td>
+                            <td>63.. <strong>心理健康的概念【掌握】</strong><br>是以积极的、有效的心理活动，平稳的、正常的心理状态，对当前和发展着的社会、自然环境以及自我环境的变化具有良好的<span class="answer-text">适应能力</span>，并由此不断的发展健全的<span class="answer-text">人格</span>，提高<span class="answer-text">生活质量</span>，保持旺盛的精力和愉快的情绪</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64.. <strong>我国心理健康的五大标准</strong><br><span class="blur-text">智力正常</span>、<span class="blur-text">情绪良好</span>、<span class="blur-text">人际和谐</span>、<span class="blur-text">适应环境</span>、<span class="blur-text">人格完整</span></td>
+                            <td>64.. <strong>我国心理健康的五大标准</strong><br><span class="answer-text">智力正常</span>、<span class="answer-text">情绪良好</span>、<span class="answer-text">人际和谐</span>、<span class="answer-text">适应环境</span>、<span class="answer-text">人格完整</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65.. <strong>马斯洛的心理健康标准【熟悉】</strong><br>①充分的<span class="blur-text">自我安全感</span><br>②充分的了解自己，并对自己的能力做<span class="blur-text">恰当的估计</span><br>③生活目标能<span class="blur-text">切合实际</span><br>④能与<span class="blur-text">环境</span>保持接触<br>⑤能够保持<span class="blur-text">人格的完整与和谐</span><br>⑥能有从<span class="blur-text">经验中学习</span>的能力<br>⑦能保持良好的<span class="blur-text">人际关系</span><br>⑧适度的<span class="blur-text">情绪发泄与控制</span><br>⑨在不违背集体意志的前提下，能有<span class="blur-text">限度的个性发挥</span><br>⑩在不违背社会规范的前提下，个人的<span class="blur-text">基本需求</span>能恰当地满足</td>
+                            <td>65.. <strong>马斯洛的心理健康标准【熟悉】</strong><br>①充分的<span class="answer-text">自我安全感</span><br>②充分的了解自己，并对自己的能力做<span class="answer-text">恰当的估计</span><br>③生活目标能<span class="answer-text">切合实际</span><br>④能与<span class="answer-text">环境</span>保持接触<br>⑤能够保持<span class="answer-text">人格的完整与和谐</span><br>⑥能有从<span class="answer-text">经验中学习</span>的能力<br>⑦能保持良好的<span class="answer-text">人际关系</span><br>⑧适度的<span class="answer-text">情绪发泄与控制</span><br>⑨在不违背集体意志的前提下，能有<span class="answer-text">限度的个性发挥</span><br>⑩在不违背社会规范的前提下，个人的<span class="answer-text">基本需求</span>能恰当地满足</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66.. <strong>婴儿期心理健康【掌握】</strong><br>①<span class="blur-text">母乳喂养</span>的重要性：有利于婴儿的消化、吸收；有利于免疫功能的增强；有利于智力的发展；有利于个体的心理健康<br>②增进<span class="blur-text">母爱</span>：玩迷藏游戏；在安全环境下与婴儿保持一定距离；在必须分离时，给予一个柔软的寄托物<br>③保证<span class="blur-text">充足的睡眠</span><br>④增进<span class="blur-text">运动和言语</span>的发展<br>⑤增进<span class="blur-text">游戏</span>活动</td>
+                            <td>66.. <strong>婴儿期心理健康【掌握】</strong><br>①<span class="answer-text">母乳喂养</span>的重要性：有利于婴儿的消化、吸收；有利于免疫功能的增强；有利于智力的发展；有利于个体的心理健康<br>②增进<span class="answer-text">母爱</span>：玩迷藏游戏；在安全环境下与婴儿保持一定距离；在必须分离时，给予一个柔软的寄托物<br>③保证<span class="answer-text">充足的睡眠</span><br>④增进<span class="answer-text">运动和言语</span>的发展<br>⑤增进<span class="answer-text">游戏</span>活动</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67.. <strong>幼儿期的心理健康</strong>*<br>①促进幼儿<span class="blur-text">言语</span>的发展<br>②对幼儿的<span class="blur-text">独立愿望</span>要因势利导<br>③<span class="blur-text">玩耍与游戏</span>：通过游戏认识世界，获得社会化<br>④正确对待孩子的<span class="blur-text">无理取闹</span>：要有原则，必要的说教<br>⑤父母<span class="blur-text">言谈举止</span>的表率作用</td>
+                            <td>67.. <strong>幼儿期的心理健康</strong>*<br>①促进幼儿<span class="answer-text">言语</span>的发展<br>②对幼儿的<span class="answer-text">独立愿望</span>要因势利导<br>③<span class="answer-text">玩耍与游戏</span>：通过游戏认识世界，获得社会化<br>④正确对待孩子的<span class="answer-text">无理取闹</span>：要有原则，必要的说教<br>⑤父母<span class="answer-text">言谈举止</span>的表率作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68.. <strong>心理学上的"第一反抗期"</strong><br><span class="blur-text">3~6岁</span>幼儿由于独立愿望增强，不听他人的话，自行其是，这种现象称为"第一反抗期"</td>
+                            <td>68.. <strong>心理学上的"第一反抗期"</strong><br><span class="answer-text">3~6岁</span>幼儿由于独立愿望增强，不听他人的话，自行其是，这种现象称为"第一反抗期"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69.. <strong>儿童期的心理健康</strong>*<br>①科学合理安排<span class="blur-text">学习</span>：学习为儿童期的主导活动<br>②组织参加<span class="blur-text">社会劳动</span><br>③培养开拓<span class="blur-text">创造性思维</span><br>④注意"<span class="blur-text">情商</span>"的培养：即非智力因素，包括良好的道德情操、意志品质、同情心与关心他人等</td>
+                            <td>69.. <strong>儿童期的心理健康</strong>*<br>①科学合理安排<span class="answer-text">学习</span>：学习为儿童期的主导活动<br>②组织参加<span class="answer-text">社会劳动</span><br>③培养开拓<span class="answer-text">创造性思维</span><br>④注意"<span class="answer-text">情商</span>"的培养：即非智力因素，包括良好的道德情操、意志品质、同情心与关心他人等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70.. <strong>青少年期的心理健康</strong>*<br>①发展良好的<span class="blur-text">自我意识</span>：客观正确地认识与评价自己，值得切合实际的奋斗目标<br>②保持<span class="blur-text">情绪稳定</span><br>③预防<span class="blur-text">性意识</span>困扰：性健康教育包括性的生理健康、心理健康、道德、法制健康等方面的内容<br>④消除<span class="blur-text">心理代沟</span></td>
+                            <td>70.. <strong>青少年期的心理健康</strong>*<br>①发展良好的<span class="answer-text">自我意识</span>：客观正确地认识与评价自己，值得切合实际的奋斗目标<br>②保持<span class="answer-text">情绪稳定</span><br>③预防<span class="answer-text">性意识</span>困扰：性健康教育包括性的生理健康、心理健康、道德、法制健康等方面的内容<br>④消除<span class="answer-text">心理代沟</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71.. <strong>心理学上的"第二次反抗期"</strong><br>青少年期出现，表现为<span class="blur-text">独立性与依赖性</span>之间的矛盾，<span class="blur-text">性心理</span>发育，性意识觉醒，性萌动与羞耻感并存，出现青春期烦躁</td>
+                            <td>71.. <strong>心理学上的"第二次反抗期"</strong><br>青少年期出现，表现为<span class="answer-text">独立性与依赖性</span>之间的矛盾，<span class="answer-text">性心理</span>发育，性意识觉醒，性萌动与羞耻感并存，出现青春期烦躁</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72.. <strong>青年期的心理健康【掌握大题】</strong><br>①培养良好的<span class="blur-text">适应能力</span>：使青年人正确认识自己，客观地评价自己；树立恰当的奋斗目标，减少挫败感；开放自我，积极主动地交往<br>②及时解决<span class="blur-text">情感问题</span>：调整期望值；增加愉快生活的体验；使情绪获得适当表现的机会；行动转移化<br>③<span class="blur-text">性的困惑</span>问题：对性有科学的认识；正确理解性意识与性冲动；增加男女间正常的交往</td>
+                            <td>72.. <strong>青年期的心理健康【掌握大题】</strong><br>①培养良好的<span class="answer-text">适应能力</span>：使青年人正确认识自己，客观地评价自己；树立恰当的奋斗目标，减少挫败感；开放自我，积极主动地交往<br>②及时解决<span class="answer-text">情感问题</span>：调整期望值；增加愉快生活的体验；使情绪获得适当表现的机会；行动转移化<br>③<span class="answer-text">性的困惑</span>问题：对性有科学的认识；正确理解性意识与性冲动；增加男女间正常的交往</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73.. <strong>中年期心理健康问题</strong>*<br>①注意<span class="blur-text">身心健康</span>，避免心理负荷过重：合理安排时间及工作量；学会处理烦恼、保持心理平和；缓解压力、维护身心健康<br>②处理好<span class="blur-text">家庭和社会中的人际关系</span>：适应家庭的变化、调整夫妻感情；适应亲子关系的变化、保持良好的互动；关心父母、妥善解决其养老事宜<br>③顺利渡过<span class="blur-text">围绝经期</span>：正确认识围绝经期；加强围绝经期的心理卫生和保健工作</td>
+                            <td>73.. <strong>中年期心理健康问题</strong>*<br>①注意<span class="answer-text">身心健康</span>，避免心理负荷过重：合理安排时间及工作量；学会处理烦恼、保持心理平和；缓解压力、维护身心健康<br>②处理好<span class="answer-text">家庭和社会中的人际关系</span>：适应家庭的变化、调整夫妻感情；适应亲子关系的变化、保持良好的互动；关心父母、妥善解决其养老事宜<br>③顺利渡过<span class="answer-text">围绝经期</span>：正确认识围绝经期；加强围绝经期的心理卫生和保健工作</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74.. <strong>更年期综合征</strong><br><span class="blur-text">性激素</span>分泌减少，<span class="blur-text">植物神经</span>功能紊乱</td>
+                            <td>74.. <strong>更年期综合征</strong><br><span class="answer-text">性激素</span>分泌减少，<span class="answer-text">植物神经</span>功能紊乱</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75.. <strong>潜意识理论【掌握】</strong><br>①<span class="blur-text">意识</span>：是任何时候都被知觉到的心理要素<br>②<span class="blur-text">前意识</span>：也称"无意识"，主要功能是警戒作用，不允许潜意识的本能冲动直接进入意识层面<br>③<span class="blur-text">潜意识</span>：本能的冲动，不被伦理道德接纳；创伤性经历；内心的冲突</td>
+                            <td>75.. <strong>潜意识理论【掌握】</strong><br>①<span class="answer-text">意识</span>：是任何时候都被知觉到的心理要素<br>②<span class="answer-text">前意识</span>：也称"无意识"，主要功能是警戒作用，不允许潜意识的本能冲动直接进入意识层面<br>③<span class="answer-text">潜意识</span>：本能的冲动，不被伦理道德接纳；创伤性经历；内心的冲突</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>76.. <strong>人格结构理论【掌握】</strong><br>①<span class="blur-text">本我（id）</span>：存在于无意识中，包括性本能和攻击本能。遵循"<span class="blur-text">快乐原则</span>"<br>②<span class="blur-text">自我（ego）</span>：遵循"<span class="blur-text">现实原则</span>"，以延迟满足的形式替代本我的快乐原则<br>③<span class="blur-text">超我（superego）</span>：类似于良心、良知等，是长期社会生活过程中将社会规范、道德观念等内化的结果，遵循"<span class="blur-text">至善原则</span>"</td>
+                            <td>76.. <strong>人格结构理论【掌握】</strong><br>①<span class="answer-text">本我（id）</span>：存在于无意识中，包括性本能和攻击本能。遵循"<span class="answer-text">快乐原则</span>"<br>②<span class="answer-text">自我（ego）</span>：遵循"<span class="answer-text">现实原则</span>"，以延迟满足的形式替代本我的快乐原则<br>③<span class="answer-text">超我（superego）</span>：类似于良心、良知等，是长期社会生活过程中将社会规范、道德观念等内化的结果，遵循"<span class="answer-text">至善原则</span>"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>77.. <strong>性欲理论</strong><br>弗洛伊德认为，人格的发展是靠<span class="blur-text">性力（libido）</span>推动的，所以精神分析学说又被称为<span class="blur-text">心理动力学说</span>。性力发展的五个阶段：<span class="blur-text">口欲期</span>（0-1y）、<span class="blur-text">肛欲期</span>（1-3y）、<span class="blur-text">性器期</span>（3-6y，恋父恋母情结）、<span class="blur-text">潜伏期</span>（6-12y）、<span class="blur-text">生殖期</span>（青春期至成年期）</td>
+                            <td>77.. <strong>性欲理论</strong><br>弗洛伊德认为，人格的发展是靠<span class="answer-text">性力（libido）</span>推动的，所以精神分析学说又被称为<span class="answer-text">心理动力学说</span>。性力发展的五个阶段：<span class="answer-text">口欲期</span>（0-1y）、<span class="answer-text">肛欲期</span>（1-3y）、<span class="answer-text">性器期</span>（3-6y，恋父恋母情结）、<span class="answer-text">潜伏期</span>（6-12y）、<span class="answer-text">生殖期</span>（青春期至成年期）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>78.. <strong>焦虑的种类</strong><br>①<span class="blur-text">现实焦虑</span>（reality anxiety）：威胁来自于客观环境<br>②<span class="blur-text">神经症性焦虑</span>（neurotic anxiety）：威胁来自于本我<br>③<span class="blur-text">道德性焦虑</span>（moral anxiety）：威胁来自于超我</td>
+                            <td>78.. <strong>焦虑的种类</strong><br>①<span class="answer-text">现实焦虑</span>（reality anxiety）：威胁来自于客观环境<br>②<span class="answer-text">神经症性焦虑</span>（neurotic anxiety）：威胁来自于本我<br>③<span class="answer-text">道德性焦虑</span>（moral anxiety）：威胁来自于超我</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>79.. <strong>自我防御机制（ego defense mechanisms）*【掌握】</strong><br>是自我为了对抗来自于本能的冲动及其所诱发的焦虑，保护自身不受潜意识冲突困扰，而形成的一些<span class="blur-text">无意识的</span>、<span class="blur-text">自动起作用</span>的心理手段。适当使用该机制，有利于心理的平衡；过多、过少地使用，便是心理疾病的发生机制</td>
+                            <td>79.. <strong>自我防御机制（ego defense mechanisms）*【掌握】</strong><br>是自我为了对抗来自于本能的冲动及其所诱发的焦虑，保护自身不受潜意识冲突困扰，而形成的一些<span class="answer-text">无意识的</span>、<span class="answer-text">自动起作用</span>的心理手段。适当使用该机制，有利于心理的平衡；过多、过少地使用，便是心理疾病的发生机制</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>80.. <strong>压抑（repression）</strong><br>最基本的防御方式。<span class="blur-text">心因性遗忘</span>就是典型的由压抑所致</td>
+                            <td>80.. <strong>压抑（repression）</strong><br>最基本的防御方式。<span class="answer-text">心因性遗忘</span>就是典型的由压抑所致</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>81.. <strong>否认（denial）</strong><br><span class="blur-text">拒绝承认</span>让人痛苦的事</td>
+                            <td>81.. <strong>否认（denial）</strong><br><span class="answer-text">拒绝承认</span>让人痛苦的事</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>82.. <strong>退行（regression）</strong><br><span class="blur-text">人格</span>的倒退</td>
+                            <td>82.. <strong>退行（regression）</strong><br><span class="answer-text">人格</span>的倒退</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>83.. <strong>投射（projection）</strong><br>以<span class="blur-text">小人</span>之心度君子之腹</td>
+                            <td>83.. <strong>投射（projection）</strong><br>以<span class="answer-text">小人</span>之心度君子之腹</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>84.. <strong>反向形成（reaction formation）</strong><br><span class="blur-text">矫枉过正</span>、此地无银三百两</td>
+                            <td>84.. <strong>反向形成（reaction formation）</strong><br><span class="answer-text">矫枉过正</span>、此地无银三百两</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>85.. <strong>置换（displacement）</strong><br><span class="blur-text">移情</span>、爱屋及乌</td>
+                            <td>85.. <strong>置换（displacement）</strong><br><span class="answer-text">移情</span>、爱屋及乌</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>86.. <strong>合理化（rationalization）</strong><br><span class="blur-text">酸葡萄心理</span>和<span class="blur-text">甜柠檬心理</span></td>
+                            <td>86.. <strong>合理化（rationalization）</strong><br><span class="answer-text">酸葡萄心理</span>和<span class="answer-text">甜柠檬心理</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>87.. <strong>认同（identification）</strong><br>通过呈现他人的特征来<span class="blur-text">减少焦虑</span></td>
+                            <td>87.. <strong>认同（identification）</strong><br>通过呈现他人的特征来<span class="answer-text">减少焦虑</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>88.. <strong>理智化（intellectualization）</strong><br>用理智化的方式处理<span class="blur-text">情感</span></td>
+                            <td>88.. <strong>理智化（intellectualization）</strong><br>用理智化的方式处理<span class="answer-text">情感</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>89.. <strong>升华（sublimation）</strong><br>一般说来，这是一种<span class="blur-text">积极</span>的方式</td>
+                            <td>89.. <strong>升华（sublimation）</strong><br>一般说来，这是一种<span class="answer-text">积极</span>的方式</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>90.. <strong>经典条件反射</strong><br>是指<span class="blur-text">条件刺激信号</span>与<span class="blur-text">非条件刺激物</span>相结合而引起的反应</td>
+                            <td>90.. <strong>经典条件反射</strong><br>是指<span class="answer-text">条件刺激信号</span>与<span class="answer-text">非条件刺激物</span>相结合而引起的反应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>91.. <strong>经典条件反射的基本现象【掌握】</strong><br>①<span class="blur-text">强化</span>——环境刺激对个体的行为反应产生促进作用，即使条件反射巩固下来<br>②<span class="blur-text">消退</span>——是指非条件刺激长期不与条件刺激结合，已经形成的条件反射消失的现象<br>③<span class="blur-text">泛化</span>——是指通过反复的强化以后，不仅条件刺激本身能够引起条件反射，而且某些与之相似的刺激也可以引起条件反射的结果</td>
+                            <td>91.. <strong>经典条件反射的基本现象【掌握】</strong><br>①<span class="answer-text">强化</span>——环境刺激对个体的行为反应产生促进作用，即使条件反射巩固下来<br>②<span class="answer-text">消退</span>——是指非条件刺激长期不与条件刺激结合，已经形成的条件反射消失的现象<br>③<span class="answer-text">泛化</span>——是指通过反复的强化以后，不仅条件刺激本身能够引起条件反射，而且某些与之相似的刺激也可以引起条件反射的结果</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>92.. <strong>操作条件反射的类型【掌握】</strong><br>①<span class="blur-text">正强化</span>：行为结果使积极刺激增加，行为增强<br>②<span class="blur-text">负强化</span>：行为结果使消极刺激减少，行为得以增强<br>③<span class="blur-text">消退</span>：行为结果导致积极刺激减少，行为反应减少<br>④<span class="blur-text">惩罚</span>：行为结果导致消极刺激增加，从而使行为反应减少</td>
+                            <td>92.. <strong>操作条件反射的类型【掌握】</strong><br>①<span class="answer-text">正强化</span>：行为结果使积极刺激增加，行为增强<br>②<span class="answer-text">负强化</span>：行为结果使消极刺激减少，行为得以增强<br>③<span class="answer-text">消退</span>：行为结果导致积极刺激减少，行为反应减少<br>④<span class="answer-text">惩罚</span>：行为结果导致消极刺激增加，从而使行为反应减少</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>93.. <strong>社会学习理论</strong><br>又称<span class="blur-text">榜样作用</span>、<span class="blur-text">模范学习</span>。班杜拉——<span class="blur-text">社会观察学习理论</span>（替代强化）</td>
+                            <td>93.. <strong>社会学习理论</strong><br>又称<span class="answer-text">榜样作用</span>、<span class="answer-text">模范学习</span>。班杜拉——<span class="answer-text">社会观察学习理论</span>（替代强化）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>94.. <strong>ABC情绪理论</strong><br>A：<span class="blur-text">事件</span>（accident）<br>B：<span class="blur-text">信念</span>（beliefs）<br>C：<span class="blur-text">事件引发的情绪和行为结果</span>（consequence）</td>
+                            <td>94.. <strong>ABC情绪理论</strong><br>A：<span class="answer-text">事件</span>（accident）<br>B：<span class="answer-text">信念</span>（beliefs）<br>C：<span class="answer-text">事件引发的情绪和行为结果</span>（consequence）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>95.. <strong>心理评估（psychological assessment）的定义</strong>*<br>是依据心理学的理论和方法对人的<span class="blur-text">心理品质</span>及<span class="blur-text">水平</span>所作出的鉴定。包括对心理过程和人格特征等内容</td>
+                            <td>95.. <strong>心理评估（psychological assessment）的定义</strong>*<br>是依据心理学的理论和方法对人的<span class="answer-text">心理品质</span>及<span class="answer-text">水平</span>所作出的鉴定。包括对心理过程和人格特征等内容</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>96.. <strong>心理评估中常用的方法</strong><br>①<span class="blur-text">观察法</span>*：自然观测法和控制观察法<br>②<span class="blur-text">会谈法</span>：又称交谈法、晤谈法<br>③<span class="blur-text">调查法</span>：当无法从当事人那里获得资料时，就从相关的人或材料那里获得<br>④<span class="blur-text">心理测验</span>及临床评定量表</td>
+                            <td>96.. <strong>心理评估中常用的方法</strong><br>①<span class="answer-text">观察法</span>*：自然观测法和控制观察法<br>②<span class="answer-text">会谈法</span>：又称交谈法、晤谈法<br>③<span class="answer-text">调查法</span>：当无法从当事人那里获得资料时，就从相关的人或材料那里获得<br>④<span class="answer-text">心理测验</span>及临床评定量表</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>97.. <strong>心理评估的过程</strong>*<br>①确定评估的<span class="blur-text">目的</span><br>②确定评估<span class="blur-text">问题与方法</span><br>③了解<span class="blur-text">特殊问题</span><br>④结果<span class="blur-text">描述与报告</span></td>
+                            <td>97.. <strong>心理评估的过程</strong>*<br>①确定评估的<span class="answer-text">目的</span><br>②确定评估<span class="answer-text">问题与方法</span><br>③了解<span class="answer-text">特殊问题</span><br>④结果<span class="answer-text">描述与报告</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>98.. <strong>心理测验发展【选择】</strong><br>①<span class="blur-text">1879</span>年，冯特建世界上第一个心理学实验室<br>②<span class="blur-text">1884</span>年，高尔顿建人类测验学实验室，并将统计学方法引入心理测量中<br>③<span class="blur-text">1890</span>年，卡特尔提出"心理测验"这一术语<br>④<span class="blur-text">1905</span>年，比纳—西蒙智力测验量表，标志智力测验数量化，标准化<br>⑤<span class="blur-text">1916</span>年，斯坦福大学的Terman修订智力测验量表，并提出"智商"概念<br>⑥韦克斯勒提出"<span class="blur-text">离差智商</span>"的概念</td>
+                            <td>98.. <strong>心理测验发展【选择】</strong><br>①<span class="answer-text">1879</span>年，冯特建世界上第一个心理学实验室<br>②<span class="answer-text">1884</span>年，高尔顿建人类测验学实验室，并将统计学方法引入心理测量中<br>③<span class="answer-text">1890</span>年，卡特尔提出"心理测验"这一术语<br>④<span class="answer-text">1905</span>年，比纳—西蒙智力测验量表，标志智力测验数量化，标准化<br>⑤<span class="answer-text">1916</span>年，斯坦福大学的Terman修订智力测验量表，并提出"智商"概念<br>⑥韦克斯勒提出"<span class="answer-text">离差智商</span>"的概念</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>99.. <strong>标准化心理测验的基本条件</strong><br>①<span class="blur-text">施测条件</span>：环境条件<br>②<span class="blur-text">主试者因素</span>*：主观因素造成的误差（态度偏好、情绪、疲劳以及对比效应等）<br>③<span class="blur-text">受试者因素</span>：应试动机、测验焦虑、生理状态<br>④<span class="blur-text">信度</span>、<span class="blur-text">效度</span>及常模</td>
+                            <td>99.. <strong>标准化心理测验的基本条件</strong><br>①<span class="answer-text">施测条件</span>：环境条件<br>②<span class="answer-text">主试者因素</span>*：主观因素造成的误差（态度偏好、情绪、疲劳以及对比效应等）<br>③<span class="answer-text">受试者因素</span>：应试动机、测验焦虑、生理状态<br>④<span class="answer-text">信度</span>、<span class="answer-text">效度</span>及常模</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>100.. <strong>信度【考】</strong><br>是指一个测量工具在对同一个对象的几次测量中所得结果的<span class="blur-text">一致程度</span>。它反映工具的<span class="blur-text">可靠性</span>和<span class="blur-text">稳定性</span></td>
+                            <td>100.. <strong>信度【考】</strong><br>是指一个测量工具在对同一个对象的几次测量中所得结果的<span class="answer-text">一致程度</span>。它反映工具的<span class="answer-text">可靠性</span>和<span class="answer-text">稳定性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>101.. <strong>效度</strong><br>是指一个测量工具能够测量出其所要测的东西的<span class="blur-text">真实程度</span>。它反映工具的<span class="blur-text">有效性</span>、<span class="blur-text">正确性</span></td>
+                            <td>101.. <strong>效度</strong><br>是指一个测量工具能够测量出其所要测的东西的<span class="answer-text">真实程度</span>。它反映工具的<span class="answer-text">有效性</span>、<span class="answer-text">正确性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>102.. <strong>应用心理测验的基本原则【掌握简答+多选】</strong><br>①<span class="blur-text">标准化原则</span>：标准程序、信度、效度（根据指导手册）<br>②<span class="blur-text">保密原则</span>：工具的保密和结果的保密<br>③<span class="blur-text">客观化原则</span>：做结果评价时应结合受试者的生活经历、家庭、社会环境以及通过会谈、观察法所获得的各种资料全面考虑</td>
+                            <td>102.. <strong>应用心理测验的基本原则【掌握简答+多选】</strong><br>①<span class="answer-text">标准化原则</span>：标准程序、信度、效度（根据指导手册）<br>②<span class="answer-text">保密原则</span>：工具的保密和结果的保密<br>③<span class="answer-text">客观化原则</span>：做结果评价时应结合受试者的生活经历、家庭、社会环境以及通过会谈、观察法所获得的各种资料全面考虑</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>103.. <strong>心理测验的分类及应用（按目的和功能）【掌握】</strong><br>①<span class="blur-text">能力测验</span><br>②<span class="blur-text">人格测验</span><br>③<span class="blur-text">神经心理测验</span><br>④<span class="blur-text">评定测验</span></td>
+                            <td>103.. <strong>心理测验的分类及应用（按目的和功能）【掌握】</strong><br>①<span class="answer-text">能力测验</span><br>②<span class="answer-text">人格测验</span><br>③<span class="answer-text">神经心理测验</span><br>④<span class="answer-text">评定测验</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>104.. <strong>心理测验的分类（根据测验方法）【熟悉】</strong><br>①<span class="blur-text">问卷法</span><br>②<span class="blur-text">作业法</span><br>③<span class="blur-text">投射法</span></td>
+                            <td>104.. <strong>心理测验的分类（根据测验方法）【熟悉】</strong><br>①<span class="answer-text">问卷法</span><br>②<span class="answer-text">作业法</span><br>③<span class="answer-text">投射法</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>105.. <strong>智商与智力</strong><br><span class="blur-text">比率智商</span>（ratio IQ）：IQ=MC/CA X 100，适用于<span class="blur-text">15岁以下</span>的儿童<br><span class="blur-text">离差智商</span>：IQ=100+15(X –X )/SD，克服了比率智商的缺点，已成为通用的智商计算方法</td>
+                            <td>105.. <strong>智商与智力</strong><br><span class="answer-text">比率智商</span>（ratio IQ）：IQ=MC/CA X 100，适用于<span class="answer-text">15岁以下</span>的儿童<br><span class="answer-text">离差智商</span>：IQ=100+15(X –X )/SD，克服了比率智商的缺点，已成为通用的智商计算方法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>106.. <strong>智力分类和分级</strong><br><span class="blur-text">70~130</span>为正常；><span class="blur-text">130</span>为超常；<<span class="blur-text">70</span>为低常</td>
+                            <td>106.. <strong>智力分类和分级</strong><br><span class="answer-text">70~130</span>为正常；><span class="answer-text">130</span>为超常；<<span class="answer-text">70</span>为低常</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>107.. <strong>韦氏智力测验量表</strong>*<br>①<span class="blur-text">韦氏成人智力测验量表（WAIS）</span>：<span class="blur-text">16岁以上</span><br>②<span class="blur-text">韦氏儿童智力测验量表（WISC）</span>：<span class="blur-text">6-16岁</span>使用<br>③<span class="blur-text">韦氏学前儿童智力测验量表（WPPSI）</span>：<span class="blur-text">4-6岁</span><br>这三个量表均有城市常模和农村常模。均采用<span class="blur-text">离差智商</span>的计算方法</td>
+                            <td>107.. <strong>韦氏智力测验量表</strong>*<br>①<span class="answer-text">韦氏成人智力测验量表（WAIS）</span>：<span class="answer-text">16岁以上</span><br>②<span class="answer-text">韦氏儿童智力测验量表（WISC）</span>：<span class="answer-text">6-16岁</span>使用<br>③<span class="answer-text">韦氏学前儿童智力测验量表（WPPSI）</span>：<span class="answer-text">4-6岁</span><br>这三个量表均有城市常模和农村常模。均采用<span class="answer-text">离差智商</span>的计算方法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>108.. <strong>明尼苏达多项人格问卷（MMPI）</strong><br>主要用于<span class="blur-text">病理心理研究</span>，协助临床诊断，在精神医学、心身医学、司法鉴定等领域广泛运用。一般适应于<span class="blur-text">16岁以上</span>，至少有<span class="blur-text">6年</span>教育年限者</td>
+                            <td>108.. <strong>明尼苏达多项人格问卷（MMPI）</strong><br>主要用于<span class="answer-text">病理心理研究</span>，协助临床诊断，在精神医学、心身医学、司法鉴定等领域广泛运用。一般适应于<span class="answer-text">16岁以上</span>，至少有<span class="answer-text">6年</span>教育年限者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>109.. <strong>埃克森人格问卷（EPQ）【掌握】</strong><br>成人问卷用于<span class="blur-text">16岁以上</span>，儿童问卷适用于<span class="blur-text">7-15岁</span>。分为<span class="blur-text">3个人格维度</span>（N维度、E维度、P维度）和<span class="blur-text">1个效度量表</span><br>①<span class="blur-text">神经质（N）维度</span>：测量情绪的稳定性；高分表明情绪不稳<br>②<span class="blur-text">内—外倾维度（E维度）</span>：高分表明外倾，低分反映内倾<br>③<span class="blur-text">精神质（P）维度</span>：测一些与精神病理有关的维度<br>④<span class="blur-text">掩饰（L）维度</span>：查朴实、遵从社会习俗和道德规范等特征，高分善于掩饰和隐瞒</td>
+                            <td>109.. <strong>埃克森人格问卷（EPQ）【掌握】</strong><br>成人问卷用于<span class="answer-text">16岁以上</span>，儿童问卷适用于<span class="answer-text">7-15岁</span>。分为<span class="answer-text">3个人格维度</span>（N维度、E维度、P维度）和<span class="answer-text">1个效度量表</span><br>①<span class="answer-text">神经质（N）维度</span>：测量情绪的稳定性；高分表明情绪不稳<br>②<span class="answer-text">内—外倾维度（E维度）</span>：高分表明外倾，低分反映内倾<br>③<span class="answer-text">精神质（P）维度</span>：测一些与精神病理有关的维度<br>④<span class="answer-text">掩饰（L）维度</span>：查朴实、遵从社会习俗和道德规范等特征，高分善于掩饰和隐瞒</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>110.. <strong>卡特尔16项人格问卷（16PF）</strong><br>为卡特尔用<span class="blur-text">成分分析法</span>编制而成。包含<span class="blur-text">16种根源特质</span>；主要适用于<span class="blur-text">16岁以上</span>，有<span class="blur-text">小学文化</span>者</td>
+                            <td>110.. <strong>卡特尔16项人格问卷（16PF）</strong><br>为卡特尔用<span class="answer-text">成分分析法</span>编制而成。包含<span class="answer-text">16种根源特质</span>；主要适用于<span class="answer-text">16岁以上</span>，有<span class="answer-text">小学文化</span>者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>111.. <strong>应激【掌握】</strong><br>是个体面临或觉察到环境变化对机体有<span class="blur-text">威胁</span>或<span class="blur-text">挑战</span>时做出的<span class="blur-text">适应性</span>和<span class="blur-text">应对性</span>反应过程</td>
+                            <td>111.. <strong>应激【掌握】</strong><br>是个体面临或觉察到环境变化对机体有<span class="answer-text">威胁</span>或<span class="answer-text">挑战</span>时做出的<span class="answer-text">适应性</span>和<span class="answer-text">应对性</span>反应过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>112.. <strong>一般适应综合征</strong><br><span class="blur-text">1936</span>年<span class="blur-text">塞里</span>提出，包括：①<span class="blur-text">警觉期</span>；②<span class="blur-text">抵抗期或耐受期</span>；③<span class="blur-text">衰竭期</span></td>
+                            <td>112.. <strong>一般适应综合征</strong><br><span class="answer-text">1936</span>年<span class="answer-text">塞里</span>提出，包括：①<span class="answer-text">警觉期</span>；②<span class="answer-text">抵抗期或耐受期</span>；③<span class="answer-text">衰竭期</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>113.. <strong>应激的系统模型【简答/多选】</strong><br>①应激是<span class="blur-text">多因素</span>组成的系统<br>②各因素<span class="blur-text">相互作用</span>，互为因果<br>③各因素之间动态的<span class="blur-text">平衡和失衡</span>决定个体的健康或疾病<br>④<span class="blur-text">认知因素</span>在平衡和失衡中起关键作用<br>⑤<span class="blur-text">人格因素</span>起核心作用</td>
+                            <td>113.. <strong>应激的系统模型【简答/多选】</strong><br>①应激是<span class="answer-text">多因素</span>组成的系统<br>②各因素<span class="answer-text">相互作用</span>，互为因果<br>③各因素之间动态的<span class="answer-text">平衡和失衡</span>决定个体的健康或疾病<br>④<span class="answer-text">认知因素</span>在平衡和失衡中起关键作用<br>⑤<span class="answer-text">人格因素</span>起核心作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>114.. <strong>应激源</strong>*<br>是引起应激的刺激，即应激的原因。通常是指向机体提出适应和应对要求并进而导致充满紧张性的生理和心理反应的刺激物（或<span class="blur-text">生活事件</span>）</td>
+                            <td>114.. <strong>应激源</strong>*<br>是引起应激的刺激，即应激的原因。通常是指向机体提出适应和应对要求并进而导致充满紧张性的生理和心理反应的刺激物（或<span class="answer-text">生活事件</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>115.. <strong>应激源的分类（按性质）【单选、多选】</strong><br><span class="blur-text">躯体性应激源</span>、<span class="blur-text">心理学应激源</span>、<span class="blur-text">社会性应激源</span>、<span class="blur-text">文化应激源</span></td>
+                            <td>115.. <strong>应激源的分类（按性质）【单选、多选】</strong><br><span class="answer-text">躯体性应激源</span>、<span class="answer-text">心理学应激源</span>、<span class="answer-text">社会性应激源</span>、<span class="answer-text">文化应激源</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>116.. <strong>生活事件的分类（按对个体的影响）</strong>*<br><span class="blur-text">正性生活事件</span>、<span class="blur-text">负性生活事件</span></td>
+                            <td>116.. <strong>生活事件的分类（按对个体的影响）</strong>*<br><span class="answer-text">正性生活事件</span>、<span class="answer-text">负性生活事件</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>117.. <strong>认知评价</strong><br><span class="blur-text">初级评价</span>：通过认知活动判断某一事件是否与自己有利害关系<br><span class="blur-text">次级评价</span>：初评后，对事件的性质、属性和个人能力等作出评估——评价事件可以改变，往往是<span class="blur-text">问题关注应对</span>；若次评事件不可改变，往往采用<span class="blur-text">情绪关注应对</span></td>
+                            <td>117.. <strong>认知评价</strong><br><span class="answer-text">初级评价</span>：通过认知活动判断某一事件是否与自己有利害关系<br><span class="answer-text">次级评价</span>：初评后，对事件的性质、属性和个人能力等作出评估——评价事件可以改变，往往是<span class="answer-text">问题关注应对</span>；若次评事件不可改变，往往采用<span class="answer-text">情绪关注应对</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>118.. <strong>应对的概念</strong>*<br>又称应付、应对策略，是个体对生活事件及其引起的自身不平衡状态所采取的<span class="blur-text">认知</span>和<span class="blur-text">行为</span>措施</td>
+                            <td>118.. <strong>应对的概念</strong>*<br>又称应付、应对策略，是个体对生活事件及其引起的自身不平衡状态所采取的<span class="answer-text">认知</span>和<span class="answer-text">行为</span>措施</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>119.. <strong>应对的分类</strong><br>①按过程分类：刺激、评价、反应、结果（60年代）<br>②从主体的反应角度分：躯体、心理、行为（80年代）*<br>③按应对的指向性分：<span class="blur-text">问题关注应对</span>、<span class="blur-text">情绪关注应对</span>**<br>④从应对的效果分：<span class="blur-text">积极应对</span>、<span class="blur-text">消极应对</span><br>⑤从个性因素看：<span class="blur-text">特质应对</span></td>
+                            <td>119.. <strong>应对的分类</strong><br>①按过程分类：刺激、评价、反应、结果（60年代）<br>②从主体的反应角度分：躯体、心理、行为（80年代）*<br>③按应对的指向性分：<span class="answer-text">问题关注应对</span>、<span class="answer-text">情绪关注应对</span>**<br>④从应对的效果分：<span class="answer-text">积极应对</span>、<span class="answer-text">消极应对</span><br>⑤从个性因素看：<span class="answer-text">特质应对</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>120.. <strong>应激反应（stress reaction）</strong><br>指个体因为应激源所致的各种<span class="blur-text">躯体</span>、<span class="blur-text">心理</span>、<span class="blur-text">社会</span>、<span class="blur-text">行为</span>方面的变化，常称为应激的<span class="blur-text">身心反应</span>（psychosomatic response）</td>
+                            <td>120.. <strong>应激反应（stress reaction）</strong><br>指个体因为应激源所致的各种<span class="answer-text">躯体</span>、<span class="answer-text">心理</span>、<span class="answer-text">社会</span>、<span class="answer-text">行为</span>方面的变化，常称为应激的<span class="answer-text">身心反应</span>（psychosomatic response）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>121.. <strong>情绪性应激反应</strong><br>①<span class="blur-text">焦虑</span>（anxiety）：应激反应中最常见的情绪反应，是个体预期将要发生危险或不良后果时所表现出的紧张、恐惧和担心等情绪状态<br>②<span class="blur-text">恐惧</span>（fear）：是一种已经明确的有特点危险或有害的情景时的一种情绪反应<br>③<span class="blur-text">抑郁</span>（depression）：表现为悲哀、孤独、寂寞、丧失感和厌世等消极情绪状态，同时伴随着失眠、食欲不振、性欲下降等<br>④<span class="blur-text">愤怒</span>（anger）：是与挫折和威胁有关的情绪状态，常与目标受阻，个人自尊心受到打击有关</td>
+                            <td>121.. <strong>情绪性应激反应</strong><br>①<span class="answer-text">焦虑</span>（anxiety）：应激反应中最常见的情绪反应，是个体预期将要发生危险或不良后果时所表现出的紧张、恐惧和担心等情绪状态<br>②<span class="answer-text">恐惧</span>（fear）：是一种已经明确的有特点危险或有害的情景时的一种情绪反应<br>③<span class="answer-text">抑郁</span>（depression）：表现为悲哀、孤独、寂寞、丧失感和厌世等消极情绪状态，同时伴随着失眠、食欲不振、性欲下降等<br>④<span class="answer-text">愤怒</span>（anger）：是与挫折和威胁有关的情绪状态，常与目标受阻，个人自尊心受到打击有关</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>122.. <strong>适应不良的行为性应激反应</strong>【案例分析，大题】<br>①<span class="blur-text">逃跑</span>（escape）与<span class="blur-text">回避</span>（avoidance）<br>②<span class="blur-text">退化</span>（regression）与<span class="blur-text">依赖</span>（dependence）<br>③<span class="blur-text">敌对</span>（hostility）与<span class="blur-text">攻击</span>（attack）<br>④<span class="blur-text">无助</span>（helplessness）与<span class="blur-text">自怜</span>（self-pity）<br>⑤<span class="blur-text">物质滥用</span></td>
+                            <td>122.. <strong>适应不良的行为性应激反应</strong>【案例分析，大题】<br>①<span class="answer-text">逃跑</span>（escape）与<span class="answer-text">回避</span>（avoidance）<br>②<span class="answer-text">退化</span>（regression）与<span class="answer-text">依赖</span>（dependence）<br>③<span class="answer-text">敌对</span>（hostility）与<span class="answer-text">攻击</span>（attack）<br>④<span class="answer-text">无助</span>（helplessness）与<span class="answer-text">自怜</span>（self-pity）<br>⑤<span class="answer-text">物质滥用</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>123.. <strong>心身疾病（psychosomatic diseases）的定义</strong>*<br>又称心理生理疾病，是指<span class="blur-text">心理社会因素</span>在疾病的发生、发展和转归的过程中起重要作用，有明确的<span class="blur-text">病理学基础</span>、器官出现了明确的<span class="blur-text">病理学改变</span>或<span class="blur-text">组织改变</span>的躯体疾病</td>
+                            <td>123.. <strong>心身疾病（psychosomatic diseases）的定义</strong>*<br>又称心理生理疾病，是指<span class="answer-text">心理社会因素</span>在疾病的发生、发展和转归的过程中起重要作用，有明确的<span class="answer-text">病理学基础</span>、器官出现了明确的<span class="answer-text">病理学改变</span>或<span class="answer-text">组织改变</span>的躯体疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>124.. <strong>心身疾病的分类</strong><br>①<span class="blur-text">心身反应</span>：只有生理反应，可以恢复<br>②<span class="blur-text">心身障碍</span>：功能障碍，无器质性病变<br>③<span class="blur-text">心身疾病</span>：已经有器质性病变</td>
+                            <td>124.. <strong>心身疾病的分类</strong><br>①<span class="answer-text">心身反应</span>：只有生理反应，可以恢复<br>②<span class="answer-text">心身障碍</span>：功能障碍，无器质性病变<br>③<span class="answer-text">心身疾病</span>：已经有器质性病变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>125.. <strong>心身疾病的发病机制（心理动力学途径）</strong><br>亚历山大强调，<span class="blur-text">心理冲突</span>在心身疾病中的作用。认为心身疾病的发病有三个要素：①<span class="blur-text">未解决的心理冲突</span>；②<span class="blur-text">躯体器官的脆弱易感倾向</span>；③<span class="blur-text">植物神经系统的过度活动性</span></td>
+                            <td>125.. <strong>心身疾病的发病机制（心理动力学途径）</strong><br>亚历山大强调，<span class="answer-text">心理冲突</span>在心身疾病中的作用。认为心身疾病的发病有三个要素：①<span class="answer-text">未解决的心理冲突</span>；②<span class="answer-text">躯体器官的脆弱易感倾向</span>；③<span class="answer-text">植物神经系统的过度活动性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>126.. <strong>心身疾病的诊断原则【简答】</strong><br>①疾病的发生包括<span class="blur-text">心理社会因素</span>，其与躯体症状有明确的<span class="blur-text">时间关系</span><br>②躯体症状有明确的<span class="blur-text">器质性病理改变</span>，或存在已知的<span class="blur-text">病理生物学变化</span><br>③排除<span class="blur-text">精神</span>、<span class="blur-text">心理障碍</span></td>
+                            <td>126.. <strong>心身疾病的诊断原则【简答】</strong><br>①疾病的发生包括<span class="answer-text">心理社会因素</span>，其与躯体症状有明确的<span class="answer-text">时间关系</span><br>②躯体症状有明确的<span class="answer-text">器质性病理改变</span>，或存在已知的<span class="answer-text">病理生物学变化</span><br>③排除<span class="answer-text">精神</span>、<span class="answer-text">心理障碍</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>127.. <strong>心身疾病的治疗原则</strong>*<br>①<span class="blur-text">心身同治原则</span><br>②心理干预目标：消除<span class="blur-text">心理社会刺激因素</span>；消除<span class="blur-text">心理学病因</span>；消除<span class="blur-text">生物学症状</span></td>
+                            <td>127.. <strong>心身疾病的治疗原则</strong>*<br>①<span class="answer-text">心身同治原则</span><br>②心理干预目标：消除<span class="answer-text">心理社会刺激因素</span>；消除<span class="answer-text">心理学病因</span>；消除<span class="answer-text">生物学症状</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>128.. <strong>A型行为模式（A型人格）</strong><br>较高的<span class="blur-text">成就欲望</span>、富于<span class="blur-text">挑战和竞争精神</span>，<span class="blur-text">争强好胜</span>等，易患<span class="blur-text">冠心病</span></td>
+                            <td>128.. <strong>A型行为模式（A型人格）</strong><br>较高的<span class="answer-text">成就欲望</span>、富于<span class="answer-text">挑战和竞争精神</span>，<span class="answer-text">争强好胜</span>等，易患<span class="answer-text">冠心病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>129.. <strong>C型行为模式（C型人格）</strong><br>易患<span class="blur-text">癌症</span></td>
+                            <td>129.. <strong>C型行为模式（C型人格）</strong><br>易患<span class="answer-text">癌症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>130.. <strong>心理干预（psychological intervention）的概念</strong>*<br>是指在心理学理论指导下有计划、有步骤地对一定对象的心理活动、个性特征或行为问题施加影响，使之发生朝向<span class="blur-text">预期目标</span>变化的过程</td>
+                            <td>130.. <strong>心理干预（psychological intervention）的概念</strong>*<br>是指在心理学理论指导下有计划、有步骤地对一定对象的心理活动、个性特征或行为问题施加影响，使之发生朝向<span class="answer-text">预期目标</span>变化的过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>131.. <strong>心理治疗的概念</strong><br>又称精神治疗，由受过专门训练的<span class="blur-text">治疗者</span>，在一定的<span class="blur-text">程序和设置</span>中通过与病人不断地交流，在构成密切的<span class="blur-text">治疗关系</span>的基础上，运用心理治疗的有关理论和技术，使其产生<span class="blur-text">心理</span>、<span class="blur-text">行为</span>甚至<span class="blur-text">生理</span>的变化，促进<span class="blur-text">人格的发展</span>和<span class="blur-text">成熟</span>，消除或缓解其心身症状的心理干预过程</td>
+                            <td>131.. <strong>心理治疗的概念</strong><br>又称精神治疗，由受过专门训练的<span class="answer-text">治疗者</span>，在一定的<span class="answer-text">程序和设置</span>中通过与病人不断地交流，在构成密切的<span class="answer-text">治疗关系</span>的基础上，运用心理治疗的有关理论和技术，使其产生<span class="answer-text">心理</span>、<span class="answer-text">行为</span>甚至<span class="answer-text">生理</span>的变化，促进<span class="answer-text">人格的发展</span>和<span class="answer-text">成熟</span>，消除或缓解其心身症状的心理干预过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>132.. <strong>心理治疗的基本要素【论述题】</strong><br>①心理治疗者的<span class="blur-text">专业要求</span>：治疗者必须具备一定的心理学知识和技能<br>②心理治疗要按一定的<span class="blur-text">程序和设置</span><br>③心理治疗是建立在<span class="blur-text">密切关系</span>基础上的职业行为：职业性帮扶关系，需要稳定、深刻、亲密、信赖的治疗关系为基础<br>④心理治疗要运用<span class="blur-text">科学的心理学的理论和技术</span>：技术性强。包括言语技术和非言语技术<br>⑤心理治疗的<span class="blur-text">目标</span>：改善病人的心理功能，消除或缓解心身症状，恢复心理、生理、社会功能</td>
+                            <td>132.. <strong>心理治疗的基本要素【论述题】</strong><br>①心理治疗者的<span class="answer-text">专业要求</span>：治疗者必须具备一定的心理学知识和技能<br>②心理治疗要按一定的<span class="answer-text">程序和设置</span><br>③心理治疗是建立在<span class="answer-text">密切关系</span>基础上的职业行为：职业性帮扶关系，需要稳定、深刻、亲密、信赖的治疗关系为基础<br>④心理治疗要运用<span class="answer-text">科学的心理学的理论和技术</span>：技术性强。包括言语技术和非言语技术<br>⑤心理治疗的<span class="answer-text">目标</span>：改善病人的心理功能，消除或缓解心身症状，恢复心理、生理、社会功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>133.. <strong>心理治疗的有效因素【熟悉】</strong><br>①<span class="blur-text">情绪宣泄</span>：为患者提供理解、支持、包容的环境氛围，让其能将情绪宣泄出来<br>②<span class="blur-text">认知领悟</span>：产生新的认知<br>③<span class="blur-text">情感转化</span>：帮助患者认识自己内在情绪感受的机会，并提升驾驭情感的能力<br>④<span class="blur-text">觉察能力</span>：自我觉察和自我觉知能力<br>⑤<span class="blur-text">关爱能力</span>：接受爱和表达爱的能力</td>
+                            <td>133.. <strong>心理治疗的有效因素【熟悉】</strong><br>①<span class="answer-text">情绪宣泄</span>：为患者提供理解、支持、包容的环境氛围，让其能将情绪宣泄出来<br>②<span class="answer-text">认知领悟</span>：产生新的认知<br>③<span class="answer-text">情感转化</span>：帮助患者认识自己内在情绪感受的机会，并提升驾驭情感的能力<br>④<span class="answer-text">觉察能力</span>：自我觉察和自我觉知能力<br>⑤<span class="answer-text">关爱能力</span>：接受爱和表达爱的能力</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>134.. <strong>心理治疗的范围【掌握】</strong><br>①综合医院有关的病人：急性、慢性病人，以及<span class="blur-text">心身疾病</span>患者<br>②精神科及相关的病人，如大量<span class="blur-text">神经症</span>病人和精神病人恢复期<br>③各类<span class="blur-text">行为问题</span><br>④<span class="blur-text">社会适应不良</span>者</td>
+                            <td>134.. <strong>心理治疗的范围【掌握】</strong><br>①综合医院有关的病人：急性、慢性病人，以及<span class="answer-text">心身疾病</span>患者<br>②精神科及相关的病人，如大量<span class="answer-text">神经症</span>病人和精神病人恢复期<br>③各类<span class="answer-text">行为问题</span><br>④<span class="answer-text">社会适应不良</span>者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>135.. <strong>心理治疗的基本原则【掌握，论述题需展开】</strong><br>①<span class="blur-text">信赖性原则</span><br>②<span class="blur-text">整体性原则</span><br>③<span class="blur-text">发展性原则</span><br>④<span class="blur-text">个性化原则</span><br>⑤<span class="blur-text">中立性原则</span><br>⑥<span class="blur-text">保密性原则</span></td>
+                            <td>135.. <strong>心理治疗的基本原则【掌握，论述题需展开】</strong><br>①<span class="answer-text">信赖性原则</span><br>②<span class="answer-text">整体性原则</span><br>③<span class="answer-text">发展性原则</span><br>④<span class="answer-text">个性化原则</span><br>⑤<span class="answer-text">中立性原则</span><br>⑥<span class="answer-text">保密性原则</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>136.. <strong>心理治疗的基本技术【掌握，论述题】</strong><br>①<span class="blur-text">倾听技术</span>：用耳朵听——用心听——用肢体语言听<br>②<span class="blur-text">提问技术</span>：开放式提问、封闭式提问<br>③<span class="blur-text">鼓励技术</span>：通过重复患者的话；说一些赞扬、肯定的话；点头微笑等技巧<br>④<span class="blur-text">内容反应技术</span>（释义paraphrase）：治疗者把病人的言语与非言语的思想内容加以概括、综合与整理后，再用自己的言语反馈给来访者<br>⑤<span class="blur-text">情感反应技术</span>（reflection of feeling）：指治疗者把病人的言语与非言语中的情绪、情感，内容加以概括、综合与整理后，再用自己的言语反馈给来访<br>⑥<span class="blur-text">面质技术</span>（confrontation）：是治疗者用言语描述与病人的感受、想法和行为中存在的某些差异、矛盾冲突和含糊的信息，并当面提出质疑<br>⑦<span class="blur-text">解释技术</span>（interpretation）：是依据一定的理论、某些科学的知识或个人的经验对病人的问题、困惑、疑虑做出说明<br>⑧<span class="blur-text">非言语性技巧</span>：指治疗过程中的非言语沟通</td>
+                            <td>136.. <strong>心理治疗的基本技术【掌握，论述题】</strong><br>①<span class="answer-text">倾听技术</span>：用耳朵听——用心听——用肢体语言听<br>②<span class="answer-text">提问技术</span>：开放式提问、封闭式提问<br>③<span class="answer-text">鼓励技术</span>：通过重复患者的话；说一些赞扬、肯定的话；点头微笑等技巧<br>④<span class="answer-text">内容反应技术</span>（释义paraphrase）：治疗者把病人的言语与非言语的思想内容加以概括、综合与整理后，再用自己的言语反馈给来访者<br>⑤<span class="answer-text">情感反应技术</span>（reflection of feeling）：指治疗者把病人的言语与非言语中的情绪、情感，内容加以概括、综合与整理后，再用自己的言语反馈给来访<br>⑥<span class="answer-text">面质技术</span>（confrontation）：是治疗者用言语描述与病人的感受、想法和行为中存在的某些差异、矛盾冲突和含糊的信息，并当面提出质疑<br>⑦<span class="answer-text">解释技术</span>（interpretation）：是依据一定的理论、某些科学的知识或个人的经验对病人的问题、困惑、疑虑做出说明<br>⑧<span class="answer-text">非言语性技巧</span>：指治疗过程中的非言语沟通</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>137</td>
+                            <td>137.. <strong>精神分析疗法</strong><br>强调<span class="blur-text">无意识</span>中<span class="blur-text">幼年时期</span>的心理冲突对人的心理、行为的影响，使之<span class="blur-text">意识化</span>并解决冲突是其中心任务。目的：帮助病人重建人格，解决早年的心理冲突，扩展自我意识等</td>
+                            <td>137.. <strong>精神分析疗法</strong><br>强调<span class="answer-text">无意识</span>中<span class="answer-text">幼年时期</span>的心理冲突对人的心理、行为的影响，使之<span class="answer-text">意识化</span>并解决冲突是其中心任务。目的：帮助病人重建人格，解决早年的心理冲突，扩展自我意识等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>138</td>
+                            <td>138.. <strong>精神分析治疗的基本技术【掌握，论述题：要点+简要分析】</strong><br>①<span class="blur-text">自由联想</span>：即鼓励病人说出脑子里出现的任何事情或想法，无论其多么的荒唐，或多么的违背伦理道德，或不符合逻辑，甚至难以启齿<br>②<span class="blur-text">阻抗</span>（resistance）及其解释：是指病人的潜意识对治疗过程的抗拒力，以防止焦虑和痛苦在意识中再现<br>③<span class="blur-text">移情</span>（transference）：就是病人将过去对其有重要影响的人物的情绪在治疗者的关系里重新表现出来。包括：<span class="blur-text">正移情</span>（依恋、爱、恋父恋母情结等）和<span class="blur-text">负移情</span>（失望、愤懑、攻击等）<br>④<span class="blur-text">反移情</span>（counter transference）及其处理：指治疗者在于病人交流时产生的情绪的、生理的和认知的反应<br>⑤<span class="blur-text">梦的分析</span>（dream interpretation）：就是对病人的梦的分析和利用。弗洛伊德认为"<span class="blur-text">梦是做梦者潜意识中冲突、欲望的象征</span>"。"<span class="blur-text">梦的加工</span>"：梦境中的内容为了躲过前意识的监测，经过<span class="blur-text">移置</span>、<span class="blur-text">凝缩</span>等机制，将潜意识的隐含的内容经过转化成表面的内容</td>
+                            <td>138.. <strong>精神分析治疗的基本技术【掌握，论述题：要点+简要分析】</strong><br>①<span class="answer-text">自由联想</span>：即鼓励病人说出脑子里出现的任何事情或想法，无论其多么的荒唐，或多么的违背伦理道德，或不符合逻辑，甚至难以启齿<br>②<span class="answer-text">阻抗</span>（resistance）及其解释：是指病人的潜意识对治疗过程的抗拒力，以防止焦虑和痛苦在意识中再现<br>③<span class="answer-text">移情</span>（transference）：就是病人将过去对其有重要影响的人物的情绪在治疗者的关系里重新表现出来。包括：<span class="answer-text">正移情</span>（依恋、爱、恋父恋母情结等）和<span class="answer-text">负移情</span>（失望、愤懑、攻击等）<br>④<span class="answer-text">反移情</span>（counter transference）及其处理：指治疗者在于病人交流时产生的情绪的、生理的和认知的反应<br>⑤<span class="answer-text">梦的分析</span>（dream interpretation）：就是对病人的梦的分析和利用。弗洛伊德认为"<span class="answer-text">梦是做梦者潜意识中冲突、欲望的象征</span>"。"<span class="answer-text">梦的加工</span>"：梦境中的内容为了躲过前意识的监测，经过<span class="answer-text">移置</span>、<span class="answer-text">凝缩</span>等机制，将潜意识的隐含的内容经过转化成表面的内容</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>139</td>
+                            <td>139.. <strong>行为治疗（behavior therapy）</strong><br>是建立在<span class="blur-text">行为学习理论</span>基础上的心理治疗方法。治疗的着眼点在于可观察的<span class="blur-text">外显行为</span>或可描述的<span class="blur-text">心理症状</span>上</td>
+                            <td>139.. <strong>行为治疗（behavior therapy）</strong><br>是建立在<span class="answer-text">行为学习理论</span>基础上的心理治疗方法。治疗的着眼点在于可观察的<span class="answer-text">外显行为</span>或可描述的<span class="answer-text">心理症状</span>上</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>140</td>
+                            <td>140.. <strong>行为治疗的基本原理【掌握】</strong><br>凡是受<span class="blur-text">奖赏</span>的、获得令人满意结果的行为，容易学会并维持下来；相反，受<span class="blur-text">处罚</span>的、获得令人不悦结果的行为，就不容易学会或很难维持下来。因此，操控<span class="blur-text">奖赏</span>或<span class="blur-text">处罚</span>的条件，就可测量和监督治疗过程</td>
+                            <td>140.. <strong>行为治疗的基本原理【掌握】</strong><br>凡是受<span class="answer-text">奖赏</span>的、获得令人满意结果的行为，容易学会并维持下来；相反，受<span class="answer-text">处罚</span>的、获得令人不悦结果的行为，就不容易学会或很难维持下来。因此，操控<span class="answer-text">奖赏</span>或<span class="answer-text">处罚</span>的条件，就可测量和监督治疗过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>141</td>
+                            <td>141.. <strong>放松疗法（relaxation therapy）</strong><br>常用的包括<span class="blur-text">肌肉渐进放松练习</span>、<span class="blur-text">呼吸训练</span>、<span class="blur-text">冥想</span>、<span class="blur-text">瑜伽</span>等</td>
+                            <td>141.. <strong>放松疗法（relaxation therapy）</strong><br>常用的包括<span class="answer-text">肌肉渐进放松练习</span>、<span class="answer-text">呼吸训练</span>、<span class="answer-text">冥想</span>、<span class="answer-text">瑜伽</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>142</td>
+                            <td>142.. <strong>系统脱敏法【掌握，论述题】</strong><br>基本思想：治疗师帮助患者建立于不良反应相对抗的<span class="blur-text">松弛条件反射</span>，然后在接触引起这种行为的条件刺激中，将习得的放松状态用于<span class="blur-text">抑制焦虑反应</span>，使不良行为逐渐消退（脱敏）最终使不良行为得到矫正<br>治疗程序：①建立<span class="blur-text">恐怖或焦虑的等级层次</span>；②<span class="blur-text">放松训练</span>；③<span class="blur-text">系统脱敏练习</span></td>
+                            <td>142.. <strong>系统脱敏法【掌握，论述题】</strong><br>基本思想：治疗师帮助患者建立于不良反应相对抗的<span class="answer-text">松弛条件反射</span>，然后在接触引起这种行为的条件刺激中，将习得的放松状态用于<span class="answer-text">抑制焦虑反应</span>，使不良行为逐渐消退（脱敏）最终使不良行为得到矫正<br>治疗程序：①建立<span class="answer-text">恐怖或焦虑的等级层次</span>；②<span class="answer-text">放松训练</span>；③<span class="answer-text">系统脱敏练习</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>143</td>
+                            <td>143.. <strong>满灌疗法（flooding，implosive therapy）</strong><br>又称<span class="blur-text">冲击疗法</span>、<span class="blur-text">暴露疗法</span>。是让患者一开始就进入他最恐怖的情景，直接消退不良反应。即把能引起患者极大恐惧的刺激暴露给患者，置他于极度恐怖之情景中，取其<span class="blur-text">物极必反</span>效果，从而消除恐怖情绪<br>使用范围：适用于<span class="blur-text">恐怖症</span>、<span class="blur-text">焦虑症</span>等</td>
+                            <td>143.. <strong>满灌疗法（flooding，implosive therapy）</strong><br>又称<span class="answer-text">冲击疗法</span>、<span class="answer-text">暴露疗法</span>。是让患者一开始就进入他最恐怖的情景，直接消退不良反应。即把能引起患者极大恐惧的刺激暴露给患者，置他于极度恐怖之情景中，取其<span class="answer-text">物极必反</span>效果，从而消除恐怖情绪<br>使用范围：适用于<span class="answer-text">恐怖症</span>、<span class="answer-text">焦虑症</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>144</td>
+                            <td>144.. <strong>厌恶疗法（aversion therapy）</strong><br>是将<span class="blur-text">厌恶刺激</span>（引起身体痛苦反映的）刺激与不良行为相结合，形成条件反射，从而消退不良行为的方法<br>厌恶法用于治疗各种<span class="blur-text">成瘾行为</span>（药瘾、酒瘾、烟瘾、毒瘾）、<span class="blur-text">赌博</span>、<span class="blur-text">肥胖症</span>、<span class="blur-text">强迫症</span>、<span class="blur-text">性变态</span>、<span class="blur-text">精神疾病</span>等多种适应不良行为</td>
+                            <td>144.. <strong>厌恶疗法（aversion therapy）</strong><br>是将<span class="answer-text">厌恶刺激</span>（引起身体痛苦反映的）刺激与不良行为相结合，形成条件反射，从而消退不良行为的方法<br>厌恶法用于治疗各种<span class="answer-text">成瘾行为</span>（药瘾、酒瘾、烟瘾、毒瘾）、<span class="answer-text">赌博</span>、<span class="answer-text">肥胖症</span>、<span class="answer-text">强迫症</span>、<span class="answer-text">性变态</span>、<span class="answer-text">精神疾病</span>等多种适应不良行为</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>145</td>
+                            <td>145.. <strong>认知疗法</strong><br>是20世纪70年代发展起来的一种心理治疗技术。它是根据<span class="blur-text">认知过程影响情绪和行为</span>的理论假设，通过认知和行为技术来改变患者<span class="blur-text">不良认知</span>的一类心理治疗方法的总称</td>
+                            <td>145.. <strong>认知疗法</strong><br>是20世纪70年代发展起来的一种心理治疗技术。它是根据<span class="answer-text">认知过程影响情绪和行为</span>的理论假设，通过认知和行为技术来改变患者<span class="answer-text">不良认知</span>的一类心理治疗方法的总称</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>146</td>
+                            <td>146.. <strong>S—O—R公式</strong><br>认为<span class="blur-text">O（认知过程）</span>对决定行为起着重要作用，是决定人的情绪、动机和行为的关键。心理障碍是由于个体<span class="blur-text">歪曲的</span>、<span class="blur-text">不合理的</span>、<span class="blur-text">消极的</span>思维方式和错误信念、思想造成的</td>
+                            <td>146.. <strong>S—O—R公式</strong><br>认为<span class="answer-text">O（认知过程）</span>对决定行为起着重要作用，是决定人的情绪、动机和行为的关键。心理障碍是由于个体<span class="answer-text">歪曲的</span>、<span class="answer-text">不合理的</span>、<span class="answer-text">消极的</span>思维方式和错误信念、思想造成的</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>147</td>
+                            <td>147.. <strong>理性情绪疗法【掌握】</strong><br>A：<span class="blur-text">事件</span>；B：<span class="blur-text">对事件所持的观念或信念</span>；C：<span class="blur-text">观念或信念引起的情绪及行为后果</span>；D：<span class="blur-text">劝导干预</span>（较B更合理）；E：<span class="blur-text">D引起的效果</span></td>
+                            <td>147.. <strong>理性情绪疗法【掌握】</strong><br>A：<span class="answer-text">事件</span>；B：<span class="answer-text">对事件所持的观念或信念</span>；C：<span class="answer-text">观念或信念引起的情绪及行为后果</span>；D：<span class="answer-text">劝导干预</span>（较B更合理）；E：<span class="answer-text">D引起的效果</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>148</td>
+                            <td>148.. <strong>理性情绪疗法的阶段</strong><br>①<span class="blur-text">心理诊断阶段</span>：提出ABCDE<br>②<span class="blur-text">领悟阶段</span><br>③<span class="blur-text">修通阶段</span><br>④<span class="blur-text">再教育阶段</span></td>
+                            <td>148.. <strong>理性情绪疗法的阶段</strong><br>①<span class="answer-text">心理诊断阶段</span>：提出ABCDE<br>②<span class="answer-text">领悟阶段</span><br>③<span class="answer-text">修通阶段</span><br>④<span class="answer-text">再教育阶段</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>149</td>
+                            <td>149.. <strong>理性情绪疗法常用技术【多选】</strong><br>①与<span class="blur-text">不合理信念辩论技术</span><br>②<span class="blur-text">合理情绪想象技术</span><br>③<span class="blur-text">家庭作业</span></td>
+                            <td>149.. <strong>理性情绪疗法常用技术【多选】</strong><br>①与<span class="answer-text">不合理信念辩论技术</span><br>②<span class="answer-text">合理情绪想象技术</span><br>③<span class="answer-text">家庭作业</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>150</td>
+                            <td>150.. <strong>以人为中心疗法</strong><br>其代表人物为<span class="blur-text">罗杰斯</span>，认为个人成长受阻是因为别人对他施加了种种<span class="blur-text">价值条件</span>，迫使他歪曲其真实的感觉。治疗就是向患者提供重新开始成长过程的新经验</td>
+                            <td>150.. <strong>以人为中心疗法</strong><br>其代表人物为<span class="answer-text">罗杰斯</span>，认为个人成长受阻是因为别人对他施加了种种<span class="answer-text">价值条件</span>，迫使他歪曲其真实的感觉。治疗就是向患者提供重新开始成长过程的新经验</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>151</td>
+                            <td>151.. <strong>以人为中心疗法的治疗条件和氛围</strong>*<br>①<span class="blur-text">无条件的积极尊重与接纳</span>：把患者作为一个"人"加以关注；按患者本来的样子加以接受；信任患者改变和成长的能力<br>②<span class="blur-text">通情</span>或<span class="blur-text">设身处地的理解</span>：即以患者看待世界的方式理解他的行为<br>③<span class="blur-text">真诚</span>或<span class="blur-text">一致性</span></td>
+                            <td>151.. <strong>以人为中心疗法的治疗条件和氛围</strong>*<br>①<span class="answer-text">无条件的积极尊重与接纳</span>：把患者作为一个"人"加以关注；按患者本来的样子加以接受；信任患者改变和成长的能力<br>②<span class="answer-text">通情</span>或<span class="answer-text">设身处地的理解</span>：即以患者看待世界的方式理解他的行为<br>③<span class="answer-text">真诚</span>或<span class="answer-text">一致性</span></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

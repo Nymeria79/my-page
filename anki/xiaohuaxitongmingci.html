@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">消化系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>上消化道</strong><br>口腔到<span class="blur-text">十二指肠</span>的消化管</td>
+                            <td>1.. <strong>上消化道</strong><br>口腔到<span class="answer-text">十二指肠</span>的消化管</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>下消化道</strong><br><span class="blur-text">空肠</span>到<span class="blur-text">肛管</span>的消化管</td>
+                            <td>2.. <strong>下消化道</strong><br><span class="answer-text">空肠</span>到<span class="answer-text">肛管</span>的消化管</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>咽峡</strong><br>由<span class="blur-text">腭垂</span>、<span class="blur-text">腭帆后缘</span>、两侧的<span class="blur-text">腭舌弓</span>和<span class="blur-text">舌根</span>共同围成，是<span class="blur-text">口腔与咽</span>的分界处</td>
+                            <td>3.. <strong>咽峡</strong><br>由<span class="answer-text">腭垂</span>、<span class="answer-text">腭帆后缘</span>、两侧的<span class="answer-text">腭舌弓</span>和<span class="answer-text">舌根</span>共同围成，是<span class="answer-text">口腔与咽</span>的分界处</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>camper筋膜</strong><br>腹前外侧壁浅筋膜的<span class="blur-text">浅层</span>，含有大量<span class="blur-text">脂肪</span>，向下与<span class="blur-text">股前区的浅筋膜</span>相续</td>
+                            <td>4.. <strong>camper筋膜</strong><br>腹前外侧壁浅筋膜的<span class="answer-text">浅层</span>，含有大量<span class="answer-text">脂肪</span>，向下与<span class="answer-text">股前区的浅筋膜</span>相续</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>scarpa筋膜</strong><br>腹前外侧壁浅筋膜的<span class="blur-text">深层</span>，为富含<span class="blur-text">弹性纤维</span>的膜性层，在中线处附于<span class="blur-text">白线</span>，向下在腹股沟韧带下方约<span class="blur-text">一横指</span>处与股前区阔筋膜愈合，向内下与<span class="blur-text">阴囊肉膜</span>和<span class="blur-text">会阴浅筋膜</span>相续</td>
+                            <td>5.. <strong>scarpa筋膜</strong><br>腹前外侧壁浅筋膜的<span class="answer-text">深层</span>，为富含<span class="answer-text">弹性纤维</span>的膜性层，在中线处附于<span class="answer-text">白线</span>，向下在腹股沟韧带下方约<span class="answer-text">一横指</span>处与股前区阔筋膜愈合，向内下与<span class="answer-text">阴囊肉膜</span>和<span class="answer-text">会阴浅筋膜</span>相续</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>腹直肌鞘</strong><br>是包裹<span class="blur-text">腹直肌</span>和<span class="blur-text">锥状肌</span>的纤维结缔组织，由<span class="blur-text">三块扁肌的腱膜</span>组成<br>前层由<span class="blur-text">腹外斜肌腱膜</span>和<span class="blur-text">腹内斜肌腱膜的前层</span>组成，后层由<span class="blur-text">腹内斜肌腱膜的后层</span>和<span class="blur-text">腹横肌腱膜</span>组成<br>在脐下<span class="blur-text">4~5cm</span>处，腹内斜肌腱膜和腹横肌腱膜都行于腹直肌的前方参与构成腹直肌前层，腹直肌鞘后层的下缘呈一凹向下的工状游离缘称<span class="blur-text">弓状线</span></td>
+                            <td>6.. <strong>腹直肌鞘</strong><br>是包裹<span class="answer-text">腹直肌</span>和<span class="answer-text">锥状肌</span>的纤维结缔组织，由<span class="answer-text">三块扁肌的腱膜</span>组成<br>前层由<span class="answer-text">腹外斜肌腱膜</span>和<span class="answer-text">腹内斜肌腱膜的前层</span>组成，后层由<span class="answer-text">腹内斜肌腱膜的后层</span>和<span class="answer-text">腹横肌腱膜</span>组成<br>在脐下<span class="answer-text">4~5cm</span>处，腹内斜肌腱膜和腹横肌腱膜都行于腹直肌的前方参与构成腹直肌前层，腹直肌鞘后层的下缘呈一凹向下的工状游离缘称<span class="answer-text">弓状线</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>腹股沟韧带</strong><br><span class="blur-text">腹外斜肌</span>连于<span class="blur-text">髂前上棘</span>至<span class="blur-text">耻骨结节</span>间的腱膜增厚形成腹股沟韧带</td>
+                            <td>7.. <strong>腹股沟韧带</strong><br><span class="answer-text">腹外斜肌</span>连于<span class="answer-text">髂前上棘</span>至<span class="answer-text">耻骨结节</span>间的腱膜增厚形成腹股沟韧带</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>腹股沟管</strong><br>是位于<span class="blur-text">腹股沟韧带内侧半上方约1.5cm</span>处的由肌与筋膜间形成的潜在性裂隙，长<span class="blur-text">4~5cm</span>，与腹股沟韧带平行<br>男性有<span class="blur-text">精索</span>，女性有<span class="blur-text">子宫圆韧带</span>通过，是腹前外侧壁的重要薄弱部位，有<span class="blur-text">两口四壁</span></td>
+                            <td>8.. <strong>腹股沟管</strong><br>是位于<span class="answer-text">腹股沟韧带内侧半上方约1.5cm</span>处的由肌与筋膜间形成的潜在性裂隙，长<span class="answer-text">4~5cm</span>，与腹股沟韧带平行<br>男性有<span class="answer-text">精索</span>，女性有<span class="answer-text">子宫圆韧带</span>通过，是腹前外侧壁的重要薄弱部位，有<span class="answer-text">两口四壁</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>浅环/皮下环/外环</strong><br>腹股沟管外口，为<span class="blur-text">腹外斜肌腱膜</span>在耻骨结节外上方的一个<span class="blur-text">三角形裂隙</span>，<span class="blur-text">精索或子宫圆韧带</span>由此穿出</td>
+                            <td>9.. <strong>浅环/皮下环/外环</strong><br>腹股沟管外口，为<span class="answer-text">腹外斜肌腱膜</span>在耻骨结节外上方的一个<span class="answer-text">三角形裂隙</span>，<span class="answer-text">精索或子宫圆韧带</span>由此穿出</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>深环/腹环/内环</strong><br>腹横筋膜容纳睾丸及精索的指套状囊袋即构成<span class="blur-text">精索内筋膜</span>，囊袋口即构成腹股沟深环，位于<span class="blur-text">腹股沟韧带中点上方1.5cm</span>处</td>
+                            <td>10.. <strong>深环/腹环/内环</strong><br>腹横筋膜容纳睾丸及精索的指套状囊袋即构成<span class="answer-text">精索内筋膜</span>，囊袋口即构成腹股沟深环，位于<span class="answer-text">腹股沟韧带中点上方1.5cm</span>处</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>腹股沟直疝</strong><br>是指腹腔脏器从<span class="blur-text">腹壁下动脉的内侧</span>、腹股沟管的后壁顶出，经<span class="blur-text">腹股沟三角</span>的腹前壁突出，在腹股沟内侧部位出现半球形可复性肿块</td>
+                            <td>11.. <strong>腹股沟直疝</strong><br>是指腹腔脏器从<span class="answer-text">腹壁下动脉的内侧</span>、腹股沟管的后壁顶出，经<span class="answer-text">腹股沟三角</span>的腹前壁突出，在腹股沟内侧部位出现半球形可复性肿块</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>腹股沟斜疝</strong><br>是指腹腔脏器从<span class="blur-text">腹股沟管深环</span>脱出进入腹股沟管，并可从<span class="blur-text">浅环</span>降入阴囊</td>
+                            <td>12.. <strong>腹股沟斜疝</strong><br>是指腹腔脏器从<span class="answer-text">腹股沟管深环</span>脱出进入腹股沟管，并可从<span class="answer-text">浅环</span>降入阴囊</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>腹股沟镰(联合腱)</strong><br><span class="blur-text">腹内斜肌</span>和<span class="blur-text">腹横肌</span>越过精索后，继续向内侧行至腹直肌的外侧缘、精索的后方时，肌纤维移行为腱膜并结合在一起，形成腹股沟镰，向下附着于<span class="blur-text">耻骨梳韧带</span></td>
+                            <td>13.. <strong>腹股沟镰(联合腱)</strong><br><span class="answer-text">腹内斜肌</span>和<span class="answer-text">腹横肌</span>越过精索后，继续向内侧行至腹直肌的外侧缘、精索的后方时，肌纤维移行为腱膜并结合在一起，形成腹股沟镰，向下附着于<span class="answer-text">耻骨梳韧带</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>弓状线</strong><br>脐以下<span class="blur-text">5厘米</span>处，因<span class="blur-text">腹内斜肌腱膜后层</span>和<span class="blur-text">腹横肌腱膜</span>向前参与构成腹直肌鞘前鞘，腹直肌鞘后层下缘形成弓状游离下缘，称为弓状线</td>
+                            <td>14.. <strong>弓状线</strong><br>脐以下<span class="answer-text">5厘米</span>处，因<span class="answer-text">腹内斜肌腱膜后层</span>和<span class="answer-text">腹横肌腱膜</span>向前参与构成腹直肌鞘前鞘，腹直肌鞘后层下缘形成弓状游离下缘，称为弓状线</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>海氏三角(Hesselbach三角)</strong><br>由<span class="blur-text">腹直肌外侧缘</span>、<span class="blur-text">腹股沟韧带</span>和<span class="blur-text">腹壁下动脉</span>围成<br>三角区内无腹肌，腹横筋膜又较薄弱，加之腹股沟管浅环也位于此区，因此是腹前外侧壁的薄弱部位</td>
+                            <td>15.. <strong>海氏三角(Hesselbach三角)</strong><br>由<span class="answer-text">腹直肌外侧缘</span>、<span class="answer-text">腹股沟韧带</span>和<span class="answer-text">腹壁下动脉</span>围成<br>三角区内无腹肌，腹横筋膜又较薄弱，加之腹股沟管浅环也位于此区，因此是腹前外侧壁的薄弱部位</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>十二指肠大乳头</strong><br>位于<span class="blur-text">十二指肠降部</span>的圆形隆起，为<span class="blur-text">肝胰壶腹</span>的开口</td>
+                            <td>16.. <strong>十二指肠大乳头</strong><br>位于<span class="answer-text">十二指肠降部</span>的圆形隆起，为<span class="answer-text">肝胰壶腹</span>的开口</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>肝门(第一肝门)</strong><br>肝脏面的横沟中有<span class="blur-text">肝左、右管</span>，<span class="blur-text">肝固有动脉左、右支</span>，<span class="blur-text">肝门静脉左、右支</span>和肝的神经、淋巴管等出入，称肝门</td>
+                            <td>17.. <strong>肝门(第一肝门)</strong><br>肝脏面的横沟中有<span class="answer-text">肝左、右管</span>，<span class="answer-text">肝固有动脉左、右支</span>，<span class="answer-text">肝门静脉左、右支</span>和肝的神经、淋巴管等出入，称肝门</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>第二肝门</strong><br>在肝脏后缘腔静脉沟的上端处，有<span class="blur-text">肝静脉</span>出肝后立即注入<span class="blur-text">下腔静脉</span>，此处称为第二肝门</td>
+                            <td>18.. <strong>第二肝门</strong><br>在肝脏后缘腔静脉沟的上端处，有<span class="answer-text">肝静脉</span>出肝后立即注入<span class="answer-text">下腔静脉</span>，此处称为第二肝门</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>肝十二指肠韧带</strong><br>小网膜右侧部从<span class="blur-text">肝门</span>连至<span class="blur-text">十二指肠上部</span></td>
+                            <td>19.. <strong>肝十二指肠韧带</strong><br>小网膜右侧部从<span class="answer-text">肝门</span>连至<span class="answer-text">十二指肠上部</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>肝外胆道</strong><br>是指走出肝门的胆道系统，包括<span class="blur-text">胆囊</span>和<span class="blur-text">输胆管道</span></td>
+                            <td>20.. <strong>肝外胆道</strong><br>是指走出肝门的胆道系统，包括<span class="answer-text">胆囊</span>和<span class="answer-text">输胆管道</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>肝胰壶腹</strong><br>是<span class="blur-text">胆总管</span>和<span class="blur-text">胰管</span>汇合处形成的一略膨大的共同管道，开口于<span class="blur-text">十二指肠大乳头</span>，胆汁和胰液由此开口进入十二指肠</td>
+                            <td>21.. <strong>肝胰壶腹</strong><br>是<span class="answer-text">胆总管</span>和<span class="answer-text">胰管</span>汇合处形成的一略膨大的共同管道，开口于<span class="answer-text">十二指肠大乳头</span>，胆汁和胰液由此开口进入十二指肠</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>肝肾隐窝</strong><br>位于<span class="blur-text">肝右叶与右肾</span>之间，左界为<span class="blur-text">网膜孔</span>和<span class="blur-text">十二指肠降部</span>，右界为<span class="blur-text">右结肠旁沟</span><br>仰卧位时，是腹膜腔的最低位</td>
+                            <td>22.. <strong>肝肾隐窝</strong><br>位于<span class="answer-text">肝右叶与右肾</span>之间，左界为<span class="answer-text">网膜孔</span>和<span class="answer-text">十二指肠降部</span>，右界为<span class="answer-text">右结肠旁沟</span><br>仰卧位时，是腹膜腔的最低位</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>小网膜</strong><br>是连于<span class="blur-text">膈、肝静脉韧带裂和肝门</span>与<span class="blur-text">胃小弯和十二指肠上部</span>的双层腹膜</td>
+                            <td>23.. <strong>小网膜</strong><br>是连于<span class="answer-text">膈、肝静脉韧带裂和肝门</span>与<span class="answer-text">胃小弯和十二指肠上部</span>的双层腹膜</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>网膜囊</strong><br>是位于<span class="blur-text">小网膜和胃后方</span>与<span class="blur-text">腹后壁</span>之间的前后扁窄的腹膜间隙，属腹膜腔的一部分，又称<span class="blur-text">小腹膜腔</span>，以区别于网膜囊以外的大腹膜腔<br>网膜囊的前、后、上、下及左壁的腹膜互相延续，只有右侧借<span class="blur-text">网膜孔</span>与腹膜腔的其余部分相通</td>
+                            <td>24.. <strong>网膜囊</strong><br>是位于<span class="answer-text">小网膜和胃后方</span>与<span class="answer-text">腹后壁</span>之间的前后扁窄的腹膜间隙，属腹膜腔的一部分，又称<span class="answer-text">小腹膜腔</span>，以区别于网膜囊以外的大腹膜腔<br>网膜囊的前、后、上、下及左壁的腹膜互相延续，只有右侧借<span class="answer-text">网膜孔</span>与腹膜腔的其余部分相通</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>网膜孔(winslow孔)</strong><br>是网膜囊与腹膜腔其余部分相通的唯一孔道，其前方为<span class="blur-text">肝十二指肠韧带</span>，后方为<span class="blur-text">覆盖下腔静脉的腹膜</span>，上界为<span class="blur-text">肝尾状叶</span>，下界为<span class="blur-text">十二指肠上部</span></td>
+                            <td>25.. <strong>网膜孔(winslow孔)</strong><br>是网膜囊与腹膜腔其余部分相通的唯一孔道，其前方为<span class="answer-text">肝十二指肠韧带</span>，后方为<span class="answer-text">覆盖下腔静脉的腹膜</span>，上界为<span class="answer-text">肝尾状叶</span>，下界为<span class="answer-text">十二指肠上部</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>麦氏点(McBurney点)</strong><br><span class="blur-text">脐与右髂前上棘连线的中外1/3交界处</span></td>
+                            <td>26.. <strong>麦氏点(McBurney点)</strong><br><span class="answer-text">脐与右髂前上棘连线的中外1/3交界处</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>胃结肠韧带</strong><br>成人大网膜前两层和后两层常愈着，使前两层直接由<span class="blur-text">胃大弯</span>连于<span class="blur-text">横结肠</span>之间，则形成胃结肠韧带</td>
+                            <td>27.. <strong>胃结肠韧带</strong><br>成人大网膜前两层和后两层常愈着，使前两层直接由<span class="answer-text">胃大弯</span>连于<span class="answer-text">横结肠</span>之间，则形成胃结肠韧带</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>肝胃韧带</strong><br>从<span class="blur-text">肝静脉韧带裂</span>至<span class="blur-text">胃小弯</span>，含有<span class="blur-text">胃左和胃右血管</span>，<span class="blur-text">胃左和胃右淋巴结</span>及到胃的神经等</td>
+                            <td>28.. <strong>肝胃韧带</strong><br>从<span class="answer-text">肝静脉韧带裂</span>至<span class="answer-text">胃小弯</span>，含有<span class="answer-text">胃左和胃右血管</span>，<span class="answer-text">胃左和胃右淋巴结</span>及到胃的神经等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>胃胰襞</strong><br><span class="blur-text">胃左动脉</span>从网膜囊后壁、胰头的上缘走行于胃小弯到达胃贲门处，而使腹膜形成的一个<span class="blur-text">新月形的皱襞</span><br>是胃手术时寻找<span class="blur-text">胃左动、静脉</span>的标志</td>
+                            <td>29.. <strong>胃胰襞</strong><br><span class="answer-text">胃左动脉</span>从网膜囊后壁、胰头的上缘走行于胃小弯到达胃贲门处，而使腹膜形成的一个<span class="answer-text">新月形的皱襞</span><br>是胃手术时寻找<span class="answer-text">胃左动、静脉</span>的标志</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>腹膜腔</strong><br>脏腹膜和壁腹膜相互延续、移行而共同围成的不规则的潜在性腔隙，内有少量<span class="blur-text">浆液</span><br>在男性为一封闭的腔隙，而女性则通过<span class="blur-text">生殖管道</span>间接与外界相通</td>
+                            <td>30.. <strong>腹膜腔</strong><br>脏腹膜和壁腹膜相互延续、移行而共同围成的不规则的潜在性腔隙，内有少量<span class="answer-text">浆液</span><br>在男性为一封闭的腔隙，而女性则通过<span class="answer-text">生殖管道</span>间接与外界相通</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>肝门静脉</strong><br>又称门静脉，收纳<span class="blur-text">胃肠道(直肠下段除外)、胆囊、胰、脾</span>的静脉血，约占入肝血液总量的<span class="blur-text">70%~80%</span><br>特点为<span class="blur-text">始末均为毛细血管</span>，一端为消化管、脾、胰以及胆囊的毛细血管，另一端为<span class="blur-text">肝小叶内的肝血窦</span>，肝门静脉及其属支均缺乏<span class="blur-text">瓣膜</span></td>
+                            <td>31.. <strong>肝门静脉</strong><br>又称门静脉，收纳<span class="answer-text">胃肠道(直肠下段除外)、胆囊、胰、脾</span>的静脉血，约占入肝血液总量的<span class="answer-text">70%~80%</span><br>特点为<span class="answer-text">始末均为毛细血管</span>，一端为消化管、脾、胰以及胆囊的毛细血管，另一端为<span class="answer-text">肝小叶内的肝血窦</span>，肝门静脉及其属支均缺乏<span class="answer-text">瓣膜</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>肝段</strong><br>在肝内，<span class="blur-text">肝门静脉、肝动脉的分支</span>及<span class="blur-text">胆囊的属支</span>相互伴行，并被<span class="blur-text">Glisson囊</span>包裹，似树枝状分布于肝内各区域，独立的血供、静脉回流及胆汁引流，此区域是肝的功能解剖单位<br>肝段即根据<span class="blur-text">Glisson系统</span>和<span class="blur-text">肝静脉系统</span>的走形划分，Glisson系统走行于<span class="blur-text">肝段内</span>，而肝静脉走行于<span class="blur-text">肝段间</span><br>Couinaud根据Glisson系统和肝静脉系统将肝分为<span class="blur-text">5肝叶半肝</span>和<span class="blur-text">8肝段</span></td>
+                            <td>32.. <strong>肝段</strong><br>在肝内，<span class="answer-text">肝门静脉、肝动脉的分支</span>及<span class="answer-text">胆囊的属支</span>相互伴行，并被<span class="answer-text">Glisson囊</span>包裹，似树枝状分布于肝内各区域，独立的血供、静脉回流及胆汁引流，此区域是肝的功能解剖单位<br>肝段即根据<span class="answer-text">Glisson系统</span>和<span class="answer-text">肝静脉系统</span>的走形划分，Glisson系统走行于<span class="answer-text">肝段内</span>，而肝静脉走行于<span class="answer-text">肝段间</span><br>Couinaud根据Glisson系统和肝静脉系统将肝分为<span class="answer-text">5肝叶半肝</span>和<span class="answer-text">8肝段</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>胆囊三角(Calot三角)</strong><br>由<span class="blur-text">胆囊管</span>、<span class="blur-text">右肝管—肝总管</span>、<span class="blur-text">肝脏面</span>围成的三角区，是寻找<span class="blur-text">胆囊动脉</span>的标志</td>
+                            <td>33.. <strong>胆囊三角(Calot三角)</strong><br>由<span class="answer-text">胆囊管</span>、<span class="answer-text">右肝管—肝总管</span>、<span class="answer-text">肝脏面</span>围成的三角区，是寻找<span class="answer-text">胆囊动脉</span>的标志</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>结肠右曲</strong><br>升结肠沿腹腔右外侧区上行，至<span class="blur-text">肝右叶下方</span>转向左前下方移行为横结肠，所形成的弯曲称为结肠右曲，又称<span class="blur-text">肝曲</span></td>
+                            <td>34.. <strong>结肠右曲</strong><br>升结肠沿腹腔右外侧区上行，至<span class="answer-text">肝右叶下方</span>转向左前下方移行为横结肠，所形成的弯曲称为结肠右曲，又称<span class="answer-text">肝曲</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>腹腔干</strong><br>是腹主动脉平<span class="blur-text">第12胸椎</span>发出的第一条单数脏支，粗而短，长约<span class="blur-text">1cm</span>，在胰上缘分为三支：<span class="blur-text">胃左动脉</span>、<span class="blur-text">肝总动脉</span>和<span class="blur-text">脾动脉</span></td>
+                            <td>35.. <strong>腹腔干</strong><br>是腹主动脉平<span class="answer-text">第12胸椎</span>发出的第一条单数脏支，粗而短，长约<span class="answer-text">1cm</span>，在胰上缘分为三支：<span class="answer-text">胃左动脉</span>、<span class="answer-text">肝总动脉</span>和<span class="answer-text">脾动脉</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>肠系膜上动脉</strong><br>在<span class="blur-text">第一腰椎</span>水平处起于腹主动脉前壁，向右发出<span class="blur-text">胰十二指肠下动脉</span>、<span class="blur-text">中结肠动脉</span>、<span class="blur-text">右结肠动脉</span>和<span class="blur-text">回结肠动脉</span>，向左发生<span class="blur-text">12~18条</span>空、回肠动脉</td>
+                            <td>36.. <strong>肠系膜上动脉</strong><br>在<span class="answer-text">第一腰椎</span>水平处起于腹主动脉前壁，向右发出<span class="answer-text">胰十二指肠下动脉</span>、<span class="answer-text">中结肠动脉</span>、<span class="answer-text">右结肠动脉</span>和<span class="answer-text">回结肠动脉</span>，向左发生<span class="answer-text">12~18条</span>空、回肠动脉</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>美克尔憩室</strong><br>卵黄管于受精后第<span class="blur-text">2周</span>形成，至第<span class="blur-text">5周</span>开始萎缩，先从脐端开始向肠端萎缩退化，若脐端已退化，肠端未退化则形成一盲囊，称为<span class="blur-text">回肠远端憩室</span>，即美克尔憩室</td>
+                            <td>37.. <strong>美克尔憩室</strong><br>卵黄管于受精后第<span class="answer-text">2周</span>形成，至第<span class="answer-text">5周</span>开始萎缩，先从脐端开始向肠端萎缩退化，若脐端已退化，肠端未退化则形成一盲囊，称为<span class="answer-text">回肠远端憩室</span>，即美克尔憩室</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>消化(digestion)</strong><br>食物在消化道内被分解为<span class="blur-text">可被吸收的小分子物质</span>的过程，称为消化</td>
+                            <td>38.. <strong>消化(digestion)</strong><br>食物在消化道内被分解为<span class="answer-text">可被吸收的小分子物质</span>的过程，称为消化</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>吸收(absorption)</strong><br>被消化后的小分子物质透过<span class="blur-text">消化道黏膜上皮细胞</span>进入血液和淋巴液的过程，称为吸收</td>
+                            <td>39.. <strong>吸收(absorption)</strong><br>被消化后的小分子物质透过<span class="answer-text">消化道黏膜上皮细胞</span>进入血液和淋巴液的过程，称为吸收</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>慢波(slow wave)</strong><br>又称<span class="blur-text">基本电节律</span>，是指消化道平滑肌在静息电位的基础上，自发的产生周期性的<span class="blur-text">去极化和复极化波</span>，频率较慢，称为慢波</td>
+                            <td>40.. <strong>慢波(slow wave)</strong><br>又称<span class="answer-text">基本电节律</span>，是指消化道平滑肌在静息电位的基础上，自发的产生周期性的<span class="answer-text">去极化和复极化波</span>，频率较慢，称为慢波</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>脑-肠肽(brain-gut peptide)</strong><br>指既存在于<span class="blur-text">脑中</span>又存在于<span class="blur-text">胃肠道</span>的具有双重分布特征的肽类物质称为脑-肠肽</td>
+                            <td>41.. <strong>脑-肠肽(brain-gut peptide)</strong><br>指既存在于<span class="answer-text">脑中</span>又存在于<span class="answer-text">胃肠道</span>的具有双重分布特征的肽类物质称为脑-肠肽</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>胃肠激素(gastrointestinal hormone)</strong><br>由<span class="blur-text">胃肠黏膜内分泌细胞</span>分泌的多种可在消化道发挥作用的多肽类激素</td>
+                            <td>42.. <strong>胃肠激素(gastrointestinal hormone)</strong><br>由<span class="answer-text">胃肠黏膜内分泌细胞</span>分泌的多种可在消化道发挥作用的多肽类激素</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>黏液-碳酸氢盐屏障(mucus-bicarbonate barrier)</strong><br>由胃黏膜表面覆盖的<span class="blur-text">黏液</span>和胃黏膜分泌的<span class="blur-text">碳酸氢盐</span>共同构筑的抵抗胃酸和胃蛋白酶侵蚀的屏障，称为黏液-碳酸氢盐屏障</td>
+                            <td>43.. <strong>黏液-碳酸氢盐屏障(mucus-bicarbonate barrier)</strong><br>由胃黏膜表面覆盖的<span class="answer-text">黏液</span>和胃黏膜分泌的<span class="answer-text">碳酸氢盐</span>共同构筑的抵抗胃酸和胃蛋白酶侵蚀的屏障，称为黏液-碳酸氢盐屏障</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>内因子(intrinsic factor)</strong><br>是由<span class="blur-text">壁细胞</span>分泌的一种<span class="blur-text">糖蛋白</span>，内因子可与食物中的<span class="blur-text">维生素B12</span>结合，形成一种复合物，可保护维生素B12不被小肠内水解酶破坏并促进<span class="blur-text">回肠上皮</span>吸收维生素B12</td>
+                            <td>44.. <strong>内因子(intrinsic factor)</strong><br>是由<span class="answer-text">壁细胞</span>分泌的一种<span class="answer-text">糖蛋白</span>，内因子可与食物中的<span class="answer-text">维生素B12</span>结合，形成一种复合物，可保护维生素B12不被小肠内水解酶破坏并促进<span class="answer-text">回肠上皮</span>吸收维生素B12</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>胃容受性舒张(receptive relaxation)</strong><br>进食时，食物刺激<span class="blur-text">口腔、咽、食管</span>等处感受器，反射性地引起<span class="blur-text">胃底和胃体部肌肉舒张</span>，称为容受性舒张</td>
+                            <td>45.. <strong>胃容受性舒张(receptive relaxation)</strong><br>进食时，食物刺激<span class="answer-text">口腔、咽、食管</span>等处感受器，反射性地引起<span class="answer-text">胃底和胃体部肌肉舒张</span>，称为容受性舒张</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46.. <strong>蠕动(peristalsis)</strong><br>由消化管<span class="blur-text">纵行平滑肌</span>的顺序收缩，形成的一种向前推进的波形运动称蠕动</td>
+                            <td>46.. <strong>蠕动(peristalsis)</strong><br>由消化管<span class="answer-text">纵行平滑肌</span>的顺序收缩，形成的一种向前推进的波形运动称蠕动</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47.. <strong>胃排空(gastric emptying)</strong><br>食糜由<span class="blur-text">胃</span>排入<span class="blur-text">十二指肠</span>的过程称为胃排空</td>
+                            <td>47.. <strong>胃排空(gastric emptying)</strong><br>食糜由<span class="answer-text">胃</span>排入<span class="answer-text">十二指肠</span>的过程称为胃排空</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48.. <strong>分节运动(segmentation contraction)</strong><br>是一种以<span class="blur-text">环行肌</span>为主的节律性收缩和舒张运动<br>进食后，在有食糜的一段肠管上，环行肌以一定间隔在许多点同时收缩，把食糜分割成许多节段；数秒后，原来收缩处舒张，原来舒张处收缩，使原来的节段分为两半，相邻的两半则混合形成一个新的节段</td>
+                            <td>48.. <strong>分节运动(segmentation contraction)</strong><br>是一种以<span class="answer-text">环行肌</span>为主的节律性收缩和舒张运动<br>进食后，在有食糜的一段肠管上，环行肌以一定间隔在许多点同时收缩，把食糜分割成许多节段；数秒后，原来收缩处舒张，原来舒张处收缩，使原来的节段分为两半，相邻的两半则混合形成一个新的节段</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49.. <strong>胆盐的肠肝循环(enterohepatic circulation of bile salt)</strong><br>胆汁中的胆盐被排至小肠后，绝大部分可由<span class="blur-text">小肠(主要为回肠末端)</span>黏膜吸收入血，通过<span class="blur-text">门静脉</span>回到肝，再组成胆汁而又分泌入肠，这一过程称为胆盐的肠肝循环</td>
+                            <td>49.. <strong>胆盐的肠肝循环(enterohepatic circulation of bile salt)</strong><br>胆汁中的胆盐被排至小肠后，绝大部分可由<span class="answer-text">小肠(主要为回肠末端)</span>黏膜吸收入血，通过<span class="answer-text">门静脉</span>回到肝，再组成胆汁而又分泌入肠，这一过程称为胆盐的肠肝循环</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50.. <strong>餐后碱潮</strong><br>在消化期，因为<span class="blur-text">胃酸的大量分泌</span>，同时有大量<span class="blur-text">HCO3-</span>和<span class="blur-text">Cl-</span>交换进入血液，导致血和尿pH往往升高，从而形成餐后碱潮</td>
+                            <td>50.. <strong>餐后碱潮</strong><br>在消化期，因为<span class="answer-text">胃酸的大量分泌</span>，同时有大量<span class="answer-text">HCO3-</span>和<span class="answer-text">Cl-</span>交换进入血液，导致血和尿pH往往升高，从而形成餐后碱潮</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51.. <strong>胃底腺(fundic gland)</strong><br>分布于<span class="blur-text">胃底和胃体部</span>，约有<span class="blur-text">1500万个</span>，是数量最多、功能最重要的胃腺<br>腺呈分支管状，可分为<span class="blur-text">颈、体与底部</span><br>胃底腺由<span class="blur-text">主细胞</span>、<span class="blur-text">壁细胞</span>、<span class="blur-text">颈黏液细胞</span>及内分泌细胞组成</td>
+                            <td>51.. <strong>胃底腺(fundic gland)</strong><br>分布于<span class="answer-text">胃底和胃体部</span>，约有<span class="answer-text">1500万个</span>，是数量最多、功能最重要的胃腺<br>腺呈分支管状，可分为<span class="answer-text">颈、体与底部</span><br>胃底腺由<span class="answer-text">主细胞</span>、<span class="answer-text">壁细胞</span>、<span class="answer-text">颈黏液细胞</span>及内分泌细胞组成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52.. <strong>主细胞(chief cell)</strong><br>又称<span class="blur-text">胃酶细胞</span>，数量最多，主要分布于<span class="blur-text">胃底腺的体、底部</span><br>细胞呈<span class="blur-text">柱状</span>，核<span class="blur-text">圆形</span>，位于基部；胞质基部呈强<span class="blur-text">嗜碱性</span>，顶部充满<span class="blur-text">酶原颗粒</span><br>主细胞分泌<span class="blur-text">胃蛋白酶原</span></td>
+                            <td>52.. <strong>主细胞(chief cell)</strong><br>又称<span class="answer-text">胃酶细胞</span>，数量最多，主要分布于<span class="answer-text">胃底腺的体、底部</span><br>细胞呈<span class="answer-text">柱状</span>，核<span class="answer-text">圆形</span>，位于基部；胞质基部呈强<span class="answer-text">嗜碱性</span>，顶部充满<span class="answer-text">酶原颗粒</span><br>主细胞分泌<span class="answer-text">胃蛋白酶原</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>壁细胞(parietal cell)</strong><br>是胃底腺的重要组成细胞，其体积<span class="blur-text">大</span>，多呈<span class="blur-text">圆锥形</span><br>核<span class="blur-text">圆而深染</span>，居中，可有<span class="blur-text">双核</span>，胞质呈<span class="blur-text">嗜酸性</span><br>电镜下，游离面细胞膜向内凹陷形成<span class="blur-text">细胞内分泌小管</span>，周围有<span class="blur-text">微管泡系统</span>和丰富的<span class="blur-text">线粒体</span><br>壁细胞分泌<span class="blur-text">盐酸</span>和<span class="blur-text">内因子</span>，参与对食物蛋白质的消化和对维生素B12的吸收</td>
+                            <td>53.. <strong>壁细胞(parietal cell)</strong><br>是胃底腺的重要组成细胞，其体积<span class="answer-text">大</span>，多呈<span class="answer-text">圆锥形</span><br>核<span class="answer-text">圆而深染</span>，居中，可有<span class="answer-text">双核</span>，胞质呈<span class="answer-text">嗜酸性</span><br>电镜下，游离面细胞膜向内凹陷形成<span class="answer-text">细胞内分泌小管</span>，周围有<span class="answer-text">微管泡系统</span>和丰富的<span class="answer-text">线粒体</span><br>壁细胞分泌<span class="answer-text">盐酸</span>和<span class="answer-text">内因子</span>，参与对食物蛋白质的消化和对维生素B12的吸收</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>微管泡系统</strong><br>泌酸细胞(壁细胞)内分泌小管周围存在的表面光滑的<span class="blur-text">小管和小泡</span>，其膜结构与细胞顶面及分泌小管相同，是<span class="blur-text">分泌小管膜的储备形式</span></td>
+                            <td>54.. <strong>微管泡系统</strong><br>泌酸细胞(壁细胞)内分泌小管周围存在的表面光滑的<span class="answer-text">小管和小泡</span>，其膜结构与细胞顶面及分泌小管相同，是<span class="answer-text">分泌小管膜的储备形式</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>潘氏细胞(Paneth cell)</strong><br>是<span class="blur-text">小肠腺</span>的特征性细胞，位于腺底部，常三五成群<br>细胞呈<span class="blur-text">锥体形</span>，胞质顶部充满粗大<span class="blur-text">嗜酸性颗粒</span>，内含<span class="blur-text">溶菌酶</span>等，具有一定的灭菌作用</td>
+                            <td>55.. <strong>潘氏细胞(Paneth cell)</strong><br>是<span class="answer-text">小肠腺</span>的特征性细胞，位于腺底部，常三五成群<br>细胞呈<span class="answer-text">锥体形</span>，胞质顶部充满粗大<span class="answer-text">嗜酸性颗粒</span>，内含<span class="answer-text">溶菌酶</span>等，具有一定的灭菌作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>小肠绒毛(intestinal villus)</strong><br>小肠黏膜上皮和固有层共同向肠腔伸出的细长突起称小肠绒毛<br>上皮为单层柱状，由<span class="blur-text">吸收细胞</span>、<span class="blur-text">杯状细胞</span>和少量内分泌细胞组成<br>吸收细胞的游离面有许多排列整齐的<span class="blur-text">微绒毛</span>，可扩大吸收细胞的表面积<br>中轴固有层为细密结缔组织，内有<span class="blur-text">中央乳糜管</span>、<span class="blur-text">有孔毛细血管</span>和少量纵行平滑肌</td>
+                            <td>56.. <strong>小肠绒毛(intestinal villus)</strong><br>小肠黏膜上皮和固有层共同向肠腔伸出的细长突起称小肠绒毛<br>上皮为单层柱状，由<span class="answer-text">吸收细胞</span>、<span class="answer-text">杯状细胞</span>和少量内分泌细胞组成<br>吸收细胞的游离面有许多排列整齐的<span class="answer-text">微绒毛</span>，可扩大吸收细胞的表面积<br>中轴固有层为细密结缔组织，内有<span class="answer-text">中央乳糜管</span>、<span class="answer-text">有孔毛细血管</span>和少量纵行平滑肌</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>门管区</strong><br>肝小叶之间的结缔组织内有<span class="blur-text">小叶间动脉</span>、<span class="blur-text">小叶间静脉</span>和<span class="blur-text">小叶间导管</span>走行，该区域称门管区，除此之外，该门管区还有淋巴管和神经纤维</td>
+                            <td>57.. <strong>门管区</strong><br>肝小叶之间的结缔组织内有<span class="answer-text">小叶间动脉</span>、<span class="answer-text">小叶间静脉</span>和<span class="answer-text">小叶间导管</span>走行，该区域称门管区，除此之外，该门管区还有淋巴管和神经纤维</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.. <strong>泡心细胞</strong><br>覆盖在胰腺外分泌腺腺泡腔内的<span class="blur-text">扁平或立方形</span>细胞<br>泡心细胞是延伸入腺泡腔内的<span class="blur-text">闰管起始端上皮细胞</span></td>
+                            <td>58.. <strong>泡心细胞</strong><br>覆盖在胰腺外分泌腺腺泡腔内的<span class="answer-text">扁平或立方形</span>细胞<br>泡心细胞是延伸入腺泡腔内的<span class="answer-text">闰管起始端上皮细胞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59.. <strong>窦周隙</strong><br>血窦内皮细胞和<span class="blur-text">肝血窦面</span>之间的间隙为窦周隙，血窦内的血浆经血窦内皮细胞的窗孔进入窦周隙，肝细胞血窦面的微绒毛浸润于其中，与血浆进行物质交换<br>窦周隙中有<span class="blur-text">贮脂细胞</span>和网状纤维，贮脂细胞和<span class="blur-text">维生素A</span>的吸收储存有关</td>
+                            <td>59.. <strong>窦周隙</strong><br>血窦内皮细胞和<span class="answer-text">肝血窦面</span>之间的间隙为窦周隙，血窦内的血浆经血窦内皮细胞的窗孔进入窦周隙，肝细胞血窦面的微绒毛浸润于其中，与血浆进行物质交换<br>窦周隙中有<span class="answer-text">贮脂细胞</span>和网状纤维，贮脂细胞和<span class="answer-text">维生素A</span>的吸收储存有关</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60.. <strong>上消化道气钡双重造影</strong><br>口服<span class="blur-text">产气粉</span>，使食管及胃充分扩展，快速口服少量<span class="blur-text">钡剂</span>观察食管后，嘱患者翻身使钡剂均匀涂布在胃黏膜表面，显示胃腔表面的细微结构，在透视的同时拍摄必要的点片，获得双对比相<br>随后嘱患者口服较多的钡剂填充胃腔，不同体位观察胃十二指肠，透视和摄片结合，获得充盈相，完成上消化道气钡双重造影检查</td>
+                            <td>60.. <strong>上消化道气钡双重造影</strong><br>口服<span class="answer-text">产气粉</span>，使食管及胃充分扩展，快速口服少量<span class="answer-text">钡剂</span>观察食管后，嘱患者翻身使钡剂均匀涂布在胃黏膜表面，显示胃腔表面的细微结构，在透视的同时拍摄必要的点片，获得双对比相<br>随后嘱患者口服较多的钡剂填充胃腔，不同体位观察胃十二指肠，透视和摄片结合，获得充盈相，完成上消化道气钡双重造影检查</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61.. <strong>充盈缺损</strong><br>由于<span class="blur-text">食管或胃肠壁的肿块或腔内异物</span>向腔内突起，导致局部钡剂不能充盈所形成的轮廓缺损<br>常见于<span class="blur-text">肿瘤性病变</span>或<span class="blur-text">非肿瘤性局限性病变</span></td>
+                            <td>61.. <strong>充盈缺损</strong><br>由于<span class="answer-text">食管或胃肠壁的肿块或腔内异物</span>向腔内突起，导致局部钡剂不能充盈所形成的轮廓缺损<br>常见于<span class="answer-text">肿瘤性病变</span>或<span class="answer-text">非肿瘤性局限性病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62.. <strong>龛影</strong><br>为食管或胃肠壁的局部<span class="blur-text">溃烂形成凹陷</span>，被钡剂充填所致，常见于<span class="blur-text">溃疡</span></td>
+                            <td>62.. <strong>龛影</strong><br>为食管或胃肠壁的局部<span class="answer-text">溃烂形成凹陷</span>，被钡剂充填所致，常见于<span class="answer-text">溃疡</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63.. <strong>憩室</strong><br>消化管壁局部发育不良，<span class="blur-text">肌壁薄弱</span>和<span class="blur-text">内压增高</span>致该处管壁膨出于器官轮廓外，使钡剂充填其内<br>与龛影鉴别：憩室管壁向<span class="blur-text">外囊袋状膨出</span>，有正常黏膜通入</td>
+                            <td>63.. <strong>憩室</strong><br>消化管壁局部发育不良，<span class="answer-text">肌壁薄弱</span>和<span class="answer-text">内压增高</span>致该处管壁膨出于器官轮廓外，使钡剂充填其内<br>与龛影鉴别：憩室管壁向<span class="answer-text">外囊袋状膨出</span>，有正常黏膜通入</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64.. <strong>粘膜纠集</strong><br>粘膜及粘膜下病变瘢痕形成，导致附近粘膜向病变处集中，多见于<span class="blur-text">慢性溃疡</span></td>
+                            <td>64.. <strong>粘膜纠集</strong><br>粘膜及粘膜下病变瘢痕形成，导致附近粘膜向病变处集中，多见于<span class="answer-text">慢性溃疡</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65.. <strong>抗酸药</strong><br>又称为<span class="blur-text">胃酸中和药</span>，为一类碱性的<span class="blur-text">铝盐、镁盐或钙盐</span>化合物，口服之后中和胃酸，可降低胃内容物酸度，解除胃酸对胃、十二指肠黏膜的侵蚀以及对溃疡面的刺激，同时胃内pH的升高抑制<span class="blur-text">胃蛋白酶活性</span>，从而起到缓解疼痛和促进溃疡愈合的作用</td>
+                            <td>65.. <strong>抗酸药</strong><br>又称为<span class="answer-text">胃酸中和药</span>，为一类碱性的<span class="answer-text">铝盐、镁盐或钙盐</span>化合物，口服之后中和胃酸，可降低胃内容物酸度，解除胃酸对胃、十二指肠黏膜的侵蚀以及对溃疡面的刺激，同时胃内pH的升高抑制<span class="answer-text">胃蛋白酶活性</span>，从而起到缓解疼痛和促进溃疡愈合的作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66.. <strong>胃黏膜保护药</strong><br>是能够通过增加<span class="blur-text">胃黏液或碳酸氢盐</span>的分泌，促进胃黏膜细胞合成<span class="blur-text">前列腺素</span>，增加胃黏膜的血流量，进而促进组织修复和加速溃疡的愈合的药物</td>
+                            <td>66.. <strong>胃黏膜保护药</strong><br>是能够通过增加<span class="answer-text">胃黏液或碳酸氢盐</span>的分泌，促进胃黏膜细胞合成<span class="answer-text">前列腺素</span>，增加胃黏膜的血流量，进而促进组织修复和加速溃疡的愈合的药物</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67.. <strong>质子泵抑制剂</strong><br>胃酸形成的最后环节中，位于胃壁细胞中的<span class="blur-text">H+-K+-ATP酶</span>在M3受体、H2受体和CCK2刺激激活下，通过H+-K+交换，将H+从壁细胞转运到胃腔，将K+从胃腔转运到壁细胞内<br>H+-K+-ATP酶抑制药可抑制胃酸形成的最后环节，发挥强而持久的抑制胃酸分泌的作用</td>
+                            <td>67.. <strong>质子泵抑制剂</strong><br>胃酸形成的最后环节中，位于胃壁细胞中的<span class="answer-text">H+-K+-ATP酶</span>在M3受体、H2受体和CCK2刺激激活下，通过H+-K+交换，将H+从壁细胞转运到胃腔，将K+从胃腔转运到壁细胞内<br>H+-K+-ATP酶抑制药可抑制胃酸形成的最后环节，发挥强而持久的抑制胃酸分泌的作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68.. <strong>胃食管反流病(GERD)</strong><br>是指<span class="blur-text">胃十二指肠内容物</span>反流入<span class="blur-text">食管、口腔及呼吸道</span>引起的症状和并发症</td>
+                            <td>68.. <strong>胃食管反流病(GERD)</strong><br>是指<span class="answer-text">胃十二指肠内容物</span>反流入<span class="answer-text">食管、口腔及呼吸道</span>引起的症状和并发症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69.. <strong>Barrett食管</strong><br><span class="blur-text">食管下段复层鳞状上皮</span>被<span class="blur-text">柱状上皮</span>取代，是<span class="blur-text">食管腺癌</span>的癌前病变</td>
+                            <td>69.. <strong>Barrett食管</strong><br><span class="answer-text">食管下段复层鳞状上皮</span>被<span class="answer-text">柱状上皮</span>取代，是<span class="answer-text">食管腺癌</span>的癌前病变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70.. <strong>食管下括约肌(LES)</strong><br>食管末端约<span class="blur-text">3~4cm</span>长的环形肌束，为一生理性高压带，正常人静息时压力为<span class="blur-text">10~30mmHg</span>，防止胃食管反流</td>
+                            <td>70.. <strong>食管下括约肌(LES)</strong><br>食管末端约<span class="answer-text">3~4cm</span>长的环形肌束，为一生理性高压带，正常人静息时压力为<span class="answer-text">10~30mmHg</span>，防止胃食管反流</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71.. <strong>夜间酸突破</strong><br>每天早晚餐前服用PPI治疗的情况下，夜间胃内<span class="blur-text">pH<4</span>持续时间><span class="blur-text">1小时</span></td>
+                            <td>71.. <strong>夜间酸突破</strong><br>每天早晚餐前服用PPI治疗的情况下，夜间胃内<span class="answer-text">pH<4</span>持续时间><span class="answer-text">1小时</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72.. <strong>一过性食管下括约肌松弛(TLESR)</strong><br>是指<span class="blur-text">非吞咽情况下</span>食管下括约肌自发性松弛，其松弛时间明显<span class="blur-text">长于吞咽时</span>食管下括约肌松弛时间</td>
+                            <td>72.. <strong>一过性食管下括约肌松弛(TLESR)</strong><br>是指<span class="answer-text">非吞咽情况下</span>食管下括约肌自发性松弛，其松弛时间明显<span class="answer-text">长于吞咽时</span>食管下括约肌松弛时间</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73.. <strong>乳糜胸</strong><br>由于各种原因流经<span class="blur-text">胸导管</span>回流的淋巴乳糜液外漏并积存于<span class="blur-text">胸膜腔内</span>称为乳糜胸，其发生与<span class="blur-text">胸导管损伤或闭塞</span>有关</td>
+                            <td>73.. <strong>乳糜胸</strong><br>由于各种原因流经<span class="answer-text">胸导管</span>回流的淋巴乳糜液外漏并积存于<span class="answer-text">胸膜腔内</span>称为乳糜胸，其发生与<span class="answer-text">胸导管损伤或闭塞</span>有关</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74.. <strong>消化性溃疡(peptic ulcer,PU)</strong><br>是指在一种或多种致病因素作用下，<span class="blur-text">胃肠道黏膜</span>被<span class="blur-text">胃酸和胃蛋白酶</span>自身消化，发生炎性及坏死病变，形成可超过<span class="blur-text">粘膜基层</span>的粘膜缺损<br>临床上以<span class="blur-text">胃溃疡</span>和<span class="blur-text">十二指肠溃疡</span>最常见</td>
+                            <td>74.. <strong>消化性溃疡(peptic ulcer,PU)</strong><br>是指在一种或多种致病因素作用下，<span class="answer-text">胃肠道黏膜</span>被<span class="answer-text">胃酸和胃蛋白酶</span>自身消化，发生炎性及坏死病变，形成可超过<span class="answer-text">粘膜基层</span>的粘膜缺损<br>临床上以<span class="answer-text">胃溃疡</span>和<span class="answer-text">十二指肠溃疡</span>最常见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75.. <strong>无症状性溃疡(silence ulcer)</strong><br>无任何症状的消化性溃疡，并发症就诊或体检时被内镜确诊<br>常见于<span class="blur-text">老年消化性溃疡</span>，维持治疗中的复发性溃疡，<span class="blur-text">NSAIDs相关性溃疡</span></td>
+                            <td>75.. <strong>无症状性溃疡(silence ulcer)</strong><br>无任何症状的消化性溃疡，并发症就诊或体检时被内镜确诊<br>常见于<span class="answer-text">老年消化性溃疡</span>，维持治疗中的复发性溃疡，<span class="answer-text">NSAIDs相关性溃疡</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>76.. <strong>老年消化性溃疡(senile peptic ulcer)</strong><br>年龄大于<span class="blur-text">60岁</span>的老年人消化性溃疡，以<span class="blur-text">胃溃疡</span>多见，尤其是<span class="blur-text">胃体中上部的高位溃疡</span>及<span class="blur-text">巨大溃疡</span>，临床表现多不典型</td>
+                            <td>76.. <strong>老年消化性溃疡(senile peptic ulcer)</strong><br>年龄大于<span class="answer-text">60岁</span>的老年人消化性溃疡，以<span class="answer-text">胃溃疡</span>多见，尤其是<span class="answer-text">胃体中上部的高位溃疡</span>及<span class="answer-text">巨大溃疡</span>，临床表现多不典型</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>77.. <strong>复合溃疡(complex ulcer)</strong><br>指同时发生在<span class="blur-text">胃和十二指肠</span>两个解剖部位的溃疡，容易并发<span class="blur-text">出血</span>和<span class="blur-text">胃出口梗阻</span></td>
+                            <td>77.. <strong>复合溃疡(complex ulcer)</strong><br>指同时发生在<span class="answer-text">胃和十二指肠</span>两个解剖部位的溃疡，容易并发<span class="answer-text">出血</span>和<span class="answer-text">胃出口梗阻</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>78.. <strong>幽门管溃疡(pyloric channel ulcer)</strong><br>指发生在胃远端与十二指肠球部交接处长约<span class="blur-text">2cm</span>的狭窄管腔内的溃疡，其疼痛缺乏<span class="blur-text">周期性和节律性</span>，容易因幽门瘢痕性狭窄而发生<span class="blur-text">梗阻</span>，消化道出血、穿孔的并发症相对多见</td>
+                            <td>78.. <strong>幽门管溃疡(pyloric channel ulcer)</strong><br>指发生在胃远端与十二指肠球部交接处长约<span class="answer-text">2cm</span>的狭窄管腔内的溃疡，其疼痛缺乏<span class="answer-text">周期性和节律性</span>，容易因幽门瘢痕性狭窄而发生<span class="answer-text">梗阻</span>，消化道出血、穿孔的并发症相对多见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>79.. <strong>十二指肠球后溃疡(postbulbar ulcer)</strong><br>发生于<span class="blur-text">十二指肠第一环形皱襞至十二指肠空肠曲</span>的溃疡，多位于<span class="blur-text">十二指肠乳头近端</span><br>具有十二指肠溃疡的特点，但疼痛多<span class="blur-text">严重而顽固</span>，<span class="blur-text">夜间痛</span>明显，常向<span class="blur-text">右上腹和背部</span>放射，容易发生<span class="blur-text">出血</span>和向<span class="blur-text">胰腺穿透</span>，药物治疗效果较差</td>
+                            <td>79.. <strong>十二指肠球后溃疡(postbulbar ulcer)</strong><br>发生于<span class="answer-text">十二指肠第一环形皱襞至十二指肠空肠曲</span>的溃疡，多位于<span class="answer-text">十二指肠乳头近端</span><br>具有十二指肠溃疡的特点，但疼痛多<span class="answer-text">严重而顽固</span>，<span class="answer-text">夜间痛</span>明显，常向<span class="answer-text">右上腹和背部</span>放射，容易发生<span class="answer-text">出血</span>和向<span class="answer-text">胰腺穿透</span>，药物治疗效果较差</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>80.. <strong>难治性溃疡(refractory ulcer)</strong><br>指十二指肠溃疡正规治疗<span class="blur-text">8周</span>或胃溃疡正规治疗<span class="blur-text">12周</span>，内镜检查确定溃疡未愈合或经正规治疗仍反复发作的溃疡</td>
+                            <td>80.. <strong>难治性溃疡(refractory ulcer)</strong><br>指十二指肠溃疡正规治疗<span class="answer-text">8周</span>或胃溃疡正规治疗<span class="answer-text">12周</span>，内镜检查确定溃疡未愈合或经正规治疗仍反复发作的溃疡</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>81.. <strong>应激性溃疡(stress ulcer)</strong><br>指在<span class="blur-text">严重烧伤、大手术、颅脑外伤</span>及其他严重的中枢神经系统疾病、严重慢性内科疾病等应激状态下，胃十二指肠发生的<span class="blur-text">急性溃疡或糜烂</span>，常并发<span class="blur-text">急性出血</span>和<span class="blur-text">穿孔</span></td>
+                            <td>81.. <strong>应激性溃疡(stress ulcer)</strong><br>指在<span class="answer-text">严重烧伤、大手术、颅脑外伤</span>及其他严重的中枢神经系统疾病、严重慢性内科疾病等应激状态下，胃十二指肠发生的<span class="answer-text">急性溃疡或糜烂</span>，常并发<span class="answer-text">急性出血</span>和<span class="answer-text">穿孔</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>82.. <strong>NSAIDs相关性溃疡(NSAIDs induced ulcer)</strong><br>以<span class="blur-text">胃溃疡</span>多见，分布在<span class="blur-text">近幽门、胃窦和胃底部</span>，溃疡形态大小多样，呈<span class="blur-text">多发、表浅性溃疡</span></td>
+                            <td>82.. <strong>NSAIDs相关性溃疡(NSAIDs induced ulcer)</strong><br>以<span class="answer-text">胃溃疡</span>多见，分布在<span class="answer-text">近幽门、胃窦和胃底部</span>，溃疡形态大小多样，呈<span class="answer-text">多发、表浅性溃疡</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>83.. <strong>穿透性溃疡(penetrating ulcer)</strong><br>即<span class="blur-text">慢性穿孔</span>，胃和十二指肠后壁溃疡深达<span class="blur-text">浆膜层</span>而又与邻近组织或器官发生了粘连，当溃疡穿孔时，胃肠内容物往往被包裹而未进入腹腔内</td>
+                            <td>83.. <strong>穿透性溃疡(penetrating ulcer)</strong><br>即<span class="answer-text">慢性穿孔</span>，胃和十二指肠后壁溃疡深达<span class="answer-text">浆膜层</span>而又与邻近组织或器官发生了粘连，当溃疡穿孔时，胃肠内容物往往被包裹而未进入腹腔内</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>84.. <strong>Curling溃疡</strong><br><span class="blur-text">严重烧伤</span>引起的应激性溃疡，好发于<span class="blur-text">胃底</span></td>
+                            <td>84.. <strong>Curling溃疡</strong><br><span class="answer-text">严重烧伤</span>引起的应激性溃疡，好发于<span class="answer-text">胃底</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>85.. <strong>Cushing溃疡</strong><br><span class="blur-text">中枢神经系统疾病</span>引起的应激性溃疡，好发于<span class="blur-text">胃上部及食管</span></td>
+                            <td>85.. <strong>Cushing溃疡</strong><br><span class="answer-text">中枢神经系统疾病</span>引起的应激性溃疡，好发于<span class="answer-text">胃上部及食管</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>86.. <strong>碱性反流性胃炎</strong><br>多在胃切除手术<span class="blur-text">数月至数年</span>发生，由于<span class="blur-text">毕II术后碱性胆汁、胰液、肠液</span>流入胃中，破坏胃粘膜屏障，导致胃粘膜充血、水肿、糜烂等改变<br>临床表现主要为<span class="blur-text">上腹后或胸骨后烧灼痛</span>，<span class="blur-text">呕吐胆汁样液体</span>和<span class="blur-text">体重减轻</span>，抑酸剂治疗无效</td>
+                            <td>86.. <strong>碱性反流性胃炎</strong><br>多在胃切除手术<span class="answer-text">数月至数年</span>发生，由于<span class="answer-text">毕II术后碱性胆汁、胰液、肠液</span>流入胃中，破坏胃粘膜屏障，导致胃粘膜充血、水肿、糜烂等改变<br>临床表现主要为<span class="answer-text">上腹后或胸骨后烧灼痛</span>，<span class="answer-text">呕吐胆汁样液体</span>和<span class="answer-text">体重减轻</span>，抑酸剂治疗无效</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>87.. <strong>倾倒综合征</strong><br>多见于<span class="blur-text">毕II式吻合</span>，为食物过快进入小肠而产生的一系列临床症状<br>早期倾倒综合征：进食后<span class="blur-text">半小时</span>出现心悸、出冷汗、乏力、面色苍白等短暂血容量不足的表现，并伴恶心呕吐、腹部绞痛、腹泻<br>晚期倾倒综合征：进食后<span class="blur-text">2~4小时</span>出现头晕、出冷汗、乏力、面色苍白等表现，主要原因是食物进入肠道刺激胰岛素大量分泌所导致的<span class="blur-text">反应性低血糖</span>，又称低血糖综合征</td>
+                            <td>87.. <strong>倾倒综合征</strong><br>多见于<span class="answer-text">毕II式吻合</span>，为食物过快进入小肠而产生的一系列临床症状<br>早期倾倒综合征：进食后<span class="answer-text">半小时</span>出现心悸、出冷汗、乏力、面色苍白等短暂血容量不足的表现，并伴恶心呕吐、腹部绞痛、腹泻<br>晚期倾倒综合征：进食后<span class="answer-text">2~4小时</span>出现头晕、出冷汗、乏力、面色苍白等表现，主要原因是食物进入肠道刺激胰岛素大量分泌所导致的<span class="answer-text">反应性低血糖</span>，又称低血糖综合征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>88.. <strong>残胃癌</strong><br>胃十二指肠溃疡病人行胃大部切除术后<span class="blur-text">5年以上</span>，残余胃发生的原发癌称残胃癌</td>
+                            <td>88.. <strong>残胃癌</strong><br>胃十二指肠溃疡病人行胃大部切除术后<span class="answer-text">5年以上</span>，残余胃发生的原发癌称残胃癌</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>89.. <strong>早期胃癌</strong><br>浸润深度限于<span class="blur-text">粘膜</span>或仅达<span class="blur-text">粘膜下层</span>的癌灶，无论病灶大小，有无淋巴结转移</td>
+                            <td>89.. <strong>早期胃癌</strong><br>浸润深度限于<span class="answer-text">粘膜</span>或仅达<span class="answer-text">粘膜下层</span>的癌灶，无论病灶大小，有无淋巴结转移</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>90.. <strong>一点癌</strong><br>癌灶仅在<span class="blur-text">胃镜粘膜活检</span>时诊断为癌</td>
+                            <td>90.. <strong>一点癌</strong><br>癌灶仅在<span class="answer-text">胃镜粘膜活检</span>时诊断为癌</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>91.. <strong>进展期胃癌</strong><br>癌组织浸润到<span class="blur-text">粘膜下层至全层</span>者</td>
+                            <td>91.. <strong>进展期胃癌</strong><br>癌组织浸润到<span class="answer-text">粘膜下层至全层</span>者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>92.. <strong>Krukenberg瘤</strong><br>胃癌经<span class="blur-text">种植转移</span>到双侧卵巢的肿瘤，特征是含有<span class="blur-text">印戒细胞的粘液</span></td>
+                            <td>92.. <strong>Krukenberg瘤</strong><br>胃癌经<span class="answer-text">种植转移</span>到双侧卵巢的肿瘤，特征是含有<span class="answer-text">印戒细胞的粘液</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>93.. <strong>X线跳跃征</strong><br>在<span class="blur-text">溃疡型肠结核</span>的患者中，钡剂位于病变肠段呈激惹现象，排空很快，充盈不佳，而在病变的上、下段充盈较好</td>
+                            <td>93.. <strong>X线跳跃征</strong><br>在<span class="answer-text">溃疡型肠结核</span>的患者中，钡剂位于病变肠段呈激惹现象，排空很快，充盈不佳，而在病变的上、下段充盈较好</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>94.. <strong>溃疡性结肠炎(UC)</strong><br>是一种<span class="blur-text">慢性非特异性的结肠炎症</span>，病变主要累及<span class="blur-text">结肠黏膜和黏膜下层</span>，范围多自<span class="blur-text">直肠及结肠远段</span>开始，逆行向近段发展，可累及全结肠和末端回肠，呈<span class="blur-text">连续性分布</span></td>
+                            <td>94.. <strong>溃疡性结肠炎(UC)</strong><br>是一种<span class="answer-text">慢性非特异性的结肠炎症</span>，病变主要累及<span class="answer-text">结肠黏膜和黏膜下层</span>，范围多自<span class="answer-text">直肠及结肠远段</span>开始，逆行向近段发展，可累及全结肠和末端回肠，呈<span class="answer-text">连续性分布</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>95.. <strong>中毒性巨结肠</strong><br>常因<span class="blur-text">低钾、钡剂灌肠、使用抗胆碱能药物或阿片类制剂</span>而诱发，此时结肠病变广泛而严重，<span class="blur-text">肠壁张力减退</span>，<span class="blur-text">结肠蠕动消失</span>，肠内容物与气体大量积聚，导致<span class="blur-text">急性结肠扩张</span><br>是溃疡性结肠炎的严重并发症</td>
+                            <td>95.. <strong>中毒性巨结肠</strong><br>常因<span class="answer-text">低钾、钡剂灌肠、使用抗胆碱能药物或阿片类制剂</span>而诱发，此时结肠病变广泛而严重，<span class="answer-text">肠壁张力减退</span>，<span class="answer-text">结肠蠕动消失</span>，肠内容物与气体大量积聚，导致<span class="answer-text">急性结肠扩张</span><br>是溃疡性结肠炎的严重并发症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>96.. <strong>克罗恩病(CD)</strong><br>是一种<span class="blur-text">慢性炎性肉芽肿性疾病</span>，多见于<span class="blur-text">末段回肠和邻近结肠</span>，但从口腔至肛门各段消化管均可受累，病变呈<span class="blur-text">节段性或跳跃式分布</span></td>
+                            <td>96.. <strong>克罗恩病(CD)</strong><br>是一种<span class="answer-text">慢性炎性肉芽肿性疾病</span>，多见于<span class="answer-text">末段回肠和邻近结肠</span>，但从口腔至肛门各段消化管均可受累，病变呈<span class="answer-text">节段性或跳跃式分布</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>97.. <strong>肠梗阻</strong><br>是由于各种原因导致<span class="blur-text">肠内容物不能顺利向远端运行</span>，并引起腹痛、腹胀等临床症候群的一种常见外科急腹症</td>
+                            <td>97.. <strong>肠梗阻</strong><br>是由于各种原因导致<span class="answer-text">肠内容物不能顺利向远端运行</span>，并引起腹痛、腹胀等临床症候群的一种常见外科急腹症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>98.. <strong>痔(hemorrhoids)</strong><br>是<span class="blur-text">肛垫</span>发生病理性肥大、移位以及肛周皮下血管丛血流瘀滞形成的团块</td>
+                            <td>98.. <strong>痔(hemorrhoids)</strong><br>是<span class="answer-text">肛垫</span>发生病理性肥大、移位以及肛周皮下血管丛血流瘀滞形成的团块</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>99.. <strong>肛管直肠周围脓肿</strong><br>是指直肠肛门周围软组织内或周围间隙内发生的<span class="blur-text">急性化脓性感染</span>，并形成脓肿，也称为肛旁脓肿</td>
+                            <td>99.. <strong>肛管直肠周围脓肿</strong><br>是指直肠肛门周围软组织内或周围间隙内发生的<span class="answer-text">急性化脓性感染</span>，并形成脓肿，也称为肛旁脓肿</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>100.. <strong>肛瘘</strong><br>是<span class="blur-text">肛管或直肠</span>与<span class="blur-text">肛周皮肤</span>相通的<span class="blur-text">慢性肉芽肿性管道</span>，以反复发作或经久不愈为特点</td>
+                            <td>100.. <strong>肛瘘</strong><br>是<span class="answer-text">肛管或直肠</span>与<span class="answer-text">肛周皮肤</span>相通的<span class="answer-text">慢性肉芽肿性管道</span>，以反复发作或经久不愈为特点</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>101.. <strong>Goodsall规律</strong><br>可以根据肛瘘<span class="blur-text">外口位置</span>预测肛瘘的走向和内口的位置<br>在肛门中点画一横线，若外口在<span class="blur-text">线后方</span>，瘘管常是<span class="blur-text">弯形</span>，且内口常在<span class="blur-text">肛管后正中</span>处；若外口在<span class="blur-text">线前方</span>，瘘管常是<span class="blur-text">直型</span>，内口常在附近的<span class="blur-text">肛窦</span>上</td>
+                            <td>101.. <strong>Goodsall规律</strong><br>可以根据肛瘘<span class="answer-text">外口位置</span>预测肛瘘的走向和内口的位置<br>在肛门中点画一横线，若外口在<span class="answer-text">线后方</span>，瘘管常是<span class="answer-text">弯形</span>，且内口常在<span class="answer-text">肛管后正中</span>处；若外口在<span class="answer-text">线前方</span>，瘘管常是<span class="answer-text">直型</span>，内口常在附近的<span class="answer-text">肛窦</span>上</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>102.. <strong>肛裂</strong><br>是<span class="blur-text">齿状线以下肛管皮肤</span>的小溃疡，常引起疼痛、便血、愈合困难</td>
+                            <td>102.. <strong>肛裂</strong><br>是<span class="answer-text">齿状线以下肛管皮肤</span>的小溃疡，常引起疼痛、便血、愈合困难</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>103.. <strong>肛裂三联征</strong><br><span class="blur-text">肛裂</span>、<span class="blur-text">前哨痔</span>、<span class="blur-text">肛乳头肥大</span>同时存在，是陈旧性肛裂的表现</td>
+                            <td>103.. <strong>肛裂三联征</strong><br><span class="answer-text">肛裂</span>、<span class="answer-text">前哨痔</span>、<span class="answer-text">肛乳头肥大</span>同时存在，是陈旧性肛裂的表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>104.. <strong>前哨痔</strong><br>是指皮肤因<span class="blur-text">炎症、水肿及静脉淋巴回流受阻</span>，形成袋状皮垂向下突出于肛门外</td>
+                            <td>104.. <strong>前哨痔</strong><br>是指皮肤因<span class="answer-text">炎症、水肿及静脉淋巴回流受阻</span>，形成袋状皮垂向下突出于肛门外</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>105.. <strong>肠外营养(parenteral nutrition,PN)</strong><br>经<span class="blur-text">静脉</span>供应人体所需的全部营养物质，使不能经口摄食的病人得以长期生存</td>
+                            <td>105.. <strong>肠外营养(parenteral nutrition,PN)</strong><br>经<span class="answer-text">静脉</span>供应人体所需的全部营养物质，使不能经口摄食的病人得以长期生存</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>106.. <strong>全胃肠外营养(TPN)</strong><br>所有营养素完全经<span class="blur-text">胃肠外</span>获得的营养支持方式</td>
+                            <td>106.. <strong>全胃肠外营养(TPN)</strong><br>所有营养素完全经<span class="answer-text">胃肠外</span>获得的营养支持方式</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>107.. <strong>肝硬化(Hepatic cirrhosis)</strong><br>是由<span class="blur-text">一种或多种原因</span>引起的一种<span class="blur-text">慢性、进行性、弥漫性肝病</span>，是各种慢性肝病发展的晚期阶段<br>以<span class="blur-text">肝组织弥漫性纤维化</span>、<span class="blur-text">再生结节</span>和<span class="blur-text">假小叶形成</span>为病理特征</td>
+                            <td>107.. <strong>肝硬化(Hepatic cirrhosis)</strong><br>是由<span class="answer-text">一种或多种原因</span>引起的一种<span class="answer-text">慢性、进行性、弥漫性肝病</span>，是各种慢性肝病发展的晚期阶段<br>以<span class="answer-text">肝组织弥漫性纤维化</span>、<span class="answer-text">再生结节</span>和<span class="answer-text">假小叶形成</span>为病理特征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>108.. <strong>自发性腹膜炎(SBP)</strong><br>是指在<span class="blur-text">无任何邻近组织炎症</span>的情况下发生的<span class="blur-text">腹膜和/或腹水的细菌性感染</span>，是肝硬化常见的一种严重的并发症</td>
+                            <td>108.. <strong>自发性腹膜炎(SBP)</strong><br>是指在<span class="answer-text">无任何邻近组织炎症</span>的情况下发生的<span class="answer-text">腹膜和/或腹水的细菌性感染</span>，是肝硬化常见的一种严重的并发症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>109.. <strong>肝肺综合征(HPS)</strong><br>在<span class="blur-text">慢性肝病和/或门脉高压</span>的基础上出现<span class="blur-text">肺内血管异常扩张</span>，<span class="blur-text">气体交换障碍</span>，<span class="blur-text">动脉血氧合作用异常</span>，导致的<span class="blur-text">低氧血症</span>及一系列病理生理变化和临床表现</td>
+                            <td>109.. <strong>肝肺综合征(HPS)</strong><br>在<span class="answer-text">慢性肝病和/或门脉高压</span>的基础上出现<span class="answer-text">肺内血管异常扩张</span>，<span class="answer-text">气体交换障碍</span>，<span class="answer-text">动脉血氧合作用异常</span>，导致的<span class="answer-text">低氧血症</span>及一系列病理生理变化和临床表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>110.. <strong>肝肾综合征(HRS)</strong><br>是指发生在<span class="blur-text">严重肝病</span>基础上的<span class="blur-text">肾衰竭</span>，但肾脏本身并无器质性损害，又称<span class="blur-text">功能性肾衰竭</span></td>
+                            <td>110.. <strong>肝肾综合征(HRS)</strong><br>是指发生在<span class="answer-text">严重肝病</span>基础上的<span class="answer-text">肾衰竭</span>，但肾脏本身并无器质性损害，又称<span class="answer-text">功能性肾衰竭</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>111.. <strong>肝性脑病</strong><br>是一种由于<span class="blur-text">急、慢性肝功能严重障碍</span>或各种<span class="blur-text">门体分流</span>引起的，以<span class="blur-text">代谢紊乱</span>为基础的、伴有<span class="blur-text">中枢神经系统功能失调</span>的综合征</td>
+                            <td>111.. <strong>肝性脑病</strong><br>是一种由于<span class="answer-text">急、慢性肝功能严重障碍</span>或各种<span class="answer-text">门体分流</span>引起的，以<span class="answer-text">代谢紊乱</span>为基础的、伴有<span class="answer-text">中枢神经系统功能失调</span>的综合征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>112.. <strong>小肝癌</strong><br>孤立的直径小于<span class="blur-text">3cm</span>的癌结节或相邻两个癌结节直径之和小于<span class="blur-text">3cm</span></td>
+                            <td>112.. <strong>小肝癌</strong><br>孤立的直径小于<span class="answer-text">3cm</span>的癌结节或相邻两个癌结节直径之和小于<span class="answer-text">3cm</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>113.. <strong>伴癌综合征</strong><br>由于肝癌本身<span class="blur-text">代谢异常</span>或癌组织对机体产生影响而引起的<span class="blur-text">内分泌或代谢异常症候群</span>，以<span class="blur-text">自发性低血糖</span>、<span class="blur-text">红细胞增多症</span>多见</td>
+                            <td>113.. <strong>伴癌综合征</strong><br>由于肝癌本身<span class="answer-text">代谢异常</span>或癌组织对机体产生影响而引起的<span class="answer-text">内分泌或代谢异常症候群</span>，以<span class="answer-text">自发性低血糖</span>、<span class="answer-text">红细胞增多症</span>多见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>114.. <strong>急性胰腺炎(AP)</strong><br>是指多种原因导致<span class="blur-text">胰酶在胰腺内激活</span>后引起胰腺组织<span class="blur-text">自身消化</span>，所致的水肿、出血及坏死等炎性损伤，临床上以<span class="blur-text">腹痛</span>及<span class="blur-text">血淀粉酶或脂肪酶升高</span>为特点</td>
+                            <td>114.. <strong>急性胰腺炎(AP)</strong><br>是指多种原因导致<span class="answer-text">胰酶在胰腺内激活</span>后引起胰腺组织<span class="answer-text">自身消化</span>，所致的水肿、出血及坏死等炎性损伤，临床上以<span class="answer-text">腹痛</span>及<span class="answer-text">血淀粉酶或脂肪酶升高</span>为特点</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>115.. <strong>Cullen征</strong><br><span class="blur-text">脐周皮肤青紫</span>，提示<span class="blur-text">腹腔内大出血</span><br>见于<span class="blur-text">宫外孕破裂</span>或<span class="blur-text">急性出血坏死型胰腺炎</span>，也见于其他内脏破裂的腹腔内大出血</td>
+                            <td>115.. <strong>Cullen征</strong><br><span class="answer-text">脐周皮肤青紫</span>，提示<span class="answer-text">腹腔内大出血</span><br>见于<span class="answer-text">宫外孕破裂</span>或<span class="answer-text">急性出血坏死型胰腺炎</span>，也见于其他内脏破裂的腹腔内大出血</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>116.. <strong>Grey-Turner征</strong><br>在<span class="blur-text">腰部、季肋部和下腹部皮肤</span>出现大片青紫色瘀斑<br>多出现于急性胰腺炎症状出现后的<span class="blur-text">3天到1周内</span></td>
+                            <td>116.. <strong>Grey-Turner征</strong><br>在<span class="answer-text">腰部、季肋部和下腹部皮肤</span>出现大片青紫色瘀斑<br>多出现于急性胰腺炎症状出现后的<span class="answer-text">3天到1周内</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>117.. <strong>腹腔间隔室综合征(ACS)</strong><br>急性胰腺炎时大量炎性渗出，引起<span class="blur-text">腹腔内压急剧升高</span>，导致<span class="blur-text">器官功能障碍</span></td>
+                            <td>117.. <strong>腹腔间隔室综合征(ACS)</strong><br>急性胰腺炎时大量炎性渗出，引起<span class="answer-text">腹腔内压急剧升高</span>，导致<span class="answer-text">器官功能障碍</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>118.. <strong>胰腺及胰周组织坏死</strong><br>指<span class="blur-text">胰腺实质的弥漫性或局灶性坏死</span>，伴<span class="blur-text">胰周脂肪组织坏死</span>，根据有无感染分为<span class="blur-text">感染性</span>和<span class="blur-text">无菌性</span>胰腺坏死</td>
+                            <td>118.. <strong>胰腺及胰周组织坏死</strong><br>指<span class="answer-text">胰腺实质的弥漫性或局灶性坏死</span>，伴<span class="answer-text">胰周脂肪组织坏死</span>，根据有无感染分为<span class="answer-text">感染性</span>和<span class="answer-text">无菌性</span>胰腺坏死</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>119.. <strong>胰腺及胰周脓肿</strong><br>胰腺内或胰周的<span class="blur-text">包裹性积脓</span>，由胰腺组织和/或胰周组织坏死液化继发感染所致，细菌或真菌培养阳性<br>增强CT提示<span class="blur-text">气泡征</span></td>
+                            <td>119.. <strong>胰腺及胰周脓肿</strong><br>胰腺内或胰周的<span class="answer-text">包裹性积脓</span>，由胰腺组织和/或胰周组织坏死液化继发感染所致，细菌或真菌培养阳性<br>增强CT提示<span class="answer-text">气泡征</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>120.. <strong>胰腺假性囊肿</strong><br>由于<span class="blur-text">胰管破裂</span>，胰液流出积聚在<span class="blur-text">网膜囊</span>内，刺激周围组织及器官的浆膜形成<span class="blur-text">纤维包膜</span>，囊内壁<span class="blur-text">无上皮细胞</span>，故称为假性囊肿<br>多发生于急性胰腺炎起病<span class="blur-text">4周后</span></td>
+                            <td>120.. <strong>胰腺假性囊肿</strong><br>由于<span class="answer-text">胰管破裂</span>，胰液流出积聚在<span class="answer-text">网膜囊</span>内，刺激周围组织及器官的浆膜形成<span class="answer-text">纤维包膜</span>，囊内壁<span class="answer-text">无上皮细胞</span>，故称为假性囊肿<br>多发生于急性胰腺炎起病<span class="answer-text">4周后</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>121.. <strong>慢性胰腺炎</strong><br>是各种原因导致的<span class="blur-text">胰腺实质及胰管</span>的<span class="blur-text">不可逆慢性炎症与纤维性病变</span>，往往伴有<span class="blur-text">胰管狭窄及扩张</span>，<span class="blur-text">胰管结石</span>或<span class="blur-text">胰腺钙化</span>，临床表现为反复发作的上腹部压痛，伴不同程度的<span class="blur-text">胰腺内、外分泌功能减退或丧失</span></td>
+                            <td>121.. <strong>慢性胰腺炎</strong><br>是各种原因导致的<span class="answer-text">胰腺实质及胰管</span>的<span class="answer-text">不可逆慢性炎症与纤维性病变</span>，往往伴有<span class="answer-text">胰管狭窄及扩张</span>，<span class="answer-text">胰管结石</span>或<span class="answer-text">胰腺钙化</span>，临床表现为反复发作的上腹部压痛，伴不同程度的<span class="answer-text">胰腺内、外分泌功能减退或丧失</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>122.. <strong>脂肪泻</strong><br>由于<span class="blur-text">胰腺外分泌不足</span>所致，表现为粪便<span class="blur-text">不成形</span>，有<span class="blur-text">油光</span>，<span class="blur-text">恶臭</span>，有时可见油滴浮在水面，粪便镜检可见<span class="blur-text">脂肪滴</span></td>
+                            <td>122.. <strong>脂肪泻</strong><br>由于<span class="answer-text">胰腺外分泌不足</span>所致，表现为粪便<span class="answer-text">不成形</span>，有<span class="answer-text">油光</span>，<span class="answer-text">恶臭</span>，有时可见油滴浮在水面，粪便镜检可见<span class="answer-text">脂肪滴</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>123.. <strong>上消化道出血</strong><br>是指<span class="blur-text">屈氏韧带以上</span>的消化道，包括<span class="blur-text">食管、胃、十二指肠</span>或肝胰病变引起的出血</td>
+                            <td>123.. <strong>上消化道出血</strong><br>是指<span class="answer-text">屈氏韧带以上</span>的消化道，包括<span class="answer-text">食管、胃、十二指肠</span>或肝胰病变引起的出血</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>124.. <strong>库瓦西耶征(courvoisier sign)</strong><br><span class="blur-text">胰头癌</span>压迫胆总管出现阻塞时，发生<span class="blur-text">明显黄疸</span>，且逐渐加深，<span class="blur-text">胆囊显著肿大</span>，但<span class="blur-text">无触痛</span></td>
+                            <td>124.. <strong>库瓦西耶征(courvoisier sign)</strong><br><span class="answer-text">胰头癌</span>压迫胆总管出现阻塞时，发生<span class="answer-text">明显黄疸</span>，且逐渐加深，<span class="answer-text">胆囊显著肿大</span>，但<span class="answer-text">无触痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>125.. <strong>双管征</strong><br>肿块上游<span class="blur-text">胰管</span>和<span class="blur-text">胆总管</span>扩张，扩张的胆总管、胰管于胰头肿块处骤然截断，这是<span class="blur-text">胰头癌</span>主要的CT间接征象</td>
+                            <td>125.. <strong>双管征</strong><br>肿块上游<span class="answer-text">胰管</span>和<span class="answer-text">胆总管</span>扩张，扩张的胆总管、胰管于胰头肿块处骤然截断，这是<span class="answer-text">胰头癌</span>主要的CT间接征象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>126.. <strong>壶腹周围癌</strong><br>主要包括<span class="blur-text">壶腹癌</span>、<span class="blur-text">胆管下端癌</span>和<span class="blur-text">十二指肠乳头腺癌</span></td>
+                            <td>126.. <strong>壶腹周围癌</strong><br>主要包括<span class="answer-text">壶腹癌</span>、<span class="answer-text">胆管下端癌</span>和<span class="answer-text">十二指肠乳头腺癌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>127.. <strong>Mirizzi's Syndrome</strong><br>是特殊类型的胆囊结石，持续嵌顿于<span class="blur-text">胆囊颈部的或过大的胆囊管结石</span>压迫<span class="blur-text">肝总管</span>引起肝总管狭窄<br>临床特点是反复发作<span class="blur-text">胆囊炎及胆管炎</span>和明显的<span class="blur-text">梗阻性黄疸</span></td>
+                            <td>127.. <strong>Mirizzi's Syndrome</strong><br>是特殊类型的胆囊结石，持续嵌顿于<span class="answer-text">胆囊颈部的或过大的胆囊管结石</span>压迫<span class="answer-text">肝总管</span>引起肝总管狭窄<br>临床特点是反复发作<span class="answer-text">胆囊炎及胆管炎</span>和明显的<span class="answer-text">梗阻性黄疸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>128.. <strong>WES征</strong><br><span class="blur-text">充满型结石</span>伴有<span class="blur-text">胆囊壁增厚</span>时，超声出现<span class="blur-text">胆囊壁弱回声</span>、<span class="blur-text">结石强回声</span>、<span class="blur-text">声影</span>三联征</td>
+                            <td>128.. <strong>WES征</strong><br><span class="answer-text">充满型结石</span>伴有<span class="answer-text">胆囊壁增厚</span>时，超声出现<span class="answer-text">胆囊壁弱回声</span>、<span class="answer-text">结石强回声</span>、<span class="answer-text">声影</span>三联征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>129.. <strong>Charcot三联征</strong><br><span class="blur-text">腹痛</span>、<span class="blur-text">寒战高热</span>、<span class="blur-text">黄疸</span>，提示<span class="blur-text">急性胆管炎</span></td>
+                            <td>129.. <strong>Charcot三联征</strong><br><span class="answer-text">腹痛</span>、<span class="answer-text">寒战高热</span>、<span class="answer-text">黄疸</span>，提示<span class="answer-text">急性胆管炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>130.. <strong>雷诺氏五联征(Reynold's pentad)</strong><br><span class="blur-text">Charcot三联征</span>+<span class="blur-text">休克</span>+<span class="blur-text">中枢神经系统受抑制改变</span>，是<span class="blur-text">急性梗阻性化脓性胆管炎</span>的典型表现</td>
+                            <td>130.. <strong>雷诺氏五联征(Reynold's pentad)</strong><br><span class="answer-text">Charcot三联征</span>+<span class="answer-text">休克</span>+<span class="answer-text">中枢神经系统受抑制改变</span>，是<span class="answer-text">急性梗阻性化脓性胆管炎</span>的典型表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>131.. <strong>功能性胃肠病(FGIDs)</strong><br>是指一组表现为<span class="blur-text">慢性或反复发作的胃肠道症状</span>，而<span class="blur-text">无器质性改变</span>的胃肠道功能性疾病</td>
+                            <td>131.. <strong>功能性胃肠病(FGIDs)</strong><br>是指一组表现为<span class="answer-text">慢性或反复发作的胃肠道症状</span>，而<span class="answer-text">无器质性改变</span>的胃肠道功能性疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>132.. <strong>功能性消化不良(functional dyspepsia,FD)</strong><br>具有<span class="blur-text">消化不良症状</span>，而生物学及内镜等检查无特殊异常，不能用器质性疾病来解释的一组临床综合征<br>临床表现为<span class="blur-text">餐后饱胀</span>、<span class="blur-text">早饱</span>、<span class="blur-text">上腹胀痛</span>、<span class="blur-text">上腹灼热感</span></td>
+                            <td>132.. <strong>功能性消化不良(functional dyspepsia,FD)</strong><br>具有<span class="answer-text">消化不良症状</span>，而生物学及内镜等检查无特殊异常，不能用器质性疾病来解释的一组临床综合征<br>临床表现为<span class="answer-text">餐后饱胀</span>、<span class="answer-text">早饱</span>、<span class="answer-text">上腹胀痛</span>、<span class="answer-text">上腹灼热感</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>133.. <strong>肠易激综合征(IBS)</strong><br>是一种以<span class="blur-text">腹痛伴排便习惯改变及大便性状异常</span>为特征而无器质性病变的常见功能性肠病</td>
+                            <td>133.. <strong>肠易激综合征(IBS)</strong><br>是一种以<span class="answer-text">腹痛伴排便习惯改变及大便性状异常</span>为特征而无器质性病变的常见功能性肠病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>134.. <strong>假小叶(pseudolobule)</strong><br>是指由广泛增生的<span class="blur-text">纤维组织</span>分割原来的<span class="blur-text">肝小叶</span>并包绕成大小不等的圆形或类圆形的肝细胞团<br>假小叶内肝细胞排列紊乱，可有变性、坏死和再生的肝细胞<br>中央静脉常<span class="blur-text">缺如、偏位或两个以上</span></td>
+                            <td>134.. <strong>假小叶(pseudolobule)</strong><br>是指由广泛增生的<span class="answer-text">纤维组织</span>分割原来的<span class="answer-text">肝小叶</span>并包绕成大小不等的圆形或类圆形的肝细胞团<br>假小叶内肝细胞排列紊乱，可有变性、坏死和再生的肝细胞<br>中央静脉常<span class="answer-text">缺如、偏位或两个以上</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>135.. <strong>气球样变(ballooning change)</strong><br>肝细胞水肿进一步发展，肝细胞体积更加肿大，由多角形变为<span class="blur-text">圆球形</span>，胞质几乎完全透明，称气球样变</td>
+                            <td>135.. <strong>气球样变(ballooning change)</strong><br>肝细胞水肿进一步发展，肝细胞体积更加肿大，由多角形变为<span class="answer-text">圆球形</span>，胞质几乎完全透明，称气球样变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>136.. <strong>嗜酸性小体(councilman body)</strong><br>病毒性肝炎的肝细胞胞质进一步浓缩，核也浓缩消失，最终形成<span class="blur-text">深红色浓染的圆形小体</span>，称为嗜酸性小体</td>
+                            <td>136.. <strong>嗜酸性小体(councilman body)</strong><br>病毒性肝炎的肝细胞胞质进一步浓缩，核也浓缩消失，最终形成<span class="answer-text">深红色浓染的圆形小体</span>，称为嗜酸性小体</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>137</td>
+                            <td>137.. <strong>桥接坏死(bridging necrosis)</strong><br>指<span class="blur-text">中央静脉与汇管区之间</span>、<span class="blur-text">两个汇管区之间</span>或<span class="blur-text">两个中央静脉之间</span>出现的互相连接的坏死带，常见于<span class="blur-text">中度和重度慢性肝炎</span></td>
+                            <td>137.. <strong>桥接坏死(bridging necrosis)</strong><br>指<span class="answer-text">中央静脉与汇管区之间</span>、<span class="answer-text">两个汇管区之间</span>或<span class="answer-text">两个中央静脉之间</span>出现的互相连接的坏死带，常见于<span class="answer-text">中度和重度慢性肝炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>138</td>
+                            <td>138.. <strong>点状坏死(spotty necrosis)</strong><br>指<span class="blur-text">单个或数个肝细胞</span>的坏死，常见于<span class="blur-text">急性普通型肝炎</span></td>
+                            <td>138.. <strong>点状坏死(spotty necrosis)</strong><br>指<span class="answer-text">单个或数个肝细胞</span>的坏死，常见于<span class="answer-text">急性普通型肝炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>139</td>
+                            <td>139.. <strong>碎片状坏死(piecemeal necrosis)</strong><br>指<span class="blur-text">肝小叶周边部界板肝细胞</span>的灶性坏死和崩解，常见于<span class="blur-text">慢性肝炎</span></td>
+                            <td>139.. <strong>碎片状坏死(piecemeal necrosis)</strong><br>指<span class="answer-text">肝小叶周边部界板肝细胞</span>的灶性坏死和崩解，常见于<span class="answer-text">慢性肝炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>140</td>
+                            <td>140.. <strong>毛玻璃样肝细胞(ground glass hepatocytes)</strong><br>HE染色时光镜下，<span class="blur-text">乙型肝炎表面抗原携带者</span>和<span class="blur-text">慢性肝炎患者</span>的肝组织常可见部分肝细胞胞质内充满<span class="blur-text">嗜酸性细颗粒物质</span>，胞质不透明似毛玻璃样</td>
+                            <td>140.. <strong>毛玻璃样肝细胞(ground glass hepatocytes)</strong><br>HE染色时光镜下，<span class="answer-text">乙型肝炎表面抗原携带者</span>和<span class="answer-text">慢性肝炎患者</span>的肝组织常可见部分肝细胞胞质内充满<span class="answer-text">嗜酸性细颗粒物质</span>，胞质不透明似毛玻璃样</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>141</td>
+                            <td>141.. <strong>早期食管癌(early carcinoma of esophagus)</strong><br>病变局限，多为<span class="blur-text">原位癌或黏膜内癌</span>，未侵犯<span class="blur-text">肌层</span>，无淋巴结转移</td>
+                            <td>141.. <strong>早期食管癌(early carcinoma of esophagus)</strong><br>病变局限，多为<span class="answer-text">原位癌或黏膜内癌</span>，未侵犯<span class="answer-text">肌层</span>，无淋巴结转移</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>142</td>
+                            <td>142.. <strong>早期胃癌(early carcinoma of stomach)</strong><br>是指癌组织浸润仅限于<span class="blur-text">黏膜层或黏膜下层</span>，而无论有无淋巴结转移</td>
+                            <td>142.. <strong>早期胃癌(early carcinoma of stomach)</strong><br>是指癌组织浸润仅限于<span class="answer-text">黏膜层或黏膜下层</span>，而无论有无淋巴结转移</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>143</td>
+                            <td>143.. <strong>原发性肝癌(primary carcinoma of liver)</strong><br><span class="blur-text">肝细胞</span>或<span class="blur-text">肝内胆管上皮细胞</span>发生的恶性肿瘤</td>
+                            <td>143.. <strong>原发性肝癌(primary carcinoma of liver)</strong><br><span class="answer-text">肝细胞</span>或<span class="answer-text">肝内胆管上皮细胞</span>发生的恶性肿瘤</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

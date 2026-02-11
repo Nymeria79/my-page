@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">人体概述大题（三）</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>五种常见肉芽肿病及病变特点</strong><br>①结核肉芽肿：中心常为<span class="blur-text">干酪性坏死</span>，周围为<span class="blur-text">放射状排列</span>的上皮样细胞，并可见<span class="blur-text">朗汉斯巨细胞</span>掺杂于其中。<br>②风湿性肉芽肿：巨噬细胞吞噬<span class="blur-text">纤维素样坏死物</span>转变为<span class="blur-text">阿少夫细胞</span>，呈枭眼状或毛虫状，聚集形成特征性肉芽肿也称<span class="blur-text">阿少夫小体</span>。<br>③假结核结节：由<span class="blur-text">钙化的血吸虫虫卵</span>、上皮样细胞、异物巨细胞、淋巴细胞和成纤维细胞构成的慢性血吸虫虫卵结节。</td>
+                            <td>1.. <strong>五种常见肉芽肿病及病变特点</strong><br>①结核肉芽肿：中心常为<span class="answer-text">干酪性坏死</span>，周围为<span class="answer-text">放射状排列</span>的上皮样细胞，并可见<span class="answer-text">朗汉斯巨细胞</span>掺杂于其中。<br>②风湿性肉芽肿：巨噬细胞吞噬<span class="answer-text">纤维素样坏死物</span>转变为<span class="answer-text">阿少夫细胞</span>，呈枭眼状或毛虫状，聚集形成特征性肉芽肿也称<span class="answer-text">阿少夫小体</span>。<br>③假结核结节：由<span class="answer-text">钙化的血吸虫虫卵</span>、上皮样细胞、异物巨细胞、淋巴细胞和成纤维细胞构成的慢性血吸虫虫卵结节。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. A <strong>五种常见肉芽肿病及病变特点（续）</strong><br>④伤寒肉芽肿：巨噬细胞吞噬<span class="blur-text">伤寒杆菌</span>、红细胞和细胞碎片，称<span class="blur-text">伤寒细胞</span>。伤寒细胞聚集成团称伤寒肉芽肿。<br>⑤梅毒性肉芽肿：又称<span class="blur-text">树胶样肿</span>或梅毒瘤。该肉芽肿<span class="blur-text">质韧而有弹性</span>，如树胶。镜下结构似结核结节，中央为<span class="blur-text">凝固性坏死</span>，坏死不如干酪样坏死彻底，可见组织内原有血管壁的轮廓。</td>
+                            <td>2.. A <strong>五种常见肉芽肿病及病变特点（续）</strong><br>④伤寒肉芽肿：巨噬细胞吞噬<span class="answer-text">伤寒杆菌</span>、红细胞和细胞碎片，称<span class="answer-text">伤寒细胞</span>。伤寒细胞聚集成团称伤寒肉芽肿。<br>⑤梅毒性肉芽肿：又称<span class="answer-text">树胶样肿</span>或梅毒瘤。该肉芽肿<span class="answer-text">质韧而有弹性</span>，如树胶。镜下结构似结核结节，中央为<span class="answer-text">凝固性坏死</span>，坏死不如干酪样坏死彻底，可见组织内原有血管壁的轮廓。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2.. B <strong>梅毒性肉芽肿特点（续）</strong><br>坏死周围肉芽组织中富含<span class="blur-text">淋巴细胞</span>和<span class="blur-text">浆细胞</span>，而上皮样细胞和Langhans巨细胞较少，且必有<span class="blur-text">闭塞性小动脉内膜炎</span>和动脉周围炎。树胶样肿后期可被吸收、纤维化，最后使器官变形，但<span class="blur-text">绝少钙化</span>。</td>
+                            <td>2.. B <strong>梅毒性肉芽肿特点（续）</strong><br>坏死周围肉芽组织中富含<span class="answer-text">淋巴细胞</span>和<span class="answer-text">浆细胞</span>，而上皮样细胞和Langhans巨细胞较少，且必有<span class="answer-text">闭塞性小动脉内膜炎</span>和动脉周围炎。树胶样肿后期可被吸收、纤维化，最后使器官变形，但<span class="answer-text">绝少钙化</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3.. <strong>炎症时液体渗出的意义</strong><br>利：①稀释毒素、减轻毒素对组织的损害，为炎症病灶带来<span class="blur-text">葡萄糖</span>、<span class="blur-text">氧</span>和营养物质及带走炎症代谢产物；②渗出物内含有<span class="blur-text">抗体</span>和<span class="blur-text">补体</span>等物质，有利于消灭病原微生物；③纤维蛋白原形成<span class="blur-text">纤维蛋白</span>，交织成网可限制病原微生物的扩散，使病灶局限化，也有利于吞噬细胞发挥吞噬作用。</td>
+                            <td>3.. <strong>炎症时液体渗出的意义</strong><br>利：①稀释毒素、减轻毒素对组织的损害，为炎症病灶带来<span class="answer-text">葡萄糖</span>、<span class="answer-text">氧</span>和营养物质及带走炎症代谢产物；②渗出物内含有<span class="answer-text">抗体</span>和<span class="answer-text">补体</span>等物质，有利于消灭病原微生物；③纤维蛋白原形成<span class="answer-text">纤维蛋白</span>，交织成网可限制病原微生物的扩散，使病灶局限化，也有利于吞噬细胞发挥吞噬作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>4.. A <strong>炎症时液体渗出的意义（续）</strong><br>利：④炎症后期纤维蛋白网架还可成为<span class="blur-text">修复的支架</span>，有利于组织的修复；⑤病原微生物和毒素随淋巴液被携带至局部淋巴结，可刺激机体发生<span class="blur-text">细胞免疫</span>和<span class="blur-text">体液免疫</span>，提高机体的免疫力。<br>弊：①渗出液过多可引起<span class="blur-text">压迫</span>和<span class="blur-text">阻塞</span>，如心包腔积液可压迫心脏；②渗出的纤维蛋白过多，不能完全吸收，可发生<span class="blur-text">机化</span>，引起组织粘连，如心包粘连导致缩窄性心包炎。</td>
+                            <td>4.. A <strong>炎症时液体渗出的意义（续）</strong><br>利：④炎症后期纤维蛋白网架还可成为<span class="answer-text">修复的支架</span>，有利于组织的修复；⑤病原微生物和毒素随淋巴液被携带至局部淋巴结，可刺激机体发生<span class="answer-text">细胞免疫</span>和<span class="answer-text">体液免疫</span>，提高机体的免疫力。<br>弊：①渗出液过多可引起<span class="answer-text">压迫</span>和<span class="answer-text">阻塞</span>，如心包腔积液可压迫心脏；②渗出的纤维蛋白过多，不能完全吸收，可发生<span class="answer-text">机化</span>，引起组织粘连，如心包粘连导致缩窄性心包炎。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5.. <strong>为什么说炎症是以防御为主的病理反应</strong><br>炎症有<span class="blur-text">变质</span>、<span class="blur-text">渗出</span>、<span class="blur-text">增生</span>三个基本病理过程。变质导致的组织变性和坏死造成机体损伤，而渗出过程产生的渗出物可以稀释毒素；带来氧、营养物、<span class="blur-text">抗体</span>、<span class="blur-text">补体</span>、<span class="blur-text">纤维蛋白原</span>和炎细胞，有利于防御、消灭病原微生物，使病灶局限；带走有害物质，最终清除致炎因素。增生是对损伤的修复过程。</td>
+                            <td>5.. <strong>为什么说炎症是以防御为主的病理反应</strong><br>炎症有<span class="answer-text">变质</span>、<span class="answer-text">渗出</span>、<span class="answer-text">增生</span>三个基本病理过程。变质导致的组织变性和坏死造成机体损伤，而渗出过程产生的渗出物可以稀释毒素；带来氧、营养物、<span class="answer-text">抗体</span>、<span class="answer-text">补体</span>、<span class="answer-text">纤维蛋白原</span>和炎细胞，有利于防御、消灭病原微生物，使病灶局限；带走有害物质，最终清除致炎因素。增生是对损伤的修复过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>6.. A <strong>炎症的局部表现</strong><br>①<span class="blur-text">红</span>、<span class="blur-text">肿</span>、<span class="blur-text">热</span>、<span class="blur-text">痛</span>和<span class="blur-text">功能障碍</span>；②红、热：血管的扩张充血、血流速度的加快；③肿：血管的扩张、组织间质中的炎性渗出物以及部分细胞增生。</td>
+                            <td>6.. A <strong>炎症的局部表现</strong><br>①<span class="answer-text">红</span>、<span class="answer-text">肿</span>、<span class="answer-text">热</span>、<span class="answer-text">痛</span>和<span class="answer-text">功能障碍</span>；②红、热：血管的扩张充血、血流速度的加快；③肿：血管的扩张、组织间质中的炎性渗出物以及部分细胞增生。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>6.. B <strong>炎症的局部表现（续）</strong><br>④痛：渗出物对局部组织神经末梢的压迫作用，以及炎症时产生的一些<span class="blur-text">化学因子</span>的刺激作用；⑤功能障碍：组织细胞的损伤、局部的肿胀压迫、疼痛以及渗出物的粘连机化都可能造成脏器的功能障碍。</td>
+                            <td>6.. B <strong>炎症的局部表现（续）</strong><br>④痛：渗出物对局部组织神经末梢的压迫作用，以及炎症时产生的一些<span class="answer-text">化学因子</span>的刺激作用；⑤功能障碍：组织细胞的损伤、局部的肿胀压迫、疼痛以及渗出物的粘连机化都可能造成脏器的功能障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>7.. <strong>炎症的全身反应</strong><br>①<span class="blur-text">发热</span>：是由<span class="blur-text">致热源</span>通过刺激下丘脑合成<span class="blur-text">前列腺素</span>而引起；②<span class="blur-text">白细胞增高</span>：多见于细菌感染；③其他表现：还可表现为脉压差增大、血压增高、出汗减少、寒冷等。</td>
+                            <td>7.. <strong>炎症的全身反应</strong><br>①<span class="answer-text">发热</span>：是由<span class="answer-text">致热源</span>通过刺激下丘脑合成<span class="answer-text">前列腺素</span>而引起；②<span class="answer-text">白细胞增高</span>：多见于细菌感染；③其他表现：还可表现为脉压差增大、血压增高、出汗减少、寒冷等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>8.. A <strong>急性炎症的血管反应</strong><br>血流动力学的变化：①细动脉的<span class="blur-text">短暂收缩</span>；②细动脉的<span class="blur-text">舒张</span>和血流量增加；③<span class="blur-text">血流速度的减慢</span>。<br>血管通透性的增加：①<span class="blur-text">内皮细胞的收缩</span>；②<span class="blur-text">内皮细胞的损伤</span>；③内皮细胞的穿胞作用增强；④新生毛细血管的通透性增高。</td>
+                            <td>8.. A <strong>急性炎症的血管反应</strong><br>血流动力学的变化：①细动脉的<span class="answer-text">短暂收缩</span>；②细动脉的<span class="answer-text">舒张</span>和血流量增加；③<span class="answer-text">血流速度的减慢</span>。<br>血管通透性的增加：①<span class="answer-text">内皮细胞的收缩</span>；②<span class="answer-text">内皮细胞的损伤</span>；③内皮细胞的穿胞作用增强；④新生毛细血管的通透性增高。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>8.. B <strong>急性炎症的白细胞反应</strong><br>白细胞渗出：①白细胞的<span class="blur-text">边集</span>和<span class="blur-text">滚动</span>；②白细胞的<span class="blur-text">黏附</span>；③白细胞的<span class="blur-text">游出</span>；④白细胞的<span class="blur-text">趋化性</span>。<br>白细胞的激活。<br>炎症介质在炎症中的作用：<span class="blur-text">细胞源性</span>和<span class="blur-text">血浆源性</span>炎症介质。</td>
+                            <td>8.. B <strong>急性炎症的白细胞反应</strong><br>白细胞渗出：①白细胞的<span class="answer-text">边集</span>和<span class="answer-text">滚动</span>；②白细胞的<span class="answer-text">黏附</span>；③白细胞的<span class="answer-text">游出</span>；④白细胞的<span class="answer-text">趋化性</span>。<br>白细胞的激活。<br>炎症介质在炎症中的作用：<span class="answer-text">细胞源性</span>和<span class="answer-text">血浆源性</span>炎症介质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>9.. A <strong>急性炎症的类型</strong><br>①<span class="blur-text">浆液性炎</span>：以浆液渗出为主要特征，多发生在皮肤、黏膜、浆膜和疏松结缔组织；②<span class="blur-text">纤维素性炎</span>：以<span class="blur-text">纤维蛋白原</span>渗出为特征，好发于黏膜、浆膜和肺；③<span class="blur-text">化脓性炎</span>：是以大量<span class="blur-text">中性粒细胞</span>渗出，并伴有不同程度的组织坏死和脓液形成为特征。</td>
+                            <td>9.. A <strong>急性炎症的类型</strong><br>①<span class="answer-text">浆液性炎</span>：以浆液渗出为主要特征，多发生在皮肤、黏膜、浆膜和疏松结缔组织；②<span class="answer-text">纤维素性炎</span>：以<span class="answer-text">纤维蛋白原</span>渗出为特征，好发于黏膜、浆膜和肺；③<span class="answer-text">化脓性炎</span>：是以大量<span class="answer-text">中性粒细胞</span>渗出，并伴有不同程度的组织坏死和脓液形成为特征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>9.. B <strong>急性炎症的类型——化脓性炎分类</strong><br>①<span class="blur-text">脓肿</span>：是发生在器官或体腔内的<span class="blur-text">局限性化脓性炎</span>，以局部组织发生液化坏死、形成充满脓液的腔为特点。如疖、痈、溃疡、窦道、瘘管等；②<span class="blur-text">蜂窝织炎</span>：是皮下、筋膜下、肌间隙或阑尾发生的<span class="blur-text">弥漫性化脓性炎</span>，常见致病菌为<span class="blur-text">溶血性链球菌</span>；③<span class="blur-text">表面化脓和积脓</span>：是指发生于黏膜或浆膜表面的化脓性炎，其特点是脓液主要向黏膜或浆膜表面渗出。</td>
+                            <td>9.. B <strong>急性炎症的类型——化脓性炎分类</strong><br>①<span class="answer-text">脓肿</span>：是发生在器官或体腔内的<span class="answer-text">局限性化脓性炎</span>，以局部组织发生液化坏死、形成充满脓液的腔为特点。如疖、痈、溃疡、窦道、瘘管等；②<span class="answer-text">蜂窝织炎</span>：是皮下、筋膜下、肌间隙或阑尾发生的<span class="answer-text">弥漫性化脓性炎</span>，常见致病菌为<span class="answer-text">溶血性链球菌</span>；③<span class="answer-text">表面化脓和积脓</span>：是指发生于黏膜或浆膜表面的化脓性炎，其特点是脓液主要向黏膜或浆膜表面渗出。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>10.. A <strong>肿瘤增殖与非肿瘤增殖的区别</strong><br>肿瘤性增殖：①一般是<span class="blur-text">克隆性</span>；②细胞在形态、代谢和功能方面均有异常，不同程度地失去了<span class="blur-text">分化成熟</span>的能力；③细胞生长旺盛，失去控制，具有<span class="blur-text">相对自主性</span>，即使引起肿瘤性增殖的初始因素已消除，仍能持续自主生长。</td>
+                            <td>10.. A <strong>肿瘤增殖与非肿瘤增殖的区别</strong><br>肿瘤性增殖：①一般是<span class="answer-text">克隆性</span>；②细胞在形态、代谢和功能方面均有异常，不同程度地失去了<span class="answer-text">分化成熟</span>的能力；③细胞生长旺盛，失去控制，具有<span class="answer-text">相对自主性</span>，即使引起肿瘤性增殖的初始因素已消除，仍能持续自主生长。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>10.. B <strong>非肿瘤增殖的特点</strong><br>非肿瘤增殖：①可见于正常的细胞更新、损伤引起的防御反应、修复等，通常是机体需要的生物学过程；②与机体协调，受到控制，有一定限度，引起细胞增殖的原因消除后不再继续；③增殖的细胞或组织<span class="blur-text">分化成熟</span>；④一般是<span class="blur-text">多克隆性</span>的。</td>
+                            <td>10.. B <strong>非肿瘤增殖的特点</strong><br>非肿瘤增殖：①可见于正常的细胞更新、损伤引起的防御反应、修复等，通常是机体需要的生物学过程；②与机体协调，受到控制，有一定限度，引起细胞增殖的原因消除后不再继续；③增殖的细胞或组织<span class="answer-text">分化成熟</span>；④一般是<span class="answer-text">多克隆性</span>的。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>11.. A <strong>肿瘤命名的一般原则——良性肿瘤</strong><br>良性肿瘤命名：一般原则是在该组织或细胞类型的名称后面加上"<span class="blur-text">瘤</span>"（-oma）字。例如：<span class="blur-text">腺上皮</span>的良性肿瘤，称为腺瘤（adenoma）；<span class="blur-text">平滑肌</span>的良性肿瘤称为平滑肌瘤（leiomyoma）。</td>
+                            <td>11.. A <strong>肿瘤命名的一般原则——良性肿瘤</strong><br>良性肿瘤命名：一般原则是在该组织或细胞类型的名称后面加上"<span class="answer-text">瘤</span>"（-oma）字。例如：<span class="answer-text">腺上皮</span>的良性肿瘤，称为腺瘤（adenoma）；<span class="answer-text">平滑肌</span>的良性肿瘤称为平滑肌瘤（leiomyoma）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>11.. B <strong>肿瘤命名的一般原则——恶性肿瘤</strong><br>恶性肿瘤命名：①上皮组织的恶性肿瘤统称为<span class="blur-text">癌</span>（carcinoma）。命名方式是在上皮名称之后加一个"癌"字。例如：<span class="blur-text">腺上皮</span>的恶性肿瘤，称为腺癌（adenocarcinoma）；<span class="blur-text">鳞状上皮</span>的恶性肿瘤，称为鳞状细胞癌（squamous cell carcinoma）。②间叶组织的恶性肿瘤统称为<span class="blur-text">肉瘤</span>（sarcoma）。</td>
+                            <td>11.. B <strong>肿瘤命名的一般原则——恶性肿瘤</strong><br>恶性肿瘤命名：①上皮组织的恶性肿瘤统称为<span class="answer-text">癌</span>（carcinoma）。命名方式是在上皮名称之后加一个"癌"字。例如：<span class="answer-text">腺上皮</span>的恶性肿瘤，称为腺癌（adenocarcinoma）；<span class="answer-text">鳞状上皮</span>的恶性肿瘤，称为鳞状细胞癌（squamous cell carcinoma）。②间叶组织的恶性肿瘤统称为<span class="answer-text">肉瘤</span>（sarcoma）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>11.. C <strong>肿瘤命名的一般原则——癌肉瘤</strong><br>③同时具有<span class="blur-text">癌</span>和<span class="blur-text">肉瘤</span>两种成分的恶性肿瘤，称为<span class="blur-text">癌肉瘤</span>（carcinosarcoma）。</td>
+                            <td>11.. C <strong>肿瘤命名的一般原则——癌肉瘤</strong><br>③同时具有<span class="answer-text">癌</span>和<span class="answer-text">肉瘤</span>两种成分的恶性肿瘤，称为<span class="answer-text">癌肉瘤</span>（carcinosarcoma）。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">12.. A <strong>癌与肉瘤的区别</strong><br>图略</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>13.. A <strong>肿瘤的异型性定义</strong><br>肿瘤<span class="blur-text">组织结构</span>和<span class="blur-text">细胞形态</span>与相应的正常组织有不同程度的差异，称为肿瘤的异型性（atypia）。包括肿瘤的<span class="blur-text">结构异型性</span>（architectural atypia）和<span class="blur-text">细胞异型性</span>（cellular atypia）。</td>
+                            <td>13.. A <strong>肿瘤的异型性定义</strong><br>肿瘤<span class="answer-text">组织结构</span>和<span class="answer-text">细胞形态</span>与相应的正常组织有不同程度的差异，称为肿瘤的异型性（atypia）。包括肿瘤的<span class="answer-text">结构异型性</span>（architectural atypia）和<span class="answer-text">细胞异型性</span>（cellular atypia）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>13.. B <strong>肿瘤的细胞异型性表现</strong><br>①细胞体积异常，表现为细胞体积<span class="blur-text">增大</span>或原始小细胞；②肿瘤细胞大小和形态不一致（<span class="blur-text">多形性</span>，pleomorphism）；③肿瘤细胞核体积增大，胞核与细胞质的比例（<span class="blur-text">核质比</span>）增高；④核的大小、形态和染色差别较大（<span class="blur-text">核的多形性</span>）；⑤<span class="blur-text">核仁</span>明显，体积大，数目增多；⑥<span class="blur-text">核分裂象</span>增多，出现<span class="blur-text">病理性核分裂象</span>。</td>
+                            <td>13.. B <strong>肿瘤的细胞异型性表现</strong><br>①细胞体积异常，表现为细胞体积<span class="answer-text">增大</span>或原始小细胞；②肿瘤细胞大小和形态不一致（<span class="answer-text">多形性</span>，pleomorphism）；③肿瘤细胞核体积增大，胞核与细胞质的比例（<span class="answer-text">核质比</span>）增高；④核的大小、形态和染色差别较大（<span class="answer-text">核的多形性</span>）；⑤<span class="answer-text">核仁</span>明显，体积大，数目增多；⑥<span class="answer-text">核分裂象</span>增多，出现<span class="answer-text">病理性核分裂象</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">14.. A <strong>良性肿瘤与恶性肿瘤的区别</strong><br>图略</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>15.. A <strong>肿瘤的生长方式</strong><br>①<span class="blur-text">膨胀性生长</span>（expansile growth）：实质器官的良性肿瘤多呈膨胀性生长，与周围组织分界清楚，形成完整的<span class="blur-text">被膜</span>，对周围组织的影响主要是<span class="blur-text">挤压</span>；②<span class="blur-text">外生性生长</span>（exophytic growth）：发生于体表、体腔、管道器官表面或腔面的良性或恶性肿瘤常向外突起，形成乳头状、蕈伞状、息肉状等形状的肿物。</td>
+                            <td>15.. A <strong>肿瘤的生长方式</strong><br>①<span class="answer-text">膨胀性生长</span>（expansile growth）：实质器官的良性肿瘤多呈膨胀性生长，与周围组织分界清楚，形成完整的<span class="answer-text">被膜</span>，对周围组织的影响主要是<span class="answer-text">挤压</span>；②<span class="answer-text">外生性生长</span>（exophytic growth）：发生于体表、体腔、管道器官表面或腔面的良性或恶性肿瘤常向外突起，形成乳头状、蕈伞状、息肉状等形状的肿物。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>15.. B <strong>肿瘤的生长方式——浸润性生长</strong><br>③<span class="blur-text">浸润性生长</span>（invasive growth）：恶性肿瘤多呈浸润性生长。恶性肿瘤细胞不断增生，如树根深入土壤一样，侵犯<span class="blur-text">血管</span>、<span class="blur-text">淋巴管</span>和周围组织间隙，破坏周围组织，浸润性肿瘤没有被膜，瘤组织与周围组织分界不清，术后容易<span class="blur-text">复发</span>。</td>
+                            <td>15.. B <strong>肿瘤的生长方式——浸润性生长</strong><br>③<span class="answer-text">浸润性生长</span>（invasive growth）：恶性肿瘤多呈浸润性生长。恶性肿瘤细胞不断增生，如树根深入土壤一样，侵犯<span class="answer-text">血管</span>、<span class="answer-text">淋巴管</span>和周围组织间隙，破坏周围组织，浸润性肿瘤没有被膜，瘤组织与周围组织分界不清，术后容易<span class="answer-text">复发</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>16.. A <strong>肿瘤的扩散——局部浸润和转移</strong><br>①<span class="blur-text">局部浸润</span>或<span class="blur-text">直接蔓延</span>：随着恶性肿瘤的不断长大，肿瘤细胞常常沿着组织间隙、淋巴管、血管或神经束衣等浸润并破坏相邻的正常器官或组织，并继续生长；②<span class="blur-text">转移</span>：是恶性肿瘤最重要的特征。瘤细胞从原发部位侵入淋巴管、血管或体腔，迁移到其他部位继续生长，形成与原发瘤同样类型的肿瘤。</td>
+                            <td>16.. A <strong>肿瘤的扩散——局部浸润和转移</strong><br>①<span class="answer-text">局部浸润</span>或<span class="answer-text">直接蔓延</span>：随着恶性肿瘤的不断长大，肿瘤细胞常常沿着组织间隙、淋巴管、血管或神经束衣等浸润并破坏相邻的正常器官或组织，并继续生长；②<span class="answer-text">转移</span>：是恶性肿瘤最重要的特征。瘤细胞从原发部位侵入淋巴管、血管或体腔，迁移到其他部位继续生长，形成与原发瘤同样类型的肿瘤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>16.. B <strong>肿瘤的扩散——转移途径</strong><br>①<span class="blur-text">淋巴道转移</span>：主要取决于原发肿瘤部位的淋巴引流方向。瘤细胞侵入淋巴管后，通常随淋巴流首先到达<span class="blur-text">最近的一站淋巴结</span>；②<span class="blur-text">血道转移</span>：是指瘤细胞侵入血管后随血流到达远处器官继续生长，形成转移瘤。最常见的是<span class="blur-text">肺</span>，其次是<span class="blur-text">肝</span>；③<span class="blur-text">种植性转移</span>：是指肿瘤蔓延侵及器官表面时，瘤细胞脱落并种植在体腔和体腔内各器官的表面，继续生长，形成转移瘤。</td>
+                            <td>16.. B <strong>肿瘤的扩散——转移途径</strong><br>①<span class="answer-text">淋巴道转移</span>：主要取决于原发肿瘤部位的淋巴引流方向。瘤细胞侵入淋巴管后，通常随淋巴流首先到达<span class="answer-text">最近的一站淋巴结</span>；②<span class="answer-text">血道转移</span>：是指瘤细胞侵入血管后随血流到达远处器官继续生长，形成转移瘤。最常见的是<span class="answer-text">肺</span>，其次是<span class="answer-text">肝</span>；③<span class="answer-text">种植性转移</span>：是指肿瘤蔓延侵及器官表面时，瘤细胞脱落并种植在体腔和体腔内各器官的表面，继续生长，形成转移瘤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>17.. A <strong>发热时心血管系统功能变化</strong><br>体温每升高1°C，心率增加<span class="blur-text">18次/分</span>，这是血温增高刺激<span class="blur-text">窦房结</span>及<span class="blur-text">交感-肾上腺髓质系统</span>的结果。心率加快可增加每分心输出量，是增加组织血液供应的代偿性效应，但对心肌劳损或有潜在性病灶的病人，则可因加重心肌负担而诱发<span class="blur-text">心力衰竭</span>。</td>
+                            <td>17.. A <strong>发热时心血管系统功能变化</strong><br>体温每升高1°C，心率增加<span class="answer-text">18次/分</span>，这是血温增高刺激<span class="answer-text">窦房结</span>及<span class="answer-text">交感-肾上腺髓质系统</span>的结果。心率加快可增加每分心输出量，是增加组织血液供应的代偿性效应，但对心肌劳损或有潜在性病灶的病人，则可因加重心肌负担而诱发<span class="answer-text">心力衰竭</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>17.. B <strong>发热时心血管系统功能变化（续）</strong><br>①<span class="blur-text">寒战期</span>动脉血压可轻度上升，是外周血管收缩、增加、心率加快使心输出量增加的结果；②在<span class="blur-text">高峰期</span>由于外周血管舒张，动脉血压轻度下降；③<span class="blur-text">退热期</span>体温骤降可因大汗而脱水，严重者可发生<span class="blur-text">休克</span>。</td>
+                            <td>17.. B <strong>发热时心血管系统功能变化（续）</strong><br>①<span class="answer-text">寒战期</span>动脉血压可轻度上升，是外周血管收缩、增加、心率加快使心输出量增加的结果；②在<span class="answer-text">高峰期</span>由于外周血管舒张，动脉血压轻度下降；③<span class="answer-text">退热期</span>体温骤降可因大汗而脱水，严重者可发生<span class="answer-text">休克</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>18.. A <strong>发热时机体物质代谢变化</strong><br>一般体温每升高1°C，<span class="blur-text">基础代谢率</span>提高<span class="blur-text">13%</span>。持续高热或长期发热均可使体内物质消耗，尤其是<span class="blur-text">糖</span>、<span class="blur-text">脂肪</span>、<span class="blur-text">蛋白质</span>分解增多，使机体处于能量代谢的负平衡。</td>
+                            <td>18.. A <strong>发热时机体物质代谢变化</strong><br>一般体温每升高1°C，<span class="answer-text">基础代谢率</span>提高<span class="answer-text">13%</span>。持续高热或长期发热均可使体内物质消耗，尤其是<span class="answer-text">糖</span>、<span class="answer-text">脂肪</span>、<span class="answer-text">蛋白质</span>分解增多，使机体处于能量代谢的负平衡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>18.. B <strong>发热时蛋白质代谢</strong><br>高热病人蛋白质代谢加强，一个50kg体重的正常人，每日分解蛋白质约<span class="blur-text">12g</span>，而发热时可增至正常的<span class="blur-text">3~4倍</span>，故长期发热使血浆<span class="blur-text">总蛋白</span>和<span class="blur-text">白蛋白</span>量减少，<span class="blur-text">尿素氮</span>明显增高，呈<span class="blur-text">负氮平衡</span>。</td>
+                            <td>18.. B <strong>发热时蛋白质代谢</strong><br>高热病人蛋白质代谢加强，一个50kg体重的正常人，每日分解蛋白质约<span class="answer-text">12g</span>，而发热时可增至正常的<span class="answer-text">3~4倍</span>，故长期发热使血浆<span class="answer-text">总蛋白</span>和<span class="answer-text">白蛋白</span>量减少，<span class="answer-text">尿素氮</span>明显增高，呈<span class="answer-text">负氮平衡</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>18.. C <strong>发热时糖、脂肪及水电解质代谢</strong><br>①糖与脂肪：糖原分解增高，血糖增高，糖原的储备减少；脂肪分解也加强，大量脂肪分解且氧化不全可使血中<span class="blur-text">酮体</span>增加；糖酵解增加，血<span class="blur-text">乳酸</span>增多；②水、电解质与维生素：维生素不足，尤其是<span class="blur-text">维生素C</span>和<span class="blur-text">B族</span>缺乏；体温上升期和高热持续期，由于尿量减少，可致<span class="blur-text">水</span>、<span class="blur-text">钠</span>、<span class="blur-text">氯</span>等在体内潴留。</td>
+                            <td>18.. C <strong>发热时糖、脂肪及水电解质代谢</strong><br>①糖与脂肪：糖原分解增高，血糖增高，糖原的储备减少；脂肪分解也加强，大量脂肪分解且氧化不全可使血中<span class="answer-text">酮体</span>增加；糖酵解增加，血<span class="answer-text">乳酸</span>增多；②水、电解质与维生素：维生素不足，尤其是<span class="answer-text">维生素C</span>和<span class="answer-text">B族</span>缺乏；体温上升期和高热持续期，由于尿量减少，可致<span class="answer-text">水</span>、<span class="answer-text">钠</span>、<span class="answer-text">氯</span>等在体内潴留。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>18.. D <strong>发热时水电解质代谢（续）</strong><br>体温下降期，由于皮肤、呼吸道大量蒸发水分，出汗增多及尿量增多，可引起<span class="blur-text">高渗性脱水</span>。发热时，组织分解代谢增强，细胞内钾释放入血，血钾增高，肾脏排钾减少，尿钾增高。严重者因乳酸、酮体增多及高钾血症，可发生<span class="blur-text">代谢性酸中毒</span>。</td>
+                            <td>18.. D <strong>发热时水电解质代谢（续）</strong><br>体温下降期，由于皮肤、呼吸道大量蒸发水分，出汗增多及尿量增多，可引起<span class="answer-text">高渗性脱水</span>。发热时，组织分解代谢增强，细胞内钾释放入血，血钾增高，肾脏排钾减少，尿钾增高。严重者因乳酸、酮体增多及高钾血症，可发生<span class="answer-text">代谢性酸中毒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>19.. <strong>应尽快降温的病人</strong><br>①高热，大于<span class="blur-text">40°C</span>的病人；②<span class="blur-text">心脏病</span>患者；③<span class="blur-text">妊娠期</span>妇女；④<span class="blur-text">4岁以下</span>儿童。</td>
+                            <td>19.. <strong>应尽快降温的病人</strong><br>①高热，大于<span class="answer-text">40°C</span>的病人；②<span class="answer-text">心脏病</span>患者；③<span class="answer-text">妊娠期</span>妇女；④<span class="answer-text">4岁以下</span>儿童。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>20.. A <strong>发热的基本环节——信息传递</strong><br>第一环节是<span class="blur-text">信息传递</span>，<span class="blur-text">发热激活物</span>作用于<span class="blur-text">产EP细胞</span>，使后者产生和释放<span class="blur-text">EP</span>，EP作为"信使"，经血流将其传递到<span class="blur-text">下丘脑体温调节中枢</span>。</td>
+                            <td>20.. A <strong>发热的基本环节——信息传递</strong><br>第一环节是<span class="answer-text">信息传递</span>，<span class="answer-text">发热激活物</span>作用于<span class="answer-text">产EP细胞</span>，使后者产生和释放<span class="answer-text">EP</span>，EP作为"信使"，经血流将其传递到<span class="answer-text">下丘脑体温调节中枢</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>20.. B <strong>发热的基本环节——中枢调节和效应部分</strong><br>第二环节是<span class="blur-text">中枢调节</span>，即EP以某种方式作用于下丘脑体温调节中枢神经细胞，产生<span class="blur-text">中枢发热介质</span>，使体温调节中枢的<span class="blur-text">调定点</span>上移。于是，正常血液温度变为冷刺激，体温调节中枢发出冲动引起调温效应器的反应。<br>第三环节是<span class="blur-text">效应部分</span>，一方面通过运动神经引起骨骼肌紧张增高或<span class="blur-text">寒战</span>。另一方面经交感神经系统引起<span class="blur-text">皮肤血管收缩</span>，使散热减少，于是，产热大于散热，体温升至与调定点相适应的水平。</td>
+                            <td>20.. B <strong>发热的基本环节——中枢调节和效应部分</strong><br>第二环节是<span class="answer-text">中枢调节</span>，即EP以某种方式作用于下丘脑体温调节中枢神经细胞，产生<span class="answer-text">中枢发热介质</span>，使体温调节中枢的<span class="answer-text">调定点</span>上移。于是，正常血液温度变为冷刺激，体温调节中枢发出冲动引起调温效应器的反应。<br>第三环节是<span class="answer-text">效应部分</span>，一方面通过运动神经引起骨骼肌紧张增高或<span class="answer-text">寒战</span>。另一方面经交感神经系统引起<span class="answer-text">皮肤血管收缩</span>，使散热减少，于是，产热大于散热，体温升至与调定点相适应的水平。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>21.. A <strong>发热三个时相——体温上升期</strong><br>①热代谢特点：<span class="blur-text">产热增多</span>，<span class="blur-text">散热减少</span>，体温上升；②主要临床表现：<span class="blur-text">畏寒</span>、<span class="blur-text">皮肤苍白</span>，严重者出现<span class="blur-text">寒战</span>和"<span class="blur-text">鸡皮疙瘩</span>"；③机理：皮肤血管收缩血流减少以减少散热表现为皮肤苍白。因皮肤血流减少，皮温下降刺激<span class="blur-text">冷感受器</span>，信息传入中枢而有畏寒感觉。"鸡皮疙瘩"是经交感传出的冲动引起皮肤<span class="blur-text">立毛肌</span>收缩而致。</td>
+                            <td>21.. A <strong>发热三个时相——体温上升期</strong><br>①热代谢特点：<span class="answer-text">产热增多</span>，<span class="answer-text">散热减少</span>，体温上升；②主要临床表现：<span class="answer-text">畏寒</span>、<span class="answer-text">皮肤苍白</span>，严重者出现<span class="answer-text">寒战</span>和"<span class="answer-text">鸡皮疙瘩</span>"；③机理：皮肤血管收缩血流减少以减少散热表现为皮肤苍白。因皮肤血流减少，皮温下降刺激<span class="answer-text">冷感受器</span>，信息传入中枢而有畏寒感觉。"鸡皮疙瘩"是经交感传出的冲动引起皮肤<span class="answer-text">立毛肌</span>收缩而致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>21.. B <strong>体温上升期机理（续）</strong><br>寒战则是骨骼肌<span class="blur-text">不随意的周期性收缩</span>以增加产热，是下丘脑发出的冲动，经脊髓侧索的<span class="blur-text">网状脊髓束</span>和<span class="blur-text">红核脊髓束</span>，通过运动神经传递到运动终板而引起。</td>
+                            <td>21.. B <strong>体温上升期机理（续）</strong><br>寒战则是骨骼肌<span class="answer-text">不随意的周期性收缩</span>以增加产热，是下丘脑发出的冲动，经脊髓侧索的<span class="answer-text">网状脊髓束</span>和<span class="answer-text">红核脊髓束</span>，通过运动神经传递到运动终板而引起。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>22.. A <strong>发热三个时相——高温持续期</strong><br>①热代谢特点：中心体温与上升的调定点水平相适应，<span class="blur-text">产热与散热</span>在较高水平上保持<span class="blur-text">相对平衡</span>；②特点：病人自觉<span class="blur-text">酷热</span>，皮肤<span class="blur-text">发红</span>、<span class="blur-text">干燥</span>；③机理：皮肤血管由收缩转为<span class="blur-text">舒张</span>，浅层血管舒张使皮肤血流增多，因而皮肤发红。由于温度较高的血液灌注使皮温增高，<span class="blur-text">热感受器</span>将信息传入中枢而使病人有酷热感产生。高热时水分经皮肤蒸发较多，因而，皮肤和口唇干燥。</td>
+                            <td>22.. A <strong>发热三个时相——高温持续期</strong><br>①热代谢特点：中心体温与上升的调定点水平相适应，<span class="answer-text">产热与散热</span>在较高水平上保持<span class="answer-text">相对平衡</span>；②特点：病人自觉<span class="answer-text">酷热</span>，皮肤<span class="answer-text">发红</span>、<span class="answer-text">干燥</span>；③机理：皮肤血管由收缩转为<span class="answer-text">舒张</span>，浅层血管舒张使皮肤血流增多，因而皮肤发红。由于温度较高的血液灌注使皮温增高，<span class="answer-text">热感受器</span>将信息传入中枢而使病人有酷热感产生。高热时水分经皮肤蒸发较多，因而，皮肤和口唇干燥。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>22.. B <strong>发热三个时相——体温下降期</strong><br>机体的体温开始回降。这与病因的消除，致热原的作用逐渐减弱或消失，以致体温调节中枢的调定点逐渐恢复至正常水平有关。特点：<span class="blur-text">皮肤血管舒张</span>、<span class="blur-text">出汗</span>。由于血液温度高于调定点的温度阈值，故<span class="blur-text">热敏神经原</span>的放电增强，使散热增加；<span class="blur-text">冷敏神经原</span>活动受抑制而产热减少；机体散热大于产热，体温下降至与恢复正常的调定点相适宜。</td>
+                            <td>22.. B <strong>发热三个时相——体温下降期</strong><br>机体的体温开始回降。这与病因的消除，致热原的作用逐渐减弱或消失，以致体温调节中枢的调定点逐渐恢复至正常水平有关。特点：<span class="answer-text">皮肤血管舒张</span>、<span class="answer-text">出汗</span>。由于血液温度高于调定点的温度阈值，故<span class="answer-text">热敏神经原</span>的放电增强，使散热增加；<span class="answer-text">冷敏神经原</span>活动受抑制而产热减少；机体散热大于产热，体温下降至与恢复正常的调定点相适宜。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>23.. A <strong>交感-肾上腺髓质系统兴奋的影响</strong><br>①中枢效应：释放大量<span class="blur-text">去甲肾上腺素</span>，引起兴奋、警觉、紧张、焦虑等情绪反应；②外周效应：主要表现为血浆中<span class="blur-text">肾上腺素</span>、<span class="blur-text">去甲肾上腺素</span>及<span class="blur-text">多巴胺</span>等儿茶酚胺浓度的迅速升高；③与HPA系统的联系：释放的去甲肾上腺素刺激下丘脑<span class="blur-text">室旁核</span>神经元使<span class="blur-text">CRH</span>释放增多，启动HPA的活化。</td>
+                            <td>23.. A <strong>交感-肾上腺髓质系统兴奋的影响</strong><br>①中枢效应：释放大量<span class="answer-text">去甲肾上腺素</span>，引起兴奋、警觉、紧张、焦虑等情绪反应；②外周效应：主要表现为血浆中<span class="answer-text">肾上腺素</span>、<span class="answer-text">去甲肾上腺素</span>及<span class="answer-text">多巴胺</span>等儿茶酚胺浓度的迅速升高；③与HPA系统的联系：释放的去甲肾上腺素刺激下丘脑<span class="answer-text">室旁核</span>神经元使<span class="answer-text">CRH</span>释放增多，启动HPA的活化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>23.. B <strong>交感-肾上腺髓质系统兴奋的适应代偿意义</strong><br>①对中枢：刺激中枢神经系统的<span class="blur-text">兴奋</span>和<span class="blur-text">警觉</span>；②对心血管：心脏兴奋作用，外周阻力增加、血管收缩，可使应激时组织血液供应增加，还使血液<span class="blur-text">重新分布</span>，是组织供血更加充分、合理；③对呼吸：<span class="blur-text">支气管扩张</span>，肺泡通气量增加，以提供更多的氧；④对代谢：促进<span class="blur-text">胰高血糖素</span>的分泌和抑制<span class="blur-text">胰岛素</span>的分泌，促进糖原和脂肪分解、糖异生增强，增加能量供应；⑤对其他激素：促进<span class="blur-text">肾素</span>、<span class="blur-text">甲状腺素</span>等激素的分泌。</td>
+                            <td>23.. B <strong>交感-肾上腺髓质系统兴奋的适应代偿意义</strong><br>①对中枢：刺激中枢神经系统的<span class="answer-text">兴奋</span>和<span class="answer-text">警觉</span>；②对心血管：心脏兴奋作用，外周阻力增加、血管收缩，可使应激时组织血液供应增加，还使血液<span class="answer-text">重新分布</span>，是组织供血更加充分、合理；③对呼吸：<span class="answer-text">支气管扩张</span>，肺泡通气量增加，以提供更多的氧；④对代谢：促进<span class="answer-text">胰高血糖素</span>的分泌和抑制<span class="answer-text">胰岛素</span>的分泌，促进糖原和脂肪分解、糖异生增强，增加能量供应；⑤对其他激素：促进<span class="answer-text">肾素</span>、<span class="answer-text">甲状腺素</span>等激素的分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>23.. C <strong>交感-肾上腺髓质系统兴奋的不利影响</strong><br>①紧张、焦虑等情绪反应以及行为改变；②腹腔内小血管的持续收缩，导致组织缺血、缺氧，可诱发<span class="blur-text">应激性溃疡</span>；③外周小血管长期收缩可使血压升高，可发生<span class="blur-text">应激性高血压</span>；④血小板数目增多及黏附聚集性增强，从而增加血液黏度，促进<span class="blur-text">血栓形成</span>；⑤心率增快，心肌耗氧量增加，导致<span class="blur-text">心肌缺血</span>。</td>
+                            <td>23.. C <strong>交感-肾上腺髓质系统兴奋的不利影响</strong><br>①紧张、焦虑等情绪反应以及行为改变；②腹腔内小血管的持续收缩，导致组织缺血、缺氧，可诱发<span class="answer-text">应激性溃疡</span>；③外周小血管长期收缩可使血压升高，可发生<span class="answer-text">应激性高血压</span>；④血小板数目增多及黏附聚集性增强，从而增加血液黏度，促进<span class="answer-text">血栓形成</span>；⑤心率增快，心肌耗氧量增加，导致<span class="answer-text">心肌缺血</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>24.. A <strong>GAS（全身适应综合征）定义及分期</strong><br>GAS即<span class="blur-text">全身适应综合征</span>的英文缩写，指应激原持续作用于机体，应激则表现为一个动态的连续过程，并最终导致<span class="blur-text">内环境紊乱</span>。GAS可分为三期：①<span class="blur-text">警觉期</span>：该期特点为<span class="blur-text">交感-肾上腺髓质系统</span>兴奋为主并伴有<span class="blur-text">肾上腺皮质激素</span>的增多，机体防御机制加速动员，机体处于"应战状态"，持续时间短。</td>
+                            <td>24.. A <strong>GAS（全身适应综合征）定义及分期</strong><br>GAS即<span class="answer-text">全身适应综合征</span>的英文缩写，指应激原持续作用于机体，应激则表现为一个动态的连续过程，并最终导致<span class="answer-text">内环境紊乱</span>。GAS可分为三期：①<span class="answer-text">警觉期</span>：该期特点为<span class="answer-text">交感-肾上腺髓质系统</span>兴奋为主并伴有<span class="answer-text">肾上腺皮质激素</span>的增多，机体防御机制加速动员，机体处于"应战状态"，持续时间短。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>24.. B <strong>GAS分期——抵抗期和衰竭期</strong><br>②<span class="blur-text">抵抗期</span>：交感-肾上腺髓质系统兴奋逐渐减弱，<span class="blur-text">肾上腺皮质</span>开始肥大，<span class="blur-text">GC</span>分泌进一步增多，主导本期机体的抗损伤作用，但免疫系统开始受到抑制；③<span class="blur-text">衰竭期</span>：因持续强烈的应激原作用，机体能量储备及防御机制大量消耗，虽然GC仍然很高，但其<span class="blur-text">受体数量</span>和<span class="blur-text">亲和力</span>均下降，内环境失调，出现器官衰竭。</td>
+                            <td>24.. B <strong>GAS分期——抵抗期和衰竭期</strong><br>②<span class="answer-text">抵抗期</span>：交感-肾上腺髓质系统兴奋逐渐减弱，<span class="answer-text">肾上腺皮质</span>开始肥大，<span class="answer-text">GC</span>分泌进一步增多，主导本期机体的抗损伤作用，但免疫系统开始受到抑制；③<span class="answer-text">衰竭期</span>：因持续强烈的应激原作用，机体能量储备及防御机制大量消耗，虽然GC仍然很高，但其<span class="answer-text">受体数量</span>和<span class="answer-text">亲和力</span>均下降，内环境失调，出现器官衰竭。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>25.. A <strong>应激时糖皮质激素增多的生理意义</strong><br>①保证主要器官的能量供应：促进蛋白质的<span class="blur-text">糖异生</span>，升高血糖；②GC的<span class="blur-text">允许作用</span>：维持心血管系统对儿茶酚胺的正常反应性；③<span class="blur-text">稳定溶酶体膜</span>，减轻组织损伤；④强大的<span class="blur-text">抗炎作用</span>：抑制许多炎症介质、细胞因子的生成、释放和激活。</td>
+                            <td>25.. A <strong>应激时糖皮质激素增多的生理意义</strong><br>①保证主要器官的能量供应：促进蛋白质的<span class="answer-text">糖异生</span>，升高血糖；②GC的<span class="answer-text">允许作用</span>：维持心血管系统对儿茶酚胺的正常反应性；③<span class="answer-text">稳定溶酶体膜</span>，减轻组织损伤；④强大的<span class="answer-text">抗炎作用</span>：抑制许多炎症介质、细胞因子的生成、释放和激活。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>25.. B <strong>应激时糖皮质激素增多的病理意义</strong><br>①抑制免疫系统：易并发<span class="blur-text">感染</span>；②抑制生长发育：<span class="blur-text">发育迟缓</span>、伤口愈合不良；③抑制性腺轴：性功能减退、<span class="blur-text">月经不调</span>、哺乳期泌乳减少；④抑制甲状腺轴：抑制<span class="blur-text">促甲状腺激素释放激素</span>及甲状腺激素的分泌，影响甲状腺功能；⑤行为改变：<span class="blur-text">抑郁</span>、异食癖及自杀倾向。</td>
+                            <td>25.. B <strong>应激时糖皮质激素增多的病理意义</strong><br>①抑制免疫系统：易并发<span class="answer-text">感染</span>；②抑制生长发育：<span class="answer-text">发育迟缓</span>、伤口愈合不良；③抑制性腺轴：性功能减退、<span class="answer-text">月经不调</span>、哺乳期泌乳减少；④抑制甲状腺轴：抑制<span class="answer-text">促甲状腺激素释放激素</span>及甲状腺激素的分泌，影响甲状腺功能；⑤行为改变：<span class="answer-text">抑郁</span>、异食癖及自杀倾向。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>26.. A <strong>急性期反应蛋白定义及主要功能</strong><br>急性期反应蛋白是感染、炎症、组织损伤等原因引起应激时，血浆中浓度迅速变化的一些蛋白质，主要分为<span class="blur-text">正急性期反应蛋白</span>和<span class="blur-text">负急性期反应蛋白</span>。总的功能是一种快速启动的<span class="blur-text">机体防御机制</span>。</td>
+                            <td>26.. A <strong>急性期反应蛋白定义及主要功能</strong><br>急性期反应蛋白是感染、炎症、组织损伤等原因引起应激时，血浆中浓度迅速变化的一些蛋白质，主要分为<span class="answer-text">正急性期反应蛋白</span>和<span class="answer-text">负急性期反应蛋白</span>。总的功能是一种快速启动的<span class="answer-text">机体防御机制</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>26.. B <strong>急性期反应蛋白的主要功能</strong><br>具体表现在：①<span class="blur-text">抑制蛋白酶</span>的作用；②<span class="blur-text">清除异物</span>和坏死组织；③<span class="blur-text">抗感染</span>、抗损伤；④<span class="blur-text">结合</span>、<span class="blur-text">运输</span>的功能。</td>
+                            <td>26.. B <strong>急性期反应蛋白的主要功能</strong><br>具体表现在：①<span class="answer-text">抑制蛋白酶</span>的作用；②<span class="answer-text">清除异物</span>和坏死组织；③<span class="answer-text">抗感染</span>、抗损伤；④<span class="answer-text">结合</span>、<span class="answer-text">运输</span>的功能。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>27.. A <strong>应激性溃疡的发病机制</strong><br>①<span class="blur-text">胃黏膜缺血</span>：这是应激性溃疡形成的基本条件。应激时，交感-肾上腺髓质系统兴奋，使胃和十二指肠黏膜的小血管收缩，黏膜的血液灌注量显著减少，导致黏膜缺血缺氧。黏膜的缺血使黏膜上皮细胞能量不足，不能产生足够的<span class="blur-text">碳酸氢盐</span>和<span class="blur-text">黏液</span>，使胃黏膜屏障遭到破坏。</td>
+                            <td>27.. A <strong>应激性溃疡的发病机制</strong><br>①<span class="answer-text">胃黏膜缺血</span>：这是应激性溃疡形成的基本条件。应激时，交感-肾上腺髓质系统兴奋，使胃和十二指肠黏膜的小血管收缩，黏膜的血液灌注量显著减少，导致黏膜缺血缺氧。黏膜的缺血使黏膜上皮细胞能量不足，不能产生足够的<span class="answer-text">碳酸氢盐</span>和<span class="answer-text">黏液</span>，使胃黏膜屏障遭到破坏。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>27.. B <strong>应激性溃疡的发病机制（续）</strong><br>②<span class="blur-text">H+反向弥散</span>：胃黏膜屏障遭到破坏，胃腔内的H+就顺着浓度差进入黏膜；同时，由于黏膜缺血，不能将侵入黏膜的H+及时经血流带走，因而H+就在黏膜内积聚；③<span class="blur-text">糖皮质激素</span>分泌增多：使蛋白质合成大于分解，胃上皮细胞更新减慢而再生能力降低；④<span class="blur-text">胆汁逆流</span>：严重应激特别是伴有休克时，存在十二指肠至胃的反流加强。</td>
+                            <td>27.. B <strong>应激性溃疡的发病机制（续）</strong><br>②<span class="answer-text">H+反向弥散</span>：胃黏膜屏障遭到破坏，胃腔内的H+就顺着浓度差进入黏膜；同时，由于黏膜缺血，不能将侵入黏膜的H+及时经血流带走，因而H+就在黏膜内积聚；③<span class="answer-text">糖皮质激素</span>分泌增多：使蛋白质合成大于分解，胃上皮细胞更新减慢而再生能力降低；④<span class="answer-text">胆汁逆流</span>：严重应激特别是伴有休克时，存在十二指肠至胃的反流加强。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>27.. C <strong>应激性溃疡的发病机制（续二）</strong><br>⑤胃黏膜合成的<span class="blur-text">前列腺素</span>减少：前列腺素具有保护胃黏膜上皮细胞的作用。</td>
+                            <td>27.. C <strong>应激性溃疡的发病机制（续二）</strong><br>⑤胃黏膜合成的<span class="answer-text">前列腺素</span>减少：前列腺素具有保护胃黏膜上皮细胞的作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>28.. A <strong>缺血-再灌注损伤的发生机制——自由基</strong><br>①<span class="blur-text">自由基</span>的损伤作用：自由基增多的机制包括<span class="blur-text">黄嘌呤氧化酶</span>形成增多；<span class="blur-text">中性粒细胞</span>聚集及激活；<span class="blur-text">线粒体膜</span>损伤；<span class="blur-text">儿茶酚胺</span>自氧化增加。</td>
+                            <td>28.. A <strong>缺血-再灌注损伤的发生机制——自由基</strong><br>①<span class="answer-text">自由基</span>的损伤作用：自由基增多的机制包括<span class="answer-text">黄嘌呤氧化酶</span>形成增多；<span class="answer-text">中性粒细胞</span>聚集及激活；<span class="answer-text">线粒体膜</span>损伤；<span class="answer-text">儿茶酚胺</span>自氧化增加。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>28.. B <strong>自由基的损伤机制</strong><br>自由基的损伤机制：①<span class="blur-text">膜性结构</span>受损；②<span class="blur-text">蛋白质功能</span>受损；③<span class="blur-text">核酸及染色体</span>受损。</td>
+                            <td>28.. B <strong>自由基的损伤机制</strong><br>自由基的损伤机制：①<span class="answer-text">膜性结构</span>受损；②<span class="answer-text">蛋白质功能</span>受损；③<span class="answer-text">核酸及染色体</span>受损。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>28.. C <strong>缺血-再灌注损伤的发生机制——钙超载</strong><br>②<span class="blur-text">钙超载</span>的损伤作用：钙超载的发生机制包括<span class="blur-text">Na+-Ca2+交换</span>反向激活；<span class="blur-text">儿茶酚胺</span>释放增加；<span class="blur-text">生物膜</span>损伤。</td>
+                            <td>28.. C <strong>缺血-再灌注损伤的发生机制——钙超载</strong><br>②<span class="answer-text">钙超载</span>的损伤作用：钙超载的发生机制包括<span class="answer-text">Na+-Ca2+交换</span>反向激活；<span class="answer-text">儿茶酚胺</span>释放增加；<span class="answer-text">生物膜</span>损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>28.. D <strong>钙超载导致细胞损伤的机制</strong><br>钙超载导致细胞损伤的机制：①<span class="blur-text">细胞膜</span>损伤；②<span class="blur-text">线粒体</span>损伤；③<span class="blur-text">蛋白酶</span>激活；④加重<span class="blur-text">酸中毒</span>；⑤<span class="blur-text">心肌功能</span>异常。</td>
+                            <td>28.. D <strong>钙超载导致细胞损伤的机制</strong><br>钙超载导致细胞损伤的机制：①<span class="answer-text">细胞膜</span>损伤；②<span class="answer-text">线粒体</span>损伤；③<span class="answer-text">蛋白酶</span>激活；④加重<span class="answer-text">酸中毒</span>；⑤<span class="answer-text">心肌功能</span>异常。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>28.. E <strong>缺血-再灌注损伤的发生机制——白细胞</strong><br>③<span class="blur-text">白细胞</span>的损伤作用：缺血-再灌注时，缺血区<span class="blur-text">黏附分子</span>和<span class="blur-text">趋化因子</span>增多，使得白细胞向缺血区募集。白细胞介导缺血-再灌注损伤的机制：激活的中性粒细胞可释放<span class="blur-text">自由基</span>、<span class="blur-text">蛋白酶</span>、<span class="blur-text">溶酶体酶</span>等大量损伤性的致炎物质，造成周围组织细胞损伤。</td>
+                            <td>28.. E <strong>缺血-再灌注损伤的发生机制——白细胞</strong><br>③<span class="answer-text">白细胞</span>的损伤作用：缺血-再灌注时，缺血区<span class="answer-text">黏附分子</span>和<span class="answer-text">趋化因子</span>增多，使得白细胞向缺血区募集。白细胞介导缺血-再灌注损伤的机制：激活的中性粒细胞可释放<span class="answer-text">自由基</span>、<span class="answer-text">蛋白酶</span>、<span class="answer-text">溶酶体酶</span>等大量损伤性的致炎物质，造成周围组织细胞损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>28.. F <strong>白细胞损伤机制（续）</strong><br>还可引起<span class="blur-text">血管通透性</span>增加、血液黏滞度增加；引起血管收缩、内皮肿胀，使得血管内径变小；导致<span class="blur-text">微血栓形成</span>，阻塞血管；黏附贴壁于内皮细胞，直接堵塞血流通道。这些病变可导致再灌注时血流受阻，形成"<span class="blur-text">无复流现象</span>"。</td>
+                            <td>28.. F <strong>白细胞损伤机制（续）</strong><br>还可引起<span class="answer-text">血管通透性</span>增加、血液黏滞度增加；引起血管收缩、内皮肿胀，使得血管内径变小；导致<span class="answer-text">微血栓形成</span>，阻塞血管；黏附贴壁于内皮细胞，直接堵塞血流通道。这些病变可导致再灌注时血流受阻，形成"<span class="answer-text">无复流现象</span>"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>29.. A <strong>自由基造成机体损伤的机制</strong><br>①<span class="blur-text">膜性结构</span>受损：自由基攻击细胞导致破坏膜的正常结构，可引起细胞膜的通透性增加、细胞内外离子分布异常、<span class="blur-text">溶酶体</span>稳定性降低等损伤反应。还可促进<span class="blur-text">前列腺素</span>和<span class="blur-text">白三烯</span>等生物活性分子的产生及补体系统的激活，可募集和活化白细胞而加重损伤。</td>
+                            <td>29.. A <strong>自由基造成机体损伤的机制</strong><br>①<span class="answer-text">膜性结构</span>受损：自由基攻击细胞导致破坏膜的正常结构，可引起细胞膜的通透性增加、细胞内外离子分布异常、<span class="answer-text">溶酶体</span>稳定性降低等损伤反应。还可促进<span class="answer-text">前列腺素</span>和<span class="answer-text">白三烯</span>等生物活性分子的产生及补体系统的激活，可募集和活化白细胞而加重损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>29.. B <strong>自由基造成机体损伤的机制（续）</strong><br>②<span class="blur-text">蛋白质功能</span>受损：导致蛋白和酶的<span class="blur-text">巯基氧化</span>、氨基酸残基氧化、胞浆及膜蛋白交联形成等直接作用，还可导致<span class="blur-text">钙泵</span>等的功能间接受损；③<span class="blur-text">核酸及染色体</span>受损：<span class="blur-text">羟自由基</span>易攻击脱氧核糖核酸及碱基，导致碱基改变、<span class="blur-text">DNA断裂</span>、<span class="blur-text">染色体畸变</span>等损伤反应。</td>
+                            <td>29.. B <strong>自由基造成机体损伤的机制（续）</strong><br>②<span class="answer-text">蛋白质功能</span>受损：导致蛋白和酶的<span class="answer-text">巯基氧化</span>、氨基酸残基氧化、胞浆及膜蛋白交联形成等直接作用，还可导致<span class="answer-text">钙泵</span>等的功能间接受损；③<span class="answer-text">核酸及染色体</span>受损：<span class="answer-text">羟自由基</span>易攻击脱氧核糖核酸及碱基，导致碱基改变、<span class="answer-text">DNA断裂</span>、<span class="answer-text">染色体畸变</span>等损伤反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>30.. A <strong>钙超载的发生机制</strong><br>①<span class="blur-text">Na+-Ca2+交换</span>反向激活：Na+/Ca2+交换蛋白被反向激活，胞质内的钠被排出胞外而细胞外的钙进入胞质，引起钙超载。缺血缺氧时<span class="blur-text">氢钠交换</span>增加，且ATP减少，<span class="blur-text">钠泵</span>活性降低，导致胞内高钠，反向激活Na+/Ca2+交换蛋白；②<span class="blur-text">儿茶酚胺</span>释放增加：组织缺血缺氧等应激状态下，交感-肾上腺髓质系统兴奋，儿茶酚胺释放增加，促进胞外钙内流引起钙超载。</td>
+                            <td>30.. A <strong>钙超载的发生机制</strong><br>①<span class="answer-text">Na+-Ca2+交换</span>反向激活：Na+/Ca2+交换蛋白被反向激活，胞质内的钠被排出胞外而细胞外的钙进入胞质，引起钙超载。缺血缺氧时<span class="answer-text">氢钠交换</span>增加，且ATP减少，<span class="answer-text">钠泵</span>活性降低，导致胞内高钠，反向激活Na+/Ca2+交换蛋白；②<span class="answer-text">儿茶酚胺</span>释放增加：组织缺血缺氧等应激状态下，交感-肾上腺髓质系统兴奋，儿茶酚胺释放增加，促进胞外钙内流引起钙超载。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>30.. B <strong>钙超载的发生机制（续）</strong><br>③<span class="blur-text">生物膜</span>损伤：缺血再灌注时，细胞膜和细胞器的膜性结构等受到破坏，一方面使细胞膜通透性增加，细胞外钙内流增强；另一方面，脂质微环境的破坏也导致<span class="blur-text">钙泵</span>功能障碍，使胞内钙外流减少。</td>
+                            <td>30.. B <strong>钙超载的发生机制（续）</strong><br>③<span class="answer-text">生物膜</span>损伤：缺血再灌注时，细胞膜和细胞器的膜性结构等受到破坏，一方面使细胞膜通透性增加，细胞外钙内流增强；另一方面，脂质微环境的破坏也导致<span class="answer-text">钙泵</span>功能障碍，使胞内钙外流减少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>31.. A <strong>钙超载导致细胞损伤的机制</strong><br>①<span class="blur-text">细胞膜</span>损伤：胞质内的钙增加导致<span class="blur-text">膜磷脂</span>降解，细胞膜结构受损，可增加细胞膜的通透性，进一步加重钙超载；②<span class="blur-text">线粒体</span>损伤：胞质内的钙被线粒体摄入后可干扰线粒体的<span class="blur-text">氧化磷酸化</span>，使<span class="blur-text">ATP</span>生成减少；③<span class="blur-text">蛋白酶</span>激活：胞质内的钙增加激活<span class="blur-text">钙依赖性蛋白酶</span>后，使<span class="blur-text">黄嘌呤脱氢酶</span>转变为<span class="blur-text">黄嘌呤氧化酶</span>，促进自由基的生成。还可引起结构蛋白的分解和染色体的损伤。</td>
+                            <td>31.. A <strong>钙超载导致细胞损伤的机制</strong><br>①<span class="answer-text">细胞膜</span>损伤：胞质内的钙增加导致<span class="answer-text">膜磷脂</span>降解，细胞膜结构受损，可增加细胞膜的通透性，进一步加重钙超载；②<span class="answer-text">线粒体</span>损伤：胞质内的钙被线粒体摄入后可干扰线粒体的<span class="answer-text">氧化磷酸化</span>，使<span class="answer-text">ATP</span>生成减少；③<span class="answer-text">蛋白酶</span>激活：胞质内的钙增加激活<span class="answer-text">钙依赖性蛋白酶</span>后，使<span class="answer-text">黄嘌呤脱氢酶</span>转变为<span class="answer-text">黄嘌呤氧化酶</span>，促进自由基的生成。还可引起结构蛋白的分解和染色体的损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>31.. B <strong>钙超载导致细胞损伤的机制（续）</strong><br>④加重<span class="blur-text">酸中毒</span>：胞质内的钙可激活某些<span class="blur-text">ATP酶</span>，导致ATP分解加强；⑤<span class="blur-text">心肌功能</span>异常：心肌细胞内的钙增高可引起<span class="blur-text">心肌纤维过度收缩</span>，引起<span class="blur-text">再灌注性心律失常</span>。</td>
+                            <td>31.. B <strong>钙超载导致细胞损伤的机制（续）</strong><br>④加重<span class="answer-text">酸中毒</span>：胞质内的钙可激活某些<span class="answer-text">ATP酶</span>，导致ATP分解加强；⑤<span class="answer-text">心肌功能</span>异常：心肌细胞内的钙增高可引起<span class="answer-text">心肌纤维过度收缩</span>，引起<span class="answer-text">再灌注性心律失常</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

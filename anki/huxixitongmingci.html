@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">呼吸系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>克拉拉细胞</strong><br>形态：呈<span class="blur-text">高柱状</span>，游离面略高于纤毛细胞，呈<span class="blur-text">圆顶状</span>凸向管腔，有少许微绒毛<br>结构：顶部胞质内可见丰富的<span class="blur-text">滑面内质网</span>和<span class="blur-text">分泌颗粒</span><br>功能：分泌物含有<span class="blur-text">蛋白水解酶</span>，可分解管腔中的黏液，降低分泌物的黏稠度，利于排除<br>分布：主要分布在<span class="blur-text">终末细支气管</span>和<span class="blur-text">呼吸细支气管</span>上皮，气管和支气管也有少量分布</td>
+                            <td>1.. <strong>克拉拉细胞</strong><br>形态：呈<span class="answer-text">高柱状</span>，游离面略高于纤毛细胞，呈<span class="answer-text">圆顶状</span>凸向管腔，有少许微绒毛<br>结构：顶部胞质内可见丰富的<span class="answer-text">滑面内质网</span>和<span class="answer-text">分泌颗粒</span><br>功能：分泌物含有<span class="answer-text">蛋白水解酶</span>，可分解管腔中的黏液，降低分泌物的黏稠度，利于排除<br>分布：主要分布在<span class="answer-text">终末细支气管</span>和<span class="answer-text">呼吸细支气管</span>上皮，气管和支气管也有少量分布</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>Ⅰ型肺泡细胞</strong><br>别称：又称<span class="blur-text">扁平肺泡细胞</span><br>形态：细胞<span class="blur-text">扁平</span>，覆盖肺泡约<span class="blur-text">95%</span>的表面积，细胞结构简单，核小致密，细胞器少<br>功能：参与构成<span class="blur-text">气血屏障</span>，是进行<span class="blur-text">气体交换</span>的部位<br>特点：<span class="blur-text">无分裂增殖</span>能力</td>
+                            <td>2.. <strong>Ⅰ型肺泡细胞</strong><br>别称：又称<span class="answer-text">扁平肺泡细胞</span><br>形态：细胞<span class="answer-text">扁平</span>，覆盖肺泡约<span class="answer-text">95%</span>的表面积，细胞结构简单，核小致密，细胞器少<br>功能：参与构成<span class="answer-text">气血屏障</span>，是进行<span class="answer-text">气体交换</span>的部位<br>特点：<span class="answer-text">无分裂增殖</span>能力</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>Ⅱ型肺泡细胞</strong><br>别称：又称<span class="blur-text">颗粒肺泡细胞</span><br>分布：散在分布在<span class="blur-text">Ⅰ型肺泡细胞</span>之间，数量比Ⅰ型多，但体积小，仅覆盖肺泡<span class="blur-text">5%</span>的表面积<br>形态：呈<span class="blur-text">立方形</span>或<span class="blur-text">圆形</span>，细胞器丰富<br>功能：可分泌<span class="blur-text">表面活性物质</span>，有<span class="blur-text">分裂</span>、<span class="blur-text">增值</span>并<span class="blur-text">分化为Ⅰ型肺泡细胞</span>的潜能</td>
+                            <td>3.. <strong>Ⅱ型肺泡细胞</strong><br>别称：又称<span class="answer-text">颗粒肺泡细胞</span><br>分布：散在分布在<span class="answer-text">Ⅰ型肺泡细胞</span>之间，数量比Ⅰ型多，但体积小，仅覆盖肺泡<span class="answer-text">5%</span>的表面积<br>形态：呈<span class="answer-text">立方形</span>或<span class="answer-text">圆形</span>，细胞器丰富<br>功能：可分泌<span class="answer-text">表面活性物质</span>，有<span class="answer-text">分裂</span>、<span class="answer-text">增值</span>并<span class="answer-text">分化为Ⅰ型肺泡细胞</span>的潜能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>气血屏障/呼吸膜</strong><br>定义：肺泡腔内的<span class="blur-text">O2</span>与肺泡隔毛细血管内血液中的<span class="blur-text">CO2</span>之间进行气体交换所通过的结构<br>构成（从内向外）：依次由<span class="blur-text">肺泡表面液体层</span>、<span class="blur-text">Ⅰ型肺泡细胞</span>及其<span class="blur-text">基膜</span>、<span class="blur-text">薄层结缔组织</span>、<span class="blur-text">毛细血管基膜</span>与<span class="blur-text">连续毛细血管内皮</span>构成</td>
+                            <td>4.. <strong>气血屏障/呼吸膜</strong><br>定义：肺泡腔内的<span class="answer-text">O2</span>与肺泡隔毛细血管内血液中的<span class="answer-text">CO2</span>之间进行气体交换所通过的结构<br>构成（从内向外）：依次由<span class="answer-text">肺泡表面液体层</span>、<span class="answer-text">Ⅰ型肺泡细胞</span>及其<span class="answer-text">基膜</span>、<span class="answer-text">薄层结缔组织</span>、<span class="answer-text">毛细血管基膜</span>与<span class="answer-text">连续毛细血管内皮</span>构成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>喉气管憩室/呼吸憩室</strong><br>形成：<span class="blur-text">喉气管沟</span>逐渐加深并从尾端至头端逐步融合，形成一长管状盲囊<br>别称：称<span class="blur-text">喉气管憩室</span>，也称<span class="blur-text">呼吸憩室</span><br>意义：此是<span class="blur-text">喉</span>、<span class="blur-text">气管</span>、<span class="blur-text">支气管</span>和<span class="blur-text">肺</span>的原基</td>
+                            <td>5.. <strong>喉气管憩室/呼吸憩室</strong><br>形成：<span class="answer-text">喉气管沟</span>逐渐加深并从尾端至头端逐步融合，形成一长管状盲囊<br>别称：称<span class="answer-text">喉气管憩室</span>，也称<span class="answer-text">呼吸憩室</span><br>意义：此是<span class="answer-text">喉</span>、<span class="answer-text">气管</span>、<span class="answer-text">支气管</span>和<span class="answer-text">肺</span>的原基</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>肺活量(VC)</strong><br>定义：指一次<span class="blur-text">最大吸气</span>后，再尽<span class="blur-text">最大能力</span>所呼出的气体量<br>意义：代表肺一次最大的<span class="blur-text">功能活动量</span>，是反映人体<span class="blur-text">生长发育水平</span>的重要功能指标之一</td>
+                            <td>6.. <strong>肺活量(VC)</strong><br>定义：指一次<span class="answer-text">最大吸气</span>后，再尽<span class="answer-text">最大能力</span>所呼出的气体量<br>意义：代表肺一次最大的<span class="answer-text">功能活动量</span>，是反映人体<span class="answer-text">生长发育水平</span>的重要功能指标之一</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>肺性脑病</strong><br>定义：是由于<span class="blur-text">慢性肺、胸廓疾病</span>伴有<span class="blur-text">呼吸功能衰竭</span>，出现<span class="blur-text">缺氧</span>、<span class="blur-text">二氧化碳潴留</span>而引起<span class="blur-text">精神障碍</span>、<span class="blur-text">神经系统症状</span>的一种综合征<br>意义：是<span class="blur-text">慢性肺心病</span>死亡的首要原因</td>
+                            <td>7.. <strong>肺性脑病</strong><br>定义：是由于<span class="answer-text">慢性肺、胸廓疾病</span>伴有<span class="answer-text">呼吸功能衰竭</span>，出现<span class="answer-text">缺氧</span>、<span class="answer-text">二氧化碳潴留</span>而引起<span class="answer-text">精神障碍</span>、<span class="answer-text">神经系统症状</span>的一种综合征<br>意义：是<span class="answer-text">慢性肺心病</span>死亡的首要原因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>慢性脓胸</strong><br>定义：胸膜腔受<span class="blur-text">致病菌</span>感染、产生<span class="blur-text">脓性渗出液</span>积聚于胸膜腔内，称为脓胸<br>病程：病程超过<span class="blur-text">6周</span>称慢性脓胸</td>
+                            <td>8.. <strong>慢性脓胸</strong><br>定义：胸膜腔受<span class="answer-text">致病菌</span>感染、产生<span class="answer-text">脓性渗出液</span>积聚于胸膜腔内，称为脓胸<br>病程：病程超过<span class="answer-text">6周</span>称慢性脓胸</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>肺牵张反射</strong><br>定义：由<span class="blur-text">肺扩张</span>和<span class="blur-text">肺萎陷</span>引起的<span class="blur-text">吸气抑制</span>或<span class="blur-text">吸气兴奋</span>的反射<br>神经：由<span class="blur-text">迷走神经</span>参与<br>组成：包括<span class="blur-text">肺扩张反射</span>和<span class="blur-text">肺萎陷反射</span><br>生理意义：前者在于加速<span class="blur-text">吸气过程向呼气过程转换</span>，使呼吸频率增加；后者在于防止<span class="blur-text">过深的吸气</span>以及在肺不张等情况下可能起一定作用</td>
+                            <td>9.. <strong>肺牵张反射</strong><br>定义：由<span class="answer-text">肺扩张</span>和<span class="answer-text">肺萎陷</span>引起的<span class="answer-text">吸气抑制</span>或<span class="answer-text">吸气兴奋</span>的反射<br>神经：由<span class="answer-text">迷走神经</span>参与<br>组成：包括<span class="answer-text">肺扩张反射</span>和<span class="answer-text">肺萎陷反射</span><br>生理意义：前者在于加速<span class="answer-text">吸气过程向呼气过程转换</span>，使呼吸频率增加；后者在于防止<span class="answer-text">过深的吸气</span>以及在肺不张等情况下可能起一定作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>肺栓塞(PE)</strong><br>定义：以各种<span class="blur-text">栓子</span>阻塞<span class="blur-text">肺动脉系统</span>为其发病原因的一组疾病或临床综合征的总称<br>包括：包括<span class="blur-text">肺血栓栓塞症</span>、<span class="blur-text">脂肪栓塞综合征</span>、<span class="blur-text">羊水栓塞</span>及<span class="blur-text">空气栓塞</span>等</td>
+                            <td>10.. <strong>肺栓塞(PE)</strong><br>定义：以各种<span class="answer-text">栓子</span>阻塞<span class="answer-text">肺动脉系统</span>为其发病原因的一组疾病或临床综合征的总称<br>包括：包括<span class="answer-text">肺血栓栓塞症</span>、<span class="answer-text">脂肪栓塞综合征</span>、<span class="answer-text">羊水栓塞</span>及<span class="answer-text">空气栓塞</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>倒S征</strong><br>定义：<span class="blur-text">右上肺中央型肺癌</span>引起<span class="blur-text">右上叶肺不张</span>时，肺叶体积缩小并向上移位，其凹面向下的下缘与肺门区肿块下凸的下缘相连，形成<span class="blur-text">倒置的s状</span><br>意义：是<span class="blur-text">右肺上叶中央型肺癌</span>典型的征象</td>
+                            <td>11.. <strong>倒S征</strong><br>定义：<span class="answer-text">右上肺中央型肺癌</span>引起<span class="answer-text">右上叶肺不张</span>时，肺叶体积缩小并向上移位，其凹面向下的下缘与肺门区肿块下凸的下缘相连，形成<span class="answer-text">倒置的s状</span><br>意义：是<span class="answer-text">右肺上叶中央型肺癌</span>典型的征象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>间停呼吸</strong><br>别称：又称<span class="blur-text">比奥呼吸</span><br>表现：表现为有规律呼吸几次后，<span class="blur-text">突然间停</span>一段时间，又开始呼吸，即<span class="blur-text">周而复始的间停呼吸</span></td>
+                            <td>12.. <strong>间停呼吸</strong><br>别称：又称<span class="answer-text">比奥呼吸</span><br>表现：表现为有规律呼吸几次后，<span class="answer-text">突然间停</span>一段时间，又开始呼吸，即<span class="answer-text">周而复始的间停呼吸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>酸中毒呼吸</strong><br>别称：<span class="blur-text">kussmaul呼吸</span><br>定义：是指严重<span class="blur-text">代谢性酸中毒</span>时，病人可以出现节律匀齐、<span class="blur-text">深而大</span>的呼吸</td>
+                            <td>13.. <strong>酸中毒呼吸</strong><br>别称：<span class="answer-text">kussmaul呼吸</span><br>定义：是指严重<span class="answer-text">代谢性酸中毒</span>时，病人可以出现节律匀齐、<span class="answer-text">深而大</span>的呼吸</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>硅结节</strong><br>形成：由于<span class="blur-text">二氧化硅粉尘</span>在肺内蓄积，使大量<span class="blur-text">巨噬细胞</span>吞噬硅尘微粒，形成结节<br>演变：早期结节为<span class="blur-text">细胞性</span>，晚期结节胶原化形成<span class="blur-text">胶原性结节</span><br>肉眼：为境界清楚、直径<span class="blur-text">2~5毫米</span>、呈<span class="blur-text">圆形</span>或<span class="blur-text">椭圆形</span>，<span class="blur-text">灰白色</span>、<span class="blur-text">质硬</span>、触之有<span class="blur-text">沙砾感</span>的结节</td>
+                            <td>14.. <strong>硅结节</strong><br>形成：由于<span class="answer-text">二氧化硅粉尘</span>在肺内蓄积，使大量<span class="answer-text">巨噬细胞</span>吞噬硅尘微粒，形成结节<br>演变：早期结节为<span class="answer-text">细胞性</span>，晚期结节胶原化形成<span class="answer-text">胶原性结节</span><br>肉眼：为境界清楚、直径<span class="answer-text">2~5毫米</span>、呈<span class="answer-text">圆形</span>或<span class="answer-text">椭圆形</span>，<span class="answer-text">灰白色</span>、<span class="answer-text">质硬</span>、触之有<span class="answer-text">沙砾感</span>的结节</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>Ⅰ型呼吸衰竭</strong><br>别称：即<span class="blur-text">低氧性呼吸衰竭</span><br>血气特点：<span class="blur-text">PaO2<60mmHg</span>，<span class="blur-text">PaCO2降低或正常</span><br>病因：主要见于<span class="blur-text">肺换气功能障碍</span></td>
+                            <td>15.. <strong>Ⅰ型呼吸衰竭</strong><br>别称：即<span class="answer-text">低氧性呼吸衰竭</span><br>血气特点：<span class="answer-text">PaO2<60mmHg</span>，<span class="answer-text">PaCO2降低或正常</span><br>病因：主要见于<span class="answer-text">肺换气功能障碍</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>Ⅱ型呼吸衰竭</strong><br>别称：即<span class="blur-text">高碳酸性呼吸衰竭</span><br>血气特点：<span class="blur-text">PaO2<60mmHg</span>同时伴有<span class="blur-text">PaCO2>50mmHg</span><br>病因：由<span class="blur-text">肺泡通气不足</span>所致</td>
+                            <td>16.. <strong>Ⅱ型呼吸衰竭</strong><br>别称：即<span class="answer-text">高碳酸性呼吸衰竭</span><br>血气特点：<span class="answer-text">PaO2<60mmHg</span>同时伴有<span class="answer-text">PaCO2>50mmHg</span><br>病因：由<span class="answer-text">肺泡通气不足</span>所致</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>咯血</strong><br>定义：是指<span class="blur-text">喉及喉以下</span>的呼吸道及肺任何部位的出血，经<span class="blur-text">口腔咯出</span></td>
+                            <td>17.. <strong>咯血</strong><br>定义：是指<span class="answer-text">喉及喉以下</span>的呼吸道及肺任何部位的出血，经<span class="answer-text">口腔咯出</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>呼吸困难</strong><br>主观：病人主观感受到<span class="blur-text">空气不足</span>、<span class="blur-text">呼吸费力</span><br>客观：客观上表现为<span class="blur-text">呼吸运动用力</span>，严重时可出现<span class="blur-text">张口呼吸</span>、<span class="blur-text">鼻翼扇动</span>、<span class="blur-text">端坐呼吸</span>，甚至<span class="blur-text">发绀</span>，呼吸辅助肌参与呼吸运动，并且可有<span class="blur-text">呼吸频率</span>、<span class="blur-text">深度</span>、<span class="blur-text">节律</span>的改变</td>
+                            <td>18.. <strong>呼吸困难</strong><br>主观：病人主观感受到<span class="answer-text">空气不足</span>、<span class="answer-text">呼吸费力</span><br>客观：客观上表现为<span class="answer-text">呼吸运动用力</span>，严重时可出现<span class="answer-text">张口呼吸</span>、<span class="answer-text">鼻翼扇动</span>、<span class="answer-text">端坐呼吸</span>，甚至<span class="answer-text">发绀</span>，呼吸辅助肌参与呼吸运动，并且可有<span class="answer-text">呼吸频率</span>、<span class="answer-text">深度</span>、<span class="answer-text">节律</span>的改变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>肺肉质变</strong><br>归属：属于<span class="blur-text">大叶性肺炎</span>的并发症<br>机制：主要见于某些患者<span class="blur-text">中性粒细胞</span>渗出过少或功能缺陷，其释放的<span class="blur-text">蛋白酶</span>不足以及时溶解和消除肺泡腔内的<span class="blur-text">纤维素</span>等渗出物，被<span class="blur-text">肉芽组织</span>予以取代而发生<span class="blur-text">机化</span><br>肉眼：病变部位肺组织变成<span class="blur-text">褐色肉样纤维组织</span></td>
+                            <td>19.. <strong>肺肉质变</strong><br>归属：属于<span class="answer-text">大叶性肺炎</span>的并发症<br>机制：主要见于某些患者<span class="answer-text">中性粒细胞</span>渗出过少或功能缺陷，其释放的<span class="answer-text">蛋白酶</span>不足以及时溶解和消除肺泡腔内的<span class="answer-text">纤维素</span>等渗出物，被<span class="answer-text">肉芽组织</span>予以取代而发生<span class="answer-text">机化</span><br>肉眼：病变部位肺组织变成<span class="answer-text">褐色肉样纤维组织</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>中危肺血栓栓塞症</strong><br>定义：即<span class="blur-text">次大面积</span>的肺血栓栓塞<br>特点：<span class="blur-text">血流动力学稳定</span>，但存在<span class="blur-text">右心功能不全</span>和/或<span class="blur-text">心肌损伤</span></td>
+                            <td>20.. <strong>中危肺血栓栓塞症</strong><br>定义：即<span class="answer-text">次大面积</span>的肺血栓栓塞<br>特点：<span class="answer-text">血流动力学稳定</span>，但存在<span class="answer-text">右心功能不全</span>和/或<span class="answer-text">心肌损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>MODS</strong><br>定义：是<span class="blur-text">严重创伤</span>、<span class="blur-text">感染</span>、<span class="blur-text">大手术</span>，<span class="blur-text">心肺复苏</span>等原发病发生<span class="blur-text">24小时后</span>，同时或序贯发生<span class="blur-text">两个或两个以上脏器</span>功能障碍以致衰竭的临床综合征</td>
+                            <td>21.. <strong>MODS</strong><br>定义：是<span class="answer-text">严重创伤</span>、<span class="answer-text">感染</span>、<span class="answer-text">大手术</span>，<span class="answer-text">心肺复苏</span>等原发病发生<span class="answer-text">24小时后</span>，同时或序贯发生<span class="answer-text">两个或两个以上脏器</span>功能障碍以致衰竭的临床综合征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>ARDS</strong><br>全称：<span class="blur-text">急性呼吸窘迫综合征</span><br>定义：是指<span class="blur-text">心源性以外</span>的各种<span class="blur-text">肺内</span>、<span class="blur-text">外致病因素</span>导致的<span class="blur-text">急性弥漫性损伤</span>和<span class="blur-text">进行性</span>、<span class="blur-text">缺氧性急性呼吸衰竭</span></td>
+                            <td>22.. <strong>ARDS</strong><br>全称：<span class="answer-text">急性呼吸窘迫综合征</span><br>定义：是指<span class="answer-text">心源性以外</span>的各种<span class="answer-text">肺内</span>、<span class="answer-text">外致病因素</span>导致的<span class="answer-text">急性弥漫性损伤</span>和<span class="answer-text">进行性</span>、<span class="answer-text">缺氧性急性呼吸衰竭</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>Horner综合征(双语)</strong><br>病因：是<span class="blur-text">肺上沟瘤</span>，即<span class="blur-text">肺尖部肺癌</span>，压迫<span class="blur-text">颈交感神经</span>引起<br>表现：病侧<span class="blur-text">眼睑下垂</span>、<span class="blur-text">瞳孔缩小</span>、<span class="blur-text">眼球内陷</span>、同侧额部与胸壁<span class="blur-text">少汗或无汗</span></td>
+                            <td>23.. <strong>Horner综合征(双语)</strong><br>病因：是<span class="answer-text">肺上沟瘤</span>，即<span class="answer-text">肺尖部肺癌</span>，压迫<span class="answer-text">颈交感神经</span>引起<br>表现：病侧<span class="answer-text">眼睑下垂</span>、<span class="answer-text">瞳孔缩小</span>、<span class="answer-text">眼球内陷</span>、同侧额部与胸壁<span class="answer-text">少汗或无汗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>潮式呼吸</strong><br>定义：是一种由<span class="blur-text">浅慢</span>逐渐变为<span class="blur-text">深快</span>，然后再由<span class="blur-text">深快</span>转为<span class="blur-text">浅慢</span>，随之出现一段<span class="blur-text">呼吸暂停</span>后，又开始如上变化的<span class="blur-text">周期性呼吸</span></td>
+                            <td>24.. <strong>潮式呼吸</strong><br>定义：是一种由<span class="answer-text">浅慢</span>逐渐变为<span class="answer-text">深快</span>，然后再由<span class="answer-text">深快</span>转为<span class="answer-text">浅慢</span>，随之出现一段<span class="answer-text">呼吸暂停</span>后，又开始如上变化的<span class="answer-text">周期性呼吸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>原发综合征</strong><br>定义：是指首次因吸入而感染<span class="blur-text">结核分枝杆菌</span>时，<span class="blur-text">肺部原发病灶</span>、<span class="blur-text">引流淋巴管炎</span>和<span class="blur-text">肺门淋巴结结核</span>在X线称<span class="blur-text">哑铃状阴影</span><br>临床：临床上症状和体征多不明显</td>
+                            <td>25.. <strong>原发综合征</strong><br>定义：是指首次因吸入而感染<span class="answer-text">结核分枝杆菌</span>时，<span class="answer-text">肺部原发病灶</span>、<span class="answer-text">引流淋巴管炎</span>和<span class="answer-text">肺门淋巴结结核</span>在X线称<span class="answer-text">哑铃状阴影</span><br>临床：临床上症状和体征多不明显</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>Pneumothorax(气胸，双语)</strong><br>定义：是指由于<span class="blur-text">胸膜破裂</span>，气体进入<span class="blur-text">胸膜腔</span>，导致<span class="blur-text">胸腔积气</span>，出现骤然<span class="blur-text">胸痛</span>及<span class="blur-text">呼吸困难</span>的一种疾病</td>
+                            <td>26.. <strong>Pneumothorax(气胸，双语)</strong><br>定义：是指由于<span class="answer-text">胸膜破裂</span>，气体进入<span class="answer-text">胸膜腔</span>，导致<span class="answer-text">胸腔积气</span>，出现骤然<span class="answer-text">胸痛</span>及<span class="answer-text">呼吸困难</span>的一种疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>气道高反应性(AHR)</strong><br>定义：指气道对各种<span class="blur-text">刺激因子</span>如<span class="blur-text">变应原</span>、<span class="blur-text">理化因素</span>、<span class="blur-text">运动</span>、<span class="blur-text">药物</span>等呈现的<span class="blur-text">高度敏感状态</span><br>表现：表现为病人接触这些刺激因子时气道出现<span class="blur-text">过强</span>或<span class="blur-text">过早的收缩反应</span><br>意义：是<span class="blur-text">哮喘</span>的基本特征，可通过<span class="blur-text">支气管激发试验</span>来量化和评估</td>
+                            <td>27.. <strong>气道高反应性(AHR)</strong><br>定义：指气道对各种<span class="answer-text">刺激因子</span>如<span class="answer-text">变应原</span>、<span class="answer-text">理化因素</span>、<span class="answer-text">运动</span>、<span class="answer-text">药物</span>等呈现的<span class="answer-text">高度敏感状态</span><br>表现：表现为病人接触这些刺激因子时气道出现<span class="answer-text">过强</span>或<span class="answer-text">过早的收缩反应</span><br>意义：是<span class="answer-text">哮喘</span>的基本特征，可通过<span class="answer-text">支气管激发试验</span>来量化和评估</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>肺气肿</strong><br>定义：是<span class="blur-text">末梢肺组织</span>(<span class="blur-text">呼吸性细支气管</span>、<span class="blur-text">肺泡管</span>、<span class="blur-text">肺泡囊</span>和<span class="blur-text">肺泡</span>)因<span class="blur-text">过度充气</span>呈<span class="blur-text">持久性扩张</span>，并伴有<span class="blur-text">肺泡间隔破坏</span>，以致肺组织<span class="blur-text">弹性减弱</span>，<span class="blur-text">容积增大</span>的一种病理状态</td>
+                            <td>28.. <strong>肺气肿</strong><br>定义：是<span class="answer-text">末梢肺组织</span>(<span class="answer-text">呼吸性细支气管</span>、<span class="answer-text">肺泡管</span>、<span class="answer-text">肺泡囊</span>和<span class="answer-text">肺泡</span>)因<span class="answer-text">过度充气</span>呈<span class="answer-text">持久性扩张</span>，并伴有<span class="answer-text">肺泡间隔破坏</span>，以致肺组织<span class="answer-text">弹性减弱</span>，<span class="answer-text">容积增大</span>的一种病理状态</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>PTE</strong><br>全称：<span class="blur-text">肺血栓栓塞症</span><br>定义：是来自<span class="blur-text">静脉系统</span>或<span class="blur-text">右心</span>的血栓阻塞<span class="blur-text">肺动脉</span>或其分支所致的疾病<br>特征：以<span class="blur-text">肺循环</span>和<span class="blur-text">呼吸功能障碍</span>为其主要临床和病理生理特征<br>占比：是<span class="blur-text">肺栓塞</span>最常见的类型，占肺栓塞的绝大多数</td>
+                            <td>29.. <strong>PTE</strong><br>全称：<span class="answer-text">肺血栓栓塞症</span><br>定义：是来自<span class="answer-text">静脉系统</span>或<span class="answer-text">右心</span>的血栓阻塞<span class="answer-text">肺动脉</span>或其分支所致的疾病<br>特征：以<span class="answer-text">肺循环</span>和<span class="answer-text">呼吸功能障碍</span>为其主要临床和病理生理特征<br>占比：是<span class="answer-text">肺栓塞</span>最常见的类型，占肺栓塞的绝大多数</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>连枷胸</strong><br>定义：<span class="blur-text">多根多处肋骨骨折</span>，可使局部胸壁失去完整的<span class="blur-text">肋骨支撑</span>而软化<br>表现：出现<span class="blur-text">反常呼吸运动</span>，即吸气时软化区胸壁<span class="blur-text">内陷</span>，呼气时<span class="blur-text">外突</span></td>
+                            <td>30.. <strong>连枷胸</strong><br>定义：<span class="answer-text">多根多处肋骨骨折</span>，可使局部胸壁失去完整的<span class="answer-text">肋骨支撑</span>而软化<br>表现：出现<span class="answer-text">反常呼吸运动</span>，即吸气时软化区胸壁<span class="answer-text">内陷</span>，呼气时<span class="answer-text">外突</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>社区获得性肺炎(CAP)</strong><br>定义：是指在<span class="blur-text">医院外</span>罹患的<span class="blur-text">感染性肺实质炎症</span>，包括具有明确潜伏期的病原体感染而在入院后平均潜伏期(通常为<span class="blur-text">48小时</span>)内发病的肺炎<br>病原体：以<span class="blur-text">肺炎链球菌</span>、<span class="blur-text">流感嗜血杆菌</span>等细菌以及<span class="blur-text">支原体</span>、<span class="blur-text">衣原体</span>、<span class="blur-text">军团菌</span>等非典型病原体多见</td>
+                            <td>31.. <strong>社区获得性肺炎(CAP)</strong><br>定义：是指在<span class="answer-text">医院外</span>罹患的<span class="answer-text">感染性肺实质炎症</span>，包括具有明确潜伏期的病原体感染而在入院后平均潜伏期(通常为<span class="answer-text">48小时</span>)内发病的肺炎<br>病原体：以<span class="answer-text">肺炎链球菌</span>、<span class="answer-text">流感嗜血杆菌</span>等细菌以及<span class="answer-text">支原体</span>、<span class="answer-text">衣原体</span>、<span class="answer-text">军团菌</span>等非典型病原体多见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>卡介苗</strong><br>定义：<span class="blur-text">活的无毒力牛型结核菌疫苗</span><br>作用：接种后人体获得对<span class="blur-text">结核病</span>的<span class="blur-text">特异性免疫力</span>，可<span class="blur-text">减轻病情</span>，减少<span class="blur-text">结核性脑膜炎</span>、<span class="blur-text">粟粒性肺结核</span>发病，但<span class="blur-text">不能预防感染</span></td>
+                            <td>32.. <strong>卡介苗</strong><br>定义：<span class="answer-text">活的无毒力牛型结核菌疫苗</span><br>作用：接种后人体获得对<span class="answer-text">结核病</span>的<span class="answer-text">特异性免疫力</span>，可<span class="answer-text">减轻病情</span>，减少<span class="answer-text">结核性脑膜炎</span>、<span class="answer-text">粟粒性肺结核</span>发病，但<span class="answer-text">不能预防感染</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>Koch现象</strong><br>定义：机体对<span class="blur-text">结核分枝杆菌</span>再感染和初感染所表现出<span class="blur-text">不同反应</span>的现象</td>
+                            <td>33.. <strong>Koch现象</strong><br>定义：机体对<span class="answer-text">结核分枝杆菌</span>再感染和初感染所表现出<span class="answer-text">不同反应</span>的现象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>耐单药结核</strong><br>定义：仅对其中<span class="blur-text">一种药物</span>耐药的结核病</td>
+                            <td>34.. <strong>耐单药结核</strong><br>定义：仅对其中<span class="answer-text">一种药物</span>耐药的结核病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>耐多药结核(MDR-TB)</strong><br>定义：指同时对<span class="blur-text">异烟肼</span>和<span class="blur-text">利福平</span>耐药，但对<span class="blur-text">喹诺酮类</span>和<span class="blur-text">氨基糖苷类</span>敏感的结核</td>
+                            <td>35.. <strong>耐多药结核(MDR-TB)</strong><br>定义：指同时对<span class="answer-text">异烟肼</span>和<span class="answer-text">利福平</span>耐药，但对<span class="answer-text">喹诺酮类</span>和<span class="answer-text">氨基糖苷类</span>敏感的结核</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>广泛耐药结核</strong><br>定义：指同时对<span class="blur-text">异烟肼</span>、<span class="blur-text">利福平</span>、<span class="blur-text">喹菌酮类</span>和A组药物中其他两种药物之一耐药的结核</td>
+                            <td>36.. <strong>广泛耐药结核</strong><br>定义：指同时对<span class="answer-text">异烟肼</span>、<span class="answer-text">利福平</span>、<span class="answer-text">喹菌酮类</span>和A组药物中其他两种药物之一耐药的结核</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>医院获得性肺炎(HAP)</strong><br>定义：是指病人入院时<span class="blur-text">不存在</span>，也不处于<span class="blur-text">潜伏期</span>，而于入院后<span class="blur-text">48小时</span>后在医院内发生的肺炎<br>病原体：以<span class="blur-text">肺炎克雷伯杆菌</span>，<span class="blur-text">大肠艾希菌</span>，<span class="blur-text">鲍曼不动杆菌</span>，<span class="blur-text">铜绿假单胞菌</span>等革兰阴性菌多见，革兰阳性菌中的<span class="blur-text">金黄色葡萄球菌</span>也是较为常见的病原体</td>
+                            <td>37.. <strong>医院获得性肺炎(HAP)</strong><br>定义：是指病人入院时<span class="answer-text">不存在</span>，也不处于<span class="answer-text">潜伏期</span>，而于入院后<span class="answer-text">48小时</span>后在医院内发生的肺炎<br>病原体：以<span class="answer-text">肺炎克雷伯杆菌</span>，<span class="answer-text">大肠艾希菌</span>，<span class="answer-text">鲍曼不动杆菌</span>，<span class="answer-text">铜绿假单胞菌</span>等革兰阴性菌多见，革兰阳性菌中的<span class="answer-text">金黄色葡萄球菌</span>也是较为常见的病原体</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>间质性肺疾病(ILD)</strong><br>定义：是一组以<span class="blur-text">肺间质</span>、<span class="blur-text">肺泡壁</span>和<span class="blur-text">肺泡腔</span>具有不同形式和程度的<span class="blur-text">炎症</span>和<span class="blur-text">纤维化</span>为主要病理改变的<span class="blur-text">异质性</span>、<span class="blur-text">非肿瘤性</span>和<span class="blur-text">非感染性</span>肺部疾病的总称<br>现称：现又称为<span class="blur-text">弥漫性实质性肺疾病(DPLD)</span></td>
+                            <td>38.. <strong>间质性肺疾病(ILD)</strong><br>定义：是一组以<span class="answer-text">肺间质</span>、<span class="answer-text">肺泡壁</span>和<span class="answer-text">肺泡腔</span>具有不同形式和程度的<span class="answer-text">炎症</span>和<span class="answer-text">纤维化</span>为主要病理改变的<span class="answer-text">异质性</span>、<span class="answer-text">非肿瘤性</span>和<span class="answer-text">非感染性</span>肺部疾病的总称<br>现称：现又称为<span class="answer-text">弥漫性实质性肺疾病(DPLD)</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>上腔静脉阻塞综合征(SVC)</strong><br>病因：肿瘤直接侵犯<span class="blur-text">纵隔</span>，或转移的肿大淋巴结压迫<span class="blur-text">上腔静脉</span>，或静脉内<span class="blur-text">癌栓</span>阻塞<br>表现：引起静脉回流受阻，表现为<span class="blur-text">上肢</span>、<span class="blur-text">颈面部水肿</span>和<span class="blur-text">胸壁静脉曲张</span>。严重者皮肤呈<span class="blur-text">暗紫色</span>、<span class="blur-text">眼结膜充血</span>、<span class="blur-text">视力模糊</span>、<span class="blur-text">头晕</span>、<span class="blur-text">头痛</span></td>
+                            <td>39.. <strong>上腔静脉阻塞综合征(SVC)</strong><br>病因：肿瘤直接侵犯<span class="answer-text">纵隔</span>，或转移的肿大淋巴结压迫<span class="answer-text">上腔静脉</span>，或静脉内<span class="answer-text">癌栓</span>阻塞<br>表现：引起静脉回流受阻，表现为<span class="answer-text">上肢</span>、<span class="answer-text">颈面部水肿</span>和<span class="answer-text">胸壁静脉曲张</span>。严重者皮肤呈<span class="answer-text">暗紫色</span>、<span class="answer-text">眼结膜充血</span>、<span class="answer-text">视力模糊</span>、<span class="answer-text">头晕</span>、<span class="answer-text">头痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>副癌综合征</strong><br>定义：指<span class="blur-text">肺癌</span>非转移性的胸外表现<br>特点：可出现在肺癌发现的<span class="blur-text">前</span>、<span class="blur-text">后</span>，以<span class="blur-text">小细胞肺癌</span>多见，可以表现为<span class="blur-text">先发症状</span>或<span class="blur-text">复发的首发征象</span></td>
+                            <td>40.. <strong>副癌综合征</strong><br>定义：指<span class="answer-text">肺癌</span>非转移性的胸外表现<br>特点：可出现在肺癌发现的<span class="answer-text">前</span>、<span class="answer-text">后</span>，以<span class="answer-text">小细胞肺癌</span>多见，可以表现为<span class="answer-text">先发症状</span>或<span class="answer-text">复发的首发征象</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>肺动脉高压(PH)</strong><br>定义：是由多种<span class="blur-text">已知</span>或<span class="blur-text">未知</span>原因引起的<span class="blur-text">肺动脉压异常升高</span>的一种病理生理状态<br>标准：血流动力学诊断标准为：在<span class="blur-text">海平面</span>、<span class="blur-text">静息状态</span>下，右心导管测量<span class="blur-text">平均动脉压≥25mmHg</span></td>
+                            <td>41.. <strong>肺动脉高压(PH)</strong><br>定义：是由多种<span class="answer-text">已知</span>或<span class="answer-text">未知</span>原因引起的<span class="answer-text">肺动脉压异常升高</span>的一种病理生理状态<br>标准：血流动力学诊断标准为：在<span class="answer-text">海平面</span>、<span class="answer-text">静息状态</span>下，右心导管测量<span class="answer-text">平均动脉压≥25mmHg</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>0rther综合征</strong><br>病因：增粗的<span class="blur-text">肺动脉</span>压迫<span class="blur-text">喉返神经</span><br>表现：引起<span class="blur-text">声音嘶哑</span></td>
+                            <td>42.. <strong>0rther综合征</strong><br>病因：增粗的<span class="answer-text">肺动脉</span>压迫<span class="answer-text">喉返神经</span><br>表现：引起<span class="answer-text">声音嘶哑</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>结核球</strong><br>定义：肺结核中的<span class="blur-text">干酪性坏死</span>被<span class="blur-text">纤维组织</span>包裹形成的球形病灶<br>标准：大于<span class="blur-text">2厘米</span>时称为结核球或结核瘤</td>
+                            <td>43.. <strong>结核球</strong><br>定义：肺结核中的<span class="answer-text">干酪性坏死</span>被<span class="answer-text">纤维组织</span>包裹形成的球形病灶<br>标准：大于<span class="answer-text">2厘米</span>时称为结核球或结核瘤</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>肺通气</strong><br>定义：是指<span class="blur-text">肺与外界环境</span>之间进行<span class="blur-text">气体交换</span>的过程<br>意义：肺通气是整个<span class="blur-text">呼吸过程</span>的基础，其动力来源于<span class="blur-text">呼吸运动</span></td>
+                            <td>44.. <strong>肺通气</strong><br>定义：是指<span class="answer-text">肺与外界环境</span>之间进行<span class="answer-text">气体交换</span>的过程<br>意义：肺通气是整个<span class="answer-text">呼吸过程</span>的基础，其动力来源于<span class="answer-text">呼吸运动</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>顺应性</strong><br>定义：在外力作用下，<span class="blur-text">弹性组织</span>的<span class="blur-text">可扩张性</span><br>关系：容易扩张者，顺应性<span class="blur-text">大</span>，弹性阻力<span class="blur-text">小</span>；顺应性和弹性阻力成<span class="blur-text">反比</span>关系</td>
+                            <td>45.. <strong>顺应性</strong><br>定义：在外力作用下，<span class="answer-text">弹性组织</span>的<span class="answer-text">可扩张性</span><br>关系：容易扩张者，顺应性<span class="answer-text">大</span>，弹性阻力<span class="answer-text">小</span>；顺应性和弹性阻力成<span class="answer-text">反比</span>关系</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46.. <strong>肺表面活性物质</strong><br>来源：由<span class="blur-text">肺泡Ⅱ型细胞</span>合成并释放<br>成分：其主要成分是<span class="blur-text">二棕榈酰卵磷脂</span><br>作用：降低<span class="blur-text">液气界面</span>的<span class="blur-text">表面张力</span><br>意义：具有维持<span class="blur-text">肺泡的稳定性</span>，减少<span class="blur-text">肺间质</span>和<span class="blur-text">肺泡内</span>的组织液生成，降低<span class="blur-text">吸气阻力</span>，减少<span class="blur-text">吸气做功</span>等生理意义</td>
+                            <td>46.. <strong>肺表面活性物质</strong><br>来源：由<span class="answer-text">肺泡Ⅱ型细胞</span>合成并释放<br>成分：其主要成分是<span class="answer-text">二棕榈酰卵磷脂</span><br>作用：降低<span class="answer-text">液气界面</span>的<span class="answer-text">表面张力</span><br>意义：具有维持<span class="answer-text">肺泡的稳定性</span>，减少<span class="answer-text">肺间质</span>和<span class="answer-text">肺泡内</span>的组织液生成，降低<span class="answer-text">吸气阻力</span>，减少<span class="answer-text">吸气做功</span>等生理意义</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47.. <strong>潮气量(TV)</strong><br>定义：指每次呼吸时<span class="blur-text">吸入</span>或<span class="blur-text">呼出</span>的气体量<br>正常值：正常成年人平静呼吸时的潮气量为<span class="blur-text">400~600ml</span></td>
+                            <td>47.. <strong>潮气量(TV)</strong><br>定义：指每次呼吸时<span class="answer-text">吸入</span>或<span class="answer-text">呼出</span>的气体量<br>正常值：正常成年人平静呼吸时的潮气量为<span class="answer-text">400~600ml</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48.. <strong>补吸气量(IRV)</strong><br>定义：<span class="blur-text">平静呼吸末</span>，再尽力<span class="blur-text">吸气</span>所能吸入的气体量<br>意义：反应<span class="blur-text">吸气的储备量</span></td>
+                            <td>48.. <strong>补吸气量(IRV)</strong><br>定义：<span class="answer-text">平静呼吸末</span>，再尽力<span class="answer-text">吸气</span>所能吸入的气体量<br>意义：反应<span class="answer-text">吸气的储备量</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49.. <strong>功能余气量(FRC)</strong><br>定义：指<span class="blur-text">平静呼气末</span>尚留于<span class="blur-text">肺内</span>的气体量</td>
+                            <td>49.. <strong>功能余气量(FRC)</strong><br>定义：指<span class="answer-text">平静呼气末</span>尚留于<span class="answer-text">肺内</span>的气体量</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50.. <strong>用力呼气量(PVC)</strong><br>定义：是指一次<span class="blur-text">最大吸气</span>后再<span class="blur-text">尽力尽快呼气</span>时，在<span class="blur-text">一定时间内</span>所能呼出的气体量<br>表示：通常以它所占<span class="blur-text">用力肺活量</span>的百分数表示<br>正常值：正常时第一秒用力呼气量约为用力肺活量的<span class="blur-text">83%</span>，第二秒为<span class="blur-text">96%</span>，第三秒为<span class="blur-text">99%</span></td>
+                            <td>50.. <strong>用力呼气量(PVC)</strong><br>定义：是指一次<span class="answer-text">最大吸气</span>后再<span class="answer-text">尽力尽快呼气</span>时，在<span class="answer-text">一定时间内</span>所能呼出的气体量<br>表示：通常以它所占<span class="answer-text">用力肺活量</span>的百分数表示<br>正常值：正常时第一秒用力呼气量约为用力肺活量的<span class="answer-text">83%</span>，第二秒为<span class="answer-text">96%</span>，第三秒为<span class="answer-text">99%</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51.. <strong>肺通气量</strong><br>定义：每分钟<span class="blur-text">吸入</span>或<span class="blur-text">呼出</span>的气体总量<br>计算：它等于<span class="blur-text">潮气量</span>乘以<span class="blur-text">呼吸频率</span></td>
+                            <td>51.. <strong>肺通气量</strong><br>定义：每分钟<span class="answer-text">吸入</span>或<span class="answer-text">呼出</span>的气体总量<br>计算：它等于<span class="answer-text">潮气量</span>乘以<span class="answer-text">呼吸频率</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52.. <strong>肺泡通气量</strong><br>定义：每分钟吸入<span class="blur-text">肺泡</span>的<span class="blur-text">新鲜空气量</span><br>计算：等于<span class="blur-text">潮气量</span>和<span class="blur-text">无效腔</span>之差乘以<span class="blur-text">呼吸频率</span></td>
+                            <td>52.. <strong>肺泡通气量</strong><br>定义：每分钟吸入<span class="answer-text">肺泡</span>的<span class="answer-text">新鲜空气量</span><br>计算：等于<span class="answer-text">潮气量</span>和<span class="answer-text">无效腔</span>之差乘以<span class="answer-text">呼吸频率</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>通气/血流比值</strong><br>定义：是指每分钟<span class="blur-text">肺泡通气量</span>和每分钟<span class="blur-text">肺血流量</span>之间的比值<br>正常值：正常成人约为<span class="blur-text">0.84</span><br>意义：只有适宜的通气血流比值才能实现适宜的<span class="blur-text">肺换气功能</span></td>
+                            <td>53.. <strong>通气/血流比值</strong><br>定义：是指每分钟<span class="answer-text">肺泡通气量</span>和每分钟<span class="answer-text">肺血流量</span>之间的比值<br>正常值：正常成人约为<span class="answer-text">0.84</span><br>意义：只有适宜的通气血流比值才能实现适宜的<span class="answer-text">肺换气功能</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>发绀</strong><br>定义：血液中去氧血红蛋白含量达<span class="blur-text">5g/100ml</span>以上时，皮肤黏膜呈<span class="blur-text">暗紫色</span><br>意义：出现发绀，常表示机体<span class="blur-text">缺氧</span></td>
+                            <td>54.. <strong>发绀</strong><br>定义：血液中去氧血红蛋白含量达<span class="answer-text">5g/100ml</span>以上时，皮肤黏膜呈<span class="answer-text">暗紫色</span><br>意义：出现发绀，常表示机体<span class="answer-text">缺氧</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>波尔效应</strong><br>定义：<span class="blur-text">酸度</span>对<span class="blur-text">血红蛋白氧亲和力</span>的影响称为波尔效应<br>机制：其发生机制主要与<span class="blur-text">pH改变</span>时<span class="blur-text">Hb的构型变化</span>有关<br>意义：既可以促进<span class="blur-text">肺毛细血管血液的氧和</span>又利于<span class="blur-text">组织毛细血管血液释放氧气</span></td>
+                            <td>55.. <strong>波尔效应</strong><br>定义：<span class="answer-text">酸度</span>对<span class="answer-text">血红蛋白氧亲和力</span>的影响称为波尔效应<br>机制：其发生机制主要与<span class="answer-text">pH改变</span>时<span class="answer-text">Hb的构型变化</span>有关<br>意义：既可以促进<span class="answer-text">肺毛细血管血液的氧和</span>又利于<span class="answer-text">组织毛细血管血液释放氧气</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>何尔登效应</strong><br>定义：<span class="blur-text">氧气</span>与<span class="blur-text">血红蛋白</span>结合，可促使<span class="blur-text">二氧化碳释放</span>，而去氧血红蛋白容易与<span class="blur-text">二氧化碳</span>结合</td>
+                            <td>56.. <strong>何尔登效应</strong><br>定义：<span class="answer-text">氧气</span>与<span class="answer-text">血红蛋白</span>结合，可促使<span class="answer-text">二氧化碳释放</span>，而去氧血红蛋白容易与<span class="answer-text">二氧化碳</span>结合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>动脉氧分压(PaO2)</strong><br>定义：是指血液中<span class="blur-text">物理溶解</span>的<span class="blur-text">氧分子</span>所产生的压力<br>正常值：<span class="blur-text">95~100mmHg</span></td>
+                            <td>57.. <strong>动脉氧分压(PaO2)</strong><br>定义：是指血液中<span class="answer-text">物理溶解</span>的<span class="answer-text">氧分子</span>所产生的压力<br>正常值：<span class="answer-text">95~100mmHg</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.. <strong>动脉二氧化碳分压(PaCO2)</strong><br>定义：是指<span class="blur-text">物理溶解</span>在动脉血中的<span class="blur-text">二氧化碳分子</span>所产生的张力<br>正常值：<span class="blur-text">35~40mmHg</span>，平均值<span class="blur-text">40mmHg</span></td>
+                            <td>58.. <strong>动脉二氧化碳分压(PaCO2)</strong><br>定义：是指<span class="answer-text">物理溶解</span>在动脉血中的<span class="answer-text">二氧化碳分子</span>所产生的张力<br>正常值：<span class="answer-text">35~40mmHg</span>，平均值<span class="answer-text">40mmHg</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59.. <strong>肺纹理</strong><br>定义：由<span class="blur-text">肺门</span>向外呈<span class="blur-text">放射状</span>分布的<span class="blur-text">树枝状阴影</span><br>组成：由<span class="blur-text">肺动脉</span>和<span class="blur-text">肺静脉</span>组成<br>特点：正常时，<span class="blur-text">下肺野</span>肺纹理比<span class="blur-text">上肺野</span>肺纹理多而粗，而<span class="blur-text">右下肺野</span>肺纹理比<span class="blur-text">左下肺野</span>多而粗</td>
+                            <td>59.. <strong>肺纹理</strong><br>定义：由<span class="answer-text">肺门</span>向外呈<span class="answer-text">放射状</span>分布的<span class="answer-text">树枝状阴影</span><br>组成：由<span class="answer-text">肺动脉</span>和<span class="answer-text">肺静脉</span>组成<br>特点：正常时，<span class="answer-text">下肺野</span>肺纹理比<span class="answer-text">上肺野</span>肺纹理多而粗，而<span class="answer-text">右下肺野</span>肺纹理比<span class="answer-text">左下肺野</span>多而粗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60.. <strong>支气管气象/空气支气管征</strong><br>多见于：多见于<span class="blur-text">大叶性肺炎</span><br>表现：肺实变时肺内可见大片状密度增高阴影，部分病变内可见<span class="blur-text">含气的支气管分支影</span>即支气管充气征</td>
+                            <td>60.. <strong>支气管气象/空气支气管征</strong><br>多见于：多见于<span class="answer-text">大叶性肺炎</span><br>表现：肺实变时肺内可见大片状密度增高阴影，部分病变内可见<span class="answer-text">含气的支气管分支影</span>即支气管充气征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61.. <strong>干酪样肺炎</strong><br>定义：肺结核中，一个<span class="blur-text">肺叶</span>或<span class="blur-text">肺段</span>的实变，呈大片<span class="blur-text">致密影</span>，边缘<span class="blur-text">模糊</span>，密度<span class="blur-text">不均</span><br>影像：其内可见<span class="blur-text">支气管充气象</span>和/或不规则的"<span class="blur-text">虫蚀样</span>"空洞</td>
+                            <td>61.. <strong>干酪样肺炎</strong><br>定义：肺结核中，一个<span class="answer-text">肺叶</span>或<span class="answer-text">肺段</span>的实变，呈大片<span class="answer-text">致密影</span>，边缘<span class="answer-text">模糊</span>，密度<span class="answer-text">不均</span><br>影像：其内可见<span class="answer-text">支气管充气象</span>和/或不规则的"<span class="answer-text">虫蚀样</span>"空洞</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62.. <strong>Kerley B线</strong><br>见于：<span class="blur-text">间质性肺水肿</span>时<br>X线：X线胸片上位于<span class="blur-text">两下肺野外带</span>与<span class="blur-text">胸膜</span>相连，并与其垂直的<span class="blur-text">不超过2cm</span>的短线影<br>本质：通常Kerley B线是<span class="blur-text">小叶间隔</span>因<span class="blur-text">水肿</span>而增厚的表现</td>
+                            <td>62.. <strong>Kerley B线</strong><br>见于：<span class="answer-text">间质性肺水肿</span>时<br>X线：X线胸片上位于<span class="answer-text">两下肺野外带</span>与<span class="answer-text">胸膜</span>相连，并与其垂直的<span class="answer-text">不超过2cm</span>的短线影<br>本质：通常Kerley B线是<span class="answer-text">小叶间隔</span>因<span class="answer-text">水肿</span>而增厚的表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63.. <strong>慢性支气管炎</strong><br>定义：是指<span class="blur-text">支气管黏膜</span>及其<span class="blur-text">周围组织</span>的<span class="blur-text">慢性非特异性炎症</span><br>临床：主要临床特征为反复发作的<span class="blur-text">咳嗽</span>、<span class="blur-text">咳痰</span>或伴有<span class="blur-text">喘息</span>症状<br>诊断：上述症状每年持续<span class="blur-text">三个月</span>，连续<span class="blur-text">两年</span>以上即可诊断</td>
+                            <td>63.. <strong>慢性支气管炎</strong><br>定义：是指<span class="answer-text">支气管黏膜</span>及其<span class="answer-text">周围组织</span>的<span class="answer-text">慢性非特异性炎症</span><br>临床：主要临床特征为反复发作的<span class="answer-text">咳嗽</span>、<span class="answer-text">咳痰</span>或伴有<span class="answer-text">喘息</span>症状<br>诊断：上述症状每年持续<span class="answer-text">三个月</span>，连续<span class="answer-text">两年</span>以上即可诊断</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64.. <strong>干性支气管扩张</strong><br>表现：部分患者可仅表现为<span class="blur-text">咯血</span>而没有大量脓痰<br>部位：病变多位于引流较好的<span class="blur-text">上叶支气管</span></td>
+                            <td>64.. <strong>干性支气管扩张</strong><br>表现：部分患者可仅表现为<span class="answer-text">咯血</span>而没有大量脓痰<br>部位：病变多位于引流较好的<span class="answer-text">上叶支气管</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65.. <strong>Kartagener综合征</strong><br>定义：具有<span class="blur-text">内脏转位</span>、<span class="blur-text">支气管扩张</span>、<span class="blur-text">鼻窦炎</span>三联征的先天性疾病</td>
+                            <td>65.. <strong>Kartagener综合征</strong><br>定义：具有<span class="answer-text">内脏转位</span>、<span class="answer-text">支气管扩张</span>、<span class="answer-text">鼻窦炎</span>三联征的先天性疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66.. <strong>气道重构</strong><br>定义：若哮喘长期反复发作，可见<span class="blur-text">支气管平滑肌肥大/增生</span>，<span class="blur-text">气道上皮细胞黏液化生</span>、<span class="blur-text">上皮下胶原沉积和纤维化</span>、<span class="blur-text">血管增生</span>以及<span class="blur-text">基底膜增厚</span>等气道重构的表现</td>
+                            <td>66.. <strong>气道重构</strong><br>定义：若哮喘长期反复发作，可见<span class="answer-text">支气管平滑肌肥大/增生</span>，<span class="answer-text">气道上皮细胞黏液化生</span>、<span class="answer-text">上皮下胶原沉积和纤维化</span>、<span class="answer-text">血管增生</span>以及<span class="answer-text">基底膜增厚</span>等气道重构的表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67.. <strong>小叶性(支气管性)肺炎</strong><br>病变：<span class="blur-text">细支气管</span>，<span class="blur-text">终末细支气管</span>及<span class="blur-text">肺泡</span>的炎症<br>特点：常继发于其他病<br>X线：显示沿<span class="blur-text">肺纹理</span>分布的不规则<span class="blur-text">斑片状阴影</span>，边缘密度浅而模糊，无实变征象，<span class="blur-text">肺下叶</span>常受累</td>
+                            <td>67.. <strong>小叶性(支气管性)肺炎</strong><br>病变：<span class="answer-text">细支气管</span>，<span class="answer-text">终末细支气管</span>及<span class="answer-text">肺泡</span>的炎症<br>特点：常继发于其他病<br>X线：显示沿<span class="answer-text">肺纹理</span>分布的不规则<span class="answer-text">斑片状阴影</span>，边缘密度浅而模糊，无实变征象，<span class="answer-text">肺下叶</span>常受累</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68.. <strong>肺炎</strong><br>定义：是指<span class="blur-text">终末气道</span>、<span class="blur-text">肺泡</span>和<span class="blur-text">肺间质</span>的炎症<br>病因：可由<span class="blur-text">病原微生物</span>、<span class="blur-text">理化因素</span>、<span class="blur-text">免疫损伤</span>、<span class="blur-text">过敏</span>及<span class="blur-text">药物</span>所致<br>常见：<span class="blur-text">细菌性肺炎</span>是最常见的肺炎</td>
+                            <td>68.. <strong>肺炎</strong><br>定义：是指<span class="answer-text">终末气道</span>、<span class="answer-text">肺泡</span>和<span class="answer-text">肺间质</span>的炎症<br>病因：可由<span class="answer-text">病原微生物</span>、<span class="answer-text">理化因素</span>、<span class="answer-text">免疫损伤</span>、<span class="answer-text">过敏</span>及<span class="answer-text">药物</span>所致<br>常见：<span class="answer-text">细菌性肺炎</span>是最常见的肺炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69.. <strong>大叶性肺炎</strong><br>定义：是指发生在<span class="blur-text">肺段</span>、<span class="blur-text">肺叶</span>以上部位的<span class="blur-text">肺实质性炎症</span><br>X线：影像显示为<span class="blur-text">肺段</span>或<span class="blur-text">肺叶</span>的<span class="blur-text">实变阴影</span></td>
+                            <td>69.. <strong>大叶性肺炎</strong><br>定义：是指发生在<span class="answer-text">肺段</span>、<span class="answer-text">肺叶</span>以上部位的<span class="answer-text">肺实质性炎症</span><br>X线：影像显示为<span class="answer-text">肺段</span>或<span class="answer-text">肺叶</span>的<span class="answer-text">实变阴影</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70.. <strong>干酪样坏死</strong><br>镜检：典型病变镜检为<span class="blur-text">红染</span>、<span class="blur-text">无结构的颗粒状物</span>，含<span class="blur-text">脂质</span>多<br>肉眼：肉眼观察呈<span class="blur-text">淡黄色</span>，状似<span class="blur-text">奶酪</span><br>发生：以干酪样坏死为主的病变多发生在结核分枝杆菌<span class="blur-text">毒力强</span>、感染菌量<span class="blur-text">多</span>、机体<span class="blur-text">超敏反应增强</span>、<span class="blur-text">抵抗力低下</span>等情况</td>
+                            <td>70.. <strong>干酪样坏死</strong><br>镜检：典型病变镜检为<span class="answer-text">红染</span>、<span class="answer-text">无结构的颗粒状物</span>，含<span class="answer-text">脂质</span>多<br>肉眼：肉眼观察呈<span class="answer-text">淡黄色</span>，状似<span class="answer-text">奶酪</span><br>发生：以干酪样坏死为主的病变多发生在结核分枝杆菌<span class="answer-text">毒力强</span>、感染菌量<span class="answer-text">多</span>、机体<span class="answer-text">超敏反应增强</span>、<span class="answer-text">抵抗力低下</span>等情况</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71.. <strong>肺结核</strong><br>定义：是由<span class="blur-text">结核分枝杆菌</span>引起的累及<span class="blur-text">肺实质</span>、<span class="blur-text">气管支气管树</span>或<span class="blur-text">胸膜</span>的<span class="blur-text">慢性传染病</span><br>传染源：<span class="blur-text">排菌者</span>为其重要的传染源<br>发病：人体感染结核菌后不一定发病，当<span class="blur-text">抵抗力低下</span>或<span class="blur-text">细胞介导的变态反应增高</span>时，才可能引起临床发病<br>预后：若能及时诊断，并予以合理治疗，大多可获<span class="blur-text">临床痊愈</span></td>
+                            <td>71.. <strong>肺结核</strong><br>定义：是由<span class="answer-text">结核分枝杆菌</span>引起的累及<span class="answer-text">肺实质</span>、<span class="answer-text">气管支气管树</span>或<span class="answer-text">胸膜</span>的<span class="answer-text">慢性传染病</span><br>传染源：<span class="answer-text">排菌者</span>为其重要的传染源<br>发病：人体感染结核菌后不一定发病，当<span class="answer-text">抵抗力低下</span>或<span class="answer-text">细胞介导的变态反应增高</span>时，才可能引起临床发病<br>预后：若能及时诊断，并予以合理治疗，大多可获<span class="answer-text">临床痊愈</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72.. <strong>肺脓肿</strong><br>定义：是由多种<span class="blur-text">病原体</span>引起的<span class="blur-text">肺部化脓性病变</span>，组织<span class="blur-text">坏死</span>、<span class="blur-text">液化</span>继而形成<span class="blur-text">空洞</span><br>影像：在影像学上可表现为<span class="blur-text">空洞伴液平</span><br>临床：临床特征为<span class="blur-text">高热</span>、<span class="blur-text">咳嗽</span>、咳<span class="blur-text">大量脓臭痰</span></td>
+                            <td>72.. <strong>肺脓肿</strong><br>定义：是由多种<span class="answer-text">病原体</span>引起的<span class="answer-text">肺部化脓性病变</span>，组织<span class="answer-text">坏死</span>、<span class="answer-text">液化</span>继而形成<span class="answer-text">空洞</span><br>影像：在影像学上可表现为<span class="answer-text">空洞伴液平</span><br>临床：临床特征为<span class="answer-text">高热</span>、<span class="answer-text">咳嗽</span>、咳<span class="answer-text">大量脓臭痰</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73.. <strong>特发性肺纤维化(IPF)</strong><br>定义：是一种<span class="blur-text">慢性</span>、<span class="blur-text">进行性</span>、<span class="blur-text">纤维性间质性肺炎</span><br>特征：组织学和/或胸部HRCT特征性表现为<span class="blur-text">普通型间质性肺炎(UIP)</span><br>病因：病因不清，好发于<span class="blur-text">老年人</span><br>地位：IPF是<span class="blur-text">特发性间质性肺炎</span>最常见的类型</td>
+                            <td>73.. <strong>特发性肺纤维化(IPF)</strong><br>定义：是一种<span class="answer-text">慢性</span>、<span class="answer-text">进行性</span>、<span class="answer-text">纤维性间质性肺炎</span><br>特征：组织学和/或胸部HRCT特征性表现为<span class="answer-text">普通型间质性肺炎(UIP)</span><br>病因：病因不清，好发于<span class="answer-text">老年人</span><br>地位：IPF是<span class="answer-text">特发性间质性肺炎</span>最常见的类型</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74.. <strong>间质性肺疾病(ILD)</strong><br>定义：是一组以<span class="blur-text">肺间质</span>、<span class="blur-text">肺泡壁</span>和<span class="blur-text">肺泡腔</span>具有不同形式和程度的<span class="blur-text">炎症</span>和<span class="blur-text">纤维化</span>为主要病理改变的<span class="blur-text">异质性</span>、<span class="blur-text">非肿瘤</span>和<span class="blur-text">非感染性</span>肺部疾病的总称<br>现称：现在又称为<span class="blur-text">弥漫性实质性肺疾病(DPLD)</span></td>
+                            <td>74.. <strong>间质性肺疾病(ILD)</strong><br>定义：是一组以<span class="answer-text">肺间质</span>、<span class="answer-text">肺泡壁</span>和<span class="answer-text">肺泡腔</span>具有不同形式和程度的<span class="answer-text">炎症</span>和<span class="answer-text">纤维化</span>为主要病理改变的<span class="answer-text">异质性</span>、<span class="answer-text">非肿瘤</span>和<span class="answer-text">非感染性</span>肺部疾病的总称<br>现称：现在又称为<span class="answer-text">弥漫性实质性肺疾病(DPLD)</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75.. <strong>中央型肺癌</strong><br>定义：发生在<span class="blur-text">段及以上支气管</span>的肺癌<br>类型：以<span class="blur-text">鳞状上皮细胞癌</span>和<span class="blur-text">小细胞癌</span>较多见<br>周围型：发生在<span class="blur-text">段支气管以下</span>的肺癌，以<span class="blur-text">腺癌</span>较多见</td>
+                            <td>75.. <strong>中央型肺癌</strong><br>定义：发生在<span class="answer-text">段及以上支气管</span>的肺癌<br>类型：以<span class="answer-text">鳞状上皮细胞癌</span>和<span class="answer-text">小细胞癌</span>较多见<br>周围型：发生在<span class="answer-text">段支气管以下</span>的肺癌，以<span class="answer-text">腺癌</span>较多见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>76.. <strong>肺源性心脏病</strong><br>定义：是指由<span class="blur-text">支气管</span>、<span class="blur-text">肺组织</span>、<span class="blur-text">胸廓</span>或<span class="blur-text">肺血管病变</span>致<span class="blur-text">肺血管阻力增加</span>，产生<span class="blur-text">肺动脉高压</span>，继而<span class="blur-text">右心室结构或/和功能改变</span>的疾病</td>
+                            <td>76.. <strong>肺源性心脏病</strong><br>定义：是指由<span class="answer-text">支气管</span>、<span class="answer-text">肺组织</span>、<span class="answer-text">胸廓</span>或<span class="answer-text">肺血管病变</span>致<span class="answer-text">肺血管阻力增加</span>，产生<span class="answer-text">肺动脉高压</span>，继而<span class="answer-text">右心室结构或/和功能改变</span>的疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>77.. <strong>肺梗死</strong><br>定义：<span class="blur-text">血液栓塞</span>是内源性或外源性<span class="blur-text">栓子</span>堵塞<span class="blur-text">肺动脉</span>引起肺循环障碍的临床和病理生理综合征<br>肺梗死：肺栓塞引起的<span class="blur-text">肺出血或坏死</span>称为肺梗死</td>
+                            <td>77.. <strong>肺梗死</strong><br>定义：<span class="answer-text">血液栓塞</span>是内源性或外源性<span class="answer-text">栓子</span>堵塞<span class="answer-text">肺动脉</span>引起肺循环障碍的临床和病理生理综合征<br>肺梗死：肺栓塞引起的<span class="answer-text">肺出血或坏死</span>称为肺梗死</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>78.. <strong>脓胸</strong><br>定义：<span class="blur-text">胸膜腔</span>受<span class="blur-text">致病菌</span>感染、产生<span class="blur-text">脓性渗出液</span>积聚于胸膜腔内，称为脓胸</td>
+                            <td>78.. <strong>脓胸</strong><br>定义：<span class="answer-text">胸膜腔</span>受<span class="answer-text">致病菌</span>感染、产生<span class="answer-text">脓性渗出液</span>积聚于胸膜腔内，称为脓胸</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>79.. <strong>类肺炎性胸腔积液</strong><br>定义：<span class="blur-text">肺炎</span>、<span class="blur-text">肺脓肿</span>和<span class="blur-text">支气管扩张</span>感染引起的胸腔积液</td>
+                            <td>79.. <strong>类肺炎性胸腔积液</strong><br>定义：<span class="answer-text">肺炎</span>、<span class="answer-text">肺脓肿</span>和<span class="answer-text">支气管扩张</span>感染引起的胸腔积液</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>80.. <strong>胸膜反应</strong><br>定义：抽取<span class="blur-text">胸腔积液</span>时，患者发生的<span class="blur-text">头晕</span>、<span class="blur-text">冷汗</span>、<span class="blur-text">心悸</span>、<span class="blur-text">面色苍白</span>、<span class="blur-text">脉细</span>等表现</td>
+                            <td>80.. <strong>胸膜反应</strong><br>定义：抽取<span class="answer-text">胸腔积液</span>时，患者发生的<span class="answer-text">头晕</span>、<span class="answer-text">冷汗</span>、<span class="answer-text">心悸</span>、<span class="answer-text">面色苍白</span>、<span class="answer-text">脉细</span>等表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>81.. <strong>闭合性气胸(单纯性)</strong><br>机制：胸膜破裂口较<span class="blur-text">小</span>，随肺<span class="blur-text">萎缩</span>而<span class="blur-text">闭合</span>，空气不再继续进入胸膜腔</td>
+                            <td>81.. <strong>闭合性气胸(单纯性)</strong><br>机制：胸膜破裂口较<span class="answer-text">小</span>，随肺<span class="answer-text">萎缩</span>而<span class="answer-text">闭合</span>，空气不再继续进入胸膜腔</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>82.. <strong>开放性气胸(交通性)</strong><br>机制：破裂口较<span class="blur-text">大</span>，或因两侧胸膜间<span class="blur-text">粘连</span>或<span class="blur-text">牵拉</span>，使破口持续<span class="blur-text">开放</span>，吸气与呼气时空气<span class="blur-text">自由进入</span>胸膜腔</td>
+                            <td>82.. <strong>开放性气胸(交通性)</strong><br>机制：破裂口较<span class="answer-text">大</span>，或因两侧胸膜间<span class="answer-text">粘连</span>或<span class="answer-text">牵拉</span>，使破口持续<span class="answer-text">开放</span>，吸气与呼气时空气<span class="answer-text">自由进入</span>胸膜腔</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>83.. <strong>张力性气胸(高压性)</strong><br>机制：破裂口呈<span class="blur-text">单向活瓣</span>或<span class="blur-text">活塞</span>作用，吸气时胸廓扩大，胸膜腔内压变小，空气<span class="blur-text">进入</span>胸膜腔；呼气时胸膜腔内压升高，压迫活瓣使之<span class="blur-text">关闭</span>，致使胸膜腔内空气<span class="blur-text">越积越多</span>，内压持续<span class="blur-text">升高</span>，使肺脏<span class="blur-text">受压</span>，纵隔向<span class="blur-text">健侧</span>移位，影响心脏血液回流</td>
+                            <td>83.. <strong>张力性气胸(高压性)</strong><br>机制：破裂口呈<span class="answer-text">单向活瓣</span>或<span class="answer-text">活塞</span>作用，吸气时胸廓扩大，胸膜腔内压变小，空气<span class="answer-text">进入</span>胸膜腔；呼气时胸膜腔内压升高，压迫活瓣使之<span class="answer-text">关闭</span>，致使胸膜腔内空气<span class="answer-text">越积越多</span>，内压持续<span class="answer-text">升高</span>，使肺脏<span class="answer-text">受压</span>，纵隔向<span class="answer-text">健侧</span>移位，影响心脏血液回流</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>84.. <strong>气胸线</strong><br>定义：为气胸的典型<span class="blur-text">X线改变</span><br>表现：表现为被压缩肺边缘呈<span class="blur-text">外凸弧形</span>的<span class="blur-text">细线条形阴影</span><br>进行性血胸：持续大量出血所致的<span class="blur-text">胸膜腔内积血</span></td>
+                            <td>84.. <strong>气胸线</strong><br>定义：为气胸的典型<span class="answer-text">X线改变</span><br>表现：表现为被压缩肺边缘呈<span class="answer-text">外凸弧形</span>的<span class="answer-text">细线条形阴影</span><br>进行性血胸：持续大量出血所致的<span class="answer-text">胸膜腔内积血</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>85.. <strong>创伤性室息</strong><br>机制：胸部严重<span class="blur-text">挤压伤</span>使胸内压力<span class="blur-text">骤然升高</span>，血液经<span class="blur-text">上腔静脉系统</span>逆流，导致<span class="blur-text">末梢静脉</span>和<span class="blur-text">毛细血管</span>的压力升高，<span class="blur-text">破裂出血</span><br>后果：重者可致<span class="blur-text">窒息</span>和<span class="blur-text">心搏骤停</span></td>
+                            <td>85.. <strong>创伤性室息</strong><br>机制：胸部严重<span class="answer-text">挤压伤</span>使胸内压力<span class="answer-text">骤然升高</span>，血液经<span class="answer-text">上腔静脉系统</span>逆流，导致<span class="answer-text">末梢静脉</span>和<span class="answer-text">毛细血管</span>的压力升高，<span class="answer-text">破裂出血</span><br>后果：重者可致<span class="answer-text">窒息</span>和<span class="answer-text">心搏骤停</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>86.. <strong>呼吸衰竭(RF)</strong><br>定义：是指各种原因引起的<span class="blur-text">肺通气</span>和/或<span class="blur-text">换气功能严重障碍</span>，使<span class="blur-text">静息状态</span>下亦不能维持足够的<span class="blur-text">气体交换</span>，导致<span class="blur-text">低氧血症</span>伴/或不伴<span class="blur-text">高碳酸血症</span>，进而引起一系列病理生理改变和相应临床表现的综合征</td>
+                            <td>86.. <strong>呼吸衰竭(RF)</strong><br>定义：是指各种原因引起的<span class="answer-text">肺通气</span>和/或<span class="answer-text">换气功能严重障碍</span>，使<span class="answer-text">静息状态</span>下亦不能维持足够的<span class="answer-text">气体交换</span>，导致<span class="answer-text">低氧血症</span>伴/或不伴<span class="answer-text">高碳酸血症</span>，进而引起一系列病理生理改变和相应临床表现的综合征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>87.. <strong>急性呼吸衰竭(AFR)</strong><br>定义：是某些<span class="blur-text">突发疾病因素</span>导致肺通气和/或换气功能<span class="blur-text">迅速</span>出现严重障碍，<span class="blur-text">短时间内</span>即可发生呼吸衰竭<br>时间：通常在<span class="blur-text">数分钟</span>到<span class="blur-text">1周</span>内发生</td>
+                            <td>87.. <strong>急性呼吸衰竭(AFR)</strong><br>定义：是某些<span class="answer-text">突发疾病因素</span>导致肺通气和/或换气功能<span class="answer-text">迅速</span>出现严重障碍，<span class="answer-text">短时间内</span>即可发生呼吸衰竭<br>时间：通常在<span class="answer-text">数分钟</span>到<span class="answer-text">1周</span>内发生</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>88.. <strong>SIRS</strong><br>全称：<span class="blur-text">全身炎症反应综合征</span><br>定义：是指以<span class="blur-text">全身高代谢状态</span>、<span class="blur-text">高动力循环状态</span>和<span class="blur-text">过度炎症反应</span>为特征的病理生理过程及其临床表现</td>
+                            <td>88.. <strong>SIRS</strong><br>全称：<span class="answer-text">全身炎症反应综合征</span><br>定义：是指以<span class="answer-text">全身高代谢状态</span>、<span class="answer-text">高动力循环状态</span>和<span class="answer-text">过度炎症反应</span>为特征的病理生理过程及其临床表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>89.. <strong>COPD</strong><br>全称：<span class="blur-text">慢性阻塞性肺疾病</span><br>定义：是一组以<span class="blur-text">肺实质</span>和<span class="blur-text">小气道</span>受损，导致<span class="blur-text">慢性气道阻塞</span>、<span class="blur-text">呼吸阻力增加</span>和<span class="blur-text">肺功能不全</span>为共同特征的肺慢性阻塞性疾病的总称</td>
+                            <td>89.. <strong>COPD</strong><br>全称：<span class="answer-text">慢性阻塞性肺疾病</span><br>定义：是一组以<span class="answer-text">肺实质</span>和<span class="answer-text">小气道</span>受损，导致<span class="answer-text">慢性气道阻塞</span>、<span class="answer-text">呼吸阻力增加</span>和<span class="answer-text">肺功能不全</span>为共同特征的肺慢性阻塞性疾病的总称</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>90.. <strong>间质性肺气肿</strong><br>机制：由于<span class="blur-text">肋骨骨折</span>，<span class="blur-text">胸壁穿透伤</span>或<span class="blur-text">剧烈咳嗽</span>等，导致<span class="blur-text">肺内压急剧升高</span>，导致<span class="blur-text">细支气管</span>或<span class="blur-text">肺泡间隔</span>破裂，空气进入<span class="blur-text">肺间质</span>而形成<br>表现：气体在<span class="blur-text">小叶间隔</span>、<span class="blur-text">肺膜下</span>形成<span class="blur-text">串珠状小气泡</span>，或可沿细支气管和血管周的组织间隙扩展至<span class="blur-text">肺门</span>、<span class="blur-text">纵隔</span>。甚至可在<span class="blur-text">颈部</span>和<span class="blur-text">胸部皮下</span>形成<span class="blur-text">皮下气肿</span></td>
+                            <td>90.. <strong>间质性肺气肿</strong><br>机制：由于<span class="answer-text">肋骨骨折</span>，<span class="answer-text">胸壁穿透伤</span>或<span class="answer-text">剧烈咳嗽</span>等，导致<span class="answer-text">肺内压急剧升高</span>，导致<span class="answer-text">细支气管</span>或<span class="answer-text">肺泡间隔</span>破裂，空气进入<span class="answer-text">肺间质</span>而形成<br>表现：气体在<span class="answer-text">小叶间隔</span>、<span class="answer-text">肺膜下</span>形成<span class="answer-text">串珠状小气泡</span>，或可沿细支气管和血管周的组织间隙扩展至<span class="answer-text">肺门</span>、<span class="answer-text">纵隔</span>。甚至可在<span class="answer-text">颈部</span>和<span class="answer-text">胸部皮下</span>形成<span class="answer-text">皮下气肿</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>91.. <strong>肺小细胞癌</strong><br>形态：癌细胞<span class="blur-text">小而呈短梭形</span>或<span class="blur-text">淋巴细胞样</span>，胞质<span class="blur-text">少</span>而形似<span class="blur-text">裸核</span><br>典型：典型的癌细胞常一端稍尖，形似<span class="blur-text">燕麦穗</span>，称为<span class="blur-text">燕麦细胞</span><br>标志：小细胞癌通常表达<span class="blur-text">神经内分泌标志</span></td>
+                            <td>91.. <strong>肺小细胞癌</strong><br>形态：癌细胞<span class="answer-text">小而呈短梭形</span>或<span class="answer-text">淋巴细胞样</span>，胞质<span class="answer-text">少</span>而形似<span class="answer-text">裸核</span><br>典型：典型的癌细胞常一端稍尖，形似<span class="answer-text">燕麦穗</span>，称为<span class="answer-text">燕麦细胞</span><br>标志：小细胞癌通常表达<span class="answer-text">神经内分泌标志</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>92.. <strong>肺原位腺癌</strong><br>定义：肿瘤细胞沿<span class="blur-text">肺泡壁</span>呈<span class="blur-text">鳞屑样生长</span>，无<span class="blur-text">间质</span>、<span class="blur-text">血管</span>或<span class="blur-text">胸膜浸润</span>的小腺癌</td>
+                            <td>92.. <strong>肺原位腺癌</strong><br>定义：肿瘤细胞沿<span class="answer-text">肺泡壁</span>呈<span class="answer-text">鳞屑样生长</span>，无<span class="answer-text">间质</span>、<span class="answer-text">血管</span>或<span class="answer-text">胸膜浸润</span>的小腺癌</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>93.. <strong>支气管哮喘</strong><br>定义：是指一种由<span class="blur-text">呼吸道过敏反应</span>引起的以支气管<span class="blur-text">可逆性发作性痉挛</span>为特征的<span class="blur-text">慢性阻塞性疾病</span><br>表现：临床表现为反复发作性<span class="blur-text">呼气性呼吸困难</span>伴有广泛的<span class="blur-text">哮鸣音</span>，症状可自行或经治疗缓解</td>
+                            <td>93.. <strong>支气管哮喘</strong><br>定义：是指一种由<span class="answer-text">呼吸道过敏反应</span>引起的以支气管<span class="answer-text">可逆性发作性痉挛</span>为特征的<span class="answer-text">慢性阻塞性疾病</span><br>表现：临床表现为反复发作性<span class="answer-text">呼气性呼吸困难</span>伴有广泛的<span class="answer-text">哮鸣音</span>，症状可自行或经治疗缓解</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>94.. <strong>结核结节</strong><br>别称：又称<span class="blur-text">结核性肉芽肿</span><br>形成：是在<span class="blur-text">细胞免疫</span>的基础上形成的<br>组成：有<span class="blur-text">上皮样细胞</span>；<span class="blur-text">朗汉斯巨细胞</span>加上外周局部集聚的<span class="blur-text">淋巴细胞</span>和少量反应性增生的<span class="blur-text">成纤维细胞</span>构成<br>典型：典型者结节中央有<span class="blur-text">干酪样坏死</span></td>
+                            <td>94.. <strong>结核结节</strong><br>别称：又称<span class="answer-text">结核性肉芽肿</span><br>形成：是在<span class="answer-text">细胞免疫</span>的基础上形成的<br>组成：有<span class="answer-text">上皮样细胞</span>；<span class="answer-text">朗汉斯巨细胞</span>加上外周局部集聚的<span class="answer-text">淋巴细胞</span>和少量反应性增生的<span class="answer-text">成纤维细胞</span>构成<br>典型：典型者结节中央有<span class="answer-text">干酪样坏死</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>95.. <strong>浸润型肺结核</strong><br>地位：是临床上最常见的<span class="blur-text">活动性</span>、<span class="blur-text">继发性肺结核</span><br>来源：多由<span class="blur-text">局灶型肺结核</span>发展而来<br>X线：示<span class="blur-text">锁骨下</span>可见边缘模糊的<span class="blur-text">云絮状阴影</span><br>病理：病变以<span class="blur-text">渗出</span>为主，中央有<span class="blur-text">干酪样坏死</span>，病灶周围有炎症包绕</td>
+                            <td>95.. <strong>浸润型肺结核</strong><br>地位：是临床上最常见的<span class="answer-text">活动性</span>、<span class="answer-text">继发性肺结核</span><br>来源：多由<span class="answer-text">局灶型肺结核</span>发展而来<br>X线：示<span class="answer-text">锁骨下</span>可见边缘模糊的<span class="answer-text">云絮状阴影</span><br>病理：病变以<span class="answer-text">渗出</span>为主，中央有<span class="answer-text">干酪样坏死</span>，病灶周围有炎症包绕</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>96.. <strong>继发性肺结核</strong><br>定义：指<span class="blur-text">再次感染</span>结核杆菌所引起的肺结核<br>人群：多见于<span class="blur-text">成人</span><br>部位：病变多由<span class="blur-text">肺尖</span>开始<br>病程：病程<span class="blur-text">长</span><br>病变：病变表现<span class="blur-text">多样</span>，可为<span class="blur-text">新旧不一</span>病灶交叉出现</td>
+                            <td>96.. <strong>继发性肺结核</strong><br>定义：指<span class="answer-text">再次感染</span>结核杆菌所引起的肺结核<br>人群：多见于<span class="answer-text">成人</span><br>部位：病变多由<span class="answer-text">肺尖</span>开始<br>病程：病程<span class="answer-text">长</span><br>病变：病变表现<span class="answer-text">多样</span>，可为<span class="answer-text">新旧不一</span>病灶交叉出现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>97.. <strong>局灶型肺结核</strong><br>地位：是<span class="blur-text">继发性肺结核</span>的早期病变<br>部位：病灶常定位于<span class="blur-text">肺尖下2~4cm</span>处，直径<span class="blur-text">0.5~1cm</span><br>形态：病灶境界清楚，有<span class="blur-text">纤维包裹</span><br>镜下：镜下病变以<span class="blur-text">增生</span>为主，中央为<span class="blur-text">干酪样坏死</span><br>性质：属于<span class="blur-text">非活动性</span>肺结核</td>
+                            <td>97.. <strong>局灶型肺结核</strong><br>地位：是<span class="answer-text">继发性肺结核</span>的早期病变<br>部位：病灶常定位于<span class="answer-text">肺尖下2~4cm</span>处，直径<span class="answer-text">0.5~1cm</span><br>形态：病灶境界清楚，有<span class="answer-text">纤维包裹</span><br>镜下：镜下病变以<span class="answer-text">增生</span>为主，中央为<span class="answer-text">干酪样坏死</span><br>性质：属于<span class="answer-text">非活动性</span>肺结核</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>98.. <strong>急性全身粟粒性肺结核</strong><br>播散：结核杆菌在<span class="blur-text">短时间内</span>一次或反复多次，大量侵入<span class="blur-text">肺静脉分支</span>，经<span class="blur-text">左心</span>至<span class="blur-text">大循环</span>，播散到<span class="blur-text">全身各器官</span><br>肉眼：各器官内均匀密布<span class="blur-text">大小一致</span>，<span class="blur-text">灰白色</span>，<span class="blur-text">圆形</span>，境界清楚的<span class="blur-text">小结节</span></td>
+                            <td>98.. <strong>急性全身粟粒性肺结核</strong><br>播散：结核杆菌在<span class="answer-text">短时间内</span>一次或反复多次，大量侵入<span class="answer-text">肺静脉分支</span>，经<span class="answer-text">左心</span>至<span class="answer-text">大循环</span>，播散到<span class="answer-text">全身各器官</span><br>肉眼：各器官内均匀密布<span class="answer-text">大小一致</span>，<span class="answer-text">灰白色</span>，<span class="answer-text">圆形</span>，境界清楚的<span class="answer-text">小结节</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>99.. <strong>咳嗽变异性哮喘</strong><br>定义：非典型性哮喘发作，可以<span class="blur-text">发作性胸闷</span>或<span class="blur-text">顽固性咳嗽</span>为唯一的临床表现，无喘息症状者</td>
+                            <td>99.. <strong>咳嗽变异性哮喘</strong><br>定义：非典型性哮喘发作，可以<span class="answer-text">发作性胸闷</span>或<span class="answer-text">顽固性咳嗽</span>为唯一的临床表现，无喘息症状者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>100.. <strong>恶性胸腔积液</strong><br>定义：<span class="blur-text">恶性肿瘤</span>侵犯胸膜引起的胸腔积液<br>病因：常由<span class="blur-text">肺癌</span>、<span class="blur-text">乳腺癌</span>和<span class="blur-text">淋巴瘤</span>直接侵犯或转移至胸膜所致，也可由其他部位如<span class="blur-text">胃肠道</span>和<span class="blur-text">泌尿生殖系统</span>等肿瘤引起<br>特点：胸水多呈<span class="blur-text">血性</span>、<span class="blur-text">量大</span>、增长<span class="blur-text">迅速</span>，<span class="blur-text">CEA>20μg/L</span>，<span class="blur-text">LDH>500μ/L</span></td>
+                            <td>100.. <strong>恶性胸腔积液</strong><br>定义：<span class="answer-text">恶性肿瘤</span>侵犯胸膜引起的胸腔积液<br>病因：常由<span class="answer-text">肺癌</span>、<span class="answer-text">乳腺癌</span>和<span class="answer-text">淋巴瘤</span>直接侵犯或转移至胸膜所致，也可由其他部位如<span class="answer-text">胃肠道</span>和<span class="answer-text">泌尿生殖系统</span>等肿瘤引起<br>特点：胸水多呈<span class="answer-text">血性</span>、<span class="answer-text">量大</span>、增长<span class="answer-text">迅速</span>，<span class="answer-text">CEA>20μg/L</span>，<span class="answer-text">LDH>500μ/L</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>101.. <strong>纵隔摆动</strong><br>定义：指发生<span class="blur-text">反常呼吸运动</span>时，双侧胸腔的压力失去平衡，使纵隔随呼吸<span class="blur-text">左右移动</span>的现象</td>
+                            <td>101.. <strong>纵隔摆动</strong><br>定义：指发生<span class="answer-text">反常呼吸运动</span>时，双侧胸腔的压力失去平衡，使纵隔随呼吸<span class="answer-text">左右移动</span>的现象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>102.. <strong>矽肺</strong><br>地位：是<span class="blur-text">尘肺</span>中最严重的一种类型<br>病因：主要由于长期吸入<span class="blur-text">二氧化硅粉尘</span><br>病理：导致肺发生<span class="blur-text">弥漫性纤维化</span><br>后果：严重影响<span class="blur-text">肺功能</span>，甚至使患者丧失<span class="blur-text">劳动能力</span></td>
+                            <td>102.. <strong>矽肺</strong><br>地位：是<span class="answer-text">尘肺</span>中最严重的一种类型<br>病因：主要由于长期吸入<span class="answer-text">二氧化硅粉尘</span><br>病理：导致肺发生<span class="answer-text">弥漫性纤维化</span><br>后果：严重影响<span class="answer-text">肺功能</span>，甚至使患者丧失<span class="answer-text">劳动能力</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>103.. <strong>支气管激发试验(BPT)</strong><br>用途：用以测定<span class="blur-text">气道高反应性</span><br>标准：吸入支气管激发剂后，若<span class="blur-text">FEV1下降≥20%</span>则为阳性，是存在高反应性</td>
+                            <td>103.. <strong>支气管激发试验(BPT)</strong><br>用途：用以测定<span class="answer-text">气道高反应性</span><br>标准：吸入支气管激发剂后，若<span class="answer-text">FEV1下降≥20%</span>则为阳性，是存在高反应性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>104.. <strong>支气管舒张试验(BDT)</strong><br>用途：用以检测<span class="blur-text">气道的可逆性</span><br>标准：吸入支气管扩张剂后，若<span class="blur-text">FEV1</span>较用药之前增加<span class="blur-text">12%</span>，且绝对值增加≥<span class="blur-text">200ml</span>，则判断为阳性，提示存在<span class="blur-text">可变性气流受限</span></td>
+                            <td>104.. <strong>支气管舒张试验(BDT)</strong><br>用途：用以检测<span class="answer-text">气道的可逆性</span><br>标准：吸入支气管扩张剂后，若<span class="answer-text">FEV1</span>较用药之前增加<span class="answer-text">12%</span>，且绝对值增加≥<span class="answer-text">200ml</span>，则判断为阳性，提示存在<span class="answer-text">可变性气流受限</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>105.. <strong>类癌综合征</strong><br>机制：腺癌癌细胞胞浆内含有<span class="blur-text">神经内分泌颗粒</span>，具有<span class="blur-text">内分泌</span>和<span class="blur-text">化学受体</span>功能，能分泌<span class="blur-text">5-羟色胺</span>、<span class="blur-text">儿茶酚胺</span>、<span class="blur-text">组胺</span>、<span class="blur-text">激肽类物质</span>而引起的肺外表现</td>
+                            <td>105.. <strong>类癌综合征</strong><br>机制：腺癌癌细胞胞浆内含有<span class="answer-text">神经内分泌颗粒</span>，具有<span class="answer-text">内分泌</span>和<span class="answer-text">化学受体</span>功能，能分泌<span class="answer-text">5-羟色胺</span>、<span class="answer-text">儿茶酚胺</span>、<span class="answer-text">组胺</span>、<span class="answer-text">激肽类物质</span>而引起的肺外表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>106.. <strong>LTOT</strong><br>全称：<span class="blur-text">长期家庭氧疗</span><br>适用：对<span class="blur-text">COPD慢性呼吸衰竭</span>患者可提高生活质量和生存率<br>目标：目的是使患者在<span class="blur-text">海平面</span>，<span class="blur-text">静息状态</span>下达到<span class="blur-text">PO2大于或等于60mmHg</span>和/或<span class="blur-text">SO2升至90%</span>以上</td>
+                            <td>106.. <strong>LTOT</strong><br>全称：<span class="answer-text">长期家庭氧疗</span><br>适用：对<span class="answer-text">COPD慢性呼吸衰竭</span>患者可提高生活质量和生存率<br>目标：目的是使患者在<span class="answer-text">海平面</span>，<span class="answer-text">静息状态</span>下达到<span class="answer-text">PO2大于或等于60mmHg</span>和/或<span class="answer-text">SO2升至90%</span>以上</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

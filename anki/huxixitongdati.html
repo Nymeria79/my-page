@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">呼吸系统大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>肺动脉高压的定义，诊断标准</strong><br>定义：由<span class="blur-text">已知</span>或<span class="blur-text">未知</span>原因引起<span class="blur-text">肺动脉压异常升高</span>的病理生理状态，肺动脉高压常呈<span class="blur-text">进行性发展</span>，导致<span class="blur-text">右心负荷</span>和<span class="blur-text">右心衰竭</span><br>诊断标准：①右心导管检测得在<span class="blur-text">海平面</span>、<span class="blur-text">静息状态</span>下的<span class="blur-text">平均肺动脉压≥25mmHg</span>②常以<span class="blur-text">超声心动图</span>三尖瓣峰值流速大于<span class="blur-text">3.4m/s</span>或<span class="blur-text">肺动脉收缩压>50mmHg</span>作为肺动脉高压的临床诊断</td>
+                            <td>1.. <strong>肺动脉高压的定义，诊断标准</strong><br>定义：由<span class="answer-text">已知</span>或<span class="answer-text">未知</span>原因引起<span class="answer-text">肺动脉压异常升高</span>的病理生理状态，肺动脉高压常呈<span class="answer-text">进行性发展</span>，导致<span class="answer-text">右心负荷</span>和<span class="answer-text">右心衰竭</span><br>诊断标准：①右心导管检测得在<span class="answer-text">海平面</span>、<span class="answer-text">静息状态</span>下的<span class="answer-text">平均肺动脉压≥25mmHg</span>②常以<span class="answer-text">超声心动图</span>三尖瓣峰值流速大于<span class="answer-text">3.4m/s</span>或<span class="answer-text">肺动脉收缩压>50mmHg</span>作为肺动脉高压的临床诊断</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>肺癌病理分型(英文)</strong><br>①<span class="blur-text">鳞状细胞癌</span>：肺癌中最常见的类型之一，其中<span class="blur-text">80%~85%</span>为<span class="blur-text">中央型肺癌</span>，患者绝大多数为<span class="blur-text">中老年男性</span>，且大多有<span class="blur-text">吸烟史</span><br>②<span class="blur-text">腺癌</span>：是女性肺癌最常见的类型，多为<span class="blur-text">非吸烟者</span>，多为<span class="blur-text">周围型肺癌</span><br>③<span class="blur-text">大细胞癌</span>：肿瘤体积<span class="blur-text">大</span>，高度<span class="blur-text">异型性</span><br>④<span class="blur-text">神经内分泌癌</span>：包括<span class="blur-text">小细胞癌</span>、<span class="blur-text">大细胞神经内分泌癌</span>和<span class="blur-text">类癌</span>等。小细胞癌患者多为<span class="blur-text">男性</span>，且与<span class="blur-text">吸烟</span>密切相关<br>⑤<span class="blur-text">腺鳞癌</span>：较少见，癌组织内含有<span class="blur-text">腺癌</span>和<span class="blur-text">鳞癌</span>两种成分</td>
+                            <td>2.. <strong>肺癌病理分型(英文)</strong><br>①<span class="answer-text">鳞状细胞癌</span>：肺癌中最常见的类型之一，其中<span class="answer-text">80%~85%</span>为<span class="answer-text">中央型肺癌</span>，患者绝大多数为<span class="answer-text">中老年男性</span>，且大多有<span class="answer-text">吸烟史</span><br>②<span class="answer-text">腺癌</span>：是女性肺癌最常见的类型，多为<span class="answer-text">非吸烟者</span>，多为<span class="answer-text">周围型肺癌</span><br>③<span class="answer-text">大细胞癌</span>：肿瘤体积<span class="answer-text">大</span>，高度<span class="answer-text">异型性</span><br>④<span class="answer-text">神经内分泌癌</span>：包括<span class="answer-text">小细胞癌</span>、<span class="answer-text">大细胞神经内分泌癌</span>和<span class="answer-text">类癌</span>等。小细胞癌患者多为<span class="answer-text">男性</span>，且与<span class="answer-text">吸烟</span>密切相关<br>⑤<span class="answer-text">腺鳞癌</span>：较少见，癌组织内含有<span class="answer-text">腺癌</span>和<span class="answer-text">鳞癌</span>两种成分</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>继发性肺结核</strong><br>①<span class="blur-text">浸润性肺结核</span>：是成人肺结核中最常见的类型，临床症状较多，<span class="blur-text">发热</span>、<span class="blur-text">咳嗽</span>、<span class="blur-text">咳痰</span>和<span class="blur-text">咯血</span>等，<span class="blur-text">空洞性肺结核</span>病人痰中排菌量大，涂片检查抗酸杆菌常呈阳性<br>②<span class="blur-text">干酪性肺炎</span>：多发生在<span class="blur-text">免疫力</span>和<span class="blur-text">体质</span>都衰弱的病人，当受到<span class="blur-text">大量结核分支杆菌</span>感染时而发病<br>③<span class="blur-text">慢性纤维空洞性肺结核</span>：特点是<span class="blur-text">病程长</span>，<span class="blur-text">反复进展</span>、<span class="blur-text">恶化</span>，肺组织破坏<span class="blur-text">多</span>，肺功能受损<span class="blur-text">严重</span><br>④<span class="blur-text">结核球</span>：多由<span class="blur-text">干酪样病变</span>吸收不完全，周边<span class="blur-text">纤维膜包裹</span>或<span class="blur-text">干酪空洞阻塞性愈合</span>而成，常<span class="blur-text">无症状</span>或<span class="blur-text">轻微症状</span></td>
+                            <td>3.. <strong>继发性肺结核</strong><br>①<span class="answer-text">浸润性肺结核</span>：是成人肺结核中最常见的类型，临床症状较多，<span class="answer-text">发热</span>、<span class="answer-text">咳嗽</span>、<span class="answer-text">咳痰</span>和<span class="answer-text">咯血</span>等，<span class="answer-text">空洞性肺结核</span>病人痰中排菌量大，涂片检查抗酸杆菌常呈阳性<br>②<span class="answer-text">干酪性肺炎</span>：多发生在<span class="answer-text">免疫力</span>和<span class="answer-text">体质</span>都衰弱的病人，当受到<span class="answer-text">大量结核分支杆菌</span>感染时而发病<br>③<span class="answer-text">慢性纤维空洞性肺结核</span>：特点是<span class="answer-text">病程长</span>，<span class="answer-text">反复进展</span>、<span class="answer-text">恶化</span>，肺组织破坏<span class="answer-text">多</span>，肺功能受损<span class="answer-text">严重</span><br>④<span class="answer-text">结核球</span>：多由<span class="answer-text">干酪样病变</span>吸收不完全，周边<span class="answer-text">纤维膜包裹</span>或<span class="answer-text">干酪空洞阻塞性愈合</span>而成，常<span class="answer-text">无症状</span>或<span class="answer-text">轻微症状</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>简述结核的临床分型</strong><br>①<span class="blur-text">原发型肺结核</span>②<span class="blur-text">血行播散型肺结核</span>③<span class="blur-text">继发性肺结核</span>(包括<span class="blur-text">浸润型肺结核</span>，<span class="blur-text">空洞性肺结核</span>，<span class="blur-text">结核球</span>，<span class="blur-text">干酪样肺炎</span>，<span class="blur-text">纤维空洞型肺结核</span>)④<span class="blur-text">结核性胸膜炎</span>⑤<span class="blur-text">其他肺外结核</span><br>细分：其中血型播散型肺结核又分为<span class="blur-text">急性粟粒性肺结核</span>和<span class="blur-text">亚急性血型播散型肺结核</span>，结核性胸膜炎又分为<span class="blur-text">干性胸膜炎</span>和<span class="blur-text">渗出性胸膜炎</span></td>
+                            <td>4.. <strong>简述结核的临床分型</strong><br>①<span class="answer-text">原发型肺结核</span>②<span class="answer-text">血行播散型肺结核</span>③<span class="answer-text">继发性肺结核</span>(包括<span class="answer-text">浸润型肺结核</span>，<span class="answer-text">空洞性肺结核</span>，<span class="answer-text">结核球</span>，<span class="answer-text">干酪样肺炎</span>，<span class="answer-text">纤维空洞型肺结核</span>)④<span class="answer-text">结核性胸膜炎</span>⑤<span class="answer-text">其他肺外结核</span><br>细分：其中血型播散型肺结核又分为<span class="answer-text">急性粟粒性肺结核</span>和<span class="answer-text">亚急性血型播散型肺结核</span>，结核性胸膜炎又分为<span class="answer-text">干性胸膜炎</span>和<span class="answer-text">渗出性胸膜炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>开胸指征</strong><br>①<span class="blur-text">进行性血胸</span>②<span class="blur-text">心脏大血管损伤</span>③<span class="blur-text">严重肺裂伤</span>④<span class="blur-text">气管、支气管损伤</span>⑤<span class="blur-text">食管破裂</span>⑥<span class="blur-text">胸腹联合伤</span>⑦<span class="blur-text">胸壁大块缺损</span>⑧<span class="blur-text">胸内存留较大的异物</span></td>
+                            <td>5.. <strong>开胸指征</strong><br>①<span class="answer-text">进行性血胸</span>②<span class="answer-text">心脏大血管损伤</span>③<span class="answer-text">严重肺裂伤</span>④<span class="answer-text">气管、支气管损伤</span>⑤<span class="answer-text">食管破裂</span>⑥<span class="answer-text">胸腹联合伤</span>⑦<span class="answer-text">胸壁大块缺损</span>⑧<span class="answer-text">胸内存留较大的异物</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>哮喘药物分类</strong><br>①<span class="blur-text">支气管扩张药</span>：<span class="blur-text">肾上腺素受体激动药</span>包括选择性或非选择性的<span class="blur-text">β2肾上腺素受体激动药</span>。<span class="blur-text">茶碱类</span>如<span class="blur-text">氨茶碱</span>。<span class="blur-text">抗胆碱药物</span>如<span class="blur-text">异丙托溴铵</span><br>②<span class="blur-text">抗炎性平喘药</span>：包括<span class="blur-text">糖皮质激素类</span>和<span class="blur-text">抗白三烯药物</span><br>③<span class="blur-text">抗过敏平喘药</span>：如<span class="blur-text">色甘酸钠</span>、<span class="blur-text">酮替芬</span>等</td>
+                            <td>6.. <strong>哮喘药物分类</strong><br>①<span class="answer-text">支气管扩张药</span>：<span class="answer-text">肾上腺素受体激动药</span>包括选择性或非选择性的<span class="answer-text">β2肾上腺素受体激动药</span>。<span class="answer-text">茶碱类</span>如<span class="answer-text">氨茶碱</span>。<span class="answer-text">抗胆碱药物</span>如<span class="answer-text">异丙托溴铵</span><br>②<span class="answer-text">抗炎性平喘药</span>：包括<span class="answer-text">糖皮质激素类</span>和<span class="answer-text">抗白三烯药物</span><br>③<span class="answer-text">抗过敏平喘药</span>：如<span class="answer-text">色甘酸钠</span>、<span class="answer-text">酮替芬</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>(社区性)肺炎诊断标准</strong><br>前提：在<span class="blur-text">医院外</span>发病或虽已入院但在致病病原体<span class="blur-text">潜伏期</span>内发病的患者<br>标准：符合以下①~④四项中的<span class="blur-text">任何一项</span>加第⑤项，并除外其他疾病<br>①新近出现的<span class="blur-text">咳嗽</span>、<span class="blur-text">咳痰</span>或原有呼吸道疾病症状加重，并出现<span class="blur-text">脓性痰</span>，伴或不伴<span class="blur-text">胸痛</span><br>②<span class="blur-text">发热</span><br>③<span class="blur-text">肺实变体征</span>和/或闻及<span class="blur-text">湿罗音</span><br>④<span class="blur-text">WBC>10×10^9/L</span>或<span class="blur-text"><4×10^9/L</span>，伴或不伴<span class="blur-text">中性粒细胞核左移</span><br>⑤<span class="blur-text">胸部X线</span>检查显示<span class="blur-text">片状</span>，<span class="blur-text">斑片状</span>，浸润性阴影或间质性改变伴或不伴<span class="blur-text">胸腔积液</span></td>
+                            <td>7.. <strong>(社区性)肺炎诊断标准</strong><br>前提：在<span class="answer-text">医院外</span>发病或虽已入院但在致病病原体<span class="answer-text">潜伏期</span>内发病的患者<br>标准：符合以下①~④四项中的<span class="answer-text">任何一项</span>加第⑤项，并除外其他疾病<br>①新近出现的<span class="answer-text">咳嗽</span>、<span class="answer-text">咳痰</span>或原有呼吸道疾病症状加重，并出现<span class="answer-text">脓性痰</span>，伴或不伴<span class="answer-text">胸痛</span><br>②<span class="answer-text">发热</span><br>③<span class="answer-text">肺实变体征</span>和/或闻及<span class="answer-text">湿罗音</span><br>④<span class="answer-text">WBC>10×10^9/L</span>或<span class="answer-text"><4×10^9/L</span>，伴或不伴<span class="answer-text">中性粒细胞核左移</span><br>⑤<span class="answer-text">胸部X线</span>检查显示<span class="answer-text">片状</span>，<span class="answer-text">斑片状</span>，浸润性阴影或间质性改变伴或不伴<span class="answer-text">胸腔积液</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>支气管哮喘诊断标准</strong><br>(1)具有典型<span class="blur-text">可变性呼吸道症状</span>病史：①超过<span class="blur-text">一个症状</span>(<span class="blur-text">喘息</span>、<span class="blur-text">气短</span>、<span class="blur-text">胸闷</span>和<span class="blur-text">咳嗽</span>)尤其是成人患者②<span class="blur-text">夜间</span>或<span class="blur-text">早晨</span>常常加重③症状表现和程度<span class="blur-text">随时间变化</span>④<span class="blur-text">呼吸道病毒感染</span>，<span class="blur-text">锻炼</span>，<span class="blur-text">接触过敏原</span>，<span class="blur-text">天气变化</span>或<span class="blur-text">刺激物</span>触发<br>(2)确定<span class="blur-text">可变性呼气气流受限</span>(至少一项肺功能阳性)：①<span class="blur-text">支气管激发试验阳性</span>②<span class="blur-text">支气管舒张试验阳性</span>③<span class="blur-text">昼夜PEF变异率≥20%</span>，需除外<span class="blur-text">呼吸道感染</span></td>
+                            <td>8.. <strong>支气管哮喘诊断标准</strong><br>(1)具有典型<span class="answer-text">可变性呼吸道症状</span>病史：①超过<span class="answer-text">一个症状</span>(<span class="answer-text">喘息</span>、<span class="answer-text">气短</span>、<span class="answer-text">胸闷</span>和<span class="answer-text">咳嗽</span>)尤其是成人患者②<span class="answer-text">夜间</span>或<span class="answer-text">早晨</span>常常加重③症状表现和程度<span class="answer-text">随时间变化</span>④<span class="answer-text">呼吸道病毒感染</span>，<span class="answer-text">锻炼</span>，<span class="answer-text">接触过敏原</span>，<span class="answer-text">天气变化</span>或<span class="answer-text">刺激物</span>触发<br>(2)确定<span class="answer-text">可变性呼气气流受限</span>(至少一项肺功能阳性)：①<span class="answer-text">支气管激发试验阳性</span>②<span class="answer-text">支气管舒张试验阳性</span>③<span class="answer-text">昼夜PEF变异率≥20%</span>，需除外<span class="answer-text">呼吸道感染</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>肺气肿病理改变</strong><br>①肉眼观：肺组织<span class="blur-text">显著膨大</span>，<span class="blur-text">灰白</span>，边缘<span class="blur-text">钝圆</span>，柔软而弹性差，指压后压痕<span class="blur-text">不易消退</span><br>②切面：肺泡腔<span class="blur-text">扩大</span>，呈<span class="blur-text">小囊泡状</span><br>③镜下：<span class="blur-text">终末细支气管</span>以远的肺组织包括<span class="blur-text">呼吸性细支气管</span>，<span class="blur-text">肺泡管</span>，<span class="blur-text">肺泡囊</span>，肺泡扩张，肺泡间隔<span class="blur-text">变窄</span>，肺泡间隔<span class="blur-text">断裂</span>，肺泡孔<span class="blur-text">扩大</span>，扩张的肺泡融合成较大的囊腔<br>④肺<span class="blur-text">毛细血管床</span>明显减少，肺<span class="blur-text">小动脉</span>内膜<span class="blur-text">纤维增生</span>，<span class="blur-text">增厚</span>，小支气管和细支气管可见<span class="blur-text">慢性炎症</span>。较大的融合性气肿囊腔内，有时还可见到间质和肺小血管的<span class="blur-text">悬梁</span></td>
+                            <td>9.. <strong>肺气肿病理改变</strong><br>①肉眼观：肺组织<span class="answer-text">显著膨大</span>，<span class="answer-text">灰白</span>，边缘<span class="answer-text">钝圆</span>，柔软而弹性差，指压后压痕<span class="answer-text">不易消退</span><br>②切面：肺泡腔<span class="answer-text">扩大</span>，呈<span class="answer-text">小囊泡状</span><br>③镜下：<span class="answer-text">终末细支气管</span>以远的肺组织包括<span class="answer-text">呼吸性细支气管</span>，<span class="answer-text">肺泡管</span>，<span class="answer-text">肺泡囊</span>，肺泡扩张，肺泡间隔<span class="answer-text">变窄</span>，肺泡间隔<span class="answer-text">断裂</span>，肺泡孔<span class="answer-text">扩大</span>，扩张的肺泡融合成较大的囊腔<br>④肺<span class="answer-text">毛细血管床</span>明显减少，肺<span class="answer-text">小动脉</span>内膜<span class="answer-text">纤维增生</span>，<span class="answer-text">增厚</span>，小支气管和细支气管可见<span class="answer-text">慢性炎症</span>。较大的融合性气肿囊腔内，有时还可见到间质和肺小血管的<span class="answer-text">悬梁</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>阻塞性肺气肿按部位分类</strong><br>①<span class="blur-text">腺泡中央型</span>肺气肿：位于肺腺泡中央区的<span class="blur-text">呼吸细支气管</span>呈囊状扩张，而<span class="blur-text">肺泡管</span>，<span class="blur-text">肺泡囊</span>变化不明显<br>②<span class="blur-text">腺泡周围型</span>肺气肿：肺腺泡远侧端的<span class="blur-text">肺泡管</span>和<span class="blur-text">肺泡囊</span>扩张，而近侧端的<span class="blur-text">呼吸细支气管</span>基本正常<br>③<span class="blur-text">全腺泡型</span>肺气肿：肺腺泡的各个部位，包括<span class="blur-text">呼吸细支气管</span>，<span class="blur-text">肺泡囊</span>和<span class="blur-text">肺泡</span>均发生扩张，气肿小腔遍布于肺腺泡内</td>
+                            <td>10.. <strong>阻塞性肺气肿按部位分类</strong><br>①<span class="answer-text">腺泡中央型</span>肺气肿：位于肺腺泡中央区的<span class="answer-text">呼吸细支气管</span>呈囊状扩张，而<span class="answer-text">肺泡管</span>，<span class="answer-text">肺泡囊</span>变化不明显<br>②<span class="answer-text">腺泡周围型</span>肺气肿：肺腺泡远侧端的<span class="answer-text">肺泡管</span>和<span class="answer-text">肺泡囊</span>扩张，而近侧端的<span class="answer-text">呼吸细支气管</span>基本正常<br>③<span class="answer-text">全腺泡型</span>肺气肿：肺腺泡的各个部位，包括<span class="answer-text">呼吸细支气管</span>，<span class="answer-text">肺泡囊</span>和<span class="answer-text">肺泡</span>均发生扩张，气肿小腔遍布于肺腺泡内</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>大叶性肺炎X线征象</strong><br>①<span class="blur-text">充血期</span>：X线可表现<span class="blur-text">正常</span>，或仅表现为局部肺纹理<span class="blur-text">增多增粗</span>或<span class="blur-text">透亮度减低</span><br>②<span class="blur-text">红色肝样变</span>和<span class="blur-text">灰色肝变期</span>(<span class="blur-text">实变期</span>)：X线表现为大片<span class="blur-text">实变影</span>，内见<span class="blur-text">支气管充气征</span>，肺叶实变以<span class="blur-text">叶间裂</span>为界，边缘清晰<br>③<span class="blur-text">消散期</span>：X线表现为肺实变密度<span class="blur-text">减低</span>，呈散在的<span class="blur-text">斑片状阴影</span>，病变区恢复<span class="blur-text">充气</span>，最后实变消失</td>
+                            <td>11.. <strong>大叶性肺炎X线征象</strong><br>①<span class="answer-text">充血期</span>：X线可表现<span class="answer-text">正常</span>，或仅表现为局部肺纹理<span class="answer-text">增多增粗</span>或<span class="answer-text">透亮度减低</span><br>②<span class="answer-text">红色肝样变</span>和<span class="answer-text">灰色肝变期</span>(<span class="answer-text">实变期</span>)：X线表现为大片<span class="answer-text">实变影</span>，内见<span class="answer-text">支气管充气征</span>，肺叶实变以<span class="answer-text">叶间裂</span>为界，边缘清晰<br>③<span class="answer-text">消散期</span>：X线表现为肺实变密度<span class="answer-text">减低</span>，呈散在的<span class="answer-text">斑片状阴影</span>，病变区恢复<span class="answer-text">充气</span>，最后实变消失</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">12.. <strong>比较大、小叶性肺炎(病因，病理特征，临床表现，并发症)</strong><br>图略</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>13.. <strong>语音震颤及减弱/增强的意义</strong><br>(1)语音震颤：为被检查者发出<span class="blur-text">语音</span>时，声波起源于<span class="blur-text">喉部</span>，沿<span class="blur-text">气管</span>、<span class="blur-text">支气管</span>及<span class="blur-text">肺泡</span>，传到<span class="blur-text">胸壁</span>所引起共鸣的振动，可由检查者的手触及，故又称<span class="blur-text">触觉语颤</span><br>(2)减弱的意义：①肺泡内含气量过多，如<span class="blur-text">慢性阻塞性肺疾病</span>②支气管阻塞，如<span class="blur-text">阻塞性肺不张</span>③大量<span class="blur-text">胸腔积液</span>或<span class="blur-text">气肿</span>④胸膜显著<span class="blur-text">增厚</span>、<span class="blur-text">粘连</span>⑤胸壁<span class="blur-text">皮下气肿</span><br>(3)增强的意义：①肺泡内有<span class="blur-text">炎症浸润</span>，因肺组织<span class="blur-text">实变</span>使语音传导良好，如<span class="blur-text">大叶性肺炎实变期</span>，<span class="blur-text">大片肺梗死</span>等②接近胸膜的肺内<span class="blur-text">巨大空腔</span>，声波在空洞内产生<span class="blur-text">共鸣</span>，如<span class="blur-text">空洞性肺结核</span>，<span class="blur-text">肺脓肿</span>等</td>
+                            <td>13.. <strong>语音震颤及减弱/增强的意义</strong><br>(1)语音震颤：为被检查者发出<span class="answer-text">语音</span>时，声波起源于<span class="answer-text">喉部</span>，沿<span class="answer-text">气管</span>、<span class="answer-text">支气管</span>及<span class="answer-text">肺泡</span>，传到<span class="answer-text">胸壁</span>所引起共鸣的振动，可由检查者的手触及，故又称<span class="answer-text">触觉语颤</span><br>(2)减弱的意义：①肺泡内含气量过多，如<span class="answer-text">慢性阻塞性肺疾病</span>②支气管阻塞，如<span class="answer-text">阻塞性肺不张</span>③大量<span class="answer-text">胸腔积液</span>或<span class="answer-text">气肿</span>④胸膜显著<span class="answer-text">增厚</span>、<span class="answer-text">粘连</span>⑤胸壁<span class="answer-text">皮下气肿</span><br>(3)增强的意义：①肺泡内有<span class="answer-text">炎症浸润</span>，因肺组织<span class="answer-text">实变</span>使语音传导良好，如<span class="answer-text">大叶性肺炎实变期</span>，<span class="answer-text">大片肺梗死</span>等②接近胸膜的肺内<span class="answer-text">巨大空腔</span>，声波在空洞内产生<span class="answer-text">共鸣</span>，如<span class="answer-text">空洞性肺结核</span>，<span class="answer-text">肺脓肿</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>14.. <strong>慢阻肺与支气管哮喘的鉴别要点</strong><br>①慢阻肺多为<span class="blur-text">中年</span>发病，症状<span class="blur-text">缓慢进展</span>，气流受限<span class="blur-text">不可逆</span>，多有长期<span class="blur-text">吸烟史</span>；哮喘多为<span class="blur-text">儿童</span>或<span class="blur-text">青少年期</span>起病，症状<span class="blur-text">起伏大</span>，常伴有<span class="blur-text">过敏史</span>、<span class="blur-text">鼻炎</span>等，部分病人有<span class="blur-text">哮喘家族史</span>，大多数哮喘病人的气流受限有显著的<span class="blur-text">可逆性</span>，合理吸入<span class="blur-text">糖皮质激素</span>等药物常能有效控制病情<br>②哮喘的气道炎症细胞是<span class="blur-text">淋巴细胞</span>、<span class="blur-text">酸性粒细胞</span>浸润为主，而慢阻肺的气道炎症多以<span class="blur-text">中性粒细胞</span>为主</td>
+                            <td>14.. <strong>慢阻肺与支气管哮喘的鉴别要点</strong><br>①慢阻肺多为<span class="answer-text">中年</span>发病，症状<span class="answer-text">缓慢进展</span>，气流受限<span class="answer-text">不可逆</span>，多有长期<span class="answer-text">吸烟史</span>；哮喘多为<span class="answer-text">儿童</span>或<span class="answer-text">青少年期</span>起病，症状<span class="answer-text">起伏大</span>，常伴有<span class="answer-text">过敏史</span>、<span class="answer-text">鼻炎</span>等，部分病人有<span class="answer-text">哮喘家族史</span>，大多数哮喘病人的气流受限有显著的<span class="answer-text">可逆性</span>，合理吸入<span class="answer-text">糖皮质激素</span>等药物常能有效控制病情<br>②哮喘的气道炎症细胞是<span class="answer-text">淋巴细胞</span>、<span class="answer-text">酸性粒细胞</span>浸润为主，而慢阻肺的气道炎症多以<span class="answer-text">中性粒细胞</span>为主</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>15.. <strong>支气管扩张患者大咯血的处理</strong><br>①预防<span class="blur-text">咯血窒息</span>，大咯血时首先应保证<span class="blur-text">气道通畅</span><br>②药物治疗：首选<span class="blur-text">垂体后叶素</span><br>③<span class="blur-text">介入治疗</span>或<span class="blur-text">外科手术治疗</span>，内科药物保守治疗无效时，<span class="blur-text">支气管动脉栓塞术</span>和/或手术是大咯血的一线治疗方法</td>
+                            <td>15.. <strong>支气管扩张患者大咯血的处理</strong><br>①预防<span class="answer-text">咯血窒息</span>，大咯血时首先应保证<span class="answer-text">气道通畅</span><br>②药物治疗：首选<span class="answer-text">垂体后叶素</span><br>③<span class="answer-text">介入治疗</span>或<span class="answer-text">外科手术治疗</span>，内科药物保守治疗无效时，<span class="answer-text">支气管动脉栓塞术</span>和/或手术是大咯血的一线治疗方法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>16.. <strong>简述支气管扩张症急性发作的治疗</strong><br>①主要是<span class="blur-text">抗生素治疗</span>：选择合适的<span class="blur-text">抗生素</span><br>②<span class="blur-text">化痰治疗</span>：<span class="blur-text">抗氧化祛痰药物</span>，<span class="blur-text">黏液松解剂</span>和<span class="blur-text">纤毛促排剂</span><br>③<span class="blur-text">支持治疗</span>：低氧时<span class="blur-text">吸氧</span>，有气管痉挛或气道阻塞证据时应用<span class="blur-text">短效支气管扩张剂</span><br>④<span class="blur-text">免疫调节药物</span>：细菌细胞壁裂解产物可以促进呼吸道免疫功能的增强<br>⑤<span class="blur-text">基础疾病</span>和<span class="blur-text">对症治疗</span>，咯血时应用<span class="blur-text">止血药物</span>，大咯血时采用<span class="blur-text">垂体后叶素</span>缩血管等，必要时<span class="blur-text">肺动脉介入栓塞</span></td>
+                            <td>16.. <strong>简述支气管扩张症急性发作的治疗</strong><br>①主要是<span class="answer-text">抗生素治疗</span>：选择合适的<span class="answer-text">抗生素</span><br>②<span class="answer-text">化痰治疗</span>：<span class="answer-text">抗氧化祛痰药物</span>，<span class="answer-text">黏液松解剂</span>和<span class="answer-text">纤毛促排剂</span><br>③<span class="answer-text">支持治疗</span>：低氧时<span class="answer-text">吸氧</span>，有气管痉挛或气道阻塞证据时应用<span class="answer-text">短效支气管扩张剂</span><br>④<span class="answer-text">免疫调节药物</span>：细菌细胞壁裂解产物可以促进呼吸道免疫功能的增强<br>⑤<span class="answer-text">基础疾病</span>和<span class="answer-text">对症治疗</span>，咯血时应用<span class="answer-text">止血药物</span>，大咯血时采用<span class="answer-text">垂体后叶素</span>缩血管等，必要时<span class="answer-text">肺动脉介入栓塞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>17.. <strong>支气管哮喘急性发作期重至危重度治疗</strong><br>①持续雾化吸入<span class="blur-text">短效β2肾上腺素受体激动剂</span><br>②持续吸入<span class="blur-text">短效抗胆碱药</span><br>③尽早<span class="blur-text">静脉滴注糖皮质激素</span><br>④<span class="blur-text">静脉滴注氨茶碱</span><br>⑤维持<span class="blur-text">内环境平衡</span>，<span class="blur-text">水</span>，<span class="blur-text">电解质</span>，<span class="blur-text">酸碱平衡</span>，<span class="blur-text">pH<7.2</span>，且合并<span class="blur-text">代谢性酸中毒</span>，需<span class="blur-text">补碱</span>；机械通气指征：<span class="blur-text">呼吸肌疲劳</span>，<span class="blur-text">PaCO2≥45mmHg</span>，<span class="blur-text">意识改变</span>，<span class="blur-text">无创通气</span>或<span class="blur-text">开放气道有创通气</span>；<span class="blur-text">抗生素</span>，预防下呼吸道感染</td>
+                            <td>17.. <strong>支气管哮喘急性发作期重至危重度治疗</strong><br>①持续雾化吸入<span class="answer-text">短效β2肾上腺素受体激动剂</span><br>②持续吸入<span class="answer-text">短效抗胆碱药</span><br>③尽早<span class="answer-text">静脉滴注糖皮质激素</span><br>④<span class="answer-text">静脉滴注氨茶碱</span><br>⑤维持<span class="answer-text">内环境平衡</span>，<span class="answer-text">水</span>，<span class="answer-text">电解质</span>，<span class="answer-text">酸碱平衡</span>，<span class="answer-text">pH<7.2</span>，且合并<span class="answer-text">代谢性酸中毒</span>，需<span class="answer-text">补碱</span>；机械通气指征：<span class="answer-text">呼吸肌疲劳</span>，<span class="answer-text">PaCO2≥45mmHg</span>，<span class="answer-text">意识改变</span>，<span class="answer-text">无创通气</span>或<span class="answer-text">开放气道有创通气</span>；<span class="answer-text">抗生素</span>，预防下呼吸道感染</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>18.. <strong>简述支气管肺癌的临床表现</strong><br>①原发肿瘤引起的症状有<span class="blur-text">咳嗽</span>、<span class="blur-text">咯血</span>、<span class="blur-text">气短</span>或<span class="blur-text">喘鸣</span>、<span class="blur-text">发热</span>、<span class="blur-text">消瘦</span>等<br>②肿瘤压迫或侵犯邻近器官的症状和体征：<span class="blur-text">胸痛</span>、<span class="blur-text">声音嘶哑</span>、<span class="blur-text">吞咽困难</span>、<span class="blur-text">胸腔积液</span>、<span class="blur-text">心包积液</span>、<span class="blur-text">上腔静脉阻塞综合征</span>和<span class="blur-text">霍纳综合征</span>等<br>③远处转移，如<span class="blur-text">中枢神经系统</span>症状、<span class="blur-text">骨骼</span>、<span class="blur-text">腹部</span>、<span class="blur-text">淋巴结</span>而引起的相应表现<br>④肺外表现：内分泌综合征如<span class="blur-text">抗利尿激素分泌异常综合征</span>、<span class="blur-text">异位ACTH综合征</span>、<span class="blur-text">高钙血症</span>、<span class="blur-text">男性乳房发育</span>等；骨骼-结缔组织综合症，如<span class="blur-text">肥大性肺性骨关节病</span>、<span class="blur-text">神经-肌病综合征</span>；血液学异常，如<span class="blur-text">游走性血栓性静脉炎</span>、<span class="blur-text">播散性血管内凝血</span>伴出血、<span class="blur-text">贫血</span>等。其他还有<span class="blur-text">皮肌炎</span>等</td>
+                            <td>18.. <strong>简述支气管肺癌的临床表现</strong><br>①原发肿瘤引起的症状有<span class="answer-text">咳嗽</span>、<span class="answer-text">咯血</span>、<span class="answer-text">气短</span>或<span class="answer-text">喘鸣</span>、<span class="answer-text">发热</span>、<span class="answer-text">消瘦</span>等<br>②肿瘤压迫或侵犯邻近器官的症状和体征：<span class="answer-text">胸痛</span>、<span class="answer-text">声音嘶哑</span>、<span class="answer-text">吞咽困难</span>、<span class="answer-text">胸腔积液</span>、<span class="answer-text">心包积液</span>、<span class="answer-text">上腔静脉阻塞综合征</span>和<span class="answer-text">霍纳综合征</span>等<br>③远处转移，如<span class="answer-text">中枢神经系统</span>症状、<span class="answer-text">骨骼</span>、<span class="answer-text">腹部</span>、<span class="answer-text">淋巴结</span>而引起的相应表现<br>④肺外表现：内分泌综合征如<span class="answer-text">抗利尿激素分泌异常综合征</span>、<span class="answer-text">异位ACTH综合征</span>、<span class="answer-text">高钙血症</span>、<span class="answer-text">男性乳房发育</span>等；骨骼-结缔组织综合症，如<span class="answer-text">肥大性肺性骨关节病</span>、<span class="answer-text">神经-肌病综合征</span>；血液学异常，如<span class="answer-text">游走性血栓性静脉炎</span>、<span class="answer-text">播散性血管内凝血</span>伴出血、<span class="answer-text">贫血</span>等。其他还有<span class="answer-text">皮肌炎</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>19.. <strong>简述中央型肺癌的X线表现</strong><br>定义：中央型肺癌是肿瘤生长在<span class="blur-text">主支气管</span>、<span class="blur-text">叶</span>或<span class="blur-text">段支气管</span><br>①直接征象：向管腔内生长可引起<span class="blur-text">支气管阻塞征象</span>。多为一侧<span class="blur-text">肺门类圆形阴影</span>，边缘<span class="blur-text">毛糙</span>，可有<span class="blur-text">分叶</span>或<span class="blur-text">切迹</span>，与<span class="blur-text">肺不张</span>或<span class="blur-text">阻塞性肺炎</span>并存时，下缘可表现为<span class="blur-text">倒S状影像</span>，是<span class="blur-text">右上叶中央型肺癌</span>的典型征象<br>②间接征象：由于肿瘤在支气管内生长，可使支气管<span class="blur-text">部分</span>或<span class="blur-text">完全阻塞</span>，形成<span class="blur-text">局限性肺气肿</span>、<span class="blur-text">肺不张</span>、<span class="blur-text">阻塞性肺炎</span>和<span class="blur-text">继发性肺脓肿</span>等征象</td>
+                            <td>19.. <strong>简述中央型肺癌的X线表现</strong><br>定义：中央型肺癌是肿瘤生长在<span class="answer-text">主支气管</span>、<span class="answer-text">叶</span>或<span class="answer-text">段支气管</span><br>①直接征象：向管腔内生长可引起<span class="answer-text">支气管阻塞征象</span>。多为一侧<span class="answer-text">肺门类圆形阴影</span>，边缘<span class="answer-text">毛糙</span>，可有<span class="answer-text">分叶</span>或<span class="answer-text">切迹</span>，与<span class="answer-text">肺不张</span>或<span class="answer-text">阻塞性肺炎</span>并存时，下缘可表现为<span class="answer-text">倒S状影像</span>，是<span class="answer-text">右上叶中央型肺癌</span>的典型征象<br>②间接征象：由于肿瘤在支气管内生长，可使支气管<span class="answer-text">部分</span>或<span class="answer-text">完全阻塞</span>，形成<span class="answer-text">局限性肺气肿</span>、<span class="answer-text">肺不张</span>、<span class="answer-text">阻塞性肺炎</span>和<span class="answer-text">继发性肺脓肿</span>等征象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>20.. <strong>简述周围型肺癌的X线表现</strong><br>定义：周围型肺癌是肿瘤发生在<span class="blur-text">段以下支气管</span><br>①早期多呈局限性<span class="blur-text">小斑片状阴影</span>，边缘<span class="blur-text">不清</span>，密度<span class="blur-text">较淡</span>，也可呈<span class="blur-text">结节</span>、<span class="blur-text">球状</span>、<span class="blur-text">网状阴影</span>或<span class="blur-text">磨玻璃影</span>，易误诊为<span class="blur-text">炎症</span>或<span class="blur-text">结核</span><br>②随着肿瘤增大，阴影逐渐增大，密度<span class="blur-text">增高</span>，呈<span class="blur-text">圆形</span>或<span class="blur-text">类圆形</span>，边缘常呈<span class="blur-text">分叶状</span>，伴有<span class="blur-text">脐凹征</span>或<span class="blur-text">细毛刺</span>，常有<span class="blur-text">胸膜牵拉</span><br>③如肿瘤向<span class="blur-text">肺门淋巴结</span>转移，可见<span class="blur-text">引流淋巴管</span>增粗成呈条索状阴影伴<span class="blur-text">肺门淋巴结增大</span><br>④癌组织坏死与支气管相通后，表现为<span class="blur-text">厚壁</span>、<span class="blur-text">偏心</span>、内缘<span class="blur-text">凹凸不平</span>的<span class="blur-text">癌性空洞</span><br>⑤继发感染时，空洞内可出现<span class="blur-text">液平</span><br>⑥腺癌经支气管播散后，可表现为类似<span class="blur-text">支气管肺炎</span>的斑片状浸润阴影<br>⑦侵犯胸膜时可引起<span class="blur-text">胸腔积液</span>。侵犯肋骨则引起<span class="blur-text">骨质破坏</span></td>
+                            <td>20.. <strong>简述周围型肺癌的X线表现</strong><br>定义：周围型肺癌是肿瘤发生在<span class="answer-text">段以下支气管</span><br>①早期多呈局限性<span class="answer-text">小斑片状阴影</span>，边缘<span class="answer-text">不清</span>，密度<span class="answer-text">较淡</span>，也可呈<span class="answer-text">结节</span>、<span class="answer-text">球状</span>、<span class="answer-text">网状阴影</span>或<span class="answer-text">磨玻璃影</span>，易误诊为<span class="answer-text">炎症</span>或<span class="answer-text">结核</span><br>②随着肿瘤增大，阴影逐渐增大，密度<span class="answer-text">增高</span>，呈<span class="answer-text">圆形</span>或<span class="answer-text">类圆形</span>，边缘常呈<span class="answer-text">分叶状</span>，伴有<span class="answer-text">脐凹征</span>或<span class="answer-text">细毛刺</span>，常有<span class="answer-text">胸膜牵拉</span><br>③如肿瘤向<span class="answer-text">肺门淋巴结</span>转移，可见<span class="answer-text">引流淋巴管</span>增粗成呈条索状阴影伴<span class="answer-text">肺门淋巴结增大</span><br>④癌组织坏死与支气管相通后，表现为<span class="answer-text">厚壁</span>、<span class="answer-text">偏心</span>、内缘<span class="answer-text">凹凸不平</span>的<span class="answer-text">癌性空洞</span><br>⑤继发感染时，空洞内可出现<span class="answer-text">液平</span><br>⑥腺癌经支气管播散后，可表现为类似<span class="answer-text">支气管肺炎</span>的斑片状浸润阴影<br>⑦侵犯胸膜时可引起<span class="answer-text">胸腔积液</span>。侵犯肋骨则引起<span class="answer-text">骨质破坏</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>21.. <strong>简述大叶性肺炎各期的基本病理变化</strong><br>①<span class="blur-text">充血水肿期</span>，起病第<span class="blur-text">1~2</span>天，大体：病变肺叶<span class="blur-text">肿胀</span>，重量<span class="blur-text">增加</span>，呈<span class="blur-text">暗红色</span>，切面湿润可挤压出<span class="blur-text">泡沫状的血性液体</span>。镜下：<span class="blur-text">肺泡壁毛细血管</span>明显扩张、充血，肺泡内可见大量的<span class="blur-text">浆液性渗出物</span>，混有少量<span class="blur-text">红细胞</span>、<span class="blur-text">中性粒细胞</span>和<span class="blur-text">巨噬细胞</span><br>②<span class="blur-text">红色肝样变期</span>：起病第<span class="blur-text">2~4</span>天，大体：病变肺叶明显<span class="blur-text">肿胀</span>，重量显著<span class="blur-text">增加</span>，切面<span class="blur-text">暗红色</span>，<span class="blur-text">实变</span>、质地较硬如同<span class="blur-text">肝脏</span>。镜下：肺泡壁毛细血管仍明显扩张、充血，肺泡内充满多量<span class="blur-text">纤维素</span>、交织成网，其中有多量<span class="blur-text">红细胞</span>、少量<span class="blur-text">中性粒细胞</span>和<span class="blur-text">巨噬细胞</span>。相邻肺泡内的纤维素可经<span class="blur-text">肺泡间孔</span>相连接<br>③<span class="blur-text">灰色肝样变期</span>：起病第<span class="blur-text">4~7</span>天，大体：病变肺叶明显<span class="blur-text">肿胀</span>，重量显著<span class="blur-text">增加</span>，切面<span class="blur-text">灰白色颗粒状</span>，<span class="blur-text">实变</span>、硬度<span class="blur-text">增加</span>。镜下：肺泡内充满大量<span class="blur-text">纤维素</span>交织成网状，其中有多量<span class="blur-text">中性粒细胞</span>、少量<span class="blur-text">巨噬细胞</span>和<span class="blur-text">红细胞</span>，相邻肺泡内纤维素相连接现象更明显。肺泡壁毛细血管充血消退，呈<span class="blur-text">贫血状</span>，红细胞渗出停止<br>④<span class="blur-text">溶解消散期</span>：起病第<span class="blur-text">6~10</span>天，大体：病变肺叶渐带<span class="blur-text">黄色</span>，质地变<span class="blur-text">软</span>，切面颗粒状外观消失，可挤出<span class="blur-text">脓样浑浊液体</span>。镜下：肺泡内的渗出物开始<span class="blur-text">消散</span>，渗出的中性粒细胞大多<span class="blur-text">崩解</span>，<span class="blur-text">巨噬细胞</span>明显增多，纤维素网被解体成<span class="blur-text">碎块</span>，并进一步<span class="blur-text">溶解消失</span></td>
+                            <td>21.. <strong>简述大叶性肺炎各期的基本病理变化</strong><br>①<span class="answer-text">充血水肿期</span>，起病第<span class="answer-text">1~2</span>天，大体：病变肺叶<span class="answer-text">肿胀</span>，重量<span class="answer-text">增加</span>，呈<span class="answer-text">暗红色</span>，切面湿润可挤压出<span class="answer-text">泡沫状的血性液体</span>。镜下：<span class="answer-text">肺泡壁毛细血管</span>明显扩张、充血，肺泡内可见大量的<span class="answer-text">浆液性渗出物</span>，混有少量<span class="answer-text">红细胞</span>、<span class="answer-text">中性粒细胞</span>和<span class="answer-text">巨噬细胞</span><br>②<span class="answer-text">红色肝样变期</span>：起病第<span class="answer-text">2~4</span>天，大体：病变肺叶明显<span class="answer-text">肿胀</span>，重量显著<span class="answer-text">增加</span>，切面<span class="answer-text">暗红色</span>，<span class="answer-text">实变</span>、质地较硬如同<span class="answer-text">肝脏</span>。镜下：肺泡壁毛细血管仍明显扩张、充血，肺泡内充满多量<span class="answer-text">纤维素</span>、交织成网，其中有多量<span class="answer-text">红细胞</span>、少量<span class="answer-text">中性粒细胞</span>和<span class="answer-text">巨噬细胞</span>。相邻肺泡内的纤维素可经<span class="answer-text">肺泡间孔</span>相连接<br>③<span class="answer-text">灰色肝样变期</span>：起病第<span class="answer-text">4~7</span>天，大体：病变肺叶明显<span class="answer-text">肿胀</span>，重量显著<span class="answer-text">增加</span>，切面<span class="answer-text">灰白色颗粒状</span>，<span class="answer-text">实变</span>、硬度<span class="answer-text">增加</span>。镜下：肺泡内充满大量<span class="answer-text">纤维素</span>交织成网状，其中有多量<span class="answer-text">中性粒细胞</span>、少量<span class="answer-text">巨噬细胞</span>和<span class="answer-text">红细胞</span>，相邻肺泡内纤维素相连接现象更明显。肺泡壁毛细血管充血消退，呈<span class="answer-text">贫血状</span>，红细胞渗出停止<br>④<span class="answer-text">溶解消散期</span>：起病第<span class="answer-text">6~10</span>天，大体：病变肺叶渐带<span class="answer-text">黄色</span>，质地变<span class="answer-text">软</span>，切面颗粒状外观消失，可挤出<span class="answer-text">脓样浑浊液体</span>。镜下：肺泡内的渗出物开始<span class="answer-text">消散</span>，渗出的中性粒细胞大多<span class="answer-text">崩解</span>，<span class="answer-text">巨噬细胞</span>明显增多，纤维素网被解体成<span class="answer-text">碎块</span>，并进一步<span class="answer-text">溶解消失</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>22.. <strong>简述脓胸的病理分期</strong><br>①<span class="blur-text">渗出期</span>(<span class="blur-text">急性期</span>)：胸膜明显<span class="blur-text">充血肿胀</span>，有大量<span class="blur-text">浆液</span>渗出，渗出液<span class="blur-text">稀薄</span>，胸膜表面有较薄的<span class="blur-text">纤维蛋白</span>沉积，早期<span class="blur-text">血管母细胞</span>和<span class="blur-text">成纤维细胞</span>开始增生，并从胸膜向外扩展<br>②<span class="blur-text">纤维化脓期</span>(<span class="blur-text">过渡期</span>)：随着病程进展，<span class="blur-text">脓细胞</span>及<span class="blur-text">纤维蛋白</span>增多，积液由<span class="blur-text">浆液性</span>转化为<span class="blur-text">脓性</span>，纤维蛋白沉积于<span class="blur-text">脏层</span>和<span class="blur-text">壁层胸膜</span>，以<span class="blur-text">壁层胸膜</span>明显；脏层胸膜纤维蛋白沉积使肺活动受限，若及时清除脓液及纤维蛋白，肺仍可再<span class="blur-text">复张</span><br>③<span class="blur-text">机化期</span>(<span class="blur-text">慢性期</span>)：在壁层胸膜及脏层胸膜表面，大量<span class="blur-text">成纤维细胞</span>生长及<span class="blur-text">胶原蛋白</span>形成，随着毛细血管长入纤维板中增厚的纤维板构成<span class="blur-text">脓腔壁</span>，脓腔内有<span class="blur-text">脓性沉淀物</span>及<span class="blur-text">肉芽组织</span>等，纤维板固定束缚下方肺组织，限制其活动，同时胸壁被牵拉而<span class="blur-text">内陷</span>，纵隔向<span class="blur-text">患侧</span>移位，胸廓的活动性受限，从而减低<span class="blur-text">呼吸功能</span>，此时临床上已进入<span class="blur-text">慢性期</span></td>
+                            <td>22.. <strong>简述脓胸的病理分期</strong><br>①<span class="answer-text">渗出期</span>(<span class="answer-text">急性期</span>)：胸膜明显<span class="answer-text">充血肿胀</span>，有大量<span class="answer-text">浆液</span>渗出，渗出液<span class="answer-text">稀薄</span>，胸膜表面有较薄的<span class="answer-text">纤维蛋白</span>沉积，早期<span class="answer-text">血管母细胞</span>和<span class="answer-text">成纤维细胞</span>开始增生，并从胸膜向外扩展<br>②<span class="answer-text">纤维化脓期</span>(<span class="answer-text">过渡期</span>)：随着病程进展，<span class="answer-text">脓细胞</span>及<span class="answer-text">纤维蛋白</span>增多，积液由<span class="answer-text">浆液性</span>转化为<span class="answer-text">脓性</span>，纤维蛋白沉积于<span class="answer-text">脏层</span>和<span class="answer-text">壁层胸膜</span>，以<span class="answer-text">壁层胸膜</span>明显；脏层胸膜纤维蛋白沉积使肺活动受限，若及时清除脓液及纤维蛋白，肺仍可再<span class="answer-text">复张</span><br>③<span class="answer-text">机化期</span>(<span class="answer-text">慢性期</span>)：在壁层胸膜及脏层胸膜表面，大量<span class="answer-text">成纤维细胞</span>生长及<span class="answer-text">胶原蛋白</span>形成，随着毛细血管长入纤维板中增厚的纤维板构成<span class="answer-text">脓腔壁</span>，脓腔内有<span class="answer-text">脓性沉淀物</span>及<span class="answer-text">肉芽组织</span>等，纤维板固定束缚下方肺组织，限制其活动，同时胸壁被牵拉而<span class="answer-text">内陷</span>，纵隔向<span class="answer-text">患侧</span>移位，胸廓的活动性受限，从而减低<span class="answer-text">呼吸功能</span>，此时临床上已进入<span class="answer-text">慢性期</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>23.. <strong>简述胸腔积液的定义、病因及区别渗出液和漏出液的light标准</strong><br>(1)定义：任何因素造成<span class="blur-text">渗出增多</span>和/或<span class="blur-text">再吸收减少</span>，导致胸膜腔内液体<span class="blur-text">异常增多</span>，称为胸腔积液<br>(2)病因：①胸膜毛细血管内<span class="blur-text">静水压增高</span>②胸膜毛细血管<span class="blur-text">通透性增加</span>③血浆<span class="blur-text">胶体渗透压降低</span>④壁胸膜<span class="blur-text">淋巴回流受阻</span>⑤<span class="blur-text">损伤性</span>胸腔积液⑥<span class="blur-text">医源性</span><br>(3)light标准：①胸腔积液/血清<span class="blur-text">蛋白</span>比值><span class="blur-text">0.5</span>②胸腔积液/血清<span class="blur-text">LDH</span>比值><span class="blur-text">0.6</span>③胸腔积液<span class="blur-text">LDH</span>水平>血清正常值高限的<span class="blur-text">2/3</span></td>
+                            <td>23.. <strong>简述胸腔积液的定义、病因及区别渗出液和漏出液的light标准</strong><br>(1)定义：任何因素造成<span class="answer-text">渗出增多</span>和/或<span class="answer-text">再吸收减少</span>，导致胸膜腔内液体<span class="answer-text">异常增多</span>，称为胸腔积液<br>(2)病因：①胸膜毛细血管内<span class="answer-text">静水压增高</span>②胸膜毛细血管<span class="answer-text">通透性增加</span>③血浆<span class="answer-text">胶体渗透压降低</span>④壁胸膜<span class="answer-text">淋巴回流受阻</span>⑤<span class="answer-text">损伤性</span>胸腔积液⑥<span class="answer-text">医源性</span><br>(3)light标准：①胸腔积液/血清<span class="answer-text">蛋白</span>比值><span class="answer-text">0.5</span>②胸腔积液/血清<span class="answer-text">LDH</span>比值><span class="answer-text">0.6</span>③胸腔积液<span class="answer-text">LDH</span>水平>血清正常值高限的<span class="answer-text">2/3</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>24.. <strong>进行性血胸的判断标准</strong><br>①<span class="blur-text">脉搏</span>逐渐加快，<span class="blur-text">血压</span>逐渐降低<br>②经<span class="blur-text">输血补液</span>后，血压不回升或升而不稳<br>③<span class="blur-text">进行性休克</span>、输血补液无效<br>④<span class="blur-text">血红蛋白</span>、<span class="blur-text">红细胞计数</span>、<span class="blur-text">血细胞比容</span>反复测定，呈持续性降低<br>⑤连续<span class="blur-text">X线胸部检查</span>，胸腔阴影持续增大<br>⑥<span class="blur-text">闭式胸腔引流</span>后，引流血量持续<span class="blur-text">3小时</span>，每小时超过<span class="blur-text">200ml</span>，或短时间次胸腔引流><span class="blur-text">1000ml</span>(<span class="blur-text">6小时内</span>)</td>
+                            <td>24.. <strong>进行性血胸的判断标准</strong><br>①<span class="answer-text">脉搏</span>逐渐加快，<span class="answer-text">血压</span>逐渐降低<br>②经<span class="answer-text">输血补液</span>后，血压不回升或升而不稳<br>③<span class="answer-text">进行性休克</span>、输血补液无效<br>④<span class="answer-text">血红蛋白</span>、<span class="answer-text">红细胞计数</span>、<span class="answer-text">血细胞比容</span>反复测定，呈持续性降低<br>⑤连续<span class="answer-text">X线胸部检查</span>，胸腔阴影持续增大<br>⑥<span class="answer-text">闭式胸腔引流</span>后，引流血量持续<span class="answer-text">3小时</span>，每小时超过<span class="answer-text">200ml</span>，或短时间次胸腔引流><span class="answer-text">1000ml</span>(<span class="answer-text">6小时内</span>)</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>25.. <strong>气胸的病理生理</strong><br>(1)<span class="blur-text">闭合性气胸</span>：①双侧肺<span class="blur-text">萎缩</span>，肺呼吸面积<span class="blur-text">减少</span>②肺<span class="blur-text">通气/换气功能</span>，<span class="blur-text">V/Q比率</span>失衡③双侧肺萎陷，<span class="blur-text">A-V分流</span>④伤侧胸内压减少，引起纵隔<span class="blur-text">健侧</span>移位<br>(2)<span class="blur-text">开放性气胸</span>：①双侧肺<span class="blur-text">完全萎缩</span>，丧失呼吸功能②肺受压萎陷，<span class="blur-text">纵隔移位</span>，健侧肺受压③<span class="blur-text">纵隔摆动</span>和<span class="blur-text">残气对流</span>致严重的<span class="blur-text">缺氧</span>，<span class="blur-text">二氧化碳潴留</span>④纵隔摆动移位使<span class="blur-text">静脉回流受阻</span>，<span class="blur-text">心排出量</span>减少<br>(3)<span class="blur-text">张力性气胸</span>：伤侧肺<span class="blur-text">严重压缩</span>，健侧肺<span class="blur-text">压缩</span>，纵隔<span class="blur-text">显著移位</span>②<span class="blur-text">上、下腔静脉</span>扭曲，<span class="blur-text">回心血量</span>减少④严重<span class="blur-text">呼吸循环功能障碍</span>，可迅速死亡</td>
+                            <td>25.. <strong>气胸的病理生理</strong><br>(1)<span class="answer-text">闭合性气胸</span>：①双侧肺<span class="answer-text">萎缩</span>，肺呼吸面积<span class="answer-text">减少</span>②肺<span class="answer-text">通气/换气功能</span>，<span class="answer-text">V/Q比率</span>失衡③双侧肺萎陷，<span class="answer-text">A-V分流</span>④伤侧胸内压减少，引起纵隔<span class="answer-text">健侧</span>移位<br>(2)<span class="answer-text">开放性气胸</span>：①双侧肺<span class="answer-text">完全萎缩</span>，丧失呼吸功能②肺受压萎陷，<span class="answer-text">纵隔移位</span>，健侧肺受压③<span class="answer-text">纵隔摆动</span>和<span class="answer-text">残气对流</span>致严重的<span class="answer-text">缺氧</span>，<span class="answer-text">二氧化碳潴留</span>④纵隔摆动移位使<span class="answer-text">静脉回流受阻</span>，<span class="answer-text">心排出量</span>减少<br>(3)<span class="answer-text">张力性气胸</span>：伤侧肺<span class="answer-text">严重压缩</span>，健侧肺<span class="answer-text">压缩</span>，纵隔<span class="answer-text">显著移位</span>②<span class="answer-text">上、下腔静脉</span>扭曲，<span class="answer-text">回心血量</span>减少④严重<span class="answer-text">呼吸循环功能障碍</span>，可迅速死亡</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>26.. <strong>血胸的来源</strong><br>①<span class="blur-text">心脏大血管伤</span>②<span class="blur-text">胸壁血管损伤</span>③<span class="blur-text">肺组织血管伤</span>④<span class="blur-text">肋骨断端骨</span>髓腔出血</td>
+                            <td>26.. <strong>血胸的来源</strong><br>①<span class="answer-text">心脏大血管伤</span>②<span class="answer-text">胸壁血管损伤</span>③<span class="answer-text">肺组织血管伤</span>④<span class="answer-text">肋骨断端骨</span>髓腔出血</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>27.. <strong>慢性呼吸衰竭的发生机理</strong><br>①<span class="blur-text">通气不足</span>，通气量<span class="blur-text">减少</span>②<span class="blur-text">通气血流比例</span>(<span class="blur-text">V/Q比例</span>)失调③<span class="blur-text">弥散障碍</span>④<span class="blur-text">耗氧量</span>增加</td>
+                            <td>27.. <strong>慢性呼吸衰竭的发生机理</strong><br>①<span class="answer-text">通气不足</span>，通气量<span class="answer-text">减少</span>②<span class="answer-text">通气血流比例</span>(<span class="answer-text">V/Q比例</span>)失调③<span class="answer-text">弥散障碍</span>④<span class="answer-text">耗氧量</span>增加</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>28.. <strong>简述急性呼吸窘迫综合征的诊断标准</strong><br>①明确原因下<span class="blur-text">1周内</span>出现的<span class="blur-text">急性</span>或<span class="blur-text">进展性呼吸困难</span><br>②胸部<span class="blur-text">X线平片</span>/胸部<span class="blur-text">CT</span>显示<span class="blur-text">双肺浸润影</span>，不能完全用<span class="blur-text">肺炎</span>、<span class="blur-text">胸腔积液</span>、<span class="blur-text">肺不张</span>、<span class="blur-text">肺癌</span>、<span class="blur-text">间质性肺病</span>、<span class="blur-text">心源性水肿</span>等解释<br>③呼吸衰竭不能完全用<span class="blur-text">心力衰竭</span>和<span class="blur-text">体液负荷过重</span>解释，如果临床没有危险因素，需要用客观检查来评价<span class="blur-text">心源性肺水肿</span><br>④<span class="blur-text">低氧血症</span>，根据<span class="blur-text">PaO2/FiO2</span>确立ARDS诊断</td>
+                            <td>28.. <strong>简述急性呼吸窘迫综合征的诊断标准</strong><br>①明确原因下<span class="answer-text">1周内</span>出现的<span class="answer-text">急性</span>或<span class="answer-text">进展性呼吸困难</span><br>②胸部<span class="answer-text">X线平片</span>/胸部<span class="answer-text">CT</span>显示<span class="answer-text">双肺浸润影</span>，不能完全用<span class="answer-text">肺炎</span>、<span class="answer-text">胸腔积液</span>、<span class="answer-text">肺不张</span>、<span class="answer-text">肺癌</span>、<span class="answer-text">间质性肺病</span>、<span class="answer-text">心源性水肿</span>等解释<br>③呼吸衰竭不能完全用<span class="answer-text">心力衰竭</span>和<span class="answer-text">体液负荷过重</span>解释，如果临床没有危险因素，需要用客观检查来评价<span class="answer-text">心源性肺水肿</span><br>④<span class="answer-text">低氧血症</span>，根据<span class="answer-text">PaO2/FiO2</span>确立ARDS诊断</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>29.. <strong>急性呼吸衰竭的治疗</strong><br>①去除<span class="blur-text">病因</span>，治疗<span class="blur-text">原发病</span><br>②合理的<span class="blur-text">呼吸支持</span>，纠正<span class="blur-text">低氧血症</span>，避免<span class="blur-text">呼吸机相关肺损伤</span>：<span class="blur-text">小潮气量</span>、<span class="blur-text">PEEP</span>的调节、<span class="blur-text">肺复张</span>、<span class="blur-text">俯卧位通气</span>、<span class="blur-text">体外肺膜氧合技术</span>、<span class="blur-text">液体通气</span>等<br>④<span class="blur-text">液体管理</span>：保持适当器官组织灌注的前提下，保持肺脏处于相对"<span class="blur-text">干</span>"的状态<br>⑤改善<span class="blur-text">酸碱电解质平衡紊乱</span><br>⑥<span class="blur-text">支持治疗</span>：<span class="blur-text">营养治疗</span>、合理<span class="blur-text">镇痛镇静</span><br>⑦预防<span class="blur-text">并发症</span></td>
+                            <td>29.. <strong>急性呼吸衰竭的治疗</strong><br>①去除<span class="answer-text">病因</span>，治疗<span class="answer-text">原发病</span><br>②合理的<span class="answer-text">呼吸支持</span>，纠正<span class="answer-text">低氧血症</span>，避免<span class="answer-text">呼吸机相关肺损伤</span>：<span class="answer-text">小潮气量</span>、<span class="answer-text">PEEP</span>的调节、<span class="answer-text">肺复张</span>、<span class="answer-text">俯卧位通气</span>、<span class="answer-text">体外肺膜氧合技术</span>、<span class="answer-text">液体通气</span>等<br>④<span class="answer-text">液体管理</span>：保持适当器官组织灌注的前提下，保持肺脏处于相对"<span class="answer-text">干</span>"的状态<br>⑤改善<span class="answer-text">酸碱电解质平衡紊乱</span><br>⑥<span class="answer-text">支持治疗</span>：<span class="answer-text">营养治疗</span>、合理<span class="answer-text">镇痛镇静</span><br>⑦预防<span class="answer-text">并发症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>30.. <strong>急性呼吸窘迫综合征的临床特点</strong><br>①发病<span class="blur-text">迅速</span>②<span class="blur-text">呼吸窘迫</span>③吸氧或机械通气都难以纠正的<span class="blur-text">低氧血症</span>④<span class="blur-text">死腔/潮气比值</span>增加⑤<span class="blur-text">重力依赖性</span>影像学改变</td>
+                            <td>30.. <strong>急性呼吸窘迫综合征的临床特点</strong><br>①发病<span class="answer-text">迅速</span>②<span class="answer-text">呼吸窘迫</span>③吸氧或机械通气都难以纠正的<span class="answer-text">低氧血症</span>④<span class="answer-text">死腔/潮气比值</span>增加⑤<span class="answer-text">重力依赖性</span>影像学改变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>31.. <strong>SIRS分期</strong><br>①<span class="blur-text">局部反应期</span>：炎症因子的释放仅限于<span class="blur-text">局部</span><br>②<span class="blur-text">全身炎症反应始动期</span>：少量炎症因子开始出现<span class="blur-text">在血中</span><br>③<span class="blur-text">SIRS期</span>：血中出现<span class="blur-text">大量炎症因子</span>，全身炎症反应达到<span class="blur-text">高峰期</span><br>④<span class="blur-text">CARS期</span>：机体<span class="blur-text">抗炎因子</span>释放过多，免疫功能广泛<span class="blur-text">抑制</span><br>⑤<span class="blur-text">免疫不协调期</span>：<span class="blur-text">MODS</span></td>
+                            <td>31.. <strong>SIRS分期</strong><br>①<span class="answer-text">局部反应期</span>：炎症因子的释放仅限于<span class="answer-text">局部</span><br>②<span class="answer-text">全身炎症反应始动期</span>：少量炎症因子开始出现<span class="answer-text">在血中</span><br>③<span class="answer-text">SIRS期</span>：血中出现<span class="answer-text">大量炎症因子</span>，全身炎症反应达到<span class="answer-text">高峰期</span><br>④<span class="answer-text">CARS期</span>：机体<span class="answer-text">抗炎因子</span>释放过多，免疫功能广泛<span class="answer-text">抑制</span><br>⑤<span class="answer-text">免疫不协调期</span>：<span class="answer-text">MODS</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>32.. <strong>SIRS的诊断标准</strong><br>①体温><span class="blur-text">38℃</span>或<<span class="blur-text">36℃</span><br>②心率><span class="blur-text">90次/分</span><br>③呼吸><span class="blur-text">20次/分</span>或<span class="blur-text">PaCO2<32mmHg</span><br>④<span class="blur-text">WBC>12.0×10^9/L</span>或<<span class="blur-text">4.0×10^9/L</span>或未成熟的WBC><span class="blur-text">10%</span><br>出现<span class="blur-text">2项</span>或2项以上者，称为SIRS</td>
+                            <td>32.. <strong>SIRS的诊断标准</strong><br>①体温><span class="answer-text">38℃</span>或<<span class="answer-text">36℃</span><br>②心率><span class="answer-text">90次/分</span><br>③呼吸><span class="answer-text">20次/分</span>或<span class="answer-text">PaCO2<32mmHg</span><br>④<span class="answer-text">WBC>12.0×10^9/L</span>或<<span class="answer-text">4.0×10^9/L</span>或未成熟的WBC><span class="answer-text">10%</span><br>出现<span class="answer-text">2项</span>或2项以上者，称为SIRS</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>33.. <strong>结核的化疗原则及原因</strong><br>①<span class="blur-text">早期</span>：a.以<span class="blur-text">渗出灶</span>为主，血供丰富药易进入b.以<span class="blur-text">A群菌</span>为主，代谢旺盛，药易进入c.病灶易<span class="blur-text">吸收</span>，晚期慢性纤维性空洞难吸收<br>②<span class="blur-text">联合</span>：减少<span class="blur-text">耐药</span><br>③<span class="blur-text">规律</span>：保持稳定的<span class="blur-text">血药浓度</span>，保证疗效，防止<span class="blur-text">低浓度诱导耐药</span>，防止耐药<br>④<span class="blur-text">全程</span>：至少<span class="blur-text">半年</span>以上，消灭<span class="blur-text">B</span>、<span class="blur-text">C群菌</span>，防止<span class="blur-text">复发</span><br>⑤<span class="blur-text">适量</span>：保证疗效，减轻<span class="blur-text">毒副作用</span>，提高<span class="blur-text">耐受性</span></td>
+                            <td>33.. <strong>结核的化疗原则及原因</strong><br>①<span class="answer-text">早期</span>：a.以<span class="answer-text">渗出灶</span>为主，血供丰富药易进入b.以<span class="answer-text">A群菌</span>为主，代谢旺盛，药易进入c.病灶易<span class="answer-text">吸收</span>，晚期慢性纤维性空洞难吸收<br>②<span class="answer-text">联合</span>：减少<span class="answer-text">耐药</span><br>③<span class="answer-text">规律</span>：保持稳定的<span class="answer-text">血药浓度</span>，保证疗效，防止<span class="answer-text">低浓度诱导耐药</span>，防止耐药<br>④<span class="answer-text">全程</span>：至少<span class="answer-text">半年</span>以上，消灭<span class="answer-text">B</span>、<span class="answer-text">C群菌</span>，防止<span class="answer-text">复发</span><br>⑤<span class="answer-text">适量</span>：保证疗效，减轻<span class="answer-text">毒副作用</span>，提高<span class="answer-text">耐受性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>34.. <strong>慢性支气管炎的治疗</strong><br>(1)<span class="blur-text">一般治疗</span>(<span class="blur-text">缓解期</span>的治疗)：①去除<span class="blur-text">诱因</span>：<span class="blur-text">戒烟</span>，避免吸入<span class="blur-text">有害气体</span>②增强<span class="blur-text">锻炼</span>③加用<span class="blur-text">免疫抑制剂</span><br>(2)<span class="blur-text">药物治疗</span>(<span class="blur-text">急性加重期</span>的治疗)：①<span class="blur-text">抗感染</span>②<span class="blur-text">解痉</span>，<span class="blur-text">平喘</span>③<span class="blur-text">祛痰</span>、<span class="blur-text">镇咳</span>④用<span class="blur-text">免疫调节剂</span><br>(3)<span class="blur-text">并发症</span>及其治疗</td>
+                            <td>34.. <strong>慢性支气管炎的治疗</strong><br>(1)<span class="answer-text">一般治疗</span>(<span class="answer-text">缓解期</span>的治疗)：①去除<span class="answer-text">诱因</span>：<span class="answer-text">戒烟</span>，避免吸入<span class="answer-text">有害气体</span>②增强<span class="answer-text">锻炼</span>③加用<span class="answer-text">免疫抑制剂</span><br>(2)<span class="answer-text">药物治疗</span>(<span class="answer-text">急性加重期</span>的治疗)：①<span class="answer-text">抗感染</span>②<span class="answer-text">解痉</span>，<span class="answer-text">平喘</span>③<span class="answer-text">祛痰</span>、<span class="answer-text">镇咳</span>④用<span class="answer-text">免疫调节剂</span><br>(3)<span class="answer-text">并发症</span>及其治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>35.. <strong>慢阻肺的治疗</strong><br>(1)<span class="blur-text">病情的评价和监测</span><br>(2)减少<span class="blur-text">危险因素</span><br>(3)<span class="blur-text">稳定期</span>的治疗：①<span class="blur-text">教育</span>：<span class="blur-text">戒烟</span>②接种<span class="blur-text">疫苗</span>③<span class="blur-text">长期家庭氧疗</span>④<span class="blur-text">康复治疗</span>⑤接种<span class="blur-text">疫苗</span>⑥<span class="blur-text">药物治疗</span><br>(4)<span class="blur-text">急性加重期</span>的治疗：①一般治疗：<span class="blur-text">氧疗</span>、<span class="blur-text">无创通气</span>、<span class="blur-text">有创通气</span>、维持<span class="blur-text">水电解质</span>及<span class="blur-text">营养平衡</span>②药物治疗：<span class="blur-text">支气管扩张剂</span>，<span class="blur-text">糖皮质激素</span>，<span class="blur-text">抗菌药物</span>，<span class="blur-text">祛痰止咳</span></td>
+                            <td>35.. <strong>慢阻肺的治疗</strong><br>(1)<span class="answer-text">病情的评价和监测</span><br>(2)减少<span class="answer-text">危险因素</span><br>(3)<span class="answer-text">稳定期</span>的治疗：①<span class="answer-text">教育</span>：<span class="answer-text">戒烟</span>②接种<span class="answer-text">疫苗</span>③<span class="answer-text">长期家庭氧疗</span>④<span class="answer-text">康复治疗</span>⑤接种<span class="answer-text">疫苗</span>⑥<span class="answer-text">药物治疗</span><br>(4)<span class="answer-text">急性加重期</span>的治疗：①一般治疗：<span class="answer-text">氧疗</span>、<span class="answer-text">无创通气</span>、<span class="answer-text">有创通气</span>、维持<span class="answer-text">水电解质</span>及<span class="answer-text">营养平衡</span>②药物治疗：<span class="answer-text">支气管扩张剂</span>，<span class="answer-text">糖皮质激素</span>，<span class="answer-text">抗菌药物</span>，<span class="answer-text">祛痰止咳</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>36.. <strong>支气管哮喘的治疗</strong><br>(1)<span class="blur-text">一般治疗</span>：确定并减少<span class="blur-text">危险因素</span>接触<br>(2)<span class="blur-text">药物治疗</span>：①<span class="blur-text">缓解性药物</span>：a.<span class="blur-text">β2受体激动剂</span>：<span class="blur-text">SABA</span>(<span class="blur-text">短效</span>，<span class="blur-text">沙丁胺醇</span>，<span class="blur-text">特布他林</span>)，<span class="blur-text">LABA</span>(<span class="blur-text">长效</span>，<span class="blur-text">沙美特罗</span>、<span class="blur-text">福莫特罗</span>)；b.<span class="blur-text">抗胆碱能药物</span>：<span class="blur-text">SAMA</span>(<span class="blur-text">短效</span>，<span class="blur-text">异丙托溴铵</span>)，<span class="blur-text">LAMA</span>(<span class="blur-text">噻托溴铵</span>)；c.<span class="blur-text">茶碱</span>②<span class="blur-text">控制性药物</span>：a.<span class="blur-text">糖皮质激素</span>；b.<span class="blur-text">白三烯调节剂</span>：<span class="blur-text">孟鲁司特</span>等③其他药物：<span class="blur-text">酮替芬</span>④<span class="blur-text">急性发作期治疗</span>⑤<span class="blur-text">非急性发作期</span>(<span class="blur-text">慢性持续期</span>的治疗)<br>(3)<span class="blur-text">手术治疗</span>：<span class="blur-text">支气管热成形术</span><br>(4)<span class="blur-text">并发症治疗</span></td>
+                            <td>36.. <strong>支气管哮喘的治疗</strong><br>(1)<span class="answer-text">一般治疗</span>：确定并减少<span class="answer-text">危险因素</span>接触<br>(2)<span class="answer-text">药物治疗</span>：①<span class="answer-text">缓解性药物</span>：a.<span class="answer-text">β2受体激动剂</span>：<span class="answer-text">SABA</span>(<span class="answer-text">短效</span>，<span class="answer-text">沙丁胺醇</span>，<span class="answer-text">特布他林</span>)，<span class="answer-text">LABA</span>(<span class="answer-text">长效</span>，<span class="answer-text">沙美特罗</span>、<span class="answer-text">福莫特罗</span>)；b.<span class="answer-text">抗胆碱能药物</span>：<span class="answer-text">SAMA</span>(<span class="answer-text">短效</span>，<span class="answer-text">异丙托溴铵</span>)，<span class="answer-text">LAMA</span>(<span class="answer-text">噻托溴铵</span>)；c.<span class="answer-text">茶碱</span>②<span class="answer-text">控制性药物</span>：a.<span class="answer-text">糖皮质激素</span>；b.<span class="answer-text">白三烯调节剂</span>：<span class="answer-text">孟鲁司特</span>等③其他药物：<span class="answer-text">酮替芬</span>④<span class="answer-text">急性发作期治疗</span>⑤<span class="answer-text">非急性发作期</span>(<span class="answer-text">慢性持续期</span>的治疗)<br>(3)<span class="answer-text">手术治疗</span>：<span class="answer-text">支气管热成形术</span><br>(4)<span class="answer-text">并发症治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>37.. <strong>支气管扩张的治疗原则</strong><br>①清除已知<span class="blur-text">潜在病因</span><br>②<span class="blur-text">控制感染</span>，尤其是在<span class="blur-text">急性期</span><br>③促进<span class="blur-text">痰液排出</span>，提高<span class="blur-text">排痰能力</span><br>④<span class="blur-text">咯血</span>的治疗：<span class="blur-text">药物</span>、<span class="blur-text">支气管动脉栓塞术</span>、<span class="blur-text">切除术</span>等<br>⑤<span class="blur-text">局部病变</span>的手术治疗<br>⑥<span class="blur-text">预防</span></td>
+                            <td>37.. <strong>支气管扩张的治疗原则</strong><br>①清除已知<span class="answer-text">潜在病因</span><br>②<span class="answer-text">控制感染</span>，尤其是在<span class="answer-text">急性期</span><br>③促进<span class="answer-text">痰液排出</span>，提高<span class="answer-text">排痰能力</span><br>④<span class="answer-text">咯血</span>的治疗：<span class="answer-text">药物</span>、<span class="answer-text">支气管动脉栓塞术</span>、<span class="answer-text">切除术</span>等<br>⑤<span class="answer-text">局部病变</span>的手术治疗<br>⑥<span class="answer-text">预防</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>38.. <strong>细菌性肺炎的治疗</strong><br>(1)<span class="blur-text">对因治疗</span>(<span class="blur-text">抗感染</span>)：①首选<span class="blur-text">青霉素G</span>②青霉素过敏或耐药，选用<span class="blur-text">呼吸喹菌酮类</span>和<span class="blur-text">头孢菌素</span>③多耐药株，<span class="blur-text">万古霉素</span><br>(2)<span class="blur-text">对症支持治疗</span>：①支持：<span class="blur-text">休息</span>，多<span class="blur-text">饮水</span>、足够<span class="blur-text">补液</span>，<span class="blur-text">高能饮食</span>，<span class="blur-text">保暖</span>②对症：适当<span class="blur-text">镇痛止咳</span>、<span class="blur-text">祛痰</span>，<span class="blur-text">吸氧</span><br>(3)防治<span class="blur-text">并发症</span>：①感染性并发症：<span class="blur-text">扩容</span>，<span class="blur-text">升压</span>，强力<span class="blur-text">抗感染</span>、<span class="blur-text">降阶治疗</span>，<span class="blur-text">糖皮质激素</span>，纠正<span class="blur-text">水</span>、<span class="blur-text">电解质酸碱平衡紊乱</span>②其他并发症，保护<span class="blur-text">重要脏器功能</span></td>
+                            <td>38.. <strong>细菌性肺炎的治疗</strong><br>(1)<span class="answer-text">对因治疗</span>(<span class="answer-text">抗感染</span>)：①首选<span class="answer-text">青霉素G</span>②青霉素过敏或耐药，选用<span class="answer-text">呼吸喹菌酮类</span>和<span class="answer-text">头孢菌素</span>③多耐药株，<span class="answer-text">万古霉素</span><br>(2)<span class="answer-text">对症支持治疗</span>：①支持：<span class="answer-text">休息</span>，多<span class="answer-text">饮水</span>、足够<span class="answer-text">补液</span>，<span class="answer-text">高能饮食</span>，<span class="answer-text">保暖</span>②对症：适当<span class="answer-text">镇痛止咳</span>、<span class="answer-text">祛痰</span>，<span class="answer-text">吸氧</span><br>(3)防治<span class="answer-text">并发症</span>：①感染性并发症：<span class="answer-text">扩容</span>，<span class="answer-text">升压</span>，强力<span class="answer-text">抗感染</span>、<span class="answer-text">降阶治疗</span>，<span class="answer-text">糖皮质激素</span>，纠正<span class="answer-text">水</span>、<span class="answer-text">电解质酸碱平衡紊乱</span>②其他并发症，保护<span class="answer-text">重要脏器功能</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>39.. <strong>肺脓肿治疗</strong><br>(1)<span class="blur-text">抗感染治疗</span>：①<span class="blur-text">吸入性肺脓肿</span>：抗<span class="blur-text">厌氧菌</span>为主的治疗，首选<span class="blur-text">青霉素</span>，疗程<span class="blur-text">8~12周</span>②<span class="blur-text">血源性肺脓肿</span>，耐<span class="blur-text">β-内酰胺酶</span>的青霉素，<span class="blur-text">头孢菌素</span><br>(2)<span class="blur-text">脓液引流</span>：①<span class="blur-text">体位引流</span>②<span class="blur-text">支气管镜</span>冲洗、引流、注药③<span class="blur-text">经皮导管引流</span><br>(3)全身<span class="blur-text">营养支持</span><br>(4)<span class="blur-text">外科治疗</span></td>
+                            <td>39.. <strong>肺脓肿治疗</strong><br>(1)<span class="answer-text">抗感染治疗</span>：①<span class="answer-text">吸入性肺脓肿</span>：抗<span class="answer-text">厌氧菌</span>为主的治疗，首选<span class="answer-text">青霉素</span>，疗程<span class="answer-text">8~12周</span>②<span class="answer-text">血源性肺脓肿</span>，耐<span class="answer-text">β-内酰胺酶</span>的青霉素，<span class="answer-text">头孢菌素</span><br>(2)<span class="answer-text">脓液引流</span>：①<span class="answer-text">体位引流</span>②<span class="answer-text">支气管镜</span>冲洗、引流、注药③<span class="answer-text">经皮导管引流</span><br>(3)全身<span class="answer-text">营养支持</span><br>(4)<span class="answer-text">外科治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>40.. <strong>肺癌的治疗目标</strong><br>目前肺癌的治疗以<span class="blur-text">手术治疗</span>，<span class="blur-text">药物治疗</span>和<span class="blur-text">放射治疗</span>为主<br>①最大限度<span class="blur-text">延长病人的生存时间</span><br>②提高<span class="blur-text">生存率</span><br>③控制<span class="blur-text">肿瘤进展</span><br>④改善病人的<span class="blur-text">生活质量</span></td>
+                            <td>40.. <strong>肺癌的治疗目标</strong><br>目前肺癌的治疗以<span class="answer-text">手术治疗</span>，<span class="answer-text">药物治疗</span>和<span class="answer-text">放射治疗</span>为主<br>①最大限度<span class="answer-text">延长病人的生存时间</span><br>②提高<span class="answer-text">生存率</span><br>③控制<span class="answer-text">肿瘤进展</span><br>④改善病人的<span class="answer-text">生活质量</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>41.. <strong>肺动脉高压的治疗</strong><br>(1)<span class="blur-text">一般治疗</span>：适当调整<span class="blur-text">日常运动</span>，<span class="blur-text">氧疗</span>，预防<span class="blur-text">感染</span><br>(2)<span class="blur-text">药物治疗</span>：<span class="blur-text">钙通道拮抗剂</span>，<span class="blur-text">前列环素类</span>药物，<span class="blur-text">内皮素1受体拮抗剂</span>，<span class="blur-text">磷酸二脂酶抑制剂-5</span>，<span class="blur-text">一氧化氮</span>与<span class="blur-text">L-精氨酸</span>，<span class="blur-text">可溶性尿鸟苷酸环化酶激动剂</span>，<span class="blur-text">抗凝治疗</span><br>(3)<span class="blur-text">联合用药</span><br>(4)<span class="blur-text">介入及手术</span></td>
+                            <td>41.. <strong>肺动脉高压的治疗</strong><br>(1)<span class="answer-text">一般治疗</span>：适当调整<span class="answer-text">日常运动</span>，<span class="answer-text">氧疗</span>，预防<span class="answer-text">感染</span><br>(2)<span class="answer-text">药物治疗</span>：<span class="answer-text">钙通道拮抗剂</span>，<span class="answer-text">前列环素类</span>药物，<span class="answer-text">内皮素1受体拮抗剂</span>，<span class="answer-text">磷酸二脂酶抑制剂-5</span>，<span class="answer-text">一氧化氮</span>与<span class="answer-text">L-精氨酸</span>，<span class="answer-text">可溶性尿鸟苷酸环化酶激动剂</span>，<span class="answer-text">抗凝治疗</span><br>(3)<span class="answer-text">联合用药</span><br>(4)<span class="answer-text">介入及手术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>42.. <strong>肺源性心脏病的治疗</strong><br>(1)<span class="blur-text">肺、心功能代偿期</span>：①增强患者的<span class="blur-text">免疫功能</span>②延缓<span class="blur-text">肺</span>、<span class="blur-text">胸基础疾病</span>的进展③预防<span class="blur-text">感染</span>，减少或避免<span class="blur-text">急性加重</span>④<span class="blur-text">氧疗</span><br>(2)<span class="blur-text">肺、心功能失代偿期</span>：①控制<span class="blur-text">感染</span>②控制<span class="blur-text">呼吸衰竭</span>：a.<span class="blur-text">通畅呼吸道</span>b.使用<span class="blur-text">支气管舒张药</span>、<span class="blur-text">祛痰药</span>、<span class="blur-text">吸痰</span>③控制<span class="blur-text">心力衰竭</span>：<span class="blur-text">利尿剂</span>(<span class="blur-text">温和</span>，<span class="blur-text">短程</span>)，<span class="blur-text">正性肌力药</span>(<span class="blur-text">作用快</span>，<span class="blur-text">排泄快</span>，<span class="blur-text">洋地黄</span>)④防治并发症：<span class="blur-text">肺性脑病</span>、<span class="blur-text">心律失常</span>、<span class="blur-text">休克</span>等</td>
+                            <td>42.. <strong>肺源性心脏病的治疗</strong><br>(1)<span class="answer-text">肺、心功能代偿期</span>：①增强患者的<span class="answer-text">免疫功能</span>②延缓<span class="answer-text">肺</span>、<span class="answer-text">胸基础疾病</span>的进展③预防<span class="answer-text">感染</span>，减少或避免<span class="answer-text">急性加重</span>④<span class="answer-text">氧疗</span><br>(2)<span class="answer-text">肺、心功能失代偿期</span>：①控制<span class="answer-text">感染</span>②控制<span class="answer-text">呼吸衰竭</span>：a.<span class="answer-text">通畅呼吸道</span>b.使用<span class="answer-text">支气管舒张药</span>、<span class="answer-text">祛痰药</span>、<span class="answer-text">吸痰</span>③控制<span class="answer-text">心力衰竭</span>：<span class="answer-text">利尿剂</span>(<span class="answer-text">温和</span>，<span class="answer-text">短程</span>)，<span class="answer-text">正性肌力药</span>(<span class="answer-text">作用快</span>，<span class="answer-text">排泄快</span>，<span class="answer-text">洋地黄</span>)④防治并发症：<span class="answer-text">肺性脑病</span>、<span class="answer-text">心律失常</span>、<span class="answer-text">休克</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>43.. <strong>肺栓塞的治疗</strong><br>(1)<span class="blur-text">支持治疗</span>：<span class="blur-text">卧床休息</span>，维持<span class="blur-text">血压</span>等<br>(2)<span class="blur-text">抗凝治疗</span>：临床疑诊<span class="blur-text">PTE</span>时，无禁忌即开始抗凝治疗<br>(3)<span class="blur-text">溶栓治疗</span>：①适应症：<span class="blur-text">高危</span>、部分<span class="blur-text">中-高危PTE</span>②溶栓时间窗：<span class="blur-text">48小时</span>内最佳，<span class="blur-text">14天</span>内仍有效③溶栓并发症：<span class="blur-text">出血</span>、<span class="blur-text">过敏</span>、<span class="blur-text">复栓</span>④溶栓禁忌症：绝对禁忌症：<span class="blur-text">活动性内出血</span>，<span class="blur-text">近期自发性颅内出血</span><br>(4)<span class="blur-text">手术与介入治疗</span><br>(5)<span class="blur-text">CTEPH</span>的治疗：<span class="blur-text">抗凝</span>、<span class="blur-text">手术治疗</span>、<span class="blur-text">下腔静脉滤器</span></td>
+                            <td>43.. <strong>肺栓塞的治疗</strong><br>(1)<span class="answer-text">支持治疗</span>：<span class="answer-text">卧床休息</span>，维持<span class="answer-text">血压</span>等<br>(2)<span class="answer-text">抗凝治疗</span>：临床疑诊<span class="answer-text">PTE</span>时，无禁忌即开始抗凝治疗<br>(3)<span class="answer-text">溶栓治疗</span>：①适应症：<span class="answer-text">高危</span>、部分<span class="answer-text">中-高危PTE</span>②溶栓时间窗：<span class="answer-text">48小时</span>内最佳，<span class="answer-text">14天</span>内仍有效③溶栓并发症：<span class="answer-text">出血</span>、<span class="answer-text">过敏</span>、<span class="answer-text">复栓</span>④溶栓禁忌症：绝对禁忌症：<span class="answer-text">活动性内出血</span>，<span class="answer-text">近期自发性颅内出血</span><br>(4)<span class="answer-text">手术与介入治疗</span><br>(5)<span class="answer-text">CTEPH</span>的治疗：<span class="answer-text">抗凝</span>、<span class="answer-text">手术治疗</span>、<span class="answer-text">下腔静脉滤器</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>44.. <strong>脓胸的治疗</strong><br>(1)<span class="blur-text">急性脓胸</span>(老师说了解)：①有效<span class="blur-text">抗感染</span>②彻底<span class="blur-text">排净脓液</span>③尽快促<span class="blur-text">肺复张</span>④全身<span class="blur-text">支持治疗</span><br>(2)<span class="blur-text">慢性脓胸</span>：①治疗原则：a.改善<span class="blur-text">营养</span>，提高<span class="blur-text">免疫力</span>b.消除<span class="blur-text">致病原因</span>和<span class="blur-text">脓腔</span>c.尽可能保护和恢复<span class="blur-text">肺功能</span>②治疗措施：a.改进<span class="blur-text">引流</span>b.<span class="blur-text">纤维板剥脱术</span>c.<span class="blur-text">胸廓成形术</span>d.<span class="blur-text">胸膜肺切除术</span></td>
+                            <td>44.. <strong>脓胸的治疗</strong><br>(1)<span class="answer-text">急性脓胸</span>(老师说了解)：①有效<span class="answer-text">抗感染</span>②彻底<span class="answer-text">排净脓液</span>③尽快促<span class="answer-text">肺复张</span>④全身<span class="answer-text">支持治疗</span><br>(2)<span class="answer-text">慢性脓胸</span>：①治疗原则：a.改善<span class="answer-text">营养</span>，提高<span class="answer-text">免疫力</span>b.消除<span class="answer-text">致病原因</span>和<span class="answer-text">脓腔</span>c.尽可能保护和恢复<span class="answer-text">肺功能</span>②治疗措施：a.改进<span class="answer-text">引流</span>b.<span class="answer-text">纤维板剥脱术</span>c.<span class="answer-text">胸廓成形术</span>d.<span class="answer-text">胸膜肺切除术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>45.. <strong>胸腔积液的治疗</strong><br>(1)<span class="blur-text">病因治疗</span><br>(2)<span class="blur-text">抽胸液</span>：并发症：①<span class="blur-text">气胸</span>②<span class="blur-text">胸膜反应</span>③<span class="blur-text">复张后肺水肿</span><br>(3)<span class="blur-text">对症支持治疗</span></td>
+                            <td>45.. <strong>胸腔积液的治疗</strong><br>(1)<span class="answer-text">病因治疗</span><br>(2)<span class="answer-text">抽胸液</span>：并发症：①<span class="answer-text">气胸</span>②<span class="answer-text">胸膜反应</span>③<span class="answer-text">复张后肺水肿</span><br>(3)<span class="answer-text">对症支持治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>46.. <strong>气胸的治疗</strong><br>(1)<span class="blur-text">闭合性气胸</span>：①<span class="blur-text">少量</span>，<span class="blur-text">保守治疗</span>②<span class="blur-text">中量</span>：<span class="blur-text">胸腔穿刺抽气</span>③<span class="blur-text">大量</span>/<span class="blur-text">双侧</span>，<span class="blur-text">胸腔闭式引流</span><br>(2)<span class="blur-text">开放性气胸</span>：①<span class="blur-text">封闭伤口</span>，变开放为闭合②<span class="blur-text">支持治疗</span>③<span class="blur-text">对症治疗</span><br>(3)<span class="blur-text">张力性气胸</span>：①<span class="blur-text">锁骨中线第2肋间</span>排气减压②<span class="blur-text">胸腔闭式引流</span>③<span class="blur-text">开胸手术探查</span>，<span class="blur-text">胸腔镜手术</span></td>
+                            <td>46.. <strong>气胸的治疗</strong><br>(1)<span class="answer-text">闭合性气胸</span>：①<span class="answer-text">少量</span>，<span class="answer-text">保守治疗</span>②<span class="answer-text">中量</span>：<span class="answer-text">胸腔穿刺抽气</span>③<span class="answer-text">大量</span>/<span class="answer-text">双侧</span>，<span class="answer-text">胸腔闭式引流</span><br>(2)<span class="answer-text">开放性气胸</span>：①<span class="answer-text">封闭伤口</span>，变开放为闭合②<span class="answer-text">支持治疗</span>③<span class="answer-text">对症治疗</span><br>(3)<span class="answer-text">张力性气胸</span>：①<span class="answer-text">锁骨中线第2肋间</span>排气减压②<span class="answer-text">胸腔闭式引流</span>③<span class="answer-text">开胸手术探查</span>，<span class="answer-text">胸腔镜手术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>47.. <strong>慢性呼吸衰竭的治疗</strong><br>①<span class="blur-text">通畅气道</span>，增加<span class="blur-text">通气</span>：清除<span class="blur-text">呼吸道分泌物</span>，<span class="blur-text">气管插管</span>/<span class="blur-text">气管切开</span>，<span class="blur-text">呼吸兴奋剂</span>，<span class="blur-text">机械通气</span><br>②<span class="blur-text">氧疗</span>：<span class="blur-text">持续</span>，<span class="blur-text">低流量</span>，<span class="blur-text">低浓度</span><br>③控制<span class="blur-text">感染</span><br>④维持<span class="blur-text">酸碱</span>，<span class="blur-text">电解质平衡</span><br>⑤防止<span class="blur-text">消化道出血</span>及保护各<span class="blur-text">脏器功能</span><br>⑥<span class="blur-text">强心</span>，<span class="blur-text">利尿</span>，<span class="blur-text">镇静</span>，<span class="blur-text">呼吸兴奋剂</span>的使用<br>⑦<span class="blur-text">营养</span>、<span class="blur-text">支持治疗</span>，<span class="blur-text">免疫调节</span><br>⑧<span class="blur-text">康复治疗</span><br>⑨<span class="blur-text">精神关怀</span><br>⑩<span class="blur-text">戒烟</span></td>
+                            <td>47.. <strong>慢性呼吸衰竭的治疗</strong><br>①<span class="answer-text">通畅气道</span>，增加<span class="answer-text">通气</span>：清除<span class="answer-text">呼吸道分泌物</span>，<span class="answer-text">气管插管</span>/<span class="answer-text">气管切开</span>，<span class="answer-text">呼吸兴奋剂</span>，<span class="answer-text">机械通气</span><br>②<span class="answer-text">氧疗</span>：<span class="answer-text">持续</span>，<span class="answer-text">低流量</span>，<span class="answer-text">低浓度</span><br>③控制<span class="answer-text">感染</span><br>④维持<span class="answer-text">酸碱</span>，<span class="answer-text">电解质平衡</span><br>⑤防止<span class="answer-text">消化道出血</span>及保护各<span class="answer-text">脏器功能</span><br>⑥<span class="answer-text">强心</span>，<span class="answer-text">利尿</span>，<span class="answer-text">镇静</span>，<span class="answer-text">呼吸兴奋剂</span>的使用<br>⑦<span class="answer-text">营养</span>、<span class="answer-text">支持治疗</span>，<span class="answer-text">免疫调节</span><br>⑧<span class="answer-text">康复治疗</span><br>⑨<span class="answer-text">精神关怀</span><br>⑩<span class="answer-text">戒烟</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>48.. <strong>急性呼吸衰竭的治疗</strong><br>(1)保持<span class="blur-text">呼吸道通畅</span>：①昏迷者应使其处于<span class="blur-text">仰卧位</span>，头<span class="blur-text">后仰</span>②清除<span class="blur-text">气道分泌物</span>及<span class="blur-text">异物</span>③<span class="blur-text">人工气道</span><br>(2)<span class="blur-text">氧疗</span>：尽量降低<span class="blur-text">吸氧浓度</span><br>(3)增加<span class="blur-text">通气量</span>，改善<span class="blur-text">二氧化碳潴留</span>：①<span class="blur-text">呼吸兴奋剂</span>②<span class="blur-text">机械通气</span><br>(4)<span class="blur-text">病因治疗</span><br>(5)一般<span class="blur-text">支持治疗</span><br>(6)其他重要<span class="blur-text">脏器功能</span>的监测与支持</td>
+                            <td>48.. <strong>急性呼吸衰竭的治疗</strong><br>(1)保持<span class="answer-text">呼吸道通畅</span>：①昏迷者应使其处于<span class="answer-text">仰卧位</span>，头<span class="answer-text">后仰</span>②清除<span class="answer-text">气道分泌物</span>及<span class="answer-text">异物</span>③<span class="answer-text">人工气道</span><br>(2)<span class="answer-text">氧疗</span>：尽量降低<span class="answer-text">吸氧浓度</span><br>(3)增加<span class="answer-text">通气量</span>，改善<span class="answer-text">二氧化碳潴留</span>：①<span class="answer-text">呼吸兴奋剂</span>②<span class="answer-text">机械通气</span><br>(4)<span class="answer-text">病因治疗</span><br>(5)一般<span class="answer-text">支持治疗</span><br>(6)其他重要<span class="answer-text">脏器功能</span>的监测与支持</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>49.. <strong>多器官功能衰竭综合征的治疗</strong><br>(1)<span class="blur-text">整体观念</span><br>(2)<span class="blur-text">病因治疗</span><br>(3)<span class="blur-text">免疫调节治疗</span><br>(4)<span class="blur-text">脏器功能</span>：①<span class="blur-text">呼吸支持</span>：<span class="blur-text">肺保护性通气策略</span>②<span class="blur-text">循环支持</span>：<span class="blur-text">早期目标导向治疗(EGDT)</span>，六小时内达到以下目标：<span class="blur-text">CVP 8~12mmHg</span>，<span class="blur-text">MAP>65mmHg</span>，<span class="blur-text">尿量>0.5ml/h</span>，<span class="blur-text">中心静脉氧饱和度>70%</span>③<span class="blur-text">肾脏</span>④<span class="blur-text">肝脏</span>和<span class="blur-text">凝血功能</span>⑤<span class="blur-text">胃肠道</span>和<span class="blur-text">代谢</span></td>
+                            <td>49.. <strong>多器官功能衰竭综合征的治疗</strong><br>(1)<span class="answer-text">整体观念</span><br>(2)<span class="answer-text">病因治疗</span><br>(3)<span class="answer-text">免疫调节治疗</span><br>(4)<span class="answer-text">脏器功能</span>：①<span class="answer-text">呼吸支持</span>：<span class="answer-text">肺保护性通气策略</span>②<span class="answer-text">循环支持</span>：<span class="answer-text">早期目标导向治疗(EGDT)</span>，六小时内达到以下目标：<span class="answer-text">CVP 8~12mmHg</span>，<span class="answer-text">MAP>65mmHg</span>，<span class="answer-text">尿量>0.5ml/h</span>，<span class="answer-text">中心静脉氧饱和度>70%</span>③<span class="answer-text">肾脏</span>④<span class="answer-text">肝脏</span>和<span class="answer-text">凝血功能</span>⑤<span class="answer-text">胃肠道</span>和<span class="answer-text">代谢</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>50.. <strong>简述结核的基本病理变化及转化规律</strong><br>(1)基本病理变化：具有一般炎症的<span class="blur-text">渗出</span>、<span class="blur-text">增生</span>和<span class="blur-text">坏死</span>三种基本病理变化<br>①<span class="blur-text">渗出为主</span>：主要表现为<span class="blur-text">浆液性</span>或<span class="blur-text">纤维素性炎</span>，好发于<span class="blur-text">肺</span>/<span class="blur-text">浆膜</span>、<span class="blur-text">滑膜</span>及<span class="blur-text">脑膜</span><br>②<span class="blur-text">增生为主</span>：病变特征为形成具有诊断价值的<span class="blur-text">结核结节</span>，又称<span class="blur-text">结核性肉芽肿</span>，由<span class="blur-text">上皮样细胞</span>、<span class="blur-text">朗汉斯巨细胞</span>以及外周局部聚集的<span class="blur-text">淋巴细胞</span>和反应性增生的<span class="blur-text">成纤维细胞</span>构成的结节状病灶，中央常有<span class="blur-text">干酪样坏死</span><br>③<span class="blur-text">坏死为主</span>：以渗出和以增生为主的病变均可继发<span class="blur-text">干酪样坏死</span>。肉眼呈<span class="blur-text">黄色</span>、均匀细腻，质地较实，状似<span class="blur-text">奶酪</span>，镜下为<span class="blur-text">红染无结构的颗粒状物</span>。干酪样坏死对结核病病理诊断具有一定意义<br>(2)结核病的转化规律：结核病的发展和结局取决于机体的<span class="blur-text">抵抗力</span>和结核杆菌的<span class="blur-text">致病力</span><br>A.<span class="blur-text">转向愈合</span>：①<span class="blur-text">溶解吸收</span>：渗出性、小干酪样坏死/增生②<span class="blur-text">纤维化</span>、<span class="blur-text">包裹</span>、<span class="blur-text">钙化</span>：较大干酪样坏死/增生<br>B.<span class="blur-text">转向恶化</span>：①<span class="blur-text">浸润进展</span>：变质渗出，病灶扩大②<span class="blur-text">溶解播散</span>：干酪样坏死物液化，自然管道、淋巴道、血道</td>
+                            <td>50.. <strong>简述结核的基本病理变化及转化规律</strong><br>(1)基本病理变化：具有一般炎症的<span class="answer-text">渗出</span>、<span class="answer-text">增生</span>和<span class="answer-text">坏死</span>三种基本病理变化<br>①<span class="answer-text">渗出为主</span>：主要表现为<span class="answer-text">浆液性</span>或<span class="answer-text">纤维素性炎</span>，好发于<span class="answer-text">肺</span>/<span class="answer-text">浆膜</span>、<span class="answer-text">滑膜</span>及<span class="answer-text">脑膜</span><br>②<span class="answer-text">增生为主</span>：病变特征为形成具有诊断价值的<span class="answer-text">结核结节</span>，又称<span class="answer-text">结核性肉芽肿</span>，由<span class="answer-text">上皮样细胞</span>、<span class="answer-text">朗汉斯巨细胞</span>以及外周局部聚集的<span class="answer-text">淋巴细胞</span>和反应性增生的<span class="answer-text">成纤维细胞</span>构成的结节状病灶，中央常有<span class="answer-text">干酪样坏死</span><br>③<span class="answer-text">坏死为主</span>：以渗出和以增生为主的病变均可继发<span class="answer-text">干酪样坏死</span>。肉眼呈<span class="answer-text">黄色</span>、均匀细腻，质地较实，状似<span class="answer-text">奶酪</span>，镜下为<span class="answer-text">红染无结构的颗粒状物</span>。干酪样坏死对结核病病理诊断具有一定意义<br>(2)结核病的转化规律：结核病的发展和结局取决于机体的<span class="answer-text">抵抗力</span>和结核杆菌的<span class="answer-text">致病力</span><br>A.<span class="answer-text">转向愈合</span>：①<span class="answer-text">溶解吸收</span>：渗出性、小干酪样坏死/增生②<span class="answer-text">纤维化</span>、<span class="answer-text">包裹</span>、<span class="answer-text">钙化</span>：较大干酪样坏死/增生<br>B.<span class="answer-text">转向恶化</span>：①<span class="answer-text">浸润进展</span>：变质渗出，病灶扩大②<span class="answer-text">溶解播散</span>：干酪样坏死物液化，自然管道、淋巴道、血道</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>51.. <strong>在结核病的发病过程中，机体的免疫反应和变态反应如何发挥作用?简述它们与结核基本病变之间的关系</strong><br>①结核杆菌是<span class="blur-text">细胞内生长</span>的细菌，不产生<span class="blur-text">内</span>、<span class="blur-text">外毒素</span>，其致病性与菌体<span class="blur-text">细胞壁的结构成分</span>密切相关<br>②结核病的发病机制即由结核杆菌引起的<span class="blur-text">细胞免疫</span>和<span class="blur-text">IV型超敏反应</span>(<span class="blur-text">变态反应</span>)同时发生并相伴出现<br>③超敏反应的出现提示机体已获得<span class="blur-text">免疫力</span>，对病原菌有<span class="blur-text">抵抗力</span>，且超敏反应同时伴随<span class="blur-text">干酪样坏死</span>，试图破坏和杀灭结核杆菌<br>④因此机体对结核杆菌感染所呈现的临床表现取决于机体<span class="blur-text">反应性</span>的不同<br>⑤如以<span class="blur-text">保护性反应</span>为主，则病灶<span class="blur-text">局限</span>，结核杆菌被<span class="blur-text">杀灭</span>；如主要表现为<span class="blur-text">组织破坏性反应</span>，则机体表现为有结构和功能损害的<span class="blur-text">结核病</span><br>⑥结核病的发生发展受机体<span class="blur-text">免疫力</span>和<span class="blur-text">变态反应</span>的强弱以及感染的<span class="blur-text">菌量</span>及其<span class="blur-text">毒力大小</span>的双重制约</td>
+                            <td>51.. <strong>在结核病的发病过程中，机体的免疫反应和变态反应如何发挥作用?简述它们与结核基本病变之间的关系</strong><br>①结核杆菌是<span class="answer-text">细胞内生长</span>的细菌，不产生<span class="answer-text">内</span>、<span class="answer-text">外毒素</span>，其致病性与菌体<span class="answer-text">细胞壁的结构成分</span>密切相关<br>②结核病的发病机制即由结核杆菌引起的<span class="answer-text">细胞免疫</span>和<span class="answer-text">IV型超敏反应</span>(<span class="answer-text">变态反应</span>)同时发生并相伴出现<br>③超敏反应的出现提示机体已获得<span class="answer-text">免疫力</span>，对病原菌有<span class="answer-text">抵抗力</span>，且超敏反应同时伴随<span class="answer-text">干酪样坏死</span>，试图破坏和杀灭结核杆菌<br>④因此机体对结核杆菌感染所呈现的临床表现取决于机体<span class="answer-text">反应性</span>的不同<br>⑤如以<span class="answer-text">保护性反应</span>为主，则病灶<span class="answer-text">局限</span>，结核杆菌被<span class="answer-text">杀灭</span>；如主要表现为<span class="answer-text">组织破坏性反应</span>，则机体表现为有结构和功能损害的<span class="answer-text">结核病</span><br>⑥结核病的发生发展受机体<span class="answer-text">免疫力</span>和<span class="answer-text">变态反应</span>的强弱以及感染的<span class="answer-text">菌量</span>及其<span class="answer-text">毒力大小</span>的双重制约</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>52.. <strong>慢性脓胸的病因</strong><br>①<span class="blur-text">急性脓胸</span>未及时治疗②<span class="blur-text">急性脓胸</span>处理不当③胸腔内有<span class="blur-text">异物</span>存在④有<span class="blur-text">支气管</span>或<span class="blur-text">食管瘘</span>⑤特殊<span class="blur-text">病原菌</span>存在⑥临近组织有<span class="blur-text">慢性感染</span></td>
+                            <td>52.. <strong>慢性脓胸的病因</strong><br>①<span class="answer-text">急性脓胸</span>未及时治疗②<span class="answer-text">急性脓胸</span>处理不当③胸腔内有<span class="answer-text">异物</span>存在④有<span class="answer-text">支气管</span>或<span class="answer-text">食管瘘</span>⑤特殊<span class="answer-text">病原菌</span>存在⑥临近组织有<span class="answer-text">慢性感染</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>53.. <strong>肺结核的化疗方案</strong><br>(1)要求：①反应并符合<span class="blur-text">化疗原则</span>②至少包含<span class="blur-text">两种杀菌剂</span><br>(2)方案：①<span class="blur-text">初治</span>(<span class="blur-text">初次治疗</span>，初治时间<<span class="blur-text">1月</span>)a.较弱：<span class="blur-text">2HRE/7HR</span>等b.较强：<span class="blur-text">2HRZSE/4HRZE</span><br>②<span class="blur-text">复治</span>：a.初治<span class="blur-text">正规</span>，疗程<span class="blur-text">不足</span>：继续用原方案b.初治<span class="blur-text">不规则</span>、<span class="blur-text">未联合</span>、<span class="blur-text">量不足</span>：<span class="blur-text">药敏</span>制定新方案<br>(3)一线用药：<span class="blur-text">异烟肼H</span> <span class="blur-text">利福平R</span> <span class="blur-text">吡嗪酰胺Z</span> <span class="blur-text">链霉素S</span> <span class="blur-text">乙胺丁醇E</span><br>(4)对症治疗：<span class="blur-text">中毒症状</span>，<span class="blur-text">咯血</span><br>(5)<span class="blur-text">手术治疗</span></td>
+                            <td>53.. <strong>肺结核的化疗方案</strong><br>(1)要求：①反应并符合<span class="answer-text">化疗原则</span>②至少包含<span class="answer-text">两种杀菌剂</span><br>(2)方案：①<span class="answer-text">初治</span>(<span class="answer-text">初次治疗</span>，初治时间<<span class="answer-text">1月</span>)a.较弱：<span class="answer-text">2HRE/7HR</span>等b.较强：<span class="answer-text">2HRZSE/4HRZE</span><br>②<span class="answer-text">复治</span>：a.初治<span class="answer-text">正规</span>，疗程<span class="answer-text">不足</span>：继续用原方案b.初治<span class="answer-text">不规则</span>、<span class="answer-text">未联合</span>、<span class="answer-text">量不足</span>：<span class="answer-text">药敏</span>制定新方案<br>(3)一线用药：<span class="answer-text">异烟肼H</span> <span class="answer-text">利福平R</span> <span class="answer-text">吡嗪酰胺Z</span> <span class="answer-text">链霉素S</span> <span class="answer-text">乙胺丁醇E</span><br>(4)对症治疗：<span class="answer-text">中毒症状</span>，<span class="answer-text">咯血</span><br>(5)<span class="answer-text">手术治疗</span></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

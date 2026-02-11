@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">医学心理学大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>医学心理学的研究范围（掌握）</strong><br>①研究心理或行为的<span class="blur-text">生物学</span>和<span class="blur-text">社会学</span>基础及其在健康和疾病中的意义<br>②研究<span class="blur-text">心身相互作用</span>关系及其机制<br>③研究<span class="blur-text">心理社会因素</span>在疾病过程中的作用规律<br>④研究各种疾病过程中的<span class="blur-text">心理和行为特征</span>及变化规律<br>⑤研究医疗过程中<span class="blur-text">医患关系</span>的特征及增进医患关系的途径和方法<br>⑥研究如何将心理学原理及技术应用于人类的<span class="blur-text">健康促进</span>及<span class="blur-text">疾病防治</span></td>
+                            <td>1.. <strong>医学心理学的研究范围（掌握）</strong><br>①研究心理或行为的<span class="answer-text">生物学</span>和<span class="answer-text">社会学</span>基础及其在健康和疾病中的意义<br>②研究<span class="answer-text">心身相互作用</span>关系及其机制<br>③研究<span class="answer-text">心理社会因素</span>在疾病过程中的作用规律<br>④研究各种疾病过程中的<span class="answer-text">心理和行为特征</span>及变化规律<br>⑤研究医疗过程中<span class="answer-text">医患关系</span>的特征及增进医患关系的途径和方法<br>⑥研究如何将心理学原理及技术应用于人类的<span class="answer-text">健康促进</span>及<span class="answer-text">疾病防治</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>医学心理学的学科性质</strong><br>①是<span class="blur-text">自然科学</span>和<span class="blur-text">社会科学</span>相结合的边缘学科<br>②既是<span class="blur-text">理论学科</span>，又是<span class="blur-text">应用学科</span><br>③既是<span class="blur-text">基础学科</span>，又是<span class="blur-text">临床学科</span></td>
+                            <td>2.. <strong>医学心理学的学科性质</strong><br>①是<span class="answer-text">自然科学</span>和<span class="answer-text">社会科学</span>相结合的边缘学科<br>②既是<span class="answer-text">理论学科</span>，又是<span class="answer-text">应用学科</span><br>③既是<span class="answer-text">基础学科</span>，又是<span class="answer-text">临床学科</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>开设医学心理学课程的主要目的</strong>*<br>①培养医学生的<span class="blur-text">整体医学观</span><br>②掌握医学心理学的<span class="blur-text">研究和实践方法</span><br>③掌握<span class="blur-text">应对和处理人生难题</span></td>
+                            <td>3.. <strong>开设医学心理学课程的主要目的</strong>*<br>①培养医学生的<span class="answer-text">整体医学观</span><br>②掌握医学心理学的<span class="answer-text">研究和实践方法</span><br>③掌握<span class="answer-text">应对和处理人生难题</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>医学心理学的相关学科</strong><br><span class="blur-text">临床心理学</span>、<span class="blur-text">咨询心理学</span>、<span class="blur-text">异常心理学</span>、<span class="blur-text">健康心理学</span>、<span class="blur-text">行为医学</span>、<span class="blur-text">心身医学</span>、<span class="blur-text">心理生理学</span>、<span class="blur-text">神经心理学</span>、<span class="blur-text">护理心理学</span></td>
+                            <td>4.. <strong>医学心理学的相关学科</strong><br><span class="answer-text">临床心理学</span>、<span class="answer-text">咨询心理学</span>、<span class="answer-text">异常心理学</span>、<span class="answer-text">健康心理学</span>、<span class="answer-text">行为医学</span>、<span class="answer-text">心身医学</span>、<span class="answer-text">心理生理学</span>、<span class="answer-text">神经心理学</span>、<span class="answer-text">护理心理学</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>生物医学模式的缺陷</strong><br>①"<span class="blur-text">身心分离</span>"的观点："只见病，不见人"<br>②重<span class="blur-text">局部</span>，轻<span class="blur-text">整体</span>；重<span class="blur-text">躯体</span>，轻<span class="blur-text">心理</span>；重<span class="blur-text">急重症</span>，轻<span class="blur-text">慢性病</span><br>③过分依赖<span class="blur-text">实验室检查结果</span>，轻视<span class="blur-text">临床观察</span></td>
+                            <td>5.. <strong>生物医学模式的缺陷</strong><br>①"<span class="answer-text">身心分离</span>"的观点："只见病，不见人"<br>②重<span class="answer-text">局部</span>，轻<span class="answer-text">整体</span>；重<span class="answer-text">躯体</span>，轻<span class="answer-text">心理</span>；重<span class="answer-text">急重症</span>，轻<span class="answer-text">慢性病</span><br>③过分依赖<span class="answer-text">实验室检查结果</span>，轻视<span class="answer-text">临床观察</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>现代医学模式转变的原因/动力（熟悉）</strong><br>①人类<span class="blur-text">疾病谱</span>和<span class="blur-text">死亡谱</span>的改变<br>②<span class="blur-text">慢性病</span>与人的心理应激、压力及各种不良生活方式密切相关<br>③<span class="blur-text">社会竞争</span>的加剧，压力的增加，不良情绪对健康的影响增大<br>④研究表明：<span class="blur-text">心理活动</span>对健康影响很大，不容忽视<br>⑤人们对健康的<span class="blur-text">需要层次</span>的改变：不仅要躯体的健康，更要心理的安宁</td>
+                            <td>6.. <strong>现代医学模式转变的原因/动力（熟悉）</strong><br>①人类<span class="answer-text">疾病谱</span>和<span class="answer-text">死亡谱</span>的改变<br>②<span class="answer-text">慢性病</span>与人的心理应激、压力及各种不良生活方式密切相关<br>③<span class="answer-text">社会竞争</span>的加剧，压力的增加，不良情绪对健康的影响增大<br>④研究表明：<span class="answer-text">心理活动</span>对健康影响很大，不容忽视<br>⑤人们对健康的<span class="answer-text">需要层次</span>的改变：不仅要躯体的健康，更要心理的安宁</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>医学心理学对疾病与健康的思考（掌握）</strong><br>①人是<span class="blur-text">完整的系统</span>：整体观（各器官、系统协同作用）<br>②人既有<span class="blur-text">生理活动</span>，也有<span class="blur-text">心理活动</span>，彼此相互作用，相互影响，即<span class="blur-text">身心统一</span><br>③人与<span class="blur-text">环境</span>是密切联系的：包括自然环境与社会环境<br>④<span class="blur-text">心理因素</span>在人类调节和适应内外环境活动中具有一定的能动作用</td>
+                            <td>7.. <strong>医学心理学对疾病与健康的思考（掌握）</strong><br>①人是<span class="answer-text">完整的系统</span>：整体观（各器官、系统协同作用）<br>②人既有<span class="answer-text">生理活动</span>，也有<span class="answer-text">心理活动</span>，彼此相互作用，相互影响，即<span class="answer-text">身心统一</span><br>③人与<span class="answer-text">环境</span>是密切联系的：包括自然环境与社会环境<br>④<span class="answer-text">心理因素</span>在人类调节和适应内外环境活动中具有一定的能动作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>医学心理学方法学的主要特点</strong><br>①基础理论的<span class="blur-text">多样性</span>：包括医学、心理学的两大学科的理论<br>②心理因素的<span class="blur-text">主观性</span><br>③研究对象的<span class="blur-text">多学科属性</span>：既有自然科学属性，又有社会科学属性</td>
+                            <td>8.. <strong>医学心理学方法学的主要特点</strong><br>①基础理论的<span class="answer-text">多样性</span>：包括医学、心理学的两大学科的理论<br>②心理因素的<span class="answer-text">主观性</span><br>③研究对象的<span class="answer-text">多学科属性</span>：既有自然科学属性，又有社会科学属性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>医学心理学的研究类型</strong><br>根据研究目的：<span class="blur-text">基础研究</span>和<span class="blur-text">应用研究</span><br>根据研究性质：<span class="blur-text">描述性研究</span>和<span class="blur-text">控制性研究</span><br>按照研究所涉及的时间特点*：<span class="blur-text">横断研究</span>、<span class="blur-text">纵向研究</span>、<span class="blur-text">前瞻性研究</span>、<span class="blur-text">回顾性研究</span></td>
+                            <td>9.. <strong>医学心理学的研究类型</strong><br>根据研究目的：<span class="answer-text">基础研究</span>和<span class="answer-text">应用研究</span><br>根据研究性质：<span class="answer-text">描述性研究</span>和<span class="answer-text">控制性研究</span><br>按照研究所涉及的时间特点*：<span class="answer-text">横断研究</span>、<span class="answer-text">纵向研究</span>、<span class="answer-text">前瞻性研究</span>、<span class="answer-text">回顾性研究</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>横断研究</strong><br>若干个体，<span class="blur-text">同一时间</span>内进行观察和评定</td>
+                            <td>10.. <strong>横断研究</strong><br>若干个体，<span class="answer-text">同一时间</span>内进行观察和评定</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>纵向研究</strong><br>对<span class="blur-text">同一个人</span>或<span class="blur-text">同一组被试</span>在指定时间内进行追踪研究</td>
+                            <td>11.. <strong>纵向研究</strong><br>对<span class="answer-text">同一个人</span>或<span class="answer-text">同一组被试</span>在指定时间内进行追踪研究</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>前瞻性研究</strong><br>以<span class="blur-text">现在</span>为结果，回溯到<span class="blur-text">过去</span>的研究（目前医学心理学最常用的研究方法之一）</td>
+                            <td>12.. <strong>前瞻性研究</strong><br>以<span class="answer-text">现在</span>为结果，回溯到<span class="answer-text">过去</span>的研究（目前医学心理学最常用的研究方法之一）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>回顾性研究</strong><br>以<span class="blur-text">现在</span>为起点追踪到<span class="blur-text">将来</span>的研究方法（预测）</td>
+                            <td>13.. <strong>回顾性研究</strong><br>以<span class="answer-text">现在</span>为起点追踪到<span class="answer-text">将来</span>的研究方法（预测）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>医学心理学的研究方法</strong><br>①<span class="blur-text">观察法</span>：自然观察、控制观察<br>②<span class="blur-text">调查法</span>：晤谈法（会见、电话交流等）、问卷法（调查表或问卷）<br>③<span class="blur-text">测验法</span>：心理测验评定能力态度、性格、成绩和情绪状态等<br>④<span class="blur-text">实验法</span>：最为客观的方法。包括<span class="blur-text">实验室试验法</span>、<span class="blur-text">现场实验法</span>、<span class="blur-text">临床实验法</span><br>⑤<span class="blur-text">相关研究法</span>：统计学方法</td>
+                            <td>14.. <strong>医学心理学的研究方法</strong><br>①<span class="answer-text">观察法</span>：自然观察、控制观察<br>②<span class="answer-text">调查法</span>：晤谈法（会见、电话交流等）、问卷法（调查表或问卷）<br>③<span class="answer-text">测验法</span>：心理测验评定能力态度、性格、成绩和情绪状态等<br>④<span class="answer-text">实验法</span>：最为客观的方法。包括<span class="answer-text">实验室试验法</span>、<span class="answer-text">现场实验法</span>、<span class="answer-text">临床实验法</span><br>⑤<span class="answer-text">相关研究法</span>：统计学方法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>实验法的类型</strong><br>①<span class="blur-text">前实验</span>：是一种自然描述，用来识别自然存在的临界变量及其关系<br>②<span class="blur-text">准实验</span>：与真实验最大的不同是不能随机分派实验对象，只尽可能予以条件控制<br>③<span class="blur-text">真实验</span>：随机分配被试，完全控制无关干扰来源</td>
+                            <td>15.. <strong>实验法的类型</strong><br>①<span class="answer-text">前实验</span>：是一种自然描述，用来识别自然存在的临界变量及其关系<br>②<span class="answer-text">准实验</span>：与真实验最大的不同是不能随机分派实验对象，只尽可能予以条件控制<br>③<span class="answer-text">真实验</span>：随机分配被试，完全控制无关干扰来源</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>感觉的分类</strong><br><span class="blur-text">外部感觉</span>：听觉、嗅觉、味觉、视觉、触觉等<br><span class="blur-text">内部感觉</span>：内脏感觉、运动觉、平衡觉等</td>
+                            <td>16.. <strong>感觉的分类</strong><br><span class="answer-text">外部感觉</span>：听觉、嗅觉、味觉、视觉、触觉等<br><span class="answer-text">内部感觉</span>：内脏感觉、运动觉、平衡觉等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>感觉性的补偿与发展</strong><br><span class="blur-text">补偿</span>是指某种感受器受到损伤后其他感受器的感觉性大大提高<br><span class="blur-text">发展</span>是指经过训练可以提高到常人不可能达到的水平</td>
+                            <td>17.. <strong>感觉性的补偿与发展</strong><br><span class="answer-text">补偿</span>是指某种感受器受到损伤后其他感受器的感觉性大大提高<br><span class="answer-text">发展</span>是指经过训练可以提高到常人不可能达到的水平</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>记忆的基本过程</strong><br>①<span class="blur-text">识记</span>：对信息进行编码，并留下映象的过程<br>②<span class="blur-text">保持</span>：信息在大脑中存储和巩固的过程（质、量）<br>③<span class="blur-text">再认和再现</span>（回忆）：提取信息的过程</td>
+                            <td>18.. <strong>记忆的基本过程</strong><br>①<span class="answer-text">识记</span>：对信息进行编码，并留下映象的过程<br>②<span class="answer-text">保持</span>：信息在大脑中存储和巩固的过程（质、量）<br>③<span class="answer-text">再认和再现</span>（回忆）：提取信息的过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>思维的分类（根据思维任务的性质、内容和解决问题的方法）</strong><br>①<span class="blur-text">直观动作思维</span>：以实际动作为支柱的思维<br>②<span class="blur-text">具体形象思维</span>：以事物的具体形象和表象为支柱的思维<br>③<span class="blur-text">抽象思维</span>：以概念解决问题的思维，是人类思维的核心</td>
+                            <td>19.. <strong>思维的分类（根据思维任务的性质、内容和解决问题的方法）</strong><br>①<span class="answer-text">直观动作思维</span>：以实际动作为支柱的思维<br>②<span class="answer-text">具体形象思维</span>：以事物的具体形象和表象为支柱的思维<br>③<span class="answer-text">抽象思维</span>：以概念解决问题的思维，是人类思维的核心</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>思维的分类（根据思维的探索答案的方向）</strong><br>①<span class="blur-text">聚合思维</span>：又称求同思维<br>②<span class="blur-text">发散思维</span>：又称求异思维</td>
+                            <td>20.. <strong>思维的分类（根据思维的探索答案的方向）</strong><br>①<span class="answer-text">聚合思维</span>：又称求同思维<br>②<span class="answer-text">发散思维</span>：又称求异思维</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>思维的分类（根据思维的独立程度）</strong><br>①<span class="blur-text">常规思维</span><br>②<span class="blur-text">创造性思维</span></td>
+                            <td>21.. <strong>思维的分类（根据思维的独立程度）</strong><br>①<span class="answer-text">常规思维</span><br>②<span class="answer-text">创造性思维</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>幻想</strong><br>个体指向未来与自己需要相关<br><span class="blur-text">理想</span>：可实现<br><span class="blur-text">妄想</span>：不可实现</td>
+                            <td>22.. <strong>幻想</strong><br>个体指向未来与自己需要相关<br><span class="answer-text">理想</span>：可实现<br><span class="answer-text">妄想</span>：不可实现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>情绪和情感的功能</strong><br>①<span class="blur-text">适应功能</span>：情绪是适应环境的生理工具，情绪传递信息，获得帮助<br>②<span class="blur-text">激发功能</span>：激发心理活动和行为动机。对生理活动的影响：放大内驱力；对认知活动的影响：兴趣和好奇心对认知起促进作用<br>③<span class="blur-text">对心理活动的组织作用</span>：促进或瓦解作用，一般情况下，正性情绪起促进作用，负性情绪起瓦解作用，愉快情绪与工作效率呈<span class="blur-text">倒"U"</span>关系<br>④<span class="blur-text">信号功能</span>：表情是交往的手段</td>
+                            <td>23.. <strong>情绪和情感的功能</strong><br>①<span class="answer-text">适应功能</span>：情绪是适应环境的生理工具，情绪传递信息，获得帮助<br>②<span class="answer-text">激发功能</span>：激发心理活动和行为动机。对生理活动的影响：放大内驱力；对认知活动的影响：兴趣和好奇心对认知起促进作用<br>③<span class="answer-text">对心理活动的组织作用</span>：促进或瓦解作用，一般情况下，正性情绪起促进作用，负性情绪起瓦解作用，愉快情绪与工作效率呈<span class="answer-text">倒"U"</span>关系<br>④<span class="answer-text">信号功能</span>：表情是交往的手段</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>情绪的维度</strong><br>①<span class="blur-text">肯定与否定</span><br>②<span class="blur-text">强与弱</span><br>③<span class="blur-text">增力与减力</span><br>④<span class="blur-text">紧张与轻松</span></td>
+                            <td>24.. <strong>情绪的维度</strong><br>①<span class="answer-text">肯定与否定</span><br>②<span class="answer-text">强与弱</span><br>③<span class="answer-text">增力与减力</span><br>④<span class="answer-text">紧张与轻松</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>意志过程的阶段</strong><br><span class="blur-text">准备阶段</span>和<span class="blur-text">执行决定阶段</span></td>
+                            <td>25.. <strong>意志过程的阶段</strong><br><span class="answer-text">准备阶段</span>和<span class="answer-text">执行决定阶段</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">26.. <strong>意志对行动的调节作用</strong><br>图略</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>27.. <strong>人格心理特征</strong><br>包括<span class="blur-text">能力</span>、<span class="blur-text">气质</span>、<span class="blur-text">性格</span></td>
+                            <td>27.. <strong>人格心理特征</strong><br>包括<span class="answer-text">能力</span>、<span class="answer-text">气质</span>、<span class="answer-text">性格</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>28.. <strong>需要的概念</strong><br>需要是指人对某种目标的<span class="blur-text">渴求</span>或<span class="blur-text">欲望</span>。它是人内部的<span class="blur-text">不平衡状态</span>，反映某种客观的要求，是个体行为的<span class="blur-text">原动力</span></td>
+                            <td>28.. <strong>需要的概念</strong><br>需要是指人对某种目标的<span class="answer-text">渴求</span>或<span class="answer-text">欲望</span>。它是人内部的<span class="answer-text">不平衡状态</span>，反映某种客观的要求，是个体行为的<span class="answer-text">原动力</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>29.. <strong>挫折</strong><br>动机受到干扰阻滞、被迫暂时放弃或完全受阻的需要不能满足的<span class="blur-text">情绪状态</span></td>
+                            <td>29.. <strong>挫折</strong><br>动机受到干扰阻滞、被迫暂时放弃或完全受阻的需要不能满足的<span class="answer-text">情绪状态</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>30.. <strong>能力的分类（实际能力与潜在能力）</strong><br>①<span class="blur-text">实际能力</span>：已表现出来的实际能力（成就测验）<br>②<span class="blur-text">潜在能力</span>：尚未表现出来的心理能力（倾向测验）</td>
+                            <td>30.. <strong>能力的分类（实际能力与潜在能力）</strong><br>①<span class="answer-text">实际能力</span>：已表现出来的实际能力（成就测验）<br>②<span class="answer-text">潜在能力</span>：尚未表现出来的心理能力（倾向测验）</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">31.. <strong>能力发展的个别差异</strong><br>图略</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>32.. <strong>性格与气质的关系</strong><br>性格是<span class="blur-text">神经类型</span>和后天生活环境所形成的<span class="blur-text">暂时联系系统</span>的合金。神经类型只是性格形成的<span class="blur-text">自然前提</span>，而后天生活过程更具有<span class="blur-text">直接意义</span><br>性格有<span class="blur-text">好坏</span>之分，性格在一定程度上能够<span class="blur-text">掩盖</span>和<span class="blur-text">改造</span>气质，还能对能力的形成和发展起着<span class="blur-text">制约作用</span></td>
+                            <td>32.. <strong>性格与气质的关系</strong><br>性格是<span class="answer-text">神经类型</span>和后天生活环境所形成的<span class="answer-text">暂时联系系统</span>的合金。神经类型只是性格形成的<span class="answer-text">自然前提</span>，而后天生活过程更具有<span class="answer-text">直接意义</span><br>性格有<span class="answer-text">好坏</span>之分，性格在一定程度上能够<span class="answer-text">掩盖</span>和<span class="answer-text">改造</span>气质，还能对能力的形成和发展起着<span class="answer-text">制约作用</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>33.. <strong>心理的生物基础</strong><br>脑的三个基本机能系统<br>①调节<span class="blur-text">张力</span>和维持<span class="blur-text">觉醒状态</span>的系统<br>②<span class="blur-text">接受</span>、<span class="blur-text">加工</span>和<span class="blur-text">储存</span>信息的系统<br>③<span class="blur-text">心理活动</span>与<span class="blur-text">行为调控</span>的系统</td>
+                            <td>33.. <strong>心理的生物基础</strong><br>脑的三个基本机能系统<br>①调节<span class="answer-text">张力</span>和维持<span class="answer-text">觉醒状态</span>的系统<br>②<span class="answer-text">接受</span>、<span class="answer-text">加工</span>和<span class="answer-text">储存</span>信息的系统<br>③<span class="answer-text">心理活动</span>与<span class="answer-text">行为调控</span>的系统</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>34.. <strong>心理的社会基础</strong><br>①<span class="blur-text">环境</span>与人的心理：自然环境、社会环境、物理环境、心理环境<br>②<span class="blur-text">文化</span>与人的心理和行为：人类文化与人性、民族文化与心理、拷贝世界与心理</td>
+                            <td>34.. <strong>心理的社会基础</strong><br>①<span class="answer-text">环境</span>与人的心理：自然环境、社会环境、物理环境、心理环境<br>②<span class="answer-text">文化</span>与人的心理和行为：人类文化与人性、民族文化与心理、拷贝世界与心理</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>35.. <strong>发展的概念</strong><br>从人出生到死亡过程中所发生的的有<span class="blur-text">积极意义</span>、有<span class="blur-text">规律</span>的变化过程</td>
+                            <td>35.. <strong>发展的概念</strong><br>从人出生到死亡过程中所发生的的有<span class="answer-text">积极意义</span>、有<span class="answer-text">规律</span>的变化过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>36.. <strong>生命过程</strong><br>指从人出生到死亡过程中所经历的<span class="blur-text">发展过程</span>，包括<span class="blur-text">童年</span>、<span class="blur-text">青年</span>、<span class="blur-text">中年</span>、<span class="blur-text">老年</span><br>①既有<span class="blur-text">生理</span>方面的改变，也有<span class="blur-text">心理</span>方面的改变<br>②变化过程具有<span class="blur-text">顺序性</span>，也有<span class="blur-text">阶段性</span></td>
+                            <td>36.. <strong>生命过程</strong><br>指从人出生到死亡过程中所经历的<span class="answer-text">发展过程</span>，包括<span class="answer-text">童年</span>、<span class="answer-text">青年</span>、<span class="answer-text">中年</span>、<span class="answer-text">老年</span><br>①既有<span class="answer-text">生理</span>方面的改变，也有<span class="answer-text">心理</span>方面的改变<br>②变化过程具有<span class="answer-text">顺序性</span>，也有<span class="answer-text">阶段性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>37.. <strong>心理健康的维护和促进</strong><br><span class="blur-text">初级目标</span>：预防和矫治心理疾病和不良行为<br><span class="blur-text">高级目标</span>：健康促进</td>
+                            <td>37.. <strong>心理健康的维护和促进</strong><br><span class="answer-text">初级目标</span>：预防和矫治心理疾病和不良行为<br><span class="answer-text">高级目标</span>：健康促进</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>38.. <strong>胎儿期心理健康</strong><br>①孕期的<span class="blur-text">膳食</span>及<span class="blur-text">保健</span>：丰富的、合理的营养；尽量避免饮酒、吸烟、药物、感染、疾病等影响胎儿身心发育的因素<br>②孕妇<span class="blur-text">良好稳定的情绪</span>对怀孕的态度。不稳定的情绪易导致胎儿发育的异常和难产等风险</td>
+                            <td>38.. <strong>胎儿期心理健康</strong><br>①孕期的<span class="answer-text">膳食</span>及<span class="answer-text">保健</span>：丰富的、合理的营养；尽量避免饮酒、吸烟、药物、感染、疾病等影响胎儿身心发育的因素<br>②孕妇<span class="answer-text">良好稳定的情绪</span>对怀孕的态度。不稳定的情绪易导致胎儿发育的异常和难产等风险</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>39.. <strong>增进母爱的方法</strong><br>①玩<span class="blur-text">迷藏</span>游戏<br>②在安全环境下与婴儿保持<span class="blur-text">一定距离</span><br>③在必须分离时，给予一个<span class="blur-text">柔软的寄托物</span></td>
+                            <td>39.. <strong>增进母爱的方法</strong><br>①玩<span class="answer-text">迷藏</span>游戏<br>②在安全环境下与婴儿保持<span class="answer-text">一定距离</span><br>③在必须分离时，给予一个<span class="answer-text">柔软的寄托物</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>40.. <strong>幼儿期的生理心理发展特征</strong><br><span class="blur-text">3-6岁</span>——幼儿期<br>①生理特点：<span class="blur-text">神经系统</span>的发育，兴奋性、调控能力增强<br>②心理特点：皮亚杰称为<span class="blur-text">运算前期</span><br>认知方面的特点：<span class="blur-text">智力发展的关键期</span>。<span class="blur-text">自我中心</span>；<span class="blur-text">万物有灵</span>；<span class="blur-text">符号功能</span><br>语言的发展：<span class="blur-text">单字期</span>、<span class="blur-text">称呼期</span>、<span class="blur-text">构句期</span>、<span class="blur-text">好问期</span>。影响语言发展的因素包括<span class="blur-text">遗传</span>和<span class="blur-text">环境</span>两方面<br>感知觉的迅速发展，记忆力、思维、想象力的发展，逻辑推理能力有所发展<br>情感方面：<span class="blur-text">强烈</span>、<span class="blur-text">丰富</span>、<span class="blur-text">易变</span>，易受环境的影响<br>个性方面：<span class="blur-text">人格塑造的关键期</span>。<span class="blur-text">自我意识</span>增强；能区分<span class="blur-text">性别差异</span></td>
+                            <td>40.. <strong>幼儿期的生理心理发展特征</strong><br><span class="answer-text">3-6岁</span>——幼儿期<br>①生理特点：<span class="answer-text">神经系统</span>的发育，兴奋性、调控能力增强<br>②心理特点：皮亚杰称为<span class="answer-text">运算前期</span><br>认知方面的特点：<span class="answer-text">智力发展的关键期</span>。<span class="answer-text">自我中心</span>；<span class="answer-text">万物有灵</span>；<span class="answer-text">符号功能</span><br>语言的发展：<span class="answer-text">单字期</span>、<span class="answer-text">称呼期</span>、<span class="answer-text">构句期</span>、<span class="answer-text">好问期</span>。影响语言发展的因素包括<span class="answer-text">遗传</span>和<span class="answer-text">环境</span>两方面<br>感知觉的迅速发展，记忆力、思维、想象力的发展，逻辑推理能力有所发展<br>情感方面：<span class="answer-text">强烈</span>、<span class="answer-text">丰富</span>、<span class="answer-text">易变</span>，易受环境的影响<br>个性方面：<span class="answer-text">人格塑造的关键期</span>。<span class="answer-text">自我意识</span>增强；能区分<span class="answer-text">性别差异</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>41.. <strong>良好的家庭教养方式</strong><br>①<span class="blur-text">民主式</span>的教养方式<br>②<span class="blur-text">安全</span>的生活环境<br>③正确认识"<span class="blur-text">第一反抗期</span>"<br>④让幼儿懂得和遵循<span class="blur-text">游戏规则</span></td>
+                            <td>41.. <strong>良好的家庭教养方式</strong><br>①<span class="answer-text">民主式</span>的教养方式<br>②<span class="answer-text">安全</span>的生活环境<br>③正确认识"<span class="answer-text">第一反抗期</span>"<br>④让幼儿懂得和遵循<span class="answer-text">游戏规则</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>42.. <strong>儿童期的生理发展特点</strong><br>①生理特点：图略<br>②心理特点<br>认知活动：<span class="blur-text">智力发展最快</span>的时期<br>情感方面：<span class="blur-text">丰富</span>、<span class="blur-text">直接</span>、<span class="blur-text">外显</span>；<span class="blur-text">好奇心强</span>、<span class="blur-text">辨别力差</span><br>个性方面：<span class="blur-text">自我意识</span>增强，<span class="blur-text">道德模仿力</span>增强，易染上不良风气，属心理上的<span class="blur-text">危险期</span>，应予以高度重视</td>
+                            <td>42.. <strong>儿童期的生理发展特点</strong><br>①生理特点：图略<br>②心理特点<br>认知活动：<span class="answer-text">智力发展最快</span>的时期<br>情感方面：<span class="answer-text">丰富</span>、<span class="answer-text">直接</span>、<span class="answer-text">外显</span>；<span class="answer-text">好奇心强</span>、<span class="answer-text">辨别力差</span><br>个性方面：<span class="answer-text">自我意识</span>增强，<span class="answer-text">道德模仿力</span>增强，易染上不良风气，属心理上的<span class="answer-text">危险期</span>，应予以高度重视</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>43.. <strong>青少年期主要的生理心理发展特征</strong><br>①生理特征：<span class="blur-text">第二性征</span>的出现，<span class="blur-text">脑和神经系统</span>的发育<br>②心理特征<br><span class="blur-text">心理学上的"第二次反抗期"</span><br><span class="blur-text">独立性与依赖性</span>之间的矛盾<br><span class="blur-text">性心理</span>发育，<span class="blur-text">性意识</span>觉醒，<span class="blur-text">性萌动</span>与<span class="blur-text">羞耻感</span>并存，出现<span class="blur-text">青春期烦躁</span></td>
+                            <td>43.. <strong>青少年期主要的生理心理发展特征</strong><br>①生理特征：<span class="answer-text">第二性征</span>的出现，<span class="answer-text">脑和神经系统</span>的发育<br>②心理特征<br><span class="answer-text">心理学上的"第二次反抗期"</span><br><span class="answer-text">独立性与依赖性</span>之间的矛盾<br><span class="answer-text">性心理</span>发育，<span class="answer-text">性意识</span>觉醒，<span class="answer-text">性萌动</span>与<span class="answer-text">羞耻感</span>并存，出现<span class="answer-text">青春期烦躁</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>44.. <strong>青年期的生理心理特点</strong><br>①生理特点：<span class="blur-text">发育成熟</span>，<span class="blur-text">生理功能</span>最旺盛时期<br>②心理特征<br><span class="blur-text">认知能力</span>趋于完善<br><span class="blur-text">情绪情感</span>丰富、强烈，但不稳定<br><span class="blur-text">自控力</span>日渐增强<br><span class="blur-text">人格</span>逐渐成熟</td>
+                            <td>44.. <strong>青年期的生理心理特点</strong><br>①生理特点：<span class="answer-text">发育成熟</span>，<span class="answer-text">生理功能</span>最旺盛时期<br>②心理特征<br><span class="answer-text">认知能力</span>趋于完善<br><span class="answer-text">情绪情感</span>丰富、强烈，但不稳定<br><span class="answer-text">自控力</span>日渐增强<br><span class="answer-text">人格</span>逐渐成熟</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>45.. <strong>中年期的身心特点</strong><br>①生理功能逐步<span class="blur-text">衰弱</span>，特别是<span class="blur-text">更年期</span>的生理机能状况的改变<br>②心理能力方面的改变<br><span class="blur-text">智力</span>发展到最佳状态<br><span class="blur-text">情绪</span>趋于稳定：情绪调控能力增强<br><span class="blur-text">意志</span>坚定，<span class="blur-text">个性</span>稳定</td>
+                            <td>45.. <strong>中年期的身心特点</strong><br>①生理功能逐步<span class="answer-text">衰弱</span>，特别是<span class="answer-text">更年期</span>的生理机能状况的改变<br>②心理能力方面的改变<br><span class="answer-text">智力</span>发展到最佳状态<br><span class="answer-text">情绪</span>趋于稳定：情绪调控能力增强<br><span class="answer-text">意志</span>坚定，<span class="answer-text">个性</span>稳定</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>46.. <strong>精神分析的历史</strong><br><span class="blur-text">奥地利</span> <span class="blur-text">弗洛伊德</span> <span class="blur-text">心理动力学理论</span></td>
+                            <td>46.. <strong>精神分析的历史</strong><br><span class="answer-text">奥地利</span> <span class="answer-text">弗洛伊德</span> <span class="answer-text">心理动力学理论</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>47.. <strong>行为的概念</strong><br>新行为主义者认为，"行为"——个体内在的和外在的各种形式的<span class="blur-text">运动</span>，即包括<span class="blur-text">外显的活动</span>，也包括<span class="blur-text">内隐的心理活动</span>和<span class="blur-text">内脏活动</span>。心理学既应该研究外显的活动，也应该研究内隐的活动（广义的行为概念）</td>
+                            <td>47.. <strong>行为的概念</strong><br>新行为主义者认为，"行为"——个体内在的和外在的各种形式的<span class="answer-text">运动</span>，即包括<span class="answer-text">外显的活动</span>，也包括<span class="answer-text">内隐的心理活动</span>和<span class="answer-text">内脏活动</span>。心理学既应该研究外显的活动，也应该研究内隐的活动（广义的行为概念）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>48.. <strong>行为学习理论的基本观点</strong><br>人的正常的或病态的行为（包括外显行为及其伴随的心身反应）都可以通过<span class="blur-text">学习过程</span>而形成。因而可以通过学习<span class="blur-text">获得</span>、<span class="blur-text">矫正</span>异常（或病态）行为<br><span class="blur-text">学习</span>是支配行为和影响心身健康的一个重要因素</td>
+                            <td>48.. <strong>行为学习理论的基本观点</strong><br>人的正常的或病态的行为（包括外显行为及其伴随的心身反应）都可以通过<span class="answer-text">学习过程</span>而形成。因而可以通过学习<span class="answer-text">获得</span>、<span class="answer-text">矫正</span>异常（或病态）行为<br><span class="answer-text">学习</span>是支配行为和影响心身健康的一个重要因素</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>49.. <strong>经典条件反射的意义</strong><br><span class="blur-text">系统脱敏疗法</span>治疗焦虑症和恐怖症</td>
+                            <td>49.. <strong>经典条件反射的意义</strong><br><span class="answer-text">系统脱敏疗法</span>治疗焦虑症和恐怖症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>50.. <strong>操作条件反射的意义</strong><br>行为治疗中的<span class="blur-text">奖励法</span>、<span class="blur-text">厌恶疗法</span>等</td>
+                            <td>50.. <strong>操作条件反射的意义</strong><br>行为治疗中的<span class="answer-text">奖励法</span>、<span class="answer-text">厌恶疗法</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>51.. <strong>内脏学习理论</strong><br><span class="blur-text">米勒</span> <span class="blur-text">生物反馈治疗</span></td>
+                            <td>51.. <strong>内脏学习理论</strong><br><span class="answer-text">米勒</span> <span class="answer-text">生物反馈治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>52.. <strong>对行为学习理论的评述</strong><br>①合理性：用于<span class="blur-text">技能训练</span>、<span class="blur-text">心理治疗</span>等<br>②局限性：<span class="blur-text">环境决定论</span>，否认遗传和本能。<span class="blur-text">S-O-R</span>——认知行为学习理论</td>
+                            <td>52.. <strong>对行为学习理论的评述</strong><br>①合理性：用于<span class="answer-text">技能训练</span>、<span class="answer-text">心理治疗</span>等<br>②局限性：<span class="answer-text">环境决定论</span>，否认遗传和本能。<span class="answer-text">S-O-R</span>——认知行为学习理论</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>53.. <strong>认知疗法的理论基础</strong><br><span class="blur-text">埃利斯</span>：<span class="blur-text">ABC情绪理论</span></td>
+                            <td>53.. <strong>认知疗法的理论基础</strong><br><span class="answer-text">埃利斯</span>：<span class="answer-text">ABC情绪理论</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>54.. <strong>人本主义理论</strong><br><span class="blur-text">20世纪50-60年代</span> <span class="blur-text">马斯洛</span>、<span class="blur-text">罗杰斯</span> 继行为主义和精神分析之后心理学的<span class="blur-text">第三势力</span></td>
+                            <td>54.. <strong>人本主义理论</strong><br><span class="answer-text">20世纪50-60年代</span> <span class="answer-text">马斯洛</span>、<span class="answer-text">罗杰斯</span> 继行为主义和精神分析之后心理学的<span class="answer-text">第三势力</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>55.. <strong>心理评估的作用</strong><br><span class="blur-text">医学目的</span>、<span class="blur-text">心理学目的</span>、<span class="blur-text">教育目的</span>、<span class="blur-text">人力资源目的</span>、<span class="blur-text">军事和司法目的</span></td>
+                            <td>55.. <strong>心理评估的作用</strong><br><span class="answer-text">医学目的</span>、<span class="answer-text">心理学目的</span>、<span class="answer-text">教育目的</span>、<span class="answer-text">人力资源目的</span>、<span class="answer-text">军事和司法目的</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>56.. <strong>观察法的要素</strong><br>①<span class="blur-text">目标行为</span>：明确界定被观测的行为<br>②<span class="blur-text">观察时间</span>：确定观察期、观察次数、间隔时间、持续时间等<br>③<span class="blur-text">资料记录</span><br>④<span class="blur-text">观察者的条件</span></td>
+                            <td>56.. <strong>观察法的要素</strong><br>①<span class="answer-text">目标行为</span>：明确界定被观测的行为<br>②<span class="answer-text">观察时间</span>：确定观察期、观察次数、间隔时间、持续时间等<br>③<span class="answer-text">资料记录</span><br>④<span class="answer-text">观察者的条件</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>57.. <strong>会谈法的要点</strong><br>①<span class="blur-text">用词</span>：通俗易懂，个性化用语<br>②<span class="blur-text">提问技术</span>：在开放式、促进式、阐明式、对质式、封闭式提问中，以<span class="blur-text">开放式提问</span>居多<br>③<span class="blur-text">记录</span>：一般不笔记，只记录要点。若用于教学录音、录像，必须事先征得来访者同意<br>④<span class="blur-text">倾听技术</span><br>⑤<span class="blur-text">非言语沟通</span></td>
+                            <td>57.. <strong>会谈法的要点</strong><br>①<span class="answer-text">用词</span>：通俗易懂，个性化用语<br>②<span class="answer-text">提问技术</span>：在开放式、促进式、阐明式、对质式、封闭式提问中，以<span class="answer-text">开放式提问</span>居多<br>③<span class="answer-text">记录</span>：一般不笔记，只记录要点。若用于教学录音、录像，必须事先征得来访者同意<br>④<span class="answer-text">倾听技术</span><br>⑤<span class="answer-text">非言语沟通</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>58.. <strong>心理测验及临床评定量表的定义【掌握】</strong><br><span class="blur-text">心理测量</span>是依据一定的<span class="blur-text">法则</span>，用<span class="blur-text">数量化</span>手段对心理现象或行为加以确定和测定。心理测验工具的编制，必须包含以下4点含义<br>①<span class="blur-text">行为样本</span>：从全面行为中选择部分具有代表性的行为进行测试<br>②<span class="blur-text">标准情景</span>：统一施测条件、程序、记分方法、对结果的处理<br>③<span class="blur-text">结果描述</span>：定性和定量的描述<br>④<span class="blur-text">心理测验工具</span>：测验材料和使用手册</td>
+                            <td>58.. <strong>心理测验及临床评定量表的定义【掌握】</strong><br><span class="answer-text">心理测量</span>是依据一定的<span class="answer-text">法则</span>，用<span class="answer-text">数量化</span>手段对心理现象或行为加以确定和测定。心理测验工具的编制，必须包含以下4点含义<br>①<span class="answer-text">行为样本</span>：从全面行为中选择部分具有代表性的行为进行测试<br>②<span class="answer-text">标准情景</span>：统一施测条件、程序、记分方法、对结果的处理<br>③<span class="answer-text">结果描述</span>：定性和定量的描述<br>④<span class="answer-text">心理测验工具</span>：测验材料和使用手册</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>59.. <strong>选择智力测验的注意事项</strong><br><span class="blur-text">0-3岁</span>一般选用<span class="blur-text">发展量表</span>；><span class="blur-text">4岁</span>选择智力测验和适应行为量表</td>
+                            <td>59.. <strong>选择智力测验的注意事项</strong><br><span class="answer-text">0-3岁</span>一般选用<span class="answer-text">发展量表</span>；><span class="answer-text">4岁</span>选择智力测验和适应行为量表</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>60.. <strong>应激源的现象学分类（了解）</strong><br><span class="blur-text">工作问题</span>；<span class="blur-text">恋爱、婚姻和家庭问题</span>；<span class="blur-text">人际关系问题</span>；<span class="blur-text">经济问题</span>；<span class="blur-text">个人健康问题</span>；<span class="blur-text">自我实现与自尊方面的问题</span>；<span class="blur-text">喜庆事件</span></td>
+                            <td>60.. <strong>应激源的现象学分类（了解）</strong><br><span class="answer-text">工作问题</span>；<span class="answer-text">恋爱、婚姻和家庭问题</span>；<span class="answer-text">人际关系问题</span>；<span class="answer-text">经济问题</span>；<span class="answer-text">个人健康问题</span>；<span class="answer-text">自我实现与自尊方面的问题</span>；<span class="answer-text">喜庆事件</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>61.. <strong>应激源的主观和客观属性</strong><br><span class="blur-text">主观事件</span>、<span class="blur-text">客观事件</span></td>
+                            <td>61.. <strong>应激源的主观和客观属性</strong><br><span class="answer-text">主观事件</span>、<span class="answer-text">客观事件</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>62.. <strong>应激的生理反应</strong><br><span class="blur-text">图略</span></td>
+                            <td>62.. <strong>应激的生理反应</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>63.. <strong>认知性应激反应</strong><br>常见反应：<span class="blur-text">意识障碍</span>；<span class="blur-text">注意力受损</span>；<span class="blur-text">记忆</span>、<span class="blur-text">思维想象力减退</span>等</td>
+                            <td>63.. <strong>认知性应激反应</strong><br>常见反应：<span class="answer-text">意识障碍</span>；<span class="answer-text">注意力受损</span>；<span class="answer-text">记忆</span>、<span class="answer-text">思维想象力减退</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>64.. <strong>应激的行为反应（适应不良）</strong><br><span class="blur-text">图略</span></td>
+                            <td>64.. <strong>应激的行为反应（适应不良）</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>65.. <strong>心理动力学途径的意义</strong><br>开创<span class="blur-text">心身医学</span>的先河；不足之处：忽视<span class="blur-text">心理社会刺激</span></td>
+                            <td>65.. <strong>心理动力学途径的意义</strong><br>开创<span class="answer-text">心身医学</span>的先河；不足之处：忽视<span class="answer-text">心理社会刺激</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>66.. <strong>心理治疗的基本过程</strong><br><span class="blur-text">初期阶段</span>、<span class="blur-text">中期阶段</span>、<span class="blur-text">结束阶段</span></td>
+                            <td>66.. <strong>心理治疗的基本过程</strong><br><span class="answer-text">初期阶段</span>、<span class="answer-text">中期阶段</span>、<span class="answer-text">结束阶段</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>67.. <strong>精神分析疗法的适应症和评价</strong><br>适用于各种<span class="blur-text">神经症</span>、<span class="blur-text">人格障碍</span>、<span class="blur-text">心境障碍</span>、<span class="blur-text">心身疾病</span>及各种<span class="blur-text">行为问题</span></td>
+                            <td>67.. <strong>精神分析疗法的适应症和评价</strong><br>适用于各种<span class="answer-text">神经症</span>、<span class="answer-text">人格障碍</span>、<span class="answer-text">心境障碍</span>、<span class="answer-text">心身疾病</span>及各种<span class="answer-text">行为问题</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>68.. <strong>行为疗法的适应症</strong><br>各种<span class="blur-text">异常行为</span>的矫治；但对<span class="blur-text">边缘人格</span>、<span class="blur-text">人格障碍</span>或<span class="blur-text">抑郁症</span>疗效有限</td>
+                            <td>68.. <strong>行为疗法的适应症</strong><br>各种<span class="answer-text">异常行为</span>的矫治；但对<span class="answer-text">边缘人格</span>、<span class="answer-text">人格障碍</span>或<span class="answer-text">抑郁症</span>疗效有限</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>69.. <strong>认知疗法的适应症</strong><br>目前已广泛用于<span class="blur-text">焦虑症</span>、<span class="blur-text">抑郁症</span>、<span class="blur-text">恐怖症</span>、<span class="blur-text">物质成瘾</span>、<span class="blur-text">进食障碍</span>等</td>
+                            <td>69.. <strong>认知疗法的适应症</strong><br>目前已广泛用于<span class="answer-text">焦虑症</span>、<span class="answer-text">抑郁症</span>、<span class="answer-text">恐怖症</span>、<span class="answer-text">物质成瘾</span>、<span class="answer-text">进食障碍</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>70.. <strong>以人为中心疗法的适应症和评价</strong><br>适用于<span class="blur-text">心理咨询</span>和医生在工作中的<span class="blur-text">沟通态度</span>、<span class="blur-text">沟通原则</span></td>
+                            <td>70.. <strong>以人为中心疗法的适应症和评价</strong><br>适用于<span class="answer-text">心理咨询</span>和医生在工作中的<span class="answer-text">沟通态度</span>、<span class="answer-text">沟通原则</span></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

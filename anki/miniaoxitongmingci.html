@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">泌尿系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>血管球</strong><br>位于<span class="blur-text">肾小体</span>中部，由数条<span class="blur-text">有孔型毛细血管</span>形成袢样结构。血管球入口为<span class="blur-text">入球微动脉</span>，出口为<span class="blur-text">出球微动脉</span>。</td>
+                            <td>1.. <strong>血管球</strong><br>位于<span class="answer-text">肾小体</span>中部，由数条<span class="answer-text">有孔型毛细血管</span>形成袢样结构。血管球入口为<span class="answer-text">入球微动脉</span>，出口为<span class="answer-text">出球微动脉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>1.. A <strong>血管球（续）</strong><br><span class="blur-text">足细胞</span>包绕有孔毛细血管组成<span class="blur-text">滤过膜</span>，对流经血管球的血液进行滤过，产生滤过液（<span class="blur-text">原尿</span>）。</td>
+                            <td>1.. A <strong>血管球（续）</strong><br><span class="answer-text">足细胞</span>包绕有孔毛细血管组成<span class="answer-text">滤过膜</span>，对流经血管球的血液进行滤过，产生滤过液（<span class="answer-text">原尿</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2.. <strong>肾单位</strong><br>是尿液形成的<span class="blur-text">结构和功能单位</span>，每个肾单位包括一个<span class="blur-text">肾小体</span>及与其相连的<span class="blur-text">肾小管</span>。</td>
+                            <td>2.. <strong>肾单位</strong><br>是尿液形成的<span class="answer-text">结构和功能单位</span>，每个肾单位包括一个<span class="answer-text">肾小体</span>及与其相连的<span class="answer-text">肾小管</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3.. <strong>球旁复合体</strong><br>又称<span class="blur-text">肾小球旁器</span>，位于肾小体<span class="blur-text">血管极</span>处的三角形区域内，由<span class="blur-text">球旁细胞</span>、<span class="blur-text">致密斑</span>和<span class="blur-text">球外系膜细胞</span>组成。</td>
+                            <td>3.. <strong>球旁复合体</strong><br>又称<span class="answer-text">肾小球旁器</span>，位于肾小体<span class="answer-text">血管极</span>处的三角形区域内，由<span class="answer-text">球旁细胞</span>、<span class="answer-text">致密斑</span>和<span class="answer-text">球外系膜细胞</span>组成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>4.. <strong>球旁细胞</strong><br>位于<span class="blur-text">入球微动脉</span>管壁上，是入球微动脉近肾小管血管极处管壁中膜的<span class="blur-text">平滑肌细胞</span>转化而成的<span class="blur-text">上皮样细胞</span>。</td>
+                            <td>4.. <strong>球旁细胞</strong><br>位于<span class="answer-text">入球微动脉</span>管壁上，是入球微动脉近肾小管血管极处管壁中膜的<span class="answer-text">平滑肌细胞</span>转化而成的<span class="answer-text">上皮样细胞</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5.. <strong>致密斑</strong><br>是由近血管极处<span class="blur-text">远端小管曲部</span>上皮细胞局部特化形成，细胞呈<span class="blur-text">高柱状</span>，排列紧密，细胞核位置较高。致密斑能感受远曲小管内液体的<span class="blur-text">钠离子浓度</span>变化，并将信息传递给<span class="blur-text">球旁细胞</span>，以调节球旁细胞的分泌。</td>
+                            <td>5.. <strong>致密斑</strong><br>是由近血管极处<span class="answer-text">远端小管曲部</span>上皮细胞局部特化形成，细胞呈<span class="answer-text">高柱状</span>，排列紧密，细胞核位置较高。致密斑能感受远曲小管内液体的<span class="answer-text">钠离子浓度</span>变化，并将信息传递给<span class="answer-text">球旁细胞</span>，以调节球旁细胞的分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>6.. <strong>球外系膜细胞</strong><br>是位于<span class="blur-text">入球微动脉</span>、<span class="blur-text">出球微动脉</span>和<span class="blur-text">致密斑</span>围成的三角形区域内的细胞群，承担<span class="blur-text">信息传递</span>作用。</td>
+                            <td>6.. <strong>球外系膜细胞</strong><br>是位于<span class="answer-text">入球微动脉</span>、<span class="answer-text">出球微动脉</span>和<span class="answer-text">致密斑</span>围成的三角形区域内的细胞群，承担<span class="answer-text">信息传递</span>作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>7.. <strong>足细胞</strong><br>贴在<span class="blur-text">有孔毛细血管内皮细胞</span>外，胞体较大，由胞体伸出几个大的<span class="blur-text">初级突起</span>，每个初级突起又发出许多<span class="blur-text">次级突起</span>，相邻次级突起之间呈指状交叉，紧贴在有孔毛细血管外，突起间的孔隙称<span class="blur-text">裂孔</span>，上有<span class="blur-text">裂孔膜</span>。足细胞参与形成<span class="blur-text">滤过屏障</span>。</td>
+                            <td>7.. <strong>足细胞</strong><br>贴在<span class="answer-text">有孔毛细血管内皮细胞</span>外，胞体较大，由胞体伸出几个大的<span class="answer-text">初级突起</span>，每个初级突起又发出许多<span class="answer-text">次级突起</span>，相邻次级突起之间呈指状交叉，紧贴在有孔毛细血管外，突起间的孔隙称<span class="answer-text">裂孔</span>，上有<span class="answer-text">裂孔膜</span>。足细胞参与形成<span class="answer-text">滤过屏障</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>8.. <strong>滤过屏障</strong><br>是位于肾血管球毛细血管腔与肾小囊腔之间的结构屏障，又称<span class="blur-text">滤过膜</span>，由<span class="blur-text">有孔毛细血管内皮</span>、<span class="blur-text">基膜</span>和<span class="blur-text">足细胞裂孔膜</span>三部分组成。</td>
+                            <td>8.. <strong>滤过屏障</strong><br>是位于肾血管球毛细血管腔与肾小囊腔之间的结构屏障，又称<span class="answer-text">滤过膜</span>，由<span class="answer-text">有孔毛细血管内皮</span>、<span class="answer-text">基膜</span>和<span class="answer-text">足细胞裂孔膜</span>三部分组成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>8.. A <strong>滤过屏障（续）</strong><br>血液在流经血管球毛细血管时血压较高，大量的<span class="blur-text">水</span>和<span class="blur-text">小分子物质</span>可通过滤过膜进入肾小囊腔，形成滤过液（<span class="blur-text">原尿</span>）。</td>
+                            <td>8.. A <strong>滤过屏障（续）</strong><br>血液在流经血管球毛细血管时血压较高，大量的<span class="answer-text">水</span>和<span class="answer-text">小分子物质</span>可通过滤过膜进入肾小囊腔，形成滤过液（<span class="answer-text">原尿</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>9.. <strong>球内系膜细胞</strong><br>位于肾小体血管球的<span class="blur-text">毛细血管之间</span>，形态不规则。球内系膜细胞能合成<span class="blur-text">系膜基质</span>、分泌<span class="blur-text">肾素</span>、吞噬<span class="blur-text">免疫复合物</span>，维持基膜通透性，调节毛细血管管径。</td>
+                            <td>9.. <strong>球内系膜细胞</strong><br>位于肾小体血管球的<span class="answer-text">毛细血管之间</span>，形态不规则。球内系膜细胞能合成<span class="answer-text">系膜基质</span>、分泌<span class="answer-text">肾素</span>、吞噬<span class="answer-text">免疫复合物</span>，维持基膜通透性，调节毛细血管管径。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10.. <strong>近曲小管</strong><br>是<span class="blur-text">近端小管</span>的起始部，与<span class="blur-text">肾小囊</span>相通连。其管径较粗，上皮细胞<span class="blur-text">锥体形</span>，胞质强<span class="blur-text">嗜酸性</span>，细胞分界不清。</td>
+                            <td>10.. <strong>近曲小管</strong><br>是<span class="answer-text">近端小管</span>的起始部，与<span class="answer-text">肾小囊</span>相通连。其管径较粗，上皮细胞<span class="answer-text">锥体形</span>，胞质强<span class="answer-text">嗜酸性</span>，细胞分界不清。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>10.. A <strong>近曲小管（续）</strong><br>细胞游离面有密集排列的<span class="blur-text">微绒毛</span>组成的<span class="blur-text">刷状缘</span>，基部有<span class="blur-text">质膜内褶</span>和线粒体构成的<span class="blur-text">纵纹</span>。相邻细胞的<span class="blur-text">侧突</span>相互嵌合。近曲小管是肾小管中<span class="blur-text">重吸收作用最强</span>的一段。</td>
+                            <td>10.. A <strong>近曲小管（续）</strong><br>细胞游离面有密集排列的<span class="answer-text">微绒毛</span>组成的<span class="answer-text">刷状缘</span>，基部有<span class="answer-text">质膜内褶</span>和线粒体构成的<span class="answer-text">纵纹</span>。相邻细胞的<span class="answer-text">侧突</span>相互嵌合。近曲小管是肾小管中<span class="answer-text">重吸收作用最强</span>的一段。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>11.. <strong>肾蒂</strong><br>出入<span class="blur-text">肾门</span>的血管、淋巴管、神经、肾盂等结构被<span class="blur-text">结缔组织</span>包绕称肾蒂。</td>
+                            <td>11.. <strong>肾蒂</strong><br>出入<span class="answer-text">肾门</span>的血管、淋巴管、神经、肾盂等结构被<span class="answer-text">结缔组织</span>包绕称肾蒂。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>12.. <strong>肾门</strong><br>肾内缘凹陷，是<span class="blur-text">血管</span>、<span class="blur-text">淋巴管</span>、<span class="blur-text">神经</span>和<span class="blur-text">肾盂</span>出入肾的门户。</td>
+                            <td>12.. <strong>肾门</strong><br>肾内缘凹陷，是<span class="answer-text">血管</span>、<span class="answer-text">淋巴管</span>、<span class="answer-text">神经</span>和<span class="answer-text">肾盂</span>出入肾的门户。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>13.. <strong>肾窦</strong><br>肾门向肾内续一个较大的腔隙，容纳<span class="blur-text">肾血管</span>、<span class="blur-text">肾小盏</span>、<span class="blur-text">肾大盏</span>、<span class="blur-text">肾盂</span>和<span class="blur-text">脂肪</span>等。</td>
+                            <td>13.. <strong>肾窦</strong><br>肾门向肾内续一个较大的腔隙，容纳<span class="answer-text">肾血管</span>、<span class="answer-text">肾小盏</span>、<span class="answer-text">肾大盏</span>、<span class="answer-text">肾盂</span>和<span class="answer-text">脂肪</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>14.. <strong>肾皮质</strong><br>位于肾实质<span class="blur-text">表层</span>，富含血管，新鲜时呈<span class="blur-text">红褐色</span>，表面可见密布的细小颗粒。</td>
+                            <td>14.. <strong>肾皮质</strong><br>位于肾实质<span class="answer-text">表层</span>，富含血管，新鲜时呈<span class="answer-text">红褐色</span>，表面可见密布的细小颗粒。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>15.. <strong>膀胱三角</strong><br>是膀胱底内面<span class="blur-text">两输尿管口</span>和<span class="blur-text">尿道内口</span>连线之间的三角形区域，该三角并无<span class="blur-text">黏膜下组织</span>，因此无论膀胱充盈或空虚时均无<span class="blur-text">黏膜皱襞</span>，是膀胱<span class="blur-text">结核</span>、<span class="blur-text">肿瘤</span>好发部位。</td>
+                            <td>15.. <strong>膀胱三角</strong><br>是膀胱底内面<span class="answer-text">两输尿管口</span>和<span class="answer-text">尿道内口</span>连线之间的三角形区域，该三角并无<span class="answer-text">黏膜下组织</span>，因此无论膀胱充盈或空虚时均无<span class="answer-text">黏膜皱襞</span>，是膀胱<span class="answer-text">结核</span>、<span class="answer-text">肿瘤</span>好发部位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>16.. <strong>肾区</strong><br><span class="blur-text">竖脊肌</span>外缘与<span class="blur-text">第12肋</span>夹角处，又称<span class="blur-text">脊肋角</span>。</td>
+                            <td>16.. <strong>肾区</strong><br><span class="answer-text">竖脊肌</span>外缘与<span class="answer-text">第12肋</span>夹角处，又称<span class="answer-text">脊肋角</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>17.. <strong>肾血流量的自身调节</strong><br>在没有外来<span class="blur-text">神经</span>、<span class="blur-text">体液因素</span>的影响下，肾血流量在动脉血压<span class="blur-text">80~160mmHg</span>范围内变动时，肾血流量能保持<span class="blur-text">相对恒定</span>的现象，称为肾血流量的自身调节。</td>
+                            <td>17.. <strong>肾血流量的自身调节</strong><br>在没有外来<span class="answer-text">神经</span>、<span class="answer-text">体液因素</span>的影响下，肾血流量在动脉血压<span class="answer-text">80~160mmHg</span>范围内变动时，肾血流量能保持<span class="answer-text">相对恒定</span>的现象，称为肾血流量的自身调节。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>18.. <strong>肾小球的滤过</strong><br>血液流经肾小球毛细血管时，除<span class="blur-text">蛋白质分子</span>外的血浆成分，通过<span class="blur-text">滤过膜</span>被滤入肾小球囊腔形成<span class="blur-text">超滤液</span>的过程，称为肾小球滤过作用。</td>
+                            <td>18.. <strong>肾小球的滤过</strong><br>血液流经肾小球毛细血管时，除<span class="answer-text">蛋白质分子</span>外的血浆成分，通过<span class="answer-text">滤过膜</span>被滤入肾小球囊腔形成<span class="answer-text">超滤液</span>的过程，称为肾小球滤过作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>19.. <strong>有效滤过压</strong><br>肾小球有效滤过压是指促进滤过的<span class="blur-text">动力</span>与对抗超滤的<span class="blur-text">阻力</span>之间的差值。有效滤过压=<span class="blur-text">肾小球毛细血管血压</span>-（<span class="blur-text">血浆胶体渗透压</span>+<span class="blur-text">肾小球囊内压</span>）。</td>
+                            <td>19.. <strong>有效滤过压</strong><br>肾小球有效滤过压是指促进滤过的<span class="answer-text">动力</span>与对抗超滤的<span class="answer-text">阻力</span>之间的差值。有效滤过压=<span class="answer-text">肾小球毛细血管血压</span>-（<span class="answer-text">血浆胶体渗透压</span>+<span class="answer-text">肾小球囊内压</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>20.. <strong>滤过分数</strong><br><span class="blur-text">肾小球滤过率</span>和<span class="blur-text">肾血浆流量</span>的比值称为滤过分数。</td>
+                            <td>20.. <strong>滤过分数</strong><br><span class="answer-text">肾小球滤过率</span>和<span class="answer-text">肾血浆流量</span>的比值称为滤过分数。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>21.. <strong>肾小球滤过率</strong><br>单位时间内（每分钟）<span class="blur-text">两肾</span>生成的<span class="blur-text">超滤液量</span>称为肾小球滤过率。</td>
+                            <td>21.. <strong>肾小球滤过率</strong><br>单位时间内（每分钟）<span class="answer-text">两肾</span>生成的<span class="answer-text">超滤液量</span>称为肾小球滤过率。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>22.. <strong>球-管平衡</strong><br>不论肾小球滤过率增加或减少，<span class="blur-text">近端小管</span>的重吸收率始终占肾小球滤过率的<span class="blur-text">65%~70%</span>左右，这种现象称为球-管平衡。</td>
+                            <td>22.. <strong>球-管平衡</strong><br>不论肾小球滤过率增加或减少，<span class="answer-text">近端小管</span>的重吸收率始终占肾小球滤过率的<span class="answer-text">65%~70%</span>左右，这种现象称为球-管平衡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>23.. <strong>管-球反馈</strong><br><span class="blur-text">小管液流量</span>变化影响<span class="blur-text">肾血流量</span>和<span class="blur-text">肾小球滤过率</span>的现象称为管球反馈。管-球反馈通过<span class="blur-text">致密斑感受器</span>调节肾血流量和肾小球滤过率。</td>
+                            <td>23.. <strong>管-球反馈</strong><br><span class="answer-text">小管液流量</span>变化影响<span class="answer-text">肾血流量</span>和<span class="answer-text">肾小球滤过率</span>的现象称为管球反馈。管-球反馈通过<span class="answer-text">致密斑感受器</span>调节肾血流量和肾小球滤过率。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>24.. <strong>水利尿</strong><br>大量饮清水后，血浆<span class="blur-text">晶渗压</span>下降，<span class="blur-text">ADH</span>分泌减少，远曲小管和集合管对水重吸收减少而尿量增加的现象称为水利尿。</td>
+                            <td>24.. <strong>水利尿</strong><br>大量饮清水后，血浆<span class="answer-text">晶渗压</span>下降，<span class="answer-text">ADH</span>分泌减少，远曲小管和集合管对水重吸收减少而尿量增加的现象称为水利尿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>25.. <strong>渗透性利尿</strong><br>指小管液中<span class="blur-text">溶质浓度</span>升高，使小管液<span class="blur-text">渗透压</span>升高，对抗水的重吸收，而使尿量增加的现象称为渗透性利尿。</td>
+                            <td>25.. <strong>渗透性利尿</strong><br>指小管液中<span class="answer-text">溶质浓度</span>升高，使小管液<span class="answer-text">渗透压</span>升高，对抗水的重吸收，而使尿量增加的现象称为渗透性利尿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>26.. <strong>血浆清除率</strong><br>是指肾脏每分钟将多少毫升血浆中所含的某种物质<span class="blur-text">完全清除</span>出去，这个被完全清除了某物质的血浆毫升数，称为该物质的血浆清除率，其单位是<span class="blur-text">ml/min</span>。</td>
+                            <td>26.. <strong>血浆清除率</strong><br>是指肾脏每分钟将多少毫升血浆中所含的某种物质<span class="answer-text">完全清除</span>出去，这个被完全清除了某物质的血浆毫升数，称为该物质的血浆清除率，其单位是<span class="answer-text">ml/min</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>27.. <strong>肾糖阈</strong><br>尿中不出现葡萄糖的<span class="blur-text">最高血糖浓度</span>。正常值为<span class="blur-text">180mg/100ml</span>。</td>
+                            <td>27.. <strong>肾糖阈</strong><br>尿中不出现葡萄糖的<span class="answer-text">最高血糖浓度</span>。正常值为<span class="answer-text">180mg/100ml</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>28.. <strong>心房钠尿肽</strong><br>由<span class="blur-text">心房肌细胞</span>合成并释放的肽类激素，其主要作用是使血管平滑肌<span class="blur-text">舒张</span>，促进肾脏<span class="blur-text">排钠</span>、<span class="blur-text">排水</span>。</td>
+                            <td>28.. <strong>心房钠尿肽</strong><br>由<span class="answer-text">心房肌细胞</span>合成并释放的肽类激素，其主要作用是使血管平滑肌<span class="answer-text">舒张</span>，促进肾脏<span class="answer-text">排钠</span>、<span class="answer-text">排水</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>29.. <strong>肾小管的分泌</strong><br>指肾小管和集合管上皮细胞将<span class="blur-text">自身产生的物质</span>或<span class="blur-text">血液中的物质</span>转运到小管液中的过程称为肾小管和集合管的分泌作用。</td>
+                            <td>29.. <strong>肾小管的分泌</strong><br>指肾小管和集合管上皮细胞将<span class="answer-text">自身产生的物质</span>或<span class="answer-text">血液中的物质</span>转运到小管液中的过程称为肾小管和集合管的分泌作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>30.. <strong>肾小管的重吸收</strong><br>指小管液流经肾小管和集合管时将小管液中的物质转运到<span class="blur-text">血液</span>的过程称为肾小管和集合管的重吸收作用。</td>
+                            <td>30.. <strong>肾小管的重吸收</strong><br>指小管液流经肾小管和集合管时将小管液中的物质转运到<span class="answer-text">血液</span>的过程称为肾小管和集合管的重吸收作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>31.. <strong>排泄</strong><br>是指机体将<span class="blur-text">物质代谢终产物</span>、<span class="blur-text">过剩的物质</span>和<span class="blur-text">异物</span>通过排泄器官排出体外的过程。</td>
+                            <td>31.. <strong>排泄</strong><br>是指机体将<span class="answer-text">物质代谢终产物</span>、<span class="answer-text">过剩的物质</span>和<span class="answer-text">异物</span>通过排泄器官排出体外的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>32.. <strong>肾性尿崩症</strong><br>由于<span class="blur-text">远端小管-集合管</span>器质性或功能性损害，造成<span class="blur-text">ADH受体</span>或受体后障碍所致，此时ADH水平<span class="blur-text">正常或增高</span>，但远端小管-集合管上皮细胞则对ADH的作用表现出"<span class="blur-text">抵抗</span>"或"<span class="blur-text">不敏感</span>"，因而造成重吸收减少，尿量过度增加。</td>
+                            <td>32.. <strong>肾性尿崩症</strong><br>由于<span class="answer-text">远端小管-集合管</span>器质性或功能性损害，造成<span class="answer-text">ADH受体</span>或受体后障碍所致，此时ADH水平<span class="answer-text">正常或增高</span>，但远端小管-集合管上皮细胞则对ADH的作用表现出"<span class="answer-text">抵抗</span>"或"<span class="answer-text">不敏感</span>"，因而造成重吸收减少，尿量过度增加。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>33.. <strong>肾功能不全</strong><br>各种病因引起<span class="blur-text">肾功能严重障碍</span>时，会出现多种代谢产物、药物和毒物在体内<span class="blur-text">蓄积</span>，水、电解质和酸碱平衡<span class="blur-text">紊乱</span>，以及肾脏<span class="blur-text">内分泌功能障碍</span>，从而出现一系列症状和体征的临床综合征。</td>
+                            <td>33.. <strong>肾功能不全</strong><br>各种病因引起<span class="answer-text">肾功能严重障碍</span>时，会出现多种代谢产物、药物和毒物在体内<span class="answer-text">蓄积</span>，水、电解质和酸碱平衡<span class="answer-text">紊乱</span>，以及肾脏<span class="answer-text">内分泌功能障碍</span>，从而出现一系列症状和体征的临床综合征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>34.. <strong>急性肾衰竭（AFR）</strong><br>又称<span class="blur-text">急性肾损伤（AKI）</span>，是指各种原因引起的两肾泌尿功能在<span class="blur-text">短期内急剧下降</span>，导致代谢产物在体内迅速积聚，水、电解质和酸碱平衡紊乱，出现<span class="blur-text">氮质血症</span>、<span class="blur-text">高钾血症</span>和<span class="blur-text">代谢性酸中毒</span>，并由此发生的机体内环境严重紊乱的临床综合征。</td>
+                            <td>34.. <strong>急性肾衰竭（AFR）</strong><br>又称<span class="answer-text">急性肾损伤（AKI）</span>，是指各种原因引起的两肾泌尿功能在<span class="answer-text">短期内急剧下降</span>，导致代谢产物在体内迅速积聚，水、电解质和酸碱平衡紊乱，出现<span class="answer-text">氮质血症</span>、<span class="answer-text">高钾血症</span>和<span class="answer-text">代谢性酸中毒</span>，并由此发生的机体内环境严重紊乱的临床综合征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>35.. <strong>慢性肾衰竭（CRF）</strong><br>各种<span class="blur-text">慢性肾脏疾</span>引起肾单位<span class="blur-text">慢性进行性</span>、<span class="blur-text">不可逆性</span>破坏，以致残存的肾单位不足以充分排除<span class="blur-text">代谢废物</span>和维持<span class="blur-text">内环境稳定</span>，导致水、电解质和酸碱平衡紊乱，代谢产物在体内积聚，以及肾内分泌功能障碍，并伴有一系列临床症状的病理过程。</td>
+                            <td>35.. <strong>慢性肾衰竭（CRF）</strong><br>各种<span class="answer-text">慢性肾脏疾</span>引起肾单位<span class="answer-text">慢性进行性</span>、<span class="answer-text">不可逆性</span>破坏，以致残存的肾单位不足以充分排除<span class="answer-text">代谢废物</span>和维持<span class="answer-text">内环境稳定</span>，导致水、电解质和酸碱平衡紊乱，代谢产物在体内积聚，以及肾内分泌功能障碍，并伴有一系列临床症状的病理过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>36.. <strong>肾性贫血</strong><br>为<span class="blur-text">慢性肾衰</span>的一种常见临床表现，主要由于慢性肾衰时肾脏生成<span class="blur-text">促红细胞生成素</span>减少、<span class="blur-text">失血</span>、<span class="blur-text">尿毒症毒素</span>的骨髓抑制、胃肠吸收功能下降所致，表现为血红蛋白下降、红细胞压积降低。</td>
+                            <td>36.. <strong>肾性贫血</strong><br>为<span class="answer-text">慢性肾衰</span>的一种常见临床表现，主要由于慢性肾衰时肾脏生成<span class="answer-text">促红细胞生成素</span>减少、<span class="answer-text">失血</span>、<span class="answer-text">尿毒症毒素</span>的骨髓抑制、胃肠吸收功能下降所致，表现为血红蛋白下降、红细胞压积降低。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>37.. <strong>肾性骨营养不良</strong><br><span class="blur-text">慢性肾功能衰竭</span>时，由于<span class="blur-text">钙磷</span>和<span class="blur-text">维生素D</span>代谢障碍、<span class="blur-text">继发性甲状旁腺功能亢进</span>、<span class="blur-text">慢性酸中毒</span>等所引起的骨病。</td>
+                            <td>37.. <strong>肾性骨营养不良</strong><br><span class="answer-text">慢性肾功能衰竭</span>时，由于<span class="answer-text">钙磷</span>和<span class="answer-text">维生素D</span>代谢障碍、<span class="answer-text">继发性甲状旁腺功能亢进</span>、<span class="answer-text">慢性酸中毒</span>等所引起的骨病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>38.. <strong>尿毒症</strong><br>急、慢性肾功能衰竭发展到<span class="blur-text">最严重的阶段</span>，<span class="blur-text">内源性毒性物质</span>在体内潴留，引起一系列自体中毒症状。</td>
+                            <td>38.. <strong>尿毒症</strong><br>急、慢性肾功能衰竭发展到<span class="answer-text">最严重的阶段</span>，<span class="answer-text">内源性毒性物质</span>在体内潴留，引起一系列自体中毒症状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>39.. <strong>肾病综合征</strong><br>表现为<span class="blur-text">大量蛋白尿</span>、<span class="blur-text">低蛋白血症</span>、<span class="blur-text">水肿</span>、<span class="blur-text">高脂血症</span>的一组临床症候群。</td>
+                            <td>39.. <strong>肾病综合征</strong><br>表现为<span class="answer-text">大量蛋白尿</span>、<span class="answer-text">低蛋白血症</span>、<span class="answer-text">水肿</span>、<span class="answer-text">高脂血症</span>的一组临床症候群。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>40.. <strong>慢性肾脏病（CKD）</strong><br>各种原因引起的肾脏<span class="blur-text">结构和功能异常</span>≥<span class="blur-text">3个月</span>。包括2个含义：①存在有<span class="blur-text">肾脏损伤的证据</span>（包括肾脏病理损伤、血液或尿液成分的异常、影像学检查异常）或肾移植史，伴或不伴肾小球滤过率下降，持续时间≥3个月。②不明原因的<span class="blur-text">肾小球滤过滤下降</span>（<<span class="blur-text">60ml/min</span>），无论有无肾脏损伤的标识，持续时间≥3个月。</td>
+                            <td>40.. <strong>慢性肾脏病（CKD）</strong><br>各种原因引起的肾脏<span class="answer-text">结构和功能异常</span>≥<span class="answer-text">3个月</span>。包括2个含义：①存在有<span class="answer-text">肾脏损伤的证据</span>（包括肾脏病理损伤、血液或尿液成分的异常、影像学检查异常）或肾移植史，伴或不伴肾小球滤过率下降，持续时间≥3个月。②不明原因的<span class="answer-text">肾小球滤过滤下降</span>（<<span class="answer-text">60ml/min</span>），无论有无肾脏损伤的标识，持续时间≥3个月。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>41.. <strong>肾积水</strong><br>是指一侧或双侧肾脏的<span class="blur-text">尿液无法排出</span>而在肾脏中积聚引起肾脏肿胀，导致的原因主要是<span class="blur-text">输尿管梗阻</span>。</td>
+                            <td>41.. <strong>肾积水</strong><br>是指一侧或双侧肾脏的<span class="answer-text">尿液无法排出</span>而在肾脏中积聚引起肾脏肿胀，导致的原因主要是<span class="answer-text">输尿管梗阻</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>42.. <strong>肾自截</strong><br>输尿管<span class="blur-text">完全闭塞</span>而含结核的脓尿不能进入膀胱，膀胱刺激症状好转或消失，全肾广泛<span class="blur-text">钙化</span>并混有<span class="blur-text">干酪样物质</span>，肾功能全部丧失。</td>
+                            <td>42.. <strong>肾自截</strong><br>输尿管<span class="answer-text">完全闭塞</span>而含结核的脓尿不能进入膀胱，膀胱刺激症状好转或消失，全肾广泛<span class="answer-text">钙化</span>并混有<span class="answer-text">干酪样物质</span>，肾功能全部丧失。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>43.. <strong>膀胱挛缩</strong><br>当膀胱结核病灶广泛，严重累及<span class="blur-text">膀胱肌层</span>，使膀胱壁广泛<span class="blur-text">纤维化</span>，失去伸张能力，容量显著减少（<<span class="blur-text">50ml</span>）（严重尿频）。</td>
+                            <td>43.. <strong>膀胱挛缩</strong><br>当膀胱结核病灶广泛，严重累及<span class="answer-text">膀胱肌层</span>，使膀胱壁广泛<span class="answer-text">纤维化</span>，失去伸张能力，容量显著减少（<<span class="answer-text">50ml</span>）（严重尿频）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>44.. <strong>肾挫伤</strong><br>损伤仅局限于<span class="blur-text">部分肾实质</span>，形成<span class="blur-text">肾瘀斑</span>和（或）<span class="blur-text">包膜下血肿</span>，肾包膜及肾盏肾盂黏膜完整。损伤涉及肾集合系统可有少量血尿。</td>
+                            <td>44.. <strong>肾挫伤</strong><br>损伤仅局限于<span class="answer-text">部分肾实质</span>，形成<span class="answer-text">肾瘀斑</span>和（或）<span class="answer-text">包膜下血肿</span>，肾包膜及肾盏肾盂黏膜完整。损伤涉及肾集合系统可有少量血尿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>45.. <strong>肾部分裂伤</strong><br>肾近<span class="blur-text">包膜</span>部位裂伤伴有肾包膜破裂，可致<span class="blur-text">肾周血肿</span>。若肾近<span class="blur-text">集合系统</span>部位裂伤伴有肾盏肾盂黏膜破裂，则可有明显血尿。</td>
+                            <td>45.. <strong>肾部分裂伤</strong><br>肾近<span class="answer-text">包膜</span>部位裂伤伴有肾包膜破裂，可致<span class="answer-text">肾周血肿</span>。若肾近<span class="answer-text">集合系统</span>部位裂伤伴有肾盏肾盂黏膜破裂，则可有明显血尿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>46.. <strong>肾全层裂伤</strong><br>肾实质<span class="blur-text">深度裂伤</span>，外及<span class="blur-text">肾包膜</span>，内达<span class="blur-text">肾盏肾盂黏膜</span>，此时常引起广泛的肾周血肿、血尿和尿外渗。严重时成为<span class="blur-text">肾粉碎伤</span>。</td>
+                            <td>46.. <strong>肾全层裂伤</strong><br>肾实质<span class="answer-text">深度裂伤</span>，外及<span class="answer-text">肾包膜</span>，内达<span class="answer-text">肾盏肾盂黏膜</span>，此时常引起广泛的肾周血肿、血尿和尿外渗。严重时成为<span class="answer-text">肾粉碎伤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>47.. <strong>肾蒂血管损伤</strong><br><span class="blur-text">肾蒂</span>或<span class="blur-text">肾段血管</span>的部分或全部撕裂，可引起大出血、休克。</td>
+                            <td>47.. <strong>肾蒂血管损伤</strong><br><span class="answer-text">肾蒂</span>或<span class="answer-text">肾段血管</span>的部分或全部撕裂，可引起大出血、休克。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>48.. <strong>肾绞痛</strong><br>是一种<span class="blur-text">突发性严重疼痛</span>，多在<span class="blur-text">深夜或凌晨</span>发生，疼痛可持续数分钟至数小时，一般<span class="blur-text">8~12小时</span>后，随肾盂内压力降低，绞痛发作次数减少，亦可自行缓解。</td>
+                            <td>48.. <strong>肾绞痛</strong><br>是一种<span class="answer-text">突发性严重疼痛</span>，多在<span class="answer-text">深夜或凌晨</span>发生，疼痛可持续数分钟至数小时，一般<span class="answer-text">8~12小时</span>后，随肾盂内压力降低，绞痛发作次数减少，亦可自行缓解。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>49.. <strong>尿外渗</strong><br>尿道破裂或断裂后，损伤部位可形成<span class="blur-text">血肿</span>，尿液及血液经破损的尿道渗至周围组织内，形成尿外渗。</td>
+                            <td>49.. <strong>尿外渗</strong><br>尿道破裂或断裂后，损伤部位可形成<span class="answer-text">血肿</span>，尿液及血液经破损的尿道渗至周围组织内，形成尿外渗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>50.. <strong>肾小管性蛋白尿</strong><br>当<span class="blur-text">肾小管间质病变</span>或各种<span class="blur-text">重金属中毒</span>时，近端肾小管对正常滤过的蛋白质重吸收缺陷，导致<span class="blur-text">小分子蛋白质</span>从尿中排出，包括<span class="blur-text">β-2微球蛋白</span>、<span class="blur-text">溶菌酶</span>等，尿蛋白总量一般不超过<span class="blur-text">2g/d</span>。</td>
+                            <td>50.. <strong>肾小管性蛋白尿</strong><br>当<span class="answer-text">肾小管间质病变</span>或各种<span class="answer-text">重金属中毒</span>时，近端肾小管对正常滤过的蛋白质重吸收缺陷，导致<span class="answer-text">小分子蛋白质</span>从尿中排出，包括<span class="answer-text">β-2微球蛋白</span>、<span class="answer-text">溶菌酶</span>等，尿蛋白总量一般不超过<span class="answer-text">2g/d</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>51.. <strong>溢出性蛋白尿</strong><br>血中<span class="blur-text">低分子量的异常蛋白</span>（如<span class="blur-text">多发性骨髓瘤轻链蛋白</span>、<span class="blur-text">血红蛋白</span>、<span class="blur-text">肌红蛋白</span>等）增多，经肾小球滤过而又未能被肾小管全部重吸收所致。</td>
+                            <td>51.. <strong>溢出性蛋白尿</strong><br>血中<span class="answer-text">低分子量的异常蛋白</span>（如<span class="answer-text">多发性骨髓瘤轻链蛋白</span>、<span class="answer-text">血红蛋白</span>、<span class="answer-text">肌红蛋白</span>等）增多，经肾小球滤过而又未能被肾小管全部重吸收所致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>52.. <strong>急性肾炎综合征（acute nephritic syndrome）</strong><br>主要见于<span class="blur-text">急性弥漫性增生性肾小球肾炎</span>。特点为起病急，明显<span class="blur-text">血尿</span>、<span class="blur-text">少尿</span>、<span class="blur-text">轻~中度蛋白尿</span>，<span class="blur-text">水肿</span>和<span class="blur-text">高血压</span>等。严重者可出现<span class="blur-text">氮质血症</span>。</td>
+                            <td>52.. <strong>急性肾炎综合征（acute nephritic syndrome）</strong><br>主要见于<span class="answer-text">急性弥漫性增生性肾小球肾炎</span>。特点为起病急，明显<span class="answer-text">血尿</span>、<span class="answer-text">少尿</span>、<span class="answer-text">轻~中度蛋白尿</span>，<span class="answer-text">水肿</span>和<span class="answer-text">高血压</span>等。严重者可出现<span class="answer-text">氮质血症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>53.. <strong>新月体（crescent）</strong><br>主要见于<span class="blur-text">新月体性肾小球肾炎</span>（急进行性肾小球肾炎），其组成成分为增生的<span class="blur-text">肾球囊壁层上皮细胞</span>和<span class="blur-text">单核细胞</span>，突向肾小球囊腔内呈<span class="blur-text">新月形</span>。早期为<span class="blur-text">细胞性新月体</span>，以后演变为<span class="blur-text">纤维细胞性新月体</span>、<span class="blur-text">纤维性新月体</span>。新月体的大量出现提示患者<span class="blur-text">预后不良</span>。</td>
+                            <td>53.. <strong>新月体（crescent）</strong><br>主要见于<span class="answer-text">新月体性肾小球肾炎</span>（急进行性肾小球肾炎），其组成成分为增生的<span class="answer-text">肾球囊壁层上皮细胞</span>和<span class="answer-text">单核细胞</span>，突向肾小球囊腔内呈<span class="answer-text">新月形</span>。早期为<span class="answer-text">细胞性新月体</span>，以后演变为<span class="answer-text">纤维细胞性新月体</span>、<span class="answer-text">纤维性新月体</span>。新月体的大量出现提示患者<span class="answer-text">预后不良</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>54.. <strong>Kimmelstiel-Wilson结节</strong><br>见于<span class="blur-text">结节硬化性糖尿病肾病</span>，肾小球系膜基质重度增生，形成<span class="blur-text">PSAM染色</span>呈<span class="blur-text">同心圆状</span>的硬化结节，其相邻毛细血管扩张形成<span class="blur-text">微血管瘤</span>。</td>
+                            <td>54.. <strong>Kimmelstiel-Wilson结节</strong><br>见于<span class="answer-text">结节硬化性糖尿病肾病</span>，肾小球系膜基质重度增生，形成<span class="answer-text">PSAM染色</span>呈<span class="answer-text">同心圆状</span>的硬化结节，其相邻毛细血管扩张形成<span class="answer-text">微血管瘤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>55.. <strong>肾细胞癌（renal cell carcinoma）</strong><br>是<span class="blur-text">肾小管上皮细胞</span>发生的恶性肿瘤。多发生在肾<span class="blur-text">上、下两极</span>，组织学类型包括<span class="blur-text">肾透明细胞癌</span>、<span class="blur-text">乳头状肾细胞癌</span>、<span class="blur-text">嫌色性肾细胞癌</span>。<span class="blur-text">肾透明细胞癌</span>最常见。</td>
+                            <td>55.. <strong>肾细胞癌（renal cell carcinoma）</strong><br>是<span class="answer-text">肾小管上皮细胞</span>发生的恶性肿瘤。多发生在肾<span class="answer-text">上、下两极</span>，组织学类型包括<span class="answer-text">肾透明细胞癌</span>、<span class="answer-text">乳头状肾细胞癌</span>、<span class="answer-text">嫌色性肾细胞癌</span>。<span class="answer-text">肾透明细胞癌</span>最常见。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>56.. <strong>慢性肾小球肾炎</strong><br>是指以<span class="blur-text">蛋白尿</span>、<span class="blur-text">血尿</span>、<span class="blur-text">高血压</span>、<span class="blur-text">水肿</span>为基本临床表现，疾病方式各有不同，病情迁延，病变缓慢进展，可有不同程度的<span class="blur-text">肾功能减退</span>，最终将发展为<span class="blur-text">慢性肾衰竭</span>的一组肾小球病。</td>
+                            <td>56.. <strong>慢性肾小球肾炎</strong><br>是指以<span class="answer-text">蛋白尿</span>、<span class="answer-text">血尿</span>、<span class="answer-text">高血压</span>、<span class="answer-text">水肿</span>为基本临床表现，疾病方式各有不同，病情迁延，病变缓慢进展，可有不同程度的<span class="answer-text">肾功能减退</span>，最终将发展为<span class="answer-text">慢性肾衰竭</span>的一组肾小球病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>57.. <strong>慢性肾炎综合征（chronic nephritic syndrome）</strong><br>表现为<span class="blur-text">多尿</span>、<span class="blur-text">夜尿</span>和<span class="blur-text">低比重尿</span>，<span class="blur-text">高血压</span>、<span class="blur-text">贫血</span>及<span class="blur-text">氮质血症</span>和<span class="blur-text">尿毒症</span>。</td>
+                            <td>57.. <strong>慢性肾炎综合征（chronic nephritic syndrome）</strong><br>表现为<span class="answer-text">多尿</span>、<span class="answer-text">夜尿</span>和<span class="answer-text">低比重尿</span>，<span class="answer-text">高血压</span>、<span class="answer-text">贫血</span>及<span class="answer-text">氮质血症</span>和<span class="answer-text">尿毒症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>58.. <strong>急进性肾炎综合征（rapidly progressive nephritic syndrome）</strong><br>表现为肾功能<span class="blur-text">快速减退</span>，常由<span class="blur-text">急进性（新月体性）肾小球肾炎</span>导致。表现为<span class="blur-text">水肿</span>、<span class="blur-text">血尿</span>、<span class="blur-text">蛋白尿</span>及<span class="blur-text">少尿无尿</span>，伴<span class="blur-text">氮质血症</span>、<span class="blur-text">急性肾衰竭</span>。</td>
+                            <td>58.. <strong>急进性肾炎综合征（rapidly progressive nephritic syndrome）</strong><br>表现为肾功能<span class="answer-text">快速减退</span>，常由<span class="answer-text">急进性（新月体性）肾小球肾炎</span>导致。表现为<span class="answer-text">水肿</span>、<span class="answer-text">血尿</span>、<span class="answer-text">蛋白尿</span>及<span class="answer-text">少尿无尿</span>，伴<span class="answer-text">氮质血症</span>、<span class="answer-text">急性肾衰竭</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>59.. <strong>IgA肾病（IgA nephropathy）</strong><br>是最常见导致<span class="blur-text">无症状尿检异常</span>的疾病。IgA肾病的光镜表现多样，免疫荧光显示肾小球<span class="blur-text">系膜区IgA和C3沉积</span>，透射电镜系膜区<span class="blur-text">电子致密物沉积</span>。</td>
+                            <td>59.. <strong>IgA肾病（IgA nephropathy）</strong><br>是最常见导致<span class="answer-text">无症状尿检异常</span>的疾病。IgA肾病的光镜表现多样，免疫荧光显示肾小球<span class="answer-text">系膜区IgA和C3沉积</span>，透射电镜系膜区<span class="answer-text">电子致密物沉积</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>60.. <strong>急性肾盂肾炎（acute pyelonephritis）</strong><br>常由细菌经<span class="blur-text">上行性感染</span>或<span class="blur-text">血源性（下行性）感染</span>，导致肾盂、肾间质和肾小管的<span class="blur-text">化脓性炎症</span>。</td>
+                            <td>60.. <strong>急性肾盂肾炎（acute pyelonephritis）</strong><br>常由细菌经<span class="answer-text">上行性感染</span>或<span class="answer-text">血源性（下行性）感染</span>，导致肾盂、肾间质和肾小管的<span class="answer-text">化脓性炎症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>61.. <strong>Wilms瘤（Wilms tumor）</strong><br>是起源于<span class="blur-text">后肾胚</span>的最常见的<span class="blur-text">儿童肾脏肿瘤</span>。显微镜下肿瘤常由<span class="blur-text">胚芽</span>、<span class="blur-text">上皮</span>和<span class="blur-text">间叶组织</span>三种成分构成。</td>
+                            <td>61.. <strong>Wilms瘤（Wilms tumor）</strong><br>是起源于<span class="answer-text">后肾胚</span>的最常见的<span class="answer-text">儿童肾脏肿瘤</span>。显微镜下肿瘤常由<span class="answer-text">胚芽</span>、<span class="answer-text">上皮</span>和<span class="answer-text">间叶组织</span>三种成分构成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>62.. <strong>血尿</strong><br>分为<span class="blur-text">肉眼血尿</span>和<span class="blur-text">显微镜下血尿</span>。镜下血尿：尿色肉眼无异常，新鲜尿离心沉渣镜检每高倍镜视野红细胞超过<span class="blur-text">3个</span>。肉眼血尿：尿外观表现为尿色加深、尿色发红或呈<span class="blur-text">洗肉水样</span>。</td>
+                            <td>62.. <strong>血尿</strong><br>分为<span class="answer-text">肉眼血尿</span>和<span class="answer-text">显微镜下血尿</span>。镜下血尿：尿色肉眼无异常，新鲜尿离心沉渣镜检每高倍镜视野红细胞超过<span class="answer-text">3个</span>。肉眼血尿：尿外观表现为尿色加深、尿色发红或呈<span class="answer-text">洗肉水样</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>63.. <strong>满堂亮</strong><br>是指<span class="blur-text">狼疮肾炎</span>病人肾活检的典型免疫病理表现，肾小球<span class="blur-text">IgG</span>、<span class="blur-text">IgA</span>、<span class="blur-text">IgM</span>、<span class="blur-text">C3</span>、<span class="blur-text">C4</span>、<span class="blur-text">C1q</span>均阳性。</td>
+                            <td>63.. <strong>满堂亮</strong><br>是指<span class="answer-text">狼疮肾炎</span>病人肾活检的典型免疫病理表现，肾小球<span class="answer-text">IgG</span>、<span class="answer-text">IgA</span>、<span class="answer-text">IgM</span>、<span class="answer-text">C3</span>、<span class="answer-text">C4</span>、<span class="answer-text">C1q</span>均阳性。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>64.. <strong>膀胱刺激症状</strong><br>又称<span class="blur-text">尿路刺激征</span>，包括<span class="blur-text">尿频</span>、<span class="blur-text">尿急</span>、<span class="blur-text">尿痛</span>，三者常同时出现。由<span class="blur-text">膀胱颈</span>和<span class="blur-text">膀胱三角区</span>炎症刺激所致，为<span class="blur-text">下尿路感染</span>典型的表现。炎症程度越重，症状越明显，甚至出现<span class="blur-text">急迫性尿失禁</span>，常伴有<span class="blur-text">终末血尿</span>。</td>
+                            <td>64.. <strong>膀胱刺激症状</strong><br>又称<span class="answer-text">尿路刺激征</span>，包括<span class="answer-text">尿频</span>、<span class="answer-text">尿急</span>、<span class="answer-text">尿痛</span>，三者常同时出现。由<span class="answer-text">膀胱颈</span>和<span class="answer-text">膀胱三角区</span>炎症刺激所致，为<span class="answer-text">下尿路感染</span>典型的表现。炎症程度越重，症状越明显，甚至出现<span class="answer-text">急迫性尿失禁</span>，常伴有<span class="answer-text">终末血尿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>65.. <strong>无菌性脓尿</strong><br>是<span class="blur-text">结核性脓尿</span>的特点，虽有脓细胞或含有结核菌，但<span class="blur-text">普通细菌的培养</span>结果一般为阴性。</td>
+                            <td>65.. <strong>无菌性脓尿</strong><br>是<span class="answer-text">结核性脓尿</span>的特点，虽有脓细胞或含有结核菌，但<span class="answer-text">普通细菌的培养</span>结果一般为阴性。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>66.. <strong>茄子征</strong><br><span class="blur-text">阴茎部尿道损伤</span>时尿外渗局限于<span class="blur-text">Buck筋膜</span>内，表现为阴茎肿胀，合并出血时呈<span class="blur-text">紫褐色</span>。</td>
+                            <td>66.. <strong>茄子征</strong><br><span class="answer-text">阴茎部尿道损伤</span>时尿外渗局限于<span class="answer-text">Buck筋膜</span>内，表现为阴茎肿胀，合并出血时呈<span class="answer-text">紫褐色</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>67.. <strong>尿路感染</strong><br>是指各种<span class="blur-text">病原微生物</span>在尿路中生长、繁殖而引起的<span class="blur-text">炎症性疾病</span>，多见于<span class="blur-text">育龄期妇女</span>、<span class="blur-text">老年人</span>、<span class="blur-text">免疫力低下</span>及<span class="blur-text">尿路畸形</span>者。</td>
+                            <td>67.. <strong>尿路感染</strong><br>是指各种<span class="answer-text">病原微生物</span>在尿路中生长、繁殖而引起的<span class="answer-text">炎症性疾病</span>，多见于<span class="answer-text">育龄期妇女</span>、<span class="answer-text">老年人</span>、<span class="answer-text">免疫力低下</span>及<span class="answer-text">尿路畸形</span>者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>68.. <strong>再发性尿感</strong><br>指尿感经治疗后，细菌尿阴转，但以后再次发生细菌尿，可分为<span class="blur-text">复发</span>和<span class="blur-text">重新感染</span>。</td>
+                            <td>68.. <strong>再发性尿感</strong><br>指尿感经治疗后，细菌尿阴转，但以后再次发生细菌尿，可分为<span class="answer-text">复发</span>和<span class="answer-text">重新感染</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>69.. <strong>石街</strong><br>在<span class="blur-text">体外冲击波碎石</span>过程中，若击碎的结石堆积在输尿管内，即为石街。</td>
+                            <td>69.. <strong>石街</strong><br>在<span class="answer-text">体外冲击波碎石</span>过程中，若击碎的结石堆积在输尿管内，即为石街。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">泌尿系统大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>肾的血液循环特征及自身调节特点</strong><br>（1）肾血液供应<span class="blur-text">丰富</span>，分布<span class="blur-text">不均</span>。正常人每分钟肾血流量约<span class="blur-text">1200ml</span>，相当于心输出量的<span class="blur-text">1/5~1/4</span>，其中<span class="blur-text">94%</span>流经皮质，<span class="blur-text">5%~6%</span>流经外髓，流经内髓的仅不到<span class="blur-text">1%</span>。<br>（2）有<span class="blur-text">两套毛细血管网</span>。<span class="blur-text">肾小球毛细血管网</span>内压力较高，有利于肾血浆滤过；<span class="blur-text">肾小管周围毛细血管网</span>内压力较低，有利于肾小管的重吸收。<br>（3）肾血流量的自身调节：指在没有外来<span class="blur-text">神经</span>、<span class="blur-text">体液因素</span>的影响下，当动脉血压在<span class="blur-text">80~160mmHg</span>范围内变动时，肾血流量仍保持<span class="blur-text">相对恒定</span>的现象。<br>（4）自身调节的特点：是在<span class="blur-text">切断神经</span>或在<span class="blur-text">离体的肾灌注实验</span>中都存在自身调节，可使肾血流量保持相对稳定的水平。</td>
+                            <td>1.. <strong>肾的血液循环特征及自身调节特点</strong><br>（1）肾血液供应<span class="answer-text">丰富</span>，分布<span class="answer-text">不均</span>。正常人每分钟肾血流量约<span class="answer-text">1200ml</span>，相当于心输出量的<span class="answer-text">1/5~1/4</span>，其中<span class="answer-text">94%</span>流经皮质，<span class="answer-text">5%~6%</span>流经外髓，流经内髓的仅不到<span class="answer-text">1%</span>。<br>（2）有<span class="answer-text">两套毛细血管网</span>。<span class="answer-text">肾小球毛细血管网</span>内压力较高，有利于肾血浆滤过；<span class="answer-text">肾小管周围毛细血管网</span>内压力较低，有利于肾小管的重吸收。<br>（3）肾血流量的自身调节：指在没有外来<span class="answer-text">神经</span>、<span class="answer-text">体液因素</span>的影响下，当动脉血压在<span class="answer-text">80~160mmHg</span>范围内变动时，肾血流量仍保持<span class="answer-text">相对恒定</span>的现象。<br>（4）自身调节的特点：是在<span class="answer-text">切断神经</span>或在<span class="answer-text">离体的肾灌注实验</span>中都存在自身调节，可使肾血流量保持相对稳定的水平。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>肾小球滤过率及影响因素</strong><br>单位时间内（每分钟）两肾生成的<span class="blur-text">超滤液量</span>称为肾小球滤过率。影响肾小球滤过作用的因素是<span class="blur-text">有效滤过压</span>、<span class="blur-text">肾血浆流量</span>和<span class="blur-text">滤过系数</span>。<br>（1）<span class="blur-text">肾小球毛细血管血压</span>：正常情况下，当血压在<span class="blur-text">60~160mmHg</span>变动时，肾血流量通过自身的调节作用，肾小球毛细血管血压变化不大，肾小球滤过率基本不变、尿量基本不变。在大失血等情况下，当动脉血压降至<span class="blur-text">60mmHg</span>以下，肾小球毛细血管血压才会明显降低，有效滤过压下降，肾小球滤过率减少、出现<span class="blur-text">少尿</span>。<br>（2）<span class="blur-text">血浆胶体渗透压下降</span>：当蛋白质摄取不足或蛋白质丢失过多造成血浆蛋白大量减少时，血浆胶体渗透压下降，有效滤过压升高，滤过率增加，出现<span class="blur-text">多尿</span>。<br>（3）<span class="blur-text">囊内压</span>：在生理情况下变动不大。在输尿管或肾盂结石的情况下，囊内压会升高，有效滤过压降低，滤过率减少，出现少尿。</td>
+                            <td>2.. <strong>肾小球滤过率及影响因素</strong><br>单位时间内（每分钟）两肾生成的<span class="answer-text">超滤液量</span>称为肾小球滤过率。影响肾小球滤过作用的因素是<span class="answer-text">有效滤过压</span>、<span class="answer-text">肾血浆流量</span>和<span class="answer-text">滤过系数</span>。<br>（1）<span class="answer-text">肾小球毛细血管血压</span>：正常情况下，当血压在<span class="answer-text">60~160mmHg</span>变动时，肾血流量通过自身的调节作用，肾小球毛细血管血压变化不大，肾小球滤过率基本不变、尿量基本不变。在大失血等情况下，当动脉血压降至<span class="answer-text">60mmHg</span>以下，肾小球毛细血管血压才会明显降低，有效滤过压下降，肾小球滤过率减少、出现<span class="answer-text">少尿</span>。<br>（2）<span class="answer-text">血浆胶体渗透压下降</span>：当蛋白质摄取不足或蛋白质丢失过多造成血浆蛋白大量减少时，血浆胶体渗透压下降，有效滤过压升高，滤过率增加，出现<span class="answer-text">多尿</span>。<br>（3）<span class="answer-text">囊内压</span>：在生理情况下变动不大。在输尿管或肾盂结石的情况下，囊内压会升高，有效滤过压降低，滤过率减少，出现少尿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2.. A <strong>肾小球滤过率影响因素（续）</strong><br>（4）<span class="blur-text">肾血浆流量</span>：对肾小球滤过率的影响主要是通过改变<span class="blur-text">滤过平衡点</span>来实现的。肾血浆流量增大，肾小球毛细血管血浆胶渗压上升速度减慢，滤过平衡点向<span class="blur-text">出球小动脉端</span>靠近，甚至不出现滤过平衡，肾小球滤过率增大。反之，肾血浆流量减少，滤过平衡点向<span class="blur-text">入球小动脉端</span>靠近，肾小球滤过率减小。在大失血、严重缺O2、中毒性休克等因素影响下，由于<span class="blur-text">交感神经</span>强烈兴奋，使入球小动脉强烈收缩，肾血流量和肾血浆流量明显减少，故肾小球滤过率也显著降低。<br>（5）<span class="blur-text">滤过系数（Kf）</span>：指在单位有效滤过压的驱动下，单位时间内经过滤过膜滤过的滤液量。Kf是滤过膜的<span class="blur-text">有效通透系数（k）</span>和滤过膜的<span class="blur-text">面积（s）</span>的乘积。在某些肾脏疾病的情况下，滤过膜面积减少，滤过率降低出现少尿，或滤过膜受损，其通透性增加，将会出现<span class="blur-text">蛋白尿</span>甚至<span class="blur-text">血尿</span>。</td>
+                            <td>2.. A <strong>肾小球滤过率影响因素（续）</strong><br>（4）<span class="answer-text">肾血浆流量</span>：对肾小球滤过率的影响主要是通过改变<span class="answer-text">滤过平衡点</span>来实现的。肾血浆流量增大，肾小球毛细血管血浆胶渗压上升速度减慢，滤过平衡点向<span class="answer-text">出球小动脉端</span>靠近，甚至不出现滤过平衡，肾小球滤过率增大。反之，肾血浆流量减少，滤过平衡点向<span class="answer-text">入球小动脉端</span>靠近，肾小球滤过率减小。在大失血、严重缺O2、中毒性休克等因素影响下，由于<span class="answer-text">交感神经</span>强烈兴奋，使入球小动脉强烈收缩，肾血流量和肾血浆流量明显减少，故肾小球滤过率也显著降低。<br>（5）<span class="answer-text">滤过系数（Kf）</span>：指在单位有效滤过压的驱动下，单位时间内经过滤过膜滤过的滤液量。Kf是滤过膜的<span class="answer-text">有效通透系数（k）</span>和滤过膜的<span class="answer-text">面积（s）</span>的乘积。在某些肾脏疾病的情况下，滤过膜面积减少，滤过率降低出现少尿，或滤过膜受损，其通透性增加，将会出现<span class="answer-text">蛋白尿</span>甚至<span class="answer-text">血尿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3.. <strong>肾糖阈及肾小管葡萄糖重吸收极限量</strong><br>（1）<span class="blur-text">肾糖阈</span>：指尿中刚开始出现葡萄糖时的<span class="blur-text">血浆葡萄糖浓度</span>。一般为<span class="blur-text">160mg/100ml</span>~<span class="blur-text">180mg/100ml</span>。<br>（2）<span class="blur-text">肾小管葡萄糖重吸收极限量</span>：指近端小管对葡萄糖的重吸收均已达到或超过近球小管对葡萄糖的<span class="blur-text">最大转运率</span>，称为肾小管葡萄糖重吸收极限量。正常人两肾的葡萄糖重吸收的极限量，男性平均为<span class="blur-text">375mg/min</span>，女性平均为<span class="blur-text">300mg/min</span>。<br>其特点是：所有<span class="blur-text">转运体</span>都达到<span class="blur-text">饱和</span>。</td>
+                            <td>3.. <strong>肾糖阈及肾小管葡萄糖重吸收极限量</strong><br>（1）<span class="answer-text">肾糖阈</span>：指尿中刚开始出现葡萄糖时的<span class="answer-text">血浆葡萄糖浓度</span>。一般为<span class="answer-text">160mg/100ml</span>~<span class="answer-text">180mg/100ml</span>。<br>（2）<span class="answer-text">肾小管葡萄糖重吸收极限量</span>：指近端小管对葡萄糖的重吸收均已达到或超过近球小管对葡萄糖的<span class="answer-text">最大转运率</span>，称为肾小管葡萄糖重吸收极限量。正常人两肾的葡萄糖重吸收的极限量，男性平均为<span class="answer-text">375mg/min</span>，女性平均为<span class="answer-text">300mg/min</span>。<br>其特点是：所有<span class="answer-text">转运体</span>都达到<span class="answer-text">饱和</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>4.. <strong>终尿中K+的来源及Na+与K+的区别</strong><br>（1）肾小球滤过的K+大约<span class="blur-text">65%~70%</span>被近端小管重吸收，<span class="blur-text">25%~30%</span>在髓袢重吸收，而远端小管和集合管既能<span class="blur-text">重吸收K+</span>，也能<span class="blur-text">分泌K+</span>。尿中排出的K+主要是<span class="blur-text">远端小管后半段</span>和<span class="blur-text">集合管的主细胞</span>分泌的。形成细胞内高钾浓度的基础是基底侧膜上的<span class="blur-text">Na+-K+泵</span>。Na+-K+泵将细胞内的Na+泵出细胞，同时将细胞外液中的K+泵入细胞内。由于远端小管和集合管顶端膜有<span class="blur-text">Na+通道</span>，小管液中的Na+顺电化学梯度扩散进入小管细胞内，造成小管液呈<span class="blur-text">负电位</span>，也构成K+扩散的电位梯度。远端小管和集合管上皮细胞内K+浓度较高，管腔顶端膜对K+有通透性，K+可顺化学梯度通过<span class="blur-text">K+通道</span>进入小管液。肾对K+的排出量取决于<span class="blur-text">肾小球滤过量</span>、<span class="blur-text">肾小管对钾的重吸收量</span>和<span class="blur-text">分泌量</span>。<br>（2）终尿中的Na+是通过肾小球的<span class="blur-text">滤过</span>和肾小管的<span class="blur-text">重吸收</span>后未被重吸收的多余的Na+。而终尿中的K+一般认为它主要是<span class="blur-text">远端小管和集合管的主细胞所分泌</span>，因为原尿中的K+绝大部分已在<span class="blur-text">近球小管</span>及<span class="blur-text">髓袢</span>被重吸收回血。</td>
+                            <td>4.. <strong>终尿中K+的来源及Na+与K+的区别</strong><br>（1）肾小球滤过的K+大约<span class="answer-text">65%~70%</span>被近端小管重吸收，<span class="answer-text">25%~30%</span>在髓袢重吸收，而远端小管和集合管既能<span class="answer-text">重吸收K+</span>，也能<span class="answer-text">分泌K+</span>。尿中排出的K+主要是<span class="answer-text">远端小管后半段</span>和<span class="answer-text">集合管的主细胞</span>分泌的。形成细胞内高钾浓度的基础是基底侧膜上的<span class="answer-text">Na+-K+泵</span>。Na+-K+泵将细胞内的Na+泵出细胞，同时将细胞外液中的K+泵入细胞内。由于远端小管和集合管顶端膜有<span class="answer-text">Na+通道</span>，小管液中的Na+顺电化学梯度扩散进入小管细胞内，造成小管液呈<span class="answer-text">负电位</span>，也构成K+扩散的电位梯度。远端小管和集合管上皮细胞内K+浓度较高，管腔顶端膜对K+有通透性，K+可顺化学梯度通过<span class="answer-text">K+通道</span>进入小管液。肾对K+的排出量取决于<span class="answer-text">肾小球滤过量</span>、<span class="answer-text">肾小管对钾的重吸收量</span>和<span class="answer-text">分泌量</span>。<br>（2）终尿中的Na+是通过肾小球的<span class="answer-text">滤过</span>和肾小管的<span class="answer-text">重吸收</span>后未被重吸收的多余的Na+。而终尿中的K+一般认为它主要是<span class="answer-text">远端小管和集合管的主细胞所分泌</span>，因为原尿中的K+绝大部分已在<span class="answer-text">近球小管</span>及<span class="answer-text">髓袢</span>被重吸收回血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5.. <strong>静脉快速输入大量生理盐水与大量饮用清水对尿量的影响</strong><br>静脉快速输入大量生理盐水或大量饮用清水时，尿量都会发生增多的现象，但增多的原因却不同。<br>（1）静脉快速输入大量生理盐水时，尿量增多的原因有：一是大量输入生理盐水时，<span class="blur-text">血浆蛋白浓度</span>的下降，<span class="blur-text">血浆胶体渗透压</span>降低，使<span class="blur-text">有效滤过压</span>增高，<span class="blur-text">肾小球滤过率</span>增高；二是<span class="blur-text">肾血浆流量</span>增加，血浆蛋白上升的速度减慢，<span class="blur-text">滤过平衡点</span>靠近出球小动脉，肾小球滤过率增高；三是<span class="blur-text">血容量</span>增加，可使<span class="blur-text">血管升压素</span>分泌减少，远曲小管和集合管对水的重吸收减少，尿量增多。<br>（2）大量饮清水后，尿量增加的原因是<span class="blur-text">血浆晶体渗透压</span>下降，对<span class="blur-text">渗透压感受器</span>的刺激减弱，<span class="blur-text">血管升压素</span>释放减少，使远曲小管和集合管对水的通透性下降，重吸收减少，尿量增加，即<span class="blur-text">水利尿</span>。</td>
+                            <td>5.. <strong>静脉快速输入大量生理盐水与大量饮用清水对尿量的影响</strong><br>静脉快速输入大量生理盐水或大量饮用清水时，尿量都会发生增多的现象，但增多的原因却不同。<br>（1）静脉快速输入大量生理盐水时，尿量增多的原因有：一是大量输入生理盐水时，<span class="answer-text">血浆蛋白浓度</span>的下降，<span class="answer-text">血浆胶体渗透压</span>降低，使<span class="answer-text">有效滤过压</span>增高，<span class="answer-text">肾小球滤过率</span>增高；二是<span class="answer-text">肾血浆流量</span>增加，血浆蛋白上升的速度减慢，<span class="answer-text">滤过平衡点</span>靠近出球小动脉，肾小球滤过率增高；三是<span class="answer-text">血容量</span>增加，可使<span class="answer-text">血管升压素</span>分泌减少，远曲小管和集合管对水的重吸收减少，尿量增多。<br>（2）大量饮清水后，尿量增加的原因是<span class="answer-text">血浆晶体渗透压</span>下降，对<span class="answer-text">渗透压感受器</span>的刺激减弱，<span class="answer-text">血管升压素</span>释放减少，使远曲小管和集合管对水的通透性下降，重吸收减少，尿量增加，即<span class="answer-text">水利尿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>6.. <strong>电刺激家兔颈迷走神经外周端对尿量的影响</strong><br>用电刺激家兔颈迷走神经外周端使尿量<span class="blur-text">减少</span>。<br>用电刺激迷走神经外周端，其末梢释放<span class="blur-text">乙酰胆碱</span>，乙酰胆碱与心肌细胞膜上的<span class="blur-text">M受体</span>结合，产生<span class="blur-text">负性</span>的变时、变力、变传导作用，使<span class="blur-text">心输出量</span>减少，动脉血压下降到<span class="blur-text">50mmHg</span>以下。因此，<span class="blur-text">肾小球毛细血管内压</span>下降，<span class="blur-text">有效滤过压</span>减少，<span class="blur-text">肾小球滤过率</span>下降，尿量减少。</td>
+                            <td>6.. <strong>电刺激家兔颈迷走神经外周端对尿量的影响</strong><br>用电刺激家兔颈迷走神经外周端使尿量<span class="answer-text">减少</span>。<br>用电刺激迷走神经外周端，其末梢释放<span class="answer-text">乙酰胆碱</span>，乙酰胆碱与心肌细胞膜上的<span class="answer-text">M受体</span>结合，产生<span class="answer-text">负性</span>的变时、变力、变传导作用，使<span class="answer-text">心输出量</span>减少，动脉血压下降到<span class="answer-text">50mmHg</span>以下。因此，<span class="answer-text">肾小球毛细血管内压</span>下降，<span class="answer-text">有效滤过压</span>减少，<span class="answer-text">肾小球滤过率</span>下降，尿量减少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>7.. <strong>近端小管前半段Na+重吸收过程</strong><br>近端小管前半段Na+进入上皮细胞的过程与<span class="blur-text">H+的分泌</span>以及<span class="blur-text">葡萄糖</span>、<span class="blur-text">氨基酸</span>的转运相耦联。<br>（1）近端小管前半段（<span class="blur-text">2/3段</span>）细胞基底侧膜上的<span class="blur-text">Na+泵</span>将细胞内Na+泵入细胞间隙。使细胞内Na+浓度降低，小管液中的Na+和细胞内的H+由顶端膜的<span class="blur-text">Na+-H+交换</span>进行逆向转运，H+被分泌到小管液中，小管液中的Na+顺浓度梯度进入上皮细胞内。<br>（2）小管液中的Na+也可由管腔膜上的<span class="blur-text">Na+-葡萄糖同向转运体</span>和<span class="blur-text">Na+-氨基酸同向转运体</span>与葡萄糖、氨基酸共同转运、小管液中的Na+顺电化学梯度进入上皮细胞内，同时将葡萄糖和氨基酸转运入细胞内。进入细胞内的Na+再由基底侧膜的<span class="blur-text">Na+泵</span>将其泵入细胞间隙。进入细胞内的葡萄糖和氨基酸以<span class="blur-text">易化扩散</span>方式转运到细胞外，进入血液循环。<br>（3）伴随着Na+、葡萄糖和氨基酸等进入细胞间隙，细胞间隙中<span class="blur-text">渗透压</span>升高，<span class="blur-text">H2O</span>随之进入细胞间隙，细胞间隙<span class="blur-text">静水压</span>升高，推动Na+、H2O进入<span class="blur-text">毛细血管</span>而被重吸收。</td>
+                            <td>7.. <strong>近端小管前半段Na+重吸收过程</strong><br>近端小管前半段Na+进入上皮细胞的过程与<span class="answer-text">H+的分泌</span>以及<span class="answer-text">葡萄糖</span>、<span class="answer-text">氨基酸</span>的转运相耦联。<br>（1）近端小管前半段（<span class="answer-text">2/3段</span>）细胞基底侧膜上的<span class="answer-text">Na+泵</span>将细胞内Na+泵入细胞间隙。使细胞内Na+浓度降低，小管液中的Na+和细胞内的H+由顶端膜的<span class="answer-text">Na+-H+交换</span>进行逆向转运，H+被分泌到小管液中，小管液中的Na+顺浓度梯度进入上皮细胞内。<br>（2）小管液中的Na+也可由管腔膜上的<span class="answer-text">Na+-葡萄糖同向转运体</span>和<span class="answer-text">Na+-氨基酸同向转运体</span>与葡萄糖、氨基酸共同转运、小管液中的Na+顺电化学梯度进入上皮细胞内，同时将葡萄糖和氨基酸转运入细胞内。进入细胞内的Na+再由基底侧膜的<span class="answer-text">Na+泵</span>将其泵入细胞间隙。进入细胞内的葡萄糖和氨基酸以<span class="answer-text">易化扩散</span>方式转运到细胞外，进入血液循环。<br>（3）伴随着Na+、葡萄糖和氨基酸等进入细胞间隙，细胞间隙中<span class="answer-text">渗透压</span>升高，<span class="answer-text">H2O</span>随之进入细胞间隙，细胞间隙<span class="answer-text">静水压</span>升高，推动Na+、H2O进入<span class="answer-text">毛细血管</span>而被重吸收。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>8.. <strong>肾小管分泌H+和重吸收NaHCO3的过程</strong><br>肾小球滤过的<span class="blur-text">HCO3-</span>与被肾小管上皮细胞分泌入小管液中的<span class="blur-text">H+</span>结合成<span class="blur-text">H2CO3</span>，H2CO3再解离成<span class="blur-text">H2O</span>和<span class="blur-text">CO2</span>，CO2扩散进入上皮细胞内，在细胞内<span class="blur-text">碳酸酐酶</span>催化下CO2和H2O结合形成H2CO3。H2CO3解离出H+和HCO3-。H+通过<span class="blur-text">H+-Na+交换</span>被分泌到小管液中，同时Na+被吸收进入上皮细胞内，这一过程称为<span class="blur-text">H+-Na+交换</span>。进入小管细胞内的Na+和细胞内的HCO3-一起被吸收回血。因此，HCO3-的重吸收是与<span class="blur-text">H+的分泌</span>密切相关的。HCO3-是以<span class="blur-text">CO2</span>的形式被吸收。</td>
+                            <td>8.. <strong>肾小管分泌H+和重吸收NaHCO3的过程</strong><br>肾小球滤过的<span class="answer-text">HCO3-</span>与被肾小管上皮细胞分泌入小管液中的<span class="answer-text">H+</span>结合成<span class="answer-text">H2CO3</span>，H2CO3再解离成<span class="answer-text">H2O</span>和<span class="answer-text">CO2</span>，CO2扩散进入上皮细胞内，在细胞内<span class="answer-text">碳酸酐酶</span>催化下CO2和H2O结合形成H2CO3。H2CO3解离出H+和HCO3-。H+通过<span class="answer-text">H+-Na+交换</span>被分泌到小管液中，同时Na+被吸收进入上皮细胞内，这一过程称为<span class="answer-text">H+-Na+交换</span>。进入小管细胞内的Na+和细胞内的HCO3-一起被吸收回血。因此，HCO3-的重吸收是与<span class="answer-text">H+的分泌</span>密切相关的。HCO3-是以<span class="answer-text">CO2</span>的形式被吸收。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>9.. <strong>大失血时尿量的变化及原理</strong><br>（1）大失血时可使尿量<span class="blur-text">减少</span>。大失血时动脉血压降低至<span class="blur-text">50mmHg</span>，超过肾血流量的自身调节范围，导致<span class="blur-text">肾小球毛细血管血压</span>明显下降，<span class="blur-text">有效滤过压</span>降低，<span class="blur-text">肾小球滤过率</span>下降，尿量减少。<br>（2）大失血造成<span class="blur-text">循环血量</span>减少，对<span class="blur-text">左心房容量感受器</span>刺激减弱，反射性地引起<span class="blur-text">血管升压素</span>释放增加，使远曲小管和集合管对水的重吸收增加，尿量减少。循环血量减少，<span class="blur-text">肾素-血管紧张素-醛固酮系统</span>活动增强，使<span class="blur-text">醛固酮</span>合成和分泌增加，加强远曲小管和集合管对<span class="blur-text">Na+</span>、<span class="blur-text">Cl-</span>和水的重吸收，促进<span class="blur-text">K+</span>的排出，使尿量减少。<br>（3）大失血可使<span class="blur-text">交感神经</span>兴奋，<span class="blur-text">肾动脉</span>收缩，<span class="blur-text">肾血流量</span>减少，<span class="blur-text">肾小球滤过率</span>下降，尿量减少。</td>
+                            <td>9.. <strong>大失血时尿量的变化及原理</strong><br>（1）大失血时可使尿量<span class="answer-text">减少</span>。大失血时动脉血压降低至<span class="answer-text">50mmHg</span>，超过肾血流量的自身调节范围，导致<span class="answer-text">肾小球毛细血管血压</span>明显下降，<span class="answer-text">有效滤过压</span>降低，<span class="answer-text">肾小球滤过率</span>下降，尿量减少。<br>（2）大失血造成<span class="answer-text">循环血量</span>减少，对<span class="answer-text">左心房容量感受器</span>刺激减弱，反射性地引起<span class="answer-text">血管升压素</span>释放增加，使远曲小管和集合管对水的重吸收增加，尿量减少。循环血量减少，<span class="answer-text">肾素-血管紧张素-醛固酮系统</span>活动增强，使<span class="answer-text">醛固酮</span>合成和分泌增加，加强远曲小管和集合管对<span class="answer-text">Na+</span>、<span class="answer-text">Cl-</span>和水的重吸收，促进<span class="answer-text">K+</span>的排出，使尿量减少。<br>（3）大失血可使<span class="answer-text">交感神经</span>兴奋，<span class="answer-text">肾动脉</span>收缩，<span class="answer-text">肾血流量</span>减少，<span class="answer-text">肾小球滤过率</span>下降，尿量减少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>10.. <strong>夏天大量出汗与大量饮清水后尿量的变化及原因</strong><br>（1）大量出汗后尿量<span class="blur-text">减少</span>。因为大量出汗导致机体<span class="blur-text">水分的丢失大于电解质的丢失</span>，使<span class="blur-text">血浆晶体渗透压</span>升高，对<span class="blur-text">渗透压感受器</span>刺激增强，<span class="blur-text">血管升压素</span>释放增多，作用于远曲小管和集合管使水的通透性增加，远曲小管和集合管对水的重吸收增加，尿量减少。<br>（2）大量饮清水后，尿量<span class="blur-text">增加</span>的原因是<span class="blur-text">血浆晶体渗透压</span>下降，对渗透压感受器的刺激减弱，血管升压素释放减少，使远曲小管和集合管对水的通透性下降，重吸收减少，尿量增加，即<span class="blur-text">水利尿</span>。</td>
+                            <td>10.. <strong>夏天大量出汗与大量饮清水后尿量的变化及原因</strong><br>（1）大量出汗后尿量<span class="answer-text">减少</span>。因为大量出汗导致机体<span class="answer-text">水分的丢失大于电解质的丢失</span>，使<span class="answer-text">血浆晶体渗透压</span>升高，对<span class="answer-text">渗透压感受器</span>刺激增强，<span class="answer-text">血管升压素</span>释放增多，作用于远曲小管和集合管使水的通透性增加，远曲小管和集合管对水的重吸收增加，尿量减少。<br>（2）大量饮清水后，尿量<span class="answer-text">增加</span>的原因是<span class="answer-text">血浆晶体渗透压</span>下降，对渗透压感受器的刺激减弱，血管升压素释放减少，使远曲小管和集合管对水的通透性下降，重吸收减少，尿量增加，即<span class="answer-text">水利尿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>11.. <strong>甘露醇和山梨醇消肿的原理</strong><br>甘露醇和山梨醇消肿的原理是<span class="blur-text">渗透性利尿</span>。它们通过<span class="blur-text">静脉注射</span>以后，可以通过肾小球滤过进入小管液后<span class="blur-text">不被肾小管重吸收</span>，使小管液中<span class="blur-text">溶质浓度</span>增加，<span class="blur-text">渗透压</span>增加，妨碍肾小管和集合管对水的重吸收，引起尿量增加，即<span class="blur-text">渗透性利尿</span>，从而达到利尿消肿的目的。</td>
+                            <td>11.. <strong>甘露醇和山梨醇消肿的原理</strong><br>甘露醇和山梨醇消肿的原理是<span class="answer-text">渗透性利尿</span>。它们通过<span class="answer-text">静脉注射</span>以后，可以通过肾小球滤过进入小管液后<span class="answer-text">不被肾小管重吸收</span>，使小管液中<span class="answer-text">溶质浓度</span>增加，<span class="answer-text">渗透压</span>增加，妨碍肾小管和集合管对水的重吸收，引起尿量增加，即<span class="answer-text">渗透性利尿</span>，从而达到利尿消肿的目的。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>12.. <strong>糖尿病患者出现糖尿和多尿的原理</strong><br>（1）<span class="blur-text">糖尿</span>：<span class="blur-text">肾糖阈</span>指尿中不出现葡萄糖时的最高血糖浓度。<span class="blur-text">近端小管</span>是葡萄糖吸收的唯一部位，近端小管对小管液中的葡萄糖不能被完全吸收，多余的糖会在终尿中出现，即出现糖尿。因为患者空腹血糖大于<span class="blur-text">180mg/100ml</span>，已经超过肾糖阈（<span class="blur-text">160~180mg/100ml</span>），餐后血糖会进一步增高，大大超过近端小管对葡萄糖吸收的极限量，滤过的葡萄糖不能被完全重吸收，终尿中出现葡萄糖，即糖尿。<br>（2）<span class="blur-text">多尿</span>：由于肾小管液中的葡萄糖不能全部吸收，使小管液<span class="blur-text">溶质浓度</span>增加，<span class="blur-text">渗透压</span>升高，从而妨碍远曲小管和集合管对水的重吸收，造成<span class="blur-text">渗透性利尿</span>，即多尿。</td>
+                            <td>12.. <strong>糖尿病患者出现糖尿和多尿的原理</strong><br>（1）<span class="answer-text">糖尿</span>：<span class="answer-text">肾糖阈</span>指尿中不出现葡萄糖时的最高血糖浓度。<span class="answer-text">近端小管</span>是葡萄糖吸收的唯一部位，近端小管对小管液中的葡萄糖不能被完全吸收，多余的糖会在终尿中出现，即出现糖尿。因为患者空腹血糖大于<span class="answer-text">180mg/100ml</span>，已经超过肾糖阈（<span class="answer-text">160~180mg/100ml</span>），餐后血糖会进一步增高，大大超过近端小管对葡萄糖吸收的极限量，滤过的葡萄糖不能被完全重吸收，终尿中出现葡萄糖，即糖尿。<br>（2）<span class="answer-text">多尿</span>：由于肾小管液中的葡萄糖不能全部吸收，使小管液<span class="answer-text">溶质浓度</span>增加，<span class="answer-text">渗透压</span>升高，从而妨碍远曲小管和集合管对水的重吸收，造成<span class="answer-text">渗透性利尿</span>，即多尿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>13.. <strong>水利尿的现象及机理</strong><br>（1）大量饮清水后引起尿量增多的现象称为<span class="blur-text">水利尿</span>。如正常人一次饮清水<span class="blur-text">1000ml</span>，尿量半小时后开始增加，<span class="blur-text">1小时</span>达峰值，<span class="blur-text">2~3小时</span>后恢复正常。<br>（2）尿量增多的机制是：一次大量饮清水后，<span class="blur-text">血浆晶体渗透压</span>降低，对<span class="blur-text">渗透压感受器</span>刺激减弱，导致<span class="blur-text">抗利尿激素</span>合成、释放减少，远曲小管、集合管壁对水的通透性下降，它们对的水重吸收减少、尿量增多。</td>
+                            <td>13.. <strong>水利尿的现象及机理</strong><br>（1）大量饮清水后引起尿量增多的现象称为<span class="answer-text">水利尿</span>。如正常人一次饮清水<span class="answer-text">1000ml</span>，尿量半小时后开始增加，<span class="answer-text">1小时</span>达峰值，<span class="answer-text">2~3小时</span>后恢复正常。<br>（2）尿量增多的机制是：一次大量饮清水后，<span class="answer-text">血浆晶体渗透压</span>降低，对<span class="answer-text">渗透压感受器</span>刺激减弱，导致<span class="answer-text">抗利尿激素</span>合成、释放减少，远曲小管、集合管壁对水的通透性下降，它们对的水重吸收减少、尿量增多。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>14.. <strong>肾髓质渗透压梯度形成的原理</strong><br>肾<span class="blur-text">外髓部</span>组织间液的渗透压梯度主要是由<span class="blur-text">髓袢升支粗段</span>对<span class="blur-text">NaCl</span>的<span class="blur-text">主动重吸收</span>所形成。肾<span class="blur-text">内髓部</span>组织间液的高渗梯度是由<span class="blur-text">尿素</span>和<span class="blur-text">NaCl</span>被动扩散造成的。<br>（1）<span class="blur-text">降支细段</span>对水通透性高而对Na+不易通透，水被重吸收，小管液中NaCl浓度越来越高，当小管液折返入<span class="blur-text">升支细段</span>时，由于升支细段对NaCl有通透性，NaCl顺浓度梯度扩散到内髓部组织间液，该部渗透压增高。<br>（2）远曲小管和皮质部及外髓部集合管对<span class="blur-text">尿素</span>不易通透而对水通透，在<span class="blur-text">血管升压素</span>作用下，水被重吸收，小管液中尿素的浓度升高；而<span class="blur-text">内髓部集合管</span>对尿素通透性大，小管液中尿素扩散到内髓部组织间液使组织间液渗透压进一步增高，部分尿素进入小管液经髓袢升支细段、髓袢升支粗段、远曲小管及内髓部集合管，形成<span class="blur-text">尿素的再循环</span>。</td>
+                            <td>14.. <strong>肾髓质渗透压梯度形成的原理</strong><br>肾<span class="answer-text">外髓部</span>组织间液的渗透压梯度主要是由<span class="answer-text">髓袢升支粗段</span>对<span class="answer-text">NaCl</span>的<span class="answer-text">主动重吸收</span>所形成。肾<span class="answer-text">内髓部</span>组织间液的高渗梯度是由<span class="answer-text">尿素</span>和<span class="answer-text">NaCl</span>被动扩散造成的。<br>（1）<span class="answer-text">降支细段</span>对水通透性高而对Na+不易通透，水被重吸收，小管液中NaCl浓度越来越高，当小管液折返入<span class="answer-text">升支细段</span>时，由于升支细段对NaCl有通透性，NaCl顺浓度梯度扩散到内髓部组织间液，该部渗透压增高。<br>（2）远曲小管和皮质部及外髓部集合管对<span class="answer-text">尿素</span>不易通透而对水通透，在<span class="answer-text">血管升压素</span>作用下，水被重吸收，小管液中尿素的浓度升高；而<span class="answer-text">内髓部集合管</span>对尿素通透性大，小管液中尿素扩散到内髓部组织间液使组织间液渗透压进一步增高，部分尿素进入小管液经髓袢升支细段、髓袢升支粗段、远曲小管及内髓部集合管，形成<span class="answer-text">尿素的再循环</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>15.. <strong>醛固酮的作用及其分泌的调节</strong><br>（1）醛固酮的主要作用是促进远曲小管和集合管对<span class="blur-text">Na+</span>的<span class="blur-text">主动重吸收</span>和对<span class="blur-text">K+</span>的分泌。由于Na+的主动重吸收增多，<span class="blur-text">氯离子</span>和<span class="blur-text">水</span>的重吸收也增多。<br>（2）醛固酮的分泌受<span class="blur-text">肾素-血管紧张素-醛固酮系统</span>的调节。<span class="blur-text">肾素</span>是球旁细胞合成、储存和释放的一种<span class="blur-text">酸性蛋白酶</span>，能催化血浆中的<span class="blur-text">血管紧张素原</span>成为<span class="blur-text">血管紧张素I</span>，后者进而转变成<span class="blur-text">血管紧张素II</span>和<span class="blur-text">血管紧张素III</span>。<span class="blur-text">血管紧张素II</span>是其中生物活性最强的一种。<br>（3）<span class="blur-text">血K+浓度升高</span>和<span class="blur-text">血Na+浓度降低</span>也可直接刺激肾上腺皮质<span class="blur-text">球状带</span>分泌醛固酮，醛固酮起到<span class="blur-text">保钠</span>、<span class="blur-text">保水</span>和<span class="blur-text">排钾</span>的作用，从而维持血K+和血Na+浓度的平衡。</td>
+                            <td>15.. <strong>醛固酮的作用及其分泌的调节</strong><br>（1）醛固酮的主要作用是促进远曲小管和集合管对<span class="answer-text">Na+</span>的<span class="answer-text">主动重吸收</span>和对<span class="answer-text">K+</span>的分泌。由于Na+的主动重吸收增多，<span class="answer-text">氯离子</span>和<span class="answer-text">水</span>的重吸收也增多。<br>（2）醛固酮的分泌受<span class="answer-text">肾素-血管紧张素-醛固酮系统</span>的调节。<span class="answer-text">肾素</span>是球旁细胞合成、储存和释放的一种<span class="answer-text">酸性蛋白酶</span>，能催化血浆中的<span class="answer-text">血管紧张素原</span>成为<span class="answer-text">血管紧张素I</span>，后者进而转变成<span class="answer-text">血管紧张素II</span>和<span class="answer-text">血管紧张素III</span>。<span class="answer-text">血管紧张素II</span>是其中生物活性最强的一种。<br>（3）<span class="answer-text">血K+浓度升高</span>和<span class="answer-text">血Na+浓度降低</span>也可直接刺激肾上腺皮质<span class="answer-text">球状带</span>分泌醛固酮，醛固酮起到<span class="answer-text">保钠</span>、<span class="answer-text">保水</span>和<span class="answer-text">排钾</span>的作用，从而维持血K+和血Na+浓度的平衡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>16.. <strong>急性链球菌感染后肾小球肾炎的临床表现</strong><br>①<span class="blur-text">水肿</span><br>②<span class="blur-text">血尿</span><br>③<span class="blur-text">蛋白尿</span><br>④<span class="blur-text">高血压</span><br>⑤<span class="blur-text">尿量减少</span><br>⑥<span class="blur-text">急性肾损伤</span></td>
+                            <td>16.. <strong>急性链球菌感染后肾小球肾炎的临床表现</strong><br>①<span class="answer-text">水肿</span><br>②<span class="answer-text">血尿</span><br>③<span class="answer-text">蛋白尿</span><br>④<span class="answer-text">高血压</span><br>⑤<span class="answer-text">尿量减少</span><br>⑥<span class="answer-text">急性肾损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>17.. <strong>急性链球菌感染后肾小球肾炎的诊断</strong><br>（1）<span class="blur-text">前驱感染</span>：上呼吸道感染或皮肤链球菌感染后<span class="blur-text">1~3周</span><br>（2）<span class="blur-text">临床症状</span>：急性疾病，出现<span class="blur-text">血尿</span>、<span class="blur-text">蛋白尿</span>、<span class="blur-text">水肿</span>、<span class="blur-text">尿少</span>及<span class="blur-text">高血压</span><br>（3）<span class="blur-text">实验室依据</span>：血清<span class="blur-text">C3</span>下降，病程<span class="blur-text">8周</span>恢复。</td>
+                            <td>17.. <strong>急性链球菌感染后肾小球肾炎的诊断</strong><br>（1）<span class="answer-text">前驱感染</span>：上呼吸道感染或皮肤链球菌感染后<span class="answer-text">1~3周</span><br>（2）<span class="answer-text">临床症状</span>：急性疾病，出现<span class="answer-text">血尿</span>、<span class="answer-text">蛋白尿</span>、<span class="answer-text">水肿</span>、<span class="answer-text">尿少</span>及<span class="answer-text">高血压</span><br>（3）<span class="answer-text">实验室依据</span>：血清<span class="answer-text">C3</span>下降，病程<span class="answer-text">8周</span>恢复。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>18.. <strong>急性链球菌感染后肾小球肾炎的治疗原则</strong><br>本病为<span class="blur-text">自限性疾病</span>，无特异性治疗。<br>原则：<span class="blur-text">一般治疗</span>，<span class="blur-text">控制感染</span>，<span class="blur-text">对症治疗</span>。<br>（1）一般治疗：急性期卧床休息<span class="blur-text">2-3周</span><br>（2）饮食：严重水肿或高血压者需<span class="blur-text">低盐饮食</span>、<span class="blur-text">限水</span>；氮质血症者限制<span class="blur-text">蛋白</span>，给予<span class="blur-text">优质动物蛋白</span><br>（3）抗感染：有感染灶时用<span class="blur-text">青霉素</span><span class="blur-text">10-14天</span><br>（4）对症治疗：<span class="blur-text">利尿</span>，<span class="blur-text">控制血压</span><br>（5）重症处理：合并<span class="blur-text">急性肾功能衰竭</span>、<span class="blur-text">心衰</span>患者限制液体入量，利尿、降压，纠正<span class="blur-text">电解质</span>、<span class="blur-text">酸碱平衡紊乱</span>，严重的<span class="blur-text">血液净化</span>治疗。</td>
+                            <td>18.. <strong>急性链球菌感染后肾小球肾炎的治疗原则</strong><br>本病为<span class="answer-text">自限性疾病</span>，无特异性治疗。<br>原则：<span class="answer-text">一般治疗</span>，<span class="answer-text">控制感染</span>，<span class="answer-text">对症治疗</span>。<br>（1）一般治疗：急性期卧床休息<span class="answer-text">2-3周</span><br>（2）饮食：严重水肿或高血压者需<span class="answer-text">低盐饮食</span>、<span class="answer-text">限水</span>；氮质血症者限制<span class="answer-text">蛋白</span>，给予<span class="answer-text">优质动物蛋白</span><br>（3）抗感染：有感染灶时用<span class="answer-text">青霉素</span><span class="answer-text">10-14天</span><br>（4）对症治疗：<span class="answer-text">利尿</span>，<span class="answer-text">控制血压</span><br>（5）重症处理：合并<span class="answer-text">急性肾功能衰竭</span>、<span class="answer-text">心衰</span>患者限制液体入量，利尿、降压，纠正<span class="answer-text">电解质</span>、<span class="answer-text">酸碱平衡紊乱</span>，严重的<span class="answer-text">血液净化</span>治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>19.. <strong>慢性肾小球肾炎的临床表现</strong><br><span class="blur-text">水肿</span>，<span class="blur-text">高血压</span>，<span class="blur-text">蛋白尿</span>，<span class="blur-text">血尿</span></td>
+                            <td>19.. <strong>慢性肾小球肾炎的临床表现</strong><br><span class="answer-text">水肿</span>，<span class="answer-text">高血压</span>，<span class="answer-text">蛋白尿</span>，<span class="answer-text">血尿</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>20.. <strong>慢性肾小球肾炎的诊断方法</strong><br>①<span class="blur-text">尿常规</span>：不同程度的<span class="blur-text">血尿</span>、<span class="blur-text">蛋白尿</span><br>②<span class="blur-text">血常规</span>：正常或轻度<span class="blur-text">贫血</span><br>③<span class="blur-text">肾功能</span>：<span class="blur-text">GFR</span>下降，轻度<span class="blur-text">氮质血症</span><br>④<span class="blur-text">超声</span>：肾脏大小正常或<span class="blur-text">缩小</span><br>⑤<span class="blur-text">肾活检</span>：可明确<span class="blur-text">病理类型</span></td>
+                            <td>20.. <strong>慢性肾小球肾炎的诊断方法</strong><br>①<span class="answer-text">尿常规</span>：不同程度的<span class="answer-text">血尿</span>、<span class="answer-text">蛋白尿</span><br>②<span class="answer-text">血常规</span>：正常或轻度<span class="answer-text">贫血</span><br>③<span class="answer-text">肾功能</span>：<span class="answer-text">GFR</span>下降，轻度<span class="answer-text">氮质血症</span><br>④<span class="answer-text">超声</span>：肾脏大小正常或<span class="answer-text">缩小</span><br>⑤<span class="answer-text">肾活检</span>：可明确<span class="answer-text">病理类型</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>21.. <strong>慢性肾小球肾炎与急性肾小球肾炎的鉴别</strong><br>①<span class="blur-text">病程</span>：慢性肾小球肾炎超过<span class="blur-text">1年</span>；急性肾小球肾炎较短<br>②<span class="blur-text">发病年龄</span>：慢性肾小球肾炎多为<span class="blur-text">成年人</span>；急性肾小球肾炎多为<span class="blur-text">儿童</span><br>③<span class="blur-text">感染潜伏期</span>：慢性肾小球肾炎较短，少于<span class="blur-text">1周</span>；急性肾小球肾炎较长，<span class="blur-text">1~3周</span><br>④<span class="blur-text">贫血和低蛋白血症</span>：慢性肾小球肾炎较明显；急性肾小球肾炎无<br>⑤<span class="blur-text">血尿</span>：慢性肾小球肾炎有或无；急性肾小球肾炎较明显<br>⑥<span class="blur-text">肾功能</span>：慢性肾小球肾炎通常<span class="blur-text">下降</span>；急性肾小球肾炎正常<br>⑦<span class="blur-text">C3</span>：慢性肾小球肾炎正常或持续下降；急性肾小球肾炎<span class="blur-text">8周</span>内下降<br>⑧<span class="blur-text">超声</span>：慢性肾小球肾炎无增大或<span class="blur-text">收缩</span>；急性肾小球肾炎肾脏体积<span class="blur-text">增大</span><br>⑨<span class="blur-text">预后</span>：慢性肾小球肾炎较长，<span class="blur-text">慢性进展</span>；急性肾小球肾炎较好，<span class="blur-text">1~2月</span>内明显好转</td>
+                            <td>21.. <strong>慢性肾小球肾炎与急性肾小球肾炎的鉴别</strong><br>①<span class="answer-text">病程</span>：慢性肾小球肾炎超过<span class="answer-text">1年</span>；急性肾小球肾炎较短<br>②<span class="answer-text">发病年龄</span>：慢性肾小球肾炎多为<span class="answer-text">成年人</span>；急性肾小球肾炎多为<span class="answer-text">儿童</span><br>③<span class="answer-text">感染潜伏期</span>：慢性肾小球肾炎较短，少于<span class="answer-text">1周</span>；急性肾小球肾炎较长，<span class="answer-text">1~3周</span><br>④<span class="answer-text">贫血和低蛋白血症</span>：慢性肾小球肾炎较明显；急性肾小球肾炎无<br>⑤<span class="answer-text">血尿</span>：慢性肾小球肾炎有或无；急性肾小球肾炎较明显<br>⑥<span class="answer-text">肾功能</span>：慢性肾小球肾炎通常<span class="answer-text">下降</span>；急性肾小球肾炎正常<br>⑦<span class="answer-text">C3</span>：慢性肾小球肾炎正常或持续下降；急性肾小球肾炎<span class="answer-text">8周</span>内下降<br>⑧<span class="answer-text">超声</span>：慢性肾小球肾炎无增大或<span class="answer-text">收缩</span>；急性肾小球肾炎肾脏体积<span class="answer-text">增大</span><br>⑨<span class="answer-text">预后</span>：慢性肾小球肾炎较长，<span class="answer-text">慢性进展</span>；急性肾小球肾炎较好，<span class="answer-text">1~2月</span>内明显好转</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>22.. <strong>慢性肾小球肾炎的治疗原则</strong><br>①<span class="blur-text">一般治疗</span><br>②极力<span class="blur-text">控制高血压</span><br>③<span class="blur-text">抗凝</span>和<span class="blur-text">血小板解聚药物</span><br>④<span class="blur-text">糖皮质激素</span>和<span class="blur-text">免疫抑制剂</span><br>⑤<span class="blur-text">系统治疗</span></td>
+                            <td>22.. <strong>慢性肾小球肾炎的治疗原则</strong><br>①<span class="answer-text">一般治疗</span><br>②极力<span class="answer-text">控制高血压</span><br>③<span class="answer-text">抗凝</span>和<span class="answer-text">血小板解聚药物</span><br>④<span class="answer-text">糖皮质激素</span>和<span class="answer-text">免疫抑制剂</span><br>⑤<span class="answer-text">系统治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>23.. <strong>急进性肾小球肾炎的临床表现</strong><br>（1）可有前驱<span class="blur-text">呼吸道感染</span>，起病较急。<br>（2）<span class="blur-text">急性肾炎综合征</span>：突然出现的<span class="blur-text">血尿</span>、<span class="blur-text">蛋白尿</span>、<span class="blur-text">水肿</span>、<span class="blur-text">高血压</span>。<br>（3）<span class="blur-text">急性肾损伤</span>：进行性<span class="blur-text">少尿</span>或<span class="blur-text">无尿</span>，肾功能于数周内恶化并发展至<span class="blur-text">尿毒症</span>。<br>（4）常伴有中度<span class="blur-text">贫血</span>。<br>（5）<span class="blur-text">I型</span>可出现<span class="blur-text">咯血</span>，<span class="blur-text">III型</span>患者可有<span class="blur-text">发热</span>、<span class="blur-text">关节痛</span>或咯血等<span class="blur-text">系统性血管炎</span>的表现。</td>
+                            <td>23.. <strong>急进性肾小球肾炎的临床表现</strong><br>（1）可有前驱<span class="answer-text">呼吸道感染</span>，起病较急。<br>（2）<span class="answer-text">急性肾炎综合征</span>：突然出现的<span class="answer-text">血尿</span>、<span class="answer-text">蛋白尿</span>、<span class="answer-text">水肿</span>、<span class="answer-text">高血压</span>。<br>（3）<span class="answer-text">急性肾损伤</span>：进行性<span class="answer-text">少尿</span>或<span class="answer-text">无尿</span>，肾功能于数周内恶化并发展至<span class="answer-text">尿毒症</span>。<br>（4）常伴有中度<span class="answer-text">贫血</span>。<br>（5）<span class="answer-text">I型</span>可出现<span class="answer-text">咯血</span>，<span class="answer-text">III型</span>患者可有<span class="answer-text">发热</span>、<span class="answer-text">关节痛</span>或咯血等<span class="answer-text">系统性血管炎</span>的表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>24.. <strong>急进性肾小球肾炎的治疗</strong><br>（1）<span class="blur-text">肾上腺皮质激素</span><br>（2）<span class="blur-text">免疫抑制剂</span>，常用<span class="blur-text">环磷酰胺</span>冲击<br>（3）<span class="blur-text">血浆置换疗法</span>：用于<span class="blur-text">I型</span>、<span class="blur-text">III型</span>患者<br>（4）<span class="blur-text">肾脏替代疗法</span>：<span class="blur-text">血液透析</span>、<span class="blur-text">腹膜透析</span>、<span class="blur-text">肾移植</span>。</td>
+                            <td>24.. <strong>急进性肾小球肾炎的治疗</strong><br>（1）<span class="answer-text">肾上腺皮质激素</span><br>（2）<span class="answer-text">免疫抑制剂</span>，常用<span class="answer-text">环磷酰胺</span>冲击<br>（3）<span class="answer-text">血浆置换疗法</span>：用于<span class="answer-text">I型</span>、<span class="answer-text">III型</span>患者<br>（4）<span class="answer-text">肾脏替代疗法</span>：<span class="answer-text">血液透析</span>、<span class="answer-text">腹膜透析</span>、<span class="answer-text">肾移植</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>25.. <strong>肾病综合征的临床表现</strong><br>①<span class="blur-text">大量蛋白尿</span>：24小时尿蛋白尿定量><span class="blur-text">3.5g</span>或><span class="blur-text">50mg/kg</span><br>②<span class="blur-text">低蛋白血症</span>：血清白蛋白<<span class="blur-text">30g/L</span><br>③常伴<span class="blur-text">高脂血症</span><br>④<span class="blur-text">水肿</span>：主要由于严重的<span class="blur-text">低白蛋白血症</span>所致</td>
+                            <td>25.. <strong>肾病综合征的临床表现</strong><br>①<span class="answer-text">大量蛋白尿</span>：24小时尿蛋白尿定量><span class="answer-text">3.5g</span>或><span class="answer-text">50mg/kg</span><br>②<span class="answer-text">低蛋白血症</span>：血清白蛋白<<span class="answer-text">30g/L</span><br>③常伴<span class="answer-text">高脂血症</span><br>④<span class="answer-text">水肿</span>：主要由于严重的<span class="answer-text">低白蛋白血症</span>所致</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>26.. <strong>肾病综合征诊断</strong><br>（1）明确肾病综合征的诊断：<span class="blur-text">大量蛋白尿</span>，<span class="blur-text">低蛋白血症</span>，<span class="blur-text">高脂血症</span>，<span class="blur-text">水肿</span>。<br>（2）<span class="blur-text">病因诊断</span>：排除<span class="blur-text">继发</span>及<span class="blur-text">遗传性</span>。<br>（3）最好进行<span class="blur-text">肾活检</span>，明确<span class="blur-text">病理诊断</span>。<br>（4）判断有无<span class="blur-text">并发症</span>。</td>
+                            <td>26.. <strong>肾病综合征诊断</strong><br>（1）明确肾病综合征的诊断：<span class="answer-text">大量蛋白尿</span>，<span class="answer-text">低蛋白血症</span>，<span class="answer-text">高脂血症</span>，<span class="answer-text">水肿</span>。<br>（2）<span class="answer-text">病因诊断</span>：排除<span class="answer-text">继发</span>及<span class="answer-text">遗传性</span>。<br>（3）最好进行<span class="answer-text">肾活检</span>，明确<span class="answer-text">病理诊断</span>。<br>（4）判断有无<span class="answer-text">并发症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>27.. <strong>肾病综合征的并发症</strong><br>①<span class="blur-text">感染</span>：细菌感染为肾病综合征最常见的并发症。常见感染部位顺序为<span class="blur-text">呼吸道</span>、<span class="blur-text">泌尿系统</span>、<span class="blur-text">皮肤</span>、<span class="blur-text">自发性腹膜炎</span>等。<br>②<span class="blur-text">血栓</span>、<span class="blur-text">栓塞并发症</span>：肾病综合征的严重并发症，最常见为<span class="blur-text">肾静脉血栓</span>。<br>③<span class="blur-text">急性肾损伤</span>：肾病综合征最严重的并发症。<br>④<span class="blur-text">蛋白质</span>及<span class="blur-text">脂肪代谢紊乱</span>：长期低蛋白血症可导致<span class="blur-text">营养不良</span>，儿童<span class="blur-text">生长发育迟缓</span>。</td>
+                            <td>27.. <strong>肾病综合征的并发症</strong><br>①<span class="answer-text">感染</span>：细菌感染为肾病综合征最常见的并发症。常见感染部位顺序为<span class="answer-text">呼吸道</span>、<span class="answer-text">泌尿系统</span>、<span class="answer-text">皮肤</span>、<span class="answer-text">自发性腹膜炎</span>等。<br>②<span class="answer-text">血栓</span>、<span class="answer-text">栓塞并发症</span>：肾病综合征的严重并发症，最常见为<span class="answer-text">肾静脉血栓</span>。<br>③<span class="answer-text">急性肾损伤</span>：肾病综合征最严重的并发症。<br>④<span class="answer-text">蛋白质</span>及<span class="answer-text">脂肪代谢紊乱</span>：长期低蛋白血症可导致<span class="answer-text">营养不良</span>，儿童<span class="answer-text">生长发育迟缓</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>28.. <strong>原发性肾病综合征的病理类型</strong><br>①<span class="blur-text">微小病变型</span><br>②<span class="blur-text">系膜增生型</span><br>③<span class="blur-text">局灶节段硬化型</span><br>④<span class="blur-text">膜型</span><br>⑤<span class="blur-text">系膜毛细血管增生型</span>（<span class="blur-text">膜增生性肾炎</span>）</td>
+                            <td>28.. <strong>原发性肾病综合征的病理类型</strong><br>①<span class="answer-text">微小病变型</span><br>②<span class="answer-text">系膜增生型</span><br>③<span class="answer-text">局灶节段硬化型</span><br>④<span class="answer-text">膜型</span><br>⑤<span class="answer-text">系膜毛细血管增生型</span>（<span class="answer-text">膜增生性肾炎</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>29.. <strong>依据对激素治疗反应性的肾病综合征分类</strong><br>①<span class="blur-text">激素敏感型</span>：用药<span class="blur-text">8-12周</span>内肾病综合征缓解<br>②<span class="blur-text">激素依赖型</span>：激素减量到一定程度即<span class="blur-text">复发</span><br>③<span class="blur-text">激素抵抗型</span>：激素治疗<span class="blur-text">无效</span></td>
+                            <td>29.. <strong>依据对激素治疗反应性的肾病综合征分类</strong><br>①<span class="answer-text">激素敏感型</span>：用药<span class="answer-text">8-12周</span>内肾病综合征缓解<br>②<span class="answer-text">激素依赖型</span>：激素减量到一定程度即<span class="answer-text">复发</span><br>③<span class="answer-text">激素抵抗型</span>：激素治疗<span class="answer-text">无效</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>30.. <strong>肾病综合征患者激素治疗的原则及副作用</strong><br>（1）原则：<span class="blur-text">用量要足</span>，<span class="blur-text">减药宜慢</span>，<span class="blur-text">维持持久</span>。<br>（2）副作用：①<span class="blur-text">库欣综合征</span><br>②<span class="blur-text">三大代谢紊乱</span><br>③<span class="blur-text">胃肠道反应</span>、<span class="blur-text">消化道出血</span><br>④<span class="blur-text">感染</span><br>⑤<span class="blur-text">生长延缓</span><br>⑥<span class="blur-text">骨质疏松</span><br>⑦<span class="blur-text">精神神经系统症状</span><br>⑧<span class="blur-text">白内障</span><br>⑨<span class="blur-text">动脉硬化</span><br>⑩<span class="blur-text">肾上腺分泌不足</span></td>
+                            <td>30.. <strong>肾病综合征患者激素治疗的原则及副作用</strong><br>（1）原则：<span class="answer-text">用量要足</span>，<span class="answer-text">减药宜慢</span>，<span class="answer-text">维持持久</span>。<br>（2）副作用：①<span class="answer-text">库欣综合征</span><br>②<span class="answer-text">三大代谢紊乱</span><br>③<span class="answer-text">胃肠道反应</span>、<span class="answer-text">消化道出血</span><br>④<span class="answer-text">感染</span><br>⑤<span class="answer-text">生长延缓</span><br>⑥<span class="answer-text">骨质疏松</span><br>⑦<span class="answer-text">精神神经系统症状</span><br>⑧<span class="answer-text">白内障</span><br>⑨<span class="answer-text">动脉硬化</span><br>⑩<span class="answer-text">肾上腺分泌不足</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>31.. <strong>少尿型肾衰多尿期的机制</strong><br>①<span class="blur-text">肾血流量</span>和<span class="blur-text">肾小球滤过率</span>恢复<br>②新生<span class="blur-text">肾小管上皮细胞</span>功能不成熟，<span class="blur-text">浓缩功能</span>仍低下<br>③<span class="blur-text">肾间质水肿</span>消退，肾小管内<span class="blur-text">管型</span>被冲走，阻塞解除<br>④少尿期中存留在血中的<span class="blur-text">尿素</span>等代谢产物经肾小球大量滤出，产生<span class="blur-text">渗透性利尿</span></td>
+                            <td>31.. <strong>少尿型肾衰多尿期的机制</strong><br>①<span class="answer-text">肾血流量</span>和<span class="answer-text">肾小球滤过率</span>恢复<br>②新生<span class="answer-text">肾小管上皮细胞</span>功能不成熟，<span class="answer-text">浓缩功能</span>仍低下<br>③<span class="answer-text">肾间质水肿</span>消退，肾小管内<span class="answer-text">管型</span>被冲走，阻塞解除<br>④少尿期中存留在血中的<span class="answer-text">尿素</span>等代谢产物经肾小球大量滤出，产生<span class="answer-text">渗透性利尿</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>32.. <strong>慢性肾功能衰竭肾性贫血的机制</strong><br>①<span class="blur-text">促红细胞生成素</span>减少<br>②血液中<span class="blur-text">毒性物质</span>的潴留抑制红细胞合成<br>③蓄积的毒性物质，导致<span class="blur-text">红细胞破坏</span>增加<br>④<span class="blur-text">血小板</span>凝血功能异常导致的<span class="blur-text">出血</span><br>⑤<span class="blur-text">铁</span>和<span class="blur-text">叶酸</span>不足</td>
+                            <td>32.. <strong>慢性肾功能衰竭肾性贫血的机制</strong><br>①<span class="answer-text">促红细胞生成素</span>减少<br>②血液中<span class="answer-text">毒性物质</span>的潴留抑制红细胞合成<br>③蓄积的毒性物质，导致<span class="answer-text">红细胞破坏</span>增加<br>④<span class="answer-text">血小板</span>凝血功能异常导致的<span class="answer-text">出血</span><br>⑤<span class="answer-text">铁</span>和<span class="answer-text">叶酸</span>不足</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>33.. <strong>慢性肾脏病（CKD）的分期</strong><br>1期（肾功能正常）：<span class="blur-text">GFR≥90</span>，<span class="blur-text">SCr正常</span>，CKD诊治；缓解症状；保护肾功能<br>2期（慢性肾功能不全代偿期）：<span class="blur-text">GFR 60-89</span>，<span class="blur-text">SCr 133-177</span>，延缓CKD的进展；降低CVD风险<br>3a期：<span class="blur-text">GFR 45-59</span><br>3b期：<span class="blur-text">GFR 30-44</span>，<span class="blur-text">SCr 178-442</span>，延缓CKD的进展；评估、治疗并发症<br>4期（慢性肾功能不全肾衰竭期）：<span class="blur-text">GFR 15-29</span>，<span class="blur-text">SCr 443-707</span>，综合治疗；透析前准备<br>5期（慢性肾功能不全尿毒症期）：<span class="blur-text">GFR<15</span>，<span class="blur-text">SCr>707μmol/L</span>，及时替代治疗</td>
+                            <td>33.. <strong>慢性肾脏病（CKD）的分期</strong><br>1期（肾功能正常）：<span class="answer-text">GFR≥90</span>，<span class="answer-text">SCr正常</span>，CKD诊治；缓解症状；保护肾功能<br>2期（慢性肾功能不全代偿期）：<span class="answer-text">GFR 60-89</span>，<span class="answer-text">SCr 133-177</span>，延缓CKD的进展；降低CVD风险<br>3a期：<span class="answer-text">GFR 45-59</span><br>3b期：<span class="answer-text">GFR 30-44</span>，<span class="answer-text">SCr 178-442</span>，延缓CKD的进展；评估、治疗并发症<br>4期（慢性肾功能不全肾衰竭期）：<span class="answer-text">GFR 15-29</span>，<span class="answer-text">SCr 443-707</span>，综合治疗；透析前准备<br>5期（慢性肾功能不全尿毒症期）：<span class="answer-text">GFR<15</span>，<span class="answer-text">SCr>707μmol/L</span>，及时替代治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>34.. <strong>高钾血症的处理</strong><br>①限制<span class="blur-text">钾</span>的摄入，停用<span class="blur-text">ACEI</span>、<span class="blur-text">ARB</span>等<br>②<span class="blur-text">10%葡萄糖酸钙</span><span class="blur-text">10-20ml</span>稀释缓慢静脉滴注<br>③<span class="blur-text">呋塞米</span><span class="blur-text">40-200mg</span>/次，静脉滴注<br>④<span class="blur-text">5%NaHCO3</span><span class="blur-text">100-150ml</span>静脉滴注<br>⑤<span class="blur-text">葡萄糖+胰岛素</span>溶液输入（葡萄糖<span class="blur-text">4-6g</span>+胰岛素<span class="blur-text">1U</span>）<br>⑥口服<span class="blur-text">离子交换树脂</span></td>
+                            <td>34.. <strong>高钾血症的处理</strong><br>①限制<span class="answer-text">钾</span>的摄入，停用<span class="answer-text">ACEI</span>、<span class="answer-text">ARB</span>等<br>②<span class="answer-text">10%葡萄糖酸钙</span><span class="answer-text">10-20ml</span>稀释缓慢静脉滴注<br>③<span class="answer-text">呋塞米</span><span class="answer-text">40-200mg</span>/次，静脉滴注<br>④<span class="answer-text">5%NaHCO3</span><span class="answer-text">100-150ml</span>静脉滴注<br>⑤<span class="answer-text">葡萄糖+胰岛素</span>溶液输入（葡萄糖<span class="answer-text">4-6g</span>+胰岛素<span class="answer-text">1U</span>）<br>⑥口服<span class="answer-text">离子交换树脂</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>35.. <strong>肾结核的临床表现</strong><br>①<span class="blur-text">膀胱刺激征</span>：<span class="blur-text">尿频</span>、<span class="blur-text">尿急</span>、<span class="blur-text">尿痛</span><br>②<span class="blur-text">血尿</span>：肉眼或镜下血尿<br>③<span class="blur-text">脓尿</span>："<span class="blur-text">淘米水样</span>"尿<br>④<span class="blur-text">排尿困难</span>：<span class="blur-text">尿道狭窄</span><br>⑤<span class="blur-text">腰痛</span>、<span class="blur-text">腰部肿块</span>：严重至<span class="blur-text">结核性脓肾</span><br>⑥<span class="blur-text">全身症状</span>：<span class="blur-text">发热</span>、<span class="blur-text">消瘦</span>、<span class="blur-text">恶心</span>、<span class="blur-text">呕吐</span>等</td>
+                            <td>35.. <strong>肾结核的临床表现</strong><br>①<span class="answer-text">膀胱刺激征</span>：<span class="answer-text">尿频</span>、<span class="answer-text">尿急</span>、<span class="answer-text">尿痛</span><br>②<span class="answer-text">血尿</span>：肉眼或镜下血尿<br>③<span class="answer-text">脓尿</span>："<span class="answer-text">淘米水样</span>"尿<br>④<span class="answer-text">排尿困难</span>：<span class="answer-text">尿道狭窄</span><br>⑤<span class="answer-text">腰痛</span>、<span class="answer-text">腰部肿块</span>：严重至<span class="answer-text">结核性脓肾</span><br>⑥<span class="answer-text">全身症状</span>：<span class="answer-text">发热</span>、<span class="answer-text">消瘦</span>、<span class="answer-text">恶心</span>、<span class="answer-text">呕吐</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>36.. <strong>肾结核肾切除的适应症</strong><br>①<span class="blur-text">无功能肾</span><br>②肾实质破坏<span class="blur-text">2/3</span>或<span class="blur-text">两个大肾盏</span>以上且化疗无效<br>③肾结核合并难以控制的<span class="blur-text">高血压</span><br>④肾结核合并<span class="blur-text">输尿管严重梗阻</span></td>
+                            <td>36.. <strong>肾结核肾切除的适应症</strong><br>①<span class="answer-text">无功能肾</span><br>②肾实质破坏<span class="answer-text">2/3</span>或<span class="answer-text">两个大肾盏</span>以上且化疗无效<br>③肾结核合并难以控制的<span class="answer-text">高血压</span><br>④肾结核合并<span class="answer-text">输尿管严重梗阻</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>37.. <strong>急性肾盂肾炎肉眼和镜下的病理变化</strong><br>（1）肉眼：肾<span class="blur-text">肿大</span>，切面见<span class="blur-text">肾脓肿</span>，肾盂<span class="blur-text">充血</span>，<span class="blur-text">小脓肿</span>，<span class="blur-text">积脓</span>。<br>（2）镜下：①<span class="blur-text">肾盂</span>：黏膜<span class="blur-text">充血</span>、<span class="blur-text">水肿</span>。中间<span class="blur-text">白细胞浸润</span><br>②<span class="blur-text">间质</span>：<span class="blur-text">脓肿</span><br>③<span class="blur-text">小管</span>：<span class="blur-text">白细胞管型</span>，重者累及<span class="blur-text">小球</span></td>
+                            <td>37.. <strong>急性肾盂肾炎肉眼和镜下的病理变化</strong><br>（1）肉眼：肾<span class="answer-text">肿大</span>，切面见<span class="answer-text">肾脓肿</span>，肾盂<span class="answer-text">充血</span>，<span class="answer-text">小脓肿</span>，<span class="answer-text">积脓</span>。<br>（2）镜下：①<span class="answer-text">肾盂</span>：黏膜<span class="answer-text">充血</span>、<span class="answer-text">水肿</span>。中间<span class="answer-text">白细胞浸润</span><br>②<span class="answer-text">间质</span>：<span class="answer-text">脓肿</span><br>③<span class="answer-text">小管</span>：<span class="answer-text">白细胞管型</span>，重者累及<span class="answer-text">小球</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>38.. <strong>慢性肾盂肾炎肉眼和镜下的病理变化</strong><br>（1）肉眼：肾体积<span class="blur-text">缩小</span>，<span class="blur-text">不规则疤痕</span>，<span class="blur-text">两侧不对称</span><br>（2）镜下：肾<span class="blur-text">间质</span>和肾<span class="blur-text">小管</span>病变重于<span class="blur-text">肾小球</span><br>①<span class="blur-text">肾盂黏膜</span>：<span class="blur-text">增厚</span>，<span class="blur-text">磷化</span>，<span class="blur-text">炎细胞浸润</span><br>②<span class="blur-text">肾间质</span>：<span class="blur-text">纤维</span>大量增生，<span class="blur-text">炎细胞</span>（淋、单、浆）浸润<br>③<span class="blur-text">细小动脉</span>：管腔<span class="blur-text">狭窄</span>、壁<span class="blur-text">增厚</span><br>④<span class="blur-text">肾小管</span>：<span class="blur-text">萎缩</span>、<span class="blur-text">坏死</span>，<span class="blur-text">纤维化</span>；部分<span class="blur-text">扩张</span>，<span class="blur-text">胶样管型</span>（似甲状腺泡）<br>⑤<span class="blur-text">肾小球</span>：<span class="blur-text">萎缩</span>、<span class="blur-text">玻变</span>或<span class="blur-text">纤维化</span></td>
+                            <td>38.. <strong>慢性肾盂肾炎肉眼和镜下的病理变化</strong><br>（1）肉眼：肾体积<span class="answer-text">缩小</span>，<span class="answer-text">不规则疤痕</span>，<span class="answer-text">两侧不对称</span><br>（2）镜下：肾<span class="answer-text">间质</span>和肾<span class="answer-text">小管</span>病变重于<span class="answer-text">肾小球</span><br>①<span class="answer-text">肾盂黏膜</span>：<span class="answer-text">增厚</span>，<span class="answer-text">磷化</span>，<span class="answer-text">炎细胞浸润</span><br>②<span class="answer-text">肾间质</span>：<span class="answer-text">纤维</span>大量增生，<span class="answer-text">炎细胞</span>（淋、单、浆）浸润<br>③<span class="answer-text">细小动脉</span>：管腔<span class="answer-text">狭窄</span>、壁<span class="answer-text">增厚</span><br>④<span class="answer-text">肾小管</span>：<span class="answer-text">萎缩</span>、<span class="answer-text">坏死</span>，<span class="answer-text">纤维化</span>；部分<span class="answer-text">扩张</span>，<span class="answer-text">胶样管型</span>（似甲状腺泡）<br>⑤<span class="answer-text">肾小球</span>：<span class="answer-text">萎缩</span>、<span class="answer-text">玻变</span>或<span class="answer-text">纤维化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>39.. <strong>肾细胞癌的肉眼和镜下的病理变化</strong><br>（1）肉眼：病变在<span class="blur-text">两极</span>，<span class="blur-text">上极</span>更为多见。<span class="blur-text">淡黄色</span>或<span class="blur-text">灰黄色</span>，伴<span class="blur-text">出血</span>、<span class="blur-text">坏死</span>后成实性多彩包块。<br>（2）镜下：<span class="blur-text">透明细胞癌</span>，<span class="blur-text">乳头状癌</span>，<span class="blur-text">嫌色细胞癌</span></td>
+                            <td>39.. <strong>肾细胞癌的肉眼和镜下的病理变化</strong><br>（1）肉眼：病变在<span class="answer-text">两极</span>，<span class="answer-text">上极</span>更为多见。<span class="answer-text">淡黄色</span>或<span class="answer-text">灰黄色</span>，伴<span class="answer-text">出血</span>、<span class="answer-text">坏死</span>后成实性多彩包块。<br>（2）镜下：<span class="answer-text">透明细胞癌</span>，<span class="answer-text">乳头状癌</span>，<span class="answer-text">嫌色细胞癌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>40.. <strong>肾损伤的分类</strong><br>①<span class="blur-text">肾挫伤</span><br>②<span class="blur-text">肾部分裂伤</span><br>③<span class="blur-text">肾全层裂伤</span><br>④<span class="blur-text">肾蒂血管损伤</span></td>
+                            <td>40.. <strong>肾损伤的分类</strong><br>①<span class="answer-text">肾挫伤</span><br>②<span class="answer-text">肾部分裂伤</span><br>③<span class="answer-text">肾全层裂伤</span><br>④<span class="answer-text">肾蒂血管损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>41.. <strong>肾损伤的保守治疗指征及原则</strong><br>（1）指征：轻微<span class="blur-text">肾挫/裂伤</span><br>（2）原则：<br>①绝对卧床休息<span class="blur-text">2~4周</span>，通常损伤后<span class="blur-text">4~6周</span>，肾部分裂伤才趋于愈合，恢复后<span class="blur-text">2~3个月</span>内不宜参加剧烈活动。<br>②密切观察：定时测量<span class="blur-text">血压</span>、<span class="blur-text">脉搏</span>、<span class="blur-text">呼吸</span>、<span class="blur-text">体温</span>，注意腰、腹部肿块范围有无增大，观察每次排出的尿液<span class="blur-text">颜色深浅</span>的变化。定期检测<span class="blur-text">血红蛋白</span>和<span class="blur-text">红细胞压积</span>。<br>③及时补充<span class="blur-text">血容量</span>和<span class="blur-text">热量</span>，维持<span class="blur-text">水</span>、<span class="blur-text">电解质平衡</span>，保持足够<span class="blur-text">尿量</span>，必要时<span class="blur-text">输血</span>。<br>④早期合理应用<span class="blur-text">抗生素</span>预防感染。<br>⑤适量使用<span class="blur-text">止痛</span>、<span class="blur-text">镇静剂</span>和<span class="blur-text">止血药物</span>。</td>
+                            <td>41.. <strong>肾损伤的保守治疗指征及原则</strong><br>（1）指征：轻微<span class="answer-text">肾挫/裂伤</span><br>（2）原则：<br>①绝对卧床休息<span class="answer-text">2~4周</span>，通常损伤后<span class="answer-text">4~6周</span>，肾部分裂伤才趋于愈合，恢复后<span class="answer-text">2~3个月</span>内不宜参加剧烈活动。<br>②密切观察：定时测量<span class="answer-text">血压</span>、<span class="answer-text">脉搏</span>、<span class="answer-text">呼吸</span>、<span class="answer-text">体温</span>，注意腰、腹部肿块范围有无增大，观察每次排出的尿液<span class="answer-text">颜色深浅</span>的变化。定期检测<span class="answer-text">血红蛋白</span>和<span class="answer-text">红细胞压积</span>。<br>③及时补充<span class="answer-text">血容量</span>和<span class="answer-text">热量</span>，维持<span class="answer-text">水</span>、<span class="answer-text">电解质平衡</span>，保持足够<span class="answer-text">尿量</span>，必要时<span class="answer-text">输血</span>。<br>④早期合理应用<span class="answer-text">抗生素</span>预防感染。<br>⑤适量使用<span class="answer-text">止痛</span>、<span class="answer-text">镇静剂</span>和<span class="answer-text">止血药物</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>42.. <strong>肾损伤手术治疗的指征</strong><br>①经积极<span class="blur-text">抗休克</span>后生命体征仍未见改善，提示有<span class="blur-text">内出血</span>。<br>②<span class="blur-text">血尿</span>逐渐加重，<span class="blur-text">血红蛋白</span>和<span class="blur-text">红细胞压积</span>持续降低。<br>③腰、腹部肿块明显<span class="blur-text">增大</span>。<br>④怀疑有<span class="blur-text">腹腔脏器损伤</span></td>
+                            <td>42.. <strong>肾损伤手术治疗的指征</strong><br>①经积极<span class="answer-text">抗休克</span>后生命体征仍未见改善，提示有<span class="answer-text">内出血</span>。<br>②<span class="answer-text">血尿</span>逐渐加重，<span class="answer-text">血红蛋白</span>和<span class="answer-text">红细胞压积</span>持续降低。<br>③腰、腹部肿块明显<span class="answer-text">增大</span>。<br>④怀疑有<span class="answer-text">腹腔脏器损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>43.. <strong>双侧上尿路结石的治疗原则</strong><br>①一侧<span class="blur-text">输尿管结石</span>，对侧<span class="blur-text">肾结石</span>：先处理输尿管结石。<br>②<span class="blur-text">双侧输尿管结石</span>：先处理梗阻严重一侧，条件许可时可同时处理。<br>③<span class="blur-text">双肾结石</span>：一般先处理容易和安全一侧。如肾功能损害严重，要先行<span class="blur-text">经皮肾造瘘引流</span>；总肾功能受损时，先处理肾功能较好的一侧。<br>④双侧或独肾上尿路结石<span class="blur-text">完全梗阻</span>时，应明确诊断后尽快手术，情况差时同样应先<span class="blur-text">引流</span>。</td>
+                            <td>43.. <strong>双侧上尿路结石的治疗原则</strong><br>①一侧<span class="answer-text">输尿管结石</span>，对侧<span class="answer-text">肾结石</span>：先处理输尿管结石。<br>②<span class="answer-text">双侧输尿管结石</span>：先处理梗阻严重一侧，条件许可时可同时处理。<br>③<span class="answer-text">双肾结石</span>：一般先处理容易和安全一侧。如肾功能损害严重，要先行<span class="answer-text">经皮肾造瘘引流</span>；总肾功能受损时，先处理肾功能较好的一侧。<br>④双侧或独肾上尿路结石<span class="answer-text">完全梗阻</span>时，应明确诊断后尽快手术，情况差时同样应先<span class="answer-text">引流</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>44.. <strong>尿道损伤的临床表现</strong><br>①<span class="blur-text">疼痛</span><br>②<span class="blur-text">排尿困难</span>：与尿道损伤程度有关<br>③<span class="blur-text">尿道出血</span>及<span class="blur-text">血肿</span><br>④<span class="blur-text">尿外渗</span><br>⑤<span class="blur-text">休克</span></td>
+                            <td>44.. <strong>尿道损伤的临床表现</strong><br>①<span class="answer-text">疼痛</span><br>②<span class="answer-text">排尿困难</span>：与尿道损伤程度有关<br>③<span class="answer-text">尿道出血</span>及<span class="answer-text">血肿</span><br>④<span class="answer-text">尿外渗</span><br>⑤<span class="answer-text">休克</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>45.. <strong>尿道损伤后的尿外渗</strong><br>①当尿道破裂在<span class="blur-text">前尿道</span>且于<span class="blur-text">尿生殖膈</span>之前时，如<span class="blur-text">阴茎深筋膜</span>尚完整，则尿外渗仅限于<span class="blur-text">阴茎</span>。<br>②<span class="blur-text">前尿道损伤</span>时，如阴茎深筋膜也破裂，则尿液沿<span class="blur-text">阴茎</span>、<span class="blur-text">阴囊</span>、<span class="blur-text">腹壁下浅筋膜</span>外渗至阴囊、阴茎、会阴浅层和腹壁。<br>③当尿道破裂在<span class="blur-text">后尿道</span>及尿生殖膈两层之间或此膈之后，尿液沿<span class="blur-text">前列腺</span>和<span class="blur-text">膀胱</span>而外渗到<span class="blur-text">耻骨后间隙</span>和<span class="blur-text">膀胱周围</span>。</td>
+                            <td>45.. <strong>尿道损伤后的尿外渗</strong><br>①当尿道破裂在<span class="answer-text">前尿道</span>且于<span class="answer-text">尿生殖膈</span>之前时，如<span class="answer-text">阴茎深筋膜</span>尚完整，则尿外渗仅限于<span class="answer-text">阴茎</span>。<br>②<span class="answer-text">前尿道损伤</span>时，如阴茎深筋膜也破裂，则尿液沿<span class="answer-text">阴茎</span>、<span class="answer-text">阴囊</span>、<span class="answer-text">腹壁下浅筋膜</span>外渗至阴囊、阴茎、会阴浅层和腹壁。<br>③当尿道破裂在<span class="answer-text">后尿道</span>及尿生殖膈两层之间或此膈之后，尿液沿<span class="answer-text">前列腺</span>和<span class="answer-text">膀胱</span>而外渗到<span class="answer-text">耻骨后间隙</span>和<span class="answer-text">膀胱周围</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>46.. <strong>上尿路感染和下尿路感染的临床鉴别要点</strong><br>（1）症状：<br>①上尿路感染可有尿路感染症状，常有<span class="blur-text">腰痛</span>及<span class="blur-text">全身感染症状</span>等<br>②下尿路感染有<span class="blur-text">尿路刺激征</span>，可有<span class="blur-text">血尿</span>、<span class="blur-text">下腹不适</span><br>（2）体征：<br>①上尿路感染常有<span class="blur-text">肋脊角压痛</span>和/或<span class="blur-text">肾区叩痛</span>、<span class="blur-text">体温升高</span>等<br>②下尿路感染可有<span class="blur-text">下腹压痛</span><br>（3）实验室检查：<br>①上尿路感染常有<span class="blur-text">血象增高</span>，<span class="blur-text">膀胱冲洗后尿培养阳性</span><br>②下尿路感染血象不高，<span class="blur-text">膀胱冲洗后尿培养阴性</span></td>
+                            <td>46.. <strong>上尿路感染和下尿路感染的临床鉴别要点</strong><br>（1）症状：<br>①上尿路感染可有尿路感染症状，常有<span class="answer-text">腰痛</span>及<span class="answer-text">全身感染症状</span>等<br>②下尿路感染有<span class="answer-text">尿路刺激征</span>，可有<span class="answer-text">血尿</span>、<span class="answer-text">下腹不适</span><br>（2）体征：<br>①上尿路感染常有<span class="answer-text">肋脊角压痛</span>和/或<span class="answer-text">肾区叩痛</span>、<span class="answer-text">体温升高</span>等<br>②下尿路感染可有<span class="answer-text">下腹压痛</span><br>（3）实验室检查：<br>①上尿路感染常有<span class="answer-text">血象增高</span>，<span class="answer-text">膀胱冲洗后尿培养阳性</span><br>②下尿路感染血象不高，<span class="answer-text">膀胱冲洗后尿培养阴性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>47.. <strong>尿路感染的易感因素</strong><br>①各种原因导致的<span class="blur-text">尿流不畅</span>，如<span class="blur-text">结石</span>、<span class="blur-text">功能性梗阻</span>等<br>②泌尿系统<span class="blur-text">畸形</span>和<span class="blur-text">结构异常</span><br>③<span class="blur-text">尿路器械</span>的使用<br>④尿道内和尿道口周围有<span class="blur-text">炎症病灶</span><br>⑤机体<span class="blur-text">免疫力下降</span><br>⑥局部使用<span class="blur-text">杀精化合物避孕</span><br>⑦<span class="blur-text">遗传因素</span></td>
+                            <td>47.. <strong>尿路感染的易感因素</strong><br>①各种原因导致的<span class="answer-text">尿流不畅</span>，如<span class="answer-text">结石</span>、<span class="answer-text">功能性梗阻</span>等<br>②泌尿系统<span class="answer-text">畸形</span>和<span class="answer-text">结构异常</span><br>③<span class="answer-text">尿路器械</span>的使用<br>④尿道内和尿道口周围有<span class="answer-text">炎症病灶</span><br>⑤机体<span class="answer-text">免疫力下降</span><br>⑥局部使用<span class="answer-text">杀精化合物避孕</span><br>⑦<span class="answer-text">遗传因素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>48.. <strong>慢性肾功能衰竭各阶段的特点</strong><br>①<span class="blur-text">肾储备功能降低期</span>（代偿期）：<span class="blur-text">内生肌酐清除率</span>占正常值的<span class="blur-text">30%</span>以上<br>②<span class="blur-text">肾功能不全期</span>：内生肌酐清除率占正常值的<span class="blur-text">25-30%</span>，表现为<span class="blur-text">多尿</span>、<span class="blur-text">夜尿</span>、<span class="blur-text">酸中毒</span>、<span class="blur-text">轻度贫血</span><br>③<span class="blur-text">肾功能衰竭期</span>：内生肌酐清除率占正常值的<span class="blur-text">20-25%</span>，表现为<span class="blur-text">严重贫血</span>、<span class="blur-text">酸中毒</span><br>④<span class="blur-text">尿毒症期</span>：内生肌酐清除率占正常值的<span class="blur-text">20%</span>以下，表现为<span class="blur-text">全身自体中毒症状</span></td>
+                            <td>48.. <strong>慢性肾功能衰竭各阶段的特点</strong><br>①<span class="answer-text">肾储备功能降低期</span>（代偿期）：<span class="answer-text">内生肌酐清除率</span>占正常值的<span class="answer-text">30%</span>以上<br>②<span class="answer-text">肾功能不全期</span>：内生肌酐清除率占正常值的<span class="answer-text">25-30%</span>，表现为<span class="answer-text">多尿</span>、<span class="answer-text">夜尿</span>、<span class="answer-text">酸中毒</span>、<span class="answer-text">轻度贫血</span><br>③<span class="answer-text">肾功能衰竭期</span>：内生肌酐清除率占正常值的<span class="answer-text">20-25%</span>，表现为<span class="answer-text">严重贫血</span>、<span class="answer-text">酸中毒</span><br>④<span class="answer-text">尿毒症期</span>：内生肌酐清除率占正常值的<span class="answer-text">20%</span>以下，表现为<span class="answer-text">全身自体中毒症状</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>49.. <strong>慢性肾衰竭代谢性酸中毒的原因</strong><br>①<span class="blur-text">GFR</span>降低，<span class="blur-text">固定酸</span>排泄障碍<br>②<span class="blur-text">分解代谢</span>加强，<span class="blur-text">酸性代谢产物</span>产生增多<br>③肾小管上皮细胞产<span class="blur-text">NH3</span>减少，使<span class="blur-text">H+</span>排出障碍<br>④继发性<span class="blur-text">PTH</span>分泌增多，近曲小管<span class="blur-text">泌H+</span>和重吸收<span class="blur-text">HCO3-</span>减少</td>
+                            <td>49.. <strong>慢性肾衰竭代谢性酸中毒的原因</strong><br>①<span class="answer-text">GFR</span>降低，<span class="answer-text">固定酸</span>排泄障碍<br>②<span class="answer-text">分解代谢</span>加强，<span class="answer-text">酸性代谢产物</span>产生增多<br>③肾小管上皮细胞产<span class="answer-text">NH3</span>减少，使<span class="answer-text">H+</span>排出障碍<br>④继发性<span class="answer-text">PTH</span>分泌增多，近曲小管<span class="answer-text">泌H+</span>和重吸收<span class="answer-text">HCO3-</span>减少</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>50.. <strong>慢性肾衰竭出血倾向</strong><br>（1）出血是因为<span class="blur-text">血小板质</span>的变化，而非<span class="blur-text">数量减少</span>所引起，主要由于血液中潴留的<span class="blur-text">毒性物质</span>抑制血小板功能<br>（2）表现为：<br>①血小板的<span class="blur-text">粘附性</span>降低<br>②血小板在<span class="blur-text">ADP</span>作用下的<span class="blur-text">聚集功能</span>减退<br>③血小板<span class="blur-text">第三因子</span>释放受抑</td>
+                            <td>50.. <strong>慢性肾衰竭出血倾向</strong><br>（1）出血是因为<span class="answer-text">血小板质</span>的变化，而非<span class="answer-text">数量减少</span>所引起，主要由于血液中潴留的<span class="answer-text">毒性物质</span>抑制血小板功能<br>（2）表现为：<br>①血小板的<span class="answer-text">粘附性</span>降低<br>②血小板在<span class="answer-text">ADP</span>作用下的<span class="answer-text">聚集功能</span>减退<br>③血小板<span class="answer-text">第三因子</span>释放受抑</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>51.. <strong>慢性肾功能衰竭和尿毒症防治的病理生理基础</strong><br>①<span class="blur-text">治疗原发病</span><br>②<span class="blur-text">低盐饮食</span><br>③消除增加肾功能负担的<span class="blur-text">诱因</span><br>④有效降低<span class="blur-text">高血压</span><br>⑤<span class="blur-text">抗纤维化</span><br>⑥<span class="blur-text">对症治疗</span><br>⑦采用<span class="blur-text">腹膜透析</span>和<span class="blur-text">血液透析</span></td>
+                            <td>51.. <strong>慢性肾功能衰竭和尿毒症防治的病理生理基础</strong><br>①<span class="answer-text">治疗原发病</span><br>②<span class="answer-text">低盐饮食</span><br>③消除增加肾功能负担的<span class="answer-text">诱因</span><br>④有效降低<span class="answer-text">高血压</span><br>⑤<span class="answer-text">抗纤维化</span><br>⑥<span class="answer-text">对症治疗</span><br>⑦采用<span class="answer-text">腹膜透析</span>和<span class="answer-text">血液透析</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">52.. <strong>尿道球部损伤与尿道膜部损伤的异同</strong><br>图略</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>肾癌保留肾单位手术适应症</strong><br>①<<span class="blur-text">4cm</span>的<span class="blur-text">T1a</span><br>②<span class="blur-text">对侧肾功能受损</span><br>③<span class="blur-text">双肾癌</span></td>
+                            <td>53.. <strong>肾癌保留肾单位手术适应症</strong><br>①<<span class="answer-text">4cm</span>的<span class="answer-text">T1a</span><br>②<span class="answer-text">对侧肾功能受损</span><br>③<span class="answer-text">双肾癌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>上尿路结石治疗</strong><br>①<span class="blur-text">体外冲击碎石ESWL</span><br>②<span class="blur-text">经皮肾镜碎石PCNL</span><br>③<span class="blur-text">输尿管软镜碎石F-URL</span><br>④<span class="blur-text">开放手术</span></td>
+                            <td>54.. <strong>上尿路结石治疗</strong><br>①<span class="answer-text">体外冲击碎石ESWL</span><br>②<span class="answer-text">经皮肾镜碎石PCNL</span><br>③<span class="answer-text">输尿管软镜碎石F-URL</span><br>④<span class="answer-text">开放手术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>膀胱癌的临床表现、辅助检查、鉴别诊断及治疗</strong><br>（1）临床表现：<br>①<span class="blur-text">无痛性肉眼血尿</span><br>②<span class="blur-text">膀胱刺激征</span>：<span class="blur-text">尿频</span>、<span class="blur-text">尿急</span>、<span class="blur-text">尿痛</span><br>③<span class="blur-text">排尿困难</span><br>（2）辅助检查：<br>①<span class="blur-text">尿液检查</span>：<span class="blur-text">尿常规</span>和<span class="blur-text">尿脱落细胞学检查</span>可作为初步筛查性检查<br>②<span class="blur-text">影像学检查</span>：a.<span class="blur-text">超声</span>：膀胱壁高回声或中回声结节，少部分低回声，不随体位变动而移动，可见血流信号<br>（3）鉴别诊断：<br>①<span class="blur-text">上尿路肿瘤</span>：血尿特征<br>②<span class="blur-text">前列腺增生</span>：症状及影像学检查<br>③<span class="blur-text">前列腺癌</span>：前列腺穿刺活检<br>④<span class="blur-text">尿路感染</span>：血尿伴尿路刺激征<br>⑤<span class="blur-text">尿路结石</span>：血尿，影像学检查鉴别<br>（4）治疗：<br>①以<span class="blur-text">手术切除</span>治疗为主<br>②辅以<span class="blur-text">化疗</span>、<span class="blur-text">放疗</span>、<span class="blur-text">免疫治疗</span>等<br>③晚期患者无法手术或者不能承受手术者予以<span class="blur-text">姑息性综合治疗</span></td>
+                            <td>55.. <strong>膀胱癌的临床表现、辅助检查、鉴别诊断及治疗</strong><br>（1）临床表现：<br>①<span class="answer-text">无痛性肉眼血尿</span><br>②<span class="answer-text">膀胱刺激征</span>：<span class="answer-text">尿频</span>、<span class="answer-text">尿急</span>、<span class="answer-text">尿痛</span><br>③<span class="answer-text">排尿困难</span><br>（2）辅助检查：<br>①<span class="answer-text">尿液检查</span>：<span class="answer-text">尿常规</span>和<span class="answer-text">尿脱落细胞学检查</span>可作为初步筛查性检查<br>②<span class="answer-text">影像学检查</span>：a.<span class="answer-text">超声</span>：膀胱壁高回声或中回声结节，少部分低回声，不随体位变动而移动，可见血流信号<br>（3）鉴别诊断：<br>①<span class="answer-text">上尿路肿瘤</span>：血尿特征<br>②<span class="answer-text">前列腺增生</span>：症状及影像学检查<br>③<span class="answer-text">前列腺癌</span>：前列腺穿刺活检<br>④<span class="answer-text">尿路感染</span>：血尿伴尿路刺激征<br>⑤<span class="answer-text">尿路结石</span>：血尿，影像学检查鉴别<br>（4）治疗：<br>①以<span class="answer-text">手术切除</span>治疗为主<br>②辅以<span class="answer-text">化疗</span>、<span class="answer-text">放疗</span>、<span class="answer-text">免疫治疗</span>等<br>③晚期患者无法手术或者不能承受手术者予以<span class="answer-text">姑息性综合治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>肾、肾区的位置</strong><br>肾位于<span class="blur-text">腹腔后上部</span>，<span class="blur-text">脊柱两旁</span>，紧贴<span class="blur-text">腹后壁</span>，在<span class="blur-text">腹膜的后方</span>，<span class="blur-text">右肾</span>比<span class="blur-text">左肾</span>略低。左肾上端平<span class="blur-text">第11胸椎下缘</span>，下端平<span class="blur-text">第2~3腰椎下缘</span>；右肾上端平<span class="blur-text">第12胸椎</span>，下端平<span class="blur-text">第3腰椎</span>。<span class="blur-text">肾门</span>约平<span class="blur-text">第1腰椎体</span>。临床上将<span class="blur-text">竖脊肌外侧缘</span>与<span class="blur-text">第12肋</span>之间的夹角部分称为<span class="blur-text">肾区</span>。</td>
+                            <td>56.. <strong>肾、肾区的位置</strong><br>肾位于<span class="answer-text">腹腔后上部</span>，<span class="answer-text">脊柱两旁</span>，紧贴<span class="answer-text">腹后壁</span>，在<span class="answer-text">腹膜的后方</span>，<span class="answer-text">右肾</span>比<span class="answer-text">左肾</span>略低。左肾上端平<span class="answer-text">第11胸椎下缘</span>，下端平<span class="answer-text">第2~3腰椎下缘</span>；右肾上端平<span class="answer-text">第12胸椎</span>，下端平<span class="answer-text">第3腰椎</span>。<span class="answer-text">肾门</span>约平<span class="answer-text">第1腰椎体</span>。临床上将<span class="answer-text">竖脊肌外侧缘</span>与<span class="answer-text">第12肋</span>之间的夹角部分称为<span class="answer-text">肾区</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>肾的冠状切面可见结构</strong><br><span class="blur-text">肾皮质</span>、<span class="blur-text">肾柱</span>、<span class="blur-text">肾髓质</span>、<span class="blur-text">肾锥体</span>、<span class="blur-text">肾乳头</span>、<span class="blur-text">乳头孔</span>、<span class="blur-text">肾大盏</span>、<span class="blur-text">肾小盏</span>、<span class="blur-text">肾动脉及其分支</span>，<span class="blur-text">肾静脉及其属支</span>，神经、淋巴管和脂肪等。</td>
+                            <td>57.. <strong>肾的冠状切面可见结构</strong><br><span class="answer-text">肾皮质</span>、<span class="answer-text">肾柱</span>、<span class="answer-text">肾髓质</span>、<span class="answer-text">肾锥体</span>、<span class="answer-text">肾乳头</span>、<span class="answer-text">乳头孔</span>、<span class="answer-text">肾大盏</span>、<span class="answer-text">肾小盏</span>、<span class="answer-text">肾动脉及其分支</span>，<span class="answer-text">肾静脉及其属支</span>，神经、淋巴管和脂肪等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.. <strong>尿液的产生及排出途径</strong><br>尿液由<span class="blur-text">肾皮质</span>产生→<span class="blur-text">肾锥体</span>→<span class="blur-text">肾乳头的乳头孔</span>→<span class="blur-text">肾小盏</span>→<span class="blur-text">肾大盏</span>→<span class="blur-text">肾盂</span>→<span class="blur-text">输尿管</span>→<span class="blur-text">输尿管口</span>→<span class="blur-text">膀胱</span>→<span class="blur-text">尿道内口</span>→<span class="blur-text">尿道</span>→<span class="blur-text">尿道外口</span>→体外。</td>
+                            <td>58.. <strong>尿液的产生及排出途径</strong><br>尿液由<span class="answer-text">肾皮质</span>产生→<span class="answer-text">肾锥体</span>→<span class="answer-text">肾乳头的乳头孔</span>→<span class="answer-text">肾小盏</span>→<span class="answer-text">肾大盏</span>→<span class="answer-text">肾盂</span>→<span class="answer-text">输尿管</span>→<span class="answer-text">输尿管口</span>→<span class="answer-text">膀胱</span>→<span class="answer-text">尿道内口</span>→<span class="answer-text">尿道</span>→<span class="answer-text">尿道外口</span>→体外。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59.. <strong>输尿管的分段和狭窄</strong><br>输尿管分为<span class="blur-text">腹部</span>、<span class="blur-text">盆部</span>和<span class="blur-text">壁内部</span>三部分。第一个狭窄位于<span class="blur-text">输尿管和肾盂移行处</span>，第二个狭窄在<span class="blur-text">跨越髂血管处</span>，第三个狭窄位于<span class="blur-text">壁内部</span>。</td>
+                            <td>59.. <strong>输尿管的分段和狭窄</strong><br>输尿管分为<span class="answer-text">腹部</span>、<span class="answer-text">盆部</span>和<span class="answer-text">壁内部</span>三部分。第一个狭窄位于<span class="answer-text">输尿管和肾盂移行处</span>，第二个狭窄在<span class="answer-text">跨越髂血管处</span>，第三个狭窄位于<span class="answer-text">壁内部</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60.. <strong>肾脏被膜（从内到外）</strong><br>肾脏从内到外有<span class="blur-text">肾纤维囊</span>、<span class="blur-text">肾脂肪囊</span>和<span class="blur-text">肾筋膜</span>三层被膜。</td>
+                            <td>60.. <strong>肾脏被膜（从内到外）</strong><br>肾脏从内到外有<span class="answer-text">肾纤维囊</span>、<span class="answer-text">肾脂肪囊</span>和<span class="answer-text">肾筋膜</span>三层被膜。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61.. <strong>膀胱三角的位置、构成、结构特点及临床意义</strong><br>（1）位置：膀胱三角位于<span class="blur-text">膀胱底内面</span><br>（2）构成：由<span class="blur-text">双侧输尿管口</span>和<span class="blur-text">尿道内口</span>的连线围成。上界是<span class="blur-text">输尿管间襞</span>，两下界是左右输尿管口和尿道内口间的连线，下角是<span class="blur-text">尿道内口</span>。<br>（3）结构特点：在双侧输尿管口之间有<span class="blur-text">输尿管间襞</span>，为寻找<span class="blur-text">输尿管口</span>的标志；膀胱三角无<span class="blur-text">黏膜下组织</span>及<span class="blur-text">黏膜皱襞</span>，黏膜表面光滑。<br>（4）临床意义：该三角是<span class="blur-text">结核</span>和<span class="blur-text">膀胱肿瘤</span>的好发部位。</td>
+                            <td>61.. <strong>膀胱三角的位置、构成、结构特点及临床意义</strong><br>（1）位置：膀胱三角位于<span class="answer-text">膀胱底内面</span><br>（2）构成：由<span class="answer-text">双侧输尿管口</span>和<span class="answer-text">尿道内口</span>的连线围成。上界是<span class="answer-text">输尿管间襞</span>，两下界是左右输尿管口和尿道内口间的连线，下角是<span class="answer-text">尿道内口</span>。<br>（3）结构特点：在双侧输尿管口之间有<span class="answer-text">输尿管间襞</span>，为寻找<span class="answer-text">输尿管口</span>的标志；膀胱三角无<span class="answer-text">黏膜下组织</span>及<span class="answer-text">黏膜皱襞</span>，黏膜表面光滑。<br>（4）临床意义：该三角是<span class="answer-text">结核</span>和<span class="answer-text">膀胱肿瘤</span>的好发部位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62.. <strong>输尿管的两个交叉</strong><br>（1）<span class="blur-text">骨盆入口处</span>：左侧与<span class="blur-text">左髂总动脉</span>交叉，右侧与<span class="blur-text">右髂外动脉</span>交叉，两侧输尿管均位于<span class="blur-text">前方</span><br>（2）<span class="blur-text">输尿管盆部</span>：男性与<span class="blur-text">输精管</span>交叉，女性与<span class="blur-text">子宫动脉</span>交叉，输尿管均位于<span class="blur-text">后下方</span>。</td>
+                            <td>62.. <strong>输尿管的两个交叉</strong><br>（1）<span class="answer-text">骨盆入口处</span>：左侧与<span class="answer-text">左髂总动脉</span>交叉，右侧与<span class="answer-text">右髂外动脉</span>交叉，两侧输尿管均位于<span class="answer-text">前方</span><br>（2）<span class="answer-text">输尿管盆部</span>：男性与<span class="answer-text">输精管</span>交叉，女性与<span class="answer-text">子宫动脉</span>交叉，输尿管均位于<span class="answer-text">后下方</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63.. <strong>肾小管各段的结构特点</strong><br>①<span class="blur-text">近端小管</span>：由单层<span class="blur-text">低柱状上皮细胞</span>构成，腔面不规则，胞质染色偏<span class="blur-text">嗜酸性</span>，细胞游离面有<span class="blur-text">刷状缘</span>（微绒毛）。由于上皮细胞形成胞质侧突并相互交错，使小管的细胞界限不清；细胞核偏上皮基底部，核下区可见<span class="blur-text">基部纵纹</span>（质膜内褶）。以<span class="blur-text">近曲小管</span>上述结构更典型。<br>②<span class="blur-text">细段</span>：由单层<span class="blur-text">扁平上皮</span>组成，胞质内细胞器少，染色淡。<br>③<span class="blur-text">远端小管</span>：由单层<span class="blur-text">立方上皮细胞</span>组成，细胞体积较小，胞质染色浅，游离面无刷状缘，故小管腔面较大而清晰，上皮细胞界限较近端小管明显，<span class="blur-text">基部纵纹</span>比较明显，与细胞基部<span class="blur-text">质膜内褶</span>发达有关。</td>
+                            <td>63.. <strong>肾小管各段的结构特点</strong><br>①<span class="answer-text">近端小管</span>：由单层<span class="answer-text">低柱状上皮细胞</span>构成，腔面不规则，胞质染色偏<span class="answer-text">嗜酸性</span>，细胞游离面有<span class="answer-text">刷状缘</span>（微绒毛）。由于上皮细胞形成胞质侧突并相互交错，使小管的细胞界限不清；细胞核偏上皮基底部，核下区可见<span class="answer-text">基部纵纹</span>（质膜内褶）。以<span class="answer-text">近曲小管</span>上述结构更典型。<br>②<span class="answer-text">细段</span>：由单层<span class="answer-text">扁平上皮</span>组成，胞质内细胞器少，染色淡。<br>③<span class="answer-text">远端小管</span>：由单层<span class="answer-text">立方上皮细胞</span>组成，细胞体积较小，胞质染色浅，游离面无刷状缘，故小管腔面较大而清晰，上皮细胞界限较近端小管明显，<span class="answer-text">基部纵纹</span>比较明显，与细胞基部<span class="answer-text">质膜内褶</span>发达有关。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64.. <strong>肾血液循环特点</strong><br>①<span class="blur-text">肾动脉</span>起自<span class="blur-text">腹主动脉</span>，粗而短，故肾内血流量很大<br>②肾内血管走行较直，血流很快到达<span class="blur-text">血管球</span>，故血管球毛细血管血压较高<br>③<span class="blur-text">入球微动脉</span>的管径较<span class="blur-text">出球微动脉</span>粗，使血管球内血流量大，压力高<br>④出球微动脉再次形成<span class="blur-text">球后毛细血管网</span>，分布在肾小管周围，毛细血管内血液的<span class="blur-text">胶体渗透压</span>较高，利于小管上皮细胞重吸收物质入血<br>⑤髓质内的<span class="blur-text">直小血管袢</span>与肾小管伴行，有利于肾小管和集合小管的重吸收和尿液浓缩。</td>
+                            <td>64.. <strong>肾血液循环特点</strong><br>①<span class="answer-text">肾动脉</span>起自<span class="answer-text">腹主动脉</span>，粗而短，故肾内血流量很大<br>②肾内血管走行较直，血流很快到达<span class="answer-text">血管球</span>，故血管球毛细血管血压较高<br>③<span class="answer-text">入球微动脉</span>的管径较<span class="answer-text">出球微动脉</span>粗，使血管球内血流量大，压力高<br>④出球微动脉再次形成<span class="answer-text">球后毛细血管网</span>，分布在肾小管周围，毛细血管内血液的<span class="answer-text">胶体渗透压</span>较高，利于小管上皮细胞重吸收物质入血<br>⑤髓质内的<span class="answer-text">直小血管袢</span>与肾小管伴行，有利于肾小管和集合小管的重吸收和尿液浓缩。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65.. <strong>泌尿小管的组成与功能</strong><br>泌尿小管是由<span class="blur-text">单层上皮</span>组成的小管系统，能将滤过膜产生的<span class="blur-text">原尿</span>通过重新吸收形成<span class="blur-text">尿液</span>。它包括<span class="blur-text">肾小管</span>和<span class="blur-text">集合小管</span>两部分，主要的功能是：肾小管<span class="blur-text">吸收和分泌</span>为主；集合小管以<span class="blur-text">浓缩和分泌</span>为主。</td>
+                            <td>65.. <strong>泌尿小管的组成与功能</strong><br>泌尿小管是由<span class="answer-text">单层上皮</span>组成的小管系统，能将滤过膜产生的<span class="answer-text">原尿</span>通过重新吸收形成<span class="answer-text">尿液</span>。它包括<span class="answer-text">肾小管</span>和<span class="answer-text">集合小管</span>两部分，主要的功能是：肾小管<span class="answer-text">吸收和分泌</span>为主；集合小管以<span class="answer-text">浓缩和分泌</span>为主。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66.. <strong>与原尿和终尿形成相关的组织结构</strong><br>①由于肾小体血管球<span class="blur-text">入球微动脉血管内血压较高</span>，使得血浆中的<span class="blur-text">小分子物质</span>，透过滤过膜进入<span class="blur-text">肾小囊腔</span>，成为<span class="blur-text">原尿</span>。<br>②原尿经<span class="blur-text">尿极</span>入<span class="blur-text">近端小管</span>后，绝大部分的<span class="blur-text">糖</span>、<span class="blur-text">电解质</span>、<span class="blur-text">氨基酸</span>、<span class="blur-text">蛋白质</span>和<span class="blur-text">70%</span>以上的水被重吸收回血液，同时小管上皮还分泌一些代谢产物进入小管。滤过液经过<span class="blur-text">细段</span>时，水和其他小分子物质能轻易透过。<br>③<span class="blur-text">远端小管</span>有离子主动转运和分泌代谢产物的重要功能，通过吸收<span class="blur-text">钠离子</span>、排出<span class="blur-text">钾离子</span>和水的重吸收，起到<span class="blur-text">浓缩尿液</span>的功能。<br>④<span class="blur-text">集合小管</span>完成尿液的最后生成，产生<span class="blur-text">终尿</span>，排入肾盏。<br>⑤终尿量的调节由<span class="blur-text">远端小管</span>和<span class="blur-text">集合小管</span>担负，它们分别受到<span class="blur-text">醛固酮激素</span>和<span class="blur-text">抗利尿激素</span>的调控。</td>
+                            <td>66.. <strong>与原尿和终尿形成相关的组织结构</strong><br>①由于肾小体血管球<span class="answer-text">入球微动脉血管内血压较高</span>，使得血浆中的<span class="answer-text">小分子物质</span>，透过滤过膜进入<span class="answer-text">肾小囊腔</span>，成为<span class="answer-text">原尿</span>。<br>②原尿经<span class="answer-text">尿极</span>入<span class="answer-text">近端小管</span>后，绝大部分的<span class="answer-text">糖</span>、<span class="answer-text">电解质</span>、<span class="answer-text">氨基酸</span>、<span class="answer-text">蛋白质</span>和<span class="answer-text">70%</span>以上的水被重吸收回血液，同时小管上皮还分泌一些代谢产物进入小管。滤过液经过<span class="answer-text">细段</span>时，水和其他小分子物质能轻易透过。<br>③<span class="answer-text">远端小管</span>有离子主动转运和分泌代谢产物的重要功能，通过吸收<span class="answer-text">钠离子</span>、排出<span class="answer-text">钾离子</span>和水的重吸收，起到<span class="answer-text">浓缩尿液</span>的功能。<br>④<span class="answer-text">集合小管</span>完成尿液的最后生成，产生<span class="answer-text">终尿</span>，排入肾盏。<br>⑤终尿量的调节由<span class="answer-text">远端小管</span>和<span class="answer-text">集合小管</span>担负，它们分别受到<span class="answer-text">醛固酮激素</span>和<span class="answer-text">抗利尿激素</span>的调控。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67.. <strong>利尿药按效能和作用部位分类</strong><br>①<span class="blur-text">高效利尿药</span>：如<span class="blur-text">呋塞米</span>，用于各型严重水肿，急性肺水肿，脑水肿，急慢性肾衰竭，加快某些毒物排泄，高血钙治疗。<br>②<span class="blur-text">中效利尿药</span>：如<span class="blur-text">氢氯噻嗪</span>，用于各型水肿，高血压，尿崩症，特发性高尿钙症。<br>③<span class="blur-text">低效利尿药</span>：如<span class="blur-text">螺内酯</span>，用于与醛固酮升高有关的顽固性水肿。</td>
+                            <td>67.. <strong>利尿药按效能和作用部位分类</strong><br>①<span class="answer-text">高效利尿药</span>：如<span class="answer-text">呋塞米</span>，用于各型严重水肿，急性肺水肿，脑水肿，急慢性肾衰竭，加快某些毒物排泄，高血钙治疗。<br>②<span class="answer-text">中效利尿药</span>：如<span class="answer-text">氢氯噻嗪</span>，用于各型水肿，高血压，尿崩症，特发性高尿钙症。<br>③<span class="answer-text">低效利尿药</span>：如<span class="answer-text">螺内酯</span>，用于与醛固酮升高有关的顽固性水肿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68.. <strong>呋塞米的作用原理和药理作用</strong><br>（1）作用原理：<br>①抑制<span class="blur-text">髓袢升支粗段</span><span class="blur-text">Na+-K+-2Cl-共同转运</span>，抑制<span class="blur-text">NaCl</span>重吸收，降低肾脏对尿液的<span class="blur-text">稀释</span>和<span class="blur-text">浓缩</span>功能<br>②直接<span class="blur-text">扩张血管</span><br>（2）药理作用：<br>①利尿作用<span class="blur-text">强</span>、起效<span class="blur-text">快</span>，尿中<span class="blur-text">Na+</span>、<span class="blur-text">Cl-</span>、<span class="blur-text">K+</span>、<span class="blur-text">Ca2+</span>、<span class="blur-text">Mg2+</span>排出增多<br>②扩血管增加<span class="blur-text">肾血流量</span>，减少<span class="blur-text">回心血量</span>，减轻<span class="blur-text">肺淤血</span></td>
+                            <td>68.. <strong>呋塞米的作用原理和药理作用</strong><br>（1）作用原理：<br>①抑制<span class="answer-text">髓袢升支粗段</span><span class="answer-text">Na+-K+-2Cl-共同转运</span>，抑制<span class="answer-text">NaCl</span>重吸收，降低肾脏对尿液的<span class="answer-text">稀释</span>和<span class="answer-text">浓缩</span>功能<br>②直接<span class="answer-text">扩张血管</span><br>（2）药理作用：<br>①利尿作用<span class="answer-text">强</span>、起效<span class="answer-text">快</span>，尿中<span class="answer-text">Na+</span>、<span class="answer-text">Cl-</span>、<span class="answer-text">K+</span>、<span class="answer-text">Ca2+</span>、<span class="answer-text">Mg2+</span>排出增多<br>②扩血管增加<span class="answer-text">肾血流量</span>，减少<span class="answer-text">回心血量</span>，减轻<span class="answer-text">肺淤血</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69.. <strong>呋塞米的临床应用和不良反应</strong><br>（1）临床应用：<span class="blur-text">急性肺水肿</span>和<span class="blur-text">脑水肿</span>，<span class="blur-text">心</span>、<span class="blur-text">肝</span>、<span class="blur-text">肾性水肿</span>等各类水肿，<span class="blur-text">急慢性肾衰竭</span>，加快某些<span class="blur-text">毒物排泄</span>，<span class="blur-text">高钙血症</span>。<br>（2）不良反应：<br>①<span class="blur-text">水和电解质紊乱</span>，表现为<span class="blur-text">低血钠</span>、<span class="blur-text">低血钾</span>、<span class="blur-text">低血镁</span>，<span class="blur-text">低血容量</span>，<span class="blur-text">低氯性碱血症</span><br>②<span class="blur-text">耳毒性</span>，表现为<span class="blur-text">耳鸣</span>、<span class="blur-text">听力减退</span>，与<span class="blur-text">氨基糖苷类</span>合用更易发生<br>③<span class="blur-text">高尿酸血症</span><br>④大剂量出现<span class="blur-text">胃肠出血</span></td>
+                            <td>69.. <strong>呋塞米的临床应用和不良反应</strong><br>（1）临床应用：<span class="answer-text">急性肺水肿</span>和<span class="answer-text">脑水肿</span>，<span class="answer-text">心</span>、<span class="answer-text">肝</span>、<span class="answer-text">肾性水肿</span>等各类水肿，<span class="answer-text">急慢性肾衰竭</span>，加快某些<span class="answer-text">毒物排泄</span>，<span class="answer-text">高钙血症</span>。<br>（2）不良反应：<br>①<span class="answer-text">水和电解质紊乱</span>，表现为<span class="answer-text">低血钠</span>、<span class="answer-text">低血钾</span>、<span class="answer-text">低血镁</span>，<span class="answer-text">低血容量</span>，<span class="answer-text">低氯性碱血症</span><br>②<span class="answer-text">耳毒性</span>，表现为<span class="answer-text">耳鸣</span>、<span class="answer-text">听力减退</span>，与<span class="answer-text">氨基糖苷类</span>合用更易发生<br>③<span class="answer-text">高尿酸血症</span><br>④大剂量出现<span class="answer-text">胃肠出血</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70.. <strong>噻嗪类利尿药的药理作用、临床应用</strong><br>（1）药理作用：<br>①<span class="blur-text">中等利尿作用</span>，尿<span class="blur-text">Na+</span>、<span class="blur-text">Cl-</span>、<span class="blur-text">K+</span>排出增多，促尿<span class="blur-text">Ca2+</span>重吸收<br>②<span class="blur-text">抗利尿作用</span>，<span class="blur-text">降压作用</span><br>（2）临床应用：<br>①各型<span class="blur-text">水肿</span>，轻、中度疗效较好<br>②<span class="blur-text">高血压</span>，作为基础降压药与其他降压药合用<br>③<span class="blur-text">尿崩症</span>，<span class="blur-text">特发性高尿钙症</span></td>
+                            <td>70.. <strong>噻嗪类利尿药的药理作用、临床应用</strong><br>（1）药理作用：<br>①<span class="answer-text">中等利尿作用</span>，尿<span class="answer-text">Na+</span>、<span class="answer-text">Cl-</span>、<span class="answer-text">K+</span>排出增多，促尿<span class="answer-text">Ca2+</span>重吸收<br>②<span class="answer-text">抗利尿作用</span>，<span class="answer-text">降压作用</span><br>（2）临床应用：<br>①各型<span class="answer-text">水肿</span>，轻、中度疗效较好<br>②<span class="answer-text">高血压</span>，作为基础降压药与其他降压药合用<br>③<span class="answer-text">尿崩症</span>，<span class="answer-text">特发性高尿钙症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71.. <strong>氢氯噻嗪的作用部位、机制和利尿特点</strong><br>（1）作用部位：<span class="blur-text">远曲小管近端</span><br>（2）作用机制：抑制<span class="blur-text">远曲小管近端</span><span class="blur-text">Na+-Cl-共转运子</span>，抑制<span class="blur-text">碳酸酐酶</span>活性，促进尿<span class="blur-text">Ca2+</span>重吸收<br>（3）利尿特点：利尿作用<span class="blur-text">温和持久</span>，属<span class="blur-text">中效利尿药</span></td>
+                            <td>71.. <strong>氢氯噻嗪的作用部位、机制和利尿特点</strong><br>（1）作用部位：<span class="answer-text">远曲小管近端</span><br>（2）作用机制：抑制<span class="answer-text">远曲小管近端</span><span class="answer-text">Na+-Cl-共转运子</span>，抑制<span class="answer-text">碳酸酐酶</span>活性，促进尿<span class="answer-text">Ca2+</span>重吸收<br>（3）利尿特点：利尿作用<span class="answer-text">温和持久</span>，属<span class="answer-text">中效利尿药</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72.. <strong>氢氯噻嗪的作用原理、临床应用和不良反应</strong><br>（1）作用原理：抑制<span class="blur-text">远曲小管近端</span><span class="blur-text">Na+-Cl-共转运子</span>，抑制<span class="blur-text">碳酸酐酶</span>活性，促进尿<span class="blur-text">Ca2+</span>重吸收<br>（2）临床应用：<br>①各型<span class="blur-text">水肿</span>，轻、中度疗效较好<br>②<span class="blur-text">高血压</span>，作为基础降压药与其他降压药合用<br>③<span class="blur-text">尿崩症</span>，<span class="blur-text">特发性高尿钙症</span><br>（3）不良反应：<br>①<span class="blur-text">水和电解质紊乱</span>，表现为<span class="blur-text">低血钠</span>、<span class="blur-text">低血钾</span>、<span class="blur-text">低血镁</span>，<span class="blur-text">低血容量</span>，<span class="blur-text">高血钙</span><br>②<span class="blur-text">代谢性障碍</span>，可致<span class="blur-text">高血糖</span>、<span class="blur-text">高尿酸</span>、<span class="blur-text">高血脂</span><br>③偶见<span class="blur-text">过敏反应</span>，如<span class="blur-text">血小板减少</span>、<span class="blur-text">皮肤光过敏</span>等</td>
+                            <td>72.. <strong>氢氯噻嗪的作用原理、临床应用和不良反应</strong><br>（1）作用原理：抑制<span class="answer-text">远曲小管近端</span><span class="answer-text">Na+-Cl-共转运子</span>，抑制<span class="answer-text">碳酸酐酶</span>活性，促进尿<span class="answer-text">Ca2+</span>重吸收<br>（2）临床应用：<br>①各型<span class="answer-text">水肿</span>，轻、中度疗效较好<br>②<span class="answer-text">高血压</span>，作为基础降压药与其他降压药合用<br>③<span class="answer-text">尿崩症</span>，<span class="answer-text">特发性高尿钙症</span><br>（3）不良反应：<br>①<span class="answer-text">水和电解质紊乱</span>，表现为<span class="answer-text">低血钠</span>、<span class="answer-text">低血钾</span>、<span class="answer-text">低血镁</span>，<span class="answer-text">低血容量</span>，<span class="answer-text">高血钙</span><br>②<span class="answer-text">代谢性障碍</span>，可致<span class="answer-text">高血糖</span>、<span class="answer-text">高尿酸</span>、<span class="answer-text">高血脂</span><br>③偶见<span class="answer-text">过敏反应</span>，如<span class="answer-text">血小板减少</span>、<span class="answer-text">皮肤光过敏</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73.. <strong>呋塞米与氢氯噻嗪利尿作用比较（从作用原理）</strong><br>（1）呋塞米作用于<span class="blur-text">髓袢升支粗段</span><span class="blur-text">Na+-K+-2Cl-共转运子</span>，抑制<span class="blur-text">NaCl</span>重吸收，降低肾脏对尿液的<span class="blur-text">稀释</span>和<span class="blur-text">浓缩</span>功能，使尿中<span class="blur-text">Na+</span>、<span class="blur-text">Cl-</span>、<span class="blur-text">K+</span>、<span class="blur-text">Ca2+</span>、<span class="blur-text">Mg2+</span>排出增多，故利尿作用<span class="blur-text">强</span>、起效<span class="blur-text">快</span><br>（2）氢氯噻嗪作用于<span class="blur-text">远曲小管近端</span><span class="blur-text">Na+-Cl-共转运子</span>，抑制<span class="blur-text">碳酸酐酶</span>活性，促进尿<span class="blur-text">Ca2+</span>重吸收，使尿中<span class="blur-text">Na+</span>、<span class="blur-text">Cl-</span>、<span class="blur-text">K+</span>及<span class="blur-text">HCO3-</span>排出增多，尿<span class="blur-text">Ca2+</span>含量减少，故利尿作用<span class="blur-text">温和持久</span></td>
+                            <td>73.. <strong>呋塞米与氢氯噻嗪利尿作用比较（从作用原理）</strong><br>（1）呋塞米作用于<span class="answer-text">髓袢升支粗段</span><span class="answer-text">Na+-K+-2Cl-共转运子</span>，抑制<span class="answer-text">NaCl</span>重吸收，降低肾脏对尿液的<span class="answer-text">稀释</span>和<span class="answer-text">浓缩</span>功能，使尿中<span class="answer-text">Na+</span>、<span class="answer-text">Cl-</span>、<span class="answer-text">K+</span>、<span class="answer-text">Ca2+</span>、<span class="answer-text">Mg2+</span>排出增多，故利尿作用<span class="answer-text">强</span>、起效<span class="answer-text">快</span><br>（2）氢氯噻嗪作用于<span class="answer-text">远曲小管近端</span><span class="answer-text">Na+-Cl-共转运子</span>，抑制<span class="answer-text">碳酸酐酶</span>活性，促进尿<span class="answer-text">Ca2+</span>重吸收，使尿中<span class="answer-text">Na+</span>、<span class="answer-text">Cl-</span>、<span class="answer-text">K+</span>及<span class="answer-text">HCO3-</span>排出增多，尿<span class="answer-text">Ca2+</span>含量减少，故利尿作用<span class="answer-text">温和持久</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74.. <strong>呋塞米与氢氯噻嗪比较（作用部位、原理、强度）</strong><br>（1）作用部位：呋塞米作用于<span class="blur-text">髓袢升支粗段</span>；氢氯噻嗪作用于<span class="blur-text">远曲小管近端</span><br>（2）作用原理：呋塞米抑制<span class="blur-text">Na+-K+-2Cl-共转运子</span>，抑制<span class="blur-text">NaCl</span>重吸收，降低肾脏对尿液的<span class="blur-text">稀释</span>和<span class="blur-text">浓缩</span>功能；氢氯噻嗪抑制<span class="blur-text">Na+-Cl-共转运子</span>，抑制<span class="blur-text">碳酸酐酶</span>活性，促进尿<span class="blur-text">Ca2+</span>重吸收<br>（3）强度：呋塞米利尿作用<span class="blur-text">强</span>、起效<span class="blur-text">快</span>；氢氯噻嗪利尿作用<span class="blur-text">温和持久</span></td>
+                            <td>74.. <strong>呋塞米与氢氯噻嗪比较（作用部位、原理、强度）</strong><br>（1）作用部位：呋塞米作用于<span class="answer-text">髓袢升支粗段</span>；氢氯噻嗪作用于<span class="answer-text">远曲小管近端</span><br>（2）作用原理：呋塞米抑制<span class="answer-text">Na+-K+-2Cl-共转运子</span>，抑制<span class="answer-text">NaCl</span>重吸收，降低肾脏对尿液的<span class="answer-text">稀释</span>和<span class="answer-text">浓缩</span>功能；氢氯噻嗪抑制<span class="answer-text">Na+-Cl-共转运子</span>，抑制<span class="answer-text">碳酸酐酶</span>活性，促进尿<span class="answer-text">Ca2+</span>重吸收<br>（3）强度：呋塞米利尿作用<span class="answer-text">强</span>、起效<span class="answer-text">快</span>；氢氯噻嗪利尿作用<span class="answer-text">温和持久</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75.. <strong>肾炎性水肿和肾病性水肿的区别</strong><br>（1）<span class="blur-text">肾炎性水肿</span>：主要见于<span class="blur-text">急性肾小球肾炎</span>，是由于<span class="blur-text">肾小球滤过率显著下降</span>，但肾小管对水钠重吸收<span class="blur-text">正常</span>，导致机体水和钠排出<span class="blur-text">减少</span>，在体内大量潴留，引起<span class="blur-text">全身性水肿</span>，患儿表现为<span class="blur-text">血容量增加</span>、<span class="blur-text">高血压</span>，此类水肿为<span class="blur-text">非凹陷性水肿</span>，严重者可以出现<span class="blur-text">充血性心衰</span>、<span class="blur-text">高血压脑病</span>和<span class="blur-text">急性肾功能衰竭</span><br>（2）<span class="blur-text">肾病性水肿</span>：主要见于各种原发或继发<span class="blur-text">肾病综合征</span>，主要是由于血液中<span class="blur-text">大量蛋白</span>从尿液中丢失，引起<span class="blur-text">低蛋白血症</span>。血浆中蛋白对维持<span class="blur-text">血管内外水平衡</span>较为重要，蛋白降低时<span class="blur-text">毛细血管渗透压</span>降低，液体大量进入到<span class="blur-text">组织间隙</span>形成水肿，液体较容易在<span class="blur-text">组织疏松部位</span>进行沉积，如<span class="blur-text">眼睑</span>，因此肾病性水肿一般首先出现在<span class="blur-text">面部</span>，主要为<span class="blur-text">凹陷性水肿</span></td>
+                            <td>75.. <strong>肾炎性水肿和肾病性水肿的区别</strong><br>（1）<span class="answer-text">肾炎性水肿</span>：主要见于<span class="answer-text">急性肾小球肾炎</span>，是由于<span class="answer-text">肾小球滤过率显著下降</span>，但肾小管对水钠重吸收<span class="answer-text">正常</span>，导致机体水和钠排出<span class="answer-text">减少</span>，在体内大量潴留，引起<span class="answer-text">全身性水肿</span>，患儿表现为<span class="answer-text">血容量增加</span>、<span class="answer-text">高血压</span>，此类水肿为<span class="answer-text">非凹陷性水肿</span>，严重者可以出现<span class="answer-text">充血性心衰</span>、<span class="answer-text">高血压脑病</span>和<span class="answer-text">急性肾功能衰竭</span><br>（2）<span class="answer-text">肾病性水肿</span>：主要见于各种原发或继发<span class="answer-text">肾病综合征</span>，主要是由于血液中<span class="answer-text">大量蛋白</span>从尿液中丢失，引起<span class="answer-text">低蛋白血症</span>。血浆中蛋白对维持<span class="answer-text">血管内外水平衡</span>较为重要，蛋白降低时<span class="answer-text">毛细血管渗透压</span>降低，液体大量进入到<span class="answer-text">组织间隙</span>形成水肿，液体较容易在<span class="answer-text">组织疏松部位</span>进行沉积，如<span class="answer-text">眼睑</span>，因此肾病性水肿一般首先出现在<span class="answer-text">面部</span>，主要为<span class="answer-text">凹陷性水肿</span></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

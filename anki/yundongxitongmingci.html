@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">运功系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>infrapiriform foramen</strong><br>梨状肌下孔，上缘为<span class="blur-text">梨状肌</span>，下缘为<span class="blur-text">坐骨棘</span>和<span class="blur-text">骶棘韧带</span><br>穿经结构自外侧向内侧依次为：<span class="blur-text">坐骨神经</span>、<span class="blur-text">股后皮神经</span>、<span class="blur-text">臀下神经</span>、臀下动静脉、阴部内动脉、阴部内静脉和阴部神经</td>
+                            <td>1.. <strong>infrapiriform foramen</strong><br>梨状肌下孔，上缘为<span class="answer-text">梨状肌</span>，下缘为<span class="answer-text">坐骨棘</span>和<span class="answer-text">骶棘韧带</span><br>穿经结构自外侧向内侧依次为：<span class="answer-text">坐骨神经</span>、<span class="answer-text">股后皮神经</span>、<span class="answer-text">臀下神经</span>、臀下动静脉、阴部内动脉、阴部内静脉和阴部神经</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>thenar space</strong><br>鱼际间隙，位于<span class="blur-text">中间鞘桡侧半深方</span><br>前界为<span class="blur-text">掌中隔前部</span>、示指屈肌腱、第1蚓状肌；后界为<span class="blur-text">拇收肌筋膜</span>；外侧界为掌外侧肌间隔；内侧界为掌中隔<br>该间隙向远端经<span class="blur-text">第1蚓状肌管</span>通向示指背侧，其近端为盲端</td>
+                            <td>2.. <strong>thenar space</strong><br>鱼际间隙，位于<span class="answer-text">中间鞘桡侧半深方</span><br>前界为<span class="answer-text">掌中隔前部</span>、示指屈肌腱、第1蚓状肌；后界为<span class="answer-text">拇收肌筋膜</span>；外侧界为掌外侧肌间隔；内侧界为掌中隔<br>该间隙向远端经<span class="answer-text">第1蚓状肌管</span>通向示指背侧，其近端为盲端</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>suboccipital triangle</strong><br>枕下三角，位于<span class="blur-text">头半棘肌及夹肌的深面</span>、枕骨的下方，项区上部<br>内上界为<span class="blur-text">头后大直肌</span>，外上界为<span class="blur-text">头上斜肌</span>，外下界为<span class="blur-text">头下斜肌</span><br>底为<span class="blur-text">寰枕后膜</span>和<span class="blur-text">寰椎后弓</span>，浅面为夹肌和半棘肌<br>三角内有<span class="blur-text">枕下神经</span>和<span class="blur-text">椎动脉</span>经过</td>
+                            <td>3.. <strong>suboccipital triangle</strong><br>枕下三角，位于<span class="answer-text">头半棘肌及夹肌的深面</span>、枕骨的下方，项区上部<br>内上界为<span class="answer-text">头后大直肌</span>，外上界为<span class="answer-text">头上斜肌</span>，外下界为<span class="answer-text">头下斜肌</span><br>底为<span class="answer-text">寰枕后膜</span>和<span class="answer-text">寰椎后弓</span>，浅面为夹肌和半棘肌<br>三角内有<span class="answer-text">枕下神经</span>和<span class="answer-text">椎动脉</span>经过</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>adductor canal</strong><br>收肌管，又称<span class="blur-text">Hunter管</span>，位于<span class="blur-text">股中1/3段前内侧</span>，缝匠肌的深面，大收肌和股内侧肌之间<br>前壁为<span class="blur-text">缝匠肌</span>、<span class="blur-text">收肌腱板</span>，外侧壁为<span class="blur-text">股内侧肌</span>，后壁为长收肌、大收肌及其筋膜<br>内容物由前向后依次为：<span class="blur-text">隐神经</span>、<span class="blur-text">股动脉</span>、<span class="blur-text">股静脉</span></td>
+                            <td>4.. <strong>adductor canal</strong><br>收肌管，又称<span class="answer-text">Hunter管</span>，位于<span class="answer-text">股中1/3段前内侧</span>，缝匠肌的深面，大收肌和股内侧肌之间<br>前壁为<span class="answer-text">缝匠肌</span>、<span class="answer-text">收肌腱板</span>，外侧壁为<span class="answer-text">股内侧肌</span>，后壁为长收肌、大收肌及其筋膜<br>内容物由前向后依次为：<span class="answer-text">隐神经</span>、<span class="answer-text">股动脉</span>、<span class="answer-text">股静脉</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>malleolar canal</strong><br>踝管，踝后区的深筋膜在<span class="blur-text">内踝</span>和<span class="blur-text">跟结节内侧面</span>之间的部分增厚，形成<span class="blur-text">屈肌支持带</span>（分裂韧带）<br>支持带向深面发出3个纤维隔，将踝管分成4个通道，通过结构由前上向后下依次为：①<span class="blur-text">胫骨后肌腱</span>；②<span class="blur-text">趾长屈肌腱</span>；③<span class="blur-text">胫后动、静脉和胫神经</span>；④<span class="blur-text">踇长屈肌腱</span></td>
+                            <td>5.. <strong>malleolar canal</strong><br>踝管，踝后区的深筋膜在<span class="answer-text">内踝</span>和<span class="answer-text">跟结节内侧面</span>之间的部分增厚，形成<span class="answer-text">屈肌支持带</span>（分裂韧带）<br>支持带向深面发出3个纤维隔，将踝管分成4个通道，通过结构由前上向后下依次为：①<span class="answer-text">胫骨后肌腱</span>；②<span class="answer-text">趾长屈肌腱</span>；③<span class="answer-text">胫后动、静脉和胫神经</span>；④<span class="answer-text">踇长屈肌腱</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>superior lumbar triangle</strong><br>腰上三角，位于<span class="blur-text">背阔肌深面</span>，第12肋下方<br>上外侧界为<span class="blur-text">下后锯肌</span>，下内侧界为<span class="blur-text">竖脊肌外缘</span>，下外侧界为<span class="blur-text">腹内斜肌后缘</span><br>底为<span class="blur-text">腹横肌腱膜</span>，腱膜深面有3条神经：<span class="blur-text">肋下神经</span>、<span class="blur-text">髂腹下神经</span>、<span class="blur-text">髂腹股沟神经</span></td>
+                            <td>6.. <strong>superior lumbar triangle</strong><br>腰上三角，位于<span class="answer-text">背阔肌深面</span>，第12肋下方<br>上外侧界为<span class="answer-text">下后锯肌</span>，下内侧界为<span class="answer-text">竖脊肌外缘</span>，下外侧界为<span class="answer-text">腹内斜肌后缘</span><br>底为<span class="answer-text">腹横肌腱膜</span>，腱膜深面有3条神经：<span class="answer-text">肋下神经</span>、<span class="answer-text">髂腹下神经</span>、<span class="answer-text">髂腹股沟神经</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>carpal canal</strong><br>腕管，由<span class="blur-text">屈肌支持带</span>与<span class="blur-text">腕骨沟</span>共同围成<br>管内有屈肌总腱鞘包裹的<span class="blur-text">指浅、深屈肌腱</span>及<span class="blur-text">拇长屈肌腱</span>及其腱鞘和<span class="blur-text">正中神经</span><br>屈肌总腱鞘形成<span class="blur-text">尺侧囊</span>，拇长屈肌腱鞘形成<span class="blur-text">桡侧囊</span></td>
+                            <td>7.. <strong>carpal canal</strong><br>腕管，由<span class="answer-text">屈肌支持带</span>与<span class="answer-text">腕骨沟</span>共同围成<br>管内有屈肌总腱鞘包裹的<span class="answer-text">指浅、深屈肌腱</span>及<span class="answer-text">拇长屈肌腱</span>及其腱鞘和<span class="answer-text">正中神经</span><br>屈肌总腱鞘形成<span class="answer-text">尺侧囊</span>，拇长屈肌腱鞘形成<span class="answer-text">桡侧囊</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>tendinous sheath of finger</strong><br>手指腱鞘，为包绕<span class="blur-text">指浅、深屈肌腱</span>的鞘管，由<span class="blur-text">腱纤维鞘</span>和<span class="blur-text">腱滑膜鞘</span>两部分构成<br>腱纤维鞘为手指深筋膜增厚，附着于<span class="blur-text">指骨及关节囊的两侧</span><br>腱滑膜鞘分<span class="blur-text">脏层</span>和<span class="blur-text">壁层</span>，脏层包绕肌腱表面，壁层贴近于腱纤维鞘的内面和骨面</td>
+                            <td>8.. <strong>tendinous sheath of finger</strong><br>手指腱鞘，为包绕<span class="answer-text">指浅、深屈肌腱</span>的鞘管，由<span class="answer-text">腱纤维鞘</span>和<span class="answer-text">腱滑膜鞘</span>两部分构成<br>腱纤维鞘为手指深筋膜增厚，附着于<span class="answer-text">指骨及关节囊的两侧</span><br>腱滑膜鞘分<span class="answer-text">脏层</span>和<span class="answer-text">壁层</span>，脏层包绕肌腱表面，壁层贴近于腱纤维鞘的内面和骨面</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>cubital fossa</strong><br>肘窝，为肘前区的<span class="blur-text">三角形凹陷</span>，其尖指向远侧，底边位于近侧<br>上界为<span class="blur-text">肱骨内、外上髁的连线</span>，下外侧界为<span class="blur-text">肱桡肌</span>，下内侧界为<span class="blur-text">旋前圆肌</span><br>内容物由内向外依次为：<span class="blur-text">正中神经</span>、<span class="blur-text">肱动脉及其两条伴行静脉</span>、<span class="blur-text">肱二头肌腱</span>、前臂外侧皮神经、桡神经及其分支</td>
+                            <td>9.. <strong>cubital fossa</strong><br>肘窝，为肘前区的<span class="answer-text">三角形凹陷</span>，其尖指向远侧，底边位于近侧<br>上界为<span class="answer-text">肱骨内、外上髁的连线</span>，下外侧界为<span class="answer-text">肱桡肌</span>，下内侧界为<span class="answer-text">旋前圆肌</span><br>内容物由内向外依次为：<span class="answer-text">正中神经</span>、<span class="answer-text">肱动脉及其两条伴行静脉</span>、<span class="answer-text">肱二头肌腱</span>、前臂外侧皮神经、桡神经及其分支</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>femoral ring</strong><br>股环，即<span class="blur-text">股管的上口</span><br>前界为<span class="blur-text">腹股沟韧带</span>，后界为<span class="blur-text">耻骨梳韧带</span>，内侧界为<span class="blur-text">腔隙韧带</span>，外侧界为<span class="blur-text">股静脉内侧的纤维隔</span><br>股环被薄层疏松结缔组织覆盖，称<span class="blur-text">股环隔</span>，上面衬有腹膜，从腹腔面观察，此处呈一小凹，称<span class="blur-text">股凹</span></td>
+                            <td>10.. <strong>femoral ring</strong><br>股环，即<span class="answer-text">股管的上口</span><br>前界为<span class="answer-text">腹股沟韧带</span>，后界为<span class="answer-text">耻骨梳韧带</span>，内侧界为<span class="answer-text">腔隙韧带</span>，外侧界为<span class="answer-text">股静脉内侧的纤维隔</span><br>股环被薄层疏松结缔组织覆盖，称<span class="answer-text">股环隔</span>，上面衬有腹膜，从腹腔面观察，此处呈一小凹，称<span class="answer-text">股凹</span></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

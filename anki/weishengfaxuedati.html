@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">卫生法学大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>162.. <strong>卫生法与自然科学的联系</strong><br>卫生法同<span class="blur-text">自然科学尤其是医学</span>的发展紧密联系，具有<span class="blur-text">技术性</span>和<span class="blur-text">国际性</span>。</td>
+                            <td>162.. <strong>卫生法与自然科学的联系</strong><br>卫生法同<span class="answer-text">自然科学尤其是医学</span>的发展紧密联系，具有<span class="answer-text">技术性</span>和<span class="answer-text">国际性</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>163.. <strong>突发公共卫生事件其他类型</strong><br>其他影响公众健康的事件还可能包括：<span class="blur-text">新传染病</span>、<span class="blur-text">我国尚未发现的传染病</span>、<span class="blur-text">我国已消灭的传染病</span>或者<span class="blur-text">重大环境污染、重大动物疫情</span>等严重影响公众健康的事件。</td>
+                            <td>163.. <strong>突发公共卫生事件其他类型</strong><br>其他影响公众健康的事件还可能包括：<span class="answer-text">新传染病</span>、<span class="answer-text">我国尚未发现的传染病</span>、<span class="answer-text">我国已消灭的传染病</span>或者<span class="answer-text">重大环境污染、重大动物疫情</span>等严重影响公众健康的事件。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>164.. <strong>卫生行政部门应急职责-制定技术标准和规范</strong><br>国务院卫生行政部门对<span class="blur-text">新发现的突发传染病、不明原因的群体性疾病、重大中毒事件</span>，组织力量制定技术标准和规范，及时组织全国培训。</td>
+                            <td>164.. <strong>卫生行政部门应急职责-制定技术标准和规范</strong><br>国务院卫生行政部门对<span class="answer-text">新发现的突发传染病、不明原因的群体性疾病、重大中毒事件</span>，组织力量制定技术标准和规范，及时组织全国培训。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>165.. <strong>医疗机构应急职责</strong><br>医疗机构在突发公共卫生事件中承担<span class="blur-text">医疗救治</span>任务。</td>
+                            <td>165.. <strong>医疗机构应急职责</strong><br>医疗机构在突发公共卫生事件中承担<span class="answer-text">医疗救治</span>任务。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>166.. <strong>卫生监督机构应急职责</strong><br>卫生监督机构在突发公共卫生事件中承担<span class="blur-text">卫生监督执法</span>任务。</td>
+                            <td>166.. <strong>卫生监督机构应急职责</strong><br>卫生监督机构在突发公共卫生事件中承担<span class="answer-text">卫生监督执法</span>任务。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>167.. <strong>出入境检验检疫机构应急职责</strong><br>出入境检验检疫机构在突发公共卫生事件中承担<span class="blur-text">口岸卫生检疫</span>任务。</td>
+                            <td>167.. <strong>出入境检验检疫机构应急职责</strong><br>出入境检验检疫机构在突发公共卫生事件中承担<span class="answer-text">口岸卫生检疫</span>任务。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>168.. <strong>用人单位职业卫生管理（1）</strong><br>① <span class="blur-text">职业卫生培训</span><br>② <span class="blur-text">职业健康检查</span><br>③ <span class="blur-text">职业健康档案</span></td>
+                            <td>168.. <strong>用人单位职业卫生管理（1）</strong><br>① <span class="answer-text">职业卫生培训</span><br>② <span class="answer-text">职业健康检查</span><br>③ <span class="answer-text">职业健康档案</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>169.. <strong>职业病诊断机构条件</strong><br>医疗机构配置制剂，应当经所在<span class="blur-text">省、自治区、直辖市人民政府药品监督管理部门</span>批准，取得<span class="blur-text">《医疗机构制剂许可证》</span>。</td>
+                            <td>169.. <strong>职业病诊断机构条件</strong><br>医疗机构配置制剂，应当经所在<span class="answer-text">省、自治区、直辖市人民政府药品监督管理部门</span>批准，取得<span class="answer-text">《医疗机构制剂许可证》</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>170.. <strong>产前诊断医师职责</strong><br>产前检查医师发现孕妇有法定情形之一的，医师应当对其进行<span class="blur-text">产前诊断</span>。</td>
+                            <td>170.. <strong>产前诊断医师职责</strong><br>产前检查医师发现孕妇有法定情形之一的，医师应当对其进行<span class="answer-text">产前诊断</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>171.. <strong>精神障碍患者保护性强制住院条件</strong><br>严重精神障碍患者并有<span class="blur-text">伤害自身</span>或<span class="blur-text">危害他人安全</span>的行为或危险的，应当实施<span class="blur-text">住院治疗</span>。</td>
+                            <td>171.. <strong>精神障碍患者保护性强制住院条件</strong><br>严重精神障碍患者并有<span class="answer-text">伤害自身</span>或<span class="answer-text">危害他人安全</span>的行为或危险的，应当实施<span class="answer-text">住院治疗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>172.. <strong>擅自从事精神障碍诊疗的处罚（人员）</strong><br>对直接负责的主管人员和其他直接责任人员依法给予或者责令给予<span class="blur-text">降低岗位等级或者撤职、开除</span>的处分；对有关医务人员<span class="blur-text">吊销其执业证书</span>。</td>
+                            <td>172.. <strong>擅自从事精神障碍诊疗的处罚（人员）</strong><br>对直接负责的主管人员和其他直接责任人员依法给予或者责令给予<span class="answer-text">降低岗位等级或者撤职、开除</span>的处分；对有关医务人员<span class="answer-text">吊销其执业证书</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>173.. <strong>违反精神卫生法的赔偿责任</strong><br>违反规定给精神障碍患者或者其他公民造成<span class="blur-text">人身、财产或者其他损害</span>的，依法承担<span class="blur-text">赔偿责任</span>。</td>
+                            <td>173.. <strong>违反精神卫生法的赔偿责任</strong><br>违反规定给精神障碍患者或者其他公民造成<span class="answer-text">人身、财产或者其他损害</span>的，依法承担<span class="answer-text">赔偿责任</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>174.. <strong>血站分站或采血点（室）审批</strong><br>经<span class="blur-text">省、自治区、直辖市人民政府卫生行政部门</span>批准建立。</td>
+                            <td>174.. <strong>血站分站或采血点（室）审批</strong><br>经<span class="answer-text">省、自治区、直辖市人民政府卫生行政部门</span>批准建立。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>175.. <strong>血站分站或采血点（室）隶属关系</strong><br>隶属于<span class="blur-text">血液中心</span>。</td>
+                            <td>175.. <strong>血站分站或采血点（室）隶属关系</strong><br>隶属于<span class="answer-text">血液中心</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>176.. <strong>医疗机构制剂配置条件</strong><br>应当经所在<span class="blur-text">省、自治区、直辖市人民政府药品监督管理部门</span>批准，取得<span class="blur-text">《医疗机构制剂许可证》</span>。</td>
+                            <td>176.. <strong>医疗机构制剂配置条件</strong><br>应当经所在<span class="answer-text">省、自治区、直辖市人民政府药品监督管理部门</span>批准，取得<span class="answer-text">《医疗机构制剂许可证》</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>177.. <strong>医疗机构制剂许可证管理</strong><br>应当标明<span class="blur-text">有效期</span>，有效期为<span class="blur-text">5年</span>，到期<span class="blur-text">重新审查发证</span>。</td>
+                            <td>177.. <strong>医疗机构制剂许可证管理</strong><br>应当标明<span class="answer-text">有效期</span>，有效期为<span class="answer-text">5年</span>，到期<span class="answer-text">重新审查发证</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>178.. <strong>卫生技术人员执业要求</strong><br>未经注册不得从事<span class="blur-text">医疗、预防、保健活动</span>。</td>
+                            <td>178.. <strong>卫生技术人员执业要求</strong><br>未经注册不得从事<span class="answer-text">医疗、预防、保健活动</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>179.. <strong>医师执业要求</strong><br>医师经注册后，可以在<span class="blur-text">医疗、预防、保健机构</span>中按照注册的<span class="blur-text">执业地点、执业类别、执业范围</span>执业，从事相应的<span class="blur-text">医疗、预防、保健</span>业务。</td>
+                            <td>179.. <strong>医师执业要求</strong><br>医师经注册后，可以在<span class="answer-text">医疗、预防、保健机构</span>中按照注册的<span class="answer-text">执业地点、执业类别、执业范围</span>执业，从事相应的<span class="answer-text">医疗、预防、保健</span>业务。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>180.. <strong>医疗机构名称禁止情形</strong><br>① <span class="blur-text">有损于国家、社会或者公共利益</span>的名称<br>② <span class="blur-text">侵犯他人利益</span>的名称<br>③ <span class="blur-text">以外文字母、汉语拼音组成</span>的名称</td>
+                            <td>180.. <strong>医疗机构名称禁止情形</strong><br>① <span class="answer-text">有损于国家、社会或者公共利益</span>的名称<br>② <span class="answer-text">侵犯他人利益</span>的名称<br>③ <span class="answer-text">以外文字母、汉语拼音组成</span>的名称</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>181.. <strong>卫生法渊源体系</strong><br>包括<span class="blur-text">宪法、卫生法律、卫生行政法规、地方性卫生法规、卫生自治条例与单行条例、卫生部门规章、地方性卫生规章</span>。</td>
+                            <td>181.. <strong>卫生法渊源体系</strong><br>包括<span class="answer-text">宪法、卫生法律、卫生行政法规、地方性卫生法规、卫生自治条例与单行条例、卫生部门规章、地方性卫生规章</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>182.. <strong>卫生法律关系变动</strong><br>卫生法律关系的<span class="blur-text">产生、变更和消灭</span>。</td>
+                            <td>182.. <strong>卫生法律关系变动</strong><br>卫生法律关系的<span class="answer-text">产生、变更和消灭</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>183.. <strong>传染病防治法基本原则</strong><br>在中国领域内的一切<span class="blur-text">单位和个人</span>都必须接受传染病防治管理，任何人都没有<span class="blur-text">豁免权</span>。</td>
+                            <td>183.. <strong>传染病防治法基本原则</strong><br>在中国领域内的一切<span class="answer-text">单位和个人</span>都必须接受传染病防治管理，任何人都没有<span class="answer-text">豁免权</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>184.. <strong>传染病疫情报告制度构成</strong><br>包括<span class="blur-text">法定责任人（责任疫情报告人）</span>和<span class="blur-text">义务报告人（义务疫情报告人）</span>。</td>
+                            <td>184.. <strong>传染病疫情报告制度构成</strong><br>包括<span class="answer-text">法定责任人（责任疫情报告人）</span>和<span class="answer-text">义务报告人（义务疫情报告人）</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>185.. <strong>传染病疫情控制措施-隔离治疗</strong><br>对<span class="blur-text">病人、病原携带者</span>予以隔离治疗，隔离期限根据<span class="blur-text">医学检查结果</span>确定。</td>
+                            <td>185.. <strong>传染病疫情控制措施-隔离治疗</strong><br>对<span class="answer-text">病人、病原携带者</span>予以隔离治疗，隔离期限根据<span class="answer-text">医学检查结果</span>确定。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>186.. <strong>传染病疫情控制措施-疑似病人隔离</strong><br>对疑似病人，确诊前在<span class="blur-text">指定场所单独隔离治疗</span>。</td>
+                            <td>186.. <strong>传染病疫情控制措施-疑似病人隔离</strong><br>对疑似病人，确诊前在<span class="answer-text">指定场所单独隔离治疗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>187.. <strong>传染病疫情控制措施-密切接触者管理</strong><br>对医疗机构内的病人、病原携带者、疑似病人的密切接触者，在<span class="blur-text">指定场所进行医学观察</span>和采取其他必要的预防措施。</td>
+                            <td>187.. <strong>传染病疫情控制措施-密切接触者管理</strong><br>对医疗机构内的病人、病原携带者、疑似病人的密切接触者，在<span class="answer-text">指定场所进行医学观察</span>和采取其他必要的预防措施。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>188.. <strong>艾滋病防治原则</strong><br>① <span class="blur-text">反歧视</span>保护<br>② 合法权益保护（<span class="blur-text">婚姻、就业、就医、入学</span>）<br>③ <span class="blur-text">隐私</span>保护<br>④ <span class="blur-text">医疗救治</span>保障<br>⑤ <span class="blur-text">自愿咨询和检测</span>制度</td>
+                            <td>188.. <strong>艾滋病防治原则</strong><br>① <span class="answer-text">反歧视</span>保护<br>② 合法权益保护（<span class="answer-text">婚姻、就业、就医、入学</span>）<br>③ <span class="answer-text">隐私</span>保护<br>④ <span class="answer-text">医疗救治</span>保障<br>⑤ <span class="answer-text">自愿咨询和检测</span>制度</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>189.. <strong>艾滋病病人义务核心</strong><br>① 配合<span class="blur-text">流行病学调查</span><br>② 告知<span class="blur-text">性伴侣</span><br>③ 告知<span class="blur-text">接诊医生</span><br>④ 采取<span class="blur-text">防护措施</span></td>
+                            <td>189.. <strong>艾滋病病人义务核心</strong><br>① 配合<span class="answer-text">流行病学调查</span><br>② 告知<span class="answer-text">性伴侣</span><br>③ 告知<span class="answer-text">接诊医生</span><br>④ 采取<span class="answer-text">防护措施</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>190.. <strong>突发公共卫生事件应急主体</strong><br>① <span class="blur-text">各级人民政府</span><br>② <span class="blur-text">卫生行政部门</span><br>③ <span class="blur-text">医疗机构</span><br>④ <span class="blur-text">疾病预防控制机构</span><br>⑤ <span class="blur-text">卫生监督机构</span><br>⑥ <span class="blur-text">出入境检验检疫机构</span></td>
+                            <td>190.. <strong>突发公共卫生事件应急主体</strong><br>① <span class="answer-text">各级人民政府</span><br>② <span class="answer-text">卫生行政部门</span><br>③ <span class="answer-text">医疗机构</span><br>④ <span class="answer-text">疾病预防控制机构</span><br>⑤ <span class="answer-text">卫生监督机构</span><br>⑥ <span class="answer-text">出入境检验检疫机构</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>191.. <strong>人民政府应急措施内容</strong><br>① <span class="blur-text">划定控制区域</span><br>② <span class="blur-text">疫情控制措施</span><br>③ <span class="blur-text">流动人口管理</span><br>④ <span class="blur-text">实施交通卫生检疫</span></td>
+                            <td>191.. <strong>人民政府应急措施内容</strong><br>① <span class="answer-text">划定控制区域</span><br>② <span class="answer-text">疫情控制措施</span><br>③ <span class="answer-text">流动人口管理</span><br>④ <span class="answer-text">实施交通卫生检疫</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>192.. <strong>职业病诊断地点选择原则</strong><br>可以在<span class="blur-text">用人单位所在地、本人户籍所在地、经常居住地</span>的职业病诊断机构进行诊断。</td>
+                            <td>192.. <strong>职业病诊断地点选择原则</strong><br>可以在<span class="answer-text">用人单位所在地、本人户籍所在地、经常居住地</span>的职业病诊断机构进行诊断。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>193.. <strong>母婴保健法核心制度</strong><br>① <span class="blur-text">婚前医学检查</span>制度<br>② <span class="blur-text">产前诊断</span>制度<br>③ <span class="blur-text">终止妊娠</span>医学意见制度</td>
+                            <td>193.. <strong>母婴保健法核心制度</strong><br>① <span class="answer-text">婚前医学检查</span>制度<br>② <span class="answer-text">产前诊断</span>制度<br>③ <span class="answer-text">终止妊娠</span>医学意见制度</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>194.. <strong>婚前医学检查疾病类型</strong><br>① <span class="blur-text">严重遗传性疾病</span>（不宜生育）<br>② <span class="blur-text">指定传染病</span>（传染期内）<br>③ <span class="blur-text">有关精神病</span>（发病期内）<br>④ <span class="blur-text">其他不宜结婚的疾病</span></td>
+                            <td>194.. <strong>婚前医学检查疾病类型</strong><br>① <span class="answer-text">严重遗传性疾病</span>（不宜生育）<br>② <span class="answer-text">指定传染病</span>（传染期内）<br>③ <span class="answer-text">有关精神病</span>（发病期内）<br>④ <span class="answer-text">其他不宜结婚的疾病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>195.. <strong>产前诊断适用情形</strong><br>① <span class="blur-text">羊水过多或过少</span><br>② <span class="blur-text">胎儿发育异常或可疑畸形</span><br>③ <span class="blur-text">孕早期接触致畸物质</span><br>④ <span class="blur-text">遗传病家族史或分娩过严重缺陷婴儿</span><br>⑤ <span class="blur-text">初产妇年龄超过35周岁</span></td>
+                            <td>195.. <strong>产前诊断适用情形</strong><br>① <span class="answer-text">羊水过多或过少</span><br>② <span class="answer-text">胎儿发育异常或可疑畸形</span><br>③ <span class="answer-text">孕早期接触致畸物质</span><br>④ <span class="answer-text">遗传病家族史或分娩过严重缺陷婴儿</span><br>⑤ <span class="answer-text">初产妇年龄超过35周岁</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>196.. <strong>终止妊娠医学意见情形</strong><br>① <span class="blur-text">严重遗传性疾病</span><br>② <span class="blur-text">严重缺陷</span><br>③ <span class="blur-text">危及孕妇生命安全或严重危害孕妇健康</span></td>
+                            <td>196.. <strong>终止妊娠医学意见情形</strong><br>① <span class="answer-text">严重遗传性疾病</span><br>② <span class="answer-text">严重缺陷</span><br>③ <span class="answer-text">危及孕妇生命安全或严重危害孕妇健康</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>197.. <strong>精神卫生法核心原则</strong><br>① <span class="blur-text">自愿</span>原则（除法律另有规定外）<br>② <span class="blur-text">强制住院</span>例外（伤害自身或危害他人安全）<br>③ <span class="blur-text">患者权利</span>保护</td>
+                            <td>197.. <strong>精神卫生法核心原则</strong><br>① <span class="answer-text">自愿</span>原则（除法律另有规定外）<br>② <span class="answer-text">强制住院</span>例外（伤害自身或危害他人安全）<br>③ <span class="answer-text">患者权利</span>保护</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>198.. <strong>精神障碍患者送诊主体</strong><br>① <span class="blur-text">本人</span>（自行就诊）<br>② <span class="blur-text">近亲属</span><br>③ <span class="blur-text">民政等有关部门</span>（流浪乞讨人员）<br>④ <span class="blur-text">近亲属、所在单位、公安机关</span>（紧急情况）</td>
+                            <td>198.. <strong>精神障碍患者送诊主体</strong><br>① <span class="answer-text">本人</span>（自行就诊）<br>② <span class="answer-text">近亲属</span><br>③ <span class="answer-text">民政等有关部门</span>（流浪乞讨人员）<br>④ <span class="answer-text">近亲属、所在单位、公安机关</span>（紧急情况）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>199.. <strong>精神障碍患者权利体系</strong><br>① <span class="blur-text">自主权</span><br>② <span class="blur-text">知情同意权</span><br>③ <span class="blur-text">隐私权</span><br>④ <span class="blur-text">学习、劳动就业权</span></td>
+                            <td>199.. <strong>精神障碍患者权利体系</strong><br>① <span class="answer-text">自主权</span><br>② <span class="answer-text">知情同意权</span><br>③ <span class="answer-text">隐私权</span><br>④ <span class="answer-text">学习、劳动就业权</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>200.. <strong>献血法核心制度</strong><br>① <span class="blur-text">自愿无偿献血</span>制度<br>② <span class="blur-text">18-55周岁</span>健康公民献血<br>③ <span class="blur-text">公益性血站</span>制度<br>④ <span class="blur-text">临床用血不得买卖</span></td>
+                            <td>200.. <strong>献血法核心制度</strong><br>① <span class="answer-text">自愿无偿献血</span>制度<br>② <span class="answer-text">18-55周岁</span>健康公民献血<br>③ <span class="answer-text">公益性血站</span>制度<br>④ <span class="answer-text">临床用血不得买卖</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>201.. <strong>血站设置层级</strong><br>① <span class="blur-text">直辖市、省会市、自治区首府</span>→<span class="blur-text">血液中心</span><br>② <span class="blur-text">设区的市</span>→<span class="blur-text">中心血站</span><br>③ <span class="blur-text">县及县级市</span>→<span class="blur-text">基层血站或中心血库</span></td>
+                            <td>201.. <strong>血站设置层级</strong><br>① <span class="answer-text">直辖市、省会市、自治区首府</span>→<span class="answer-text">血液中心</span><br>② <span class="answer-text">设区的市</span>→<span class="answer-text">中心血站</span><br>③ <span class="answer-text">县及县级市</span>→<span class="answer-text">基层血站或中心血库</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>202.. <strong>采血管理规范</strong><br>每次<span class="blur-text">200ml</span>（一般），最高<span class="blur-text">400ml</span>，间隔不少于<span class="blur-text">6个月</span>。</td>
+                            <td>202.. <strong>采血管理规范</strong><br>每次<span class="answer-text">200ml</span>（一般），最高<span class="answer-text">400ml</span>，间隔不少于<span class="answer-text">6个月</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>203.. <strong>药品管理法核心内容</strong><br>① <span class="blur-text">药品定义与属性</span><br>② <span class="blur-text">假药与劣药</span>界定<br>③ <span class="blur-text">特殊药品</span>管理<br>④ <span class="blur-text">不良反应</span>监测</td>
+                            <td>203.. <strong>药品管理法核心内容</strong><br>① <span class="answer-text">药品定义与属性</span><br>② <span class="answer-text">假药与劣药</span>界定<br>③ <span class="answer-text">特殊药品</span>管理<br>④ <span class="answer-text">不良反应</span>监测</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>204.. <strong>药品属性特征</strong><br>① <span class="blur-text">双重性</span>（治疗作用与不良反应）<br>② <span class="blur-text">专属性</span>（需医师处方指导）<br>③ <span class="blur-text">严格性</span>（质量标准严格）<br>④ <span class="blur-text">时效性</span>（有效期管理）</td>
+                            <td>204.. <strong>药品属性特征</strong><br>① <span class="answer-text">双重性</span>（治疗作用与不良反应）<br>② <span class="answer-text">专属性</span>（需医师处方指导）<br>③ <span class="answer-text">严格性</span>（质量标准严格）<br>④ <span class="answer-text">时效性</span>（有效期管理）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>205.. <strong>假药认定标准</strong><br>① <span class="blur-text">成分不符</span><br>② <span class="blur-text">冒充</span>（非药品冒充药品或他种冒充此种）<br>③ <span class="blur-text">变质</span><br>④ <span class="blur-text">适应症超范围</span></td>
+                            <td>205.. <strong>假药认定标准</strong><br>① <span class="answer-text">成分不符</span><br>② <span class="answer-text">冒充</span>（非药品冒充药品或他种冒充此种）<br>③ <span class="answer-text">变质</span><br>④ <span class="answer-text">适应症超范围</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>206.. <strong>劣药认定标准</strong><br>① <span class="blur-text">含量不符</span><br>② <span class="blur-text">污染</span><br>③ <span class="blur-text">未标明或更改有效期</span><br>④ <span class="blur-text">未注明或更改批号</span><br>⑤ <span class="blur-text">过期</span><br>⑥ <span class="blur-text">擅自添加防腐剂、辅料</span><br>⑦ <span class="blur-text">其他不符合标准</span></td>
+                            <td>206.. <strong>劣药认定标准</strong><br>① <span class="answer-text">含量不符</span><br>② <span class="answer-text">污染</span><br>③ <span class="answer-text">未标明或更改有效期</span><br>④ <span class="answer-text">未注明或更改批号</span><br>⑤ <span class="answer-text">过期</span><br>⑥ <span class="answer-text">擅自添加防腐剂、辅料</span><br>⑦ <span class="answer-text">其他不符合标准</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>207.. <strong>药品进口检验范围</strong><br>① <span class="blur-text">首次在中国销售</span><br>② <span class="blur-text">规定生物制品</span><br>③ <span class="blur-text">国务院规定其他药品</span></td>
+                            <td>207.. <strong>药品进口检验范围</strong><br>① <span class="answer-text">首次在中国销售</span><br>② <span class="answer-text">规定生物制品</span><br>③ <span class="answer-text">国务院规定其他药品</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>208.. <strong>医疗机构制剂管理</strong><br>① 需<span class="blur-text">省级药监部门批准</span><br>② 取得<span class="blur-text">《医疗机构制剂许可证》</span><br>③ 有效期<span class="blur-text">5年</span><br>④ 仅限<span class="blur-text">本机构使用</span></td>
+                            <td>208.. <strong>医疗机构制剂管理</strong><br>① 需<span class="answer-text">省级药监部门批准</span><br>② 取得<span class="answer-text">《医疗机构制剂许可证》</span><br>③ 有效期<span class="answer-text">5年</span><br>④ 仅限<span class="answer-text">本机构使用</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>209.. <strong>特殊药品类别</strong><br>① <span class="blur-text">麻醉药品和精神药品</span><br>② <span class="blur-text">医疗用毒性药品</span><br>③ <span class="blur-text">放射性药品</span><br>④ <span class="blur-text">药品类易制毒化学品</span></td>
+                            <td>209.. <strong>特殊药品类别</strong><br>① <span class="answer-text">麻醉药品和精神药品</span><br>② <span class="answer-text">医疗用毒性药品</span><br>③ <span class="answer-text">放射性药品</span><br>④ <span class="answer-text">药品类易制毒化学品</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>210.. <strong>医疗机构管理核心</strong><br>① <span class="blur-text">依法设立</span><br>② <span class="blur-text">救死扶伤、防病治病</span>宗旨<br>③ <span class="blur-text">疾病诊断、治疗活动</span></td>
+                            <td>210.. <strong>医疗机构管理核心</strong><br>① <span class="answer-text">依法设立</span><br>② <span class="answer-text">救死扶伤、防病治病</span>宗旨<br>③ <span class="answer-text">疾病诊断、治疗活动</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>211.. <strong>医疗机构设置禁止情形</strong><br>① <span class="blur-text">不能独立承担民事责任</span>的单位<br>② <span class="blur-text">服刑或无民事行为能力</span>的个人<br>③ <span class="blur-text">二级以上医疗事故未满五年</span>的医务人员<br>④ <span class="blur-text">被吊销执业证书</span>的医务人员<br>⑤ <span class="blur-text">被吊销许可证</span>的法定代表人或主要负责人<br>⑥ <span class="blur-text">省级卫生行政部门规定的其他情形</span></td>
+                            <td>211.. <strong>医疗机构设置禁止情形</strong><br>① <span class="answer-text">不能独立承担民事责任</span>的单位<br>② <span class="answer-text">服刑或无民事行为能力</span>的个人<br>③ <span class="answer-text">二级以上医疗事故未满五年</span>的医务人员<br>④ <span class="answer-text">被吊销执业证书</span>的医务人员<br>⑤ <span class="answer-text">被吊销许可证</span>的法定代表人或主要负责人<br>⑥ <span class="answer-text">省级卫生行政部门规定的其他情形</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>212.. <strong>医疗机构执业规则</strong><br>① 取得<span class="blur-text">《医疗机构执业许可证》</span><br>② 不得使用<span class="blur-text">特定禁止名称</span><br>③ 定期<span class="blur-text">校验</span>（100张以上床位每<span class="blur-text">3年</span>，不满100张每<span class="blur-text">年</span>）</td>
+                            <td>212.. <strong>医疗机构执业规则</strong><br>① 取得<span class="answer-text">《医疗机构执业许可证》</span><br>② 不得使用<span class="answer-text">特定禁止名称</span><br>③ 定期<span class="answer-text">校验</span>（100张以上床位每<span class="answer-text">3年</span>，不满100张每<span class="answer-text">年</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>213.. <strong>卫生技术人员管理</strong><br>① <span class="blur-text">高等或中等医药卫生教育或培训</span><br>② 掌握<span class="blur-text">医药卫生知识</span><br>③ 经<span class="blur-text">考试或考核</span>并<span class="blur-text">注册</span><br>④ 取得<span class="blur-text">执业权利</span></td>
+                            <td>213.. <strong>卫生技术人员管理</strong><br>① <span class="answer-text">高等或中等医药卫生教育或培训</span><br>② 掌握<span class="answer-text">医药卫生知识</span><br>③ 经<span class="answer-text">考试或考核</span>并<span class="answer-text">注册</span><br>④ 取得<span class="answer-text">执业权利</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>214.. <strong>医师资格考试条件体系</strong><br>① <span class="blur-text">本科+试用期满1年</span><br>② <span class="blur-text">助理医师证书+专科+工作满2年</span><br>③ <span class="blur-text">师承3年或多年实践确有专长+考核合格推荐</span></td>
+                            <td>214.. <strong>医师资格考试条件体系</strong><br>① <span class="answer-text">本科+试用期满1年</span><br>② <span class="answer-text">助理医师证书+专科+工作满2年</span><br>③ <span class="answer-text">师承3年或多年实践确有专长+考核合格推荐</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>215.. <strong>医师权利内容</strong><br>① <span class="blur-text">医学诊查、调查、处置权</span><br>② <span class="blur-text">医疗设备条件权</span><br>③ <span class="blur-text">研究学术交流权</span><br>④ <span class="blur-text">培训教育权</span><br>⑤ <span class="blur-text">人格尊严人身安全权</span><br>⑥ <span class="blur-text">报酬福利权</span><br>⑦ <span class="blur-text">建议参与管理权</span></td>
+                            <td>215.. <strong>医师权利内容</strong><br>① <span class="answer-text">医学诊查、调查、处置权</span><br>② <span class="answer-text">医疗设备条件权</span><br>③ <span class="answer-text">研究学术交流权</span><br>④ <span class="answer-text">培训教育权</span><br>⑤ <span class="answer-text">人格尊严人身安全权</span><br>⑥ <span class="answer-text">报酬福利权</span><br>⑦ <span class="answer-text">建议参与管理权</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>216.. <strong>医师执业规则要点</strong><br>① <span class="blur-text">亲自检查+规范文书</span><br>② <span class="blur-text">急危患者救治</span><br>③ <span class="blur-text">正确使用药品器械</span><br>④ <span class="blur-text">告知知情同意</span><br>⑤ <span class="blur-text">禁止不正当利益</span><br>⑥ <span class="blur-text">服从调遣</span><br>⑦ <span class="blur-text">履职报告</span></td>
+                            <td>216.. <strong>医师执业规则要点</strong><br>① <span class="answer-text">亲自检查+规范文书</span><br>② <span class="answer-text">急危患者救治</span><br>③ <span class="answer-text">正确使用药品器械</span><br>④ <span class="answer-text">告知知情同意</span><br>⑤ <span class="answer-text">禁止不正当利益</span><br>⑥ <span class="answer-text">服从调遣</span><br>⑦ <span class="answer-text">履职报告</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>217.. <strong>医方权利内容</strong><br>① <span class="blur-text">强制治疗权</span><br>② <span class="blur-text">医学研究权</span><br>③ <span class="blur-text">人格尊严权</span><br>④ <span class="blur-text">自主诊断权</span><br>⑤ <span class="blur-text">医疗处置权</span></td>
+                            <td>217.. <strong>医方权利内容</strong><br>① <span class="answer-text">强制治疗权</span><br>② <span class="answer-text">医学研究权</span><br>③ <span class="answer-text">人格尊严权</span><br>④ <span class="answer-text">自主诊断权</span><br>⑤ <span class="answer-text">医疗处置权</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>218.. <strong>患者权利体系</strong><br>① <span class="blur-text">生命健康权</span>（善意、安全适当、紧急救治、及时转诊）<br>② <span class="blur-text">知情同意权</span><br>③ <span class="blur-text">隐私权</span><br>④ <span class="blur-text">人身财产安全权</span><br>⑤ <span class="blur-text">查阅复制病历权</span></td>
+                            <td>218.. <strong>患者权利体系</strong><br>① <span class="answer-text">生命健康权</span>（善意、安全适当、紧急救治、及时转诊）<br>② <span class="answer-text">知情同意权</span><br>③ <span class="answer-text">隐私权</span><br>④ <span class="answer-text">人身财产安全权</span><br>⑤ <span class="answer-text">查阅复制病历权</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>219.. <strong>知情同意权实施</strong><br>实施<span class="blur-text">手术、特殊检查、特殊治疗</span>需说明<span class="blur-text">医疗风险、替代方案</span>，取得<span class="blur-text">书面同意</span>。</td>
+                            <td>219.. <strong>知情同意权实施</strong><br>实施<span class="answer-text">手术、特殊检查、特殊治疗</span>需说明<span class="answer-text">医疗风险、替代方案</span>，取得<span class="answer-text">书面同意</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>220.. <strong>病历保存期限</strong><br>门诊<span class="blur-text">不少于15年</span>，住院<span class="blur-text">不少于30年</span>。</td>
+                            <td>220.. <strong>病历保存期限</strong><br>门诊<span class="answer-text">不少于15年</span>，住院<span class="answer-text">不少于30年</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>221.. <strong>医疗纠纷处理途径</strong><br>① <span class="blur-text">双方自愿协商</span><br>② <span class="blur-text">人民调解</span><br>③ <span class="blur-text">行政调解</span><br>④ <span class="blur-text">诉讼</span><br>⑤ <span class="blur-text">其他法定途径</span></td>
+                            <td>221.. <strong>医疗纠纷处理途径</strong><br>① <span class="answer-text">双方自愿协商</span><br>② <span class="answer-text">人民调解</span><br>③ <span class="answer-text">行政调解</span><br>④ <span class="answer-text">诉讼</span><br>⑤ <span class="answer-text">其他法定途径</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>222.. <strong>医疗纠纷医疗机构告知义务</strong><br>① <span class="blur-text">解决途径</span><br>② <span class="blur-text">病历资料、现场实物封存和启封规定</span><br>③ <span class="blur-text">病历资料查阅复制规定</span><br>④ <span class="blur-text">尸检规定</span>（患者死亡时）</td>
+                            <td>222.. <strong>医疗纠纷医疗机构告知义务</strong><br>① <span class="answer-text">解决途径</span><br>② <span class="answer-text">病历资料、现场实物封存和启封规定</span><br>③ <span class="answer-text">病历资料查阅复制规定</span><br>④ <span class="answer-text">尸检规定</span>（患者死亡时）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>223.. <strong>病历封存管理</strong><br>封存满<span class="blur-text">3年</span>未再提出纠纷要求的，可以<span class="blur-text">自行启封</span>。</td>
+                            <td>223.. <strong>病历封存管理</strong><br>封存满<span class="answer-text">3年</span>未再提出纠纷要求的，可以<span class="answer-text">自行启封</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>224.. <strong>尸检时限规定</strong><br>死亡后<span class="blur-text">48小时内</span>，具备冻存条件可延长至<span class="blur-text">7日</span>。</td>
+                            <td>224.. <strong>尸检时限规定</strong><br>死亡后<span class="answer-text">48小时内</span>，具备冻存条件可延长至<span class="answer-text">7日</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>225.. <strong>医疗事故构成要件</strong><br>① <span class="blur-text">医疗机构及其医务人员</span><br>② <span class="blur-text">医疗活动中</span><br>③ <span class="blur-text">违反法律法规规章规范常规</span><br>④ <span class="blur-text">过失</span><br>⑤ <span class="blur-text">造成患者人身损害</span></td>
+                            <td>225.. <strong>医疗事故构成要件</strong><br>① <span class="answer-text">医疗机构及其医务人员</span><br>② <span class="answer-text">医疗活动中</span><br>③ <span class="answer-text">违反法律法规规章规范常规</span><br>④ <span class="answer-text">过失</span><br>⑤ <span class="answer-text">造成患者人身损害</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>226.. <strong>医疗事故分级标准</strong><br>一级：<span class="blur-text">死亡、重度残疾</span><br>二级：<span class="blur-text">中度残疾、器官组织损伤导致严重功能障碍</span><br>三级：<span class="blur-text">轻度残疾、器官组织损伤导致一般功能障碍</span><br>四级：<span class="blur-text">明显人身损害的其他后果</span></td>
+                            <td>226.. <strong>医疗事故分级标准</strong><br>一级：<span class="answer-text">死亡、重度残疾</span><br>二级：<span class="answer-text">中度残疾、器官组织损伤导致严重功能障碍</span><br>三级：<span class="answer-text">轻度残疾、器官组织损伤导致一般功能障碍</span><br>四级：<span class="answer-text">明显人身损害的其他后果</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>227.. <strong>医疗侵权责任类型</strong><br>① <span class="blur-text">医疗一般侵权责任</span><br>② <span class="blur-text">医疗特殊侵权责任（医疗物品侵权）</span></td>
+                            <td>227.. <strong>医疗侵权责任类型</strong><br>① <span class="answer-text">医疗一般侵权责任</span><br>② <span class="answer-text">医疗特殊侵权责任（医疗物品侵权）</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>228.. <strong>医疗一般侵权责任要件</strong><br>① <span class="blur-text">违法诊疗行为</span><br>② <span class="blur-text">患者损害</span><br>③ <span class="blur-text">因果关系</span><br>④ <span class="blur-text">医方过错</span></td>
+                            <td>228.. <strong>医疗一般侵权责任要件</strong><br>① <span class="answer-text">违法诊疗行为</span><br>② <span class="answer-text">患者损害</span><br>③ <span class="answer-text">因果关系</span><br>④ <span class="answer-text">医方过错</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>229.. <strong>过错推定情形</strong><br>① <span class="blur-text">违反法律法规规章规范</span><br>② <span class="blur-text">隐匿或拒绝提供病历</span><br>③ <span class="blur-text">伪造篡改销毁病历</span></td>
+                            <td>229.. <strong>过错推定情形</strong><br>① <span class="answer-text">违反法律法规规章规范</span><br>② <span class="answer-text">隐匿或拒绝提供病历</span><br>③ <span class="answer-text">伪造篡改销毁病历</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>230.. <strong>医疗特殊侵权责任要件</strong><br>① <span class="blur-text">产品缺陷或血液不合格</span><br>② <span class="blur-text">患者损害</span><br>③ <span class="blur-text">因果关系</span><br>④ <span class="blur-text">使用缺陷产品或输入不合格血液</span></td>
+                            <td>230.. <strong>医疗特殊侵权责任要件</strong><br>① <span class="answer-text">产品缺陷或血液不合格</span><br>② <span class="answer-text">患者损害</span><br>③ <span class="answer-text">因果关系</span><br>④ <span class="answer-text">使用缺陷产品或输入不合格血液</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>231.. <strong>归责原则体系</strong><br>① 一般侵权：<span class="blur-text">过错原则</span><br>② 特殊侵权：<span class="blur-text">无过错原则</span><br>③ 推定过错：<span class="blur-text">过错推定原则</span></td>
+                            <td>231.. <strong>归责原则体系</strong><br>① 一般侵权：<span class="answer-text">过错原则</span><br>② 特殊侵权：<span class="answer-text">无过错原则</span><br>③ 推定过错：<span class="answer-text">过错推定原则</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>232.. <strong>侵权责任承担方式</strong><br>① <span class="blur-text">停止侵害</span><br>② <span class="blur-text">排除妨碍</span><br>③ <span class="blur-text">消除危险</span><br>④ <span class="blur-text">返还财产</span><br>⑤ <span class="blur-text">恢复原状</span><br>⑥ <span class="blur-text">赔偿损失</span><br>⑦ <span class="blur-text">赔礼道歉</span><br>⑧ <span class="blur-text">消除影响、恢复名誉</span></td>
+                            <td>232.. <strong>侵权责任承担方式</strong><br>① <span class="answer-text">停止侵害</span><br>② <span class="answer-text">排除妨碍</span><br>③ <span class="answer-text">消除危险</span><br>④ <span class="answer-text">返还财产</span><br>⑤ <span class="answer-text">恢复原状</span><br>⑥ <span class="answer-text">赔偿损失</span><br>⑦ <span class="answer-text">赔礼道歉</span><br>⑧ <span class="answer-text">消除影响、恢复名誉</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>233.. <strong>医疗侵权责任免除事由</strong><br>① <span class="blur-text">患者或近亲属不配合</span>符合诊疗规范的诊疗<br>② <span class="blur-text">紧急情况下已尽合理诊疗义务</span><br>③ <span class="blur-text">限于当时医疗水平难以诊疗</span></td>
+                            <td>233.. <strong>医疗侵权责任免除事由</strong><br>① <span class="answer-text">患者或近亲属不配合</span>符合诊疗规范的诊疗<br>② <span class="answer-text">紧急情况下已尽合理诊疗义务</span><br>③ <span class="answer-text">限于当时医疗水平难以诊疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>234.. <strong>医疗过错认定标准</strong><br>客观标准：<span class="blur-text">注意义务</span><br>具体标准：<span class="blur-text">法律法规规章规定的注意义务</span><br>抽象标准：<span class="blur-text">相应资质的医疗水准、专业注意学识与技能</span></td>
+                            <td>234.. <strong>医疗过错认定标准</strong><br>客观标准：<span class="answer-text">注意义务</span><br>具体标准：<span class="answer-text">法律法规规章规定的注意义务</span><br>抽象标准：<span class="answer-text">相应资质的医疗水准、专业注意学识与技能</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>235.. <strong>医疗过错认定方法</strong><br>① <span class="blur-text">告知义务（说明义务）</span><br>② <span class="blur-text">知情同意</span><br>③ <span class="blur-text">结果预见义务</span><br>④ <span class="blur-text">结果回避义务</span><br>⑤ <span class="blur-text">转医义务</span></td>
+                            <td>235.. <strong>医疗过错认定方法</strong><br>① <span class="answer-text">告知义务（说明义务）</span><br>② <span class="answer-text">知情同意</span><br>③ <span class="answer-text">结果预见义务</span><br>④ <span class="answer-text">结果回避义务</span><br>⑤ <span class="answer-text">转医义务</span></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

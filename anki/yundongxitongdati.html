@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">运功系统大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>阿片类药物耐受</strong><br>随着阿片类药物的重复使用，其药效逐渐降低，只有<span class="blur-text">增加剂量</span>才能维持原有的止痛效果<br>根本原因是<span class="blur-text">脏器对药物的适应</span></td>
+                            <td>1.. <strong>阿片类药物耐受</strong><br>随着阿片类药物的重复使用，其药效逐渐降低，只有<span class="answer-text">增加剂量</span>才能维持原有的止痛效果<br>根本原因是<span class="answer-text">脏器对药物的适应</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>骨质软化(osteomalacia)</strong><br>是指单位体积内<span class="blur-text">骨质钙化不足</span>，即骨组织有机成分正常，而<span class="blur-text">钙盐含量减少</span>，骨质变软</td>
+                            <td>2.. <strong>骨质软化(osteomalacia)</strong><br>是指单位体积内<span class="answer-text">骨质钙化不足</span>，即骨组织有机成分正常，而<span class="answer-text">钙盐含量减少</span>，骨质变软</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>假骨折线(pseudo-fracture line)</strong><br>表现为直径约<span class="blur-text">1~2mm</span>，与骨皮质<span class="blur-text">垂直</span>，边缘整齐的透亮线<br>是诊断<span class="blur-text">骨质软化</span>的特征性表现</td>
+                            <td>3.. <strong>假骨折线(pseudo-fracture line)</strong><br>表现为直径约<span class="answer-text">1~2mm</span>，与骨皮质<span class="answer-text">垂直</span>，边缘整齐的透亮线<br>是诊断<span class="answer-text">骨质软化</span>的特征性表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>骨质破坏(bone destruction)</strong><br>是指局部骨质被<span class="blur-text">病理组织</span>所取代而造成的骨组织缺失<br><span class="blur-text">骨皮质</span>和<span class="blur-text">骨松质</span>均可发生破坏</td>
+                            <td>4.. <strong>骨质破坏(bone destruction)</strong><br>是指局部骨质被<span class="answer-text">病理组织</span>所取代而造成的骨组织缺失<br><span class="answer-text">骨皮质</span>和<span class="answer-text">骨松质</span>均可发生破坏</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>骨质增生硬化(hyperostosis/osteosclerosis)</strong><br>指单位体积内<span class="blur-text">骨量增多</span></td>
+                            <td>5.. <strong>骨质增生硬化(hyperostosis/osteosclerosis)</strong><br>指单位体积内<span class="answer-text">骨量增多</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>骨膜增生(periosteal proliferation)</strong><br>又称<span class="blur-text">骨膜反应</span>，是指骨膜受到刺激后出现<span class="blur-text">水肿、增厚</span>，并致骨膜内层<span class="blur-text">成骨细胞活动增加</span>，最终在骨膜下形成新生骨</td>
+                            <td>6.. <strong>骨膜增生(periosteal proliferation)</strong><br>又称<span class="answer-text">骨膜反应</span>，是指骨膜受到刺激后出现<span class="answer-text">水肿、增厚</span>，并致骨膜内层<span class="answer-text">成骨细胞活动增加</span>，最终在骨膜下形成新生骨</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>骨膜三角(codman triangle)</strong><br>是指骨膜增生过程中，骨膜新生骨被重新破坏，破坏区两端残留的骨膜增生呈<span class="blur-text">三角形或袖口状</span><br>常为<span class="blur-text">恶性肿瘤</span>的征象</td>
+                            <td>7.. <strong>骨膜三角(codman triangle)</strong><br>是指骨膜增生过程中，骨膜新生骨被重新破坏，破坏区两端残留的骨膜增生呈<span class="answer-text">三角形或袖口状</span><br>常为<span class="answer-text">恶性肿瘤</span>的征象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>骨坏死(bone necrosis/osteonecrosis)</strong><br>是指骨组织局部<span class="blur-text">代谢的停止</span>，坏死的骨质称为<span class="blur-text">死骨(sequestrum)</span></td>
+                            <td>8.. <strong>骨坏死(bone necrosis/osteonecrosis)</strong><br>是指骨组织局部<span class="answer-text">代谢的停止</span>，坏死的骨质称为<span class="answer-text">死骨(sequestrum)</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>关节肿胀(swelling of joint)</strong><br>由<span class="blur-text">关节腔积液</span>或<span class="blur-text">关节囊及其周围软组织充血、水肿、出血和炎症</span>所致</td>
+                            <td>9.. <strong>关节肿胀(swelling of joint)</strong><br>由<span class="answer-text">关节腔积液</span>或<span class="answer-text">关节囊及其周围软组织充血、水肿、出血和炎症</span>所致</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>关节破坏(destruction of joint)</strong><br>是指<span class="blur-text">关节软骨及其下方的骨性关节面</span>被病理组织所取代而形成的缺损区</td>
+                            <td>10.. <strong>关节破坏(destruction of joint)</strong><br>是指<span class="answer-text">关节软骨及其下方的骨性关节面</span>被病理组织所取代而形成的缺损区</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>关节强直(ankylosis)</strong><br>分为<span class="blur-text">骨性</span>和<span class="blur-text">纤维性</span>关节强直两种<br>骨性关节强直是关节明显破坏后，关节骨端由<span class="blur-text">骨组织</span>连接；纤维性关节强直是关节骨端为<span class="blur-text">纤维组织</span>连接</td>
+                            <td>11.. <strong>关节强直(ankylosis)</strong><br>分为<span class="answer-text">骨性</span>和<span class="answer-text">纤维性</span>关节强直两种<br>骨性关节强直是关节明显破坏后，关节骨端由<span class="answer-text">骨组织</span>连接；纤维性关节强直是关节骨端为<span class="answer-text">纤维组织</span>连接</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>关节脱位(dislocation of joint)</strong><br>构成关节的两个骨端的<span class="blur-text">位置改变或距离增宽</span>，不能回到正常状态的病理表现<br>分为<span class="blur-text">全脱位</span>和<span class="blur-text">半脱位</span></td>
+                            <td>12.. <strong>关节脱位(dislocation of joint)</strong><br>构成关节的两个骨端的<span class="answer-text">位置改变或距离增宽</span>，不能回到正常状态的病理表现<br>分为<span class="answer-text">全脱位</span>和<span class="answer-text">半脱位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>关节退行性变(degeneration of joint)</strong><br>是指<span class="blur-text">关节软骨</span>发生变性、坏死和溶解，然后逐渐被<span class="blur-text">纤维组织</span>取代</td>
+                            <td>13.. <strong>关节退行性变(degeneration of joint)</strong><br>是指<span class="answer-text">关节软骨</span>发生变性、坏死和溶解，然后逐渐被<span class="answer-text">纤维组织</span>取代</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>骨折(fracture)</strong><br>骨的<span class="blur-text">完整性破坏或连续性中断</span>，包括<span class="blur-text">骨骺分离</span>和<span class="blur-text">骺板断裂</span></td>
+                            <td>14.. <strong>骨折(fracture)</strong><br>骨的<span class="answer-text">完整性破坏或连续性中断</span>，包括<span class="answer-text">骨骺分离</span>和<span class="answer-text">骺板断裂</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>开放性骨折</strong><br>骨折断端通过破损的<span class="blur-text">皮肤、黏膜或体腔</span>与外界相通</td>
+                            <td>15.. <strong>开放性骨折</strong><br>骨折断端通过破损的<span class="answer-text">皮肤、黏膜或体腔</span>与外界相通</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>不稳定性骨折</strong><br>在生理外力作用下，骨折端易发生移位的骨折<br>如<span class="blur-text">斜形骨折</span>、<span class="blur-text">螺旋形骨折</span>、<span class="blur-text">粉碎性骨折</span>等</td>
+                            <td>16.. <strong>不稳定性骨折</strong><br>在生理外力作用下，骨折端易发生移位的骨折<br>如<span class="answer-text">斜形骨折</span>、<span class="answer-text">螺旋形骨折</span>、<span class="answer-text">粉碎性骨折</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>脂肪栓塞综合征(fat embolism syndrome,FES)</strong><br>可发生在<span class="blur-text">长骨骨折</span>的患者，尤其是<span class="blur-text">多发长骨骨折</span><br>表现为<span class="blur-text">呼吸困难</span>、<span class="blur-text">意识障碍</span>、<span class="blur-text">发热</span>、胸颈部皮肤出血点等</td>
+                            <td>17.. <strong>脂肪栓塞综合征(fat embolism syndrome,FES)</strong><br>可发生在<span class="answer-text">长骨骨折</span>的患者，尤其是<span class="answer-text">多发长骨骨折</span><br>表现为<span class="answer-text">呼吸困难</span>、<span class="answer-text">意识障碍</span>、<span class="answer-text">发热</span>、胸颈部皮肤出血点等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>骨筋膜室综合征(osteofascial compartment syndrome)</strong><br>由<span class="blur-text">骨、深筋膜、肌间隔、骨间膜</span>形成的筋膜室内的<span class="blur-text">肌肉、神经</span>因急性缺血、缺氧产生的一系列早期症状<br>常发生在<span class="blur-text">小腿和前臂掌侧</span></td>
+                            <td>18.. <strong>骨筋膜室综合征(osteofascial compartment syndrome)</strong><br>由<span class="answer-text">骨、深筋膜、肌间隔、骨间膜</span>形成的筋膜室内的<span class="answer-text">肌肉、神经</span>因急性缺血、缺氧产生的一系列早期症状<br>常发生在<span class="answer-text">小腿和前臂掌侧</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>急性骨萎缩(acute bone atrophy,Sudeck atrophy)</strong><br>是一种<span class="blur-text">反射性交感神经营养不良综合征</span><br>常突然发生或突然加重，受累关节可呈水肿，好发于<span class="blur-text">手、足骨折后</span></td>
+                            <td>19.. <strong>急性骨萎缩(acute bone atrophy,Sudeck atrophy)</strong><br>是一种<span class="answer-text">反射性交感神经营养不良综合征</span><br>常突然发生或突然加重，受累关节可呈水肿，好发于<span class="answer-text">手、足骨折后</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>骨折愈合延迟(delayed union)</strong><br>若骨折愈合时间超过一般骨折平均愈合时间（一般为<span class="blur-text">4个月</span>），骨折断端仍未出现骨折连接</td>
+                            <td>20.. <strong>骨折愈合延迟(delayed union)</strong><br>若骨折愈合时间超过一般骨折平均愈合时间（一般为<span class="answer-text">4个月</span>），骨折断端仍未出现骨折连接</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>骨折不愈合(nonunion)</strong><br>骨折超过<span class="blur-text">9个月</span>，且连续观察<span class="blur-text">3个月</span>无任何迹象表明愈合有进展</td>
+                            <td>21.. <strong>骨折不愈合(nonunion)</strong><br>骨折超过<span class="answer-text">9个月</span>，且连续观察<span class="answer-text">3个月</span>无任何迹象表明愈合有进展</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>骨折畸形愈合(malunion)</strong><br>骨折愈合后不能满足功能的要求，存在<span class="blur-text">成角</span>、<span class="blur-text">旋转</span>或<span class="blur-text">短缩</span>畸形</td>
+                            <td>22.. <strong>骨折畸形愈合(malunion)</strong><br>骨折愈合后不能满足功能的要求，存在<span class="answer-text">成角</span>、<span class="answer-text">旋转</span>或<span class="answer-text">短缩</span>畸形</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>脊髓震荡(concussion of the spinal cord)</strong><br>脊髓神经细胞遭受强烈刺激而发生<span class="blur-text">超限抑制</span>，脊髓功能处于生理停滞状态但无实质损伤<br>损伤平面以下感觉、运动及反射完全消失，持续<span class="blur-text">数小时至2-3周</span>，不留下神经系统后遗症</td>
+                            <td>23.. <strong>脊髓震荡(concussion of the spinal cord)</strong><br>脊髓神经细胞遭受强烈刺激而发生<span class="answer-text">超限抑制</span>，脊髓功能处于生理停滞状态但无实质损伤<br>损伤平面以下感觉、运动及反射完全消失，持续<span class="answer-text">数小时至2-3周</span>，不留下神经系统后遗症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>脊髓休克(spinal cord shock)</strong><br>脊髓与高级中枢的联系中断以后，损伤平面以下的脊髓出现<span class="blur-text">暂时性的反射消失</span>，处于无反应状态<br>持续<span class="blur-text">1-6周</span>，甚至数月<br>反射活动中最早出现<span class="blur-text">球海绵体反射</span>和<span class="blur-text">肛门反射</span></td>
+                            <td>24.. <strong>脊髓休克(spinal cord shock)</strong><br>脊髓与高级中枢的联系中断以后，损伤平面以下的脊髓出现<span class="answer-text">暂时性的反射消失</span>，处于无反应状态<br>持续<span class="answer-text">1-6周</span>，甚至数月<br>反射活动中最早出现<span class="answer-text">球海绵体反射</span>和<span class="answer-text">肛门反射</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>不全性脊髓损伤(incomplete spinal cord injury)</strong><br>损伤平面以下保留部分感觉和运动功能，并具有<span class="blur-text">球海绵体反射</span><br>分为<span class="blur-text">前脊髓综合征</span>、<span class="blur-text">后脊髓综合征</span>、<span class="blur-text">中央脊髓综合征</span>及<span class="blur-text">脊髓半切综合征</span>四种类型</td>
+                            <td>25.. <strong>不全性脊髓损伤(incomplete spinal cord injury)</strong><br>损伤平面以下保留部分感觉和运动功能，并具有<span class="answer-text">球海绵体反射</span><br>分为<span class="answer-text">前脊髓综合征</span>、<span class="answer-text">后脊髓综合征</span>、<span class="answer-text">中央脊髓综合征</span>及<span class="answer-text">脊髓半切综合征</span>四种类型</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>前脊髓综合征(anterior cord syndrome)</strong><br>由于<span class="blur-text">脊髓前2/3损伤</span>造成<span class="blur-text">皮质脊髓束</span>、<span class="blur-text">前外侧的脊髓丘脑束</span>及灰质的部分受损<br>病人表现为损伤平面以下<span class="blur-text">运动功能和痛温觉消失</span>，<span class="blur-text">轻触觉、位置觉、运动觉和振动觉良好</span><br>此型损伤的愈合为不完全性损伤中最差者</td>
+                            <td>26.. <strong>前脊髓综合征(anterior cord syndrome)</strong><br>由于<span class="answer-text">脊髓前2/3损伤</span>造成<span class="answer-text">皮质脊髓束</span>、<span class="answer-text">前外侧的脊髓丘脑束</span>及灰质的部分受损<br>病人表现为损伤平面以下<span class="answer-text">运动功能和痛温觉消失</span>，<span class="answer-text">轻触觉、位置觉、运动觉和振动觉良好</span><br>此型损伤的愈合为不完全性损伤中最差者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>后脊髓综合征(posterior cord syndrome)</strong><br>脊髓损伤平面以下<span class="blur-text">运动功能和痛温觉、触觉存在</span>，但<span class="blur-text">深感觉全部或部分消失</span></td>
+                            <td>27.. <strong>后脊髓综合征(posterior cord syndrome)</strong><br>脊髓损伤平面以下<span class="answer-text">运动功能和痛温觉、触觉存在</span>，但<span class="answer-text">深感觉全部或部分消失</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>中央脊髓综合征(central cord syndrome)</strong><br>常为<span class="blur-text">颈椎过伸性损伤</span>，老年病人常原先有<span class="blur-text">颈椎病或颈椎管狭窄</span><br>表现为<span class="blur-text">上肢功能障碍重于下肢</span>，脊髓远端功能优于其近端功能，肛门周围感觉存在</td>
+                            <td>28.. <strong>中央脊髓综合征(central cord syndrome)</strong><br>常为<span class="answer-text">颈椎过伸性损伤</span>，老年病人常原先有<span class="answer-text">颈椎病或颈椎管狭窄</span><br>表现为<span class="answer-text">上肢功能障碍重于下肢</span>，脊髓远端功能优于其近端功能，肛门周围感觉存在</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>脊髓半切综合征(Brown-Sequard syndrome)</strong><br>脊髓一侧受损，伤侧的<span class="blur-text">运动和本体感觉丧失</span>，而对侧的<span class="blur-text">痛觉和温度觉丧失</span></td>
+                            <td>29.. <strong>脊髓半切综合征(Brown-Sequard syndrome)</strong><br>脊髓一侧受损，伤侧的<span class="answer-text">运动和本体感觉丧失</span>，而对侧的<span class="answer-text">痛觉和温度觉丧失</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>颈椎病(cervical spondylosis)</strong><br>是指因<span class="blur-text">颈椎间盘退变及其继发性改变</span>，刺激或压迫相邻<span class="blur-text">脊髓、神经、血管和食管</span>等组织，并引起症状或体征者</td>
+                            <td>30.. <strong>颈椎病(cervical spondylosis)</strong><br>是指因<span class="answer-text">颈椎间盘退变及其继发性改变</span>，刺激或压迫相邻<span class="answer-text">脊髓、神经、血管和食管</span>等组织，并引起症状或体征者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>神经根型颈椎病(cervical spondylotic radiculopathy)</strong><br>因<span class="blur-text">下颈椎退变致压物压迫脊神经根</span>或被动牵拉产生神经根性症状</td>
+                            <td>31.. <strong>神经根型颈椎病(cervical spondylotic radiculopathy)</strong><br>因<span class="answer-text">下颈椎退变致压物压迫脊神经根</span>或被动牵拉产生神经根性症状</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>颈椎管狭窄症(cervical spinal canal stenosis)</strong><br>是指任何原因导致<span class="blur-text">颈椎管的有效容积减少</span>，致使脊髓周围储备间隙减少的一种状态<br>由于颈椎管腔狭小导致<span class="blur-text">脊髓或神经根受到机械性压迫或血液供应障碍</span>，引发一系列临床症状</td>
+                            <td>32.. <strong>颈椎管狭窄症(cervical spinal canal stenosis)</strong><br>是指任何原因导致<span class="answer-text">颈椎管的有效容积减少</span>，致使脊髓周围储备间隙减少的一种状态<br>由于颈椎管腔狭小导致<span class="answer-text">脊髓或神经根受到机械性压迫或血液供应障碍</span>，引发一系列临床症状</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>寰齿间距(atlantodental interval,ADI)</strong><br>侧位X线片<span class="blur-text">寰椎前结节后缘与齿突前缘</span>即寰齿间距，是恒定的X线标志<br>寰齿间距大于<span class="blur-text">3mm</span>，常提示合并<span class="blur-text">寰椎横韧带断裂</span></td>
+                            <td>33.. <strong>寰齿间距(atlantodental interval,ADI)</strong><br>侧位X线片<span class="answer-text">寰椎前结节后缘与齿突前缘</span>即寰齿间距，是恒定的X线标志<br>寰齿间距大于<span class="answer-text">3mm</span>，常提示合并<span class="answer-text">寰椎横韧带断裂</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>Hangman's fracture</strong><br><span class="blur-text">枢椎椎弓骨折</span>，损伤的暴力来自颈部，使颈部过度仰伸，在枢椎后半部形成强大的剪切力量，致枢椎的椎弓发生垂直状骨折</td>
+                            <td>34.. <strong>Hangman's fracture</strong><br><span class="answer-text">枢椎椎弓骨折</span>，损伤的暴力来自颈部，使颈部过度仰伸，在枢椎后半部形成强大的剪切力量，致枢椎的椎弓发生垂直状骨折</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>腰椎间盘突出(lumbar intervertebral disc herniation,LDH)</strong><br>腰椎间盘发生<span class="blur-text">退行性改变</span>以后，在外力作用下，<span class="blur-text">纤维环部分或全部断裂</span>，单独或者连同<span class="blur-text">髓核、软骨终板</span>向外突出<br>刺激或压迫<span class="blur-text">窦椎神经和神经根</span>引起的以腰腿痛为主要症状的一种疾病<br>最常见的节段是<span class="blur-text">L4-5</span>和<span class="blur-text">L5-S1</span></td>
+                            <td>35.. <strong>腰椎间盘突出(lumbar intervertebral disc herniation,LDH)</strong><br>腰椎间盘发生<span class="answer-text">退行性改变</span>以后，在外力作用下，<span class="answer-text">纤维环部分或全部断裂</span>，单独或者连同<span class="answer-text">髓核、软骨终板</span>向外突出<br>刺激或压迫<span class="answer-text">窦椎神经和神经根</span>引起的以腰腿痛为主要症状的一种疾病<br>最常见的节段是<span class="answer-text">L4-5</span>和<span class="answer-text">L5-S1</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>马尾神经综合征(cauda equina syndrome)</strong><br>中央型的腰椎间盘突出可压迫<span class="blur-text">马尾神经</span>，出现<span class="blur-text">大小便失禁</span>、<span class="blur-text">鞍区感觉异常</span><br>急性发病时应作为<span class="blur-text">急症手术</span>的指征</td>
+                            <td>36.. <strong>马尾神经综合征(cauda equina syndrome)</strong><br>中央型的腰椎间盘突出可压迫<span class="answer-text">马尾神经</span>，出现<span class="answer-text">大小便失禁</span>、<span class="answer-text">鞍区感觉异常</span><br>急性发病时应作为<span class="answer-text">急症手术</span>的指征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>间歇性跛行(intermittent claudication)</strong><br>活动行走除疼痛麻木外，亦可因步行路途距离增加而感<span class="blur-text">小腿乏力</span><br>此症状可因<span class="blur-text">休息、下蹲</span>而缓解，再度行走活动又复出现<br>见于<span class="blur-text">腰椎管狭窄症</span></td>
+                            <td>37.. <strong>间歇性跛行(intermittent claudication)</strong><br>活动行走除疼痛麻木外，亦可因步行路途距离增加而感<span class="answer-text">小腿乏力</span><br>此症状可因<span class="answer-text">休息、下蹲</span>而缓解，再度行走活动又复出现<br>见于<span class="answer-text">腰椎管狭窄症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>压缩骨折(compression fracture)</strong><br>发生于<span class="blur-text">椎体的前部骨折</span>，中柱结构保持完整<br>压缩可发生于椎体<span class="blur-text">前方、侧方上或下终板</span>（<span class="blur-text">前屈暴力</span>）</td>
+                            <td>38.. <strong>压缩骨折(compression fracture)</strong><br>发生于<span class="answer-text">椎体的前部骨折</span>，中柱结构保持完整<br>压缩可发生于椎体<span class="answer-text">前方、侧方上或下终板</span>（<span class="answer-text">前屈暴力</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>爆裂骨折(burst fracture)</strong><br>特点是<span class="blur-text">椎体中柱损伤</span>，这是与压缩骨折的区别<br>损伤机制是由过度的<span class="blur-text">纵向负荷</span>引起</td>
+                            <td>39.. <strong>爆裂骨折(burst fracture)</strong><br>特点是<span class="answer-text">椎体中柱损伤</span>，这是与压缩骨折的区别<br>损伤机制是由过度的<span class="answer-text">纵向负荷</span>引起</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>Chance骨折(屈曲分离损伤)</strong><br>多发生于<span class="blur-text">交通事故</span><br>在一个水平通过<span class="blur-text">骨结构或韧带损伤</span>；在两个水平通过中柱骨结构或韧带、间盘结构，是<span class="blur-text">不稳定的损伤</span></td>
+                            <td>40.. <strong>Chance骨折(屈曲分离损伤)</strong><br>多发生于<span class="answer-text">交通事故</span><br>在一个水平通过<span class="answer-text">骨结构或韧带损伤</span>；在两个水平通过中柱骨结构或韧带、间盘结构，是<span class="answer-text">不稳定的损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>骨折脱位(fracture-dislocation)</strong><br>是由于<span class="blur-text">压缩、张力、旋转或剪切力</span>导致脊柱<span class="blur-text">三柱的损伤</span></td>
+                            <td>41.. <strong>骨折脱位(fracture-dislocation)</strong><br>是由于<span class="answer-text">压缩、张力、旋转或剪切力</span>导致脊柱<span class="answer-text">三柱的损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>流注脓肿</strong><br>椎旁脓肿积聚至一定数量后，压力增高，会穿破骨膜，沿着<span class="blur-text">肌筋膜间隙向下方流动</span>，在远离病灶的部位出现脓肿</td>
+                            <td>42.. <strong>流注脓肿</strong><br>椎旁脓肿积聚至一定数量后，压力增高，会穿破骨膜，沿着<span class="answer-text">肌筋膜间隙向下方流动</span>，在远离病灶的部位出现脓肿</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>冷脓肿(cold abscess)</strong><br>结核进一步发展，在病灶部位积聚了大量<span class="blur-text">脓液、结核性肉芽组织、死骨和干酪样坏死组织</span><br>由于无<span class="blur-text">红热</span>等急性炎症表现，故结核脓肿成为冷脓肿或寒性脓肿</td>
+                            <td>43.. <strong>冷脓肿(cold abscess)</strong><br>结核进一步发展，在病灶部位积聚了大量<span class="answer-text">脓液、结核性肉芽组织、死骨和干酪样坏死组织</span><br>由于无<span class="answer-text">红热</span>等急性炎症表现，故结核脓肿成为冷脓肿或寒性脓肿</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>Tinel sign</strong><br>神经干叩击试验，指叩击<span class="blur-text">神经损伤或神经损害的部位或其远侧</span>，而出现其支配皮区的<span class="blur-text">放电样麻痛感或蚁走感</span><br>代表<span class="blur-text">神经再生的水平或神经损害的部位</span></td>
+                            <td>44.. <strong>Tinel sign</strong><br>神经干叩击试验，指叩击<span class="answer-text">神经损伤或神经损害的部位或其远侧</span>，而出现其支配皮区的<span class="answer-text">放电样麻痛感或蚁走感</span><br>代表<span class="answer-text">神经再生的水平或神经损害的部位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>颈椎间孔挤压试验(Spurling test)</strong><br>患者端坐，头后仰并偏向患侧，检查者用手掌在其头顶加压<br>出现<span class="blur-text">颈痛并向患侧上肢放射</span>为阳性，见于<span class="blur-text">神经根性颈椎病</span></td>
+                            <td>45.. <strong>颈椎间孔挤压试验(Spurling test)</strong><br>患者端坐，头后仰并偏向患侧，检查者用手掌在其头顶加压<br>出现<span class="answer-text">颈痛并向患侧上肢放射</span>为阳性，见于<span class="answer-text">神经根性颈椎病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46.. <strong>上臂牵拉试验(Eaton sign)</strong><br>病人坐位，检查者一手将病人头部推向健侧，另一手握住病人腕部向外下牵拉<br>如出现<span class="blur-text">患肢疼痛、麻木感</span>为阳性，见于<span class="blur-text">神经根性颈椎病</span></td>
+                            <td>46.. <strong>上臂牵拉试验(Eaton sign)</strong><br>病人坐位，检查者一手将病人头部推向健侧，另一手握住病人腕部向外下牵拉<br>如出现<span class="answer-text">患肢疼痛、麻木感</span>为阳性，见于<span class="answer-text">神经根性颈椎病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47.. <strong>拾物试验(pick-up test)</strong><br>在地上放一物品，嘱患者去拾，正常者轻松弯腰拾起<br>如患者<span class="blur-text">腰部伸直，屈髋屈膝或艰难拾物</span>则为阳性，提示<span class="blur-text">腰部肌肉紧张或痉挛</span>，多见于<span class="blur-text">下胸椎及腰椎病变</span></td>
+                            <td>47.. <strong>拾物试验(pick-up test)</strong><br>在地上放一物品，嘱患者去拾，正常者轻松弯腰拾起<br>如患者<span class="answer-text">腰部伸直，屈髋屈膝或艰难拾物</span>则为阳性，提示<span class="answer-text">腰部肌肉紧张或痉挛</span>，多见于<span class="answer-text">下胸椎及腰椎病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48.. <strong>直腿抬高试验(Lasegue sign/straight-leg-raising test)</strong><br>患者仰卧，检查者一手托患者足跟，另一手保持膝关节伸直，缓慢抬高患肢<br>如在<span class="blur-text">60°</span>范围内即出现坐骨神经的放射痛，称为直腿抬高试验阳性<br>提示可能存在<span class="blur-text">腰椎间盘突出症</span>或<span class="blur-text">坐骨神经痛</span></td>
+                            <td>48.. <strong>直腿抬高试验(Lasegue sign/straight-leg-raising test)</strong><br>患者仰卧，检查者一手托患者足跟，另一手保持膝关节伸直，缓慢抬高患肢<br>如在<span class="answer-text">60°</span>范围内即出现坐骨神经的放射痛，称为直腿抬高试验阳性<br>提示可能存在<span class="answer-text">腰椎间盘突出症</span>或<span class="answer-text">坐骨神经痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49.. <strong>直腿抬高加强试验(Bragard sign)</strong><br>在直腿抬高试验阳性时，缓慢放低患肢高度，待放射痛消失后，再突然<span class="blur-text">背屈踝关节</span><br>如再度出现放射痛，称为加强试验阳性<br>提示可能存在<span class="blur-text">腰椎间盘突出症</span>或<span class="blur-text">坐骨神经痛</span></td>
+                            <td>49.. <strong>直腿抬高加强试验(Bragard sign)</strong><br>在直腿抬高试验阳性时，缓慢放低患肢高度，待放射痛消失后，再突然<span class="answer-text">背屈踝关节</span><br>如再度出现放射痛，称为加强试验阳性<br>提示可能存在<span class="answer-text">腰椎间盘突出症</span>或<span class="answer-text">坐骨神经痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50.. <strong>Adam前屈试验(Adam's forward-bend test)</strong><br>嘱患者双腿伸直，双膝、双手并拢，弯腰前屈身体<br>观察患者在弯腰过程中<span class="blur-text">背部是否对称</span>，有无隆起以及棘突是否居中<br>出现异常者为阳性，提示<span class="blur-text">胸腰椎畸形</span>，此试验对<span class="blur-text">胸椎侧突</span>尤其敏感</td>
+                            <td>50.. <strong>Adam前屈试验(Adam's forward-bend test)</strong><br>嘱患者双腿伸直，双膝、双手并拢，弯腰前屈身体<br>观察患者在弯腰过程中<span class="answer-text">背部是否对称</span>，有无隆起以及棘突是否居中<br>出现异常者为阳性，提示<span class="answer-text">胸腰椎畸形</span>，此试验对<span class="answer-text">胸椎侧突</span>尤其敏感</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51.. <strong>骨盆挤压分离试验(pelvic compression and separation test)</strong><br>患者仰卧，检查者双手从两侧髂前上棘处对向挤压或向后外分离骨盆<br>引起<span class="blur-text">骨盆疼痛</span>为阳性，见于<span class="blur-text">骨盆骨折</span></td>
+                            <td>51.. <strong>骨盆挤压分离试验(pelvic compression and separation test)</strong><br>患者仰卧，检查者双手从两侧髂前上棘处对向挤压或向后外分离骨盆<br>引起<span class="answer-text">骨盆疼痛</span>为阳性，见于<span class="answer-text">骨盆骨折</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52.. <strong>髋关节过伸试验(Yeoman test)</strong><br>患者俯卧，检查者一手压在患者骶部，一手握住踝部，使膝关节屈至90°，并向上提起，使髋关节过伸，并扭动骶髂关节<br>如有疼痛即为阳性，见于<span class="blur-text">骶髂关节或髋关节病变</span></td>
+                            <td>52.. <strong>髋关节过伸试验(Yeoman test)</strong><br>患者俯卧，检查者一手压在患者骶部，一手握住踝部，使膝关节屈至90°，并向上提起，使髋关节过伸，并扭动骶髂关节<br>如有疼痛即为阳性，见于<span class="answer-text">骶髂关节或髋关节病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>斜扳试验(Slope pull test)</strong><br>患者仰卧，充分屈曲患侧髋、膝关节，检查者一手按住患侧肩部，一手按住患侧膝部的外侧，向健侧推去<br><span class="blur-text">骶髂关节疼痛</span>者为阳性，提示<span class="blur-text">骶髂关节病变</span></td>
+                            <td>53.. <strong>斜扳试验(Slope pull test)</strong><br>患者仰卧，充分屈曲患侧髋、膝关节，检查者一手按住患侧肩部，一手按住患侧膝部的外侧，向健侧推去<br><span class="answer-text">骶髂关节疼痛</span>者为阳性，提示<span class="answer-text">骶髂关节病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>托马斯征(Thomas sign)</strong><br>患者仰卧，充分屈曲健侧髋膝，并使腰部贴于床面<br>若患肢<span class="blur-text">自动抬高离开床面</span>或迫使患肢与床面接触腰部无法贴近床面时，为阳性<br>见于<span class="blur-text">髋部病变</span>或<span class="blur-text">屈髋肌挛缩、结核、腰大肌脓肿</span>等</td>
+                            <td>54.. <strong>托马斯征(Thomas sign)</strong><br>患者仰卧，充分屈曲健侧髋膝，并使腰部贴于床面<br>若患肢<span class="answer-text">自动抬高离开床面</span>或迫使患肢与床面接触腰部无法贴近床面时，为阳性<br>见于<span class="answer-text">髋部病变</span>或<span class="answer-text">屈髋肌挛缩、结核、腰大肌脓肿</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>"4"字试验(Patrick test)</strong><br>患者仰卧，健肢伸直，患侧髋与膝关节屈曲，使大腿外展、外旋，将外踝置于健侧大腿上，类似一个"4"字<br>一手固定健侧骨盆，另一手下压患肢膝部<br>出现<span class="blur-text">髋部疼痛</span>为阳性，见于<span class="blur-text">髋关节和骶髂关节病变</span></td>
+                            <td>55.. <strong>"4"字试验(Patrick test)</strong><br>患者仰卧，健肢伸直，患侧髋与膝关节屈曲，使大腿外展、外旋，将外踝置于健侧大腿上，类似一个"4"字<br>一手固定健侧骨盆，另一手下压患肢膝部<br>出现<span class="answer-text">髋部疼痛</span>为阳性，见于<span class="answer-text">髋关节和骶髂关节病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>单足站立试验(Trendelenburg test)</strong><br>患者健肢屈髋、屈膝上提，用患肢站立<br>如<span class="blur-text">健侧骨盆及臀褶下降</span>为阳性，多见于<span class="blur-text">臀中、小肌麻痹</span>，髋关节脱位及陈旧性股骨颈骨折</td>
+                            <td>56.. <strong>单足站立试验(Trendelenburg test)</strong><br>患者健肢屈髋、屈膝上提，用患肢站立<br>如<span class="answer-text">健侧骨盆及臀褶下降</span>为阳性，多见于<span class="answer-text">臀中、小肌麻痹</span>，髋关节脱位及陈旧性股骨颈骨折</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>Allis征</strong><br>患者仰卧，屈髋、屈膝，两足平行放于床面，足跟对齐，观察双膝的高度<br>如<span class="blur-text">一侧膝比另一侧高</span>时，或双侧髌骨不在同一平面，即为阳性<br>见于<span class="blur-text">髋关节脱位</span>，<span class="blur-text">股骨或胫骨短缩</span></td>
+                            <td>57.. <strong>Allis征</strong><br>患者仰卧，屈髋、屈膝，两足平行放于床面，足跟对齐，观察双膝的高度<br>如<span class="answer-text">一侧膝比另一侧高</span>时，或双侧髌骨不在同一平面，即为阳性<br>见于<span class="answer-text">髋关节脱位</span>，<span class="answer-text">股骨或胫骨短缩</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.. <strong>望远镜试验(Dupuytren sign)</strong><br>患儿仰卧，检查者一手握住病人膝部，一手固定骨盆，上下推动大腿<br>若觉察有<span class="blur-text">抽动和音响</span>即为阳性，提示<span class="blur-text">小儿先天性髋脱位</span></td>
+                            <td>58.. <strong>望远镜试验(Dupuytren sign)</strong><br>患儿仰卧，检查者一手握住病人膝部，一手固定骨盆，上下推动大腿<br>若觉察有<span class="answer-text">抽动和音响</span>即为阳性，提示<span class="answer-text">小儿先天性髋脱位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59.. <strong>Ortolani征</strong><br>患儿仰卧，屈膝屈髋至90°，逐渐外展髋关节<br>当外展一定角度后，感觉<span class="blur-text">脱位的股骨头弹跳进入髋关节内</span>为阳性，提示<span class="blur-text">小儿先天性髋脱位</span></td>
+                            <td>59.. <strong>Ortolani征</strong><br>患儿仰卧，屈膝屈髋至90°，逐渐外展髋关节<br>当外展一定角度后，感觉<span class="answer-text">脱位的股骨头弹跳进入髋关节内</span>为阳性，提示<span class="answer-text">小儿先天性髋脱位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60.. <strong>髂胫束试验(Ober's test)</strong><br>患者健侧卧位，健侧屈髋屈膝，检查者一手固定骨盆，一手握住患侧踝部，使膝关节屈曲90°，之后屈髋外展，再伸直患膝<br>此时放松握踝的手，使患肢自然落下，正常人应落在健肢之后方<br>如<span class="blur-text">不能落下或落在健肢的前方</span>，则为阳性，说明<span class="blur-text">髂胫束挛缩、紧张</span></td>
+                            <td>60.. <strong>髂胫束试验(Ober's test)</strong><br>患者健侧卧位，健侧屈髋屈膝，检查者一手固定骨盆，一手握住患侧踝部，使膝关节屈曲90°，之后屈髋外展，再伸直患膝<br>此时放松握踝的手，使患肢自然落下，正常人应落在健肢之后方<br>如<span class="answer-text">不能落下或落在健肢的前方</span>，则为阳性，说明<span class="answer-text">髂胫束挛缩、紧张</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61.. <strong>Nelaton线</strong><br>患者仰卧并半屈髋，在<span class="blur-text">髂前上棘和坐骨结节</span>之间画线<br>正常时此线通过<span class="blur-text">大转子尖</span>，如大转子尖上移超过此线，则为异常<br>见于<span class="blur-text">髋关节后脱位</span>或<span class="blur-text">股骨颈骨折</span></td>
+                            <td>61.. <strong>Nelaton线</strong><br>患者仰卧并半屈髋，在<span class="answer-text">髂前上棘和坐骨结节</span>之间画线<br>正常时此线通过<span class="answer-text">大转子尖</span>，如大转子尖上移超过此线，则为异常<br>见于<span class="answer-text">髋关节后脱位</span>或<span class="answer-text">股骨颈骨折</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62.. <strong>Shoemaker线</strong><br>从<span class="blur-text">大转子顶至同侧髂前上棘</span>作一连线向腹壁延长<br>正常情况下，上延长线在<span class="blur-text">脐或脐以上</span>与腹中线相交<br>当有股骨颈骨折或髋关节脱位时，大转子上移，则此延长线在<span class="blur-text">脐以下</span>与腹中线相交，为此征阳性</td>
+                            <td>62.. <strong>Shoemaker线</strong><br>从<span class="answer-text">大转子顶至同侧髂前上棘</span>作一连线向腹壁延长<br>正常情况下，上延长线在<span class="answer-text">脐或脐以上</span>与腹中线相交<br>当有股骨颈骨折或髋关节脱位时，大转子上移，则此延长线在<span class="answer-text">脐以下</span>与腹中线相交，为此征阳性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63.. <strong>Bryant三角</strong><br>病人侧卧，沿一侧髂前上棘垂直向下和向大转子尖各画一线，再从大转子尖向近侧画一水平线，这三条线构成一个三角<br>测其底线与健侧相比，<span class="blur-text">大转子上移</span>时，此底线较健侧缩短</td>
+                            <td>63.. <strong>Bryant三角</strong><br>病人侧卧，沿一侧髂前上棘垂直向下和向大转子尖各画一线，再从大转子尖向近侧画一水平线，这三条线构成一个三角<br>测其底线与健侧相比，<span class="answer-text">大转子上移</span>时，此底线较健侧缩短</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64.. <strong>浮髌试验(floating patella test)</strong><br>患者仰卧，膝关节伸直，放松大腿肌肉，检查者一手虎口对着其髌上囊，手掌用力压迫髌上囊，将髌上囊及膝内液体压入髌股关节，另一手指指腹轻压髌骨后快速移开<br>若感觉<span class="blur-text">髌骨浮起</span>，即为阳性，提示膝关节内积液<span class="blur-text">50ml</span>以上</td>
+                            <td>64.. <strong>浮髌试验(floating patella test)</strong><br>患者仰卧，膝关节伸直，放松大腿肌肉，检查者一手虎口对着其髌上囊，手掌用力压迫髌上囊，将髌上囊及膝内液体压入髌股关节，另一手指指腹轻压髌骨后快速移开<br>若感觉<span class="answer-text">髌骨浮起</span>，即为阳性，提示膝关节内积液<span class="answer-text">50ml</span>以上</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65.. <strong>回旋挤压试验(McMurray test)</strong><br>患者仰卧，检查者一手拇指及其余四指分别按住其膝内、外间隙，一手握住足跟部，极度屈膝<br>在伸、屈膝的过程中，当小腿<span class="blur-text">内收、外旋</span>某一角度时出现膝部疼痛，提示<span class="blur-text">内侧半月板病变</span><br>当小腿<span class="blur-text">外展、内旋</span>到某一角度出现膝部疼痛，提示<span class="blur-text">外侧半月板病变</span></td>
+                            <td>65.. <strong>回旋挤压试验(McMurray test)</strong><br>患者仰卧，检查者一手拇指及其余四指分别按住其膝内、外间隙，一手握住足跟部，极度屈膝<br>在伸、屈膝的过程中，当小腿<span class="answer-text">内收、外旋</span>某一角度时出现膝部疼痛，提示<span class="answer-text">内侧半月板病变</span><br>当小腿<span class="answer-text">外展、内旋</span>到某一角度出现膝部疼痛，提示<span class="answer-text">外侧半月板病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66.. <strong>抽屉试验(Drawer test)</strong><br>患者仰卧，屈膝90°，检查者轻坐在患侧足背上，双手握住小腿上段，向后推，再向前拉<br><span class="blur-text">前交叉韧带断裂</span>时，可向前拉<span class="blur-text">0.5cm</span>以上；<span class="blur-text">后交叉韧带断裂</span>时，可向后推<span class="blur-text">0.5cm</span>以上</td>
+                            <td>66.. <strong>抽屉试验(Drawer test)</strong><br>患者仰卧，屈膝90°，检查者轻坐在患侧足背上，双手握住小腿上段，向后推，再向前拉<br><span class="answer-text">前交叉韧带断裂</span>时，可向前拉<span class="answer-text">0.5cm</span>以上；<span class="answer-text">后交叉韧带断裂</span>时，可向后推<span class="answer-text">0.5cm</span>以上</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67.. <strong>侧方应力试验(Bohler's sign)</strong><br>患者取仰卧位，将膝关节置于完全伸直位，分别做膝关节的被动外翻和内翻检查<br>与健侧对比，若超过正常外翻或内翻范围，则为阳性，说明有<span class="blur-text">内侧或外侧副韧带损伤</span></td>
+                            <td>67.. <strong>侧方应力试验(Bohler's sign)</strong><br>患者取仰卧位，将膝关节置于完全伸直位，分别做膝关节的被动外翻和内翻检查<br>与健侧对比，若超过正常外翻或内翻范围，则为阳性，说明有<span class="answer-text">内侧或外侧副韧带损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68.. <strong>研磨试验(Apley sign)</strong><br>患者仰卧，屈膝90°，检查者双手握患肢足部，左腿压住患腿，旋转提起患膝，若出现疼痛，则为<span class="blur-text">侧副韧带损伤</span><br>将膝下压，再旋转，若出现疼痛则为<span class="blur-text">半月板损伤</span></td>
+                            <td>68.. <strong>研磨试验(Apley sign)</strong><br>患者仰卧，屈膝90°，检查者双手握患肢足部，左腿压住患腿，旋转提起患膝，若出现疼痛，则为<span class="answer-text">侧副韧带损伤</span><br>将膝下压，再旋转，若出现疼痛则为<span class="answer-text">半月板损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69.. <strong>髌骨摩擦试验(Soto-holl sign)</strong><br>患者仰卧位，伸膝，检查者一手按压髌骨，使其在髌股关节面上下活动<br>出现<span class="blur-text">摩擦音或疼痛</span>者为阳性，见于<span class="blur-text">髌骨软化症</span></td>
+                            <td>69.. <strong>髌骨摩擦试验(Soto-holl sign)</strong><br>患者仰卧位，伸膝，检查者一手按压髌骨，使其在髌股关节面上下活动<br>出现<span class="answer-text">摩擦音或疼痛</span>者为阳性，见于<span class="answer-text">髌骨软化症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70.. <strong>方肩征(Square shoulder sign)</strong><br>正常肩关节呈膨隆外形，当肩关节弧度变平，关节腔空虚，肩峰突起，称为"方肩"<br>常见于<span class="blur-text">肩关节脱位</span></td>
+                            <td>70.. <strong>方肩征(Square shoulder sign)</strong><br>正常肩关节呈膨隆外形，当肩关节弧度变平，关节腔空虚，肩峰突起，称为"方肩"<br>常见于<span class="answer-text">肩关节脱位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71.. <strong>杜加征(Dugas sign)</strong><br>正常人将手搭在对侧肩上，肘部能贴近胸壁<br>若患侧的手搭在对侧肩上，<span class="blur-text">肘部则不能贴在胸壁</span>，或肘部贴在胸壁时，<span class="blur-text">手无法搭到对侧肩</span>，称为杜加征阳性<br>见于<span class="blur-text">肩关节前脱位</span></td>
+                            <td>71.. <strong>杜加征(Dugas sign)</strong><br>正常人将手搭在对侧肩上，肘部能贴近胸壁<br>若患侧的手搭在对侧肩上，<span class="answer-text">肘部则不能贴在胸壁</span>，或肘部贴在胸壁时，<span class="answer-text">手无法搭到对侧肩</span>，称为杜加征阳性<br>见于<span class="answer-text">肩关节前脱位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72.. <strong>腕伸肌紧张试验(Mill's sign)</strong><br>患者肘部伸直，腕部屈曲，前臂用力旋前时，<span class="blur-text">肱骨外上髁处疼痛</span>为阳性<br>常见于<span class="blur-text">肱骨外上髁炎</span>或称网球肘</td>
+                            <td>72.. <strong>腕伸肌紧张试验(Mill's sign)</strong><br>患者肘部伸直，腕部屈曲，前臂用力旋前时，<span class="answer-text">肱骨外上髁处疼痛</span>为阳性<br>常见于<span class="answer-text">肱骨外上髁炎</span>或称网球肘</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73.. <strong>握拳尺偏试验(Finkelstein test)</strong><br>患侧拇指握于掌心，使腕关节被动尺偏，<span class="blur-text">桡骨茎突处疼痛</span>为阳性<br>为<span class="blur-text">桡骨茎突狭窄性腱鞘炎</span>的典型体征</td>
+                            <td>73.. <strong>握拳尺偏试验(Finkelstein test)</strong><br>患侧拇指握于掌心，使腕关节被动尺偏，<span class="answer-text">桡骨茎突处疼痛</span>为阳性<br>为<span class="answer-text">桡骨茎突狭窄性腱鞘炎</span>的典型体征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74.. <strong>Thompson征</strong><br>患者俯卧，检查者以手捏小腿三头肌肌腹，如<span class="blur-text">踝跖屈</span>，为正常，反之为阳性<br>提示<span class="blur-text">跟腱断裂</span></td>
+                            <td>74.. <strong>Thompson征</strong><br>患者俯卧，检查者以手捏小腿三头肌肌腹，如<span class="answer-text">踝跖屈</span>，为正常，反之为阳性<br>提示<span class="answer-text">跟腱断裂</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75.. <strong>solar rays</strong><br>日光放射征，若骨肉瘤生长迅速，长入的血管受到牵拉而呈<span class="blur-text">放射状垂直于骨皮质</span>分布<br>在这些小血管周围因血供丰富，有较多肿瘤骨和反应骨形成，并沿血管走行分布，在X线上表现为日光放射征</td>
+                            <td>75.. <strong>solar rays</strong><br>日光放射征，若骨肉瘤生长迅速，长入的血管受到牵拉而呈<span class="answer-text">放射状垂直于骨皮质</span>分布<br>在这些小血管周围因血供丰富，有较多肿瘤骨和反应骨形成，并沿血管走行分布，在X线上表现为日光放射征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>76.. <strong>骨关节炎(osteoarthritis,OA)</strong><br>即<span class="blur-text">关节退行性疾病</span>，是一种慢性疾病，又称骨关节病、退行性关节炎等<br>以<span class="blur-text">骨关节退变、破坏</span>，<span class="blur-text">关节边缘骨赘形成</span>和<span class="blur-text">软骨下骨质增生</span>为主要特征<br>好发于<span class="blur-text">负重大、活动多的关节</span></td>
+                            <td>76.. <strong>骨关节炎(osteoarthritis,OA)</strong><br>即<span class="answer-text">关节退行性疾病</span>，是一种慢性疾病，又称骨关节病、退行性关节炎等<br>以<span class="answer-text">骨关节退变、破坏</span>，<span class="answer-text">关节边缘骨赘形成</span>和<span class="answer-text">软骨下骨质增生</span>为主要特征<br>好发于<span class="answer-text">负重大、活动多的关节</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>77.. <strong>类风湿性关节炎(Rheumatoid arthritis)</strong><br>以<span class="blur-text">关节滑膜炎、系统性血管炎</span>等病理特征为主的，侵及关节并导致慢性进行性关节病变的<span class="blur-text">全身性自身免疫病</span></td>
+                            <td>77.. <strong>类风湿性关节炎(Rheumatoid arthritis)</strong><br>以<span class="answer-text">关节滑膜炎、系统性血管炎</span>等病理特征为主的，侵及关节并导致慢性进行性关节病变的<span class="answer-text">全身性自身免疫病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>78.. <strong>强直性脊柱炎(ankylosing spondylitis,AS)</strong><br>是一种多发于<span class="blur-text">青壮年</span>的慢性进行性炎症性疾病，主要侵犯<span class="blur-text">骶髂关节、脊柱关节突、临近韧带和近躯干大关节</span><br>进行性进展，导致<span class="blur-text">纤维性或骨性强直</span></td>
+                            <td>78.. <strong>强直性脊柱炎(ankylosing spondylitis,AS)</strong><br>是一种多发于<span class="answer-text">青壮年</span>的慢性进行性炎症性疾病，主要侵犯<span class="answer-text">骶髂关节、脊柱关节突、临近韧带和近躯干大关节</span><br>进行性进展，导致<span class="answer-text">纤维性或骨性强直</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>79.. <strong>骨质疏松(osteoporosis)</strong><br>是以<span class="blur-text">骨量低下、骨微结构破坏</span>，导致<span class="blur-text">骨脆性增加，易发生骨折</span>为特征的全身性疾病</td>
+                            <td>79.. <strong>骨质疏松(osteoporosis)</strong><br>是以<span class="answer-text">骨量低下、骨微结构破坏</span>，导致<span class="answer-text">骨脆性增加，易发生骨折</span>为特征的全身性疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>80.. <strong>痛风(gout)</strong><br>是一种<span class="blur-text">单钠尿酸盐沉积</span>所致的晶体相关性关节炎<br><span class="blur-text">高尿酸血症</span>与其直接相关</td>
+                            <td>80.. <strong>痛风(gout)</strong><br>是一种<span class="answer-text">单钠尿酸盐沉积</span>所致的晶体相关性关节炎<br><span class="answer-text">高尿酸血症</span>与其直接相关</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>81.. <strong>爪形手(claw hand)</strong><br>尺神经于腕部损伤时，<span class="blur-text">小鱼际肌、骨间掌背侧肌及第3、4蚓状肌</span>瘫痪、萎缩<br>手背侧掌骨间见明显凹陷，<span class="blur-text">环指和小指</span>呈爪状畸形</td>
+                            <td>81.. <strong>爪形手(claw hand)</strong><br>尺神经于腕部损伤时，<span class="answer-text">小鱼际肌、骨间掌背侧肌及第3、4蚓状肌</span>瘫痪、萎缩<br>手背侧掌骨间见明显凹陷，<span class="answer-text">环指和小指</span>呈爪状畸形</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>82.. <strong>夹纸试验阳性</strong><br>尺神经损伤时，各手指<span class="blur-text">不能内收外展</span>，夹指试验阳性<br>患手的握力减弱，持物不稳，精细动作明显受损</td>
+                            <td>82.. <strong>夹纸试验阳性</strong><br>尺神经损伤时，各手指<span class="answer-text">不能内收外展</span>，夹指试验阳性<br>患手的握力减弱，持物不稳，精细动作明显受损</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>83.. <strong>Froment sign(+)</strong><br>尺神经损伤后，<span class="blur-text">拇短屈肌尺侧半及拇收肌</span>肌力消失导致拇指掌指关节屈曲减弱<br>故拇、示指用力相捏时，<span class="blur-text">示指近侧指间关节屈曲，远侧指间关节过伸</span>，拇指呈掌指关节过伸、指间关节过屈</td>
+                            <td>83.. <strong>Froment sign(+)</strong><br>尺神经损伤后，<span class="answer-text">拇短屈肌尺侧半及拇收肌</span>肌力消失导致拇指掌指关节屈曲减弱<br>故拇、示指用力相捏时，<span class="answer-text">示指近侧指间关节屈曲，远侧指间关节过伸</span>，拇指呈掌指关节过伸、指间关节过屈</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>84.. <strong>猿手(ape hand)</strong><br>正中神经受损失，<span class="blur-text">拇对掌受限</span>，<span class="blur-text">大鱼际肌萎缩</span>，称为猿掌</td>
+                            <td>84.. <strong>猿手(ape hand)</strong><br>正中神经受损失，<span class="answer-text">拇对掌受限</span>，<span class="answer-text">大鱼际肌萎缩</span>，称为猿掌</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>85.. <strong>Colles骨折</strong><br>多为腕关节处于<span class="blur-text">背伸位</span>时，<span class="blur-text">手掌着地、前臂旋前</span>时受伤<br>远断端多向<span class="blur-text">桡侧、背侧</span>移位，多存在缩短及旋转，断端向掌侧成角<br>侧面为"<span class="blur-text">银叉样</span>"畸形，正面为"<span class="blur-text">刺刀样</span>"畸形</td>
+                            <td>85.. <strong>Colles骨折</strong><br>多为腕关节处于<span class="answer-text">背伸位</span>时，<span class="answer-text">手掌着地、前臂旋前</span>时受伤<br>远断端多向<span class="answer-text">桡侧、背侧</span>移位，多存在缩短及旋转，断端向掌侧成角<br>侧面为"<span class="answer-text">银叉样</span>"畸形，正面为"<span class="answer-text">刺刀样</span>"畸形</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>86.. <strong>Smith骨折</strong><br>多为腕关节处于<span class="blur-text">掌屈位</span>时，<span class="blur-text">手背着地，前臂旋后</span>时受伤<br>远断端多向<span class="blur-text">尺侧、掌侧</span>移位，断端向背侧成角</td>
+                            <td>86.. <strong>Smith骨折</strong><br>多为腕关节处于<span class="answer-text">掌屈位</span>时，<span class="answer-text">手背着地，前臂旋后</span>时受伤<br>远断端多向<span class="answer-text">尺侧、掌侧</span>移位，断端向背侧成角</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>87.. <strong>Barton骨折</strong><br><span class="blur-text">关节面骨折伴腕关节脱位</span></td>
+                            <td>87.. <strong>Barton骨折</strong><br><span class="answer-text">关节面骨折伴腕关节脱位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>88.. <strong>5P征</strong><br>骨筋膜室综合征缺血性肌痉挛的5个主要临床表现：<br><span class="blur-text">疼痛转为无痛(pain)</span>；<span class="blur-text">皮肤苍白或发绀、大理石花纹(pallor)</span>；<span class="blur-text">感觉异常(paresthesia)</span>；<span class="blur-text">麻痹(paralysis)</span>；<span class="blur-text">无脉(pulselessness)</span></td>
+                            <td>88.. <strong>5P征</strong><br>骨筋膜室综合征缺血性肌痉挛的5个主要临床表现：<br><span class="answer-text">疼痛转为无痛(pain)</span>；<span class="answer-text">皮肤苍白或发绀、大理石花纹(pallor)</span>；<span class="answer-text">感觉异常(paresthesia)</span>；<span class="answer-text">麻痹(paralysis)</span>；<span class="answer-text">无脉(pulselessness)</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>89.. <strong>Bankart损伤</strong><br>肩关节盂唇<span class="blur-text">前下方</span>在前下盂肱韧带复合体附着处的<span class="blur-text">撕脱性损伤</span></td>
+                            <td>89.. <strong>Bankart损伤</strong><br>肩关节盂唇<span class="answer-text">前下方</span>在前下盂肱韧带复合体附着处的<span class="answer-text">撕脱性损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>90.. <strong>肩袖(Rotator Cuff)</strong><br>由<span class="blur-text">冈上肌、冈下肌、小圆肌和肩胛下肌</span>的肌腱止点在肱骨头周围形成的一个袖套样复合结构</td>
+                            <td>90.. <strong>肩袖(Rotator Cuff)</strong><br>由<span class="answer-text">冈上肌、冈下肌、小圆肌和肩胛下肌</span>的肌腱止点在肱骨头周围形成的一个袖套样复合结构</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>91.. <strong>盖氏骨折(Galeazzi骨折)</strong><br><span class="blur-text">桡骨下1/3骨折</span>合并<span class="blur-text">尺骨小头脱位</span></td>
+                            <td>91.. <strong>盖氏骨折(Galeazzi骨折)</strong><br><span class="answer-text">桡骨下1/3骨折</span>合并<span class="answer-text">尺骨小头脱位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>92.. <strong>孟氏骨折(Monteggia骨折)</strong><br><span class="blur-text">尺骨近端上1/3骨折</span>合并<span class="blur-text">桡骨头脱位</span></td>
+                            <td>92.. <strong>孟氏骨折(Monteggia骨折)</strong><br><span class="answer-text">尺骨近端上1/3骨折</span>合并<span class="answer-text">桡骨头脱位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>93.. <strong>Morel-Lavalle损伤</strong><br>耻骨和坐骨骨折后骨折断端出血，可在伤后几天出现<span class="blur-text">会阴部肿胀、瘀斑</span><br>广泛的瘀斑和皮下波动感提示<span class="blur-text">脱套样损伤</span></td>
+                            <td>93.. <strong>Morel-Lavalle损伤</strong><br>耻骨和坐骨骨折后骨折断端出血，可在伤后几天出现<span class="answer-text">会阴部肿胀、瘀斑</span><br>广泛的瘀斑和皮下波动感提示<span class="answer-text">脱套样损伤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>94.. <strong>Pauwels角</strong><br>骨折线与<span class="blur-text">两侧髂嵴连线</span>的夹角</td>
+                            <td>94.. <strong>Pauwels角</strong><br>骨折线与<span class="answer-text">两侧髂嵴连线</span>的夹角</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>95.. <strong>Allen试验</strong><br>是判断<span class="blur-text">尺、桡动脉吻合通畅</span>的有效方法之一<br>具体方法：嘱病人用力握拳，检查者两手拇指用力分别按压阻断腕与前臂交界处的<span class="blur-text">尺、桡动脉</span>，嘱病人手掌放松、伸指，此时手掌部皮肤苍白，然后放开尺动脉，手掌迅速变红</td>
+                            <td>95.. <strong>Allen试验</strong><br>是判断<span class="answer-text">尺、桡动脉吻合通畅</span>的有效方法之一<br>具体方法：嘱病人用力握拳，检查者两手拇指用力分别按压阻断腕与前臂交界处的<span class="answer-text">尺、桡动脉</span>，嘱病人手掌放松、伸指，此时手掌部皮肤苍白，然后放开尺动脉，手掌迅速变红</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>96.. <strong>Lachman试验</strong><br>病人仰卧，屈膝约<span class="blur-text">30°</span>，检查者用一只手固定大腿，另一只手试图<span class="blur-text">向前移动胫骨</span><br>阳性结果提示有<span class="blur-text">前交叉韧带损伤</span>，较之抽屉试验阳性率更高</td>
+                            <td>96.. <strong>Lachman试验</strong><br>病人仰卧，屈膝约<span class="answer-text">30°</span>，检查者用一只手固定大腿，另一只手试图<span class="answer-text">向前移动胫骨</span><br>阳性结果提示有<span class="answer-text">前交叉韧带损伤</span>，较之抽屉试验阳性率更高</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>97.. <strong>颈干角</strong><br>股骨颈的长轴线与股骨干纵轴线之间形成颈干角，为<span class="blur-text">110°~140°</span>，平均<span class="blur-text">127°</span></td>
+                            <td>97.. <strong>颈干角</strong><br>股骨颈的长轴线与股骨干纵轴线之间形成颈干角，为<span class="answer-text">110°~140°</span>，平均<span class="answer-text">127°</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>98.. <strong>前倾角</strong><br>在矢状面上，股骨颈的长轴与股骨干的额状面形成一个角度，成人正常约为<span class="blur-text">12-15°</span></td>
+                            <td>98.. <strong>前倾角</strong><br>在矢状面上，股骨颈的长轴与股骨干的额状面形成一个角度，成人正常约为<span class="answer-text">12-15°</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>99.. <strong>股骨头缺血性坏死(ONFH)</strong><br>是股骨头<span class="blur-text">血供中断或受损</span>，引起<span class="blur-text">骨细胞、骨髓成分死亡</span>及随后的修复，继而导致股骨头结构改变、股骨头塌陷、关节功能障碍的疾病</td>
+                            <td>99.. <strong>股骨头缺血性坏死(ONFH)</strong><br>是股骨头<span class="answer-text">血供中断或受损</span>，引起<span class="answer-text">骨细胞、骨髓成分死亡</span>及随后的修复，继而导致股骨头结构改变、股骨头塌陷、关节功能障碍的疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>100.. <strong>Tinel征</strong><br>当神经轴突再生，尚未形成髓鞘之前，对外界的叩击可出现<span class="blur-text">疼痛、放射痛和过电感</span>等过敏现象</td>
+                            <td>100.. <strong>Tinel征</strong><br>当神经轴突再生，尚未形成髓鞘之前，对外界的叩击可出现<span class="answer-text">疼痛、放射痛和过电感</span>等过敏现象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>101.. <strong>Ochsner征</strong><br>将两手手指放开，相互穿插合抱<br>正中神经有损害者，所有手指都能屈曲，只有病侧<span class="blur-text">示指不能屈曲</span></td>
+                            <td>101.. <strong>Ochsner征</strong><br>将两手手指放开，相互穿插合抱<br>正中神经有损害者，所有手指都能屈曲，只有病侧<span class="answer-text">示指不能屈曲</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">102.. <strong>手的功能位(Functional position of the hand)</strong><br>是手可以随时发挥最大功能的位置，如张手、握拳、捏物等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>103.. <strong>桡骨下端骨折(fracture of lower end of radius)</strong><br>是指距桡骨下端关节面<span class="blur-text">3cm</span>以内的骨折<br>这个部位是<span class="blur-text">松质骨与密质骨交界处</span>，为解剖薄弱处，一旦遭受外力，容易骨折</td>
+                            <td>103.. <strong>桡骨下端骨折(fracture of lower end of radius)</strong><br>是指距桡骨下端关节面<span class="answer-text">3cm</span>以内的骨折<br>这个部位是<span class="answer-text">松质骨与密质骨交界处</span>，为解剖薄弱处，一旦遭受外力，容易骨折</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>104.. <strong>肱骨外科颈骨折(fracture of surgical neck of humerus)</strong><br>肱骨外科颈是<span class="blur-text">肱骨大结节、小结节移行为肱骨干的交界部位</span>，是松质骨密质骨的交接处，位于解剖颈下<span class="blur-text">2~3cm</span></td>
+                            <td>104.. <strong>肱骨外科颈骨折(fracture of surgical neck of humerus)</strong><br>肱骨外科颈是<span class="answer-text">肱骨大结节、小结节移行为肱骨干的交界部位</span>，是松质骨密质骨的交接处，位于解剖颈下<span class="answer-text">2~3cm</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>105.. <strong>肱骨干骨折(fracture of humeral shaft)</strong><br>肱骨外科颈下<span class="blur-text">1~2cm</span>至肱骨髁上<span class="blur-text">2cm</span>段内的骨折称为肱骨干骨折</td>
+                            <td>105.. <strong>肱骨干骨折(fracture of humeral shaft)</strong><br>肱骨外科颈下<span class="answer-text">1~2cm</span>至肱骨髁上<span class="answer-text">2cm</span>段内的骨折称为肱骨干骨折</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>106.. <strong>肱骨髁上骨折(supracondylar fracture of humerus)</strong><br>指<span class="blur-text">肱骨干与肱骨髁的交界处</span>发生的骨折</td>
+                            <td>106.. <strong>肱骨髁上骨折(supracondylar fracture of humerus)</strong><br>指<span class="answer-text">肱骨干与肱骨髁的交界处</span>发生的骨折</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>107.. <strong>解剖复位(anatomical reduction)</strong><br>骨折段通过复位，恢复了正常的解剖关系，<span class="blur-text">对位和对线</span>完全良好时，称解剖复位</td>
+                            <td>107.. <strong>解剖复位(anatomical reduction)</strong><br>骨折段通过复位，恢复了正常的解剖关系，<span class="answer-text">对位和对线</span>完全良好时，称解剖复位</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>108.. <strong>功能复位(functional reduction)</strong><br>经复位后，两骨折段虽未恢复正常的解剖关系，但在骨折愈合后对<span class="blur-text">肢体功能无明显影响</span>者，称功能复位</td>
+                            <td>108.. <strong>功能复位(functional reduction)</strong><br>经复位后，两骨折段虽未恢复正常的解剖关系，但在骨折愈合后对<span class="answer-text">肢体功能无明显影响</span>者，称功能复位</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">人体概述名词解释（三）</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>变质</strong><br>炎症局部组织发生的<span class="blur-text">变性</span>和<span class="blur-text">坏死</span>。</td>
+                            <td>1.. <strong>变质</strong><br>炎症局部组织发生的<span class="answer-text">变性</span>和<span class="answer-text">坏死</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>脓肿</strong><br>器官或组织内的<span class="blur-text">局限性化脓性炎症</span>，有<span class="blur-text">脓腔</span>形成，边界清楚，细胞坏死液化较重。</td>
+                            <td>2.. <strong>脓肿</strong><br>器官或组织内的<span class="answer-text">局限性化脓性炎症</span>，有<span class="answer-text">脓腔</span>形成，边界清楚，细胞坏死液化较重。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>渗出</strong><br>炎症局部组织血管内的<span class="blur-text">液体</span>和<span class="blur-text">细胞成分</span>通过血管壁进入<span class="blur-text">组织间隙</span>、体腔、黏膜表面和体表的过程。</td>
+                            <td>3.. <strong>渗出</strong><br>炎症局部组织血管内的<span class="answer-text">液体</span>和<span class="answer-text">细胞成分</span>通过血管壁进入<span class="answer-text">组织间隙</span>、体腔、黏膜表面和体表的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>疖</strong><br><span class="blur-text">毛囊</span>、<span class="blur-text">皮脂腺</span>及其周围组织所发生的小脓肿。</td>
+                            <td>4.. <strong>疖</strong><br><span class="answer-text">毛囊</span>、<span class="answer-text">皮脂腺</span>及其周围组织所发生的小脓肿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>肉芽肿</strong><br>炎症局部以<span class="blur-text">巨噬细胞</span>及其衍生细胞增生形成境界清楚的<span class="blur-text">结节状病灶</span>。</td>
+                            <td>5.. <strong>肉芽肿</strong><br>炎症局部以<span class="answer-text">巨噬细胞</span>及其衍生细胞增生形成境界清楚的<span class="answer-text">结节状病灶</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>炎细胞</strong><br>渗出到血管外的<span class="blur-text">白细胞</span>称为炎细胞。</td>
+                            <td>6.. <strong>炎细胞</strong><br>渗出到血管外的<span class="answer-text">白细胞</span>称为炎细胞。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>炎性息肉</strong><br>炎症局部<span class="blur-text">黏膜上皮</span>、腺体和肉芽组织增生而形成突出于黏膜表面的<span class="blur-text">息肉状肿块</span>。</td>
+                            <td>7.. <strong>炎性息肉</strong><br>炎症局部<span class="answer-text">黏膜上皮</span>、腺体和肉芽组织增生而形成突出于黏膜表面的<span class="answer-text">息肉状肿块</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>炎性假瘤</strong><br>局部<span class="blur-text">炎性肉芽组织</span>、实质细胞等增生形成境界清楚的瘤样肿块，肿块内有明显<span class="blur-text">炎细胞浸润</span>。</td>
+                            <td>8.. <strong>炎性假瘤</strong><br>局部<span class="answer-text">炎性肉芽组织</span>、实质细胞等增生形成境界清楚的瘤样肿块，肿块内有明显<span class="answer-text">炎细胞浸润</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>炎症介质</strong><br>炎症的<span class="blur-text">血管反应</span>和<span class="blur-text">白细胞反应</span>都是通过一系列化学因子的作用实现的。炎症过程中产生并参与介导炎症反应的<span class="blur-text">化学活性物质</span>。</td>
+                            <td>9.. <strong>炎症介质</strong><br>炎症的<span class="answer-text">血管反应</span>和<span class="answer-text">白细胞反应</span>都是通过一系列化学因子的作用实现的。炎症过程中产生并参与介导炎症反应的<span class="answer-text">化学活性物质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>炎症</strong><br>具有<span class="blur-text">血管系统</span>的活体组织对<span class="blur-text">损伤因子</span>所发生的以<span class="blur-text">防御</span>为主的病理反应。</td>
+                            <td>10.. <strong>炎症</strong><br>具有<span class="answer-text">血管系统</span>的活体组织对<span class="answer-text">损伤因子</span>所发生的以<span class="answer-text">防御</span>为主的病理反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>实性增生</strong><br>在<span class="blur-text">致炎因子</span>、组织崩解产物的刺激下，炎症局部的<span class="blur-text">实质细胞</span>、巨噬细胞、内皮细胞和成纤维细胞等的增生。</td>
+                            <td>11.. <strong>实性增生</strong><br>在<span class="answer-text">致炎因子</span>、组织崩解产物的刺激下，炎症局部的<span class="answer-text">实质细胞</span>、巨噬细胞、内皮细胞和成纤维细胞等的增生。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>脓毒败血症</strong><br><span class="blur-text">化脓菌</span>在血液中大量繁殖并产生毒素，除败血症表现外，全身多器官出现多发性<span class="blur-text">细菌栓塞性脓肿</span>。</td>
+                            <td>12.. <strong>脓毒败血症</strong><br><span class="answer-text">化脓菌</span>在血液中大量繁殖并产生毒素，除败血症表现外，全身多器官出现多发性<span class="answer-text">细菌栓塞性脓肿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>假膜性炎</strong><br>（伪膜性炎）发生在<span class="blur-text">黏膜</span>的<span class="blur-text">纤维素性炎</span>，渗出的纤维素、炎细胞、坏死的黏膜组织及病原菌等在黏膜表面形成灰白色膜状物（<span class="blur-text">假膜</span>），称假膜性炎。</td>
+                            <td>13.. <strong>假膜性炎</strong><br>（伪膜性炎）发生在<span class="answer-text">黏膜</span>的<span class="answer-text">纤维素性炎</span>，渗出的纤维素、炎细胞、坏死的黏膜组织及病原菌等在黏膜表面形成灰白色膜状物（<span class="answer-text">假膜</span>），称假膜性炎。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>脓液</strong><br>化脓性炎症时，组织细胞发生坏死液化，形成的液体状物，其主要成分为大量变性、坏死的<span class="blur-text">中性粒细胞</span>（<span class="blur-text">脓细胞</span>）、溶解的坏死组织和细菌等。</td>
+                            <td>14.. <strong>脓液</strong><br>化脓性炎症时，组织细胞发生坏死液化，形成的液体状物，其主要成分为大量变性、坏死的<span class="answer-text">中性粒细胞</span>（<span class="answer-text">脓细胞</span>）、溶解的坏死组织和细菌等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>蜂窝织炎</strong><br>发生在<span class="blur-text">疏松结缔组织</span>的<span class="blur-text">弥漫性化脓性炎</span>，中性粒细胞弥漫性浸润，边界不清，细胞坏死液化不明显。</td>
+                            <td>15.. <strong>蜂窝织炎</strong><br>发生在<span class="answer-text">疏松结缔组织</span>的<span class="answer-text">弥漫性化脓性炎</span>，中性粒细胞弥漫性浸润，边界不清，细胞坏死液化不明显。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>化脓性炎</strong><br>以<span class="blur-text">中性粒细胞</span>大量渗出并伴有不同程度的组织坏死液化形成<span class="blur-text">脓液</span>的炎症。</td>
+                            <td>16.. <strong>化脓性炎</strong><br>以<span class="answer-text">中性粒细胞</span>大量渗出并伴有不同程度的组织坏死液化形成<span class="answer-text">脓液</span>的炎症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>炎症（定义二）</strong><br>是具有<span class="blur-text">血管</span>的活体组织对各种<span class="blur-text">损伤刺激</span>所发生的以<span class="blur-text">防御反应</span>为主的基本病理过程。</td>
+                            <td>17.. <strong>炎症（定义二）</strong><br>是具有<span class="answer-text">血管</span>的活体组织对各种<span class="answer-text">损伤刺激</span>所发生的以<span class="answer-text">防御反应</span>为主的基本病理过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. A <strong>趋化作用</strong><br>白细胞沿<span class="blur-text">浓度梯度</span>向着<span class="blur-text">化学刺激物</span>作定向移动。<br><br>趋化因子：具有吸引白细胞定向移动的化学刺激物，包括<span class="blur-text">内源性</span>和<span class="blur-text">外源性</span>的趋化因子。</td>
+                            <td>18.. A <strong>趋化作用</strong><br>白细胞沿<span class="answer-text">浓度梯度</span>向着<span class="answer-text">化学刺激物</span>作定向移动。<br><br>趋化因子：具有吸引白细胞定向移动的化学刺激物，包括<span class="answer-text">内源性</span>和<span class="answer-text">外源性</span>的趋化因子。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>18.. B <strong>绒毛心</strong><br><span class="blur-text">风湿病</span>所致的心外膜炎时，由于心脏的搏动，使得渗出到心包腔的大量<span class="blur-text">纤维素</span>形成绒毛状外观，称为"绒毛心"。</td>
+                            <td>18.. B <strong>绒毛心</strong><br><span class="answer-text">风湿病</span>所致的心外膜炎时，由于心脏的搏动，使得渗出到心包腔的大量<span class="answer-text">纤维素</span>形成绒毛状外观，称为"绒毛心"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>19.. <strong>痈</strong><br>多个<span class="blur-text">疖</span>的融合，在皮下脂肪和筋膜组织中形成许多相互沟通的脓肿。</td>
+                            <td>19.. <strong>痈</strong><br>多个<span class="answer-text">疖</span>的融合，在皮下脂肪和筋膜组织中形成许多相互沟通的脓肿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>20.. <strong>机化</strong><br>指由新生<span class="blur-text">肉芽组织</span>吸收并取代<span class="blur-text">失活组织</span>或<span class="blur-text">异物</span>的过程。</td>
+                            <td>20.. <strong>机化</strong><br>指由新生<span class="answer-text">肉芽组织</span>吸收并取代<span class="answer-text">失活组织</span>或<span class="answer-text">异物</span>的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>21.. <strong>溃疡</strong><br><span class="blur-text">黏膜</span>或上皮组织全层或更深组织的局限性组织缺损。</td>
+                            <td>21.. <strong>溃疡</strong><br><span class="answer-text">黏膜</span>或上皮组织全层或更深组织的局限性组织缺损。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>22.. <strong>窦道</strong><br>坏死形成的、开口于表面的<span class="blur-text">深在性盲管</span>。</td>
+                            <td>22.. <strong>窦道</strong><br>坏死形成的、开口于表面的<span class="answer-text">深在性盲管</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>23.. <strong>瘘管</strong><br><span class="blur-text">两端开口</span>的通道样坏死性缺损。</td>
+                            <td>23.. <strong>瘘管</strong><br><span class="answer-text">两端开口</span>的通道样坏死性缺损。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>24.. <strong>空洞</strong><br>内脏局部的较大块坏死组织经溶解后由自然管道排出后留下的<span class="blur-text">空腔</span>。</td>
+                            <td>24.. <strong>空洞</strong><br>内脏局部的较大块坏死组织经溶解后由自然管道排出后留下的<span class="answer-text">空腔</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>25.. <strong>菌血症</strong><br>指炎症病灶中的<span class="blur-text">病原菌</span>侵入血流后，从血流中可查到细菌，但无全身中毒症状。</td>
+                            <td>25.. <strong>菌血症</strong><br>指炎症病灶中的<span class="answer-text">病原菌</span>侵入血流后，从血流中可查到细菌，但无全身中毒症状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>26.. <strong>毒血症</strong><br>指细菌的<span class="blur-text">毒素</span>或<span class="blur-text">毒性代谢产物</span>被吸收入血，引起高热、寒战等全身中毒症状，但血培养阴性，即找不到细菌。</td>
+                            <td>26.. <strong>毒血症</strong><br>指细菌的<span class="answer-text">毒素</span>或<span class="answer-text">毒性代谢产物</span>被吸收入血，引起高热、寒战等全身中毒症状，但血培养阴性，即找不到细菌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>27.. <strong>败血症</strong><br>指细菌入血后，在血液中大量<span class="blur-text">生长繁殖</span>，并产生<span class="blur-text">毒素</span>，引起全身中毒症状。</td>
+                            <td>27.. <strong>败血症</strong><br>指细菌入血后，在血液中大量<span class="answer-text">生长繁殖</span>，并产生<span class="answer-text">毒素</span>，引起全身中毒症状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>28.. <strong>肉芽肿（定义二）</strong><br>炎症局部以<span class="blur-text">单核巨噬细胞</span>及其衍生细胞增生形成境界清楚的<span class="blur-text">结节状病灶</span>。</td>
+                            <td>28.. <strong>肉芽肿（定义二）</strong><br>炎症局部以<span class="answer-text">单核巨噬细胞</span>及其衍生细胞增生形成境界清楚的<span class="answer-text">结节状病灶</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>29.. A <strong>交界性肿瘤</strong><br>肿瘤的<span class="blur-text">组织学形态</span>和<span class="blur-text">生物学行为</span>介于良恶性肿瘤之间，称为交界性肿瘤。</td>
+                            <td>29.. A <strong>交界性肿瘤</strong><br>肿瘤的<span class="answer-text">组织学形态</span>和<span class="answer-text">生物学行为</span>介于良恶性肿瘤之间，称为交界性肿瘤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>29.. B <strong>原位癌</strong><br>通常用于<span class="blur-text">上皮</span>的病变，是指<span class="blur-text">异型增生的细胞</span>累及上皮的<span class="blur-text">全层</span>，但尚未突破基底膜向下浸润生长者。</td>
+                            <td>29.. B <strong>原位癌</strong><br>通常用于<span class="answer-text">上皮</span>的病变，是指<span class="answer-text">异型增生的细胞</span>累及上皮的<span class="answer-text">全层</span>，但尚未突破基底膜向下浸润生长者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>30.. <strong>种植性转移</strong><br>发生于<span class="blur-text">胸腹腔</span>等体腔内器官的恶性肿瘤，瘤细胞侵及器官表面时，瘤细胞脱落，如播种样经体腔种植到体腔内其他器官的表面，继续生长，形成多个转移性肿瘤。这种播散方式称为种植性转移。</td>
+                            <td>30.. <strong>种植性转移</strong><br>发生于<span class="answer-text">胸腹腔</span>等体腔内器官的恶性肿瘤，瘤细胞侵及器官表面时，瘤细胞脱落，如播种样经体腔种植到体腔内其他器官的表面，继续生长，形成多个转移性肿瘤。这种播散方式称为种植性转移。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>31.. <strong>异型增生</strong><br>与肿瘤形成相关的<span class="blur-text">非典型增生</span>称为异型增生。异型增生分为<span class="blur-text">轻</span>、<span class="blur-text">中</span>、<span class="blur-text">重</span>三级。累及上皮层的下1/3为轻度(I级)，累及上皮层的下2/3为中度(II级)，累及上皮层超过下2/3尚未达全层为重度(III级)。</td>
+                            <td>31.. <strong>异型增生</strong><br>与肿瘤形成相关的<span class="answer-text">非典型增生</span>称为异型增生。异型增生分为<span class="answer-text">轻</span>、<span class="answer-text">中</span>、<span class="answer-text">重</span>三级。累及上皮层的下1/3为轻度(I级)，累及上皮层的下2/3为中度(II级)，累及上皮层超过下2/3尚未达全层为重度(III级)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>32.. <strong>上皮内瘤变</strong><br>是用来描述上皮从<span class="blur-text">异型增生</span>到<span class="blur-text">原位癌</span>这一连续的过程，将轻度异型增生称为上皮内瘤变I级，中度异型增生称为上皮内瘤变II级，重度异型增生和原位癌称为上皮内瘤变III级。</td>
+                            <td>32.. <strong>上皮内瘤变</strong><br>是用来描述上皮从<span class="answer-text">异型增生</span>到<span class="answer-text">原位癌</span>这一连续的过程，将轻度异型增生称为上皮内瘤变I级，中度异型增生称为上皮内瘤变II级，重度异型增生和原位癌称为上皮内瘤变III级。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>33.. <strong>恶病质</strong><br>见于<span class="blur-text">晚期恶性肿瘤</span>患者，表现为机体严重<span class="blur-text">消瘦</span>、<span class="blur-text">贫血</span>、厌食和全身衰弱等。可能是由于恶性肿瘤生长迅速，消耗大量营养物质，或机体的代谢紊乱以及肿瘤或机体产生的<span class="blur-text">细胞因子</span>的作用所致。</td>
+                            <td>33.. <strong>恶病质</strong><br>见于<span class="answer-text">晚期恶性肿瘤</span>患者，表现为机体严重<span class="answer-text">消瘦</span>、<span class="answer-text">贫血</span>、厌食和全身衰弱等。可能是由于恶性肿瘤生长迅速，消耗大量营养物质，或机体的代谢紊乱以及肿瘤或机体产生的<span class="answer-text">细胞因子</span>的作用所致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>34.. <strong>肿瘤的异质性</strong><br>瘤细胞在肿瘤的生长过程和演进中出现了不同的<span class="blur-text">基因改变</span>，从而使瘤细胞生物学特性发生改变，单克隆的瘤组织会出现具有不同生物学行为的<span class="blur-text">细胞亚群</span>，它们在生长速度、侵袭性、转移能力、对生长信号的反应以及对抗癌药物的敏感性等方面均有差异，称为肿瘤的异质性。</td>
+                            <td>34.. <strong>肿瘤的异质性</strong><br>瘤细胞在肿瘤的生长过程和演进中出现了不同的<span class="answer-text">基因改变</span>，从而使瘤细胞生物学特性发生改变，单克隆的瘤组织会出现具有不同生物学行为的<span class="answer-text">细胞亚群</span>，它们在生长速度、侵袭性、转移能力、对生长信号的反应以及对抗癌药物的敏感性等方面均有差异，称为肿瘤的异质性。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>35.. <strong>肿瘤的异型性</strong><br>肿瘤<span class="blur-text">组织结构</span>和<span class="blur-text">细胞形态</span>与相应的正常组织有不同程度的差异，称为肿瘤的异型性。包括肿瘤的<span class="blur-text">结构异型性</span>和<span class="blur-text">细胞异型性</span>。</td>
+                            <td>35.. <strong>肿瘤的异型性</strong><br>肿瘤<span class="answer-text">组织结构</span>和<span class="answer-text">细胞形态</span>与相应的正常组织有不同程度的差异，称为肿瘤的异型性。包括肿瘤的<span class="answer-text">结构异型性</span>和<span class="answer-text">细胞异型性</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>36.. <strong>肿瘤的分化</strong><br>是指肿瘤组织在<span class="blur-text">形态</span>和<span class="blur-text">功能</span>上与某种正常组织的相似之处。</td>
+                            <td>36.. <strong>肿瘤的分化</strong><br>是指肿瘤组织在<span class="answer-text">形态</span>和<span class="answer-text">功能</span>上与某种正常组织的相似之处。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>37.. <strong>转移</strong><br>瘤细胞从原发部位侵入<span class="blur-text">淋巴管</span>、<span class="blur-text">血管</span>或<span class="blur-text">体腔</span>，迁徙到其他部位继续生长，形成与原发肿瘤同样类型的肿瘤，这个过程称为转移。</td>
+                            <td>37.. <strong>转移</strong><br>瘤细胞从原发部位侵入<span class="answer-text">淋巴管</span>、<span class="answer-text">血管</span>或<span class="answer-text">体腔</span>，迁徙到其他部位继续生长，形成与原发肿瘤同样类型的肿瘤，这个过程称为转移。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>38.. <strong>Krukenberg瘤</strong><br>是胃肠道<span class="blur-text">黏液癌</span>（特别是<span class="blur-text">胃印戒细胞癌</span>）的卵巢<span class="blur-text">种植性转移</span>。</td>
+                            <td>38.. <strong>Krukenberg瘤</strong><br>是胃肠道<span class="answer-text">黏液癌</span>（特别是<span class="answer-text">胃印戒细胞癌</span>）的卵巢<span class="answer-text">种植性转移</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>39.. <strong>副肿瘤综合征</strong><br>是指不能用肿瘤的<span class="blur-text">局部浸润</span>、<span class="blur-text">远处转移</span>来解释的一些病变和临床表现，是由于肿瘤的<span class="blur-text">产物</span>（产生异位激素）或<span class="blur-text">异常免疫反应</span>（如交叉免疫）等原因间接引起内分泌、神经、消化、造血、骨关节、肾脏及皮肤等系统出现的异常表现。</td>
+                            <td>39.. <strong>副肿瘤综合征</strong><br>是指不能用肿瘤的<span class="answer-text">局部浸润</span>、<span class="answer-text">远处转移</span>来解释的一些病变和临床表现，是由于肿瘤的<span class="answer-text">产物</span>（产生异位激素）或<span class="answer-text">异常免疫反应</span>（如交叉免疫）等原因间接引起内分泌、神经、消化、造血、骨关节、肾脏及皮肤等系统出现的异常表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>40.. <strong>癌肉瘤</strong><br>同时具有<span class="blur-text">癌</span>和<span class="blur-text">肉瘤</span>两种成分的恶性肿瘤，称为癌肉瘤。</td>
+                            <td>40.. <strong>癌肉瘤</strong><br>同时具有<span class="answer-text">癌</span>和<span class="answer-text">肉瘤</span>两种成分的恶性肿瘤，称为癌肉瘤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>41.. <strong>黏液癌</strong><br>分泌大量<span class="blur-text">黏液</span>的腺癌称为黏液癌，常见于<span class="blur-text">胃</span>和<span class="blur-text">大肠</span>。肉眼观，癌组织灰白色，半透明如胶冻样，肿瘤性腺体含大量黏液，有时腺体崩解形成黏液池，癌细胞漂浮黏液中。</td>
+                            <td>41.. <strong>黏液癌</strong><br>分泌大量<span class="answer-text">黏液</span>的腺癌称为黏液癌，常见于<span class="answer-text">胃</span>和<span class="answer-text">大肠</span>。肉眼观，癌组织灰白色，半透明如胶冻样，肿瘤性腺体含大量黏液，有时腺体崩解形成黏液池，癌细胞漂浮黏液中。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>42.. <strong>印戒细胞癌</strong><br>黏液癌有时黏液聚集在癌细胞胞质内，将核挤向一侧，癌细胞呈<span class="blur-text">印戒状</span>，称为印戒细胞，由印戒细胞为主要成分的腺癌，称为印戒细胞癌。</td>
+                            <td>42.. <strong>印戒细胞癌</strong><br>黏液癌有时黏液聚集在癌细胞胞质内，将核挤向一侧，癌细胞呈<span class="answer-text">印戒状</span>，称为印戒细胞，由印戒细胞为主要成分的腺癌，称为印戒细胞癌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>43.. <strong>肿瘤</strong><br>是机体的细胞<span class="blur-text">异常增殖</span>形成的新生物，常表现为机体局部的异常组织团块（<span class="blur-text">肿块</span>）。肿瘤的形成，是在各种<span class="blur-text">致瘤因素</span>作用下，细胞生长调控发生严重紊乱的结果。</td>
+                            <td>43.. <strong>肿瘤</strong><br>是机体的细胞<span class="answer-text">异常增殖</span>形成的新生物，常表现为机体局部的异常组织团块（<span class="answer-text">肿块</span>）。肿瘤的形成，是在各种<span class="answer-text">致瘤因素</span>作用下，细胞生长调控发生严重紊乱的结果。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>44.. <strong>原癌基因</strong><br>是指正常细胞基因组中发现的与<span class="blur-text">病毒癌基因</span>十分相似的DNA序列，正常情况下，该基因不引起细胞恶性变，一旦被激活后可使细胞<span class="blur-text">恶性转化</span>。</td>
+                            <td>44.. <strong>原癌基因</strong><br>是指正常细胞基因组中发现的与<span class="answer-text">病毒癌基因</span>十分相似的DNA序列，正常情况下，该基因不引起细胞恶性变，一旦被激活后可使细胞<span class="answer-text">恶性转化</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>45.. <strong>间变</strong><br><span class="blur-text">恶性瘤细胞</span>，缺乏<span class="blur-text">分化</span>的状态，即失分化、未分化的状态。</td>
+                            <td>45.. <strong>间变</strong><br><span class="answer-text">恶性瘤细胞</span>，缺乏<span class="answer-text">分化</span>的状态，即失分化、未分化的状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>46.. <strong>癌珠</strong><br>分化好的<span class="blur-text">鳞状细胞癌</span>，癌巢中央出现<span class="blur-text">同心圆层状排列</span>的角化物，病理学确定鳞状细胞癌分化程度的形态学标志。</td>
+                            <td>46.. <strong>癌珠</strong><br>分化好的<span class="answer-text">鳞状细胞癌</span>，癌巢中央出现<span class="answer-text">同心圆层状排列</span>的角化物，病理学确定鳞状细胞癌分化程度的形态学标志。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>47.. <strong>肿瘤抑制基因</strong><br>固有基因，与诱导正常细胞的转化，形成肿瘤的基因，为<span class="blur-text">原癌基因</span>在多种因素作用下其结构发生改变、被激活而形成。</td>
+                            <td>47.. <strong>肿瘤抑制基因</strong><br>固有基因，与诱导正常细胞的转化，形成肿瘤的基因，为<span class="answer-text">原癌基因</span>在多种因素作用下其结构发生改变、被激活而形成。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>
