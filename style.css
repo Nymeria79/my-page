@@ -222,6 +222,14 @@ body {
   opacity: 1;
 }
 
+.text-item {
+  display: block;
+  padding: 8px 0;
+  color: var(--text-primary);
+  font-weight: normal;
+  border-bottom: 1px dashed var(--link-border);
+}
+
 /* 链接内的文件时间标签（由JS动态添加） */
 .file-time {
   font-size: 0.75rem;
