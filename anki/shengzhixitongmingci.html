@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">生殖系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>直肠子宫陷凹</strong><br>在子宫后面，腹膜沿子宫壁向下，至子宫颈后方及阴道后穹窿再折向直肠，形成<span class="blur-text">直肠子宫陷凹</span>，也称<span class="blur-text">道格拉斯陷凹</span>。</td>
+                            <td>1.. <strong>直肠子宫陷凹</strong><br>在子宫后面，腹膜沿子宫壁向下，至子宫颈后方及阴道后穹窿再折向直肠，形成<span class="answer-text">直肠子宫陷凹</span>，也称<span class="answer-text">道格拉斯陷凹</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>腋尾</strong><br>乳房外上份的腺组织可在胸大肌下缘、第3肋间穿腋筋膜孔入腋窝，称<span class="blur-text">腋尾</span>（<span class="blur-text">auxiliary tail</span>）。</td>
+                            <td>2.. <strong>腋尾</strong><br>乳房外上份的腺组织可在胸大肌下缘、第3肋间穿腋筋膜孔入腋窝，称<span class="answer-text">腋尾</span>（<span class="answer-text">auxiliary tail</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>乳房悬韧带</strong><br>乳腺和输入管周围的纤维束，连于皮肤和深筋膜之间称<span class="blur-text">乳房悬韧带</span>（<span class="blur-text">Cooper韧带</span>），对乳腺和脂肪起<span class="blur-text">固定和支持</span>作用。</td>
+                            <td>3.. <strong>乳房悬韧带</strong><br>乳腺和输入管周围的纤维束，连于皮肤和深筋膜之间称<span class="answer-text">乳房悬韧带</span>（<span class="answer-text">Cooper韧带</span>），对乳腺和脂肪起<span class="answer-text">固定和支持</span>作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. A <strong>子宫峡部</strong><br>宫体与宫颈之间最狭窄的部位称为<span class="blur-text">子宫峡部</span>。在非孕期长约<span class="blur-text">1cm</span>。其上端因解剖上狭窄，称为<span class="blur-text">解剖学内口</span>。</td>
+                            <td>4.. A <strong>子宫峡部</strong><br>宫体与宫颈之间最狭窄的部位称为<span class="answer-text">子宫峡部</span>。在非孕期长约<span class="answer-text">1cm</span>。其上端因解剖上狭窄，称为<span class="answer-text">解剖学内口</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>4.. B <strong>子宫峡部</strong><br>其下端因在此处子宫内膜转变为宫颈粘膜，称为<span class="blur-text">组织学内口</span>。妊娠期子宫峡部逐渐伸展变长，妊娠末期可达<span class="blur-text">7-10cm</span>，形成<span class="blur-text">子宫下段</span>，成为软产道的一部分。</td>
+                            <td>4.. B <strong>子宫峡部</strong><br>其下端因在此处子宫内膜转变为宫颈粘膜，称为<span class="answer-text">组织学内口</span>。妊娠期子宫峡部逐渐伸展变长，妊娠末期可达<span class="answer-text">7-10cm</span>，形成<span class="answer-text">子宫下段</span>，成为软产道的一部分。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5.. <strong>血-睾屏障</strong><br>由睾丸间质的连续毛细血管内皮和基膜、薄层结缔组织、生精小管基膜及支持细胞间的<span class="blur-text">紧密连接</span>组成，其中以<span class="blur-text">紧密连接</span>最重要。该屏障既可阻止血液内的某些有害物质进入生精小管，也可阻止生精小管内精子抗原物质逸出导致自身免疫反应，对维持生精小管内<span class="blur-text">微环境稳定</span>具有重要意义。</td>
+                            <td>5.. <strong>血-睾屏障</strong><br>由睾丸间质的连续毛细血管内皮和基膜、薄层结缔组织、生精小管基膜及支持细胞间的<span class="answer-text">紧密连接</span>组成，其中以<span class="answer-text">紧密连接</span>最重要。该屏障既可阻止血液内的某些有害物质进入生精小管，也可阻止生精小管内精子抗原物质逸出导致自身免疫反应，对维持生精小管内<span class="answer-text">微环境稳定</span>具有重要意义。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>6.. <strong>睾丸间质细胞</strong><br>成群分布在睾丸间质内，细胞较大、圆形或多边形，核圆，居中，胞质呈<span class="blur-text">嗜酸性</span>。细胞具有类固醇激素分泌细胞的超微结构特征，可分泌<span class="blur-text">雄激素</span>。</td>
+                            <td>6.. <strong>睾丸间质细胞</strong><br>成群分布在睾丸间质内，细胞较大、圆形或多边形，核圆，居中，胞质呈<span class="answer-text">嗜酸性</span>。细胞具有类固醇激素分泌细胞的超微结构特征，可分泌<span class="answer-text">雄激素</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>7.. <strong>支持细胞</strong><br>位于生精上皮内。细胞光镜下细胞轮廓不清，核近卵圆形或三角形，染色浅，核仁明显。电镜下细胞为不规则锥体形，侧面镶嵌着各级生精细胞，各种细胞器发达。对生精细胞具有<span class="blur-text">支持营养</span>作用，能合成<span class="blur-text">雄激素结合蛋白</span>，具有<span class="blur-text">吞噬功能</span>和参与形成血-睾屏障。</td>
+                            <td>7.. <strong>支持细胞</strong><br>位于生精上皮内。细胞光镜下细胞轮廓不清，核近卵圆形或三角形，染色浅，核仁明显。电镜下细胞为不规则锥体形，侧面镶嵌着各级生精细胞，各种细胞器发达。对生精细胞具有<span class="answer-text">支持营养</span>作用，能合成<span class="answer-text">雄激素结合蛋白</span>，具有<span class="answer-text">吞噬功能</span>和参与形成血-睾屏障。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>8.. <strong>精子发生</strong><br>是指精原细胞形成精子的过程。经历了精原细胞增殖分化形成<span class="blur-text">初级精母细胞</span>、精母细胞经两次减数分裂形成<span class="blur-text">精子细胞</span>和精子细胞变态形成精子的三个阶段。在人需<span class="blur-text">64天</span>左右。</td>
+                            <td>8.. <strong>精子发生</strong><br>是指精原细胞形成精子的过程。经历了精原细胞增殖分化形成<span class="answer-text">初级精母细胞</span>、精母细胞经两次减数分裂形成<span class="answer-text">精子细胞</span>和精子细胞变态形成精子的三个阶段。在人需<span class="answer-text">64天</span>左右。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>9.. A <strong>精子形成</strong><br>是指圆形的精子细胞通过变态转变为蝌蚪状的精子的过程，主要包括：核染色质高度浓缩，成为<span class="blur-text">精子头部</span>；从高尔基复合体形成<span class="blur-text">顶体</span>。</td>
+                            <td>9.. A <strong>精子形成</strong><br>是指圆形的精子细胞通过变态转变为蝌蚪状的精子的过程，主要包括：核染色质高度浓缩，成为<span class="answer-text">精子头部</span>；从高尔基复合体形成<span class="answer-text">顶体</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>9.. B <strong>精子形成</strong><br>中心粒形成精子尾部的运动结构-<span class="blur-text">轴丝</span>；线粒体集中在精子尾部的中段，形成<span class="blur-text">线粒体鞘</span>；多余的细胞质脱落。</td>
+                            <td>9.. B <strong>精子形成</strong><br>中心粒形成精子尾部的运动结构-<span class="answer-text">轴丝</span>；线粒体集中在精子尾部的中段，形成<span class="answer-text">线粒体鞘</span>；多余的细胞质脱落。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10.. A <strong>精原细胞</strong><br>是最幼稚的生精细胞，紧贴在生精小管基膜上，圆形或椭圆形。分为<span class="blur-text">A、B两型</span>，A型精原细胞染色质细小，染色深或染色质细密，染色浅，可不断分裂，其中一部分留作<span class="blur-text">干细胞</span>，另一部分分化为B型精原细胞。</td>
+                            <td>10.. A <strong>精原细胞</strong><br>是最幼稚的生精细胞，紧贴在生精小管基膜上，圆形或椭圆形。分为<span class="answer-text">A、B两型</span>，A型精原细胞染色质细小，染色深或染色质细密，染色浅，可不断分裂，其中一部分留作<span class="answer-text">干细胞</span>，另一部分分化为B型精原细胞。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>10.. B <strong>精原细胞</strong><br>B型精原细胞核圆形，核周边有较粗的染色质颗粒，经过几次分裂后，分化成<span class="blur-text">初级精母细胞</span>。青春期后，精原细胞不断分裂，可源源不断地产生大量精子。</td>
+                            <td>10.. B <strong>精原细胞</strong><br>B型精原细胞核圆形，核周边有较粗的染色质颗粒，经过几次分裂后，分化成<span class="answer-text">初级精母细胞</span>。青春期后，精原细胞不断分裂，可源源不断地产生大量精子。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>11.. <strong>胞质桥</strong><br>精子发生过程中，一个精原细胞增殖分化所产生的各级生精细胞其胞质并未完全分开，有<span class="blur-text">胞质桥</span>相连。胞质桥将来源于同一个精原细胞的同簇细胞连成一个细胞群，各个同簇细胞之间可通过胞质桥互相传递信息，使其<span class="blur-text">同步发育</span>。这种胞质桥直到精子形成释放到管腔时才断裂。</td>
+                            <td>11.. <strong>胞质桥</strong><br>精子发生过程中，一个精原细胞增殖分化所产生的各级生精细胞其胞质并未完全分开，有<span class="answer-text">胞质桥</span>相连。胞质桥将来源于同一个精原细胞的同簇细胞连成一个细胞群，各个同簇细胞之间可通过胞质桥互相传递信息，使其<span class="answer-text">同步发育</span>。这种胞质桥直到精子形成释放到管腔时才断裂。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>12.. <strong>顶体</strong><br>精子头部高度浓缩的细胞核前覆盖着顶体。顶体是特殊的<span class="blur-text">溶酶体</span>，内含多种<span class="blur-text">水解酶</span>，当精卵相遇时，精子释放顶体酶，顶体酶可溶解卵的<span class="blur-text">放射冠</span>和<span class="blur-text">透明带</span>，有助于受精的完成。</td>
+                            <td>12.. <strong>顶体</strong><br>精子头部高度浓缩的细胞核前覆盖着顶体。顶体是特殊的<span class="answer-text">溶酶体</span>，内含多种<span class="answer-text">水解酶</span>，当精卵相遇时，精子释放顶体酶，顶体酶可溶解卵的<span class="answer-text">放射冠</span>和<span class="answer-text">透明带</span>，有助于受精的完成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>13.. <strong>卵泡</strong><br>呈球形，由一个<span class="blur-text">卵母细胞</span>和包绕在周围的多个<span class="blur-text">卵泡细胞</span>组成。卵泡发育是个连续的生长过程，一个卵泡从发育至成熟约需<span class="blur-text">85天</span>，可分为<span class="blur-text">原始卵泡</span>、<span class="blur-text">初级卵泡</span>、<span class="blur-text">次级卵泡</span>和<span class="blur-text">成熟卵泡</span>四个阶段。</td>
+                            <td>13.. <strong>卵泡</strong><br>呈球形，由一个<span class="answer-text">卵母细胞</span>和包绕在周围的多个<span class="answer-text">卵泡细胞</span>组成。卵泡发育是个连续的生长过程，一个卵泡从发育至成熟约需<span class="answer-text">85天</span>，可分为<span class="answer-text">原始卵泡</span>、<span class="answer-text">初级卵泡</span>、<span class="answer-text">次级卵泡</span>和<span class="answer-text">成熟卵泡</span>四个阶段。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>14.. <strong>生长卵泡</strong><br>青春期开始在脑垂体促性腺激素的刺激下，卵巢中的原始卵泡生长发育成为<span class="blur-text">生长卵泡</span>。生长卵泡可分为<span class="blur-text">初级卵泡</span>和<span class="blur-text">次级卵泡</span>两个阶段。主要变化是卵母细胞增大，卵泡细胞增多，<span class="blur-text">透明带</span>、<span class="blur-text">卵泡腔</span>、<span class="blur-text">卵丘</span>、<span class="blur-text">卵泡膜</span>的形成。</td>
+                            <td>14.. <strong>生长卵泡</strong><br>青春期开始在脑垂体促性腺激素的刺激下，卵巢中的原始卵泡生长发育成为<span class="answer-text">生长卵泡</span>。生长卵泡可分为<span class="answer-text">初级卵泡</span>和<span class="answer-text">次级卵泡</span>两个阶段。主要变化是卵母细胞增大，卵泡细胞增多，<span class="answer-text">透明带</span>、<span class="answer-text">卵泡腔</span>、<span class="answer-text">卵丘</span>、<span class="answer-text">卵泡膜</span>的形成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>15.. <strong>排卵</strong><br>是指成熟卵泡破裂后，<span class="blur-text">次级卵母细胞</span>连同外周的透明带和放射冠与卵泡液一起从卵巢排出的过程。排卵大多发生在月经周期的第<span class="blur-text">14天</span>左右。</td>
+                            <td>15.. <strong>排卵</strong><br>是指成熟卵泡破裂后，<span class="answer-text">次级卵母细胞</span>连同外周的透明带和放射冠与卵泡液一起从卵巢排出的过程。排卵大多发生在月经周期的第<span class="answer-text">14天</span>左右。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>16.. A <strong>黄体</strong><br>成熟卵泡排卵后，残留于卵巢内的卵泡颗粒层连同卵泡膜向卵泡腔塌陷，在<span class="blur-text">黄体生成素</span>的作用下逐渐发育成一个体积较大又富含血管的内分泌细胞团，新鲜时呈黄色，故称<span class="blur-text">黄体</span>。其中由颗粒细胞衍化来的<span class="blur-text">粒黄体细胞</span>占多数，位于黄体中央，胞体较大，呈多边形，染色较浅，分泌<span class="blur-text">孕激素</span>。</td>
+                            <td>16.. A <strong>黄体</strong><br>成熟卵泡排卵后，残留于卵巢内的卵泡颗粒层连同卵泡膜向卵泡腔塌陷，在<span class="answer-text">黄体生成素</span>的作用下逐渐发育成一个体积较大又富含血管的内分泌细胞团，新鲜时呈黄色，故称<span class="answer-text">黄体</span>。其中由颗粒细胞衍化来的<span class="answer-text">粒黄体细胞</span>占多数，位于黄体中央，胞体较大，呈多边形，染色较浅，分泌<span class="answer-text">孕激素</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>16.. B <strong>黄体</strong><br>由膜细胞衍化来的<span class="blur-text">膜黄体细胞</span>与粒黄体细胞协同分泌<span class="blur-text">雌激素</span>。若排出的卵没有受精，黄体维持<span class="blur-text">2周</span>左右退化，称<span class="blur-text">月经黄体</span>；若卵受精，在胚胎绒毛膜分泌的<span class="blur-text">绒毛膜促性腺激素</span>的作用下，黄体继续发育增大，称<span class="blur-text">妊娠黄体</span>。</td>
+                            <td>16.. B <strong>黄体</strong><br>由膜细胞衍化来的<span class="answer-text">膜黄体细胞</span>与粒黄体细胞协同分泌<span class="answer-text">雌激素</span>。若排出的卵没有受精，黄体维持<span class="answer-text">2周</span>左右退化，称<span class="answer-text">月经黄体</span>；若卵受精，在胚胎绒毛膜分泌的<span class="answer-text">绒毛膜促性腺激素</span>的作用下，黄体继续发育增大，称<span class="answer-text">妊娠黄体</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>16.. C <strong>黄体</strong><br>妊娠黄体除分泌大量的孕激素和雌激素外，还分泌<span class="blur-text">松弛素</span>，这些激素促使子宫内膜增生，子宫平滑肌松弛，以维持妊娠。两种黄体最终被结缔组织取代变为<span class="blur-text">白体</span>。</td>
+                            <td>16.. C <strong>黄体</strong><br>妊娠黄体除分泌大量的孕激素和雌激素外，还分泌<span class="answer-text">松弛素</span>，这些激素促使子宫内膜增生，子宫平滑肌松弛，以维持妊娠。两种黄体最终被结缔组织取代变为<span class="answer-text">白体</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>17.. <strong>透明带</strong><br>初级卵泡内，卵母细胞与卵泡细胞共同分泌，在卵母细胞与最内层的卵泡细胞间出现一层均质状、折光性强的嗜酸性膜，称<span class="blur-text">透明带</span>。电镜下可见初级卵母细胞的微绒毛和卵泡细胞的突起伸入透明带，两者间有<span class="blur-text">缝隙连接</span>，借此卵泡细胞向初级卵母细胞传递营养和与卵母细胞发育有关的信息分子。构成透明带的蛋白中有精子受体<span class="blur-text">ZP3</span>，在受精过程中，对精子与卵细胞间的相互识别和特异性结合具有重要作用。</td>
+                            <td>17.. <strong>透明带</strong><br>初级卵泡内，卵母细胞与卵泡细胞共同分泌，在卵母细胞与最内层的卵泡细胞间出现一层均质状、折光性强的嗜酸性膜，称<span class="answer-text">透明带</span>。电镜下可见初级卵母细胞的微绒毛和卵泡细胞的突起伸入透明带，两者间有<span class="answer-text">缝隙连接</span>，借此卵泡细胞向初级卵母细胞传递营养和与卵母细胞发育有关的信息分子。构成透明带的蛋白中有精子受体<span class="answer-text">ZP3</span>，在受精过程中，对精子与卵细胞间的相互识别和特异性结合具有重要作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>18.. <strong>闭锁卵泡</strong><br>卵巢内的绝大多数卵泡不能发育成熟，它们在发育的不同阶段退化，退化的卵泡称为<span class="blur-text">闭锁卵泡</span>。闭锁卵泡形态各异，主要表现为卵母细胞形态不规则，染色质固缩成块状，或卵母细胞凋亡消失；<span class="blur-text">透明带</span>塌陷为不规则的嗜酸性环状物；卵泡细胞变小而分散。</td>
+                            <td>18.. <strong>闭锁卵泡</strong><br>卵巢内的绝大多数卵泡不能发育成熟，它们在发育的不同阶段退化，退化的卵泡称为<span class="answer-text">闭锁卵泡</span>。闭锁卵泡形态各异，主要表现为卵母细胞形态不规则，染色质固缩成块状，或卵母细胞凋亡消失；<span class="answer-text">透明带</span>塌陷为不规则的嗜酸性环状物；卵泡细胞变小而分散。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>19.. <strong>月经周期</strong><br>是指在女性自青春期开始，在卵巢分泌的<span class="blur-text">雌激素</span>和<span class="blur-text">孕激素</span>的作用下，子宫底部和体部的内膜功能层每<span class="blur-text">28天</span>左右发生一次剥脱、出血、增生和修复的周期性变化。每个月经周期是从月经的第一天起至下次月经来潮的前一天止。月经周期可分为<span class="blur-text">月经期</span>（第1~4天）<span class="blur-text">增生期</span>（5~14天）<span class="blur-text">分泌期</span>（15~28天）。</td>
+                            <td>19.. <strong>月经周期</strong><br>是指在女性自青春期开始，在卵巢分泌的<span class="answer-text">雌激素</span>和<span class="answer-text">孕激素</span>的作用下，子宫底部和体部的内膜功能层每<span class="answer-text">28天</span>左右发生一次剥脱、出血、增生和修复的周期性变化。每个月经周期是从月经的第一天起至下次月经来潮的前一天止。月经周期可分为<span class="answer-text">月经期</span>（第1~4天）<span class="answer-text">增生期</span>（5~14天）<span class="answer-text">分泌期</span>（15~28天）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>20.. <strong>雄激素结合蛋白</strong><br>由支持细胞分泌的一种生物活性物质，可与<span class="blur-text">雄激素</span>结合，为生精细胞提供高浓度的雄激素环境，有利于<span class="blur-text">精子生成</span>。</td>
+                            <td>20.. <strong>雄激素结合蛋白</strong><br>由支持细胞分泌的一种生物活性物质，可与<span class="answer-text">雄激素</span>结合，为生精细胞提供高浓度的雄激素环境，有利于<span class="answer-text">精子生成</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>21.. <strong>卵巢周期</strong><br>青春期开始后，在<span class="blur-text">下丘脑-腺垂体-性腺轴</span>的调控下，原始卵泡开始发育，卵巢的形态和功能发生周期性的变化。</td>
+                            <td>21.. <strong>卵巢周期</strong><br>青春期开始后，在<span class="answer-text">下丘脑-腺垂体-性腺轴</span>的调控下，原始卵泡开始发育，卵巢的形态和功能发生周期性的变化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>22.. <strong>人绒毛膜促性腺激素</strong><br>由胎盘绒毛组织的<span class="blur-text">合体滋养层细胞</span>分泌的一种糖蛋白激素，其主要作用是在妊娠早期刺激母体的月经黄体转变成<span class="blur-text">妊娠黄体</span>，持续分泌雌激素和孕激素，以维持妊娠。</td>
+                            <td>22.. <strong>人绒毛膜促性腺激素</strong><br>由胎盘绒毛组织的<span class="answer-text">合体滋养层细胞</span>分泌的一种糖蛋白激素，其主要作用是在妊娠早期刺激母体的月经黄体转变成<span class="answer-text">妊娠黄体</span>，持续分泌雌激素和孕激素，以维持妊娠。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>23.. <strong>基础体温</strong><br>清晨醒后不活动时所测得的体温称<span class="blur-text">基础体温</span>。该体温在排卵前一直较低，排卵后即明显升高约<span class="blur-text">0.2~0.5℃</span>，一直持续到月经来临才下降。有排卵妇女的月经周期中基础体温呈<span class="blur-text">双相</span>，若基础体温呈<span class="blur-text">单相</span>，提示可能无排卵。排卵后基础体温升高与<span class="blur-text">孕激素</span>有关，排卵前的LH峰可促使黄体形成而分泌孕激素，它可作用于下丘脑体温调节中枢而引起基础体温升高。</td>
+                            <td>23.. <strong>基础体温</strong><br>清晨醒后不活动时所测得的体温称<span class="answer-text">基础体温</span>。该体温在排卵前一直较低，排卵后即明显升高约<span class="answer-text">0.2~0.5℃</span>，一直持续到月经来临才下降。有排卵妇女的月经周期中基础体温呈<span class="answer-text">双相</span>，若基础体温呈<span class="answer-text">单相</span>，提示可能无排卵。排卵后基础体温升高与<span class="answer-text">孕激素</span>有关，排卵前的LH峰可促使黄体形成而分泌孕激素，它可作用于下丘脑体温调节中枢而引起基础体温升高。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>24.. <strong>受精</strong><br><span class="blur-text">获能</span>的精子穿入成熟的卵母细胞，最后发生雄性原核与雌性原核融合的过程。受精的部位在<span class="blur-text">输卵管壶腹部</span>。</td>
+                            <td>24.. <strong>受精</strong><br><span class="answer-text">获能</span>的精子穿入成熟的卵母细胞，最后发生雄性原核与雌性原核融合的过程。受精的部位在<span class="answer-text">输卵管壶腹部</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>25.. <strong>妊娠</strong><br>子代新个体的产生和孕育的过程，包括<span class="blur-text">受精</span>、<span class="blur-text">着床</span>、妊娠的维持及胎儿的生长。</td>
+                            <td>25.. <strong>妊娠</strong><br>子代新个体的产生和孕育的过程，包括<span class="answer-text">受精</span>、<span class="answer-text">着床</span>、妊娠的维持及胎儿的生长。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>26.. <strong>精子获能</strong><br>人类和大多数哺乳动物的精子必须在雌性生殖道内<span class="blur-text">停留</span>一段时间，才能获能得使卵子受精的能力。</td>
+                            <td>26.. <strong>精子获能</strong><br>人类和大多数哺乳动物的精子必须在雌性生殖道内<span class="answer-text">停留</span>一段时间，才能获能得使卵子受精的能力。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>27.. <strong>顶体反应</strong><br>获能的精子与卵子在输卵管壶腹部相遇后，精子头部的顶体外膜与精子细胞膜融合、破裂，形成许多小孔，将<span class="blur-text">顶体酶</span>释放出来，溶解卵子外周的<span class="blur-text">放射冠</span>和<span class="blur-text">透明带</span>的过程。</td>
+                            <td>27.. <strong>顶体反应</strong><br>获能的精子与卵子在输卵管壶腹部相遇后，精子头部的顶体外膜与精子细胞膜融合、破裂，形成许多小孔，将<span class="answer-text">顶体酶</span>释放出来，溶解卵子外周的<span class="answer-text">放射冠</span>和<span class="answer-text">透明带</span>的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>28.. <strong>着床</strong><br>是指胚泡植入子宫内膜的过程，包括<span class="blur-text">定位</span>、<span class="blur-text">粘着</span>和<span class="blur-text">穿透</span>三个阶段。</td>
+                            <td>28.. <strong>着床</strong><br>是指胚泡植入子宫内膜的过程，包括<span class="answer-text">定位</span>、<span class="answer-text">粘着</span>和<span class="answer-text">穿透</span>三个阶段。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>29.. <strong>月经</strong><br>伴随<span class="blur-text">卵巢激素</span>的周期性变化所引起的<span class="blur-text">子宫内膜</span>周期性的剥脱和出血。规律的月经是生殖系统成熟的标志之一。</td>
+                            <td>29.. <strong>月经</strong><br>伴随<span class="answer-text">卵巢激素</span>的周期性变化所引起的<span class="answer-text">子宫内膜</span>周期性的剥脱和出血。规律的月经是生殖系统成熟的标志之一。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>30.. <strong>下丘脑-垂体-卵巢轴</strong><br>月经周期的调节是一个非常复杂的过程，主要涉及下丘脑、垂体和卵巢。下丘脑分泌<span class="blur-text">GnRH</span>，通过调节垂体促性腺激素的分泌，调控卵巢功能。卵巢分泌的性激素对下丘脑-垂体又有反馈调节作用。下丘脑、垂体与卵巢之间相互调节，相互影响，形成一个完整而协调的神经内分泌系统。称为<span class="blur-text">下丘脑-垂体-卵巢轴</span>（<span class="blur-text">HPO</span>）。</td>
+                            <td>30.. <strong>下丘脑-垂体-卵巢轴</strong><br>月经周期的调节是一个非常复杂的过程，主要涉及下丘脑、垂体和卵巢。下丘脑分泌<span class="answer-text">GnRH</span>，通过调节垂体促性腺激素的分泌，调控卵巢功能。卵巢分泌的性激素对下丘脑-垂体又有反馈调节作用。下丘脑、垂体与卵巢之间相互调节，相互影响，形成一个完整而协调的神经内分泌系统。称为<span class="answer-text">下丘脑-垂体-卵巢轴</span>（<span class="answer-text">HPO</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>31.. <strong>胎儿-胎盘单位</strong><br>妊娠期甾体激素的合成由胎儿胎盘共同完成，称为<span class="blur-text">胎儿-胎盘单位</span>。</td>
+                            <td>31.. <strong>胎儿-胎盘单位</strong><br>妊娠期甾体激素的合成由胎儿胎盘共同完成，称为<span class="answer-text">胎儿-胎盘单位</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>32.. <strong>胎儿附属物</strong><br>包括<span class="blur-text">胎盘</span>，<span class="blur-text">胎膜</span>，<span class="blur-text">脐带</span>和<span class="blur-text">羊水</span>，他们对维持胎儿宫内的生命及生长发育起重要作用。</td>
+                            <td>32.. <strong>胎儿附属物</strong><br>包括<span class="answer-text">胎盘</span>，<span class="answer-text">胎膜</span>，<span class="answer-text">脐带</span>和<span class="answer-text">羊水</span>，他们对维持胎儿宫内的生命及生长发育起重要作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>33.. <strong>蜕膜</strong><br>受精卵着床后，在孕激素、雌激素作用下子宫内膜腺体增大，腺上皮细胞内糖原增加，结缔组织细胞肥大，血管充血，此时子宫内膜称为<span class="blur-text">蜕膜</span>。</td>
+                            <td>33.. <strong>蜕膜</strong><br>受精卵着床后，在孕激素、雌激素作用下子宫内膜腺体增大，腺上皮细胞内糖原增加，结缔组织细胞肥大，血管充血，此时子宫内膜称为<span class="answer-text">蜕膜</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>34.. <strong>人绒毛膜促性腺激素（hCG）</strong><br>由<span class="blur-text">合体滋养细胞</span>合成，受精后第<span class="blur-text">7日</span>孕妇血清和尿中可测出，妊娠<span class="blur-text">8~10周</span>达高峰，持续10日下降，产后<span class="blur-text">1-2周</span>消失。</td>
+                            <td>34.. <strong>人绒毛膜促性腺激素（hCG）</strong><br>由<span class="answer-text">合体滋养细胞</span>合成，受精后第<span class="answer-text">7日</span>孕妇血清和尿中可测出，妊娠<span class="answer-text">8~10周</span>达高峰，持续10日下降，产后<span class="answer-text">1-2周</span>消失。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>35.. <strong>分娩</strong><br>妊娠满<span class="blur-text">28周</span>及以后，胎儿及其附属物从临产开始到从母体娩出的全过程。</td>
+                            <td>35.. <strong>分娩</strong><br>妊娠满<span class="answer-text">28周</span>及以后，胎儿及其附属物从临产开始到从母体娩出的全过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>36.. <strong>分娩机制</strong><br>指在分娩过程中，胎先露部通过产道时，在产力作用下为适应骨盆各平面的不同形态而进行的一系列、被动的转动，使其能以<span class="blur-text">最小径线</span>通过产道的全过程。</td>
+                            <td>36.. <strong>分娩机制</strong><br>指在分娩过程中，胎先露部通过产道时，在产力作用下为适应骨盆各平面的不同形态而进行的一系列、被动的转动，使其能以<span class="answer-text">最小径线</span>通过产道的全过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>37.. <strong>子宫下段</strong><br>子宫峡部在非孕时长约<span class="blur-text">1cm</span>，妊娠后变软，妊娠<span class="blur-text">10周</span>明显变软。妊娠12周后，子宫峡部逐渐伸展拉长变薄，扩展成宫腔的一部分，临产后伸展至<span class="blur-text">7~10cm</span>，成为软产道的一部分，此时称其为<span class="blur-text">子宫下段</span>。</td>
+                            <td>37.. <strong>子宫下段</strong><br>子宫峡部在非孕时长约<span class="answer-text">1cm</span>，妊娠后变软，妊娠<span class="answer-text">10周</span>明显变软。妊娠12周后，子宫峡部逐渐伸展拉长变薄，扩展成宫腔的一部分，临产后伸展至<span class="answer-text">7~10cm</span>，成为软产道的一部分，此时称其为<span class="answer-text">子宫下段</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>38.. <strong>临产</strong><br>有规律且逐渐增强的宫缩，持续<span class="blur-text">30秒</span>或以上，间歇<span class="blur-text">5-6分钟</span>。伴随着宫缩，有进行性的宫颈管消失、宫口扩张及胎先露部下降。</td>
+                            <td>38.. <strong>临产</strong><br>有规律且逐渐增强的宫缩，持续<span class="answer-text">30秒</span>或以上，间歇<span class="answer-text">5-6分钟</span>。伴随着宫缩，有进行性的宫颈管消失、宫口扩张及胎先露部下降。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>39.. <strong>仰卧位低血压综合征</strong><br>孕妇体位影响血压，妊娠晚期仰卧位时增大子宫压迫<span class="blur-text">下腔静脉</span>，回心血量减少、心排出量减少使血压下降，形成仰卧位低血压综合征。</td>
+                            <td>39.. <strong>仰卧位低血压综合征</strong><br>孕妇体位影响血压，妊娠晚期仰卧位时增大子宫压迫<span class="answer-text">下腔静脉</span>，回心血量减少、心排出量减少使血压下降，形成仰卧位低血压综合征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>40.. <strong>围产期</strong><br>产前，产时和产后的一段时间，指达到及超过<span class="blur-text">28周</span>至产后<span class="blur-text">1周</span>。</td>
+                            <td>40.. <strong>围产期</strong><br>产前，产时和产后的一段时间，指达到及超过<span class="answer-text">28周</span>至产后<span class="answer-text">1周</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>41.. <strong>早期减速</strong><br>减速开始到胎心率最低点的时间≥<span class="blur-text">30秒</span>，减速的最低点常与宫缩的峰值同时出现。一般来说，减速的开始、最低值及恢复与宫缩的起始峰值及结束同步。代表<span class="blur-text">胎头受压</span>。</td>
+                            <td>41.. <strong>早期减速</strong><br>减速开始到胎心率最低点的时间≥<span class="answer-text">30秒</span>，减速的最低点常与宫缩的峰值同时出现。一般来说，减速的开始、最低值及恢复与宫缩的起始峰值及结束同步。代表<span class="answer-text">胎头受压</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>42.. <strong>晚期减速</strong><br>减速开始到胎心率最低点的时间≥<span class="blur-text">30秒</span>，减速的最低点通常晚于宫缩峰值。一般来说，减速的开始、最低值及恢复分别延后于宫缩的起始、峰值及结束。代表<span class="blur-text">胎盘功能老化</span>或<span class="blur-text">宫内缺氧</span>。</td>
+                            <td>42.. <strong>晚期减速</strong><br>减速开始到胎心率最低点的时间≥<span class="answer-text">30秒</span>，减速的最低点通常晚于宫缩峰值。一般来说，减速的开始、最低值及恢复分别延后于宫缩的起始、峰值及结束。代表<span class="answer-text">胎盘功能老化</span>或<span class="answer-text">宫内缺氧</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>43.. <strong>变异减速</strong><br>指突发的显著的胎心率急速下降。减速的开始、深度和持续时间与宫缩之间无固定规律。典型的变异减速是先有一初始加速的肩峰，紧接一快速的减速，之后快速恢复到正常基线伴有一激发性加速（双肩峰）。代表<span class="blur-text">脐带受压</span>。</td>
+                            <td>43.. <strong>变异减速</strong><br>指突发的显著的胎心率急速下降。减速的开始、深度和持续时间与宫缩之间无固定规律。典型的变异减速是先有一初始加速的肩峰，紧接一快速的减速，之后快速恢复到正常基线伴有一激发性加速（双肩峰）。代表<span class="answer-text">脐带受压</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>44.. <strong>胎方位</strong><br>胎儿<span class="blur-text">先露部</span>的指示点与母体<span class="blur-text">骨盆</span>前后左右横的关系。</td>
+                            <td>44.. <strong>胎方位</strong><br>胎儿<span class="answer-text">先露部</span>的指示点与母体<span class="answer-text">骨盆</span>前后左右横的关系。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>45.. <strong>胎先露</strong><br>最先进入骨盆入口的胎儿部分称为<span class="blur-text">胎先露</span>。纵产式有<span class="blur-text">头先露</span>和<span class="blur-text">臀先露</span>，横产式为<span class="blur-text">肩先露</span>，偶见胎儿头先露或臀先露与胎手或胎足同时入盆，称为<span class="blur-text">复合先露</span>。</td>
+                            <td>45.. <strong>胎先露</strong><br>最先进入骨盆入口的胎儿部分称为<span class="answer-text">胎先露</span>。纵产式有<span class="answer-text">头先露</span>和<span class="answer-text">臀先露</span>，横产式为<span class="answer-text">肩先露</span>，偶见胎儿头先露或臀先露与胎手或胎足同时入盆，称为<span class="answer-text">复合先露</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>46.. <strong>异位妊娠</strong><br>受精卵在<span class="blur-text">子宫体腔以外</span>着床，称为异位妊娠（<span class="blur-text">ectopic pregnancy</span>）。异位妊娠主要为<span class="blur-text">输卵管妊娠</span>，占<span class="blur-text">95%</span>。</td>
+                            <td>46.. <strong>异位妊娠</strong><br>受精卵在<span class="answer-text">子宫体腔以外</span>着床，称为异位妊娠（<span class="answer-text">ectopic pregnancy</span>）。异位妊娠主要为<span class="answer-text">输卵管妊娠</span>，占<span class="answer-text">95%</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>47.. <strong>流产</strong><br>胎儿不足<span class="blur-text">28周</span>，胎儿体重不足<span class="blur-text">1000g</span>而终止妊娠者。妊娠<span class="blur-text">12周</span>前终止者为早期流产，妊娠12周至不足28周终止者为晚期流产。</td>
+                            <td>47.. <strong>流产</strong><br>胎儿不足<span class="answer-text">28周</span>，胎儿体重不足<span class="answer-text">1000g</span>而终止妊娠者。妊娠<span class="answer-text">12周</span>前终止者为早期流产，妊娠12周至不足28周终止者为晚期流产。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>48.. <strong>先兆流产</strong><br>停经后出现<span class="blur-text">少量</span>阴道流血，常为暗红色或血性白带，流血后数小时至数日可出现轻微下腹痛或腰骶部胀痛；宫颈口<span class="blur-text">未开</span>，无妊娠物排出，子宫大小与停经时间相符。经休息和治疗，症状消失，可继续妊娠。如症状加重，可发展为难免流产。</td>
+                            <td>48.. <strong>先兆流产</strong><br>停经后出现<span class="answer-text">少量</span>阴道流血，常为暗红色或血性白带，流血后数小时至数日可出现轻微下腹痛或腰骶部胀痛；宫颈口<span class="answer-text">未开</span>，无妊娠物排出，子宫大小与停经时间相符。经休息和治疗，症状消失，可继续妊娠。如症状加重，可发展为难免流产。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>49.. <strong>难免流产</strong><br>在先兆流产的基础上，阴道流血增多，腹痛加剧或出现胎膜破裂。检查见宫颈口<span class="blur-text">已扩张</span>，有时可见胚囊或胚胎组织堵塞于宫颈口内，子宫与停经时间相符或略小，超声检查仅见胚囊，或无胚胎、无心血管搏动。</td>
+                            <td>49.. <strong>难免流产</strong><br>在先兆流产的基础上，阴道流血增多，腹痛加剧或出现胎膜破裂。检查见宫颈口<span class="answer-text">已扩张</span>，有时可见胚囊或胚胎组织堵塞于宫颈口内，子宫与停经时间相符或略小，超声检查仅见胚囊，或无胚胎、无心血管搏动。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>50.. <strong>不全流产</strong><br>难免流产继续发展，部分妊娠物排出宫腔，或胎儿排出后，胎盘<span class="blur-text">滞留</span>宫腔或嵌顿于宫颈口，影响子宫收缩，导致<span class="blur-text">大量出血</span>，甚至休克。检查可见宫颈口已经扩张，宫颈口有妊娠物堵塞及持续性出血，子宫小于停经时间。</td>
+                            <td>50.. <strong>不全流产</strong><br>难免流产继续发展，部分妊娠物排出宫腔，或胎儿排出后，胎盘<span class="answer-text">滞留</span>宫腔或嵌顿于宫颈口，影响子宫收缩，导致<span class="answer-text">大量出血</span>，甚至休克。检查可见宫颈口已经扩张，宫颈口有妊娠物堵塞及持续性出血，子宫小于停经时间。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>51.. <strong>完全流产</strong><br>有流产的症状，妊娠物已经全部排出，随后流血逐渐停止，腹痛逐渐消失。检查见宫颈口<span class="blur-text">关闭</span>，子宫接近正常大小。</td>
+                            <td>51.. <strong>完全流产</strong><br>有流产的症状，妊娠物已经全部排出，随后流血逐渐停止，腹痛逐渐消失。检查见宫颈口<span class="answer-text">关闭</span>，子宫接近正常大小。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>52.. <strong>稽留流产</strong><br>宫内胚胎或胎儿死亡后<span class="blur-text">未及时排出</span>。典型表现是有正常的早孕过程，有先兆流产的症状或无任何症状，随着停经时间延长，子宫不再增大或反而缩小，子宫小于停经时间，宫颈口未开，超声提示无存活胚胎。</td>
+                            <td>52.. <strong>稽留流产</strong><br>宫内胚胎或胎儿死亡后<span class="answer-text">未及时排出</span>。典型表现是有正常的早孕过程，有先兆流产的症状或无任何症状，随着停经时间延长，子宫不再增大或反而缩小，子宫小于停经时间，宫颈口未开，超声提示无存活胚胎。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>53.. <strong>复发性流产</strong><br>指连续自然流产<span class="blur-text">3次</span>及以上者。</td>
+                            <td>53.. <strong>复发性流产</strong><br>指连续自然流产<span class="answer-text">3次</span>及以上者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>54.. <strong>流产合并感染</strong><br>多见于阴道流血时间较长者，也常发生在不全流产或不洁流产时。临床表现为下腹痛、阴道分泌物异味，妇科检查有宫颈<span class="blur-text">摇摆痛</span>。</td>
+                            <td>54.. <strong>流产合并感染</strong><br>多见于阴道流血时间较长者，也常发生在不全流产或不洁流产时。临床表现为下腹痛、阴道分泌物异味，妇科检查有宫颈<span class="answer-text">摇摆痛</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>55.. <strong>早产</strong><br>是指妊娠满<span class="blur-text">28周</span>至不足<span class="blur-text">37周</span>间的分娩，此时娩出的新生儿称为早产儿。</td>
+                            <td>55.. <strong>早产</strong><br>是指妊娠满<span class="answer-text">28周</span>至不足<span class="answer-text">37周</span>间的分娩，此时娩出的新生儿称为早产儿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>56.. <strong>先兆早产</strong><br>妊娠满28周至不足37周，出现规律宫缩（每20分钟4次或每60分钟内8次），但宫颈尚未扩张，而经阴道超声测量宫颈管长度≤<span class="blur-text">20mm</span>。</td>
+                            <td>56.. <strong>先兆早产</strong><br>妊娠满28周至不足37周，出现规律宫缩（每20分钟4次或每60分钟内8次），但宫颈尚未扩张，而经阴道超声测量宫颈管长度≤<span class="answer-text">20mm</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>57.. <strong>早产临产</strong><br>凡妊娠满28周至不足37周，出现规律宫缩，伴有宫颈管的进行性改变（宫颈缩短≥<span class="blur-text">80%</span>），伴有宫口扩张。</td>
+                            <td>57.. <strong>早产临产</strong><br>凡妊娠满28周至不足37周，出现规律宫缩，伴有宫颈管的进行性改变（宫颈缩短≥<span class="answer-text">80%</span>），伴有宫口扩张。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>58.. <strong>胎膜早破</strong><br>胎膜破裂发生在<span class="blur-text">临产前</span>，称胎膜早破（<span class="blur-text">PROM</span>）。不满37周发生者称<span class="blur-text">未足月胎膜早破</span>。</td>
+                            <td>58.. <strong>胎膜早破</strong><br>胎膜破裂发生在<span class="answer-text">临产前</span>，称胎膜早破（<span class="answer-text">PROM</span>）。不满37周发生者称<span class="answer-text">未足月胎膜早破</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>59.. A <strong>子痫前期</strong><br>妊娠<span class="blur-text">20周</span>后出现收缩压≥<span class="blur-text">140mmHg</span>和（或）舒张压≥<span class="blur-text">90mmHg</span>，伴有蛋白尿（尿蛋白≥+或尿蛋白/肌酐≥0.3或24小时尿蛋白定量≥300mg）。</td>
+                            <td>59.. A <strong>子痫前期</strong><br>妊娠<span class="answer-text">20周</span>后出现收缩压≥<span class="answer-text">140mmHg</span>和（或）舒张压≥<span class="answer-text">90mmHg</span>，伴有蛋白尿（尿蛋白≥+或尿蛋白/肌酐≥0.3或24小时尿蛋白定量≥300mg）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>59.. B <strong>子痫前期（伴严重表现）</strong><br>1.血压改变：收缩压≥<span class="blur-text">160mmHg</span>和（或）舒张压≥<span class="blur-text">110mmHg</span>；2.血小板减少：血小板<<span class="blur-text">100×10⁹/L</span>；3.右上腹或上腹部疼痛，肝功能损害，血清转氨酶水平升高；4.肾功能损害：血肌酐≥<span class="blur-text">97.2μmol/L</span>，少尿（24h<<span class="blur-text">400ml</span>或<<span class="blur-text">17ml/h</span>）；5.心力衰竭，肺水肿；6.持续性头痛或视觉障碍或其它脑神经症状；7.胎儿生长受限或羊水过少。</td>
+                            <td>59.. B <strong>子痫前期（伴严重表现）</strong><br>1.血压改变：收缩压≥<span class="answer-text">160mmHg</span>和（或）舒张压≥<span class="answer-text">110mmHg</span>；2.血小板减少：血小板<<span class="answer-text">100×10⁹/L</span>；3.右上腹或上腹部疼痛，肝功能损害，血清转氨酶水平升高；4.肾功能损害：血肌酐≥<span class="answer-text">97.2μmol/L</span>，少尿（24h<<span class="answer-text">400ml</span>或<<span class="answer-text">17ml/h</span>）；5.心力衰竭，肺水肿；6.持续性头痛或视觉障碍或其它脑神经症状；7.胎儿生长受限或羊水过少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>60.. <strong>子痫</strong><br>子痫前期基础上发生不能用其他原因解释的<span class="blur-text">抽搐</span>。</td>
+                            <td>60.. <strong>子痫</strong><br>子痫前期基础上发生不能用其他原因解释的<span class="answer-text">抽搐</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>61.. <strong>HELLP综合征</strong><br>是妊娠期高血压疾病伴有<span class="blur-text">溶血</span>、<span class="blur-text">肝酶升高</span>以及<span class="blur-text">血小板减少</span>的一组临床综合征，是妊娠期高血压疾病的严重并发症。</td>
+                            <td>61.. <strong>HELLP综合征</strong><br>是妊娠期高血压疾病伴有<span class="answer-text">溶血</span>、<span class="answer-text">肝酶升高</span>以及<span class="answer-text">血小板减少</span>的一组临床综合征，是妊娠期高血压疾病的严重并发症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>62.. <strong>胎儿窘迫</strong><br>胎儿在子宫内因<span class="blur-text">缺氧</span>和<span class="blur-text">酸中毒</span>危及其健康和生命的状况。</td>
+                            <td>62.. <strong>胎儿窘迫</strong><br>胎儿在子宫内因<span class="answer-text">缺氧</span>和<span class="answer-text">酸中毒</span>危及其健康和生命的状况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>63.. <strong>前置胎盘</strong><br>妊娠<span class="blur-text">28周</span>后，胎盘附着于<span class="blur-text">子宫下段</span>，下缘达到或覆盖<span class="blur-text">宫颈内口</span>，位置低于胎先露部，称为前置胎盘。</td>
+                            <td>63.. <strong>前置胎盘</strong><br>妊娠<span class="answer-text">28周</span>后，胎盘附着于<span class="answer-text">子宫下段</span>，下缘达到或覆盖<span class="answer-text">宫颈内口</span>，位置低于胎先露部，称为前置胎盘。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>64.. <strong>凶险性前置胎盘</strong><br>既往有<span class="blur-text">剖宫产史</span>或<span class="blur-text">子宫肌瘤剥出史</span>，此次妊娠为前置胎盘。且胎盘附着于原子宫瘢痕部位者，伴有<span class="blur-text">胎盘植入</span>。</td>
+                            <td>64.. <strong>凶险性前置胎盘</strong><br>既往有<span class="answer-text">剖宫产史</span>或<span class="answer-text">子宫肌瘤剥出史</span>，此次妊娠为前置胎盘。且胎盘附着于原子宫瘢痕部位者，伴有<span class="answer-text">胎盘植入</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>65.. <strong>胎盘早剥</strong><br>妊娠<span class="blur-text">20周</span>后，正常位置的胎盘在胎儿娩出前部分或全部从子宫壁剥离。</td>
+                            <td>65.. <strong>胎盘早剥</strong><br>妊娠<span class="answer-text">20周</span>后，正常位置的胎盘在胎儿娩出前部分或全部从子宫壁剥离。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>66.. <strong>子宫胎盘卒中</strong><br>胎盘早剥发生内出血，血液积聚于胎盘与子宫壁之间，随着胎盘后血肿压力的增加，血液渗入子宫肌层，造成肌纤维分离、变性及坏死，当血液浸及浆膜层时子宫表面出现蓝紫色瘀斑，在胎盘附着处特别显著，甚至累及全子宫，称为<span class="blur-text">子宫胎盘卒中</span>（<span class="blur-text">uteroplacental apoplexy</span>）。</td>
+                            <td>66.. <strong>子宫胎盘卒中</strong><br>胎盘早剥发生内出血，血液积聚于胎盘与子宫壁之间，随着胎盘后血肿压力的增加，血液渗入子宫肌层，造成肌纤维分离、变性及坏死，当血液浸及浆膜层时子宫表面出现蓝紫色瘀斑，在胎盘附着处特别显著，甚至累及全子宫，称为<span class="answer-text">子宫胎盘卒中</span>（<span class="answer-text">uteroplacental apoplexy</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>67.. <strong>多胎妊娠</strong><br>指一次妊娠宫腔内同时有<span class="blur-text">两个</span>或两个以上胎儿。</td>
+                            <td>67.. <strong>多胎妊娠</strong><br>指一次妊娠宫腔内同时有<span class="answer-text">两个</span>或两个以上胎儿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>68.. <strong>双胎输血综合征（TTTS）</strong><br>单绒毛膜性双胎，两个胎儿出现<span class="blur-text">羊水过多-过少序列</span>。</td>
+                            <td>68.. <strong>双胎输血综合征（TTTS）</strong><br>单绒毛膜性双胎，两个胎儿出现<span class="answer-text">羊水过多-过少序列</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>69.. <strong>双胎贫血-红细胞增多序列征（TAPS）</strong><br>临床排除TTTS，多血质儿MCA-PSV≤<span class="blur-text">0.8MoM</span>，贫血儿MCA-PSV≥<span class="blur-text">1.5MoM</span>，或2个胎儿MCA-PSV差值>0.5MoM。</td>
+                            <td>69.. <strong>双胎贫血-红细胞增多序列征（TAPS）</strong><br>临床排除TTTS，多血质儿MCA-PSV≤<span class="answer-text">0.8MoM</span>，贫血儿MCA-PSV≥<span class="answer-text">1.5MoM</span>，或2个胎儿MCA-PSV差值>0.5MoM。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>70.. <strong>选择性胎儿生长受限（sFGR）</strong><br>双绒毛膜双胎如两胎儿体重相差≥<span class="blur-text">25%</span>，可考虑双胎生长发育不一致。</td>
+                            <td>70.. <strong>选择性胎儿生长受限（sFGR）</strong><br>双绒毛膜双胎如两胎儿体重相差≥<span class="answer-text">25%</span>，可考虑双胎生长发育不一致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>71.. <strong>双胎反向动脉灌注序列征（TRAPS）</strong><br>超声见双胎之一心脏缺如、残留或无功能，但胎体内可见血液流动，无心胎的脐带为<span class="blur-text">单脐</span>动脉，即<span class="blur-text">入胎</span>动脉血流，其血流频谱显示的心率、心律与正常胎儿（供血胎）的心率、心律完全一致。</td>
+                            <td>71.. <strong>双胎反向动脉灌注序列征（TRAPS）</strong><br>超声见双胎之一心脏缺如、残留或无功能，但胎体内可见血液流动，无心胎的脐带为<span class="answer-text">单脐</span>动脉，即<span class="answer-text">入胎</span>动脉血流，其血流频谱显示的心率、心律与正常胎儿（供血胎）的心率、心律完全一致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>72.. <strong>围产期心肌病（PPCM）</strong><br>指既往无心脏病病史，发生于妊娠期<span class="blur-text">28周</span>至产后<span class="blur-text">6个月</span>内发生的扩张型心肌病。</td>
+                            <td>72.. <strong>围产期心肌病（PPCM）</strong><br>指既往无心脏病病史，发生于妊娠期<span class="answer-text">28周</span>至产后<span class="answer-text">6个月</span>内发生的扩张型心肌病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>73.. <strong>妊娠期肝内胆汁淤积症（ICP）</strong><br>是妊娠中晚期特发性疾病，主要表现为孕妇<span class="blur-text">皮肤瘙痒</span>和肝脏功能异常，血清<span class="blur-text">胆汁酸</span>水平增高，容易引起胎儿窘迫，早产，死胎，死产，新生儿死亡等。</td>
+                            <td>73.. <strong>妊娠期肝内胆汁淤积症（ICP）</strong><br>是妊娠中晚期特发性疾病，主要表现为孕妇<span class="answer-text">皮肤瘙痒</span>和肝脏功能异常，血清<span class="answer-text">胆汁酸</span>水平增高，容易引起胎儿窘迫，早产，死胎，死产，新生儿死亡等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>74.. <strong>妊娠期糖尿病（GDM）</strong><br>妊娠期发生的不同程度的<span class="blur-text">糖代谢异常</span>。</td>
+                            <td>74.. <strong>妊娠期糖尿病（GDM）</strong><br>妊娠期发生的不同程度的<span class="answer-text">糖代谢异常</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>75.. <strong>异常分娩</strong><br>又称<span class="blur-text">难产</span>（<span class="blur-text">dystocia</span>），因产力，产道，胎儿及精神因素中任何一个或一个以上的因素发生异常及四个因素间相互不能适应，使分娩进程受到阻碍。</td>
+                            <td>75.. <strong>异常分娩</strong><br>又称<span class="answer-text">难产</span>（<span class="answer-text">dystocia</span>），因产力，产道，胎儿及精神因素中任何一个或一个以上的因素发生异常及四个因素间相互不能适应，使分娩进程受到阻碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>76.. <strong>潜伏期延长</strong><br>从临产规律宫缩开始至宫口扩张<span class="blur-text">6cm</span>称为潜伏期，初产妇大于<span class="blur-text">20小时</span>，经产妇大于<span class="blur-text">14小时</span>，称为潜伏期延长。</td>
+                            <td>76.. <strong>潜伏期延长</strong><br>从临产规律宫缩开始至宫口扩张<span class="answer-text">6cm</span>称为潜伏期，初产妇大于<span class="answer-text">20小时</span>，经产妇大于<span class="answer-text">14小时</span>，称为潜伏期延长。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>77.. <strong>活跃期停滞</strong><br>从宫口扩张6cm开始至宫口开全称为活跃期。破膜后宫口扩张≥6cm后，如宫缩正常时宫口停止扩张≥<span class="blur-text">4小时</span>，宫缩乏力时宫口停止扩张≥<span class="blur-text">6小时</span>，称为活跃期停滞。</td>
+                            <td>77.. <strong>活跃期停滞</strong><br>从宫口扩张6cm开始至宫口开全称为活跃期。破膜后宫口扩张≥6cm后，如宫缩正常时宫口停止扩张≥<span class="answer-text">4小时</span>，宫缩乏力时宫口停止扩张≥<span class="answer-text">6小时</span>，称为活跃期停滞。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>78.. <strong>第二产程延长</strong><br>初产妇><span class="blur-text">3小时</span>，经产妇><span class="blur-text">2小时</span>（硬膜外麻醉镇痛分娩时，初产妇><span class="blur-text">4小时</span>，经产妇><span class="blur-text">3小时</span>），产程无进展（胎头下降和旋转）。</td>
+                            <td>78.. <strong>第二产程延长</strong><br>初产妇><span class="answer-text">3小时</span>，经产妇><span class="answer-text">2小时</span>（硬膜外麻醉镇痛分娩时，初产妇><span class="answer-text">4小时</span>，经产妇><span class="answer-text">3小时</span>），产程无进展（胎头下降和旋转）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>79.. <strong>产力异常</strong><br>任何原因引起的子宫收缩的节律性，对称性及极性不正常或收缩力的强度，频率变化，均称为<span class="blur-text">子宫收缩力异常</span>，简称产力异常。</td>
+                            <td>79.. <strong>产力异常</strong><br>任何原因引起的子宫收缩的节律性，对称性及极性不正常或收缩力的强度，频率变化，均称为<span class="answer-text">子宫收缩力异常</span>，简称产力异常。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>80.. <strong>胎头高直位</strong><br>胎头以不屈不仰姿势衔接入盆，其矢状缝与骨盆入口前后径相一致。包括：1.<span class="blur-text">高直前位</span>，指胎头枕骨向前靠近耻骨联合者，又称枕耻位；2.<span class="blur-text">高直后位</span>，指胎头枕骨向后靠近骶岬者，又称枕骶位。</td>
+                            <td>80.. <strong>胎头高直位</strong><br>胎头以不屈不仰姿势衔接入盆，其矢状缝与骨盆入口前后径相一致。包括：1.<span class="answer-text">高直前位</span>，指胎头枕骨向前靠近耻骨联合者，又称枕耻位；2.<span class="answer-text">高直后位</span>，指胎头枕骨向后靠近骶岬者，又称枕骶位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>81.. <strong>前不均倾位</strong><br>枕横位入盆的胎头侧屈以其<span class="blur-text">前顶骨</span>先入盆的一种异常胎位。</td>
+                            <td>81.. <strong>前不均倾位</strong><br>枕横位入盆的胎头侧屈以其<span class="answer-text">前顶骨</span>先入盆的一种异常胎位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>82.. <strong>肩难产</strong><br>胎头娩出后，胎儿前肩被嵌顿在<span class="blur-text">耻骨联合上方</span>，用常规助产方法不能娩出胎儿双肩者。</td>
+                            <td>82.. <strong>肩难产</strong><br>胎头娩出后，胎儿前肩被嵌顿在<span class="answer-text">耻骨联合上方</span>，用常规助产方法不能娩出胎儿双肩者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>83.. <strong>产后出血（PPH）</strong><br>指胎儿娩出后<span class="blur-text">24小时</span>内，阴道分娩者出血量≥<span class="blur-text">500毫升</span>，剖宫产者≥<span class="blur-text">1000ml</span>。</td>
+                            <td>83.. <strong>产后出血（PPH）</strong><br>指胎儿娩出后<span class="answer-text">24小时</span>内，阴道分娩者出血量≥<span class="answer-text">500毫升</span>，剖宫产者≥<span class="answer-text">1000ml</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>84.. <strong>羊水栓塞（AFE）</strong><br>由于羊水进入母体血液循环而引起的<span class="blur-text">肺动脉高压</span>，<span class="blur-text">低氧血症</span>，循环衰竭，<span class="blur-text">弥漫性血管内凝血</span>以及多器官功能衰竭等一系列病理生理变化的过程。</td>
+                            <td>84.. <strong>羊水栓塞（AFE）</strong><br>由于羊水进入母体血液循环而引起的<span class="answer-text">肺动脉高压</span>，<span class="answer-text">低氧血症</span>，循环衰竭，<span class="answer-text">弥漫性血管内凝血</span>以及多器官功能衰竭等一系列病理生理变化的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>85.. <strong>子宫内膜癌</strong><br>是发生于子宫内膜的一组上皮性恶性肿瘤，绝大多数为<span class="blur-text">腺癌</span>。</td>
+                            <td>85.. <strong>子宫内膜癌</strong><br>是发生于子宫内膜的一组上皮性恶性肿瘤，绝大多数为<span class="answer-text">腺癌</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>86.. <strong>原始鳞柱交界</strong><br>宫颈<span class="blur-text">阴道部</span>鳞状上皮与<span class="blur-text">子宫颈</span>管柱状上皮两者的交界。</td>
+                            <td>86.. <strong>原始鳞柱交界</strong><br>宫颈<span class="answer-text">阴道部</span>鳞状上皮与<span class="answer-text">子宫颈</span>管柱状上皮两者的交界。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>87.. <strong>转化区（移行带）</strong><br>原始鳞柱交界和生理性鳞柱交界（新鳞柱交界）之间的区域，是<span class="blur-text">宫颈上皮内病变</span>及<span class="blur-text">宫颈癌</span>的好发部位。</td>
+                            <td>87.. <strong>转化区（移行带）</strong><br>原始鳞柱交界和生理性鳞柱交界（新鳞柱交界）之间的区域，是<span class="answer-text">宫颈上皮内病变</span>及<span class="answer-text">宫颈癌</span>的好发部位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>88.. <strong>子宫颈微小浸润性鳞状细胞癌</strong><br>癌细胞突破基底膜，向固有膜间质内浸润，形成不规则癌细胞巢或条索，但浸润深度不超过基底膜下<span class="blur-text">5mm</span>。</td>
+                            <td>88.. <strong>子宫颈微小浸润性鳞状细胞癌</strong><br>癌细胞突破基底膜，向固有膜间质内浸润，形成不规则癌细胞巢或条索，但浸润深度不超过基底膜下<span class="answer-text">5mm</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>89.. <strong>库肯勃瘤（Krukenberg tumor）</strong><br>转移至卵巢的肿瘤，因瘤细胞镜下结构特点类似于印戒，也称<span class="blur-text">印戒细胞瘤</span>（<span class="blur-text">signet-ring cell carcinoma</span>）。</td>
+                            <td>89.. <strong>库肯勃瘤（Krukenberg tumor）</strong><br>转移至卵巢的肿瘤，因瘤细胞镜下结构特点类似于印戒，也称<span class="answer-text">印戒细胞瘤</span>（<span class="answer-text">signet-ring cell carcinoma</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>90.. <strong>葡萄胎</strong><br>因妊娠后胎盘绒毛滋养细胞增生、间质水肿，而形成大小不一的水疱，水疱间借蒂相连成串，形如葡萄，故称<span class="blur-text">葡萄胎</span>，又称<span class="blur-text">水泡状胎块</span>。</td>
+                            <td>90.. <strong>葡萄胎</strong><br>因妊娠后胎盘绒毛滋养细胞增生、间质水肿，而形成大小不一的水疱，水疱间借蒂相连成串，形如葡萄，故称<span class="answer-text">葡萄胎</span>，又称<span class="answer-text">水泡状胎块</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>91.. <strong>卵巢黄素化囊肿</strong><br>大量<span class="blur-text">HCG</span>过度刺激卵巢卵泡内膜细胞发生黄素化所致，常为<span class="blur-text">双侧</span>。</td>
+                            <td>91.. <strong>卵巢黄素化囊肿</strong><br>大量<span class="answer-text">HCG</span>过度刺激卵巢卵泡内膜细胞发生黄素化所致，常为<span class="answer-text">双侧</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>92.. <strong>滋养层细胞疾病（GTD）</strong><br>包括<span class="blur-text">葡萄胎</span>、<span class="blur-text">侵蚀性葡萄胎</span>、<span class="blur-text">绒毛膜癌</span>和<span class="blur-text">胎盘部位滋养细胞肿瘤</span>，其共同特征为滋养层细胞异常增生。患者常有血清和尿液中<span class="blur-text">人绒毛膜促性腺激素（HCG）</span>含量的异常增高。</td>
+                            <td>92.. <strong>滋养层细胞疾病（GTD）</strong><br>包括<span class="answer-text">葡萄胎</span>、<span class="answer-text">侵蚀性葡萄胎</span>、<span class="answer-text">绒毛膜癌</span>和<span class="answer-text">胎盘部位滋养细胞肿瘤</span>，其共同特征为滋养层细胞异常增生。患者常有血清和尿液中<span class="answer-text">人绒毛膜促性腺激素（HCG）</span>含量的异常增高。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>93.. <strong>侵蚀性葡萄胎</strong><br>是介于葡萄胎和绒毛膜癌之间的交界性肿瘤。侵蚀性葡萄胎和葡萄胎的主要区别是<span class="blur-text">水泡状绒毛侵入子宫肌层</span>。有无<span class="blur-text">绒毛结构</span>是侵蚀性葡萄胎与绒毛膜癌最主要的区别。</td>
+                            <td>93.. <strong>侵蚀性葡萄胎</strong><br>是介于葡萄胎和绒毛膜癌之间的交界性肿瘤。侵蚀性葡萄胎和葡萄胎的主要区别是<span class="answer-text">水泡状绒毛侵入子宫肌层</span>。有无<span class="answer-text">绒毛结构</span>是侵蚀性葡萄胎与绒毛膜癌最主要的区别。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>94.. <strong>绒毛膜癌</strong><br>是源自妊娠绒毛滋养层细胞的恶性肿瘤。肉眼观，癌结节常侵入子宫深肌层，出血坏死明显。镜下，肿瘤由分化不良，异型明显的<span class="blur-text">似细胞滋养层</span>和<span class="blur-text">似合体滋养层细胞</span>组成，核分裂象易见。肿瘤自身无间质血管，不形成<span class="blur-text">绒毛</span>和<span class="blur-text">水泡状结构</span>。</td>
+                            <td>94.. <strong>绒毛膜癌</strong><br>是源自妊娠绒毛滋养层细胞的恶性肿瘤。肉眼观，癌结节常侵入子宫深肌层，出血坏死明显。镜下，肿瘤由分化不良，异型明显的<span class="answer-text">似细胞滋养层</span>和<span class="answer-text">似合体滋养层细胞</span>组成，核分裂象易见。肿瘤自身无间质血管，不形成<span class="answer-text">绒毛</span>和<span class="answer-text">水泡状结构</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>95.. <strong>子宫内膜异位症</strong><br>具有生长功能的子宫内膜组织（腺体和间质）出现在<span class="blur-text">子宫内膜以外</span>的部位。</td>
+                            <td>95.. <strong>子宫内膜异位症</strong><br>具有生长功能的子宫内膜组织（腺体和间质）出现在<span class="answer-text">子宫内膜以外</span>的部位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>96.. <strong>巧克力囊肿</strong><br>卵巢内<span class="blur-text">子宫内膜异位症</span>病灶可因反复周期性出血而形成单个或多个囊肿，内含暗褐色黏糊状陈旧血，状似巧克力液体。</td>
+                            <td>96.. <strong>巧克力囊肿</strong><br>卵巢内<span class="answer-text">子宫内膜异位症</span>病灶可因反复周期性出血而形成单个或多个囊肿，内含暗褐色黏糊状陈旧血，状似巧克力液体。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>97.. <strong>深部浸润型内异症</strong><br>病灶浸润深度≥<span class="blur-text">5mm</span>的内异症，可发生在盆腔腹膜的任何地方。</td>
+                            <td>97.. <strong>深部浸润型内异症</strong><br>病灶浸润深度≥<span class="answer-text">5mm</span>的内异症，可发生在盆腔腹膜的任何地方。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>98.. <strong>假孕疗法</strong><br>服用大剂量<span class="blur-text">雌激素</span>及<span class="blur-text">孕激素</span>抑制排卵使病人闭经，类似怀孕停经，用于治疗子宫内膜异位症。</td>
+                            <td>98.. <strong>假孕疗法</strong><br>服用大剂量<span class="answer-text">雌激素</span>及<span class="answer-text">孕激素</span>抑制排卵使病人闭经，类似怀孕停经，用于治疗子宫内膜异位症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>99.. <strong>假绝经疗法</strong><br><span class="blur-text">达那唑</span>可阻断下丘脑促性腺激素释放激素和垂体促性腺激素的合成和释放，直接抑制卵巢甾体激素的合成，以及有可能与靶器官性激素受体相结合，从而使子宫内膜萎缩，导致短暂闭经，称为<span class="blur-text">假绝经疗法</span>，可用于治疗子宫内膜异位症。</td>
+                            <td>99.. <strong>假绝经疗法</strong><br><span class="answer-text">达那唑</span>可阻断下丘脑促性腺激素释放激素和垂体促性腺激素的合成和释放，直接抑制卵巢甾体激素的合成，以及有可能与靶器官性激素受体相结合，从而使子宫内膜萎缩，导致短暂闭经，称为<span class="answer-text">假绝经疗法</span>，可用于治疗子宫内膜异位症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>100.. <strong>药物性卵巢切除</strong><br>用<span class="blur-text">促性腺激素释放激素激动剂（GnRH）</span>抑制垂体分泌促性腺激素，导致卵巢激素水平明显下降，出现短暂性闭经。</td>
+                            <td>100.. <strong>药物性卵巢切除</strong><br>用<span class="answer-text">促性腺激素释放激素激动剂（GnRH）</span>抑制垂体分泌促性腺激素，导致卵巢激素水平明显下降，出现短暂性闭经。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>101.. <strong>子宫腺肌病</strong><br>具有生长功能的子宫内膜组织（腺体和间质）出现在<span class="blur-text">子宫肌层</span>。</td>
+                            <td>101.. <strong>子宫腺肌病</strong><br>具有生长功能的子宫内膜组织（腺体和间质）出现在<span class="answer-text">子宫肌层</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>102.. <strong>异常子宫出血（AUB）</strong><br>是指与正常月经的<span class="blur-text">周期，频率，规律性，经期长度，经期出血量</span>任何一项不符的源自子宫腔的异常出血。</td>
+                            <td>102.. <strong>异常子宫出血（AUB）</strong><br>是指与正常月经的<span class="answer-text">周期，频率，规律性，经期长度，经期出血量</span>任何一项不符的源自子宫腔的异常出血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>103.. <strong>无排卵性异常子宫出血（AUB-O）</strong><br>雌激素过度刺激子宫内膜，无<span class="blur-text">孕激素</span>拮抗，子宫内膜增殖和增生，没有孕激素稳定和转化内膜，粘膜脆性增加，不规则脱落，月经不规则，出血多或淋漓不尽。</td>
+                            <td>103.. <strong>无排卵性异常子宫出血（AUB-O）</strong><br>雌激素过度刺激子宫内膜，无<span class="answer-text">孕激素</span>拮抗，子宫内膜增殖和增生，没有孕激素稳定和转化内膜，粘膜脆性增加，不规则脱落，月经不规则，出血多或淋漓不尽。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>104.. <strong>黄体功能不足</strong><br>月经周期中有卵泡发育及排卵，但黄体期<span class="blur-text">孕激素</span>分泌不足或黄体过早衰退，致子宫内膜分泌反应不良。常导致排卵性子宫功能性出血、不孕或早期流产。</td>
+                            <td>104.. <strong>黄体功能不足</strong><br>月经周期中有卵泡发育及排卵，但黄体期<span class="answer-text">孕激素</span>分泌不足或黄体过早衰退，致子宫内膜分泌反应不良。常导致排卵性子宫功能性出血、不孕或早期流产。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>105.. <strong>闭经</strong><br>包括生理性闭经和病理性闭经。病理性闭经分为<span class="blur-text">原发性闭经</span>和<span class="blur-text">继发性闭经</span>，原发性闭经是指女性年过<span class="blur-text">16岁</span>，虽有第二性征发育，但无月经来潮，或年过<span class="blur-text">14岁</span>，尚无第二性征发育及月经。继发性闭经为月经来潮后停止<span class="blur-text">3个周期</span>或<span class="blur-text">6个月</span>以上。</td>
+                            <td>105.. <strong>闭经</strong><br>包括生理性闭经和病理性闭经。病理性闭经分为<span class="answer-text">原发性闭经</span>和<span class="answer-text">继发性闭经</span>，原发性闭经是指女性年过<span class="answer-text">16岁</span>，虽有第二性征发育，但无月经来潮，或年过<span class="answer-text">14岁</span>，尚无第二性征发育及月经。继发性闭经为月经来潮后停止<span class="answer-text">3个周期</span>或<span class="answer-text">6个月</span>以上。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>106.. <strong>多囊卵巢综合征（PCOS）</strong><br>是一种以<span class="blur-text">雄激素过高</span>的临床或生化表现、<span class="blur-text">持续无排卵</span>以及卵巢多囊改变为特征的妇科常见内分泌异常性疾病，常伴<span class="blur-text">胰岛素抵抗</span>和<span class="blur-text">肥胖</span>。</td>
+                            <td>106.. <strong>多囊卵巢综合征（PCOS）</strong><br>是一种以<span class="answer-text">雄激素过高</span>的临床或生化表现、<span class="answer-text">持续无排卵</span>以及卵巢多囊改变为特征的妇科常见内分泌异常性疾病，常伴<span class="answer-text">胰岛素抵抗</span>和<span class="answer-text">肥胖</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>107.. <strong>痛经</strong><br>为月经期出现的子宫<span class="blur-text">痉挛性疼痛</span>，可伴腰酸、下腹坠痛或其他不适，严重者可影响病人生活质量。</td>
+                            <td>107.. <strong>痛经</strong><br>为月经期出现的子宫<span class="answer-text">痉挛性疼痛</span>，可伴腰酸、下腹坠痛或其他不适，严重者可影响病人生活质量。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>108.. <strong>经前期综合征（PMS）</strong><br>是指反复在月经前周期性以<span class="blur-text">情感</span>、<span class="blur-text">行为</span>和<span class="blur-text">躯体障碍</span>为特征，月经来潮后可自然消失。</td>
+                            <td>108.. <strong>经前期综合征（PMS）</strong><br>是指反复在月经前周期性以<span class="answer-text">情感</span>、<span class="answer-text">行为</span>和<span class="answer-text">躯体障碍</span>为特征，月经来潮后可自然消失。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>109.. <strong>绝经</strong><br>是指因卵巢功能停止所致的永久性无月经状态，绝经只能回顾性确定，月经停止<span class="blur-text">12个月</span>才能诊断为绝经。</td>
+                            <td>109.. <strong>绝经</strong><br>是指因卵巢功能停止所致的永久性无月经状态，绝经只能回顾性确定，月经停止<span class="answer-text">12个月</span>才能诊断为绝经。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>110.. <strong>围绝经期</strong><br>是妇女自生育期的规律月经过渡到绝经的阶段，包括从出现与<span class="blur-text">卵巢功能下降</span>有关的内分泌、生物学和临床特征起，至末次月经后一年。</td>
+                            <td>110.. <strong>围绝经期</strong><br>是妇女自生育期的规律月经过渡到绝经的阶段，包括从出现与<span class="answer-text">卵巢功能下降</span>有关的内分泌、生物学和临床特征起，至末次月经后一年。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>111.. <strong>高泌乳素血症</strong><br><span class="blur-text">图略</span></td>
+                            <td>111.. <strong>高泌乳素血症</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>112.. <strong>子宫脱垂</strong><br>子宫从正常位置沿阴道下降，宫颈外口达<span class="blur-text">坐骨棘水平以下</span>，甚至子宫全部脱出阴道口以外。</td>
+                            <td>112.. <strong>子宫脱垂</strong><br>子宫从正常位置沿阴道下降，宫颈外口达<span class="answer-text">坐骨棘水平以下</span>，甚至子宫全部脱出阴道口以外。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>113.. <strong>压力性尿失禁</strong><br>是指咳嗽，喷嚏，大笑等<span class="blur-text">腹压突然增加</span>时导致尿液不自主的从尿道口流出。</td>
+                            <td>113.. <strong>压力性尿失禁</strong><br>是指咳嗽，喷嚏，大笑等<span class="answer-text">腹压突然增加</span>时导致尿液不自主的从尿道口流出。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>114.. <strong>泌尿生殖器官瘘</strong><br>女性生殖道某处与泌尿系统或肠道之间形成的异常通道称为泌尿生殖器官瘘，生殖道与泌尿道之间构成的异常通道称<span class="blur-text">尿瘘</span>，生殖道与肠道之间发生的异常通道称<span class="blur-text">粪瘘</span>。</td>
+                            <td>114.. <strong>泌尿生殖器官瘘</strong><br>女性生殖道某处与泌尿系统或肠道之间形成的异常通道称为泌尿生殖器官瘘，生殖道与泌尿道之间构成的异常通道称<span class="answer-text">尿瘘</span>，生殖道与肠道之间发生的异常通道称<span class="answer-text">粪瘘</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>115.. <strong>不孕症</strong><br>女性无避孕性生活至少<span class="blur-text">12个月</span>而未孕称为不孕症。</td>
+                            <td>115.. <strong>不孕症</strong><br>女性无避孕性生活至少<span class="answer-text">12个月</span>而未孕称为不孕症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>116.. <strong>辅助生殖技术（ART）</strong><br>在体外对<span class="blur-text">配子和胚胎</span>采用显微操作技术帮助不孕夫妇受孕的一种方法。</td>
+                            <td>116.. <strong>辅助生殖技术（ART）</strong><br>在体外对<span class="answer-text">配子和胚胎</span>采用显微操作技术帮助不孕夫妇受孕的一种方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>117.. <strong>人工授精（AI）</strong><br>将精子通过<span class="blur-text">非性交方式</span>放入女性生殖道内，使其受孕的一种技术。</td>
+                            <td>117.. <strong>人工授精（AI）</strong><br>将精子通过<span class="answer-text">非性交方式</span>放入女性生殖道内，使其受孕的一种技术。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>118.. <strong>体外受精-胚胎移植（IVF-ET）</strong><br>从妇女卵巢内取出卵子，在体外与精子受精并培养<span class="blur-text">3~5日</span>，再将发育到卵裂期或囊胚期的胚胎移植到宫腔内，使其着床发育成胎儿的全过程，俗称"<span class="blur-text">试管婴儿</span>"。</td>
+                            <td>118.. <strong>体外受精-胚胎移植（IVF-ET）</strong><br>从妇女卵巢内取出卵子，在体外与精子受精并培养<span class="answer-text">3~5日</span>，再将发育到卵裂期或囊胚期的胚胎移植到宫腔内，使其着床发育成胎儿的全过程，俗称"<span class="answer-text">试管婴儿</span>"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>119.. <strong>控制性超促排卵（COH）</strong><br>用药物在可控制的范围内诱导<span class="blur-text">多卵泡</span>同时发育和成熟，以获得更多高质量卵子，从而获得更多可供移植胚胎，提高妊娠率。</td>
+                            <td>119.. <strong>控制性超促排卵（COH）</strong><br>用药物在可控制的范围内诱导<span class="answer-text">多卵泡</span>同时发育和成熟，以获得更多高质量卵子，从而获得更多可供移植胚胎，提高妊娠率。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>120.. <strong>盆腔炎性疾病（PID）</strong><br>指女性上生殖道及其周围组织感染引起的一组感染性疾病，包括<span class="blur-text">子宫内膜炎</span>，<span class="blur-text">输卵管炎</span>，<span class="blur-text">输卵管卵巢脓肿</span>，<span class="blur-text">盆腔腹膜炎</span>。</td>
+                            <td>120.. <strong>盆腔炎性疾病（PID）</strong><br>指女性上生殖道及其周围组织感染引起的一组感染性疾病，包括<span class="answer-text">子宫内膜炎</span>，<span class="answer-text">输卵管炎</span>，<span class="answer-text">输卵管卵巢脓肿</span>，<span class="answer-text">盆腔腹膜炎</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>121.. <strong>酒窝征</strong><br>若乳腺肿瘤增大累及<span class="blur-text">Cooper韧带</span>，可使其缩短而致肿瘤表面皮肤凹陷。</td>
+                            <td>121.. <strong>酒窝征</strong><br>若乳腺肿瘤增大累及<span class="answer-text">Cooper韧带</span>，可使其缩短而致肿瘤表面皮肤凹陷。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>122.. <strong>橘皮样变</strong><br>乳腺癌癌块继续增大，如皮下淋巴管被癌细胞堵塞，引起淋巴回流障碍，出现真皮水肿，皮肤出现"<span class="blur-text">橘皮样</span>"改变。</td>
+                            <td>122.. <strong>橘皮样变</strong><br>乳腺癌癌块继续增大，如皮下淋巴管被癌细胞堵塞，引起淋巴回流障碍，出现真皮水肿，皮肤出现"<span class="answer-text">橘皮样</span>"改变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>123.. <strong>铠甲状癌</strong><br>若乳腺癌浸润大片皮肤，并形成皮肤多量小结节或小索，彼此融合成片，延伸至背部及对侧胸壁，可紧缩胸壁限制呼吸，形成"<span class="blur-text">铠甲状癌</span>"。</td>
+                            <td>123.. <strong>铠甲状癌</strong><br>若乳腺癌浸润大片皮肤，并形成皮肤多量小结节或小索，彼此融合成片，延伸至背部及对侧胸壁，可紧缩胸壁限制呼吸，形成"<span class="answer-text">铠甲状癌</span>"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>124.. <strong>炎性乳腺癌</strong><br>是一种少见却极具侵袭性的乳腺癌，局部皮肤可呈现炎症样表现，乳房迅速增大，超过<span class="blur-text">1/3</span>的乳房伴皮肤改变（红、肿、热、痛及"橘皮样"改变），乳腺通常弥漫变硬。临床上出现炎症症状是由于存在大量<span class="blur-text">真皮内淋巴管癌栓</span>。</td>
+                            <td>124.. <strong>炎性乳腺癌</strong><br>是一种少见却极具侵袭性的乳腺癌，局部皮肤可呈现炎症样表现，乳房迅速增大，超过<span class="answer-text">1/3</span>的乳房伴皮肤改变（红、肿、热、痛及"橘皮样"改变），乳腺通常弥漫变硬。临床上出现炎症症状是由于存在大量<span class="answer-text">真皮内淋巴管癌栓</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>125.. <strong>乳头湿疹样乳腺癌（Paget病）</strong><br>少见，恶性程度低，发展慢。乳头有<span class="blur-text">瘙痒，烧灼</span>感，以后出现乳头和乳晕的皮肤变粗糙、糜烂如湿疹样，进而形成溃疡，有时覆盖黄褐色鳞屑样痂皮。部分病例于乳晕区可扪及肿块，较晚发生腋淋巴结转移。</td>
+                            <td>125.. <strong>乳头湿疹样乳腺癌（Paget病）</strong><br>少见，恶性程度低，发展慢。乳头有<span class="answer-text">瘙痒，烧灼</span>感，以后出现乳头和乳晕的皮肤变粗糙、糜烂如湿疹样，进而形成溃疡，有时覆盖黄褐色鳞屑样痂皮。部分病例于乳晕区可扪及肿块，较晚发生腋淋巴结转移。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>126.. <strong>三阴性乳癌</strong><br><span class="blur-text">ER</span>，<span class="blur-text">PR</span>，<span class="blur-text">HER2</span>分子检测均为阴性的乳腺癌，为乳腺基底样癌，预后差。</td>
+                            <td>126.. <strong>三阴性乳癌</strong><br><span class="answer-text">ER</span>，<span class="answer-text">PR</span>，<span class="answer-text">HER2</span>分子检测均为阴性的乳腺癌，为乳腺基底样癌，预后差。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>127.. <strong>病理性缩复环</strong><br>指临产后，当胎先露下降受阻，强有力的子宫收缩使子宫下段逐渐变薄，子宫上段更加增厚变短，在子宫体部与下段间形成明显的环状凹陷，随产程进展可上升至脐平，甚至脐上，是<span class="blur-text">子宫先兆破裂</span>的征象。</td>
+                            <td>127.. <strong>病理性缩复环</strong><br>指临产后，当胎先露下降受阻，强有力的子宫收缩使子宫下段逐渐变薄，子宫上段更加增厚变短，在子宫体部与下段间形成明显的环状凹陷，随产程进展可上升至脐平，甚至脐上，是<span class="answer-text">子宫先兆破裂</span>的征象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>128.. <strong>线索细胞</strong><br>为表面黏附了大量细小颗粒的阴道脱落鳞状上皮细胞，这些细小颗粒为<span class="blur-text">加德纳菌</span>及其他厌氧菌，使得高倍显微镜下所见的鳞状上皮细胞表面毛糙，模糊，边界不清，边缘成锯齿状。</td>
+                            <td>128.. <strong>线索细胞</strong><br>为表面黏附了大量细小颗粒的阴道脱落鳞状上皮细胞，这些细小颗粒为<span class="answer-text">加德纳菌</span>及其他厌氧菌，使得高倍显微镜下所见的鳞状上皮细胞表面毛糙，模糊，边界不清，边缘成锯齿状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>129.. <strong>良性前列腺增生（BPH）</strong><br>解剖学上表现为前列腺体积增大致使后尿道受压变窄，组织学上表现为前列腺间质和腺体的细胞增生，临床上表现为<span class="blur-text">下尿路症状</span>为主的一组综合征。是中老年男性排尿困难最常见的病因。</td>
+                            <td>129.. <strong>良性前列腺增生（BPH）</strong><br>解剖学上表现为前列腺体积增大致使后尿道受压变窄，组织学上表现为前列腺间质和腺体的细胞增生，临床上表现为<span class="answer-text">下尿路症状</span>为主的一组综合征。是中老年男性排尿困难最常见的病因。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>130.. A <strong>子宫颈上皮异型增生</strong><br>属癌前病变，指子宫颈上皮部分被不同程度的异型性细胞所取代。表现为细胞大小不一，形状不规则，细胞核大、深染、染色质增粗、核形状不规则，核浆比增大，核分裂象增多，极性紊乱等。可分为三级：<span class="blur-text">I级</span>，异型细胞局限于上皮层的下1/3区；<span class="blur-text">II级</span>，增生的异型细胞占上皮层下部的1/3至2/3。</td>
+                            <td>130.. A <strong>子宫颈上皮异型增生</strong><br>属癌前病变，指子宫颈上皮部分被不同程度的异型性细胞所取代。表现为细胞大小不一，形状不规则，细胞核大、深染、染色质增粗、核形状不规则，核浆比增大，核分裂象增多，极性紊乱等。可分为三级：<span class="answer-text">I级</span>，异型细胞局限于上皮层的下1/3区；<span class="answer-text">II级</span>，增生的异型细胞占上皮层下部的1/3至2/3。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>137</td>
+                            <td>130.. B <strong>子宫颈上皮异型增生</strong><br><span class="blur-text">III级</span>，增生的异型细胞超过全层的2/3，但未累及上皮全层。</td>
+                            <td>130.. B <strong>子宫颈上皮异型增生</strong><br><span class="answer-text">III级</span>，增生的异型细胞超过全层的2/3，但未累及上皮全层。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>138</td>
+                            <td>131.. <strong>子宫颈原位癌</strong><br>异型增生的细胞累及子宫颈上皮<span class="blur-text">全层</span>，但病变未穿破上皮基底膜，局限于上皮内。</td>
+                            <td>131.. <strong>子宫颈原位癌</strong><br>异型增生的细胞累及子宫颈上皮<span class="answer-text">全层</span>，但病变未穿破上皮基底膜，局限于上皮内。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>139</td>
+                            <td>132.. <strong>子宫颈上皮内瘤变（CIN）</strong><br>是指子宫颈鳞状上皮异型增生到原位癌这一逐渐演化的连续过程。<span class="blur-text">CIN I级</span>相当于I级异型增生；<span class="blur-text">CIN II级</span>相当于II级异型增生；<span class="blur-text">CIN III级</span>包括III级异型增生和原位癌。</td>
+                            <td>132.. <strong>子宫颈上皮内瘤变（CIN）</strong><br>是指子宫颈鳞状上皮异型增生到原位癌这一逐渐演化的连续过程。<span class="answer-text">CIN I级</span>相当于I级异型增生；<span class="answer-text">CIN II级</span>相当于II级异型增生；<span class="answer-text">CIN III级</span>包括III级异型增生和原位癌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>140</td>
+                            <td>133.. <strong>子宫平滑肌瘤红色变性</strong><br>发生子宫平滑肌瘤时，子宫间质血管内有血栓形成，肿瘤局部发生梗死伴出血，肉眼呈<span class="blur-text">暗红色</span>，称红色变性。</td>
+                            <td>133.. <strong>子宫平滑肌瘤红色变性</strong><br>发生子宫平滑肌瘤时，子宫间质血管内有血栓形成，肿瘤局部发生梗死伴出血，肉眼呈<span class="answer-text">暗红色</span>，称红色变性。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>141</td>
+                            <td>134.. <strong>人工流产综合反应</strong><br>指手术时疼痛或局部刺激，使受术者在术中或术毕出现恶心呕吐、心动过缓、心律不齐、面色苍白、头昏、胸闷、大汗淋漓，严重者甚至出现血压下降、昏厥、抽搐等<span class="blur-text">迷走神经兴奋</span>的症状。这与受术者的情绪、身体状况及手术操作有关。</td>
+                            <td>134.. <strong>人工流产综合反应</strong><br>指手术时疼痛或局部刺激，使受术者在术中或术毕出现恶心呕吐、心动过缓、心律不齐、面色苍白、头昏、胸闷、大汗淋漓，严重者甚至出现血压下降、昏厥、抽搐等<span class="answer-text">迷走神经兴奋</span>的症状。这与受术者的情绪、身体状况及手术操作有关。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>142</td>
+                            <td>135.. <strong>紧急避孕</strong><br>无防护性性生活或避孕失败后<span class="blur-text">几小时或几日内</span>，妇女为防止非意愿性妊娠的发生而采用的避孕方法，包括放置宫内节育器和口服紧急避孕药。</td>
+                            <td>135.. <strong>紧急避孕</strong><br>无防护性性生活或避孕失败后<span class="answer-text">几小时或几日内</span>，妇女为防止非意愿性妊娠的发生而采用的避孕方法，包括放置宫内节育器和口服紧急避孕药。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>143</td>
+                            <td>136.. <strong>孕产妇死亡</strong><br>女性在孕期内或在产后<span class="blur-text">42天</span>以内，因任何与孕期、怀孕管理相关因素导致的死亡，其死亡并非由孕期长短、怀孕地点以及意外事故造成。</td>
+                            <td>136.. <strong>孕产妇死亡</strong><br>女性在孕期内或在产后<span class="answer-text">42天</span>以内，因任何与孕期、怀孕管理相关因素导致的死亡，其死亡并非由孕期长短、怀孕地点以及意外事故造成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>144</td>
+                            <td>137.. <strong>双合诊</strong><br>妇科双合诊，是盆腔检查中最重要的一项检查。检查方法：检查者一手的两指或一指放入<span class="blur-text">阴道</span>，另一手在<span class="blur-text">腹部</span>配合检查。目的在于，检查阴道、宫颈、宫体、输卵管、卵巢及宫旁结缔组织以及骨盆腔有无异常。</td>
+                            <td>137.. <strong>双合诊</strong><br>妇科双合诊，是盆腔检查中最重要的一项检查。检查方法：检查者一手的两指或一指放入<span class="answer-text">阴道</span>，另一手在<span class="answer-text">腹部</span>配合检查。目的在于，检查阴道、宫颈、宫体、输卵管、卵巢及宫旁结缔组织以及骨盆腔有无异常。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>145</td>
+                            <td>138.. <strong>三合诊</strong><br>三合诊就是经直肠、阴道、腹部的联合检查。一般用食指进<span class="blur-text">阴道</span>，中指进<span class="blur-text">直肠</span>，另手置<span class="blur-text">下腹</span>部协同触摸。这种方法可以查清骨盆腔较后部及子宫直肠窝的情况。</td>
+                            <td>138.. <strong>三合诊</strong><br>三合诊就是经直肠、阴道、腹部的联合检查。一般用食指进<span class="answer-text">阴道</span>，中指进<span class="answer-text">直肠</span>，另手置<span class="answer-text">下腹</span>部协同触摸。这种方法可以查清骨盆腔较后部及子宫直肠窝的情况。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">预防医学名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>预防医学</strong><br>定义：是以<span class="blur-text">人群</span>为主要研究对象，研究<span class="blur-text">环境因素</span>对健康的影响，疾病在人群中的<span class="blur-text">分布规律</span>以及制定防治疾病、增进健康、延长寿命的<span class="blur-text">对策和措施</span>的一门综合性学科。</td>
+                            <td>1.. <strong>预防医学</strong><br>定义：是以<span class="answer-text">人群</span>为主要研究对象，研究<span class="answer-text">环境因素</span>对健康的影响，疾病在人群中的<span class="answer-text">分布规律</span>以及制定防治疾病、增进健康、延长寿命的<span class="answer-text">对策和措施</span>的一门综合性学科。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>三级预防</strong><br>分别在疾病的<span class="blur-text">发病前（易感期）</span>、<span class="blur-text">病中（疾病前期）</span>和<span class="blur-text">病后（发病期和康复期）</span>三个不同阶段采取预防保健干预措施。<br>① 一级预防也称<span class="blur-text">病因预防</span>，是指在疾病前期或无病期，针对<span class="blur-text">病因或危险因素</span>采取综合性预防措施，目标是<span class="blur-text">防止和减少疾病发生</span>。<br>② 二级预防，又称<span class="blur-text">临床前期预防</span>或"<span class="blur-text">三早预防</span>"，指在疾病早期做好<span class="blur-text">早期发现</span>、<span class="blur-text">早期诊断</span>和<span class="blur-text">早期治疗</span>，目标是防止减缓疾病发展。<br>③ 三级预防，又称<span class="blur-text">临床预防</span>，指在临床期或康复期，采取积极的<span class="blur-text">治疗和康复措施</span>，目标是防止伤残，促进功能恢复，提高生命质量，延长寿命。</td>
+                            <td>2.. <strong>三级预防</strong><br>分别在疾病的<span class="answer-text">发病前（易感期）</span>、<span class="answer-text">病中（疾病前期）</span>和<span class="answer-text">病后（发病期和康复期）</span>三个不同阶段采取预防保健干预措施。<br>① 一级预防也称<span class="answer-text">病因预防</span>，是指在疾病前期或无病期，针对<span class="answer-text">病因或危险因素</span>采取综合性预防措施，目标是<span class="answer-text">防止和减少疾病发生</span>。<br>② 二级预防，又称<span class="answer-text">临床前期预防</span>或"<span class="answer-text">三早预防</span>"，指在疾病早期做好<span class="answer-text">早期发现</span>、<span class="answer-text">早期诊断</span>和<span class="answer-text">早期治疗</span>，目标是防止减缓疾病发展。<br>③ 三级预防，又称<span class="answer-text">临床预防</span>，指在临床期或康复期，采取积极的<span class="answer-text">治疗和康复措施</span>，目标是防止伤残，促进功能恢复，提高生命质量，延长寿命。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>职业性有害因素（occupational hazard）</strong><br>在<span class="blur-text">职业活动中</span>和（或）存在的、可能对<span class="blur-text">职业人群健康</span>、安全和<span class="blur-text">作业能力</span>造成不良影响的因素或条件统称为职业性有害因素。</td>
+                            <td>3.. <strong>职业性有害因素（occupational hazard）</strong><br>在<span class="answer-text">职业活动中</span>和（或）存在的、可能对<span class="answer-text">职业人群健康</span>、安全和<span class="answer-text">作业能力</span>造成不良影响的因素或条件统称为职业性有害因素。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>职业性损害（occupational adverse）</strong><br>由<span class="blur-text">职业性有害因素</span>对人体健康所造成的不良影响。</td>
+                            <td>4.. <strong>职业性损害（occupational adverse）</strong><br>由<span class="answer-text">职业性有害因素</span>对人体健康所造成的不良影响。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>职业病</strong><br>是指劳动者在<span class="blur-text">劳动活动中</span>接触<span class="blur-text">职业病危害因素</span>所引起的<span class="blur-text">特定疾病</span>。</td>
+                            <td>5.. <strong>职业病</strong><br>是指劳动者在<span class="answer-text">劳动活动中</span>接触<span class="answer-text">职业病危害因素</span>所引起的<span class="answer-text">特定疾病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>职业有关疾病</strong><br>是一类与<span class="blur-text">多因素</span>相关的疾病，在职业活动中，由于<span class="blur-text">职业性有害因素</span>等多种因素的作用，导致劳动者罹患某种疾病或潜在疾病显露或原有疾病加重。这些疾病统称为<span class="blur-text">工作有关疾病</span>，又称为<span class="blur-text">职业性多发病</span>。</td>
+                            <td>6.. <strong>职业有关疾病</strong><br>是一类与<span class="answer-text">多因素</span>相关的疾病，在职业活动中，由于<span class="answer-text">职业性有害因素</span>等多种因素的作用，导致劳动者罹患某种疾病或潜在疾病显露或原有疾病加重。这些疾病统称为<span class="answer-text">工作有关疾病</span>，又称为<span class="answer-text">职业性多发病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>职业性外伤</strong><br>又称<span class="blur-text">工伤</span>，是指劳动者在劳动过程中，由于<span class="blur-text">外部因素</span>直接作用而引起机体组织的<span class="blur-text">突发性意外损伤</span>。</td>
+                            <td>7.. <strong>职业性外伤</strong><br>又称<span class="answer-text">工伤</span>，是指劳动者在劳动过程中，由于<span class="answer-text">外部因素</span>直接作用而引起机体组织的<span class="answer-text">突发性意外损伤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>职业性中毒</strong><br>劳动者在从事生产劳动过程中，由于接触<span class="blur-text">生产性毒物</span>而发生的中毒称为职业性中毒。</td>
+                            <td>8.. <strong>职业性中毒</strong><br>劳动者在从事生产劳动过程中，由于接触<span class="answer-text">生产性毒物</span>而发生的中毒称为职业性中毒。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>铅线（lead line）</strong><br>口腔内食物残渣中蛋白质腐败产生的<span class="blur-text">硫化氢</span>与<span class="blur-text">铅</span>作用形成的<span class="blur-text">硫化铅</span>，在门齿、犬齿牙龈边缘沉积形成蓝灰色或黑色的条带。</td>
+                            <td>9.. <strong>铅线（lead line）</strong><br>口腔内食物残渣中蛋白质腐败产生的<span class="answer-text">硫化氢</span>与<span class="answer-text">铅</span>作用形成的<span class="answer-text">硫化铅</span>，在门齿、犬齿牙龈边缘沉积形成蓝灰色或黑色的条带。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>意向性震颤</strong><br><span class="blur-text">慢性汞中毒</span>的典型临床表现之一。震颤<span class="blur-text">开始于动作时</span>，在动作过程中<span class="blur-text">加重</span>，动作完成后<span class="blur-text">停止</span>，被别人注意、紧张或愈加以控制时，程度常更明显。</td>
+                            <td>10.. <strong>意向性震颤</strong><br><span class="answer-text">慢性汞中毒</span>的典型临床表现之一。震颤<span class="answer-text">开始于动作时</span>，在动作过程中<span class="answer-text">加重</span>，动作完成后<span class="answer-text">停止</span>，被别人注意、紧张或愈加以控制时，程度常更明显。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>汞线</strong><br><span class="blur-text">慢性汞中毒</span>口腔卫生不良者沿牙龈可见的<span class="blur-text">暗蓝色色素沉着</span>。</td>
+                            <td>11.. <strong>汞线</strong><br><span class="answer-text">慢性汞中毒</span>口腔卫生不良者沿牙龈可见的<span class="answer-text">暗蓝色色素沉着</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>生产性粉尘</strong><br>是指在<span class="blur-text">生产过程中</span>形成的并能较长时间漂浮在空气中的<span class="blur-text">固体微粒</span>。</td>
+                            <td>12.. <strong>生产性粉尘</strong><br>是指在<span class="answer-text">生产过程中</span>形成的并能较长时间漂浮在空气中的<span class="answer-text">固体微粒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>分散度</strong><br>是指物质被<span class="blur-text">粉碎的程度</span>，以粉尘粒子<span class="blur-text">直径大小（μm）</span>的数量或质量组成百分比来表示。</td>
+                            <td>13.. <strong>分散度</strong><br>是指物质被<span class="answer-text">粉碎的程度</span>，以粉尘粒子<span class="answer-text">直径大小（μm）</span>的数量或质量组成百分比来表示。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>呼吸性粉尘</strong><br>粒径<span class="blur-text"><5μm</span>的尘粒可达呼吸道深部和肺泡，称之为呼吸性粉尘。</td>
+                            <td>14.. <strong>呼吸性粉尘</strong><br>粒径<span class="answer-text"><5μm</span>的尘粒可达呼吸道深部和肺泡，称之为呼吸性粉尘。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>可吸入粉尘</strong><br>粒径<span class="blur-text"><15μm</span>的尘粒。</td>
+                            <td>15.. <strong>可吸入粉尘</strong><br>粒径<span class="answer-text"><15μm</span>的尘粒。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>尘细胞</strong><br>沉积在肺泡腔的尘粒被<span class="blur-text">巨噬细胞</span>吞噬，形成尘细胞。</td>
+                            <td>16.. <strong>尘细胞</strong><br>沉积在肺泡腔的尘粒被<span class="answer-text">巨噬细胞</span>吞噬，形成尘细胞。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>尘肺（pneumoconiosis）</strong><br>也称<span class="blur-text">肺尘埃沉着病</span>，是由于长期吸入<span class="blur-text">生产性粉尘</span>引起的以肺组织<span class="blur-text">弥漫性进行性纤维化</span>为主的全身性疾病。</td>
+                            <td>17.. <strong>尘肺（pneumoconiosis）</strong><br>也称<span class="answer-text">肺尘埃沉着病</span>，是由于长期吸入<span class="answer-text">生产性粉尘</span>引起的以肺组织<span class="answer-text">弥漫性进行性纤维化</span>为主的全身性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>矽肺（silicosis）</strong><br>是由于在生产过程中长期吸入<span class="blur-text">游离二氧化硅</span>含量较高的粉尘所引起的以肺组织<span class="blur-text">弥漫性纤维化</span>为主的全身性疾病。</td>
+                            <td>18.. <strong>矽肺（silicosis）</strong><br>是由于在生产过程中长期吸入<span class="answer-text">游离二氧化硅</span>含量较高的粉尘所引起的以肺组织<span class="answer-text">弥漫性纤维化</span>为主的全身性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>速发型矽肺（acute silicosis）</strong><br>少数接尘者持续吸入<span class="blur-text">高浓度</span>、<span class="blur-text">高游离二氧化硅含量</span>粉尘，经<span class="blur-text">1~2年</span>即可发病，称为"速发型矽肺"。</td>
+                            <td>19.. <strong>速发型矽肺（acute silicosis）</strong><br>少数接尘者持续吸入<span class="answer-text">高浓度</span>、<span class="answer-text">高游离二氧化硅含量</span>粉尘，经<span class="answer-text">1~2年</span>即可发病，称为"速发型矽肺"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>晚发性矽肺（delayed silicosis）</strong><br>有的接尘者在较短时间接触高浓度矽尘后，脱离矽尘作业时，X线胸片未显示矽肺改变，<span class="blur-text">若干年后</span>发生矽肺，称为"晚发性矽肺"。</td>
+                            <td>20.. <strong>晚发性矽肺（delayed silicosis）</strong><br>有的接尘者在较短时间接触高浓度矽尘后，脱离矽尘作业时，X线胸片未显示矽肺改变，<span class="answer-text">若干年后</span>发生矽肺，称为"晚发性矽肺"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>高温作业</strong><br>工作地点有<span class="blur-text">高气温</span>或<span class="blur-text">强烈的热辐射</span>，或伴有<span class="blur-text">高气湿</span>的异常气象条件，且平均<span class="blur-text">湿球黑球温度指数超过25°C</span>的作业。</td>
+                            <td>21.. <strong>高温作业</strong><br>工作地点有<span class="answer-text">高气温</span>或<span class="answer-text">强烈的热辐射</span>，或伴有<span class="answer-text">高气湿</span>的异常气象条件，且平均<span class="answer-text">湿球黑球温度指数超过25°C</span>的作业。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>热适应（heat acclimatization）</strong><br>是指人体在<span class="blur-text">热环境</span>工作一段时间后，对<span class="blur-text">热负荷</span>产生的适应反应。</td>
+                            <td>22.. <strong>热适应（heat acclimatization）</strong><br>是指人体在<span class="answer-text">热环境</span>工作一段时间后，对<span class="answer-text">热负荷</span>产生的适应反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>中暑（heat illness）</strong><br>高温环境下，机体因<span class="blur-text">热平衡</span>和（或）<span class="blur-text">水盐代谢紊乱</span>等引起的一种以<span class="blur-text">中枢神经系统</span>和（或）<span class="blur-text">心血管系统障碍</span>为主要表现的急性热相关疾病。</td>
+                            <td>23.. <strong>中暑（heat illness）</strong><br>高温环境下，机体因<span class="answer-text">热平衡</span>和（或）<span class="answer-text">水盐代谢紊乱</span>等引起的一种以<span class="answer-text">中枢神经系统</span>和（或）<span class="answer-text">心血管系统障碍</span>为主要表现的急性热相关疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>热射病（heat stroke）</strong><br>含<span class="blur-text">日射病</span>，又称<span class="blur-text">中暑性高热</span>，是人体在高温环境下<span class="blur-text">散热途径受阻</span>、体内蓄热，<span class="blur-text">体温调节机制紊乱</span>所致的疾病，多发生在<span class="blur-text">强干热型或湿热型</span>高温作业，其特点是起病急，在高温环境中突然发病，体温迅速升高，可达<span class="blur-text">40°C以上</span>。</td>
+                            <td>24.. <strong>热射病（heat stroke）</strong><br>含<span class="answer-text">日射病</span>，又称<span class="answer-text">中暑性高热</span>，是人体在高温环境下<span class="answer-text">散热途径受阻</span>、体内蓄热，<span class="answer-text">体温调节机制紊乱</span>所致的疾病，多发生在<span class="answer-text">强干热型或湿热型</span>高温作业，其特点是起病急，在高温环境中突然发病，体温迅速升高，可达<span class="answer-text">40°C以上</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>热痉挛（heat cramp）</strong><br>也称<span class="blur-text">中暑痉挛</span>，是由于人体<span class="blur-text">大量出汗</span>造成<span class="blur-text">钠、氯、钾</span>等严重丢失，<span class="blur-text">水和电解质平衡紊乱</span>，引起神经肌肉产生自发性活动，出现<span class="blur-text">肌痉挛</span>，多发生在<span class="blur-text">干热型</span>高温作业。其临床特点是肌肉痉挛伴收缩痛，肌痉挛好发于活动较多的<span class="blur-text">四肢肌肉及腹肌</span>，尤以<span class="blur-text">腓肠肌</span>为多见。常呈<span class="blur-text">对称性</span>，时而发作，时而缓解。病人<span class="blur-text">意识清楚</span>，体温多<span class="blur-text">正常</span>。</td>
+                            <td>25.. <strong>热痉挛（heat cramp）</strong><br>也称<span class="answer-text">中暑痉挛</span>，是由于人体<span class="answer-text">大量出汗</span>造成<span class="answer-text">钠、氯、钾</span>等严重丢失，<span class="answer-text">水和电解质平衡紊乱</span>，引起神经肌肉产生自发性活动，出现<span class="answer-text">肌痉挛</span>，多发生在<span class="answer-text">干热型</span>高温作业。其临床特点是肌肉痉挛伴收缩痛，肌痉挛好发于活动较多的<span class="answer-text">四肢肌肉及腹肌</span>，尤以<span class="answer-text">腓肠肌</span>为多见。常呈<span class="answer-text">对称性</span>，时而发作，时而缓解。病人<span class="answer-text">意识清楚</span>，体温多<span class="answer-text">正常</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>热衰竭（heat exhaustion）</strong><br>又称<span class="blur-text">中暑虚脱</span>，是一种较轻的热相关疾病，是机体对<span class="blur-text">过度脱水及电解质丢失</span>的一种反应。其发病也与<span class="blur-text">心血管功能失代偿</span>，导致脑部暂时血供减少等有关。多发生在<span class="blur-text">高气温、强热辐射</span>的工作场所。其主要临床表现包括<span class="blur-text">大量出汗、面色苍白、头晕、无力、恶心、呕吐</span>等。病人体温<span class="blur-text">正常或稍高</span>，一般不出现循环衰竭。<span class="blur-text">老年、体弱、高血压病人</span>等在炎热环境中容易发生中暑虚脱。</td>
+                            <td>26.. <strong>热衰竭（heat exhaustion）</strong><br>又称<span class="answer-text">中暑虚脱</span>，是一种较轻的热相关疾病，是机体对<span class="answer-text">过度脱水及电解质丢失</span>的一种反应。其发病也与<span class="answer-text">心血管功能失代偿</span>，导致脑部暂时血供减少等有关。多发生在<span class="answer-text">高气温、强热辐射</span>的工作场所。其主要临床表现包括<span class="answer-text">大量出汗、面色苍白、头晕、无力、恶心、呕吐</span>等。病人体温<span class="answer-text">正常或稍高</span>，一般不出现循环衰竭。<span class="answer-text">老年、体弱、高血压病人</span>等在炎热环境中容易发生中暑虚脱。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>听觉适应（auditory adaptation）</strong><br>短时间暴露于强烈噪声，听觉器官的<span class="blur-text">敏感性下降</span>，听阈可上升<span class="blur-text">10~15分贝</span>，脱离噪声环境后<span class="blur-text">数分钟内</span>即可恢复正常，这种现象称为听觉适应。</td>
+                            <td>27.. <strong>听觉适应（auditory adaptation）</strong><br>短时间暴露于强烈噪声，听觉器官的<span class="answer-text">敏感性下降</span>，听阈可上升<span class="answer-text">10~15分贝</span>，脱离噪声环境后<span class="answer-text">数分钟内</span>即可恢复正常，这种现象称为听觉适应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>听觉疲劳（auditory fatigue）</strong><br>较长时间暴露于强噪声，听力可出现明显下降，听阈值上升超过<span class="blur-text">15~30分贝</span>，脱离噪声环境后，需<span class="blur-text">数小时甚至数十小时</span>听力才能恢复，此现象称为听觉疲劳。</td>
+                            <td>28.. <strong>听觉疲劳（auditory fatigue）</strong><br>较长时间暴露于强噪声，听力可出现明显下降，听阈值上升超过<span class="answer-text">15~30分贝</span>，脱离噪声环境后，需<span class="answer-text">数小时甚至数十小时</span>听力才能恢复，此现象称为听觉疲劳。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>暂时性听阈移位（temporary threshold shift, TTS）</strong><br>是指人或动物接触噪声后引起<span class="blur-text">听阈变化</span>，脱离噪声环境后，经过一段时间听力可以<span class="blur-text">恢复到原来水平</span>。</td>
+                            <td>29.. <strong>暂时性听阈移位（temporary threshold shift, TTS）</strong><br>是指人或动物接触噪声后引起<span class="answer-text">听阈变化</span>，脱离噪声环境后，经过一段时间听力可以<span class="answer-text">恢复到原来水平</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>永久性听阈移位（permanent threshold shift, PTS）</strong><br>又称<span class="blur-text">永久性听力损伤</span>，指随着接触噪声时间的延长，会出现在前一次接受噪声引起的听力改变尚未完全恢复前便再次接触噪声，听觉疲劳则逐渐加重，听力改变<span class="blur-text">不能恢复</span>而成为永久性听阈移位。</td>
+                            <td>30.. <strong>永久性听阈移位（permanent threshold shift, PTS）</strong><br>又称<span class="answer-text">永久性听力损伤</span>，指随着接触噪声时间的延长，会出现在前一次接受噪声引起的听力改变尚未完全恢复前便再次接触噪声，听觉疲劳则逐渐加重，听力改变<span class="answer-text">不能恢复</span>而成为永久性听阈移位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>噪声聋</strong><br>是指在工作过程中，由于<span class="blur-text">长期接触噪声</span>而发生的一种进行性的<span class="blur-text">感音性听觉损伤</span>，属于我国法定职业病。</td>
+                            <td>31.. <strong>噪声聋</strong><br>是指在工作过程中，由于<span class="answer-text">长期接触噪声</span>而发生的一种进行性的<span class="answer-text">感音性听觉损伤</span>，属于我国法定职业病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>环境</strong><br>包括了一切客观存在的，以<span class="blur-text">人类生存</span>有关的自然及各种社会条件。</td>
+                            <td>32.. <strong>环境</strong><br>包括了一切客观存在的，以<span class="answer-text">人类生存</span>有关的自然及各种社会条件。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>环境的世界卫生组织定义</strong><br>在特定时刻由<span class="blur-text">物理、化学、生物及社会</span>各种因素构成的整体状态，这些因素可能对生命机体或人类活动直接或间接产生<span class="blur-text">现实或远期作用</span>。</td>
+                            <td>33.. <strong>环境的世界卫生组织定义</strong><br>在特定时刻由<span class="answer-text">物理、化学、生物及社会</span>各种因素构成的整体状态，这些因素可能对生命机体或人类活动直接或间接产生<span class="answer-text">现实或远期作用</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>原生环境</strong><br><span class="blur-text">天然形成的</span>，未受或少受人为因素影响的环境。</td>
+                            <td>34.. <strong>原生环境</strong><br><span class="answer-text">天然形成的</span>，未受或少受人为因素影响的环境。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>次生环境</strong><br><span class="blur-text">人类活动</span>影响下形成的环境。</td>
+                            <td>35.. <strong>次生环境</strong><br><span class="answer-text">人类活动</span>影响下形成的环境。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>内分泌干扰化学物（ECDs）</strong><br>干扰生物体内维持自稳及调节发育过程中<span class="blur-text">激素的产生、释放、代谢、结合、排泄</span>交互作用的外源性物质。</td>
+                            <td>36.. <strong>内分泌干扰化学物（ECDs）</strong><br>干扰生物体内维持自稳及调节发育过程中<span class="answer-text">激素的产生、释放、代谢、结合、排泄</span>交互作用的外源性物质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>持续性有机污染物（POPs）</strong><br>是指能<span class="blur-text">持久存在于环境中</span>，并可借助环境介质进行<span class="blur-text">远距离迁移</span>，通过<span class="blur-text">生物食物链生物富积</span>，对人类健康及生态环境造成有害影响的天然的或人工合成的一类有机化学物质。此类物质一般具有<span class="blur-text">持久性、蓄积性、挥发性、高度毒性</span>四大特点。</td>
+                            <td>37.. <strong>持续性有机污染物（POPs）</strong><br>是指能<span class="answer-text">持久存在于环境中</span>，并可借助环境介质进行<span class="answer-text">远距离迁移</span>，通过<span class="answer-text">生物食物链生物富积</span>，对人类健康及生态环境造成有害影响的天然的或人工合成的一类有机化学物质。此类物质一般具有<span class="answer-text">持久性、蓄积性、挥发性、高度毒性</span>四大特点。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>生态系统</strong><br><span class="blur-text">生物群落</span>与周围环境相互作用，通过<span class="blur-text">物质循环与能量交换</span>共同构成的生物与环境的结合体，由<span class="blur-text">生产者、消费者、分解者和非生物环境</span>四大要素构成。</td>
+                            <td>38.. <strong>生态系统</strong><br><span class="answer-text">生物群落</span>与周围环境相互作用，通过<span class="answer-text">物质循环与能量交换</span>共同构成的生物与环境的结合体，由<span class="answer-text">生产者、消费者、分解者和非生物环境</span>四大要素构成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>生态平衡</strong><br>生态系统中的生产者、消费者和分解者之间，生物群落与非生物环境之间，物质、能量的输出和输入，生物学种群和数量，以及各种群数量之间的比例，始终保持着一种<span class="blur-text">动态平衡关系</span>，称之为生态平衡。</td>
+                            <td>39.. <strong>生态平衡</strong><br>生态系统中的生产者、消费者和分解者之间，生物群落与非生物环境之间，物质、能量的输出和输入，生物学种群和数量，以及各种群数量之间的比例，始终保持着一种<span class="answer-text">动态平衡关系</span>，称之为生态平衡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>生物富集</strong><br>一些<span class="blur-text">重金属和难分解的有机化合物</span>可在生物体内蓄积，使生物体内的浓度<span class="blur-text">远远高于</span>其在环境介质中的浓度，这种作用称为生物富集。</td>
+                            <td>40.. <strong>生物富集</strong><br>一些<span class="answer-text">重金属和难分解的有机化合物</span>可在生物体内蓄积，使生物体内的浓度<span class="answer-text">远远高于</span>其在环境介质中的浓度，这种作用称为生物富集。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>生物放大</strong><br>环境中某些污染物沿<span class="blur-text">食物链</span>在生物体之间转移并在生物体内的浓度<span class="blur-text">逐级增高</span>，使高位营养级生物体内的浓度<span class="blur-text">高于</span>低位营养级生物体内的浓度，此过程称为生物放大。</td>
+                            <td>41.. <strong>生物放大</strong><br>环境中某些污染物沿<span class="answer-text">食物链</span>在生物体之间转移并在生物体内的浓度<span class="answer-text">逐级增高</span>，使高位营养级生物体内的浓度<span class="answer-text">高于</span>低位营养级生物体内的浓度，此过程称为生物放大。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>环境污染</strong><br>由于各种<span class="blur-text">人为或自然</span>的原因，使环境的构成发生重大变化，造成<span class="blur-text">环境质量恶化</span>，破坏了<span class="blur-text">生态平衡</span>，对人类健康造成直接、间接或潜在的有害影响，称之为环境污染。</td>
+                            <td>42.. <strong>环境污染</strong><br>由于各种<span class="answer-text">人为或自然</span>的原因，使环境的构成发生重大变化，造成<span class="answer-text">环境质量恶化</span>，破坏了<span class="answer-text">生态平衡</span>，对人类健康造成直接、间接或潜在的有害影响，称之为环境污染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>公害（public nuisance）</strong><br>严重的环境污染引起环境破坏，给<span class="blur-text">人类生活和健康</span>造成危害者，称为公害。</td>
+                            <td>43.. <strong>公害（public nuisance）</strong><br>严重的环境污染引起环境破坏，给<span class="answer-text">人类生活和健康</span>造成危害者，称为公害。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>公害病（public nuisance disease）</strong><br>由于<span class="blur-text">严重环境污染</span>而引起的地区<span class="blur-text">中毒性疾病</span>称之为公害病。</td>
+                            <td>44.. <strong>公害病（public nuisance disease）</strong><br>由于<span class="answer-text">严重环境污染</span>而引起的地区<span class="answer-text">中毒性疾病</span>称之为公害病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>MAC</strong><br>最高容许浓度，是指长期接触或摄入有害物后不会对其本身及下一代引起现代医学方法所能发现的任何病理改变或超过生理适应范围的健康状况变化的<span class="blur-text">最高浓度</span>，也就是常用的<span class="blur-text">卫生标准</span>。</td>
+                            <td>45.. <strong>MAC</strong><br>最高容许浓度，是指长期接触或摄入有害物后不会对其本身及下一代引起现代医学方法所能发现的任何病理改变或超过生理适应范围的健康状况变化的<span class="answer-text">最高浓度</span>，也就是常用的<span class="answer-text">卫生标准</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46.. <strong>毒物的兴奋效应</strong><br>有些毒物在<span class="blur-text">低剂量</span>时产生兴奋效应，而在<span class="blur-text">高剂量</span>条件下表现为抑制效应。</td>
+                            <td>46.. <strong>毒物的兴奋效应</strong><br>有些毒物在<span class="answer-text">低剂量</span>时产生兴奋效应，而在<span class="answer-text">高剂量</span>条件下表现为抑制效应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47.. <strong>健康效应谱</strong><br>从预防医学的观点研究环境因素对人体的影响，可将<span class="blur-text">生理、生化和病理效应</span>看作连续的过程，就称为健康效应谱。</td>
+                            <td>47.. <strong>健康效应谱</strong><br>从预防医学的观点研究环境因素对人体的影响，可将<span class="answer-text">生理、生化和病理效应</span>看作连续的过程，就称为健康效应谱。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48.. <strong>生物标记物（biomarker）</strong><br>是生物体内发生的与<span class="blur-text">发病机制有关联的关键事件</span>的指示物，是机体由于暴露各种环境因子所引起机体器官、细胞、亚细胞的<span class="blur-text">生化、生理、免疫和遗传</span>等任何可测定的改变。</td>
+                            <td>48.. <strong>生物标记物（biomarker）</strong><br>是生物体内发生的与<span class="answer-text">发病机制有关联的关键事件</span>的指示物，是机体由于暴露各种环境因子所引起机体器官、细胞、亚细胞的<span class="answer-text">生化、生理、免疫和遗传</span>等任何可测定的改变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49.. <strong>剂量-效应关系（dose-effect relationship）</strong><br>随着环境有害因素<span class="blur-text">剂量的增加</span>，它在机体内所产生的<span class="blur-text">有害的生物学效应增强</span>，这称为剂量-效应关系。表示化学物的摄入量与生物个体或群体中发生某种<span class="blur-text">量效应强度</span>之间的关系。</td>
+                            <td>49.. <strong>剂量-效应关系（dose-effect relationship）</strong><br>随着环境有害因素<span class="answer-text">剂量的增加</span>，它在机体内所产生的<span class="answer-text">有害的生物学效应增强</span>，这称为剂量-效应关系。表示化学物的摄入量与生物个体或群体中发生某种<span class="answer-text">量效应强度</span>之间的关系。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50.. <strong>剂量-反应关系（dose-response relationship）</strong><br>随着环境有害因素<span class="blur-text">剂量的增加</span>，产生某种生物学效应的<span class="blur-text">个体数随之增加</span>的关系，称为剂量-反应关系。表示化学物的剂量与某一生物群体中出现某种强度的生物学效应的<span class="blur-text">发生率</span>之间的关系，一般以百分率表示。</td>
+                            <td>50.. <strong>剂量-反应关系（dose-response relationship）</strong><br>随着环境有害因素<span class="answer-text">剂量的增加</span>，产生某种生物学效应的<span class="answer-text">个体数随之增加</span>的关系，称为剂量-反应关系。表示化学物的剂量与某一生物群体中出现某种强度的生物学效应的<span class="answer-text">发生率</span>之间的关系，一般以百分率表示。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51.. <strong>易感人群</strong><br>在同一环境暴露下人体对环境异常变化的反应强度和性质不同，对某些污染物<span class="blur-text">特别敏感</span>的人群称为易感人群，这部分人群比其他人群更易于受到<span class="blur-text">环境污染等有害因素</span>的损害。</td>
+                            <td>51.. <strong>易感人群</strong><br>在同一环境暴露下人体对环境异常变化的反应强度和性质不同，对某些污染物<span class="answer-text">特别敏感</span>的人群称为易感人群，这部分人群比其他人群更易于受到<span class="answer-text">环境污染等有害因素</span>的损害。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52.. <strong>空气离子化</strong><br>在某些外界因素的作用下，空气中的<span class="blur-text">气体分子或原子</span>的外层电子逸出，形成带正电的<span class="blur-text">阳离子及空气正离子</span>，一部分逸出的电子与中性分子结合形成为<span class="blur-text">阴离子即空气负离子</span>，这种产生空气正、负离子的过程称为空气离子化或空气电离。</td>
+                            <td>52.. <strong>空气离子化</strong><br>在某些外界因素的作用下，空气中的<span class="answer-text">气体分子或原子</span>的外层电子逸出，形成带正电的<span class="answer-text">阳离子及空气正离子</span>，一部分逸出的电子与中性分子结合形成为<span class="answer-text">阴离子即空气负离子</span>，这种产生空气正、负离子的过程称为空气离子化或空气电离。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>重离子</strong><br>一部分<span class="blur-text">轻离子</span>与空气中的灰尘、烟雾等结合形成重离子。</td>
+                            <td>53.. <strong>重离子</strong><br>一部分<span class="answer-text">轻离子</span>与空气中的灰尘、烟雾等结合形成重离子。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>大气污染</strong><br>由于人为或自然原因，使一种或多种<span class="blur-text">污染物混入大气</span>中，并达到一定浓度，超过大气的<span class="blur-text">自净能力</span>，致使大气原有的正常组成或性状发生了改变，对<span class="blur-text">居民健康和生活条件</span>造成了危害，对动植物产生不良影响的空气状况。</td>
+                            <td>54.. <strong>大气污染</strong><br>由于人为或自然原因，使一种或多种<span class="answer-text">污染物混入大气</span>中，并达到一定浓度，超过大气的<span class="answer-text">自净能力</span>，致使大气原有的正常组成或性状发生了改变，对<span class="answer-text">居民健康和生活条件</span>造成了危害，对动植物产生不良影响的空气状况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>一次污染物</strong><br>直接来源于<span class="blur-text">污染源</span>的污染物，其物理和化学性质均未发生变化的污染物。</td>
+                            <td>55.. <strong>一次污染物</strong><br>直接来源于<span class="answer-text">污染源</span>的污染物，其物理和化学性质均未发生变化的污染物。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>二次污染物</strong><br>由<span class="blur-text">一次污染物</span>在大气中与其他物质发生化学反应或在太阳辐射线作用下发生<span class="blur-text">光化学反应</span>而形成的理化性质不同于一次污染物的新的、毒性更大的污染物。如<span class="blur-text">SO3、H2SO4、HNO3、醛、酮、过氧乙酰硝酸酯（PAN）</span>等。</td>
+                            <td>56.. <strong>二次污染物</strong><br>由<span class="answer-text">一次污染物</span>在大气中与其他物质发生化学反应或在太阳辐射线作用下发生<span class="answer-text">光化学反应</span>而形成的理化性质不同于一次污染物的新的、毒性更大的污染物。如<span class="answer-text">SO3、H2SO4、HNO3、醛、酮、过氧乙酰硝酸酯（PAN）</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>煤烟型烟雾事件</strong><br>是由于<span class="blur-text">煤烟和工业废气</span>大量排入大气且得不到充分扩散而引起的。主要污染物为<span class="blur-text">二氧化硫、烟尘及硫酸烟雾</span>。</td>
+                            <td>57.. <strong>煤烟型烟雾事件</strong><br>是由于<span class="answer-text">煤烟和工业废气</span>大量排入大气且得不到充分扩散而引起的。主要污染物为<span class="answer-text">二氧化硫、烟尘及硫酸烟雾</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.. <strong>光化学烟雾事件</strong><br>是汽车尾气中<span class="blur-text">氮氧化物和烃类污染物</span>在强烈日光作用下产生了<span class="blur-text">醛类、臭氧、过氧乙酰硝酸酯</span>等二次污染物而引起的。</td>
+                            <td>58.. <strong>光化学烟雾事件</strong><br>是汽车尾气中<span class="answer-text">氮氧化物和烃类污染物</span>在强烈日光作用下产生了<span class="answer-text">醛类、臭氧、过氧乙酰硝酸酯</span>等二次污染物而引起的。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59.. <strong>光化学烟雾</strong><br>是<span class="blur-text">二次污染物</span>，主要由汽车尾气排出的<span class="blur-text">氮氧化合物和碳氢化合物</span>，在太阳光<span class="blur-text">紫外线</span>作用下发生化学反应所形成的一种刺激性很强的<span class="blur-text">浅蓝色的混合烟雾</span>。其主要成分是<span class="blur-text">臭氧、过氧乙酰硝酸酯类和醛类</span>等，这些物质统称为光化学烟雾，其中<span class="blur-text">臭氧占85%以上</span>。</td>
+                            <td>59.. <strong>光化学烟雾</strong><br>是<span class="answer-text">二次污染物</span>，主要由汽车尾气排出的<span class="answer-text">氮氧化合物和碳氢化合物</span>，在太阳光<span class="answer-text">紫外线</span>作用下发生化学反应所形成的一种刺激性很强的<span class="answer-text">浅蓝色的混合烟雾</span>。其主要成分是<span class="answer-text">臭氧、过氧乙酰硝酸酯类和醛类</span>等，这些物质统称为光化学烟雾，其中<span class="answer-text">臭氧占85%以上</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60.. <strong>总悬浮颗粒物（TSP）</strong><br>粒径为<span class="blur-text">0.1~100μm</span>，包括液体、固体或者液体和固体结合存在的、并悬浮在空气介质中的颗粒。</td>
+                            <td>60.. <strong>总悬浮颗粒物（TSP）</strong><br>粒径为<span class="answer-text">0.1~100μm</span>，包括液体、固体或者液体和固体结合存在的、并悬浮在空气介质中的颗粒。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61.. <strong>可吸入颗粒物（IP）</strong><br>是指粒径<span class="blur-text"><10μm</span>的颗粒物，又称<span class="blur-text">PM10</span>。不同粒径的可吸入颗粒物滞留在呼吸道的部位也不同，<span class="blur-text">大于5μm</span>的颗粒物多滞留在上呼吸道，<span class="blur-text">小于5μm</span>的颗粒物多滞留在细支气管和肺泡。</td>
+                            <td>61.. <strong>可吸入颗粒物（IP）</strong><br>是指粒径<span class="answer-text"><10μm</span>的颗粒物，又称<span class="answer-text">PM10</span>。不同粒径的可吸入颗粒物滞留在呼吸道的部位也不同，<span class="answer-text">大于5μm</span>的颗粒物多滞留在上呼吸道，<span class="answer-text">小于5μm</span>的颗粒物多滞留在细支气管和肺泡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62.. <strong>细颗粒物</strong><br>又称<span class="blur-text">PM2.5</span>。</td>
+                            <td>62.. <strong>细颗粒物</strong><br>又称<span class="answer-text">PM2.5</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63.. <strong>挥发性有机物（VOCs）</strong><br><span class="blur-text">常温常压下易挥发</span>的有机化合物总称，有臭味和一定刺激作用，主要影响<span class="blur-text">中枢神经系统和消化系统</span>，严重时甚至可损伤<span class="blur-text">肝脏和造血系统</span>，出现变态反应等。</td>
+                            <td>63.. <strong>挥发性有机物（VOCs）</strong><br><span class="answer-text">常温常压下易挥发</span>的有机化合物总称，有臭味和一定刺激作用，主要影响<span class="answer-text">中枢神经系统和消化系统</span>，严重时甚至可损伤<span class="answer-text">肝脏和造血系统</span>，出现变态反应等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64.. <strong>不良建筑物综合征</strong><br>发生于<span class="blur-text">办公室工作人员</span>，表现为一系列非特异的症状，包括有<span class="blur-text">眼、鼻、咽喉刺激，头痛、疲劳、胸闷、注意力不集中</span>等，当发病者离开该环境一段时间后，症状会缓解。该综合征多发生在<span class="blur-text">新建或重新装修的办公楼</span>，目前认为这是一种非特异性建筑相关疾病。与<span class="blur-text">空调系统通风不良</span>，形成室内空气污染，特别是<span class="blur-text">VOC、甲醛、烟草烟雾</span>污染有关，与气温、气湿、心理因素等也可能有关。</td>
+                            <td>64.. <strong>不良建筑物综合征</strong><br>发生于<span class="answer-text">办公室工作人员</span>，表现为一系列非特异的症状，包括有<span class="answer-text">眼、鼻、咽喉刺激，头痛、疲劳、胸闷、注意力不集中</span>等，当发病者离开该环境一段时间后，症状会缓解。该综合征多发生在<span class="answer-text">新建或重新装修的办公楼</span>，目前认为这是一种非特异性建筑相关疾病。与<span class="answer-text">空调系统通风不良</span>，形成室内空气污染，特别是<span class="answer-text">VOC、甲醛、烟草烟雾</span>污染有关，与气温、气湿、心理因素等也可能有关。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65.. <strong>水体污染（water body pollution）</strong><br>是指人类活动排放的<span class="blur-text">污染物进入水体</span>后，超过了水体的<span class="blur-text">自净能力</span>，使水质和水体底质的理化特性和水环境中的生物特性、种群及组成等发生改变，从而影响水的<span class="blur-text">使用价值</span>，造成水质恶化，甚至危害人体健康或破坏生态环境的现象。</td>
+                            <td>65.. <strong>水体污染（water body pollution）</strong><br>是指人类活动排放的<span class="answer-text">污染物进入水体</span>后，超过了水体的<span class="answer-text">自净能力</span>，使水质和水体底质的理化特性和水环境中的生物特性、种群及组成等发生改变，从而影响水的<span class="answer-text">使用价值</span>，造成水质恶化，甚至危害人体健康或破坏生态环境的现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66.. <strong>富营养化</strong><br>是指含有大量<span class="blur-text">氮、磷</span>等营养物质的污水进入湖泊、河流、海湾等缓流水体，引起<span class="blur-text">藻类及其他浮游生物</span>迅速繁殖，水体<span class="blur-text">溶解氧含量下降</span>、水质恶化，鱼类及其他生物大量死亡的现象。</td>
+                            <td>66.. <strong>富营养化</strong><br>是指含有大量<span class="answer-text">氮、磷</span>等营养物质的污水进入湖泊、河流、海湾等缓流水体，引起<span class="answer-text">藻类及其他浮游生物</span>迅速繁殖，水体<span class="answer-text">溶解氧含量下降</span>、水质恶化，鱼类及其他生物大量死亡的现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67.. <strong>介水传染病</strong><br>指通过<span class="blur-text">饮用或接触</span>受病原体污染的水，或食用被这种水污染的食物而传播的疾病，又称<span class="blur-text">水性传染病</span>。</td>
+                            <td>67.. <strong>介水传染病</strong><br>指通过<span class="answer-text">饮用或接触</span>受病原体污染的水，或食用被这种水污染的食物而传播的疾病，又称<span class="answer-text">水性传染病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68.. <strong>水俣病</strong><br>是在<span class="blur-text">日本熊本县水俣湾</span>地区发生的、由于当地居民长期食用海湾中含<span class="blur-text">甲基汞</span>甚高的鱼贝类而引起的一种<span class="blur-text">环境公害病</span>。</td>
+                            <td>68.. <strong>水俣病</strong><br>是在<span class="answer-text">日本熊本县水俣湾</span>地区发生的、由于当地居民长期食用海湾中含<span class="answer-text">甲基汞</span>甚高的鱼贝类而引起的一种<span class="answer-text">环境公害病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69.. <strong>Hunter-Russel综合征</strong><br>是水俣病最典型的特异性体征，包括<span class="blur-text">末梢感觉减退、视野向心性缩小、共济运动失调</span>及听力障碍和语言障碍。</td>
+                            <td>69.. <strong>Hunter-Russel综合征</strong><br>是水俣病最典型的特异性体征，包括<span class="answer-text">末梢感觉减退、视野向心性缩小、共济运动失调</span>及听力障碍和语言障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70.. <strong>有效氯</strong><br>含氯化合物中氯的化合价<span class="blur-text">大于-1</span>者均为有效氯，具有<span class="blur-text">杀菌作用</span>。</td>
+                            <td>70.. <strong>有效氯</strong><br>含氯化合物中氯的化合价<span class="answer-text">大于-1</span>者均为有效氯，具有<span class="answer-text">杀菌作用</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71.. <strong>需氯量</strong><br>指因<span class="blur-text">杀菌、氧化有机物</span>以及某些氯化反应所消耗的氯量。</td>
+                            <td>71.. <strong>需氯量</strong><br>指因<span class="answer-text">杀菌、氧化有机物</span>以及某些氯化反应所消耗的氯量。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72.. <strong>余氯</strong><br>指<span class="blur-text">加氯量</span>氧化杀菌后<span class="blur-text">剩余的氯量</span>。</td>
+                            <td>72.. <strong>余氯</strong><br>指<span class="answer-text">加氯量</span>氧化杀菌后<span class="answer-text">剩余的氯量</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73.. <strong>生物地球化学性疾病</strong><br>由于<span class="blur-text">地理地质原因</span>，某地区地壳中元素分布不均衡，导致当地水、土壤、植物中某种微量元素<span class="blur-text">过高或缺乏</span>，使当地人和动物从外界环境中获得该元素的量<span class="blur-text">不能满足或超过</span>机体正常需要而引起的某些<span class="blur-text">特异性疾病</span>。</td>
+                            <td>73.. <strong>生物地球化学性疾病</strong><br>由于<span class="answer-text">地理地质原因</span>，某地区地壳中元素分布不均衡，导致当地水、土壤、植物中某种微量元素<span class="answer-text">过高或缺乏</span>，使当地人和动物从外界环境中获得该元素的量<span class="answer-text">不能满足或超过</span>机体正常需要而引起的某些<span class="answer-text">特异性疾病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74.. <strong>碘缺乏病（IDD）</strong><br>是指从<span class="blur-text">胚胎发育到成人期</span>有由于摄入<span class="blur-text">碘不足</span>所引起的一系列病症，它对人的损害是<span class="blur-text">连续性的</span>。包括<span class="blur-text">地方性甲状腺肿、地方性克汀病、地方性亚临床克汀病、流产、早产、死产</span>等。</td>
+                            <td>74.. <strong>碘缺乏病（IDD）</strong><br>是指从<span class="answer-text">胚胎发育到成人期</span>有由于摄入<span class="answer-text">碘不足</span>所引起的一系列病症，它对人的损害是<span class="answer-text">连续性的</span>。包括<span class="answer-text">地方性甲状腺肿、地方性克汀病、地方性亚临床克汀病、流产、早产、死产</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75.. <strong>地方性甲状腺肿</strong><br>是一种主要由于<span class="blur-text">地区性环境缺碘</span>引起的地方病，是<span class="blur-text">碘缺乏病</span>的主要表现形式之一，其主要症状是<span class="blur-text">甲状腺肿大</span>。</td>
+                            <td>75.. <strong>地方性甲状腺肿</strong><br>是一种主要由于<span class="answer-text">地区性环境缺碘</span>引起的地方病，是<span class="answer-text">碘缺乏病</span>的主要表现形式之一，其主要症状是<span class="answer-text">甲状腺肿大</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>76.. <strong>地方性克汀病</strong><br>是在较严重的<span class="blur-text">缺碘性甲状腺肿病区</span>出现的一种病症，病人出生后即有不同程度的<span class="blur-text">智力低下、体格矮小、听力障碍、神经运动障碍、甲状腺功能低下</span>及甲状腺肿，可概括为<span class="blur-text">呆、小、聋、哑、瘫</span>。</td>
+                            <td>76.. <strong>地方性克汀病</strong><br>是在较严重的<span class="answer-text">缺碘性甲状腺肿病区</span>出现的一种病症，病人出生后即有不同程度的<span class="answer-text">智力低下、体格矮小、听力障碍、神经运动障碍、甲状腺功能低下</span>及甲状腺肿，可概括为<span class="answer-text">呆、小、聋、哑、瘫</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>77.. <strong>地方性氟中毒</strong><br>是由于一定地区的环境中<span class="blur-text">氟元素过多</span>而致生活在该环境中的居民经<span class="blur-text">饮水、食物和空气</span>等途径长期摄入<span class="blur-text">过量氟</span>所引起的以<span class="blur-text">氟骨症和氟斑牙</span>为主要特征的一种慢性全身性疾病，又称<span class="blur-text">地方性氟病</span>。</td>
+                            <td>77.. <strong>地方性氟中毒</strong><br>是由于一定地区的环境中<span class="answer-text">氟元素过多</span>而致生活在该环境中的居民经<span class="answer-text">饮水、食物和空气</span>等途径长期摄入<span class="answer-text">过量氟</span>所引起的以<span class="answer-text">氟骨症和氟斑牙</span>为主要特征的一种慢性全身性疾病，又称<span class="answer-text">地方性氟病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>78.. <strong>地方性砷中毒</strong><br>是由于一定地区的环境中<span class="blur-text">砷元素过多</span>，而致生活在该环境中的居民经<span class="blur-text">饮水、食物和空气</span>等途径长期摄入<span class="blur-text">过量砷</span>所引起<span class="blur-text">皮肤色素沉着和（或）脱失、掌跖角化</span>等皮肤改变为主要表现，同时伴有<span class="blur-text">神经系统、周围血管、消化系统</span>等多方面症状的慢性全身性疾病。</td>
+                            <td>78.. <strong>地方性砷中毒</strong><br>是由于一定地区的环境中<span class="answer-text">砷元素过多</span>，而致生活在该环境中的居民经<span class="answer-text">饮水、食物和空气</span>等途径长期摄入<span class="answer-text">过量砷</span>所引起<span class="answer-text">皮肤色素沉着和（或）脱失、掌跖角化</span>等皮肤改变为主要表现，同时伴有<span class="answer-text">神经系统、周围血管、消化系统</span>等多方面症状的慢性全身性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>79.. <strong>痛痛病</strong><br><span class="blur-text">日本富山县神通川流域</span>居民长期食用含<span class="blur-text">镉</span>废水灌田生产的镉很高的稻米而引起的<span class="blur-text">慢性镉中毒</span>。严重的病人全身疼痛，日夜呼叫，故名"痛痛病"。</td>
+                            <td>79.. <strong>痛痛病</strong><br><span class="answer-text">日本富山县神通川流域</span>居民长期食用含<span class="answer-text">镉</span>废水灌田生产的镉很高的稻米而引起的<span class="answer-text">慢性镉中毒</span>。严重的病人全身疼痛，日夜呼叫，故名"痛痛病"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>80.. <strong>营养</strong><br>是指人体<span class="blur-text">摄入、消化、吸收和利用</span>食物中营养成分，维持<span class="blur-text">生长发育、组织更新</span>和良好健康状态的动态过程。</td>
+                            <td>80.. <strong>营养</strong><br>是指人体<span class="answer-text">摄入、消化、吸收和利用</span>食物中营养成分，维持<span class="answer-text">生长发育、组织更新</span>和良好健康状态的动态过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>81.. <strong>营养素</strong><br>食物中可为人体提供<span class="blur-text">能量</span>、机体<span class="blur-text">构成成分和组织修复材料</span>以及调节<span class="blur-text">生理功能</span>的化学成分，是保证人体健康的物质基础。</td>
+                            <td>81.. <strong>营养素</strong><br>食物中可为人体提供<span class="answer-text">能量</span>、机体<span class="answer-text">构成成分和组织修复材料</span>以及调节<span class="answer-text">生理功能</span>的化学成分，是保证人体健康的物质基础。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>82.. <strong>DRIs</strong><br>膳食营养素参考摄入量，包括<span class="blur-text">估计平均需要量（EAR）</span>、<span class="blur-text">推荐摄入量（RNI）</span>、<span class="blur-text">适宜摄入量（AI）</span>和<span class="blur-text">可耐受最高摄入量（UL）</span>。</td>
+                            <td>82.. <strong>DRIs</strong><br>膳食营养素参考摄入量，包括<span class="answer-text">估计平均需要量（EAR）</span>、<span class="answer-text">推荐摄入量（RNI）</span>、<span class="answer-text">适宜摄入量（AI）</span>和<span class="answer-text">可耐受最高摄入量（UL）</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>83.. <strong>估计平均需要量（EAR）</strong><br>可以满足某一特定性别、年龄及生理状况群体中<span class="blur-text">50%</span>个体需要量的估计摄入水平。</td>
+                            <td>83.. <strong>估计平均需要量（EAR）</strong><br>可以满足某一特定性别、年龄及生理状况群体中<span class="answer-text">50%</span>个体需要量的估计摄入水平。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>84.. <strong>推荐摄入量（RNI）</strong><br>可以满足某一特定性别、年龄及生理状况群体中<span class="blur-text">绝大多数（97%~98%）</span>个体需要量的摄入水平。</td>
+                            <td>84.. <strong>推荐摄入量（RNI）</strong><br>可以满足某一特定性别、年龄及生理状况群体中<span class="answer-text">绝大多数（97%~98%）</span>个体需要量的摄入水平。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>85.. <strong>适宜摄入量（AI）</strong><br>基于对健康人群营养素<span class="blur-text">大致摄入量的观察或试验研究</span>而确定的推荐每日摄入量。</td>
+                            <td>85.. <strong>适宜摄入量（AI）</strong><br>基于对健康人群营养素<span class="answer-text">大致摄入量的观察或试验研究</span>而确定的推荐每日摄入量。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>86.. <strong>可耐受最高摄入量（UL）</strong><br>是平均每日摄入营养素的<span class="blur-text">最高量</span>，这个摄入量对一般人群中几乎所有个体<span class="blur-text">不致引起有害的健康效应</span>。</td>
+                            <td>86.. <strong>可耐受最高摄入量（UL）</strong><br>是平均每日摄入营养素的<span class="answer-text">最高量</span>，这个摄入量对一般人群中几乎所有个体<span class="answer-text">不致引起有害的健康效应</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>87.. <strong>氮平衡</strong><br>是指<span class="blur-text">氮的摄入量与排出量</span>之间的平衡状态。它是反映机体<span class="blur-text">摄入氮与排出氮</span>的关系。氮平衡包括<span class="blur-text">零氮平衡、正氮平衡和负氮平衡</span>三种情况。氮平衡是衡量<span class="blur-text">蛋白质营养</span>的重要指标。</td>
+                            <td>87.. <strong>氮平衡</strong><br>是指<span class="answer-text">氮的摄入量与排出量</span>之间的平衡状态。它是反映机体<span class="answer-text">摄入氮与排出氮</span>的关系。氮平衡包括<span class="answer-text">零氮平衡、正氮平衡和负氮平衡</span>三种情况。氮平衡是衡量<span class="answer-text">蛋白质营养</span>的重要指标。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>88.. <strong>生物学价值（BV）</strong><br>是指蛋白质经消化吸收后，进入机体可以<span class="blur-text">储留和利用</span>的部分。</td>
+                            <td>88.. <strong>生物学价值（BV）</strong><br>是指蛋白质经消化吸收后，进入机体可以<span class="answer-text">储留和利用</span>的部分。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>89.. <strong>蛋白质的互补作用</strong><br>由于各种蛋白质中<span class="blur-text">必需氨基酸的含量和比值</span>不同，故可将富含某种必需氨基酸的食物与缺乏该种必需氨基酸的食物互相搭配而混合食用，使混合蛋白质的必需氨基酸成分更接近合适比值，从而<span class="blur-text">提高蛋白质的生物学价值</span>，称之为蛋白质的互补作用。</td>
+                            <td>89.. <strong>蛋白质的互补作用</strong><br>由于各种蛋白质中<span class="answer-text">必需氨基酸的含量和比值</span>不同，故可将富含某种必需氨基酸的食物与缺乏该种必需氨基酸的食物互相搭配而混合食用，使混合蛋白质的必需氨基酸成分更接近合适比值，从而<span class="answer-text">提高蛋白质的生物学价值</span>，称之为蛋白质的互补作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>90.. <strong>必需氨基酸（EAA）</strong><br>指人体内<span class="blur-text">不能合成或合成数量不足</span>，必须每日膳食供给才能满足机体生理需要的氨基酸。共有<span class="blur-text">九种</span>，即<span class="blur-text">苯丙氨酸、蛋氨酸、赖氨酸、苏氨酸、色氨酸、亮氨酸、异亮氨酸、组氨酸、缬氨酸</span>。</td>
+                            <td>90.. <strong>必需氨基酸（EAA）</strong><br>指人体内<span class="answer-text">不能合成或合成数量不足</span>，必须每日膳食供给才能满足机体生理需要的氨基酸。共有<span class="answer-text">九种</span>，即<span class="answer-text">苯丙氨酸、蛋氨酸、赖氨酸、苏氨酸、色氨酸、亮氨酸、异亮氨酸、组氨酸、缬氨酸</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>91.. <strong>限制氨基酸</strong><br>在人体合成蛋白质的过程中，各种氨基酸要有<span class="blur-text">适宜的比例</span>，如果某一氨基酸过少，就要影响其他氨基酸的利用，营养学上称这种氨基酸为限制氨基酸。</td>
+                            <td>91.. <strong>限制氨基酸</strong><br>在人体合成蛋白质的过程中，各种氨基酸要有<span class="answer-text">适宜的比例</span>，如果某一氨基酸过少，就要影响其他氨基酸的利用，营养学上称这种氨基酸为限制氨基酸。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>92.. <strong>必需脂肪酸（EFA）</strong><br>是指人体<span class="blur-text">不能合成而又不可缺少</span>，必须通过食物供给的脂肪酸，包括<span class="blur-text">亚油酸、α-亚麻酸</span>。</td>
+                            <td>92.. <strong>必需脂肪酸（EFA）</strong><br>是指人体<span class="answer-text">不能合成而又不可缺少</span>，必须通过食物供给的脂肪酸，包括<span class="answer-text">亚油酸、α-亚麻酸</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>93.. <strong>食物特殊动力作用</strong><br>也称<span class="blur-text">食物热效应</span>，是指人体摄食过程中引起的<span class="blur-text">额外的能量消耗</span>，这是摄食后一系列消化、吸收、合成活动以及营养素及营养素代谢产物之间相互转化过程中所消耗的能量。</td>
+                            <td>93.. <strong>食物特殊动力作用</strong><br>也称<span class="answer-text">食物热效应</span>，是指人体摄食过程中引起的<span class="answer-text">额外的能量消耗</span>，这是摄食后一系列消化、吸收、合成活动以及营养素及营养素代谢产物之间相互转化过程中所消耗的能量。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>94.. <strong>合理营养</strong><br>是指<span class="blur-text">全面而平衡的营养</span>，即每日膳食中各种营养素<span class="blur-text">种类齐全，数量充足，相互间比例恰当</span>。合理营养的唯一途径是<span class="blur-text">平衡膳食</span>。</td>
+                            <td>94.. <strong>合理营养</strong><br>是指<span class="answer-text">全面而平衡的营养</span>，即每日膳食中各种营养素<span class="answer-text">种类齐全，数量充足，相互间比例恰当</span>。合理营养的唯一途径是<span class="answer-text">平衡膳食</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>95.. <strong>食物的营养价值</strong><br>指其所含营养素和能量可满足人体营养需要的程度，包括<span class="blur-text">营养素种类是否齐全，含量多少及相互比例是否合适，是否易于被人体消化吸收和利用</span>。</td>
+                            <td>95.. <strong>食物的营养价值</strong><br>指其所含营养素和能量可满足人体营养需要的程度，包括<span class="answer-text">营养素种类是否齐全，含量多少及相互比例是否合适，是否易于被人体消化吸收和利用</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>96.. <strong>维生素</strong><br>人体必需的一类<span class="blur-text">微量低分子有机化合物</span>，以本体或前体形式存在于食物。虽不直接提供能量，也不作为组织构成原料，但机体<span class="blur-text">不能合成或合成不足以满足机体所需</span>，必需通过食物满足。</td>
+                            <td>96.. <strong>维生素</strong><br>人体必需的一类<span class="answer-text">微量低分子有机化合物</span>，以本体或前体形式存在于食物。虽不直接提供能量，也不作为组织构成原料，但机体<span class="answer-text">不能合成或合成不足以满足机体所需</span>，必需通过食物满足。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>97.. <strong>口腔生殖器综合征</strong><br><span class="blur-text">维生素B2缺乏</span>，呈现特殊上皮损害，表现为<span class="blur-text">脂溢性皮炎、口角炎、阴囊皮炎、脂溢性脱发、神经紊乱</span>。</td>
+                            <td>97.. <strong>口腔生殖器综合征</strong><br><span class="answer-text">维生素B2缺乏</span>，呈现特殊上皮损害，表现为<span class="answer-text">脂溢性皮炎、口角炎、阴囊皮炎、脂溢性脱发、神经紊乱</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>98.. <strong>微量元素</strong><br>人体含量低于体重<span class="blur-text">0.01%</span>以下的矿物质元素则称微量元素，人体必需微量元素包括<span class="blur-text">铁、铜、锌、硒、碘、铬、钴、钼</span>共八种。</td>
+                            <td>98.. <strong>微量元素</strong><br>人体含量低于体重<span class="answer-text">0.01%</span>以下的矿物质元素则称微量元素，人体必需微量元素包括<span class="answer-text">铁、铜、锌、硒、碘、铬、钴、钼</span>共八种。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>99.. <strong>膳食结构</strong><br>也称<span class="blur-text">食物结构</span>，是指居民消费食物的<span class="blur-text">种类及其数量的相对构成</span>，表示膳食中各种食物间的组成关系。</td>
+                            <td>99.. <strong>膳食结构</strong><br>也称<span class="answer-text">食物结构</span>，是指居民消费食物的<span class="answer-text">种类及其数量的相对构成</span>，表示膳食中各种食物间的组成关系。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>100.. <strong>膳食指南（DG）</strong><br>是根据<span class="blur-text">营养学原则</span>，结合国情提出的一组以<span class="blur-text">食物为基础</span>的，指导人们合理选择与搭配食物，以达到<span class="blur-text">合理营养、促进健康</span>为目的的指导性意见。</td>
+                            <td>100.. <strong>膳食指南（DG）</strong><br>是根据<span class="answer-text">营养学原则</span>，结合国情提出的一组以<span class="answer-text">食物为基础</span>的，指导人们合理选择与搭配食物，以达到<span class="answer-text">合理营养、促进健康</span>为目的的指导性意见。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>101.. <strong>营养相关疾病</strong><br>是指多种原因引起的机体<span class="blur-text">营养缺乏、过剩或营养代谢异常</span>的一类疾病。</td>
+                            <td>101.. <strong>营养相关疾病</strong><br>是指多种原因引起的机体<span class="answer-text">营养缺乏、过剩或营养代谢异常</span>的一类疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>102.. <strong>肥胖（obesity）</strong><br>是机体<span class="blur-text">能量摄入超过能量消耗</span>，导致体内<span class="blur-text">脂肪积聚过多</span>达到危害健康程度的一种多因素引起的<span class="blur-text">慢性代谢性疾病</span>。</td>
+                            <td>102.. <strong>肥胖（obesity）</strong><br>是机体<span class="answer-text">能量摄入超过能量消耗</span>，导致体内<span class="answer-text">脂肪积聚过多</span>达到危害健康程度的一种多因素引起的<span class="answer-text">慢性代谢性疾病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>103.. <strong>高尿酸血症</strong><br>是指<span class="blur-text">37°C时</span>血清中<span class="blur-text">尿酸含量超过正常水平</span>。</td>
+                            <td>103.. <strong>高尿酸血症</strong><br>是指<span class="answer-text">37°C时</span>血清中<span class="answer-text">尿酸含量超过正常水平</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>104.. <strong>食品污染</strong><br>食品因<span class="blur-text">有害物质</span>造成<span class="blur-text">安全性、营养性或感官性状</span>的改变称为食品污染。这些有害物质称为<span class="blur-text">食品污染物</span>。</td>
+                            <td>104.. <strong>食品污染</strong><br>食品因<span class="answer-text">有害物质</span>造成<span class="answer-text">安全性、营养性或感官性状</span>的改变称为食品污染。这些有害物质称为<span class="answer-text">食品污染物</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>105.. <strong>食源性疾病</strong><br>通过摄食进入人体内的各种<span class="blur-text">致病因子</span>引起的具有<span class="blur-text">感染或中毒性质</span>的一类疾病。</td>
+                            <td>105.. <strong>食源性疾病</strong><br>通过摄食进入人体内的各种<span class="answer-text">致病因子</span>引起的具有<span class="answer-text">感染或中毒性质</span>的一类疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>106.. <strong>食物中毒</strong><br>摄入含有<span class="blur-text">生物性、化学性有毒有害物质</span>的食品，或把<span class="blur-text">有毒有害物质当作食品</span>摄入后所出现的<span class="blur-text">非传染性急性、亚急性疾病</span>。</td>
+                            <td>106.. <strong>食物中毒</strong><br>摄入含有<span class="answer-text">生物性、化学性有毒有害物质</span>的食品，或把<span class="answer-text">有毒有害物质当作食品</span>摄入后所出现的<span class="answer-text">非传染性急性、亚急性疾病</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

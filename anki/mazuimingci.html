@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">麻醉学名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1. 局部麻醉药： <br>是一类能在用药局部可逆性的阻断<span class="blur-text">感觉神经冲动</span>发生与传递，<br>在<span class="blur-text">意识清醒</span>的条件下引起有关神经支配的部位<br>出现<span class="blur-text">暂时</span>性、<span class="blur-text">可逆</span>性感觉丧失的药物，<br><br>简称“<span class="blur-text">局麻药</span> ”。	1. 局部麻醉药： <br>是一类能在用药局部可逆性的阻断感觉神经冲动发生与传递，在意识清醒的条件下引起有关神经支配的部位出现暂时性、可逆性感觉丧失的药物，简称“局麻药 ”。</td>
+                            <td>1. 局部麻醉药： <br>是一类能在用药局部可逆性的阻断<span class="answer-text">感觉神经冲动</span>发生与传递，<br>在<span class="answer-text">意识清醒</span>的条件下引起有关神经支配的部位<br>出现<span class="answer-text">暂时</span>性、<span class="answer-text">可逆</span>性感觉丧失的药物，<br><br>简称“<span class="answer-text">局麻药</span> ”。	1. 局部麻醉药： <br>是一类能在用药局部可逆性的阻断感觉神经冲动发生与传递，在意识清醒的条件下引起有关神经支配的部位出现暂时性、可逆性感觉丧失的药物，简称“局麻药 ”。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. 局部麻醉： <br>是指在患者<span class="blur-text">神志清醒</span>的状态下，<br>应用局部麻醉药暂时阻断身体某一区域的<span class="blur-text">神经传导</span>的麻醉方式。	2. 局部麻醉： <br>是指在患者神志清醒的状态下，应用局部麻醉药暂时阻断身体某一区域的神经传导的麻醉方式。</td>
+                            <td>2. 局部麻醉： <br>是指在患者<span class="answer-text">神志清醒</span>的状态下，<br>应用局部麻醉药暂时阻断身体某一区域的<span class="answer-text">神经传导</span>的麻醉方式。	2. 局部麻醉： <br>是指在患者神志清醒的状态下，应用局部麻醉药暂时阻断身体某一区域的神经传导的麻醉方式。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. 表面麻醉： <br>将穿透力强的局麻药应用于<span class="blur-text">黏膜</span>表面，<br>使其透过黏膜表面，阻滞粘膜下的<span class="blur-text">神经末梢</span>，<br>使粘膜产生麻醉作用。	3. 表面麻醉： <br>将穿透力强的局麻药应用于黏膜表面，使其透过黏膜表面，阻滞粘膜下的神经末梢，使粘膜产生麻醉作用。</td>
+                            <td>3. 表面麻醉： <br>将穿透力强的局麻药应用于<span class="answer-text">黏膜</span>表面，<br>使其透过黏膜表面，阻滞粘膜下的<span class="answer-text">神经末梢</span>，<br>使粘膜产生麻醉作用。	3. 表面麻醉： <br>将穿透力强的局麻药应用于黏膜表面，使其透过黏膜表面，阻滞粘膜下的神经末梢，使粘膜产生麻醉作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. 局部浸润麻醉： <br>将麻醉药注射于手术区域的组织内，<br>阻滞<span class="blur-text">神经末梢</span>而达到麻醉作用。	4. 局部浸润麻醉： <br>将麻醉药注射于手术区域的组织内，阻滞神经末梢而达到麻醉作用。</td>
+                            <td>4. 局部浸润麻醉： <br>将麻醉药注射于手术区域的组织内，<br>阻滞<span class="answer-text">神经末梢</span>而达到麻醉作用。	4. 局部浸润麻醉： <br>将麻醉药注射于手术区域的组织内，阻滞神经末梢而达到麻醉作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. 区域阻滞： <br><span class="blur-text">包围</span>手术区，在其<span class="blur-text">四周和底部</span><br>注射局麻药阻滞手术区域的神经末梢。	5. 区域阻滞： <br>包围手术区，在其四周和底部注射局麻药阻滞手术区域的神经末梢。</td>
+                            <td>5. 区域阻滞： <br><span class="answer-text">包围</span>手术区，在其<span class="answer-text">四周和底部</span><br>注射局麻药阻滞手术区域的神经末梢。	5. 区域阻滞： <br>包围手术区，在其四周和底部注射局麻药阻滞手术区域的神经末梢。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. 神经干阻滞： <br>是指将局麻药注射到<span class="blur-text">外周神经干</span>（ 丛 ） 附近，<br>通过暂时阻断<span class="blur-text">神经冲动</span>的传导，<br>使该神经所支配的区域达到手术无痛的方法。	6. 神经干阻滞： <br>是指将局麻药注射到外周神经干（ 丛 ） 附近，通过暂时阻断神经冲动的传导，使该神经所支配的区域达到手术无痛的方法。</td>
+                            <td>6. 神经干阻滞： <br>是指将局麻药注射到<span class="answer-text">外周神经干</span>（ 丛 ） 附近，<br>通过暂时阻断<span class="answer-text">神经冲动</span>的传导，<br>使该神经所支配的区域达到手术无痛的方法。	6. 神经干阻滞： <br>是指将局麻药注射到外周神经干（ 丛 ） 附近，通过暂时阻断神经冲动的传导，使该神经所支配的区域达到手术无痛的方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. 局麻药毒性反应 ：<br>血液中局麻药的浓度超过一定的阈值（机体的<span class="blur-text">耐受</span>能力），<br>引起<span class="blur-text">中枢神经</span>系统和<span class="blur-text">心血管</span>系统<br>出现各种兴奋或抑制的临床症状。	7. 局麻药毒性反应 ：<br>血液中局麻药的浓度超过一定的阈值（机体的耐受能力），引起中枢神经系统和心血管系统出现各种兴奋或抑制的临床症状。</td>
+                            <td>7. 局麻药毒性反应 ：<br>血液中局麻药的浓度超过一定的阈值（机体的<span class="answer-text">耐受</span>能力），<br>引起<span class="answer-text">中枢神经</span>系统和<span class="answer-text">心血管</span>系统<br>出现各种兴奋或抑制的临床症状。	7. 局麻药毒性反应 ：<br>血液中局麻药的浓度超过一定的阈值（机体的耐受能力），引起中枢神经系统和心血管系统出现各种兴奋或抑制的临床症状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. 全身麻醉： <br>全麻药经呼吸道吸入 或静脉、肌肉注射进入人体，<br>产生<span class="blur-text">中枢神经系统</span>的抑制，<br><br>临床表现为<span class="blur-text">神志</span>消失、全身的<span class="blur-text">痛觉</span>丧失、<br>遗忘、反射抑制和一定程度的肌肉<span class="blur-text">松弛</span>。	8. 全身麻醉： <br>全麻药经呼吸道吸入或静脉、肌肉注射进入人体，产生中枢神经系统的抑制，临床表现为神志消失、全身的痛觉丧失、遗忘、反射抑制和一定程度的肌肉松弛。</td>
+                            <td>8. 全身麻醉： <br>全麻药经呼吸道吸入 或静脉、肌肉注射进入人体，<br>产生<span class="answer-text">中枢神经系统</span>的抑制，<br><br>临床表现为<span class="answer-text">神志</span>消失、全身的<span class="answer-text">痛觉</span>丧失、<br>遗忘、反射抑制和一定程度的肌肉<span class="answer-text">松弛</span>。	8. 全身麻醉： <br>全麻药经呼吸道吸入或静脉、肌肉注射进入人体，产生中枢神经系统的抑制，临床表现为神志消失、全身的痛觉丧失、遗忘、反射抑制和一定程度的肌肉松弛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. 吸入麻醉药： <br>经呼吸道吸入进入人体内并产生<span class="blur-text">全身麻醉</span>作用的药物<br>可用于麻醉<span class="blur-text">诱导</span>和<span class="blur-text">维持</span>。<br><br>常用吸入麻醉药有<span class="blur-text">氧化亚氮</span>和<span class="blur-text">卤族类</span>吸入麻醉药。	9. 吸入麻醉药： <br>经呼吸道吸入进入人体内并产生全身麻醉作用的药物？ 可用于麻醉诱导和维持。常用吸入麻醉药有氧化亚氮和卤族类吸入麻醉药。</td>
+                            <td>9. 吸入麻醉药： <br>经呼吸道吸入进入人体内并产生<span class="answer-text">全身麻醉</span>作用的药物<br>可用于麻醉<span class="answer-text">诱导</span>和<span class="answer-text">维持</span>。<br><br>常用吸入麻醉药有<span class="answer-text">氧化亚氮</span>和<span class="answer-text">卤族类</span>吸入麻醉药。	9. 吸入麻醉药： <br>经呼吸道吸入进入人体内并产生全身麻醉作用的药物？ 可用于麻醉诱导和维持。常用吸入麻醉药有氧化亚氮和卤族类吸入麻醉药。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. <span class="blur-text">术中知晓</span><br>（awareness）： <br>是指<span class="blur-text">全身麻醉</span>中对周围环境和声音存在一定的<span class="blur-text">感知和记忆</span>，<br>病人在术后能回忆起术中所发生的一切事情，并能告知有无疼痛等情况。	10. 术中知晓（awareness）： <br>是指全身麻醉中对周围环境和声音存在一定的感知和记忆，病人在术后能回忆起术中所发生的一切事情，并能告知有无疼痛等情况。</td>
+                            <td>10. <span class="answer-text">术中知晓</span><br>（awareness）： <br>是指<span class="answer-text">全身麻醉</span>中对周围环境和声音存在一定的<span class="answer-text">感知和记忆</span>，<br>病人在术后能回忆起术中所发生的一切事情，并能告知有无疼痛等情况。	10. 术中知晓（awareness）： <br>是指全身麻醉中对周围环境和声音存在一定的感知和记忆，病人在术后能回忆起术中所发生的一切事情，并能告知有无疼痛等情况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. 恶性高热：<br>为罕见的<span class="blur-text">常染色体显性</span>遗传病，<br>由挥发性吸入<span class="blur-text">麻醉</span>剂和去极化<span class="blur-text">肌松</span>剂（琥珀酰胆碱） 诱发的<br><span class="blur-text">骨骼肌代谢异常亢进</span>综合征，<br><br>临床表现为<br>持续骨骼肌<span class="blur-text">强直收缩</span>、<br>PaO 2 迅速<span class="blur-text">升高</span>、<br>体温急剧上升（速度可达 <span class="blur-text">1℃/5 min</span>） 可超过 <span class="blur-text">42</span>℃ 。<br><br>治疗恶性高热的特效药是<span class="blur-text">丹曲林</span>。	11. 恶性高热：<br>为罕见的常染色体显性遗传病，由挥发性吸入麻醉剂和去极化肌松剂（琥珀酰胆碱） 诱发的骨骼肌代谢异常亢进综合征，临床表现为持续骨骼肌强直收缩、PaO 2 迅速升高、体温急剧上升（速度可达 1℃/5 min） 可超过 42℃ 。治疗恶性高热的特效药是丹曲林。</td>
+                            <td>11. 恶性高热：<br>为罕见的<span class="answer-text">常染色体显性</span>遗传病，<br>由挥发性吸入<span class="answer-text">麻醉</span>剂和去极化<span class="answer-text">肌松</span>剂（琥珀酰胆碱） 诱发的<br><span class="answer-text">骨骼肌代谢异常亢进</span>综合征，<br><br>临床表现为<br>持续骨骼肌<span class="answer-text">强直收缩</span>、<br>PaO 2 迅速<span class="answer-text">升高</span>、<br>体温急剧上升（速度可达 <span class="answer-text">1℃/5 min</span>） 可超过 <span class="answer-text">42</span>℃ 。<br><br>治疗恶性高热的特效药是<span class="answer-text">丹曲林</span>。	11. 恶性高热：<br>为罕见的常染色体显性遗传病，由挥发性吸入麻醉剂和去极化肌松剂（琥珀酰胆碱） 诱发的骨骼肌代谢异常亢进综合征，临床表现为持续骨骼肌强直收缩、PaO 2 迅速升高、体温急剧上升（速度可达 1℃/5 min） 可超过 42℃ 。治疗恶性高热的特效药是丹曲林。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. <span class="blur-text">椎管内麻醉</span><br>（ Intrathecal anesthesia）： <br>包括<span class="blur-text">网膜下隙</span>阻滞和<span class="blur-text">硬脊膜外隙</span>阻滞，<br><br>将局麻药注入蛛网膜下隙，<br>暂时使脊神经前根和后根神经传导阻滞的麻醉方法称为蛛网膜下隙阻滞，<br>简称脊麻或腰麻。<br>将局麻药注入应脊膜外隙，<br>暂时阻断脊神经根神经传导的方法称为硬脊膜外隙阻滞，<br>简称硬膜外阻滞或硬膜外麻醉。<br><br>蛛网膜下隙阻滞的特点为所需局麻药的剂量和容量较小，<br>但能使<span class="blur-text">感觉和运动</span>阻滞完善，麻醉效果确切；<br>而硬膜外阻滞则需要麻醉药的浓度和容量均较大，<br>其优点是可以通过<span class="blur-text">置管</span>而<span class="blur-text">连续</span>给药，有利于时间不确定的手术及术后镇痛。	12. 椎管内麻醉（ Intrathecal anesthesia）： <br>包括网膜下隙阻滞和硬脊膜外隙阻滞，将局麻药注入蛛网膜下隙，暂时使脊神经前根和后根神经传导阻滞的麻醉方法称为蛛网膜下隙阻滞，简称脊麻或腰麻。将局麻药注入应脊膜外隙，暂时阻断脊神经根神经传导的方法称为硬脊膜外隙阻滞，简称硬膜外阻滞或硬膜外麻醉。蛛网膜下隙阻滞的特点为所需局麻药的剂量和容量较小，但能使感觉和运动阻滞完善，麻醉效果确切；而硬膜外阻滞则需要麻醉药的浓度和容量均较大，其优点是可以通过置管而连续给药，有利于时间不确定的手术及术后镇痛。</td>
+                            <td>12. <span class="answer-text">椎管内麻醉</span><br>（ Intrathecal anesthesia）： <br>包括<span class="answer-text">网膜下隙</span>阻滞和<span class="answer-text">硬脊膜外隙</span>阻滞，<br><br>将局麻药注入蛛网膜下隙，<br>暂时使脊神经前根和后根神经传导阻滞的麻醉方法称为蛛网膜下隙阻滞，<br>简称脊麻或腰麻。<br>将局麻药注入应脊膜外隙，<br>暂时阻断脊神经根神经传导的方法称为硬脊膜外隙阻滞，<br>简称硬膜外阻滞或硬膜外麻醉。<br><br>蛛网膜下隙阻滞的特点为所需局麻药的剂量和容量较小，<br>但能使<span class="answer-text">感觉和运动</span>阻滞完善，麻醉效果确切；<br>而硬膜外阻滞则需要麻醉药的浓度和容量均较大，<br>其优点是可以通过<span class="answer-text">置管</span>而<span class="answer-text">连续</span>给药，有利于时间不确定的手术及术后镇痛。	12. 椎管内麻醉（ Intrathecal anesthesia）： <br>包括网膜下隙阻滞和硬脊膜外隙阻滞，将局麻药注入蛛网膜下隙，暂时使脊神经前根和后根神经传导阻滞的麻醉方法称为蛛网膜下隙阻滞，简称脊麻或腰麻。将局麻药注入应脊膜外隙，暂时阻断脊神经根神经传导的方法称为硬脊膜外隙阻滞，简称硬膜外阻滞或硬膜外麻醉。蛛网膜下隙阻滞的特点为所需局麻药的剂量和容量较小，但能使感觉和运动阻滞完善，麻醉效果确切；而硬膜外阻滞则需要麻醉药的浓度和容量均较大，其优点是可以通过置管而连续给药，有利于时间不确定的手术及术后镇痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. <span class="blur-text">蛛网膜下腔阻滞</span><br>（spinal anesthesia）： <br>将局麻药注入蛛网膜下隙，<br>暂时使脊神经前根和后根神经传导阻滞的麻醉方法称为蛛网膜下隙阻滞，<br>简称<span class="blur-text">脊麻或腰麻</span>。	13. 蛛网膜下腔阻滞（spinal anesthesia）： <br>将局麻药注入蛛网膜下隙，暂时使脊神经前根和后根神经传导阻滞的麻醉方法称为蛛网膜下隙阻滞，简称脊麻或腰麻。</td>
+                            <td>13. <span class="answer-text">蛛网膜下腔阻滞</span><br>（spinal anesthesia）： <br>将局麻药注入蛛网膜下隙，<br>暂时使脊神经前根和后根神经传导阻滞的麻醉方法称为蛛网膜下隙阻滞，<br>简称<span class="answer-text">脊麻或腰麻</span>。	13. 蛛网膜下腔阻滞（spinal anesthesia）： <br>将局麻药注入蛛网膜下隙，暂时使脊神经前根和后根神经传导阻滞的麻醉方法称为蛛网膜下隙阻滞，简称脊麻或腰麻。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. <span class="blur-text">硬膜外间隙阻滞</span><br>（epidural    anesthesia）： <br>将局麻药注入应脊膜外隙，<br>暂时阻断脊神经根神经传导的方法称为硬脊膜外隙阻滞，<br>简称<span class="blur-text">硬膜外阻滞或硬膜外麻醉</span>。	14. 硬膜外间隙阻滞（epidural    anesthesia）： <br>将局麻药注入应脊膜外隙，暂时阻断脊神经根神经传导的方法称为硬脊膜外隙阻滞，简称硬膜外阻滞或硬膜外麻醉。</td>
+                            <td>14. <span class="answer-text">硬膜外间隙阻滞</span><br>（epidural    anesthesia）： <br>将局麻药注入应脊膜外隙，<br>暂时阻断脊神经根神经传导的方法称为硬脊膜外隙阻滞，<br>简称<span class="answer-text">硬膜外阻滞或硬膜外麻醉</span>。	14. 硬膜外间隙阻滞（epidural    anesthesia）： <br>将局麻药注入应脊膜外隙，暂时阻断脊神经根神经传导的方法称为硬脊膜外隙阻滞，简称硬膜外阻滞或硬膜外麻醉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. <span class="blur-text">全脊麻</span><br>（ total spinal anesthesia） ：<br>行<span class="blur-text">硬膜外阻滞</span>时，<br>如穿刺针或硬膜外导管误入<span class="blur-text">蛛网膜下腔</span>而未能及时发现，<br>超过脊麻数倍量的的局麻药注入蛛网膜下腔，可产生异常广泛的阻滞<br><br>临床表现为全部脊神经支配的区域均<br>无<span class="blur-text">痛觉</span>、意识<span class="blur-text">丧失</span>及<br><span class="blur-text">低</span>血压、呼吸<span class="blur-text">停止</span>。	15. 全脊麻（ total spinal anesthesia） ：<br>行硬膜外阻滞时，如穿刺针或硬膜外导管误入蛛网膜下腔而未能及时发现，超过脊麻数倍量的的局麻药注入蛛网膜下腔，可产生异常广泛的阻滞，称全脊麻？ 临床表现为全部脊神经支配的区域均无痛觉、低血压、意识丧失及呼吸停止。</td>
+                            <td>15. <span class="answer-text">全脊麻</span><br>（ total spinal anesthesia） ：<br>行<span class="answer-text">硬膜外阻滞</span>时，<br>如穿刺针或硬膜外导管误入<span class="answer-text">蛛网膜下腔</span>而未能及时发现，<br>超过脊麻数倍量的的局麻药注入蛛网膜下腔，可产生异常广泛的阻滞<br><br>临床表现为全部脊神经支配的区域均<br>无<span class="answer-text">痛觉</span>、意识<span class="answer-text">丧失</span>及<br><span class="answer-text">低</span>血压、呼吸<span class="answer-text">停止</span>。	15. 全脊麻（ total spinal anesthesia） ：<br>行硬膜外阻滞时，如穿刺针或硬膜外导管误入蛛网膜下腔而未能及时发现，超过脊麻数倍量的的局麻药注入蛛网膜下腔，可产生异常广泛的阻滞，称全脊麻？ 临床表现为全部脊神经支配的区域均无痛觉、低血压、意识丧失及呼吸停止。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. CSEA： <br><span class="blur-text">蛛网膜下隙与硬脊膜外联合阻滞麻醉</span><br><br><br><br>既保留了脊麻<span class="blur-text">起效快</span>、<span class="blur-text">镇痛</span>与<span class="blur-text">肌松完善</span>的优点，<br>也便于调节<span class="blur-text">麻醉平面</span>，防止麻醉平面过高。<br><br>经硬膜外导管按需追加局麻药<br>可弥补单纯脊麻阻滞平面不足或阻滞时间不够的情况，能完成长时间手术，<br>局麻药用量通常为单纯硬脊膜外阻滞的 <span class="blur-text">1/3</span>，并可以进行术后镇痛。	16. CSEA： <br>蛛网膜下隙与硬脊膜外联合阻滞麻醉，既保留了脊麻起效快、镇痛与肌松完善的优点，也便于调节麻醉平面，防止麻醉平面过高。经硬膜外导管按需追加局麻药可弥补单纯脊麻阻滞平面不足或阻滞时间不够的情况，能完成长时间手术，局麻药用量通常为单纯硬脊膜外阻滞的 1/3，并可以进行术后镇痛。</td>
+                            <td>16. CSEA： <br><span class="answer-text">蛛网膜下隙与硬脊膜外联合阻滞麻醉</span><br><br><br><br>既保留了脊麻<span class="answer-text">起效快</span>、<span class="answer-text">镇痛</span>与<span class="answer-text">肌松完善</span>的优点，<br>也便于调节<span class="answer-text">麻醉平面</span>，防止麻醉平面过高。<br><br>经硬膜外导管按需追加局麻药<br>可弥补单纯脊麻阻滞平面不足或阻滞时间不够的情况，能完成长时间手术，<br>局麻药用量通常为单纯硬脊膜外阻滞的 <span class="answer-text">1/3</span>，并可以进行术后镇痛。	16. CSEA： <br>蛛网膜下隙与硬脊膜外联合阻滞麻醉，既保留了脊麻起效快、镇痛与肌松完善的优点，也便于调节麻醉平面，防止麻醉平面过高。经硬膜外导管按需追加局麻药可弥补单纯脊麻阻滞平面不足或阻滞时间不够的情况，能完成长时间手术，局麻药用量通常为单纯硬脊膜外阻滞的 1/3，并可以进行术后镇痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.  <span class="blur-text">困难气道</span><br>（difficult airway） ：<br>具有<span class="blur-text">五</span>年以上临床麻醉经验的麻醉医师<br>在<span class="blur-text">面罩通气</span>时或<span class="blur-text">气管插管</span>时遇到困难的一种临床情况。	17.  困难气道（difficult airway） ：<br>具有五年以上临床麻醉经验的麻醉医师在面罩通气时或气管插管时遇到困难的一种临床情况。</td>
+                            <td>17.  <span class="answer-text">困难气道</span><br>（difficult airway） ：<br>具有<span class="answer-text">五</span>年以上临床麻醉经验的麻醉医师<br>在<span class="answer-text">面罩通气</span>时或<span class="answer-text">气管插管</span>时遇到困难的一种临床情况。	17.  困难气道（difficult airway） ：<br>具有五年以上临床麻醉经验的麻醉医师在面罩通气时或气管插管时遇到困难的一种临床情况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. Thyromental distance： <br><span class="blur-text">甲颏</span>距离，<br>是头在完全<span class="blur-text">伸展</span>位时，<br><span class="blur-text">甲状软骨</span>切迹上缘至<span class="blur-text">下颚</span>尖端的距离，<br><br>甲颏距离<br>小于 <span class="blur-text">6</span> cm <br>或小于检查者<span class="blur-text">三</span>横指的宽度，<br>提示<span class="blur-text">气管插管</span>可能困难。	18. Thyromental distance： <br>甲颏距离，是头在完全伸展位时，甲状软骨切迹上缘至下颚尖端的距离，甲颏距离小于 6 cm 或小于检查者三横指的宽度，提示气管插管可能困难。</td>
+                            <td>18. Thyromental distance： <br><span class="answer-text">甲颏</span>距离，<br>是头在完全<span class="answer-text">伸展</span>位时，<br><span class="answer-text">甲状软骨</span>切迹上缘至<span class="answer-text">下颚</span>尖端的距离，<br><br>甲颏距离<br>小于 <span class="answer-text">6</span> cm <br>或小于检查者<span class="answer-text">三</span>横指的宽度，<br>提示<span class="answer-text">气管插管</span>可能困难。	18. Thyromental distance： <br>甲颏距离，是头在完全伸展位时，甲状软骨切迹上缘至下颚尖端的距离，甲颏距离小于 6 cm 或小于检查者三横指的宽度，提示气管插管可能困难。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. Interincisor distance： <br><span class="blur-text">张口度</span>，<br>即最大张口时<span class="blur-text">上下门齿</span>间距离，<br><br>张口度小于 <span class="blur-text">3</span> cm 或小于检查者<span class="blur-text">两</span>横指时，<br>无法置入<span class="blur-text">喉镜</span>，导致困难喉镜显露。	19. Interincisor distance： <br>张口度，即最大张口时上下门齿间距离，张口度小于 3 cm 或小于检查者两横指时，无法置入喉镜，导致困难喉镜显露。</td>
+                            <td>19. Interincisor distance： <br><span class="answer-text">张口度</span>，<br>即最大张口时<span class="answer-text">上下门齿</span>间距离，<br><br>张口度小于 <span class="answer-text">3</span> cm 或小于检查者<span class="answer-text">两</span>横指时，<br>无法置入<span class="answer-text">喉镜</span>，导致困难喉镜显露。	19. Interincisor distance： <br>张口度，即最大张口时上下门齿间距离，张口度小于 3 cm 或小于检查者两横指时，无法置入喉镜，导致困难喉镜显露。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. Range of motion of the neck： <br><span class="blur-text">头颈活动度</span>，<br><br>下巴不能接触<span class="blur-text">胸骨</span>或不能<span class="blur-text">伸颈</span><br>提示<span class="blur-text">气管插管</span>困难。	20. Range of motion of the neck： <br>头颈活动度，下巴不能接触胸骨或不能伸颈提示气管插管困难。</td>
+                            <td>20. Range of motion of the neck： <br><span class="answer-text">头颈活动度</span>，<br><br>下巴不能接触<span class="answer-text">胸骨</span>或不能<span class="answer-text">伸颈</span><br>提示<span class="answer-text">气管插管</span>困难。	20. Range of motion of the neck： <br>头颈活动度，下巴不能接触胸骨或不能伸颈提示气管插管困难。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. Mallampati classification：mallampati 分级，<br>是根据所能看到的<span class="blur-text">咽部</span>结构，给病人进行<span class="blur-text">气道</span>分级，<br>通常情况下分为四级： <br><br>1 级：可以看到<span class="blur-text">硬腭、软腭、悬雍垂、咽腭弓</span>；<br>2 级：可以看到<span class="blur-text">硬腭、软腭、悬雍垂</span>；<br>3 级：可以看到<span class="blur-text">硬腭、软腭</span>；<br>4 级：只能看到<span class="blur-text">硬腭</span>。<br><br>分级越高预示<span class="blur-text">喉镜</span>显露越困难，<br>3-4 级提示<span class="blur-text">困难气道</span>。	21. Mallampati classification：<br>mallampati 分级，是根据所能看到的咽部结构，给病人进行气道分级，通常情况下分为四级： <br>1 级： <br>可以看到软腭、咽腭弓、悬雍垂、硬腭；2 级： <br>可以看到软腭、悬雍垂、硬腭；3 级： <br>可以看到软腭和硬腭；4 级： <br>只能看到硬腭。分级越高预示喉镜显露越困难，3-4 级提困难气道。</td>
+                            <td>21. Mallampati classification：mallampati 分级，<br>是根据所能看到的<span class="answer-text">咽部</span>结构，给病人进行<span class="answer-text">气道</span>分级，<br>通常情况下分为四级： <br><br>1 级：可以看到<span class="answer-text">硬腭、软腭、悬雍垂、咽腭弓</span>；<br>2 级：可以看到<span class="answer-text">硬腭、软腭、悬雍垂</span>；<br>3 级：可以看到<span class="answer-text">硬腭、软腭</span>；<br>4 级：只能看到<span class="answer-text">硬腭</span>。<br><br>分级越高预示<span class="answer-text">喉镜</span>显露越困难，<br>3-4 级提示<span class="answer-text">困难气道</span>。	21. Mallampati classification：<br>mallampati 分级，是根据所能看到的咽部结构，给病人进行气道分级，通常情况下分为四级： <br>1 级： <br>可以看到软腭、咽腭弓、悬雍垂、硬腭；2 级： <br>可以看到软腭、悬雍垂、硬腭；3 级： <br>可以看到软腭和硬腭；4 级： <br>只能看到硬腭。分级越高预示喉镜显露越困难，3-4 级提困难气道。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. 缺氧： <br><span class="blur-text">组织细胞</span>水平的氧不足而引起的全身性缺氧。	22. 缺氧： <br>组织细胞水平的氧不足而引起的全身性缺氧。</td>
+                            <td>22. 缺氧： <br><span class="answer-text">组织细胞</span>水平的氧不足而引起的全身性缺氧。	22. 缺氧： <br>组织细胞水平的氧不足而引起的全身性缺氧。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. 低氧血症 ：<br>在<span class="blur-text">海平面</span>呼吸空气的情况下，<br>PaO 2 低于 <span class="blur-text">60</span> mmHg。	23. 低氧血症 ：<br>在海平面呼吸空气的情况下，PaO 2 低于 60 mmHg。</td>
+                            <td>23. 低氧血症 ：<br>在<span class="answer-text">海平面</span>呼吸空气的情况下，<br>PaO 2 低于 <span class="answer-text">60</span> mmHg。	23. 低氧血症 ：<br>在海平面呼吸空气的情况下，PaO 2 低于 60 mmHg。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. <span class="blur-text">潮气量</span>（Vt）：<br>指<span class="blur-text">平静</span>呼吸时，<br>每次<span class="blur-text">吸入</span>或<span class="blur-text">呼出</span>的气体量，<br><br>正常自主呼吸时潮气量为 <span class="blur-text">5~7</span> ml/kg。	24. 潮气量（Vt）：<br>指平静呼吸时，每次吸入或呼出的气体量，正常自主呼吸时潮气量为 5~7 ml/kg。</td>
+                            <td>24. <span class="answer-text">潮气量</span>（Vt）：<br>指<span class="answer-text">平静</span>呼吸时，<br>每次<span class="answer-text">吸入</span>或<span class="answer-text">呼出</span>的气体量，<br><br>正常自主呼吸时潮气量为 <span class="answer-text">5~7</span> ml/kg。	24. 潮气量（Vt）：<br>指平静呼吸时，每次吸入或呼出的气体量，正常自主呼吸时潮气量为 5~7 ml/kg。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25. <span class="blur-text">氧合指数</span><br>（ PaO 2/FiO 2）： <br><br>为 PaO 2 与<span class="blur-text">吸入氧浓度</span>的比值，<br>正常者应大于 <span class="blur-text">300</span> mmHg。	25. 氧合指数（ PaO 2/FiO 2）： <br>为 PaO 2 与吸入氧浓度的比值，正常者应大于 300 mmHg。</td>
+                            <td>25. <span class="answer-text">氧合指数</span><br>（ PaO 2/FiO 2）： <br><br>为 PaO 2 与<span class="answer-text">吸入氧浓度</span>的比值，<br>正常者应大于 <span class="answer-text">300</span> mmHg。	25. 氧合指数（ PaO 2/FiO 2）： <br>为 PaO 2 与吸入氧浓度的比值，正常者应大于 300 mmHg。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26. <span class="blur-text">混合静脉</span>血氧饱和度<br>（ SvO 2）： <br><br>是指<span class="blur-text">肺动脉</span>血氧饱和度，<br>反应由<span class="blur-text">心排出量</span>、<span class="blur-text">动脉血氧饱和度</span>、<span class="blur-text">血红蛋白量</span><br>决定的氧供和氧耗之间平衡关系的指标，<br><br><span class="blur-text">氧供</span>减少或<span class="blur-text">氧耗</span>增加都会导致 SvO 2 下降。	26. 混合静脉血氧饱和度（ SvO 2）： <br>是指肺动脉血氧饱和度，反应由心排出量、动脉血氧饱和度、血红蛋白量决定的氧供和氧耗之间平衡关系的指标，氧供减少或氧耗增加都会导致 SvO 2 下降。</td>
+                            <td>26. <span class="answer-text">混合静脉</span>血氧饱和度<br>（ SvO 2）： <br><br>是指<span class="answer-text">肺动脉</span>血氧饱和度，<br>反应由<span class="answer-text">心排出量</span>、<span class="answer-text">动脉血氧饱和度</span>、<span class="answer-text">血红蛋白量</span><br>决定的氧供和氧耗之间平衡关系的指标，<br><br><span class="answer-text">氧供</span>减少或<span class="answer-text">氧耗</span>增加都会导致 SvO 2 下降。	26. 混合静脉血氧饱和度（ SvO 2）： <br>是指肺动脉血氧饱和度，反应由心排出量、动脉血氧饱和度、血红蛋白量决定的氧供和氧耗之间平衡关系的指标，氧供减少或氧耗增加都会导致 SvO 2 下降。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27. P 50： <br>是<span class="blur-text">血红蛋白氧饱和度</span>（ SaO 2） 为 <span class="blur-text">50%</span>时的 PaO 2 ，<br>是反应<span class="blur-text">血红蛋白</span>与  <span class="blur-text">O 2</span> 结合的指标，<br><br><span class="blur-text">PCO 2</span> 、<span class="blur-text">2，3-DPG</span>、<span class="blur-text">体温</span>升高<br><span class="blur-text">pH</span>下降<br>都会使氧离曲线<span class="blur-text">右移</span>， P 50 变大，利于氧合。	27. P 50： <br>当血红蛋白氧饱和度（ SaO 2） 为 50%时的 PaO 2 称为 P 50，是反应血红蛋白与  O 2 结合的指标，PCO 2 升高、pH 下降、2，3-DPG 升高、体温升高都会使氧离曲线右移， P 50 变大，利于氧合。</td>
+                            <td>27. P 50： <br>是<span class="answer-text">血红蛋白氧饱和度</span>（ SaO 2） 为 <span class="answer-text">50%</span>时的 PaO 2 ，<br>是反应<span class="answer-text">血红蛋白</span>与  <span class="answer-text">O 2</span> 结合的指标，<br><br><span class="answer-text">PCO 2</span> 、<span class="answer-text">2，3-DPG</span>、<span class="answer-text">体温</span>升高<br><span class="answer-text">pH</span>下降<br>都会使氧离曲线<span class="answer-text">右移</span>， P 50 变大，利于氧合。	27. P 50： <br>当血红蛋白氧饱和度（ SaO 2） 为 50%时的 PaO 2 称为 P 50，是反应血红蛋白与  O 2 结合的指标，PCO 2 升高、pH 下降、2，3-DPG 升高、体温升高都会使氧离曲线右移， P 50 变大，利于氧合。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28. CVP： <br><span class="blur-text">中心静脉压</span>，<br>是指位于胸腔内的上、下腔静脉<span class="blur-text">右心房入口</span>处的压力，<br>主要反映右心功能与静脉<span class="blur-text">回心血</span>量之间的平衡关系。<br><br>正常值为 <span class="blur-text">5-12</span> cmH 2 O，主要用于反映<span class="blur-text">右心室前负荷</span>。？	28. CVP： <br>中心静脉压，是指位于胸腔内的上、下腔静脉右心房入口处的压力，主要反映右心功能与静脉回心血量之间的平衡关系。正常值为 5-12 cmH 2 O，主要用于反映右心室前负荷。</td>
+                            <td>28. CVP： <br><span class="answer-text">中心静脉压</span>，<br>是指位于胸腔内的上、下腔静脉<span class="answer-text">右心房入口</span>处的压力，<br>主要反映右心功能与静脉<span class="answer-text">回心血</span>量之间的平衡关系。<br><br>正常值为 <span class="answer-text">5-12</span> cmH 2 O，主要用于反映<span class="answer-text">右心室前负荷</span>。？	28. CVP： <br>中心静脉压，是指位于胸腔内的上、下腔静脉右心房入口处的压力，主要反映右心功能与静脉回心血量之间的平衡关系。正常值为 5-12 cmH 2 O，主要用于反映右心室前负荷。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29. PAWP ：<br><span class="blur-text">肺动脉</span>楔压，<br>是指将肺小动脉<span class="blur-text">楔嵌</span>阻断血流后，在其远端测得的压力，<br>又称<span class="blur-text">肺毛细血管</span>楔压（ PCWP） 。<br><br>正常值为 5-12{{c2::mmHg}}，主要用于反映<span class="blur-text">左心室前负荷</span>。	29. PAWP ：<br>肺动脉楔压，是指将肺小动脉楔嵌阻断血流后，在其远端测得的压力，又称肺毛细血管楔压（ PCWP） 。正常值为 5-12 mmHg，主要用于反映右心室前负荷。</td>
+                            <td>29. PAWP ：<br><span class="answer-text">肺动脉</span>楔压，<br>是指将肺小动脉<span class="answer-text">楔嵌</span>阻断血流后，在其远端测得的压力，<br>又称<span class="answer-text">肺毛细血管</span>楔压（ PCWP） 。<br><br>正常值为 5-12{{c2::mmHg}}，主要用于反映<span class="answer-text">左心室前负荷</span>。	29. PAWP ：<br>肺动脉楔压，是指将肺小动脉楔嵌阻断血流后，在其远端测得的压力，又称肺毛细血管楔压（ PCWP） 。正常值为 5-12 mmHg，主要用于反映右心室前负荷。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.  <span class="blur-text">日间手术麻醉</span><br>（ Ambulatory surgery/day surgery） ：<br>指病人<span class="blur-text">入院、手术和出院</span>在 1 个工作日（ 24 小时） 之内完成的一种手术模式。	30.  日间手术麻醉（ Ambulatory surgery/day surgery） ：<br>指病人入院、手术和出院在 1 个工作日（ 24 小时） 之内完成的一种手术模式。</td>
+                            <td>30.  <span class="answer-text">日间手术麻醉</span><br>（ Ambulatory surgery/day surgery） ：<br>指病人<span class="answer-text">入院、手术和出院</span>在 1 个工作日（ 24 小时） 之内完成的一种手术模式。	30.  日间手术麻醉（ Ambulatory surgery/day surgery） ：<br>指病人入院、手术和出院在 1 个工作日（ 24 小时） 之内完成的一种手术模式。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31. <span class="blur-text">手术室外麻醉</span><br>（Anesthesia for non-operating room）：<br>指在手术室以外的场所<br>为接受手术、诊断性检查或治疗性操作的病人所实施的麻醉。	31. 手术室外麻醉（Anesthesia for non-operating room）：<br>指在手术室以外的场所为接受手术、诊断性检查或治疗性操作的病人所实施的麻醉。</td>
+                            <td>31. <span class="answer-text">手术室外麻醉</span><br>（Anesthesia for non-operating room）：<br>指在手术室以外的场所<br>为接受手术、诊断性检查或治疗性操作的病人所实施的麻醉。	31. 手术室外麻醉（Anesthesia for non-operating room）：<br>指在手术室以外的场所为接受手术、诊断性检查或治疗性操作的病人所实施的麻醉。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32. <span class="blur-text">监测麻醉管理</span><br>（ MAC） ：<br>指在<span class="blur-text">局部麻醉</span>手术中<br>由麻醉医师实施<span class="blur-text">镇静</span>或（和） <span class="blur-text">镇痛</span>，<br>并监测病人<span class="blur-text">生命体征</span>、诊断和处理临床问题，<br><br>其主要目的是解除病人焦虑及恐惧<span class="blur-text">情绪</span>，<br>减轻疼痛和其他伤害性<span class="blur-text">刺激</span>，遗忘痛苦经历，<br>提高操作的<span class="blur-text">安全和舒适</span>性。	32. 监测麻醉管理（ MAC） ：<br>指在局部麻醉手术中由麻醉医师实施镇静或（和） 镇痛，并监测病人生命体征、诊断和处理临床问题，其主要目的是解除病人焦虑及恐惧情绪，减轻疼痛和其他伤害性刺激，遗忘痛苦经历，提高操作的安全性和舒适性。</td>
+                            <td>32. <span class="answer-text">监测麻醉管理</span><br>（ MAC） ：<br>指在<span class="answer-text">局部麻醉</span>手术中<br>由麻醉医师实施<span class="answer-text">镇静</span>或（和） <span class="answer-text">镇痛</span>，<br>并监测病人<span class="answer-text">生命体征</span>、诊断和处理临床问题，<br><br>其主要目的是解除病人焦虑及恐惧<span class="answer-text">情绪</span>，<br>减轻疼痛和其他伤害性<span class="answer-text">刺激</span>，遗忘痛苦经历，<br>提高操作的<span class="answer-text">安全和舒适</span>性。	32. 监测麻醉管理（ MAC） ：<br>指在局部麻醉手术中由麻醉医师实施镇静或（和） 镇痛，并监测病人生命体征、诊断和处理临床问题，其主要目的是解除病人焦虑及恐惧情绪，减轻疼痛和其他伤害性刺激，遗忘痛苦经历，提高操作的安全性和舒适性。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33. 快通道麻醉：<br>是为降低医疗<span class="blur-text">成本</span>、减轻病人<span class="blur-text">痛苦</span>，<br>采用各种优势手段<span class="blur-text">缩短</span>麻醉过程的方法。<br><br>此概念的内涵主要包括<br>早期<span class="blur-text">拔管</span>（术后 <span class="blur-text">1～6</span> 小时） 、早期<span class="blur-text">转出 ICU</span> 和缩短住院时间，<br>根本目的是提高医疗质量、降低<span class="blur-text">并发症和死亡率</span>，节省医疗费用。	33. 快通道麻醉：<br>是为降低医疗成本、减轻病人痛苦，采用各种优势手段缩短麻醉过程的方法。此概念的内涵主要包括早期拔管（术后 1～6 小时） 、早期转出 ICU 和缩短住院时间，根本目的是提高医疗质量、降低并发症和死亡率，节省医疗费用。</td>
+                            <td>33. 快通道麻醉：<br>是为降低医疗<span class="answer-text">成本</span>、减轻病人<span class="answer-text">痛苦</span>，<br>采用各种优势手段<span class="answer-text">缩短</span>麻醉过程的方法。<br><br>此概念的内涵主要包括<br>早期<span class="answer-text">拔管</span>（术后 <span class="answer-text">1～6</span> 小时） 、早期<span class="answer-text">转出 ICU</span> 和缩短住院时间，<br>根本目的是提高医疗质量、降低<span class="answer-text">并发症和死亡率</span>，节省医疗费用。	33. 快通道麻醉：<br>是为降低医疗成本、减轻病人痛苦，采用各种优势手段缩短麻醉过程的方法。此概念的内涵主要包括早期拔管（术后 1～6 小时） 、早期转出 ICU 和缩短住院时间，根本目的是提高医疗质量、降低并发症和死亡率，节省医疗费用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34. 肺保护性通气：<br>使用<span class="blur-text">机械通气</span>，会带来机械通气相关性肺损伤，<br>而不恰当的呼吸机参数设置，会使得肺损伤加重。<br><br>在实施机械通气时应当通过合理的设置<span class="blur-text">呼吸机参数</span>。<br>尽可能的减少对肺的损伤。	34. 肺保护性通气：<br>使用机械通气，会带来机械通气相关性肺损伤，而不恰当的呼吸机参数设置，会使得肺损伤加重。在实施机械通气时应当通过合理的设置呼吸机参数。尽可能的减少对肺的损伤。</td>
+                            <td>34. 肺保护性通气：<br>使用<span class="answer-text">机械通气</span>，会带来机械通气相关性肺损伤，<br>而不恰当的呼吸机参数设置，会使得肺损伤加重。<br><br>在实施机械通气时应当通过合理的设置<span class="answer-text">呼吸机参数</span>。<br>尽可能的减少对肺的损伤。	34. 肺保护性通气：<br>使用机械通气，会带来机械通气相关性肺损伤，而不恰当的呼吸机参数设置，会使得肺损伤加重。在实施机械通气时应当通过合理的设置呼吸机参数。尽可能的减少对肺的损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35. <span class="blur-text">急性呼吸衰竭</span><br>（ ARF） ：<br>各种原因引起的急性严重<span class="blur-text">肺通气和（或）换气</span>功能障碍，<br>以致在<span class="blur-text">静息</span>状态下亦不能维持足够的气体交换，<br>导致<span class="blur-text">低氧血症</span>伴（或不伴）<span class="blur-text">高碳酸血症</span>，<br><br>进而引起一系列病理生理改变和相应临床表现的综合征。	35. 急性呼吸衰竭（ ARF） ：<br>各种原因引起的急性严重肺通气和（或）换气功能障碍，以致在静息状态下亦不能维持足够的气体交换，导致低氧血症伴（或不伴）高碳酸血症，进而引起一系列病理生理改变和相应临床表现的综合征。</td>
+                            <td>35. <span class="answer-text">急性呼吸衰竭</span><br>（ ARF） ：<br>各种原因引起的急性严重<span class="answer-text">肺通气和（或）换气</span>功能障碍，<br>以致在<span class="answer-text">静息</span>状态下亦不能维持足够的气体交换，<br>导致<span class="answer-text">低氧血症</span>伴（或不伴）<span class="answer-text">高碳酸血症</span>，<br><br>进而引起一系列病理生理改变和相应临床表现的综合征。	35. 急性呼吸衰竭（ ARF） ：<br>各种原因引起的急性严重肺通气和（或）换气功能障碍，以致在静息状态下亦不能维持足够的气体交换，导致低氧血症伴（或不伴）高碳酸血症，进而引起一系列病理生理改变和相应临床表现的综合征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36. <span class="blur-text">急性呼吸窘迫综合征</span><br>（ ARDS） ：<br>在严重感染、创伤、休克及烧伤等非心源性疾病过程中，<br>肺<span class="blur-text">毛细血管内皮</span>细胞和<span class="blur-text">肺泡上皮</span>细胞损伤<br>造成弥漫性<span class="blur-text">肺间质及肺泡水肿</span>，<br><br>导致的急性低氧性呼吸功能衰竭。	36. 急性呼吸窘迫综合征（ ARDS） ：<br>在严重感染、创伤、休克及烧伤等非心源性疾病过程中，肺毛细血管内皮细胞和肺泡上皮细胞损伤造成弥漫性肺间质及肺泡水肿，导致的急性低氧性呼吸功能衰竭。</td>
+                            <td>36. <span class="answer-text">急性呼吸窘迫综合征</span><br>（ ARDS） ：<br>在严重感染、创伤、休克及烧伤等非心源性疾病过程中，<br>肺<span class="answer-text">毛细血管内皮</span>细胞和<span class="answer-text">肺泡上皮</span>细胞损伤<br>造成弥漫性<span class="answer-text">肺间质及肺泡水肿</span>，<br><br>导致的急性低氧性呼吸功能衰竭。	36. 急性呼吸窘迫综合征（ ARDS） ：<br>在严重感染、创伤、休克及烧伤等非心源性疾病过程中，肺毛细血管内皮细胞和肺泡上皮细胞损伤造成弥漫性肺间质及肺泡水肿，导致的急性低氧性呼吸功能衰竭。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37. <span class="blur-text">麻醉恢复室</span><br>（ PACU）： <br>是帮助麻醉后手术患者在<span class="blur-text">完全清醒</span>（复苏） 并转入普通病房前，<br>提供密切的监护和治疗的场所。	37. 麻醉恢复室（ PACU）： <br>是帮助麻醉后手术患者在完全清醒（复苏） 并转入普通病房前，提供密切的监护和治疗的场所。</td>
+                            <td>37. <span class="answer-text">麻醉恢复室</span><br>（ PACU）： <br>是帮助麻醉后手术患者在<span class="answer-text">完全清醒</span>（复苏） 并转入普通病房前，<br>提供密切的监护和治疗的场所。	37. 麻醉恢复室（ PACU）： <br>是帮助麻醉后手术患者在完全清醒（复苏） 并转入普通病房前，提供密切的监护和治疗的场所。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38. 苏醒延迟： <br>手术结束后，<br>病人在 <span class="blur-text">90</span> 分钟以上意识仍未恢复，<br>排除<span class="blur-text">昏迷</span>后即为苏醒延迟。<br><br>与患者<span class="blur-text">年龄</span>，<br>手术<span class="blur-text">种类</span>，手术<span class="blur-text">时间</span>，<br><span class="blur-text">药物</span>作用等因素相关。	38. 苏醒延迟： <br>手术结束后，病人在 90 分钟以上意识仍未恢复，排除昏迷后即为苏醒延迟。与患者年龄，手术种类，手术时间，药物作用等因素相关。</td>
+                            <td>38. 苏醒延迟： <br>手术结束后，<br>病人在 <span class="answer-text">90</span> 分钟以上意识仍未恢复，<br>排除<span class="answer-text">昏迷</span>后即为苏醒延迟。<br><br>与患者<span class="answer-text">年龄</span>，<br>手术<span class="answer-text">种类</span>，手术<span class="answer-text">时间</span>，<br><span class="answer-text">药物</span>作用等因素相关。	38. 苏醒延迟： <br>手术结束后，病人在 90 分钟以上意识仍未恢复，排除昏迷后即为苏醒延迟。与患者年龄，手术种类，手术时间，药物作用等因素相关。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39. 转出延迟： <br>从患者进入麻醉恢复室<br>至患者离开麻醉恢复室<br>超过 <span class="blur-text">3</span> 小时。	39. 转出延迟： <br>从患者进入麻醉恢复室至患者离开麻醉恢复室超过 3 小时。</td>
+                            <td>39. 转出延迟： <br>从患者进入麻醉恢复室<br>至患者离开麻醉恢复室<br>超过 <span class="answer-text">3</span> 小时。	39. 转出延迟： <br>从患者进入麻醉恢复室至患者离开麻醉恢复室超过 3 小时。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40. 术后高血压：<br>是麻醉清醒期较多见的并发症。<br>临床表现为<span class="blur-text">收缩</span>压比术前升高 <span class="blur-text">30%</span>以上；<br>有高血压病史者收缩压高于 <span class="blur-text">180</span> mmHg 和（或） 舒张压高于 <span class="blur-text">110</span> mmHg 。<br><br>术后高血压的常见原因有<br><span class="blur-text">疼痛</span>，<span class="blur-text">躁动不安</span>，<br><span class="blur-text">低氧血</span>症和（或） <span class="blur-text">高碳酸血</span>症，<br>颅内压<span class="blur-text">升高</span>，尿<span class="blur-text">潴留</span>，<br>高血压患者术前停用抗高血压药等。	40. 术后高血压：<br>是麻醉清醒期较多见的并发症。临床表现为收缩压比术前升高 30%以上；有高血压病史者收缩压高于 180 mmHg 和（或） 舒张压高于 110 mmHg 。术后高血压的常见原因有疼痛，躁动不安，低氧血症和（或） 高碳酸血症，颅内压升高，尿潴留，高血压患者术前停用抗高血压药等。</td>
+                            <td>40. 术后高血压：<br>是麻醉清醒期较多见的并发症。<br>临床表现为<span class="answer-text">收缩</span>压比术前升高 <span class="answer-text">30%</span>以上；<br>有高血压病史者收缩压高于 <span class="answer-text">180</span> mmHg 和（或） 舒张压高于 <span class="answer-text">110</span> mmHg 。<br><br>术后高血压的常见原因有<br><span class="answer-text">疼痛</span>，<span class="answer-text">躁动不安</span>，<br><span class="answer-text">低氧血</span>症和（或） <span class="answer-text">高碳酸血</span>症，<br>颅内压<span class="answer-text">升高</span>，尿<span class="answer-text">潴留</span>，<br>高血压患者术前停用抗高血压药等。	40. 术后高血压：<br>是麻醉清醒期较多见的并发症。临床表现为收缩压比术前升高 30%以上；有高血压病史者收缩压高于 180 mmHg 和（或） 舒张压高于 110 mmHg 。术后高血压的常见原因有疼痛，躁动不安，低氧血症和（或） 高碳酸血症，颅内压升高，尿潴留，高血压患者术前停用抗高血压药等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41. 脂肪栓塞综合征： <br>是指机体对体循环中脂肪的生理反应，<br>包括<span class="blur-text">呼吸</span>系统、<span class="blur-text">神经</span>系统、<span class="blur-text">血液</span>系统、<span class="blur-text">皮肤</span>方面的症状和体征，<br>典型表现是<span class="blur-text">瘀点性皮疹</span>。	41. 脂肪栓塞综合征： <br>是指机体对体循环中脂肪的生理反应，包括呼吸系统、神经系统、血液系统、皮肤方面的症状和体征，典型表现是瘀点性皮疹。</td>
+                            <td>41. 脂肪栓塞综合征： <br>是指机体对体循环中脂肪的生理反应，<br>包括<span class="answer-text">呼吸</span>系统、<span class="answer-text">神经</span>系统、<span class="answer-text">血液</span>系统、<span class="answer-text">皮肤</span>方面的症状和体征，<br>典型表现是<span class="answer-text">瘀点性皮疹</span>。	41. 脂肪栓塞综合征： <br>是指机体对体循环中脂肪的生理反应，包括呼吸系统、神经系统、血液系统、皮肤方面的症状和体征，典型表现是瘀点性皮疹。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42. 休克 ：<br>是由多种原因（如<span class="blur-text">创伤</span>，<span class="blur-text">感染</span>，<span class="blur-text">失血</span>，<span class="blur-text">过敏</span>等）<br>造成<span class="blur-text">组织有效流量</span>减少的急性<span class="blur-text">微循环障碍</span>，<br>导致细胞代谢及重要器官功能障碍的综合征。	42. 休克 ：<br>是由多种原因（如创伤，感染，失血，过敏等）造成组织有效流量减少的急性微循环障碍，导致细胞代谢及重要器官功能障碍的综合征。	leech</td>
+                            <td>42. 休克 ：<br>是由多种原因（如<span class="answer-text">创伤</span>，<span class="answer-text">感染</span>，<span class="answer-text">失血</span>，<span class="answer-text">过敏</span>等）<br>造成<span class="answer-text">组织有效流量</span>减少的急性<span class="answer-text">微循环障碍</span>，<br>导致细胞代谢及重要器官功能障碍的综合征。	42. 休克 ：<br>是由多种原因（如创伤，感染，失血，过敏等）造成组织有效流量减少的急性微循环障碍，导致细胞代谢及重要器官功能障碍的综合征。	leech</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43. 低血容量性休克 ：<br>因<span class="blur-text">全血</span>的丢失、<span class="blur-text">体液</span>的减少<br>引起<span class="blur-text">有效循环血容量</span>急剧减少，<br>最终导致血压的下降和微循环的障碍。<br><br>因大量失血引起的血管内容量减少而导致的休克，<br>称为<span class="blur-text">失血</span>性休克；<br>因严重创伤或烧伤后引起大量血管内体液的丢失及其他应激反应而导致的休克<br>称为<span class="blur-text">创伤</span>性休克。<br>失血和创伤引起的休克也属于低血容量性休克。	43. 低血容量性休克 ：<br>因全血的丢失、体液的减少引起有效循环血容量急剧减少，最终导致血压的下降和微循环的障碍，。因大量失血引起的血管内容量减少而导致的休克，称为失血性休克；因严重创伤或烧伤后引起大量血管内体液的丢失及其他应激反应而导致的休克称为创伤性休克。失血和创伤引起的休克也属于低血容量性休克。</td>
+                            <td>43. 低血容量性休克 ：<br>因<span class="answer-text">全血</span>的丢失、<span class="answer-text">体液</span>的减少<br>引起<span class="answer-text">有效循环血容量</span>急剧减少，<br>最终导致血压的下降和微循环的障碍。<br><br>因大量失血引起的血管内容量减少而导致的休克，<br>称为<span class="answer-text">失血</span>性休克；<br>因严重创伤或烧伤后引起大量血管内体液的丢失及其他应激反应而导致的休克<br>称为<span class="answer-text">创伤</span>性休克。<br>失血和创伤引起的休克也属于低血容量性休克。	43. 低血容量性休克 ：<br>因全血的丢失、体液的减少引起有效循环血容量急剧减少，最终导致血压的下降和微循环的障碍，。因大量失血引起的血管内容量减少而导致的休克，称为失血性休克；因严重创伤或烧伤后引起大量血管内体液的丢失及其他应激反应而导致的休克称为创伤性休克。失血和创伤引起的休克也属于低血容量性休克。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44. 感染性休克：<br>是指各种病原微生物及代谢产物（内毒素、外毒素）<br>所导致的全身<span class="blur-text">炎症性反应</span>综合征，<br>合并<span class="blur-text">血流动力学</span>紊乱，<span class="blur-text">组织灌注不足</span>的临床表现。	44. 感染性休克：<br>是指各种病原微生物及代谢产物（内毒素、外毒素）所导致的全身炎症性反应综合征，合并血流动力学紊乱，组织灌注不足的临床表现。</td>
+                            <td>44. 感染性休克：<br>是指各种病原微生物及代谢产物（内毒素、外毒素）<br>所导致的全身<span class="answer-text">炎症性反应</span>综合征，<br>合并<span class="answer-text">血流动力学</span>紊乱，<span class="answer-text">组织灌注不足</span>的临床表现。	44. 感染性休克：<br>是指各种病原微生物及代谢产物（内毒素、外毒素）所导致的全身炎症性反应综合征，合并血流动力学紊乱，组织灌注不足的临床表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45. 休克指数： <br>常用<span class="blur-text">脉率/收缩压</span>（ mmHg）来计算，<br>以判断休克的程度，<br>指数为 <span class="blur-text">1. 0～1. 5</span> 表示存在休克，<br>指数<span class="blur-text">＞2. 0</span> 表示存在严重休克。	45. 休克指数： <br>常用脉率/收缩压（ mmHg）来计算，以判断休克的程度，指数为 1. 0～1. 5 表示存在休克，指数＞2. 0 表示存在严重休克。</td>
+                            <td>45. 休克指数： <br>常用<span class="answer-text">脉率/收缩压</span>（ mmHg）来计算，<br>以判断休克的程度，<br>指数为 <span class="answer-text">1. 0～1. 5</span> 表示存在休克，<br>指数<span class="answer-text">＞2. 0</span> 表示存在严重休克。	45. 休克指数： <br>常用脉率/收缩压（ mmHg）来计算，以判断休克的程度，指数为 1. 0～1. 5 表示存在休克，指数＞2. 0 表示存在严重休克。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46. MODS： <br><span class="blur-text">多关器官功能障碍</span>综合征，<br>指严重<span class="blur-text">创伤</span>、<span class="blur-text">感染</span>和<span class="blur-text">休克</span>时，<br>原无器官功能障碍的患者同时或在短时间内（ <span class="blur-text">24</span> 小时后） <br>相继出现<span class="blur-text">两个或两个</span>以上器官系统的功能障碍，<br>以致各器官系统功能必须靠临床干预才能维持的综合征。	46. MODS： <br>多关器官功能障碍综合征，指严重创伤、感染和休克时，原无器官功能障碍的患者同时或在短时间内（ 24 小时后） 相继出现两个或两个以上器官系统的功能障碍，以致各器官系统功能必须靠临床干预才能维持的综合征。</td>
+                            <td>46. MODS： <br><span class="answer-text">多关器官功能障碍</span>综合征，<br>指严重<span class="answer-text">创伤</span>、<span class="answer-text">感染</span>和<span class="answer-text">休克</span>时，<br>原无器官功能障碍的患者同时或在短时间内（ <span class="answer-text">24</span> 小时后） <br>相继出现<span class="answer-text">两个或两个</span>以上器官系统的功能障碍，<br>以致各器官系统功能必须靠临床干预才能维持的综合征。	46. MODS： <br>多关器官功能障碍综合征，指严重创伤、感染和休克时，原无器官功能障碍的患者同时或在短时间内（ 24 小时后） 相继出现两个或两个以上器官系统的功能障碍，以致各器官系统功能必须靠临床干预才能维持的综合征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47. CPCR： <br><span class="blur-text">心肺脑复苏</span>，是针对心脏骤停而采取的<br>尽快建立<span class="blur-text">有效循环</span>、提高<span class="blur-text">心输出量</span>的一系列措施，<br>包括<span class="blur-text">胸外按压</span>、<span class="blur-text">开放气道</span>、<span class="blur-text">人工通气</span>和<span class="blur-text">除颤</span>。<br><br>CPCR 分为三个阶段： <br><span class="blur-text">基本</span>生命支持、<span class="blur-text">高级</span>生命支持和<span class="blur-text">复苏后</span>治疗。	47. CPCR： <br>心肺脑复苏，是针对心脏骤停而采取的尽快建立有效循环、提高心输出量的一系列措施，包括胸外按压、开放气道、人工通气和除颤。CPCR 分为三个阶段： <br>基本生命支持、高级生命支持和复苏后治疗。</td>
+                            <td>47. CPCR： <br><span class="answer-text">心肺脑复苏</span>，是针对心脏骤停而采取的<br>尽快建立<span class="answer-text">有效循环</span>、提高<span class="answer-text">心输出量</span>的一系列措施，<br>包括<span class="answer-text">胸外按压</span>、<span class="answer-text">开放气道</span>、<span class="answer-text">人工通气</span>和<span class="answer-text">除颤</span>。<br><br>CPCR 分为三个阶段： <br><span class="answer-text">基本</span>生命支持、<span class="answer-text">高级</span>生命支持和<span class="answer-text">复苏后</span>治疗。	47. CPCR： <br>心肺脑复苏，是针对心脏骤停而采取的尽快建立有效循环、提高心输出量的一系列措施，包括胸外按压、开放气道、人工通气和除颤。CPCR 分为三个阶段： <br>基本生命支持、高级生命支持和复苏后治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48. BLS（basic life support）： <br><span class="blur-text">基本生命支持</span>，<br>指在事故或发病现场的应急抢救阶段，<br>主要指<span class="blur-text">心肺复苏</span>，是挽救病人生命的基础。<br><br>成人 BLS 的基本内容<br>包括识别心搏骤停和启动紧急医疗服务系统，<br>即高质量<span class="blur-text">心肺复苏</span>、快速<span class="blur-text">除颤</span>。	48. BLS（basic life support）： <br>基本生命支持，指在事故或发病现场的应急抢救阶段，主要指心肺复苏，是挽救病人生命的基础。成人 BLS 的基本内容包括识别心搏骤停和启动紧急医疗服务系统，即高质量心肺复苏、快速除颤。</td>
+                            <td>48. BLS（basic life support）： <br><span class="answer-text">基本生命支持</span>，<br>指在事故或发病现场的应急抢救阶段，<br>主要指<span class="answer-text">心肺复苏</span>，是挽救病人生命的基础。<br><br>成人 BLS 的基本内容<br>包括识别心搏骤停和启动紧急医疗服务系统，<br>即高质量<span class="answer-text">心肺复苏</span>、快速<span class="answer-text">除颤</span>。	48. BLS（basic life support）： <br>基本生命支持，指在事故或发病现场的应急抢救阶段，主要指心肺复苏，是挽救病人生命的基础。成人 BLS 的基本内容包括识别心搏骤停和启动紧急医疗服务系统，即高质量心肺复苏、快速除颤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49. 高级生命支持：<br>指在具有较好的技术和设备的条件下对病人进行治疗，在生存链中起到重要作用。<br>目的是防止<span class="blur-text">心脏骤停</span>、增加<span class="blur-text">心输出量</span>以恢复自主循环，<br>包括<span class="blur-text">气道管理、通气支持</span>和治疗<span class="blur-text">心动过缓及心动过速</span>。	49. 高级生命支持：<br>指在具有较好的技术和设备的条件下对病人进行治疗，在生存链中起到重要作用。目的是防止心脏骤停、增加心输出量以回恢复自主循环，包括气道管理、通气支持和治疗心动过缓及心动过速。</td>
+                            <td>49. 高级生命支持：<br>指在具有较好的技术和设备的条件下对病人进行治疗，在生存链中起到重要作用。<br>目的是防止<span class="answer-text">心脏骤停</span>、增加<span class="answer-text">心输出量</span>以恢复自主循环，<br>包括<span class="answer-text">气道管理、通气支持</span>和治疗<span class="answer-text">心动过缓及心动过速</span>。	49. 高级生命支持：<br>指在具有较好的技术和设备的条件下对病人进行治疗，在生存链中起到重要作用。目的是防止心脏骤停、增加心输出量以回恢复自主循环，包括气道管理、通气支持和治疗心动过缓及心动过速。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50. PCAC（ post-cardiac arrest care）： <br><span class="blur-text">复苏后治疗</span>，<br>是在自主循环恢复稳定的基础上，<br>对引起心搏骤停的<span class="blur-text">病因</span>及心搏骤停后的<span class="blur-text">并发症</span>进行相应的治疗。	50. PCAC（ post-cardiac arrest care）： <br>复苏后治疗，是在自主循环恢复稳定的基础上，对引起心搏骤停的病因及心搏骤停后的并发症进行相应的治疗。</td>
+                            <td>50. PCAC（ post-cardiac arrest care）： <br><span class="answer-text">复苏后治疗</span>，<br>是在自主循环恢复稳定的基础上，<br>对引起心搏骤停的<span class="answer-text">病因</span>及心搏骤停后的<span class="answer-text">并发症</span>进行相应的治疗。	50. PCAC（ post-cardiac arrest care）： <br>复苏后治疗，是在自主循环恢复稳定的基础上，对引起心搏骤停的病因及心搏骤停后的并发症进行相应的治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51. ECC：<br><span class="blur-text">胸外心脏按压</span>，<br>是指连续而有节律的施压于<span class="blur-text">胸骨下部</span>，<br>通过提高<span class="blur-text">胸膜腔内压</span>或直接<span class="blur-text">按压心脏</span>而促使血液向前流动。	51. ECC：<br>胸外心脏按压，是指连续而有节律的施压于胸骨下部，通过提高胸膜腔内压或直接按压心脏而促使血液向前流动。</td>
+                            <td>51. ECC：<br><span class="answer-text">胸外心脏按压</span>，<br>是指连续而有节律的施压于<span class="answer-text">胸骨下部</span>，<br>通过提高<span class="answer-text">胸膜腔内压</span>或直接<span class="answer-text">按压心脏</span>而促使血液向前流动。	51. ECC：<br>胸外心脏按压，是指连续而有节律的施压于胸骨下部，通过提高胸膜腔内压或直接按压心脏而促使血液向前流动。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52. 疼痛：<br>一种与<span class="blur-text">组织损伤</span>或潜在的组织损伤相关的<br><span class="blur-text">感觉</span>、<span class="blur-text">情感</span>、<span class="blur-text">认知</span>和<span class="blur-text">社会维度</span>的痛苦体验。	52. 疼痛：<br>一种与组织损伤或潜在的组织损伤相关的感觉、情感、认知和社会维度的痛苦体验。</td>
+                            <td>52. 疼痛：<br>一种与<span class="answer-text">组织损伤</span>或潜在的组织损伤相关的<br><span class="answer-text">感觉</span>、<span class="answer-text">情感</span>、<span class="answer-text">认知</span>和<span class="answer-text">社会维度</span>的痛苦体验。	52. 疼痛：<br>一种与组织损伤或潜在的组织损伤相关的感觉、情感、认知和社会维度的痛苦体验。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53. <span class="blur-text">病人自控镇痛</span><br>（ PCA）： <br>病人可自行按压 PCA 装置的给药键，<br>按<span class="blur-text">设定的计量</span>注入镇痛药，从而达到镇痛效果。	53. 病人自控镇痛（ PCA）： <br>病人可自行按压 PCA 装置的给药键，按设定的计量注入镇痛药，从而达到镇痛效果。</td>
+                            <td>53. <span class="answer-text">病人自控镇痛</span><br>（ PCA）： <br>病人可自行按压 PCA 装置的给药键，<br>按<span class="answer-text">设定的计量</span>注入镇痛药，从而达到镇痛效果。	53. 病人自控镇痛（ PCA）： <br>病人可自行按压 PCA 装置的给药键，按设定的计量注入镇痛药，从而达到镇痛效果。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54. VAS：<br><span class="blur-text">视觉模拟评分</span>法，<br>是一种简便、有效测量和评定疼痛强度的方法。<br>在一张白纸上画一条长 10 cm 的直线，<br>左侧起点表示“ 无痛 ” 为 0 分，右侧终点表示“剧烈疼痛 ”，为 10 分。<br><br>病人根据自己所感受疼痛程度，在直线上相应部位作标记，<br>从 <span class="blur-text">无痛 </span>端至<span class="blur-text">记号</span>之间的距离即为痛觉评分分数。<br>VAS 是目前最常用的<span class="blur-text">疼痛强度</span>评估方法。	54. VAS：<br>视觉模拟评分法，是一种简便、有效测量和评定疼痛强度的方法。在一张白纸上画一条长 10 cm 的直线，左侧起点表示“ 无痛 ” 为 0 分，右侧终点表示“剧烈疼痛 ”，为 10 分。病人根据自己所感受疼痛程度，在直线上相应部位作标记，从“ 无痛 ”端至记号之间的距离即为痛觉评分分数。VAS 是目前最常用的疼痛强度评估方法。</td>
+                            <td>54. VAS：<br><span class="answer-text">视觉模拟评分</span>法，<br>是一种简便、有效测量和评定疼痛强度的方法。<br>在一张白纸上画一条长 10 cm 的直线，<br>左侧起点表示“ 无痛 ” 为 0 分，右侧终点表示“剧烈疼痛 ”，为 10 分。<br><br>病人根据自己所感受疼痛程度，在直线上相应部位作标记，<br>从 <span class="answer-text">无痛 </span>端至<span class="answer-text">记号</span>之间的距离即为痛觉评分分数。<br>VAS 是目前最常用的<span class="answer-text">疼痛强度</span>评估方法。	54. VAS：<br>视觉模拟评分法，是一种简便、有效测量和评定疼痛强度的方法。在一张白纸上画一条长 10 cm 的直线，左侧起点表示“ 无痛 ” 为 0 分，右侧终点表示“剧烈疼痛 ”，为 10 分。病人根据自己所感受疼痛程度，在直线上相应部位作标记，从“ 无痛 ”端至记号之间的距离即为痛觉评分分数。VAS 是目前最常用的疼痛强度评估方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55. VRS ：<br><span class="blur-text">语言描述评分</span>法，<br>是根据病人对疼痛的主诉，将疼痛程度分为：<br>①无痛；<br>②轻度疼痛：有疼痛但可以忍受，对生活和睡眠无干扰；<br>③中度疼痛：疼痛不能忍受，对<span class="blur-text">睡眠</span>有干扰，要求服用镇痛药物；<br>④重度疼痛：疼痛剧烈，不能忍受，需服用镇痛药物，<br>对睡眠有严重干扰，可伴<span class="blur-text">自主神经紊乱</span>或<span class="blur-text">被动体位</span>。	55. VRS ：<br>语言描述评分法，是根据病人对疼痛的主诉，将疼痛程度分为：①无痛；②轻度疼痛：有疼痛但可以忍受，对生活和睡眠无干扰；③中度疼痛：疼痛不能忍受，对睡眠有干扰，要求服用镇痛药物；④重度疼痛：疼痛剧烈，不能忍受，需服用镇痛药物，对睡眠有严重干扰，可伴自主神经紊乱或被动体位。</td>
+                            <td>55. VRS ：<br><span class="answer-text">语言描述评分</span>法，<br>是根据病人对疼痛的主诉，将疼痛程度分为：<br>①无痛；<br>②轻度疼痛：有疼痛但可以忍受，对生活和睡眠无干扰；<br>③中度疼痛：疼痛不能忍受，对<span class="answer-text">睡眠</span>有干扰，要求服用镇痛药物；<br>④重度疼痛：疼痛剧烈，不能忍受，需服用镇痛药物，<br>对睡眠有严重干扰，可伴<span class="answer-text">自主神经紊乱</span>或<span class="answer-text">被动体位</span>。	55. VRS ：<br>语言描述评分法，是根据病人对疼痛的主诉，将疼痛程度分为：①无痛；②轻度疼痛：有疼痛但可以忍受，对生活和睡眠无干扰；③中度疼痛：疼痛不能忍受，对睡眠有干扰，要求服用镇痛药物；④重度疼痛：疼痛剧烈，不能忍受，需服用镇痛药物，对睡眠有严重干扰，可伴自主神经紊乱或被动体位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56. NRS： <br><span class="blur-text">数字评分</span>法，<br>使用“ <span class="blur-text">疼痛程度数字评估</span>量表 ”对病人疼痛程度进行评估。<br>用 0~10 这 11 个数字表示疼痛强度，0 表示无痛，10 表示最痛。<br>被测者根据个人疼痛感受在其中一个数字作记号。<br>按照疼痛对应的数字将疼痛程度分为 ：<br>轻度疼痛（ 1～3），中度疼痛（ 4～6），重度疼痛（ 7～10）。	56. NRS： <br>数字评分法，使用“ 疼痛程度数字评估量表 ”对病人疼痛程度进行评估。用 0~10 这 11 个数字表示疼痛强度，0 表示无痛，10 表示最痛。被测者根据个人疼痛感受在其中一个数字作记号。按照疼痛对应的数字将疼痛程度分为 ：轻度疼痛（ 1～3），中度疼痛（ 4～6），重度疼痛（ 7～10）。</td>
+                            <td>56. NRS： <br><span class="answer-text">数字评分</span>法，<br>使用“ <span class="answer-text">疼痛程度数字评估</span>量表 ”对病人疼痛程度进行评估。<br>用 0~10 这 11 个数字表示疼痛强度，0 表示无痛，10 表示最痛。<br>被测者根据个人疼痛感受在其中一个数字作记号。<br>按照疼痛对应的数字将疼痛程度分为 ：<br>轻度疼痛（ 1～3），中度疼痛（ 4～6），重度疼痛（ 7～10）。	56. NRS： <br>数字评分法，使用“ 疼痛程度数字评估量表 ”对病人疼痛程度进行评估。用 0~10 这 11 个数字表示疼痛强度，0 表示无痛，10 表示最痛。被测者根据个人疼痛感受在其中一个数字作记号。按照疼痛对应的数字将疼痛程度分为 ：轻度疼痛（ 1～3），中度疼痛（ 4～6），重度疼痛（ 7～10）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57. <span class="blur-text">面部量表</span><br>（Wong-Baker 脸） ：<br>由医护人员根据病人疼痛时的面部表情状态，<br>对照“ 面部表情疼痛评分量表 ”进行疼痛评估，适用于<span class="blur-text">表达困难</span>的病人，<br>如儿童、老年人以及存在语言或文化差异或其他交流障碍的病人。	57. 面部量表（Wong-Baker 脸） ：<br>由医护人员根据病人疼痛时的面部表情状态，对照“ 面部表情疼痛评分量表 ”进行疼痛评估，适用于表达困难的病人，如儿童、老年人以及存在语言或文化差异或其他交流障碍的病人。</td>
+                            <td>57. <span class="answer-text">面部量表</span><br>（Wong-Baker 脸） ：<br>由医护人员根据病人疼痛时的面部表情状态，<br>对照“ 面部表情疼痛评分量表 ”进行疼痛评估，适用于<span class="answer-text">表达困难</span>的病人，<br>如儿童、老年人以及存在语言或文化差异或其他交流障碍的病人。	57. 面部量表（Wong-Baker 脸） ：<br>由医护人员根据病人疼痛时的面部表情状态，对照“ 面部表情疼痛评分量表 ”进行疼痛评估，适用于表达困难的病人，如儿童、老年人以及存在语言或文化差异或其他交流障碍的病人。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.  围术期多模式镇痛：<br>是指在整个围术期联合应用<br>不同作用机制的<span class="blur-text">镇痛药物</span>、<span class="blur-text">辅助药物</span>和<span class="blur-text">镇痛技术</span>，<br>以应对不同机制产生的<span class="blur-text">术后镇痛</span>，<br>达到最佳的减轻术后疼痛的疗效，降低镇痛相关并发症的发生。	58.  围术期多模式镇痛：<br>是指在整个围术期联合应用不同作用机制的镇痛药物、辅助药物和镇痛技术，以应对不同机制产生的术后镇痛，达到最佳的减轻术后疼痛的疗效，降低镇痛相关并发症的发生。</td>
+                            <td>58.  围术期多模式镇痛：<br>是指在整个围术期联合应用<br>不同作用机制的<span class="answer-text">镇痛药物</span>、<span class="answer-text">辅助药物</span>和<span class="answer-text">镇痛技术</span>，<br>以应对不同机制产生的<span class="answer-text">术后镇痛</span>，<br>达到最佳的减轻术后疼痛的疗效，降低镇痛相关并发症的发生。	58.  围术期多模式镇痛：<br>是指在整个围术期联合应用不同作用机制的镇痛药物、辅助药物和镇痛技术，以应对不同机制产生的术后镇痛，达到最佳的减轻术后疼痛的疗效，降低镇痛相关并发症的发生。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

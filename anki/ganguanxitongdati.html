@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">感官系统大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>结膜炎的症状体征及治疗原则</strong><br>症状：<span class="blur-text">异物感</span>、<span class="blur-text">烧灼感</span>、<span class="blur-text">痒</span>、<span class="blur-text">畏光</span>、<span class="blur-text">流泪</span><br>体征：<span class="blur-text">结膜充血</span>、<span class="blur-text">水肿</span>、<span class="blur-text">渗出物</span>、<span class="blur-text">乳头增生</span>、<span class="blur-text">滤泡</span>、<span class="blur-text">真膜和假膜</span>、<span class="blur-text">肉芽肿</span>、<span class="blur-text">假性上睑下垂</span>、<span class="blur-text">耳前淋巴结肿大</span>等。<br>治疗原则：针对<span class="blur-text">病因治疗</span>，<span class="blur-text">局部给药</span>为主，必要时<span class="blur-text">全身用药</span>，急性期忌<span class="blur-text">包扎患眼</span>。①<span class="blur-text">滴眼剂点眼</span> ②<span class="blur-text">眼膏涂眼</span> ③<span class="blur-text">冲洗结膜囊</span> ④<span class="blur-text">全身治疗</span></td>
+                            <td>1.. <strong>结膜炎的症状体征及治疗原则</strong><br>症状：<span class="answer-text">异物感</span>、<span class="answer-text">烧灼感</span>、<span class="answer-text">痒</span>、<span class="answer-text">畏光</span>、<span class="answer-text">流泪</span><br>体征：<span class="answer-text">结膜充血</span>、<span class="answer-text">水肿</span>、<span class="answer-text">渗出物</span>、<span class="answer-text">乳头增生</span>、<span class="answer-text">滤泡</span>、<span class="answer-text">真膜和假膜</span>、<span class="answer-text">肉芽肿</span>、<span class="answer-text">假性上睑下垂</span>、<span class="answer-text">耳前淋巴结肿大</span>等。<br>治疗原则：针对<span class="answer-text">病因治疗</span>，<span class="answer-text">局部给药</span>为主，必要时<span class="answer-text">全身用药</span>，急性期忌<span class="answer-text">包扎患眼</span>。①<span class="answer-text">滴眼剂点眼</span> ②<span class="answer-text">眼膏涂眼</span> ③<span class="answer-text">冲洗结膜囊</span> ④<span class="answer-text">全身治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>结膜充血和睫状充血的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>2.. <strong>结膜充血和睫状充血的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. A <strong>急性闭角型青光眼急性发作期的症状体征及治疗（症状）</strong><br>（1）症状：<span class="blur-text">视力下降</span>，视力骤降至<span class="blur-text">光感或全盲</span>，<span class="blur-text">虹视</span>、<span class="blur-text">畏光</span>、<span class="blur-text">流泪</span>、<span class="blur-text">恶心</span>、<span class="blur-text">呕吐</span>等</td>
+                            <td>3.. A <strong>急性闭角型青光眼急性发作期的症状体征及治疗（症状）</strong><br>（1）症状：<span class="answer-text">视力下降</span>，视力骤降至<span class="answer-text">光感或全盲</span>，<span class="answer-text">虹视</span>、<span class="answer-text">畏光</span>、<span class="answer-text">流泪</span>、<span class="answer-text">恶心</span>、<span class="answer-text">呕吐</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3.. B <strong>急性闭角型青光眼急性发作期的症状体征及治疗（体征）</strong><br>（2）体征：①<span class="blur-text">红</span>：<span class="blur-text">混合性充血</span>；②<span class="blur-text">肿</span>：<span class="blur-text">角膜雾状或毛玻璃状</span>，虹视，上皮发生水泡，伴有<span class="blur-text">角膜后色素性KP</span>；③<span class="blur-text">高</span>：<span class="blur-text">眼压升高</span>，眼压一般在<span class="blur-text">50mmHg</span>，也可高达<span class="blur-text">80mmHg</span>；④<span class="blur-text">大</span>：<span class="blur-text">瞳孔散大</span>，呈<span class="blur-text">竖椭圆形</span>，对光反射消失；⑤<span class="blur-text">浅</span>：<span class="blur-text">前房浅</span>，<span class="blur-text">房角窄</span>；⑥<span class="blur-text">虹</span>：<span class="blur-text">虹膜节段性萎缩</span>；⑦<span class="blur-text">斑</span>：<span class="blur-text">晶状体前囊下可见青光眼斑</span></td>
+                            <td>3.. B <strong>急性闭角型青光眼急性发作期的症状体征及治疗（体征）</strong><br>（2）体征：①<span class="answer-text">红</span>：<span class="answer-text">混合性充血</span>；②<span class="answer-text">肿</span>：<span class="answer-text">角膜雾状或毛玻璃状</span>，虹视，上皮发生水泡，伴有<span class="answer-text">角膜后色素性KP</span>；③<span class="answer-text">高</span>：<span class="answer-text">眼压升高</span>，眼压一般在<span class="answer-text">50mmHg</span>，也可高达<span class="answer-text">80mmHg</span>；④<span class="answer-text">大</span>：<span class="answer-text">瞳孔散大</span>，呈<span class="answer-text">竖椭圆形</span>，对光反射消失；⑤<span class="answer-text">浅</span>：<span class="answer-text">前房浅</span>，<span class="answer-text">房角窄</span>；⑥<span class="answer-text">虹</span>：<span class="answer-text">虹膜节段性萎缩</span>；⑦<span class="answer-text">斑</span>：<span class="answer-text">晶状体前囊下可见青光眼斑</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>3.. C <strong>急性闭角型青光眼急性发作期的症状体征及治疗（治疗）</strong><br>（3）治疗原则：<span class="blur-text">开放房角</span>，<span class="blur-text">解除瞳孔阻滞</span>，<span class="blur-text">降低眼压</span>，防止视神经进一步损害。<br>①药物治疗：促进房水引流：<span class="blur-text">缩瞳剂</span>，<span class="blur-text">毛果芸香碱</span>；减少房水生成：<span class="blur-text">碳酸酐酶抑制剂</span>，<span class="blur-text">醋甲唑胺</span>、<span class="blur-text">布林佐胺</span>；<span class="blur-text">β受体阻断剂</span>，<span class="blur-text">噻吗洛尔</span>；<span class="blur-text">高渗脱水剂</span>：<span class="blur-text">甘油</span>、<span class="blur-text">甘露醇</span><br>②辅助治疗：全身症状严重者，可给予<span class="blur-text">止吐</span>、<span class="blur-text">镇痛</span><br>③激光、手术治疗：切除或切开<span class="blur-text">周边虹膜</span>，解除瞳孔阻滞；<span class="blur-text">滤过性手术</span>，建立房水外引流通道；<span class="blur-text">睫状体冷凝术</span>，减少房水生成；<span class="blur-text">小梁网切开术</span>，解除小梁网阻塞</td>
+                            <td>3.. C <strong>急性闭角型青光眼急性发作期的症状体征及治疗（治疗）</strong><br>（3）治疗原则：<span class="answer-text">开放房角</span>，<span class="answer-text">解除瞳孔阻滞</span>，<span class="answer-text">降低眼压</span>，防止视神经进一步损害。<br>①药物治疗：促进房水引流：<span class="answer-text">缩瞳剂</span>，<span class="answer-text">毛果芸香碱</span>；减少房水生成：<span class="answer-text">碳酸酐酶抑制剂</span>，<span class="answer-text">醋甲唑胺</span>、<span class="answer-text">布林佐胺</span>；<span class="answer-text">β受体阻断剂</span>，<span class="answer-text">噻吗洛尔</span>；<span class="answer-text">高渗脱水剂</span>：<span class="answer-text">甘油</span>、<span class="answer-text">甘露醇</span><br>②辅助治疗：全身症状严重者，可给予<span class="answer-text">止吐</span>、<span class="answer-text">镇痛</span><br>③激光、手术治疗：切除或切开<span class="answer-text">周边虹膜</span>，解除瞳孔阻滞；<span class="answer-text">滤过性手术</span>，建立房水外引流通道；<span class="answer-text">睫状体冷凝术</span>，减少房水生成；<span class="answer-text">小梁网切开术</span>，解除小梁网阻塞</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>4.. <strong>急闭青光眼、急性虹睫炎、急性结膜炎鉴别诊断</strong><br><span class="blur-text">图略</span></td>
+                            <td>4.. <strong>急闭青光眼、急性虹睫炎、急性结膜炎鉴别诊断</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>5.. A <strong>糖尿病视网膜病变的分型与分级（单纯型）</strong><br>（1）单纯型（<span class="blur-text">NPDR</span>，<span class="blur-text">非增殖型</span>）<br>Ⅰ：仅有<span class="blur-text">毛细血管瘤样膨出</span>改变<br>Ⅱ：可合并<span class="blur-text">视网膜出血</span>和/或<span class="blur-text">棉绒斑</span><br>Ⅲ：每个象限视网膜出血点≥<span class="blur-text">20个</span>，或至少<span class="blur-text">2个象限</span>已有明确的<span class="blur-text">静脉串珠样改变</span>，或至少1个象限<span class="blur-text">视网膜内微血管异常</span></td>
+                            <td>5.. A <strong>糖尿病视网膜病变的分型与分级（单纯型）</strong><br>（1）单纯型（<span class="answer-text">NPDR</span>，<span class="answer-text">非增殖型</span>）<br>Ⅰ：仅有<span class="answer-text">毛细血管瘤样膨出</span>改变<br>Ⅱ：可合并<span class="answer-text">视网膜出血</span>和/或<span class="answer-text">棉绒斑</span><br>Ⅲ：每个象限视网膜出血点≥<span class="answer-text">20个</span>，或至少<span class="answer-text">2个象限</span>已有明确的<span class="answer-text">静脉串珠样改变</span>，或至少1个象限<span class="answer-text">视网膜内微血管异常</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>5.. B <strong>糖尿病视网膜病变的分型与分级（增殖型）</strong><br>（2）增殖型（<span class="blur-text">PDR</span>）<br>Ⅳ：出现<span class="blur-text">视网膜或视乳头新生血管</span>，或伴有<span class="blur-text">视网膜前出血</span>或<span class="blur-text">玻璃体出血</span><br>Ⅴ：新生血管，出现<span class="blur-text">纤维膜</span>，可伴有视网膜前出血或玻璃体出血<br>Ⅵ：新生血管，<span class="blur-text">牵拉性视网膜脱离</span>，合并纤维膜，可合并或不合并玻璃体积血，也包括<span class="blur-text">虹膜和房角的新生血管</span></td>
+                            <td>5.. B <strong>糖尿病视网膜病变的分型与分级（增殖型）</strong><br>（2）增殖型（<span class="answer-text">PDR</span>）<br>Ⅳ：出现<span class="answer-text">视网膜或视乳头新生血管</span>，或伴有<span class="answer-text">视网膜前出血</span>或<span class="answer-text">玻璃体出血</span><br>Ⅴ：新生血管，出现<span class="answer-text">纤维膜</span>，可伴有视网膜前出血或玻璃体出血<br>Ⅵ：新生血管，<span class="answer-text">牵拉性视网膜脱离</span>，合并纤维膜，可合并或不合并玻璃体积血，也包括<span class="answer-text">虹膜和房角的新生血管</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>6.. A <strong>视网膜中央动脉阻塞的临床表现及治疗（病因与临床表现）</strong><br>（1）病因：<span class="blur-text">动脉粥样硬化</span>、<span class="blur-text">视网膜中央动脉痉挛</span>、<span class="blur-text">视网膜中央动脉周围炎</span>、<span class="blur-text">CRA外部压迫</span>、<span class="blur-text">凝血病</span>及<span class="blur-text">栓子栓塞</span>。<br>（2）主要临床表现：①患眼视力突发<span class="blur-text">无痛性丧失</span>，部分病例有<span class="blur-text">阵发性黑朦</span>史。<span class="blur-text">90%</span>的CRAO眼初诊视力在<span class="blur-text">指数至光感</span>之间。②患眼瞳孔<span class="blur-text">散大</span>，直接对光反射<span class="blur-text">极度迟缓</span>，间接对光反射<span class="blur-text">存在</span>。③<span class="blur-text">中心凹呈樱桃红斑</span>为特征性改变。④视网膜动、静脉<span class="blur-text">变细</span>，严重阻塞病例，视网膜动脉和静脉均可见<span class="blur-text">阶段性血柱</span>。⑤数周后，视网膜水肿混浊消退，中心凹樱桃红斑也消失，遗留<span class="blur-text">苍白色视盘</span>和<span class="blur-text">细窄的视网膜动脉</span>。</td>
+                            <td>6.. A <strong>视网膜中央动脉阻塞的临床表现及治疗（病因与临床表现）</strong><br>（1）病因：<span class="answer-text">动脉粥样硬化</span>、<span class="answer-text">视网膜中央动脉痉挛</span>、<span class="answer-text">视网膜中央动脉周围炎</span>、<span class="answer-text">CRA外部压迫</span>、<span class="answer-text">凝血病</span>及<span class="answer-text">栓子栓塞</span>。<br>（2）主要临床表现：①患眼视力突发<span class="answer-text">无痛性丧失</span>，部分病例有<span class="answer-text">阵发性黑朦</span>史。<span class="answer-text">90%</span>的CRAO眼初诊视力在<span class="answer-text">指数至光感</span>之间。②患眼瞳孔<span class="answer-text">散大</span>，直接对光反射<span class="answer-text">极度迟缓</span>，间接对光反射<span class="answer-text">存在</span>。③<span class="answer-text">中心凹呈樱桃红斑</span>为特征性改变。④视网膜动、静脉<span class="answer-text">变细</span>，严重阻塞病例，视网膜动脉和静脉均可见<span class="answer-text">阶段性血柱</span>。⑤数周后，视网膜水肿混浊消退，中心凹樱桃红斑也消失，遗留<span class="answer-text">苍白色视盘</span>和<span class="answer-text">细窄的视网膜动脉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>6.. B <strong>视网膜中央动脉阻塞的临床表现及治疗（治疗）</strong><br>（3）治疗：应及早进行<span class="blur-text">抢救性治疗</span><br>①降低眼压的措施，如<span class="blur-text">按摩眼球</span>、<span class="blur-text">前房穿刺术</span>、口服<span class="blur-text">乙酰唑胺</span>等，使栓子向末支移动；②吸入<span class="blur-text">95%氧及5%二氧化碳</span>混合气体；③球后注射或全身应用<span class="blur-text">血管扩张剂</span>，如舌下含服<span class="blur-text">亚硝酸异戊酯</span>或<span class="blur-text">硝酸甘油</span>含片；④全身应用<span class="blur-text">抗凝剂</span>，如口服<span class="blur-text">阿司匹林</span>；⑤如有<span class="blur-text">巨细胞动脉炎</span>，应全身给予<span class="blur-text">皮质类固醇激素</span>治疗，预防另一只眼受累。</td>
+                            <td>6.. B <strong>视网膜中央动脉阻塞的临床表现及治疗（治疗）</strong><br>（3）治疗：应及早进行<span class="answer-text">抢救性治疗</span><br>①降低眼压的措施，如<span class="answer-text">按摩眼球</span>、<span class="answer-text">前房穿刺术</span>、口服<span class="answer-text">乙酰唑胺</span>等，使栓子向末支移动；②吸入<span class="answer-text">95%氧及5%二氧化碳</span>混合气体；③球后注射或全身应用<span class="answer-text">血管扩张剂</span>，如舌下含服<span class="answer-text">亚硝酸异戊酯</span>或<span class="answer-text">硝酸甘油</span>含片；④全身应用<span class="answer-text">抗凝剂</span>，如口服<span class="answer-text">阿司匹林</span>；⑤如有<span class="answer-text">巨细胞动脉炎</span>，应全身给予<span class="answer-text">皮质类固醇激素</span>治疗，预防另一只眼受累。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>7.. <strong>视网膜中央静脉阻塞的临床表现</strong><br>视力多有明显下降，眼底的特征是各象限的<span class="blur-text">视网膜静脉扩张</span>、<span class="blur-text">迂曲</span>，<span class="blur-text">视网膜内出血</span>、<span class="blur-text">水肿</span>，<span class="blur-text">视盘水肿</span>。<br>（1）缺血型：眼底出血、水肿、视力<span class="blur-text">严重损害</span>；预后<span class="blur-text">差</span>；<span class="blur-text">视网膜及视乳头新生血管</span>；<span class="blur-text">增殖性玻璃体视网膜病变</span>，<span class="blur-text">网脱</span>、<span class="blur-text">新生血管性青光眼</span><br>（2）非缺血型：病变较缺血型<span class="blur-text">轻</span>、预后<span class="blur-text">较好</span></td>
+                            <td>7.. <strong>视网膜中央静脉阻塞的临床表现</strong><br>视力多有明显下降，眼底的特征是各象限的<span class="answer-text">视网膜静脉扩张</span>、<span class="answer-text">迂曲</span>，<span class="answer-text">视网膜内出血</span>、<span class="answer-text">水肿</span>，<span class="answer-text">视盘水肿</span>。<br>（1）缺血型：眼底出血、水肿、视力<span class="answer-text">严重损害</span>；预后<span class="answer-text">差</span>；<span class="answer-text">视网膜及视乳头新生血管</span>；<span class="answer-text">增殖性玻璃体视网膜病变</span>，<span class="answer-text">网脱</span>、<span class="answer-text">新生血管性青光眼</span><br>（2）非缺血型：病变较缺血型<span class="answer-text">轻</span>、预后<span class="answer-text">较好</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>8.. <strong>房水循环途径</strong><br>（1）房水在<span class="blur-text">睫状体</span>产生，进入<span class="blur-text">后房</span>，越过<span class="blur-text">瞳孔</span>到达<span class="blur-text">前房</span>，再从前房角的<span class="blur-text">小梁网</span>进入<span class="blur-text">Schlemm管</span>，然后通过<span class="blur-text">集液管</span>和<span class="blur-text">房水静脉</span>，汇入巩膜表面的<span class="blur-text">睫状前静脉</span>，回流到血循环；<br>（2）少部分从房角的睫状带经由<span class="blur-text">葡萄膜巩膜途径</span>引流（约<span class="blur-text">10-20%</span>）；<br>（3）还有少部分通过<span class="blur-text">虹膜表面隐窝</span>吸收（<span class="blur-text">5%</span>）。</td>
+                            <td>8.. <strong>房水循环途径</strong><br>（1）房水在<span class="answer-text">睫状体</span>产生，进入<span class="answer-text">后房</span>，越过<span class="answer-text">瞳孔</span>到达<span class="answer-text">前房</span>，再从前房角的<span class="answer-text">小梁网</span>进入<span class="answer-text">Schlemm管</span>，然后通过<span class="answer-text">集液管</span>和<span class="answer-text">房水静脉</span>，汇入巩膜表面的<span class="answer-text">睫状前静脉</span>，回流到血循环；<br>（2）少部分从房角的睫状带经由<span class="answer-text">葡萄膜巩膜途径</span>引流（约<span class="answer-text">10-20%</span>）；<br>（3）还有少部分通过<span class="answer-text">虹膜表面隐窝</span>吸收（<span class="answer-text">5%</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>9.. <strong>视路传导途径</strong><br>视路是视觉信息从<span class="blur-text">视网膜光感受器</span>开始，到<span class="blur-text">大脑枕叶视中枢</span>的传导路径，通常指从<span class="blur-text">视神经</span>开始→<span class="blur-text">视交叉</span>→<span class="blur-text">视束</span>→<span class="blur-text">外侧膝状体</span>→<span class="blur-text">视放射</span>→<span class="blur-text">枕叶视中枢</span>。</td>
+                            <td>9.. <strong>视路传导途径</strong><br>视路是视觉信息从<span class="answer-text">视网膜光感受器</span>开始，到<span class="answer-text">大脑枕叶视中枢</span>的传导路径，通常指从<span class="answer-text">视神经</span>开始→<span class="answer-text">视交叉</span>→<span class="answer-text">视束</span>→<span class="answer-text">外侧膝状体</span>→<span class="answer-text">视放射</span>→<span class="answer-text">枕叶视中枢</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>10.. A <strong>视网膜脱离的种类和表现（孔源性）</strong><br>（1）<span class="blur-text">孔源性视网膜脱离</span>：视网膜先有<span class="blur-text">裂孔</span>而后发生的视网膜脱离<br>表现：①早期：<span class="blur-text">闪光感</span>，<span class="blur-text">飞蚊症加重</span>，<span class="blur-text">视野缺损</span>、<span class="blur-text">视力减退</span>；②进展期：<span class="blur-text">对侧视野遮挡感</span>，<span class="blur-text">视物变形</span>（累及黄斑），视力<span class="blur-text">急剧下降</span>，<span class="blur-text">眼压降低</span>；③视网膜裂孔呈<span class="blur-text">马蹄形</span>、<span class="blur-text">圆形</span>、<span class="blur-text">椭圆形</span>，<span class="blur-text">颞侧</span>常见</td>
+                            <td>10.. A <strong>视网膜脱离的种类和表现（孔源性）</strong><br>（1）<span class="answer-text">孔源性视网膜脱离</span>：视网膜先有<span class="answer-text">裂孔</span>而后发生的视网膜脱离<br>表现：①早期：<span class="answer-text">闪光感</span>，<span class="answer-text">飞蚊症加重</span>，<span class="answer-text">视野缺损</span>、<span class="answer-text">视力减退</span>；②进展期：<span class="answer-text">对侧视野遮挡感</span>，<span class="answer-text">视物变形</span>（累及黄斑），视力<span class="answer-text">急剧下降</span>，<span class="answer-text">眼压降低</span>；③视网膜裂孔呈<span class="answer-text">马蹄形</span>、<span class="answer-text">圆形</span>、<span class="answer-text">椭圆形</span>，<span class="answer-text">颞侧</span>常见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>10.. B <strong>视网膜脱离的种类和表现（牵拉性与渗出性）</strong><br>（2）<span class="blur-text">牵拉性网脱</span>：<span class="blur-text">增殖性玻璃体视网膜病变</span>，<span class="blur-text">玻璃体出血</span>、<span class="blur-text">糖尿病视网膜病变</span>、<span class="blur-text">血管炎</span>等<br>（3）<span class="blur-text">渗出性网脱</span>：视网膜<span class="blur-text">无皱褶</span>，有原发病、<span class="blur-text">肿瘤</span>、<span class="blur-text">高血压</span>等</td>
+                            <td>10.. B <strong>视网膜脱离的种类和表现（牵拉性与渗出性）</strong><br>（2）<span class="answer-text">牵拉性网脱</span>：<span class="answer-text">增殖性玻璃体视网膜病变</span>，<span class="answer-text">玻璃体出血</span>、<span class="answer-text">糖尿病视网膜病变</span>、<span class="answer-text">血管炎</span>等<br>（3）<span class="answer-text">渗出性网脱</span>：视网膜<span class="answer-text">无皱褶</span>，有原发病、<span class="answer-text">肿瘤</span>、<span class="answer-text">高血压</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>11.. <strong>年龄相关性黄斑变性的分型及区别</strong><br><span class="blur-text">图略</span></td>
+                            <td>11.. <strong>年龄相关性黄斑变性的分型及区别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>12.. <strong>高血压视网膜眼底病变</strong><br>Ⅰ：<span class="blur-text">血管收缩</span>、变窄，视网膜小动脉普遍变细，管径不规则、反光带增宽；<br>Ⅱ：主要为<span class="blur-text">动脉硬化</span>，视网膜小动脉反光增强、呈<span class="blur-text">铜丝或银丝状</span>，<span class="blur-text">动静脉交叉压迹</span>、<span class="blur-text">出血</span>、<span class="blur-text">硬性渗出</span>；<br>Ⅲ：视网膜<span class="blur-text">出血</span>、<span class="blur-text">水肿</span>、<span class="blur-text">硬性渗出</span>、<span class="blur-text">棉绒斑</span>；<br>Ⅳ：视网膜出血、水肿、硬性渗出、棉绒斑、<span class="blur-text">视乳头水肿</span>。</td>
+                            <td>12.. <strong>高血压视网膜眼底病变</strong><br>Ⅰ：<span class="answer-text">血管收缩</span>、变窄，视网膜小动脉普遍变细，管径不规则、反光带增宽；<br>Ⅱ：主要为<span class="answer-text">动脉硬化</span>，视网膜小动脉反光增强、呈<span class="answer-text">铜丝或银丝状</span>，<span class="answer-text">动静脉交叉压迹</span>、<span class="answer-text">出血</span>、<span class="answer-text">硬性渗出</span>；<br>Ⅲ：视网膜<span class="answer-text">出血</span>、<span class="answer-text">水肿</span>、<span class="answer-text">硬性渗出</span>、<span class="answer-text">棉绒斑</span>；<br>Ⅳ：视网膜出血、水肿、硬性渗出、棉绒斑、<span class="answer-text">视乳头水肿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>13.. A <strong>年龄相关性白内障的临床表现及分类（临床表现）</strong><br>（1）临床表现：①<span class="blur-text">渐进性</span>、<span class="blur-text">无痛性视力减退</span>；②可有<span class="blur-text">近视</span>，伴有<span class="blur-text">散光</span>；③可出现<span class="blur-text">畏光</span>和<span class="blur-text">眩光</span>；④<span class="blur-text">单眼复视或多视</span></td>
+                            <td>13.. A <strong>年龄相关性白内障的临床表现及分类（临床表现）</strong><br>（1）临床表现：①<span class="answer-text">渐进性</span>、<span class="answer-text">无痛性视力减退</span>；②可有<span class="answer-text">近视</span>，伴有<span class="answer-text">散光</span>；③可出现<span class="answer-text">畏光</span>和<span class="answer-text">眩光</span>；④<span class="answer-text">单眼复视或多视</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>13.. B <strong>年龄相关性白内障的临床表现及分类（皮质性白内障）</strong><br>（2）分类：按浑浊部位分为三类<br>1）<span class="blur-text">皮质性白内障</span>：①<span class="blur-text">初发期</span>：周边部皮质呈<span class="blur-text">楔形浑浊</span>，其尖端指向中心，可汇合成<span class="blur-text">轮辐状</span>；②<span class="blur-text">膨胀期</span>：可见<span class="blur-text">水裂</span>、<span class="blur-text">板层分离</span>，晶状体<span class="blur-text">膨胀</span>，可发生<span class="blur-text">继发性闭角型青光眼</span>，<span class="blur-text">虹膜投影</span>仍存在，视力明显减退；③<span class="blur-text">成熟期</span>：晶状体<span class="blur-text">完全浑浊</span>，皮质水肿减退，虹膜投影<span class="blur-text">消失</span>，视力明显减退至眼前数指或手动以下；④<span class="blur-text">过熟期</span>：皮质液化成糜状，<span class="blur-text">核下沉</span>，囊膜皱缩，出现不规则的白色斑点及<span class="blur-text">胆固醇结晶</span>，<span class="blur-text">前房加深</span>，<span class="blur-text">虹膜震颤</span>，成为<span class="blur-text">Morgagnian白内障</span>。</td>
+                            <td>13.. B <strong>年龄相关性白内障的临床表现及分类（皮质性白内障）</strong><br>（2）分类：按浑浊部位分为三类<br>1）<span class="answer-text">皮质性白内障</span>：①<span class="answer-text">初发期</span>：周边部皮质呈<span class="answer-text">楔形浑浊</span>，其尖端指向中心，可汇合成<span class="answer-text">轮辐状</span>；②<span class="answer-text">膨胀期</span>：可见<span class="answer-text">水裂</span>、<span class="answer-text">板层分离</span>，晶状体<span class="answer-text">膨胀</span>，可发生<span class="answer-text">继发性闭角型青光眼</span>，<span class="answer-text">虹膜投影</span>仍存在，视力明显减退；③<span class="answer-text">成熟期</span>：晶状体<span class="answer-text">完全浑浊</span>，皮质水肿减退，虹膜投影<span class="answer-text">消失</span>，视力明显减退至眼前数指或手动以下；④<span class="answer-text">过熟期</span>：皮质液化成糜状，<span class="answer-text">核下沉</span>，囊膜皱缩，出现不规则的白色斑点及<span class="answer-text">胆固醇结晶</span>，<span class="answer-text">前房加深</span>，<span class="answer-text">虹膜震颤</span>，成为<span class="answer-text">Morgagnian白内障</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>13.. C <strong>年龄相关性白内障的临床表现及分类（核性与后囊下）</strong><br>2）<span class="blur-text">核性白内障</span>：浑浊多从<span class="blur-text">胚核</span>开始，渐向<span class="blur-text">成年核</span>发展，分五级：<span class="blur-text">透明</span>→<span class="blur-text">黄色</span>→<span class="blur-text">深黄色</span>→<span class="blur-text">棕色</span>→<span class="blur-text">褐色、黑色</span>，早期对视力影响不大，晚期视力明显减退<br>3）<span class="blur-text">后囊下白内障</span>：早期即影响视力，常伴有<span class="blur-text">皮质性</span>或<span class="blur-text">核性白内障</span>，最后发展为成熟期白内障。</td>
+                            <td>13.. C <strong>年龄相关性白内障的临床表现及分类（核性与后囊下）</strong><br>2）<span class="answer-text">核性白内障</span>：浑浊多从<span class="answer-text">胚核</span>开始，渐向<span class="answer-text">成年核</span>发展，分五级：<span class="answer-text">透明</span>→<span class="answer-text">黄色</span>→<span class="answer-text">深黄色</span>→<span class="answer-text">棕色</span>→<span class="answer-text">褐色、黑色</span>，早期对视力影响不大，晚期视力明显减退<br>3）<span class="answer-text">后囊下白内障</span>：早期即影响视力，常伴有<span class="answer-text">皮质性</span>或<span class="answer-text">核性白内障</span>，最后发展为成熟期白内障。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>14.. A <strong>前葡萄膜炎的临床表现及治疗（症状与体征）</strong><br>（1）症状：<span class="blur-text">眼红</span>、<span class="blur-text">眼痛</span>、<span class="blur-text">畏光</span>、<span class="blur-text">流泪</span>、<span class="blur-text">视物模糊</span>、视力<span class="blur-text">明显下降</span><br>（2）体征：①<span class="blur-text">睫状充血</span>或<span class="blur-text">混合充血</span>；②<span class="blur-text">角膜后沉着物</span>：炎症细胞或色素沉积于角膜后表面；③<span class="blur-text">前房闪辉</span>：血房水屏障破坏，大分子物质进入前房；④<span class="blur-text">前房细胞</span>：炎症细胞、红细胞、肿瘤等进入前房；⑤<span class="blur-text">虹膜前后粘连</span>、<span class="blur-text">虹膜结节</span>；⑥<span class="blur-text">瞳孔缩小</span>；⑦<span class="blur-text">晶状体改变</span>：色素沉积于晶状体前囊膜；⑧<span class="blur-text">玻璃体改变</span>：可出现少量炎症细胞；⑨<span class="blur-text">视网膜改变</span>：反应性黄斑水肿、视盘水肿</td>
+                            <td>14.. A <strong>前葡萄膜炎的临床表现及治疗（症状与体征）</strong><br>（1）症状：<span class="answer-text">眼红</span>、<span class="answer-text">眼痛</span>、<span class="answer-text">畏光</span>、<span class="answer-text">流泪</span>、<span class="answer-text">视物模糊</span>、视力<span class="answer-text">明显下降</span><br>（2）体征：①<span class="answer-text">睫状充血</span>或<span class="answer-text">混合充血</span>；②<span class="answer-text">角膜后沉着物</span>：炎症细胞或色素沉积于角膜后表面；③<span class="answer-text">前房闪辉</span>：血房水屏障破坏，大分子物质进入前房；④<span class="answer-text">前房细胞</span>：炎症细胞、红细胞、肿瘤等进入前房；⑤<span class="answer-text">虹膜前后粘连</span>、<span class="answer-text">虹膜结节</span>；⑥<span class="answer-text">瞳孔缩小</span>；⑦<span class="answer-text">晶状体改变</span>：色素沉积于晶状体前囊膜；⑧<span class="answer-text">玻璃体改变</span>：可出现少量炎症细胞；⑨<span class="answer-text">视网膜改变</span>：反应性黄斑水肿、视盘水肿</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>14.. B <strong>前葡萄膜炎的临床表现及治疗（并发症与治疗）</strong><br>（3）并发症：<span class="blur-text">并发性白内障</span>、<span class="blur-text">继发性青光眼</span>、<span class="blur-text">低眼压及眼球萎缩</span><br>（4）治疗：原则：<span class="blur-text">扩瞳</span>防止虹膜后粘连，迅速<span class="blur-text">抗炎</span>以防止眼组织破坏和并发症的发生。<br>①扩瞳：<span class="blur-text">阿托品</span>、<span class="blur-text">后马托品</span>、<span class="blur-text">利多卡因</span>、<span class="blur-text">肾上腺素</span><br>②抗炎：<span class="blur-text">糖皮质激素</span>和<span class="blur-text">非甾体抗炎药</span><br>③并发症治疗：<span class="blur-text">抗青光眼手术</span>、<span class="blur-text">白内障手术</span><br>④<span class="blur-text">免疫抑制剂</span></td>
+                            <td>14.. B <strong>前葡萄膜炎的临床表现及治疗（并发症与治疗）</strong><br>（3）并发症：<span class="answer-text">并发性白内障</span>、<span class="answer-text">继发性青光眼</span>、<span class="answer-text">低眼压及眼球萎缩</span><br>（4）治疗：原则：<span class="answer-text">扩瞳</span>防止虹膜后粘连，迅速<span class="answer-text">抗炎</span>以防止眼组织破坏和并发症的发生。<br>①扩瞳：<span class="answer-text">阿托品</span>、<span class="answer-text">后马托品</span>、<span class="answer-text">利多卡因</span>、<span class="answer-text">肾上腺素</span><br>②抗炎：<span class="answer-text">糖皮质激素</span>和<span class="answer-text">非甾体抗炎药</span><br>③并发症治疗：<span class="answer-text">抗青光眼手术</span>、<span class="answer-text">白内障手术</span><br>④<span class="answer-text">免疫抑制剂</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>15.. A <strong>酸碱烧伤的治疗原则（现场急救与后继治疗）</strong><br>（1）现场急救：争分夺秒在现场<span class="blur-text">冲洗眼部</span>，是处理酸碱烧伤的最重要的一步。就地取材，用大量<span class="blur-text">清水</span>或其他水源反复冲洗，冲洗时应<span class="blur-text">翻转眼睑</span>、<span class="blur-text">转动眼球</span>，暴露<span class="blur-text">穹隆部</span>，将结膜囊内的化学物质彻底洗出，至少冲洗<span class="blur-text">30分钟</span>，送至医疗单位后再行冲洗，并检查结膜囊内是否还有异物，直到<span class="blur-text">pH正常</span>为止。<br>（2）后继治疗：①<span class="blur-text">烧伤始发期</span>：眼部彻底冲洗后适当创面清创处理，局部和全身<span class="blur-text">抗生素</span>控制感染，<span class="blur-text">1%阿托品</span>每日散瞳，必要时<span class="blur-text">前房穿刺</span>和<span class="blur-text">结膜切开</span>；②<span class="blur-text">急性期</span>：局部或全身使用<span class="blur-text">糖皮质激素</span>，抑制炎症和新生血管形成，出现角膜溶解变薄，可作<span class="blur-text">角膜或羊膜移植术</span>；③<span class="blur-text">早期修复期</span>：<span class="blur-text">维生素C</span>、<span class="blur-text">胶原酶抑制剂</span>等全身及局部应用；④<span class="blur-text">晚期修复期</span>：针对并发症进行治疗，如手术矫正<span class="blur-text">睑外翻</span>、<span class="blur-text">睑球粘连</span>、进行<span class="blur-text">角膜移植</span>等，出现<span class="blur-text">继发性青光眼</span>时，应用药物降低眼压或行<span class="blur-text">睫状体冷凝术</span>。</td>
+                            <td>15.. A <strong>酸碱烧伤的治疗原则（现场急救与后继治疗）</strong><br>（1）现场急救：争分夺秒在现场<span class="answer-text">冲洗眼部</span>，是处理酸碱烧伤的最重要的一步。就地取材，用大量<span class="answer-text">清水</span>或其他水源反复冲洗，冲洗时应<span class="answer-text">翻转眼睑</span>、<span class="answer-text">转动眼球</span>，暴露<span class="answer-text">穹隆部</span>，将结膜囊内的化学物质彻底洗出，至少冲洗<span class="answer-text">30分钟</span>，送至医疗单位后再行冲洗，并检查结膜囊内是否还有异物，直到<span class="answer-text">pH正常</span>为止。<br>（2）后继治疗：①<span class="answer-text">烧伤始发期</span>：眼部彻底冲洗后适当创面清创处理，局部和全身<span class="answer-text">抗生素</span>控制感染，<span class="answer-text">1%阿托品</span>每日散瞳，必要时<span class="answer-text">前房穿刺</span>和<span class="answer-text">结膜切开</span>；②<span class="answer-text">急性期</span>：局部或全身使用<span class="answer-text">糖皮质激素</span>，抑制炎症和新生血管形成，出现角膜溶解变薄，可作<span class="answer-text">角膜或羊膜移植术</span>；③<span class="answer-text">早期修复期</span>：<span class="answer-text">维生素C</span>、<span class="answer-text">胶原酶抑制剂</span>等全身及局部应用；④<span class="answer-text">晚期修复期</span>：针对并发症进行治疗，如手术矫正<span class="answer-text">睑外翻</span>、<span class="answer-text">睑球粘连</span>、进行<span class="answer-text">角膜移植</span>等，出现<span class="answer-text">继发性青光眼</span>时，应用药物降低眼压或行<span class="answer-text">睫状体冷凝术</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>15.. B <strong>酸碱烧伤的治疗原则（后遗症治疗）</strong><br>（3）后遗症治疗：<span class="blur-text">继发性青光眼</span>、<span class="blur-text">并发性白内障</span>等，药物及手术治疗。</td>
+                            <td>15.. B <strong>酸碱烧伤的治疗原则（后遗症治疗）</strong><br>（3）后遗症治疗：<span class="answer-text">继发性青光眼</span>、<span class="answer-text">并发性白内障</span>等，药物及手术治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>16.. <strong>共同性斜视和非共同性斜视的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>16.. <strong>共同性斜视和非共同性斜视的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>17.. <strong>弱视的病因及分类</strong><br>（1）<span class="blur-text">斜视性弱视</span>：单眼性斜视形成弱视；<br>（2）<span class="blur-text">屈光参差性弱视</span>：两眼远视球镜相差<span class="blur-text">1.50DS</span>，柱镜相差<span class="blur-text">1.0DC</span>，即可以使屈光度较高一眼形成弱视；<br>（3）<span class="blur-text">屈光不正性弱视</span>：多发生于未戴过屈光矫正眼镜的<span class="blur-text">高度屈光不正</span>患者，主要见于双眼<span class="blur-text">高度远视或散光</span>，两眼最佳矫正视力相等或相近，一般认为远视≥<span class="blur-text">5.00DS</span>、散光≥<span class="blur-text">2.00DC</span>会增加产生弱视的危险性；<br>（4）<span class="blur-text">形觉剥夺性弱视</span>：由于<span class="blur-text">屈光间质浑浊</span>、<span class="blur-text">上睑下垂</span>等剥夺性因素造成，弱视可为单侧或双侧，<span class="blur-text">单侧</span>较双侧更为严重。</td>
+                            <td>17.. <strong>弱视的病因及分类</strong><br>（1）<span class="answer-text">斜视性弱视</span>：单眼性斜视形成弱视；<br>（2）<span class="answer-text">屈光参差性弱视</span>：两眼远视球镜相差<span class="answer-text">1.50DS</span>，柱镜相差<span class="answer-text">1.0DC</span>，即可以使屈光度较高一眼形成弱视；<br>（3）<span class="answer-text">屈光不正性弱视</span>：多发生于未戴过屈光矫正眼镜的<span class="answer-text">高度屈光不正</span>患者，主要见于双眼<span class="answer-text">高度远视或散光</span>，两眼最佳矫正视力相等或相近，一般认为远视≥<span class="answer-text">5.00DS</span>、散光≥<span class="answer-text">2.00DC</span>会增加产生弱视的危险性；<br>（4）<span class="answer-text">形觉剥夺性弱视</span>：由于<span class="answer-text">屈光间质浑浊</span>、<span class="answer-text">上睑下垂</span>等剥夺性因素造成，弱视可为单侧或双侧，<span class="answer-text">单侧</span>较双侧更为严重。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>18.. <strong>视网膜两种感光换能系统的比较</strong><br><span class="blur-text">图略</span></td>
+                            <td>18.. <strong>视网膜两种感光换能系统的比较</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>19.. A <strong>角膜炎（病理分期与临床表现）</strong><br>（1）病理分期：<span class="blur-text">浸润期</span>、<span class="blur-text">溃疡形成期</span>、<span class="blur-text">溃疡消退期</span>、<span class="blur-text">愈合期</span><br>（2）临床表现：1）症状：<span class="blur-text">眼痛</span>、<span class="blur-text">畏光</span>、<span class="blur-text">流泪</span>、<span class="blur-text">眼睑痉挛</span>、<span class="blur-text">异物感</span>、<span class="blur-text">视物模糊</span>、<span class="blur-text">三叉神经刺激征</span>。2）体征：不同程度<span class="blur-text">视力下降</span>、<span class="blur-text">睫状充血</span>或<span class="blur-text">混合充血</span>、<span class="blur-text">角膜浸润</span>、<span class="blur-text">角膜溃疡</span>、<span class="blur-text">房水浑浊</span>、<span class="blur-text">前房积脓</span>、<span class="blur-text">虹膜睫状体炎</span>、<span class="blur-text">瞳孔缩小</span>、<span class="blur-text">虹膜后粘连</span>。</td>
+                            <td>19.. A <strong>角膜炎（病理分期与临床表现）</strong><br>（1）病理分期：<span class="answer-text">浸润期</span>、<span class="answer-text">溃疡形成期</span>、<span class="answer-text">溃疡消退期</span>、<span class="answer-text">愈合期</span><br>（2）临床表现：1）症状：<span class="answer-text">眼痛</span>、<span class="answer-text">畏光</span>、<span class="answer-text">流泪</span>、<span class="answer-text">眼睑痉挛</span>、<span class="answer-text">异物感</span>、<span class="answer-text">视物模糊</span>、<span class="answer-text">三叉神经刺激征</span>。2）体征：不同程度<span class="answer-text">视力下降</span>、<span class="answer-text">睫状充血</span>或<span class="answer-text">混合充血</span>、<span class="answer-text">角膜浸润</span>、<span class="answer-text">角膜溃疡</span>、<span class="answer-text">房水浑浊</span>、<span class="answer-text">前房积脓</span>、<span class="answer-text">虹膜睫状体炎</span>、<span class="answer-text">瞳孔缩小</span>、<span class="answer-text">虹膜后粘连</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>19.. B <strong>角膜炎（各类型角膜溃疡的特点）</strong><br>（2）各类型角膜溃疡的特点：①<span class="blur-text">细菌性角膜炎</span>：<span class="blur-text">革兰氏阳性菌</span>所致起病急<span class="blur-text">24-48小时</span>发病，病变向中心，易前房积脓；<span class="blur-text">绿脓杆菌</span>所致起病急，大量<span class="blur-text">黄绿色脓性分泌物</span>，可<span class="blur-text">4-8小时</span>穿孔。②<span class="blur-text">真菌性角膜炎</span>：溃疡呈<span class="blur-text">不规则形</span>，呈<span class="blur-text">苔被或牙膏样</span>外观，较干燥，溃疡进展时，周围实质内有"<span class="blur-text">卫星灶</span>"。③<span class="blur-text">单纯疱疹性角膜炎</span>（病毒）上皮型呈<span class="blur-text">树枝状</span>、<span class="blur-text">地图状</span></td>
+                            <td>19.. B <strong>角膜炎（各类型角膜溃疡的特点）</strong><br>（2）各类型角膜溃疡的特点：①<span class="answer-text">细菌性角膜炎</span>：<span class="answer-text">革兰氏阳性菌</span>所致起病急<span class="answer-text">24-48小时</span>发病，病变向中心，易前房积脓；<span class="answer-text">绿脓杆菌</span>所致起病急，大量<span class="answer-text">黄绿色脓性分泌物</span>，可<span class="answer-text">4-8小时</span>穿孔。②<span class="answer-text">真菌性角膜炎</span>：溃疡呈<span class="answer-text">不规则形</span>，呈<span class="answer-text">苔被或牙膏样</span>外观，较干燥，溃疡进展时，周围实质内有"<span class="answer-text">卫星灶</span>"。③<span class="answer-text">单纯疱疹性角膜炎</span>（病毒）上皮型呈<span class="answer-text">树枝状</span>、<span class="answer-text">地图状</span></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

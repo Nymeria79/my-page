@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">口腔科学大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1. <strong>口腔颌面部主要生理功能</strong><br>① <span class="blur-text">摄食</span>；② <span class="blur-text">咀嚼</span>；③ <span class="blur-text">吞咽</span>；④ 感受<span class="blur-text">味觉</span>；⑤ <span class="blur-text">表情</span>；⑥ 辅助<span class="blur-text">语言</span>和<span class="blur-text">呼吸</span></td>
+                            <td>1. <strong>口腔颌面部主要生理功能</strong><br>① <span class="answer-text">摄食</span>；② <span class="answer-text">咀嚼</span>；③ <span class="answer-text">吞咽</span>；④ 感受<span class="answer-text">味觉</span>；⑤ <span class="answer-text">表情</span>；⑥ 辅助<span class="answer-text">语言</span>和<span class="answer-text">呼吸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. A <strong>口腔分区及其表面形态（口腔前庭）</strong><br>为<span class="blur-text">牙列</span>的外围间隙，位于口腔前部，是介于牙列、牙槽突牙龈与<span class="blur-text">唇</span>、<span class="blur-text">颊</span>之间的潜在间隙，呈<span class="blur-text">马蹄形</span></td>
+                            <td>2. A <strong>口腔分区及其表面形态（口腔前庭）</strong><br>为<span class="answer-text">牙列</span>的外围间隙，位于口腔前部，是介于牙列、牙槽突牙龈与<span class="answer-text">唇</span>、<span class="answer-text">颊</span>之间的潜在间隙，呈<span class="answer-text">马蹄形</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2. B <strong>口腔分区及其表面形态（固有口腔）</strong><br>是口腔的<span class="blur-text">主要部分</span>，其范围是上为<span class="blur-text">硬腭</span>和<span class="blur-text">软腭</span>，下为<span class="blur-text">舌</span>和<span class="blur-text">口底</span>，前界和两侧界为上、下牙弓，后界为<span class="blur-text">咽门</span></td>
+                            <td>2. B <strong>口腔分区及其表面形态（固有口腔）</strong><br>是口腔的<span class="answer-text">主要部分</span>，其范围是上为<span class="answer-text">硬腭</span>和<span class="answer-text">软腭</span>，下为<span class="answer-text">舌</span>和<span class="answer-text">口底</span>，前界和两侧界为上、下牙弓，后界为<span class="answer-text">咽门</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3. A <strong>乳牙与恒牙的萌出（乳牙列）</strong><br>数目：<span class="blur-text">20</span>颗<br>名称：乳中切牙、乳侧切牙、乳尖牙、<span class="blur-text">第一乳磨牙</span>、<span class="blur-text">第二乳磨牙</span><br>萌出时间：<span class="blur-text">6个月-2岁</span><br>临床书写标识：<span class="blur-text">I II III IV V</span></td>
+                            <td>3. A <strong>乳牙与恒牙的萌出（乳牙列）</strong><br>数目：<span class="answer-text">20</span>颗<br>名称：乳中切牙、乳侧切牙、乳尖牙、<span class="answer-text">第一乳磨牙</span>、<span class="answer-text">第二乳磨牙</span><br>萌出时间：<span class="answer-text">6个月-2岁</span><br>临床书写标识：<span class="answer-text">I II III IV V</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>3. B <strong>乳牙与恒牙的萌出（恒牙列）</strong><br>数目：<span class="blur-text">28-32</span>颗<br>名称：1中切牙 2侧切牙 3尖牙 <span class="blur-text">4第一前磨牙</span> <span class="blur-text">5第二前磨牙</span> 6第一磨牙（一般6岁开始最快）7第二磨牙 8第三磨牙<br>萌出特点：<span class="blur-text">下颌牙</span>较上颌牙早萌出<br>萌出时间：<span class="blur-text">6-12岁</span><br>最早萌出的恒牙是：<span class="blur-text">第一恒磨牙（六龄牙）</span><br>临床书写标识：<span class="blur-text">1 2 3 4 5 6 7 8</span></td>
+                            <td>3. B <strong>乳牙与恒牙的萌出（恒牙列）</strong><br>数目：<span class="answer-text">28-32</span>颗<br>名称：1中切牙 2侧切牙 3尖牙 <span class="answer-text">4第一前磨牙</span> <span class="answer-text">5第二前磨牙</span> 6第一磨牙（一般6岁开始最快）7第二磨牙 8第三磨牙<br>萌出特点：<span class="answer-text">下颌牙</span>较上颌牙早萌出<br>萌出时间：<span class="answer-text">6-12岁</span><br>最早萌出的恒牙是：<span class="answer-text">第一恒磨牙（六龄牙）</span><br>临床书写标识：<span class="answer-text">1 2 3 4 5 6 7 8</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>3. C <strong>乳牙与恒牙的萌出（混合牙列期）</strong><br>乳牙与恒牙的替换时期：<span class="blur-text">6-12岁</span></td>
+                            <td>3. C <strong>乳牙与恒牙的萌出（混合牙列期）</strong><br>乳牙与恒牙的替换时期：<span class="answer-text">6-12岁</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>4. <strong>龋病的病因（四联因素论）</strong><br>① <span class="blur-text">细菌</span>：口腔致龋菌群的作用；② <span class="blur-text">食物</span>：蔗糖等适宜的细菌底物；③ <span class="blur-text">宿主</span>：敏感的宿主；④ <span class="blur-text">时间</span>：在口腔滞留足够的时间</td>
+                            <td>4. <strong>龋病的病因（四联因素论）</strong><br>① <span class="answer-text">细菌</span>：口腔致龋菌群的作用；② <span class="answer-text">食物</span>：蔗糖等适宜的细菌底物；③ <span class="answer-text">宿主</span>：敏感的宿主；④ <span class="answer-text">时间</span>：在口腔滞留足够的时间</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>5. <strong>龋病的临床表现分型</strong><br>按进展速度分：<span class="blur-text">急性龋</span>、<span class="blur-text">慢性龋</span>、<span class="blur-text">继发龋</span><br>按解剖部位分类：<span class="blur-text">牙合面窝沟龋</span>和<span class="blur-text">平滑面龋</span>、<span class="blur-text">根面龋</span>、<span class="blur-text">线性釉质龋</span><br>按病变深度分类：<span class="blur-text">浅龋</span>、<span class="blur-text">中龋</span>、<span class="blur-text">深龋</span></td>
+                            <td>5. <strong>龋病的临床表现分型</strong><br>按进展速度分：<span class="answer-text">急性龋</span>、<span class="answer-text">慢性龋</span>、<span class="answer-text">继发龋</span><br>按解剖部位分类：<span class="answer-text">牙合面窝沟龋</span>和<span class="answer-text">平滑面龋</span>、<span class="answer-text">根面龋</span>、<span class="answer-text">线性釉质龋</span><br>按病变深度分类：<span class="answer-text">浅龋</span>、<span class="answer-text">中龋</span>、<span class="answer-text">深龋</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>6. A <strong>浅龋、中龋、深龋（浅龋）</strong><br>亦称<span class="blur-text">釉质龋</span>，龋坏局限于<span class="blur-text">牙釉质</span>。<br>平滑面龋：平滑面<span class="blur-text">白垩色</span>或<span class="blur-text">黄褐色</span>斑点、斑块；<br>窝沟龋：窝沟处<span class="blur-text">浸墨状弥散</span>，无明显龋洞，探诊粗糙感，浅洞，无自觉症状，探诊也无反应</td>
+                            <td>6. A <strong>浅龋、中龋、深龋（浅龋）</strong><br>亦称<span class="answer-text">釉质龋</span>，龋坏局限于<span class="answer-text">牙釉质</span>。<br>平滑面龋：平滑面<span class="answer-text">白垩色</span>或<span class="answer-text">黄褐色</span>斑点、斑块；<br>窝沟龋：窝沟处<span class="answer-text">浸墨状弥散</span>，无明显龋洞，探诊粗糙感，浅洞，无自觉症状，探诊也无反应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>6. B <strong>浅龋、中龋、深龋（中龋）</strong><br>龋坏已达<span class="blur-text">牙本质浅层</span>。有明显龋洞，洞内牙本质软化呈<span class="blur-text">黄褐</span>或<span class="blur-text">深褐色</span>，可有探痛，对外界刺激（如冷、热、甜、酸和食物嵌入等）可出现疼痛反应，当刺激源去除后疼痛立即消失，<span class="blur-text">无自发性痛</span></td>
+                            <td>6. B <strong>浅龋、中龋、深龋（中龋）</strong><br>龋坏已达<span class="answer-text">牙本质浅层</span>。有明显龋洞，洞内牙本质软化呈<span class="answer-text">黄褐</span>或<span class="answer-text">深褐色</span>，可有探痛，对外界刺激（如冷、热、甜、酸和食物嵌入等）可出现疼痛反应，当刺激源去除后疼痛立即消失，<span class="answer-text">无自发性痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>6. C <strong>浅龋、中龋、深龋（深龋）</strong><br>龋坏已达<span class="blur-text">牙本质深层</span>。大而深的龋洞，或入口小而深层有较为广泛的破坏，对外界刺激反应较中龋为重，但刺激源去除后，仍可立即止痛，<span class="blur-text">无自发性痛</span></td>
+                            <td>6. C <strong>浅龋、中龋、深龋（深龋）</strong><br>龋坏已达<span class="answer-text">牙本质深层</span>。大而深的龋洞，或入口小而深层有较为广泛的破坏，对外界刺激反应较中龋为重，但刺激源去除后，仍可立即止痛，<span class="answer-text">无自发性痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>7. <strong>龋病的治疗</strong><br><span class="blur-text">化学疗法</span>、<span class="blur-text">再矿化疗法</span>、<span class="blur-text">窝沟封闭</span>、<span class="blur-text">修复性治疗</span></td>
+                            <td>7. <strong>龋病的治疗</strong><br><span class="answer-text">化学疗法</span>、<span class="answer-text">再矿化疗法</span>、<span class="answer-text">窝沟封闭</span>、<span class="answer-text">修复性治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>8. A <strong>急性牙髓炎的临床表现及诊断（临床表现）</strong><br>① 疼痛剧烈，疼痛性质有以下特点：<span class="blur-text">自发性阵发性痛</span>；<span class="blur-text">夜间疼痛加剧</span>；<span class="blur-text">温度刺激疼痛加剧</span>；<span class="blur-text">疼痛不能定位</span><br>② 发病急<br>③ 患牙可查及极近髓腔的<span class="blur-text">深龋</span>、<span class="blur-text">充填物</span>、<span class="blur-text">深牙周袋</span>或外伤等<br>④ 探诊常可引起剧烈疼痛，有时可探及<span class="blur-text">微小穿髓孔</span><br>⑤ 温度测验时，患牙的反应<span class="blur-text">极其敏感</span><br>⑥ 处于晚期炎症的患牙，可出现垂直方向的<span class="blur-text">轻度叩痛</span></td>
+                            <td>8. A <strong>急性牙髓炎的临床表现及诊断（临床表现）</strong><br>① 疼痛剧烈，疼痛性质有以下特点：<span class="answer-text">自发性阵发性痛</span>；<span class="answer-text">夜间疼痛加剧</span>；<span class="answer-text">温度刺激疼痛加剧</span>；<span class="answer-text">疼痛不能定位</span><br>② 发病急<br>③ 患牙可查及极近髓腔的<span class="answer-text">深龋</span>、<span class="answer-text">充填物</span>、<span class="answer-text">深牙周袋</span>或外伤等<br>④ 探诊常可引起剧烈疼痛，有时可探及<span class="answer-text">微小穿髓孔</span><br>⑤ 温度测验时，患牙的反应<span class="answer-text">极其敏感</span><br>⑥ 处于晚期炎症的患牙，可出现垂直方向的<span class="answer-text">轻度叩痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>8. B <strong>急性牙髓炎的临床表现及诊断（诊断）</strong><br>具有典型的<span class="blur-text">疼痛症状</span>，可见引起牙髓病变的牙体损害或其他病因。<span class="blur-text">牙髓活力测验</span>、<span class="blur-text">温度测验</span>及<span class="blur-text">叩诊反应</span>可帮助定位患牙</td>
+                            <td>8. B <strong>急性牙髓炎的临床表现及诊断（诊断）</strong><br>具有典型的<span class="answer-text">疼痛症状</span>，可见引起牙髓病变的牙体损害或其他病因。<span class="answer-text">牙髓活力测验</span>、<span class="answer-text">温度测验</span>及<span class="answer-text">叩诊反应</span>可帮助定位患牙</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>9. <strong>不可复性急性牙髓炎的临床表现</strong><br>① <span class="blur-text">自发性阵发性痛</span>；② <span class="blur-text">夜间痛</span>；③ <span class="blur-text">温度刺激加剧疼痛</span>；④ <span class="blur-text">疼痛不能自行定位</span></td>
+                            <td>9. <strong>不可复性急性牙髓炎的临床表现</strong><br>① <span class="answer-text">自发性阵发性痛</span>；② <span class="answer-text">夜间痛</span>；③ <span class="answer-text">温度刺激加剧疼痛</span>；④ <span class="answer-text">疼痛不能自行定位</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>10. A <strong>急性牙髓炎/根尖周炎治疗方法（应急处理）</strong><br>① <span class="blur-text">开髓引流</span>：<br>急性牙髓炎：局麻下直接进行<span class="blur-text">牙髓摘除</span>，完全去除牙髓后，放置无菌小棉球暂封；<br>急性根尖周炎：局麻下开髓，穿通<span class="blur-text">根尖孔</span>，使根尖渗出物及脓液通过根管得到引流。可在髓室内放置无菌小棉球开放髓腔，<span class="blur-text">2~3天后</span>复诊<br>② <span class="blur-text">切开排脓</span><br>③ <span class="blur-text">安抚治疗</span><br>④ <span class="blur-text">调牙合</span><br>⑤ <span class="blur-text">消炎止痛</span></td>
+                            <td>10. A <strong>急性牙髓炎/根尖周炎治疗方法（应急处理）</strong><br>① <span class="answer-text">开髓引流</span>：<br>急性牙髓炎：局麻下直接进行<span class="answer-text">牙髓摘除</span>，完全去除牙髓后，放置无菌小棉球暂封；<br>急性根尖周炎：局麻下开髓，穿通<span class="answer-text">根尖孔</span>，使根尖渗出物及脓液通过根管得到引流。可在髓室内放置无菌小棉球开放髓腔，<span class="answer-text">2~3天后</span>复诊<br>② <span class="answer-text">切开排脓</span><br>③ <span class="answer-text">安抚治疗</span><br>④ <span class="answer-text">调牙合</span><br>⑤ <span class="answer-text">消炎止痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>10. B <strong>急性牙髓炎/根尖周炎治疗方法（治疗方法）</strong><br>① 牙髓病变是局限或可逆的，选择以<span class="blur-text">保留活牙髓</span>为目的的治疗方法，如<span class="blur-text">直接盖髓术</span>、<span class="blur-text">间接盖髓术</span>和牙髓切断术<br>② 牙髓病变范围大或不可逆的，选择以<span class="blur-text">去除牙髓</span>、<span class="blur-text">保存患牙</span>为目的的治疗方法，如<span class="blur-text">根管治疗术</span>、牙髓塑化术</td>
+                            <td>10. B <strong>急性牙髓炎/根尖周炎治疗方法（治疗方法）</strong><br>① 牙髓病变是局限或可逆的，选择以<span class="answer-text">保留活牙髓</span>为目的的治疗方法，如<span class="answer-text">直接盖髓术</span>、<span class="answer-text">间接盖髓术</span>和牙髓切断术<br>② 牙髓病变范围大或不可逆的，选择以<span class="answer-text">去除牙髓</span>、<span class="answer-text">保存患牙</span>为目的的治疗方法，如<span class="answer-text">根管治疗术</span>、牙髓塑化术</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>11. <strong>慢性龈炎的临床表现</strong><br>① 自觉症状：刷牙或咬硬物时<span class="blur-text">牙龈出血</span>，<span class="blur-text">口腔异味</span>；<br>② 牙龈色泽：游离龈和龈乳头呈<span class="blur-text">鲜红</span>或<span class="blur-text">暗红色</span>；<br>③ 牙龈外形：牙龈组织<span class="blur-text">水肿</span>，<span class="blur-text">龈缘变厚</span>；<br>④ 牙龈质地：<span class="blur-text">松软脆弱</span>，缺乏弹性；<br>⑤ 龈沟深度：<span class="blur-text">增加</span></td>
+                            <td>11. <strong>慢性龈炎的临床表现</strong><br>① 自觉症状：刷牙或咬硬物时<span class="answer-text">牙龈出血</span>，<span class="answer-text">口腔异味</span>；<br>② 牙龈色泽：游离龈和龈乳头呈<span class="answer-text">鲜红</span>或<span class="answer-text">暗红色</span>；<br>③ 牙龈外形：牙龈组织<span class="answer-text">水肿</span>，<span class="answer-text">龈缘变厚</span>；<br>④ 牙龈质地：<span class="answer-text">松软脆弱</span>，缺乏弹性；<br>⑤ 龈沟深度：<span class="answer-text">增加</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>12. <strong>慢性龈炎的治疗</strong><br>① 去除病因：通过<span class="blur-text">洁治术</span>彻底清除菌斑、牙石；<br>② 手术治疗：对于少数炎症消退后仍不能恢复正常形态的牙龈，可行<span class="blur-text">牙龈成形术</span>以恢复牙龈的生理外形<br>③ 防止复发：保持口腔卫生，<span class="blur-text">定期（每6-12个月一次）</span>复查和维护</td>
+                            <td>12. <strong>慢性龈炎的治疗</strong><br>① 去除病因：通过<span class="answer-text">洁治术</span>彻底清除菌斑、牙石；<br>② 手术治疗：对于少数炎症消退后仍不能恢复正常形态的牙龈，可行<span class="answer-text">牙龈成形术</span>以恢复牙龈的生理外形<br>③ 防止复发：保持口腔卫生，<span class="answer-text">定期（每6-12个月一次）</span>复查和维护</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>13. <strong>慢性牙周炎的治疗原则</strong><br>① <span class="blur-text">控制菌斑</span>，<span class="blur-text">控制感染</span><br>② <span class="blur-text">牙周手术</span><br>③ 建立<span class="blur-text">平衡的牙合关系</span><br>④ 积极治疗并控制<span class="blur-text">全身疾病</span><br>⑤ <span class="blur-text">拔除患牙</span><br>⑥ <span class="blur-text">定期复查和维护期支持治疗</span></td>
+                            <td>13. <strong>慢性牙周炎的治疗原则</strong><br>① <span class="answer-text">控制菌斑</span>，<span class="answer-text">控制感染</span><br>② <span class="answer-text">牙周手术</span><br>③ 建立<span class="answer-text">平衡的牙合关系</span><br>④ 积极治疗并控制<span class="answer-text">全身疾病</span><br>⑤ <span class="answer-text">拔除患牙</span><br>⑥ <span class="answer-text">定期复查和维护期支持治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>14. <strong>早期牙龈炎和早期牙周炎的鉴别</strong><br>① 牙龈炎症：牙龈炎和牙周炎皆有<span class="blur-text">牙龈炎症</span><br>② 牙周袋：牙龈炎为<span class="blur-text">假性牙周袋</span>；牙周炎为<span class="blur-text">真性牙周袋</span><br>③ 附着丧失：牙龈炎<span class="blur-text">无</span>；牙周炎<span class="blur-text">有</span>且能探到釉牙骨质界<br>④ 牙槽骨吸收：牙龈炎<span class="blur-text">无</span>；牙周炎<span class="blur-text">有</span>嵴顶吸收或硬骨板消失<br>⑤ 治疗结果：牙龈炎病变<span class="blur-text">可逆</span>，组织恢复正常；牙周炎已破坏的支持组织<span class="blur-text">难以完全恢复正常</span></td>
+                            <td>14. <strong>早期牙龈炎和早期牙周炎的鉴别</strong><br>① 牙龈炎症：牙龈炎和牙周炎皆有<span class="answer-text">牙龈炎症</span><br>② 牙周袋：牙龈炎为<span class="answer-text">假性牙周袋</span>；牙周炎为<span class="answer-text">真性牙周袋</span><br>③ 附着丧失：牙龈炎<span class="answer-text">无</span>；牙周炎<span class="answer-text">有</span>且能探到釉牙骨质界<br>④ 牙槽骨吸收：牙龈炎<span class="answer-text">无</span>；牙周炎<span class="answer-text">有</span>嵴顶吸收或硬骨板消失<br>⑤ 治疗结果：牙龈炎病变<span class="answer-text">可逆</span>，组织恢复正常；牙周炎已破坏的支持组织<span class="answer-text">难以完全恢复正常</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>15. <strong>原发性疱疹性口炎的临床表现</strong><br>① <span class="blur-text">前驱期</span>：病毒接触史、发热、头痛、乏力、淋巴结肿大<br>② <span class="blur-text">水疱期</span>：口腔黏膜出现成簇小水泡，壁薄透明<br>③ <span class="blur-text">糜烂期</span>：水疱破溃，上覆假膜，形成痂壳<br>④ <span class="blur-text">愈合期</span>：<span class="blur-text">7-10天</span>愈合</td>
+                            <td>15. <strong>原发性疱疹性口炎的临床表现</strong><br>① <span class="answer-text">前驱期</span>：病毒接触史、发热、头痛、乏力、淋巴结肿大<br>② <span class="answer-text">水疱期</span>：口腔黏膜出现成簇小水泡，壁薄透明<br>③ <span class="answer-text">糜烂期</span>：水疱破溃，上覆假膜，形成痂壳<br>④ <span class="answer-text">愈合期</span>：<span class="answer-text">7-10天</span>愈合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>16. <strong>口腔念珠菌病的治疗</strong><br>① 局部药物治疗：<span class="blur-text">2-4%碳酸氢钠溶液</span><br>② 全身抗真菌治疗：<span class="blur-text">氟康唑</span>或<span class="blur-text">伊曲康唑</span><br>③ 增强机体免疫力：注射<span class="blur-text">胸腺素</span>、<span class="blur-text">转移因子</span><br>④ 手术治疗：疗效不明显考虑手术治疗</td>
+                            <td>16. <strong>口腔念珠菌病的治疗</strong><br>① 局部药物治疗：<span class="answer-text">2-4%碳酸氢钠溶液</span><br>② 全身抗真菌治疗：<span class="answer-text">氟康唑</span>或<span class="answer-text">伊曲康唑</span><br>③ 增强机体免疫力：注射<span class="answer-text">胸腺素</span>、<span class="answer-text">转移因子</span><br>④ 手术治疗：疗效不明显考虑手术治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>17. A <strong>口腔白斑的概念及处理原则（概念）</strong><br>口腔黏膜上以<span class="blur-text">白色</span>为主的损害，不具有其他任何可定义的损害特征；属<span class="blur-text">癌前病变</span></td>
+                            <td>17. A <strong>口腔白斑的概念及处理原则（概念）</strong><br>口腔黏膜上以<span class="answer-text">白色</span>为主的损害，不具有其他任何可定义的损害特征；属<span class="answer-text">癌前病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>17. B <strong>口腔白斑的概念及处理原则（临床表现）</strong><br>好发于<span class="blur-text">颊</span>、<span class="blur-text">唇</span>、<span class="blur-text">舌</span>、口角区、前庭沟、腭及牙龈，<span class="blur-text">双颊咬合线处</span>最多见；<br>主观症状：<span class="blur-text">粗糙感</span>、<span class="blur-text">刺痛</span>、味觉减退、局部发硬，有溃烂时出现自发痛及刺激痛</td>
+                            <td>17. B <strong>口腔白斑的概念及处理原则（临床表现）</strong><br>好发于<span class="answer-text">颊</span>、<span class="answer-text">唇</span>、<span class="answer-text">舌</span>、口角区、前庭沟、腭及牙龈，<span class="answer-text">双颊咬合线处</span>最多见；<br>主观症状：<span class="answer-text">粗糙感</span>、<span class="answer-text">刺痛</span>、味觉减退、局部发硬，有溃烂时出现自发痛及刺激痛</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>17. C <strong>口腔白斑的概念及处理原则（分型与治疗）</strong><br>分型：<br>均质：<span class="blur-text">斑块状</span>、<span class="blur-text">皱纸状</span><br>非均质：<span class="blur-text">溃疡状</span>、<span class="blur-text">疣状</span>、<span class="blur-text">颗粒状</span><br>治疗：去除刺激因素；局部治疗；用药治疗；白斑在治疗过程中如有<span class="blur-text">增生</span>、<span class="blur-text">硬结</span>、<span class="blur-text">溃疡</span>等改变时，应及时手术切除活检。对<span class="blur-text">溃疡型</span>、<span class="blur-text">疣状</span>、<span class="blur-text">颗粒型</span>白斑应手术切除全部病变活检</td>
+                            <td>17. C <strong>口腔白斑的概念及处理原则（分型与治疗）</strong><br>分型：<br>均质：<span class="answer-text">斑块状</span>、<span class="answer-text">皱纸状</span><br>非均质：<span class="answer-text">溃疡状</span>、<span class="answer-text">疣状</span>、<span class="answer-text">颗粒状</span><br>治疗：去除刺激因素；局部治疗；用药治疗；白斑在治疗过程中如有<span class="answer-text">增生</span>、<span class="answer-text">硬结</span>、<span class="answer-text">溃疡</span>等改变时，应及时手术切除活检。对<span class="answer-text">溃疡型</span>、<span class="answer-text">疣状</span>、<span class="answer-text">颗粒型</span>白斑应手术切除全部病变活检</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>18. <strong>复发性阿弗他溃疡的临床表现</strong><br>① <span class="blur-text">复发性</span>：反复发作的圆形或椭圆形溃疡<br>② <span class="blur-text">黄、红、凹、痛</span><br>③ <span class="blur-text">周期性</span>：长短不一的"发作期-愈合期-间歇期"周期规律<br>④ <span class="blur-text">自限性</span>：不治而愈的自限性</td>
+                            <td>18. <strong>复发性阿弗他溃疡的临床表现</strong><br>① <span class="answer-text">复发性</span>：反复发作的圆形或椭圆形溃疡<br>② <span class="answer-text">黄、红、凹、痛</span><br>③ <span class="answer-text">周期性</span>：长短不一的"发作期-愈合期-间歇期"周期规律<br>④ <span class="answer-text">自限性</span>：不治而愈的自限性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>19. <strong>口腔扁平苔藓的治疗</strong><br>① <span class="blur-text">心身调理</span><br>② 局部治疗：去除刺激因素，消除炎症；<span class="blur-text">氯己定</span>或<span class="blur-text">制霉菌素</span>含漱；<span class="blur-text">肾上腺皮质激素</span>局部注射；<span class="blur-text">维A酸类药物</span>涂擦<br>③ 全身治疗：口服<span class="blur-text">肾上腺皮质激素</span>；口服<span class="blur-text">雷公藤</span>和<span class="blur-text">昆明山海棠</span><br>④ <span class="blur-text">中医中药治疗</span></td>
+                            <td>19. <strong>口腔扁平苔藓的治疗</strong><br>① <span class="answer-text">心身调理</span><br>② 局部治疗：去除刺激因素，消除炎症；<span class="answer-text">氯己定</span>或<span class="answer-text">制霉菌素</span>含漱；<span class="answer-text">肾上腺皮质激素</span>局部注射；<span class="answer-text">维A酸类药物</span>涂擦<br>③ 全身治疗：口服<span class="answer-text">肾上腺皮质激素</span>；口服<span class="answer-text">雷公藤</span>和<span class="answer-text">昆明山海棠</span><br>④ <span class="answer-text">中医中药治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>20. <strong>口腔颌面部感染的特点</strong><br>① 口腔、鼻腔及鼻窦长期与外界相通，容易发生<span class="blur-text">感染</span><br>② <span class="blur-text">牙源性感染</span>是口腔颌面部独有的感染<br>③ 感染可经口腔颌面部的<span class="blur-text">筋膜间隙途径</span>迅速扩散和蔓延<br>④ 颌面部的血液和淋巴循环丰富，<span class="blur-text">危险三角</span><br>⑤ 颜面部的汗腺、毛囊和皮脂腺也是<span class="blur-text">细菌常驻的部位</span><br>⑥ 具有<span class="blur-text">红肿热痛</span>和<span class="blur-text">功能障碍</span><br>⑦ <span class="blur-text">牙源性</span>和<span class="blur-text">婴幼儿腺源性</span>常见</td>
+                            <td>20. <strong>口腔颌面部感染的特点</strong><br>① 口腔、鼻腔及鼻窦长期与外界相通，容易发生<span class="answer-text">感染</span><br>② <span class="answer-text">牙源性感染</span>是口腔颌面部独有的感染<br>③ 感染可经口腔颌面部的<span class="answer-text">筋膜间隙途径</span>迅速扩散和蔓延<br>④ 颌面部的血液和淋巴循环丰富，<span class="answer-text">危险三角</span><br>⑤ 颜面部的汗腺、毛囊和皮脂腺也是<span class="answer-text">细菌常驻的部位</span><br>⑥ 具有<span class="answer-text">红肿热痛</span>和<span class="answer-text">功能障碍</span><br>⑦ <span class="answer-text">牙源性</span>和<span class="answer-text">婴幼儿腺源性</span>常见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>21. <strong>第三磨牙冠周炎的病因</strong><br>① 进化导致下颌骨体逐渐缩短，致使第三磨牙<span class="blur-text">没有足够的空间萌出</span><br>② 正在萌出的第三磨牙牙冠被牙龈部分或全部覆盖，形成<span class="blur-text">盲袋</span><br>③ 全身因素：<span class="blur-text">抵抗力下降</span></td>
+                            <td>21. <strong>第三磨牙冠周炎的病因</strong><br>① 进化导致下颌骨体逐渐缩短，致使第三磨牙<span class="answer-text">没有足够的空间萌出</span><br>② 正在萌出的第三磨牙牙冠被牙龈部分或全部覆盖，形成<span class="answer-text">盲袋</span><br>③ 全身因素：<span class="answer-text">抵抗力下降</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>22. <strong>第三磨牙冠周炎(智齿性冠周炎)急性期的治疗原则</strong><br>以<span class="blur-text">消炎</span>、<span class="blur-text">镇痛</span>、<span class="blur-text">建立引流</span>及对症处理为主。<br>① 全身治疗：注意休息，进<span class="blur-text">流质饮食</span>，勤漱口，应用<span class="blur-text">抗生素</span>控制感染。<br>② 局部治疗：<br><span class="blur-text">冠周盲袋冲洗</span>：用钝头冲洗针交替使用<span class="blur-text">3%过氧化氢溶液</span>和<span class="blur-text">生理盐水</span>行冠周盲袋冲洗，然后在隔湿条件下用探针蘸<span class="blur-text">碘酚</span>或<span class="blur-text">10%碘合剂</span>烧灼盲袋。<br>适当<span class="blur-text">物理治疗</span>。<br>若有<span class="blur-text">冠周脓肿</span>形成，应在局麻下切开脓肿，置入橡皮条或碘仿纱布引流。<br>感染波及邻近间隙，还应作<span class="blur-text">感染间隙的切开引流术</span></td>
+                            <td>22. <strong>第三磨牙冠周炎(智齿性冠周炎)急性期的治疗原则</strong><br>以<span class="answer-text">消炎</span>、<span class="answer-text">镇痛</span>、<span class="answer-text">建立引流</span>及对症处理为主。<br>① 全身治疗：注意休息，进<span class="answer-text">流质饮食</span>，勤漱口，应用<span class="answer-text">抗生素</span>控制感染。<br>② 局部治疗：<br><span class="answer-text">冠周盲袋冲洗</span>：用钝头冲洗针交替使用<span class="answer-text">3%过氧化氢溶液</span>和<span class="answer-text">生理盐水</span>行冠周盲袋冲洗，然后在隔湿条件下用探针蘸<span class="answer-text">碘酚</span>或<span class="answer-text">10%碘合剂</span>烧灼盲袋。<br>适当<span class="answer-text">物理治疗</span>。<br>若有<span class="answer-text">冠周脓肿</span>形成，应在局麻下切开脓肿，置入橡皮条或碘仿纱布引流。<br>感染波及邻近间隙，还应作<span class="answer-text">感染间隙的切开引流术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>23. <strong>第三磨牙冠周炎的并发症</strong><br>① 向前外扩散：<span class="blur-text">颊部脓肿</span><br>② 后外：<span class="blur-text">咬肌间隙脓肿</span><br>③ 向前：<span class="blur-text">第一磨牙前庭沟处</span>形成脓肿<br>④ 向后内：<span class="blur-text">翼下颌间隙</span>、<span class="blur-text">扁桃体周围脓肿</span>，通常为医源性<br>⑤ 向内：<span class="blur-text">下颌下间隙脓肿</span>和<span class="blur-text">口底蜂窝织炎</span></td>
+                            <td>23. <strong>第三磨牙冠周炎的并发症</strong><br>① 向前外扩散：<span class="answer-text">颊部脓肿</span><br>② 后外：<span class="answer-text">咬肌间隙脓肿</span><br>③ 向前：<span class="answer-text">第一磨牙前庭沟处</span>形成脓肿<br>④ 向后内：<span class="answer-text">翼下颌间隙</span>、<span class="answer-text">扁桃体周围脓肿</span>，通常为医源性<br>⑤ 向内：<span class="answer-text">下颌下间隙脓肿</span>和<span class="answer-text">口底蜂窝织炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>24. <strong>翼下颌间隙感染来源及其切开引流的原则</strong><br>来源：<br>① 常见于<span class="blur-text">下颌第三磨牙根尖感染</span>或<span class="blur-text">冠周炎</span><br>② 少数为医源性（<span class="blur-text">下齿槽神经阻滞麻醉</span>的并发症）<br>③ 邻近间隙感染扩散而来<br>切开引流原则：<br>① 口外：切口在<span class="blur-text">下颌角下缘1.5-2cm</span>，长约<span class="blur-text">5cm</span>，在内侧切断<span class="blur-text">翼内肌</span>附着<br>② 口内：由<span class="blur-text">翼下颌皱襞外侧</span>，长<span class="blur-text">2cm</span>纵行切开</td>
+                            <td>24. <strong>翼下颌间隙感染来源及其切开引流的原则</strong><br>来源：<br>① 常见于<span class="answer-text">下颌第三磨牙根尖感染</span>或<span class="answer-text">冠周炎</span><br>② 少数为医源性（<span class="answer-text">下齿槽神经阻滞麻醉</span>的并发症）<br>③ 邻近间隙感染扩散而来<br>切开引流原则：<br>① 口外：切口在<span class="answer-text">下颌角下缘1.5-2cm</span>，长约<span class="answer-text">5cm</span>，在内侧切断<span class="answer-text">翼内肌</span>附着<br>② 口内：由<span class="answer-text">翼下颌皱襞外侧</span>，长<span class="answer-text">2cm</span>纵行切开</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>25. <strong>下颌下脓肿切口的原则</strong><br>① 手术在<span class="blur-text">下颌下缘1.5-2cm</span>，作<span class="blur-text">3-5cm</span>长的平行切口<br>② 淋巴源性感染还需分离到<span class="blur-text">淋巴结内</span>，才能使脓液流出<br>③ 注意保护<span class="blur-text">面神经下颌缘支</span>及血管</td>
+                            <td>25. <strong>下颌下脓肿切口的原则</strong><br>① 手术在<span class="answer-text">下颌下缘1.5-2cm</span>，作<span class="answer-text">3-5cm</span>长的平行切口<br>② 淋巴源性感染还需分离到<span class="answer-text">淋巴结内</span>，才能使脓液流出<br>③ 注意保护<span class="answer-text">面神经下颌缘支</span>及血管</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>26. <strong>双膦酸盐相关性颌骨坏死</strong><br>① 应以<span class="blur-text">预防</span>为主<br>② 双膦酸盐治疗前行<span class="blur-text">口腔基础治疗</span><br>③ 双膦酸盐治疗后<span class="blur-text">避免拔牙</span>和其他创伤<br>④ <span class="blur-text">抗感染</span>及<span class="blur-text">止痛</span>治疗<br>⑤ 手术清创倾向于<span class="blur-text">保守</span>，适当去除死骨及病变的软组织，严密关闭外露骨面</td>
+                            <td>26. <strong>双膦酸盐相关性颌骨坏死</strong><br>① 应以<span class="answer-text">预防</span>为主<br>② 双膦酸盐治疗前行<span class="answer-text">口腔基础治疗</span><br>③ 双膦酸盐治疗后<span class="answer-text">避免拔牙</span>和其他创伤<br>④ <span class="answer-text">抗感染</span>及<span class="answer-text">止痛</span>治疗<br>⑤ 手术清创倾向于<span class="answer-text">保守</span>，适当去除死骨及病变的软组织，严密关闭外露骨面</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>27. <strong>拔牙创伤愈合</strong><br>① <span class="blur-text">血凝块形成</span>：拔牙后<span class="blur-text">15分钟</span><br>② <span class="blur-text">血块机化</span>：拔牙后数小时，<span class="blur-text">24小时</span>成纤维细胞长入，<span class="blur-text">1周后</span>有肉芽组织形成<br>③ <span class="blur-text">上皮覆盖拔牙创</span>：拔牙后<span class="blur-text">3-4天</span>，约<span class="blur-text">1周-1月</span>完成<br>④ <span class="blur-text">骨组织修复</span>：<span class="blur-text">1周后</span>开始，<span class="blur-text">4周后</span>新骨充满拔牙创，<span class="blur-text">3月后</span>完全形成新骨</td>
+                            <td>27. <strong>拔牙创伤愈合</strong><br>① <span class="answer-text">血凝块形成</span>：拔牙后<span class="answer-text">15分钟</span><br>② <span class="answer-text">血块机化</span>：拔牙后数小时，<span class="answer-text">24小时</span>成纤维细胞长入，<span class="answer-text">1周后</span>有肉芽组织形成<br>③ <span class="answer-text">上皮覆盖拔牙创</span>：拔牙后<span class="answer-text">3-4天</span>，约<span class="answer-text">1周-1月</span>完成<br>④ <span class="answer-text">骨组织修复</span>：<span class="answer-text">1周后</span>开始，<span class="answer-text">4周后</span>新骨充满拔牙创，<span class="answer-text">3月后</span>完全形成新骨</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>28. <strong>干槽症的临床表现</strong><br>① <span class="blur-text">牙槽窝空虚</span>、<span class="blur-text">坏死物恶臭</span>、<span class="blur-text">探及骨面锐痛</span><br>② 颌面部无明显肿胀，张口无明显受限，下颌下可有<span class="blur-text">淋巴结肿大</span>、<span class="blur-text">压痛</span><br>③ 组织病理表现为牙槽窝骨壁的<span class="blur-text">浅层骨炎</span>或轻微的局限型骨髓炎</td>
+                            <td>28. <strong>干槽症的临床表现</strong><br>① <span class="answer-text">牙槽窝空虚</span>、<span class="answer-text">坏死物恶臭</span>、<span class="answer-text">探及骨面锐痛</span><br>② 颌面部无明显肿胀，张口无明显受限，下颌下可有<span class="answer-text">淋巴结肿大</span>、<span class="answer-text">压痛</span><br>③ 组织病理表现为牙槽窝骨壁的<span class="answer-text">浅层骨炎</span>或轻微的局限型骨髓炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>29. <strong>放射性颌骨炎的治疗原则</strong><br>① 应以<span class="blur-text">预防</span>为主<br>② 掌握<span class="blur-text">适应症</span>、<span class="blur-text">剂量</span>和<span class="blur-text">防护</span><br>③ 放疗前行<span class="blur-text">口腔基础治疗</span><br>④ 放疗后<span class="blur-text">3-5年内</span>避免拔牙和其他创伤<br>⑤ 一般倾向于<span class="blur-text">保守治疗</span>，全身应用抗生素和支持治疗<br>⑥ 局部保持引流通畅等待<span class="blur-text">死骨分离</span>后手术摘除<br>⑦ 配合<span class="blur-text">高压氧</span>治疗</td>
+                            <td>29. <strong>放射性颌骨炎的治疗原则</strong><br>① 应以<span class="answer-text">预防</span>为主<br>② 掌握<span class="answer-text">适应症</span>、<span class="answer-text">剂量</span>和<span class="answer-text">防护</span><br>③ 放疗前行<span class="answer-text">口腔基础治疗</span><br>④ 放疗后<span class="answer-text">3-5年内</span>避免拔牙和其他创伤<br>⑤ 一般倾向于<span class="answer-text">保守治疗</span>，全身应用抗生素和支持治疗<br>⑥ 局部保持引流通畅等待<span class="answer-text">死骨分离</span>后手术摘除<br>⑦ 配合<span class="answer-text">高压氧</span>治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>30. <strong>口腔颌面部损伤特点</strong><br>① 口腔颌面部<span class="blur-text">血运丰富</span><br>② 口腔内有<span class="blur-text">牙齿</span>存在<br>③ 口腔系<span class="blur-text">消化道</span>和<span class="blur-text">呼吸道</span>的始端<br>④ 颌面诸骨相互嵌合且毗邻<span class="blur-text">颅脑</span><br>⑤ 口腔颌面部有<span class="blur-text">唾液腺</span>和<span class="blur-text">神经</span>分布<br>⑥ 口腔颌面部<span class="blur-text">窦腔多</span><br>⑦ 口腔颌面部系<span class="blur-text">颈部支撑</span><br>⑧ 口腔颌面部<span class="blur-text">多器官分布</span>（记忆：血牙始骨、神腺窦颈器）</td>
+                            <td>30. <strong>口腔颌面部损伤特点</strong><br>① 口腔颌面部<span class="answer-text">血运丰富</span><br>② 口腔内有<span class="answer-text">牙齿</span>存在<br>③ 口腔系<span class="answer-text">消化道</span>和<span class="answer-text">呼吸道</span>的始端<br>④ 颌面诸骨相互嵌合且毗邻<span class="answer-text">颅脑</span><br>⑤ 口腔颌面部有<span class="answer-text">唾液腺</span>和<span class="answer-text">神经</span>分布<br>⑥ 口腔颌面部<span class="answer-text">窦腔多</span><br>⑦ 口腔颌面部系<span class="answer-text">颈部支撑</span><br>⑧ 口腔颌面部<span class="answer-text">多器官分布</span>（记忆：血牙始骨、神腺窦颈器）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>31. <strong>颌面部损伤的急救</strong><br>① <span class="blur-text">解除窒息</span>：<br>原因：<span class="blur-text">阻塞性窒息</span>：异物阻塞，组织移位，气道狭窄，活瓣样阻塞；<span class="blur-text">吸入性阻塞</span>：昏迷的伤员，异物吸入气管，支气管甚至肺泡引起的窒息。<br>临床表现：前驱症状是<span class="blur-text">烦躁不安</span>、<span class="blur-text">鼻翼扇动</span>、吸气长于呼气或出现<span class="blur-text">喉鸣</span>；严重时有三凹体征：吸气时，<span class="blur-text">胸骨上窝</span>、<span class="blur-text">锁骨上窝</span>、<span class="blur-text">肋间隙</span>深陷；继之出现脉弱、血压下降、瞳孔散大。<br>② <span class="blur-text">止血</span><br>③ <span class="blur-text">包扎伤口</span><br>④ <span class="blur-text">运送伤员</span><br>⑤ <span class="blur-text">防止感染</span></td>
+                            <td>31. <strong>颌面部损伤的急救</strong><br>① <span class="answer-text">解除窒息</span>：<br>原因：<span class="answer-text">阻塞性窒息</span>：异物阻塞，组织移位，气道狭窄，活瓣样阻塞；<span class="answer-text">吸入性阻塞</span>：昏迷的伤员，异物吸入气管，支气管甚至肺泡引起的窒息。<br>临床表现：前驱症状是<span class="answer-text">烦躁不安</span>、<span class="answer-text">鼻翼扇动</span>、吸气长于呼气或出现<span class="answer-text">喉鸣</span>；严重时有三凹体征：吸气时，<span class="answer-text">胸骨上窝</span>、<span class="answer-text">锁骨上窝</span>、<span class="answer-text">肋间隙</span>深陷；继之出现脉弱、血压下降、瞳孔散大。<br>② <span class="answer-text">止血</span><br>③ <span class="answer-text">包扎伤口</span><br>④ <span class="answer-text">运送伤员</span><br>⑤ <span class="answer-text">防止感染</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>32. <strong>下颌骨骨折好发部位</strong><br><span class="blur-text">正中联合</span>、<span class="blur-text">下颌角</span>、<span class="blur-text">颏孔区</span>、<span class="blur-text">髁突</span></td>
+                            <td>32. <strong>下颌骨骨折好发部位</strong><br><span class="answer-text">正中联合</span>、<span class="answer-text">下颌角</span>、<span class="answer-text">颏孔区</span>、<span class="answer-text">髁突</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>33. <strong>下颌骨骨折的临床表现</strong><br>① <span class="blur-text">骨折段移位</span><br>② <span class="blur-text">咬合错乱</span><br>③ <span class="blur-text">骨折端活动异常</span><br>④ <span class="blur-text">下唇麻木</span><br>⑤ <span class="blur-text">张口受限</span></td>
+                            <td>33. <strong>下颌骨骨折的临床表现</strong><br>① <span class="answer-text">骨折段移位</span><br>② <span class="answer-text">咬合错乱</span><br>③ <span class="answer-text">骨折端活动异常</span><br>④ <span class="answer-text">下唇麻木</span><br>⑤ <span class="answer-text">张口受限</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>34. <strong>颌骨骨折的治疗原则</strong><br>① 治疗时机：上颌骨骨折<span class="blur-text">2周内</span>，下颌骨骨折<span class="blur-text">3周内</span><br>② 进行正确的<span class="blur-text">复位</span>和可靠的<span class="blur-text">固定</span><br>③ <span class="blur-text">功能</span>和<span class="blur-text">外形</span>兼顾<br>④ <span class="blur-text">局部</span>与<span class="blur-text">全身</span>治疗相结合</td>
+                            <td>34. <strong>颌骨骨折的治疗原则</strong><br>① 治疗时机：上颌骨骨折<span class="answer-text">2周内</span>，下颌骨骨折<span class="answer-text">3周内</span><br>② 进行正确的<span class="answer-text">复位</span>和可靠的<span class="answer-text">固定</span><br>③ <span class="answer-text">功能</span>和<span class="answer-text">外形</span>兼顾<br>④ <span class="answer-text">局部</span>与<span class="answer-text">全身</span>治疗相结合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>35. <strong>牙列缺损的影响</strong><br>① <span class="blur-text">咀嚼功能减退</span><br>② <span class="blur-text">发音功能障碍</span><br>③ <span class="blur-text">牙周组织改变</span><br>④ <span class="blur-text">颞下颌关节病变</span><br>⑤ <span class="blur-text">影响美观</span></td>
+                            <td>35. <strong>牙列缺损的影响</strong><br>① <span class="answer-text">咀嚼功能减退</span><br>② <span class="answer-text">发音功能障碍</span><br>③ <span class="answer-text">牙周组织改变</span><br>④ <span class="answer-text">颞下颌关节病变</span><br>⑤ <span class="answer-text">影响美观</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>36. A <strong>口腔颌面部良、恶性肿瘤的鉴别（一般特征）</strong><br>| 项目 | 良性肿瘤 | 恶性肿瘤 |<br>| 发病年龄 | 任何年龄 | 癌多见于<span class="blur-text">老年</span>，肉瘤多见于<span class="blur-text">青壮年</span> |<br>| 生长速度 | 一般<span class="blur-text">慢</span> | 一般<span class="blur-text">快</span> |<br>| 生长方式 | <span class="blur-text">膨胀性</span>生长 | <span class="blur-text">浸润性</span>生长 |<br>| 与周围组织关系 | 有<span class="blur-text">包膜</span>，不侵犯周围组织，界限较清楚，多可移动 | <span class="blur-text">侵犯、破坏</span>周围组织，界限不清，活动受限 |</td>
+                            <td>36. A <strong>口腔颌面部良、恶性肿瘤的鉴别（一般特征）</strong><br>| 项目 | 良性肿瘤 | 恶性肿瘤 |<br>| 发病年龄 | 任何年龄 | 癌多见于<span class="answer-text">老年</span>，肉瘤多见于<span class="answer-text">青壮年</span> |<br>| 生长速度 | 一般<span class="answer-text">慢</span> | 一般<span class="answer-text">快</span> |<br>| 生长方式 | <span class="answer-text">膨胀性</span>生长 | <span class="answer-text">浸润性</span>生长 |<br>| 与周围组织关系 | 有<span class="answer-text">包膜</span>，不侵犯周围组织，界限较清楚，多可移动 | <span class="answer-text">侵犯、破坏</span>周围组织，界限不清，活动受限 |</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>36. B <strong>口腔颌面部良、恶性肿瘤的鉴别（临床与预后）</strong><br>| 临床症状 | 一般无症状，瘤体较大时可有面颈部畸形 | 常有<span class="blur-text">局部疼痛</span>、<span class="blur-text">麻木</span>、<span class="blur-text">头痛</span>、<span class="blur-text">张口受限</span>、<span class="blur-text">面瘫</span>、<span class="blur-text">出血</span>等功能受损症状 |<br>| 转移 | <span class="blur-text">无</span> | <span class="blur-text">常发生转移</span> |<br>| 对机体影响 | 一般对机体无影响，但如生长在口咽部位或发生并发症时，也可危及生命 | 对机体影响严重，常因<span class="blur-text">迅速发展</span>、<span class="blur-text">转移</span>和侵及重要脏器及发生<span class="blur-text">恶病质</span>而死亡 |<br>| 组织学结构 | 细胞<span class="blur-text">分化良好</span>，细胞形态和结构与正常组织相似 | 细胞<span class="blur-text">分化差</span>，细胞形态和结构呈<span class="blur-text">异形性</span>，有异常核分裂像 |</td>
+                            <td>36. B <strong>口腔颌面部良、恶性肿瘤的鉴别（临床与预后）</strong><br>| 临床症状 | 一般无症状，瘤体较大时可有面颈部畸形 | 常有<span class="answer-text">局部疼痛</span>、<span class="answer-text">麻木</span>、<span class="answer-text">头痛</span>、<span class="answer-text">张口受限</span>、<span class="answer-text">面瘫</span>、<span class="answer-text">出血</span>等功能受损症状 |<br>| 转移 | <span class="answer-text">无</span> | <span class="answer-text">常发生转移</span> |<br>| 对机体影响 | 一般对机体无影响，但如生长在口咽部位或发生并发症时，也可危及生命 | 对机体影响严重，常因<span class="answer-text">迅速发展</span>、<span class="answer-text">转移</span>和侵及重要脏器及发生<span class="answer-text">恶病质</span>而死亡 |<br>| 组织学结构 | 细胞<span class="answer-text">分化良好</span>，细胞形态和结构与正常组织相似 | 细胞<span class="answer-text">分化差</span>，细胞形态和结构呈<span class="answer-text">异形性</span>，有异常核分裂像 |</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

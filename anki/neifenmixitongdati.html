@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">内分泌系统大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>库欣综合征的临床表现</strong><br>①典型表现：<span class="blur-text">向心性肥胖</span>，<span class="blur-text">满月脸</span>，<span class="blur-text">水牛背</span>。患者四肢相对瘦小，肌肉萎缩。由于皮肤菲薄，患者常表现为<span class="blur-text">多血质外貌</span>。腰腹部、腋下、大腿可出现<span class="blur-text">紫纹</span>。<br>②血液循环中<span class="blur-text">红细胞计数及血红蛋白含量升高</span>，<span class="blur-text">中性粒细胞增多</span>，<span class="blur-text">淋巴细胞和嗜酸性粒细胞减少</span>。<br>③<span class="blur-text">高血压</span>，<span class="blur-text">电解质紊乱</span>。</td>
+                            <td>1.. <strong>库欣综合征的临床表现</strong><br>①典型表现：<span class="answer-text">向心性肥胖</span>，<span class="answer-text">满月脸</span>，<span class="answer-text">水牛背</span>。患者四肢相对瘦小，肌肉萎缩。由于皮肤菲薄，患者常表现为<span class="answer-text">多血质外貌</span>。腰腹部、腋下、大腿可出现<span class="answer-text">紫纹</span>。<br>②血液循环中<span class="answer-text">红细胞计数及血红蛋白含量升高</span>，<span class="answer-text">中性粒细胞增多</span>，<span class="answer-text">淋巴细胞和嗜酸性粒细胞减少</span>。<br>③<span class="answer-text">高血压</span>，<span class="answer-text">电解质紊乱</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>库欣综合征的临床表现(续)</strong><br>④<span class="blur-text">糖耐量减低</span>，<span class="blur-text">继发性糖尿病</span>，<span class="blur-text">骨质疏松</span>。<br>⑤<span class="blur-text">免疫抑制</span>，易感染各种感染。<br>⑥性腺抑制作用：女性患者出现<span class="blur-text">月经不规则</span>，<span class="blur-text">女性男性化</span>(多毛、痤疮、胡须等)。男性<span class="blur-text">性欲减退</span>。<br>⑦<span class="blur-text">皮肤色素沉着</span>。<br>⑧精神神经症状：患者可有<span class="blur-text">乏力、头痛、记忆力下降</span>等神经症状和欣快感、失眠、注意力不集中，情绪不稳定等程度较轻的精神症状。</td>
+                            <td>2.. <strong>库欣综合征的临床表现(续)</strong><br>④<span class="answer-text">糖耐量减低</span>，<span class="answer-text">继发性糖尿病</span>，<span class="answer-text">骨质疏松</span>。<br>⑤<span class="answer-text">免疫抑制</span>，易感染各种感染。<br>⑥性腺抑制作用：女性患者出现<span class="answer-text">月经不规则</span>，<span class="answer-text">女性男性化</span>(多毛、痤疮、胡须等)。男性<span class="answer-text">性欲减退</span>。<br>⑦<span class="answer-text">皮肤色素沉着</span>。<br>⑧精神神经症状：患者可有<span class="answer-text">乏力、头痛、记忆力下降</span>等神经症状和欣快感、失眠、注意力不集中，情绪不稳定等程度较轻的精神症状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>库欣综合征的病因</strong><br>①内源性库欣综合征：(1)<span class="blur-text">ACTH依赖性库欣综合征</span>：①<span class="blur-text">库欣病</span>；②<span class="blur-text">异位ACTH综合征</span>；③<span class="blur-text">不依赖ACTH的双侧肾上腺小结节增生</span>；④<span class="blur-text">不依赖ACTH的双侧肾上腺大结节增生</span>。<br>②<span class="blur-text">药源性库欣综合征</span>。</td>
+                            <td>3.. <strong>库欣综合征的病因</strong><br>①内源性库欣综合征：(1)<span class="answer-text">ACTH依赖性库欣综合征</span>：①<span class="answer-text">库欣病</span>；②<span class="answer-text">异位ACTH综合征</span>；③<span class="answer-text">不依赖ACTH的双侧肾上腺小结节增生</span>；④<span class="answer-text">不依赖ACTH的双侧肾上腺大结节增生</span>。<br>②<span class="answer-text">药源性库欣综合征</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>库欣综合征的诊断步骤</strong><br>①根据临床表现怀疑为库欣综合征。<br>②功能诊断：<span class="blur-text">血皮质醇昼夜节律</span>；<span class="blur-text">24小时尿游离皮质醇</span>；<span class="blur-text">1mg地塞米松抑制试验</span>，若异常则<span class="blur-text">小剂量地塞米松抑制试验</span>(确诊)。<br>③病因诊断：<span class="blur-text">大剂量地塞米松抑制试验</span>；<span class="blur-text">血浆ACTH</span>。<br>④定位诊断：<span class="blur-text">垂体增强MRI</span>、<span class="blur-text">肾上腺增强CT</span>、<span class="blur-text">胸部CT/全身PET-CT</span>。<br>⑤鉴别诊断：<span class="blur-text">肥胖症</span>、<span class="blur-text">酗酒兼有肝损害</span>。</td>
+                            <td>4.. <strong>库欣综合征的诊断步骤</strong><br>①根据临床表现怀疑为库欣综合征。<br>②功能诊断：<span class="answer-text">血皮质醇昼夜节律</span>；<span class="answer-text">24小时尿游离皮质醇</span>；<span class="answer-text">1mg地塞米松抑制试验</span>，若异常则<span class="answer-text">小剂量地塞米松抑制试验</span>(确诊)。<br>③病因诊断：<span class="answer-text">大剂量地塞米松抑制试验</span>；<span class="answer-text">血浆ACTH</span>。<br>④定位诊断：<span class="answer-text">垂体增强MRI</span>、<span class="answer-text">肾上腺增强CT</span>、<span class="answer-text">胸部CT/全身PET-CT</span>。<br>⑤鉴别诊断：<span class="answer-text">肥胖症</span>、<span class="answer-text">酗酒兼有肝损害</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>库欣综合征筛查人群</strong><br>①年轻患者出现<span class="blur-text">骨质疏松、高血压</span>等与年龄不相称的临床表现。<br>②具有库欣综合征的临床表现，且进行性加重，特别是<span class="blur-text">高血压伴有典型症状</span>。<br>③体重增加而身高的百分位下降，<span class="blur-text">生长停滞的肥胖儿童</span>。<br>④<span class="blur-text">肾上腺意外瘤</span>患者。</td>
+                            <td>5.. <strong>库欣综合征筛查人群</strong><br>①年轻患者出现<span class="answer-text">骨质疏松、高血压</span>等与年龄不相称的临床表现。<br>②具有库欣综合征的临床表现，且进行性加重，特别是<span class="answer-text">高血压伴有典型症状</span>。<br>③体重增加而身高的百分位下降，<span class="answer-text">生长停滞的肥胖儿童</span>。<br>④<span class="answer-text">肾上腺意外瘤</span>患者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>Sheehan综合征的诊断</strong><br>①<span class="blur-text">产后大出血病史</span>。<br>②<span class="blur-text">产后无乳</span>。<br>③<span class="blur-text">垂体功能减退的其他症状</span>。<br>④实验室查<span class="blur-text">相关激素水平</span>。<br>⑤<span class="blur-text">MRI或CT</span>显示<span class="blur-text">空蝶鞍</span>。</td>
+                            <td>6.. <strong>Sheehan综合征的诊断</strong><br>①<span class="answer-text">产后大出血病史</span>。<br>②<span class="answer-text">产后无乳</span>。<br>③<span class="answer-text">垂体功能减退的其他症状</span>。<br>④实验室查<span class="answer-text">相关激素水平</span>。<br>⑤<span class="answer-text">MRI或CT</span>显示<span class="answer-text">空蝶鞍</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>垂体危象的临床表现</strong><br>①体温高于<span class="blur-text">40°C</span>或低于<span class="blur-text">30°C</span>。<br>②严重<span class="blur-text">低血糖</span>。<br>③严重<span class="blur-text">低血压</span>。<br>④严重<span class="blur-text">低钠血症</span>。<br>⑤<span class="blur-text">休克、昏迷</span>，甚至死亡。</td>
+                            <td>7.. <strong>垂体危象的临床表现</strong><br>①体温高于<span class="answer-text">40°C</span>或低于<span class="answer-text">30°C</span>。<br>②严重<span class="answer-text">低血糖</span>。<br>③严重<span class="answer-text">低血压</span>。<br>④严重<span class="answer-text">低钠血症</span>。<br>⑤<span class="answer-text">休克、昏迷</span>，甚至死亡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>垂体危象的治疗</strong><br>①纠正<span class="blur-text">低血糖</span>和<span class="blur-text">低血钠</span>。<span class="blur-text">50%GS</span>迅速，<span class="blur-text">5-10%GNS</span>维持。<br>②<span class="blur-text">糖皮质激素替代</span>。补液中加<span class="blur-text">氢化可的松</span>。<br>③升高体温，<span class="blur-text">热水浴或电热毯</span>，补充小剂量<span class="blur-text">L-T4</span>。<br>④降低体温，<span class="blur-text">物理或化学降温</span>。禁用<span class="blur-text">镇静剂</span>。<br>⑤水中毒者，记出入液量，每日水平衡保持在<span class="blur-text">1升</span>内。<br>⑥去除诱因，<span class="blur-text">抗生素抗感染</span>。</td>
+                            <td>8.. <strong>垂体危象的治疗</strong><br>①纠正<span class="answer-text">低血糖</span>和<span class="answer-text">低血钠</span>。<span class="answer-text">50%GS</span>迅速，<span class="answer-text">5-10%GNS</span>维持。<br>②<span class="answer-text">糖皮质激素替代</span>。补液中加<span class="answer-text">氢化可的松</span>。<br>③升高体温，<span class="answer-text">热水浴或电热毯</span>，补充小剂量<span class="answer-text">L-T4</span>。<br>④降低体温，<span class="answer-text">物理或化学降温</span>。禁用<span class="answer-text">镇静剂</span>。<br>⑤水中毒者，记出入液量，每日水平衡保持在<span class="answer-text">1升</span>内。<br>⑥去除诱因，<span class="answer-text">抗生素抗感染</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>原发性醛固酮增多症的筛查人群</strong><br>①<span class="blur-text">BP>150/100mmHg</span>。<br>②<span class="blur-text">难治性高血压</span>。<br>③<span class="blur-text">高血压伴低血钾</span>。<br>④<span class="blur-text">肾上腺意外瘤</span>。<br>⑤<span class="blur-text">早发性高血压家族史</span>或<span class="blur-text">早发脑血管意外</span>。<br>⑥<span class="blur-text">原醛症患者的一级亲属</span>。</td>
+                            <td>9.. <strong>原发性醛固酮增多症的筛查人群</strong><br>①<span class="answer-text">BP>150/100mmHg</span>。<br>②<span class="answer-text">难治性高血压</span>。<br>③<span class="answer-text">高血压伴低血钾</span>。<br>④<span class="answer-text">肾上腺意外瘤</span>。<br>⑤<span class="answer-text">早发性高血压家族史</span>或<span class="answer-text">早发脑血管意外</span>。<br>⑥<span class="answer-text">原醛症患者的一级亲属</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>原发性醛固酮增多症的诊断(筛查与确诊)</strong><br>诊断流程分为三步：筛查、确诊、分型。<br>①筛查：<span class="blur-text">ARR血浆醛固酮/肾素比值</span>。<br>【注意事项：①测量前<span class="blur-text">纠正低血钾</span>；②<span class="blur-text">正常钠饮食</span>；③减少药物影响(<span class="blur-text">螺内酯和其它保钾利尿剂、甘草停用4周</span>、<span class="blur-text">ACEI、ARB、β受体阻滞剂、NSAIDS、性激素停用2周</span>)】<br>②确诊：<span class="blur-text">卡托普利抑制试验</span>、<span class="blur-text">生理盐水负荷试验</span>、<span class="blur-text">口服钠盐试验</span>、<span class="blur-text">氢氟可的松抑制试验</span>。</td>
+                            <td>10.. <strong>原发性醛固酮增多症的诊断(筛查与确诊)</strong><br>诊断流程分为三步：筛查、确诊、分型。<br>①筛查：<span class="answer-text">ARR血浆醛固酮/肾素比值</span>。<br>【注意事项：①测量前<span class="answer-text">纠正低血钾</span>；②<span class="answer-text">正常钠饮食</span>；③减少药物影响(<span class="answer-text">螺内酯和其它保钾利尿剂、甘草停用4周</span>、<span class="answer-text">ACEI、ARB、β受体阻滞剂、NSAIDS、性激素停用2周</span>)】<br>②确诊：<span class="answer-text">卡托普利抑制试验</span>、<span class="answer-text">生理盐水负荷试验</span>、<span class="answer-text">口服钠盐试验</span>、<span class="answer-text">氢氟可的松抑制试验</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>原发性醛固酮增多症的确诊试验详解</strong><br>①卡托普利抑制试验：坐位口服卡托普利(<span class="blur-text">25-50mg</span>)，服药前及服药后1h或2h测血浆醛固酮浓度，正常人服药后血浆醛固酮水平下降<span class="blur-text">30%</span>以上，而原醛病人无显著变化，若较前降低<30%为原醛。<br>②生理盐水负荷试验：空腹静卧，静脉滴注生理盐水<span class="blur-text">2000ml</span>，<span class="blur-text">4小时</span>内输完，后患者血浆醛固酮><span class="blur-text">10ng/dl(100pg/ml)</span>为原醛，若为<span class="blur-text">5-10ng/dl</span>为可疑，<<span class="blur-text">5ng/dl</span>排除原醛。</td>
+                            <td>11.. <strong>原发性醛固酮增多症的确诊试验详解</strong><br>①卡托普利抑制试验：坐位口服卡托普利(<span class="answer-text">25-50mg</span>)，服药前及服药后1h或2h测血浆醛固酮浓度，正常人服药后血浆醛固酮水平下降<span class="answer-text">30%</span>以上，而原醛病人无显著变化，若较前降低<30%为原醛。<br>②生理盐水负荷试验：空腹静卧，静脉滴注生理盐水<span class="answer-text">2000ml</span>，<span class="answer-text">4小时</span>内输完，后患者血浆醛固酮><span class="answer-text">10ng/dl(100pg/ml)</span>为原醛，若为<span class="answer-text">5-10ng/dl</span>为可疑，<<span class="answer-text">5ng/dl</span>排除原醛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>原发性醛固酮增多症的分型与治疗原则</strong><br>①分型：①<span class="blur-text">肾上腺CT</span>(首选)；②<span class="blur-text">肾上腺静脉取血术(AVS)</span>(区分单侧和双侧病变的金标准)；③<span class="blur-text">基因检测</span>。<br>②治疗原则：①肾上腺单侧病变(腺瘤或增生)采用<span class="blur-text">手术治疗</span>；②双侧增生病变(特醛症)、不愿或不能行手术治疗的单侧占位病变，采用<span class="blur-text">盐皮质激素受体拮抗剂</span>治疗(<span class="blur-text">安体舒通、依普利酮</span>等)；③<span class="blur-text">糖皮质激素可抑制性原醛(GRA)</span>采用<span class="blur-text">地塞米松</span>治疗；④难以确定为腺瘤或特发性增生，可先用药物治疗，定期做影像学检查。</td>
+                            <td>12.. <strong>原发性醛固酮增多症的分型与治疗原则</strong><br>①分型：①<span class="answer-text">肾上腺CT</span>(首选)；②<span class="answer-text">肾上腺静脉取血术(AVS)</span>(区分单侧和双侧病变的金标准)；③<span class="answer-text">基因检测</span>。<br>②治疗原则：①肾上腺单侧病变(腺瘤或增生)采用<span class="answer-text">手术治疗</span>；②双侧增生病变(特醛症)、不愿或不能行手术治疗的单侧占位病变，采用<span class="answer-text">盐皮质激素受体拮抗剂</span>治疗(<span class="answer-text">安体舒通、依普利酮</span>等)；③<span class="answer-text">糖皮质激素可抑制性原醛(GRA)</span>采用<span class="answer-text">地塞米松</span>治疗；④难以确定为腺瘤或特发性增生，可先用药物治疗，定期做影像学检查。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>糖尿病的诊断标准</strong><br>①典型糖尿病症状(1)加随机血糖≥<span class="blur-text">11.1mmol/L</span>。<br>②或空腹血糖(FPG)≥<span class="blur-text">7.0mmol/L</span>。<br>③或OGTT 2小时血糖≥<span class="blur-text">11.1mmol/L</span>。<br>④或糖化血红蛋白≥<span class="blur-text">6.5%</span>。<br>无典型糖尿病症状，需改日复查确认。<br>注：空腹定义至少<span class="blur-text">8小时</span>无摄入热量；随机血糖指不考虑上次用餐时间。</td>
+                            <td>13.. <strong>糖尿病的诊断标准</strong><br>①典型糖尿病症状(1)加随机血糖≥<span class="answer-text">11.1mmol/L</span>。<br>②或空腹血糖(FPG)≥<span class="answer-text">7.0mmol/L</span>。<br>③或OGTT 2小时血糖≥<span class="answer-text">11.1mmol/L</span>。<br>④或糖化血红蛋白≥<span class="answer-text">6.5%</span>。<br>无典型糖尿病症状，需改日复查确认。<br>注：空腹定义至少<span class="answer-text">8小时</span>无摄入热量；随机血糖指不考虑上次用餐时间。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>糖尿病的糖代谢状态(WHO1999)</strong><br><span class="blur-text">图略</span></td>
+                            <td>14.. <strong>糖尿病的糖代谢状态(WHO1999)</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>糖尿病的慢性并发症</strong><br>①微血管病变，如<span class="blur-text">糖尿病肾病(DN)</span>、<span class="blur-text">糖尿病视网膜病变(DR)</span>等。<br>②大血管病变，基本病理改变为<span class="blur-text">动脉粥样硬化</span>。<br>③神经系统并发症，包括<span class="blur-text">中枢神经病变</span>和<span class="blur-text">周围神经病变</span>。<br>④<span class="blur-text">糖尿病足</span>。</td>
+                            <td>15.. <strong>糖尿病的慢性并发症</strong><br>①微血管病变，如<span class="answer-text">糖尿病肾病(DN)</span>、<span class="answer-text">糖尿病视网膜病变(DR)</span>等。<br>②大血管病变，基本病理改变为<span class="answer-text">动脉粥样硬化</span>。<br>③神经系统并发症，包括<span class="answer-text">中枢神经病变</span>和<span class="answer-text">周围神经病变</span>。<br>④<span class="answer-text">糖尿病足</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>1型糖尿病和2型糖尿病的比较</strong><br><span class="blur-text">图略</span></td>
+                            <td>16.. <strong>1型糖尿病和2型糖尿病的比较</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>糖尿病肾病的分期</strong><br>T1DM所致肾损害的发生、发展可分五期，T2DM导致的肾损害也参考该分期。<br>①I期：<span class="blur-text">肾小球超滤过期</span>，肾体积增大，肾小球入球小动脉扩张，肾小球内压增加，<span class="blur-text">肾小球滤过率(GFR)</span>明显升高。<br>②II期：<span class="blur-text">间歇性微量白蛋白尿期</span>，患者休息时尿白蛋白排泄正常，运动后、应激状态可增高。<br>③III期：<span class="blur-text">早期糖尿病肾病期</span>，以持续性微量白蛋白尿为标志，<span class="blur-text">尿白蛋白排泄率(UAER)</span>为<span class="blur-text">30~299mg/d</span>或检测随机尿的<span class="blur-text">尿白蛋白肌酐比(UACR)</span>为<span class="blur-text">30~299mg/g</span>。</td>
+                            <td>17.. <strong>糖尿病肾病的分期</strong><br>T1DM所致肾损害的发生、发展可分五期，T2DM导致的肾损害也参考该分期。<br>①I期：<span class="answer-text">肾小球超滤过期</span>，肾体积增大，肾小球入球小动脉扩张，肾小球内压增加，<span class="answer-text">肾小球滤过率(GFR)</span>明显升高。<br>②II期：<span class="answer-text">间歇性微量白蛋白尿期</span>，患者休息时尿白蛋白排泄正常，运动后、应激状态可增高。<br>③III期：<span class="answer-text">早期糖尿病肾病期</span>，以持续性微量白蛋白尿为标志，<span class="answer-text">尿白蛋白排泄率(UAER)</span>为<span class="answer-text">30~299mg/d</span>或检测随机尿的<span class="answer-text">尿白蛋白肌酐比(UACR)</span>为<span class="answer-text">30~299mg/g</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>糖尿病肾病的分期(续)</strong><br>④IV期：<span class="blur-text">临床糖尿病肾病期</span>，<span class="blur-text">显性蛋白尿</span>，UAER≥<span class="blur-text">300mg/d</span>，UACR为≥<span class="blur-text">300mg/g</span>，GFR下降；可伴有<span class="blur-text">水肿和高血压</span>，肾功能逐渐减退；部分可表现为<span class="blur-text">肾病综合征</span>。<br>⑤V期：<span class="blur-text">肾衰竭期</span>，UAER降低，<span class="blur-text">血肌酐升高</span>，血压升高。</td>
+                            <td>18.. <strong>糖尿病肾病的分期(续)</strong><br>④IV期：<span class="answer-text">临床糖尿病肾病期</span>，<span class="answer-text">显性蛋白尿</span>，UAER≥<span class="answer-text">300mg/d</span>，UACR为≥<span class="answer-text">300mg/g</span>，GFR下降；可伴有<span class="answer-text">水肿和高血压</span>，肾功能逐渐减退；部分可表现为<span class="answer-text">肾病综合征</span>。<br>⑤V期：<span class="answer-text">肾衰竭期</span>，UAER降低，<span class="answer-text">血肌酐升高</span>，血压升高。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>糖尿病视网膜病变的分期</strong><br>糖尿病视网膜改变分为六期。<br>①I期：<span class="blur-text">微血管瘤、小出血点</span>。<br>②II期：<span class="blur-text">硬性渗出</span>。<br>③III期：<span class="blur-text">棉絮状软性渗出</span>。<br>④IV期：<span class="blur-text">新生血管形成、玻璃体积血</span>。<br>⑤V期：<span class="blur-text">纤维血管增殖、玻璃体机化</span>。<br>⑥VI期：<span class="blur-text">牵拉性视网膜脱离、失明</span>。<br>其中I~III期为<span class="blur-text">非增殖期视网膜病变(NPDR)</span>，IV~VI期为<span class="blur-text">增殖期视网膜病变(PDR)</span>。PDR患者常伴有<span class="blur-text">糖尿病肾病及神经病变</span>。</td>
+                            <td>19.. <strong>糖尿病视网膜病变的分期</strong><br>糖尿病视网膜改变分为六期。<br>①I期：<span class="answer-text">微血管瘤、小出血点</span>。<br>②II期：<span class="answer-text">硬性渗出</span>。<br>③III期：<span class="answer-text">棉絮状软性渗出</span>。<br>④IV期：<span class="answer-text">新生血管形成、玻璃体积血</span>。<br>⑤V期：<span class="answer-text">纤维血管增殖、玻璃体机化</span>。<br>⑥VI期：<span class="answer-text">牵拉性视网膜脱离、失明</span>。<br>其中I~III期为<span class="answer-text">非增殖期视网膜病变(NPDR)</span>，IV~VI期为<span class="answer-text">增殖期视网膜病变(PDR)</span>。PDR患者常伴有<span class="answer-text">糖尿病肾病及神经病变</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>糖尿病综合治疗原则(五驾马车)</strong><br>①<span class="blur-text">糖尿病教育</span>。<br>②<span class="blur-text">医学营养治疗</span>。<br>③<span class="blur-text">运动治疗</span>。<br>④<span class="blur-text">药物治疗</span>。<br>⑤<span class="blur-text">血糖监测</span>。</td>
+                            <td>20.. <strong>糖尿病综合治疗原则(五驾马车)</strong><br>①<span class="answer-text">糖尿病教育</span>。<br>②<span class="answer-text">医学营养治疗</span>。<br>③<span class="answer-text">运动治疗</span>。<br>④<span class="answer-text">药物治疗</span>。<br>⑤<span class="answer-text">血糖监测</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>胰岛素治疗的适应症</strong><br>①<span class="blur-text">T1DM</span>。<br>②各种严重的糖尿病<span class="blur-text">急性或慢性并发症</span>。<br>③<span class="blur-text">手术、妊娠和分娩</span>。<br>④新诊断糖尿病且与<span class="blur-text">T1DM鉴别困难</span>者。<br>⑤新诊断的T2DM伴有明显高血糖，<span class="blur-text">HbA1c>9.0%</span>或空腹血糖><span class="blur-text">11.1mmol/L</span>者可短期应用，或在糖尿病病程中无明显诱因出现体重显著下降者。<br>⑥T2DM <span class="blur-text">β细胞功能明显减退</span>者。<br>⑦T2DM在生活方式和口服降糖药联合治疗的基础上，若血糖仍未达到控制目标，即可开始<span class="blur-text">口服降糖药和胰岛素的联合治疗</span>。<br>⑧某些<span class="blur-text">特殊类型糖尿病</span>。</td>
+                            <td>21.. <strong>胰岛素治疗的适应症</strong><br>①<span class="answer-text">T1DM</span>。<br>②各种严重的糖尿病<span class="answer-text">急性或慢性并发症</span>。<br>③<span class="answer-text">手术、妊娠和分娩</span>。<br>④新诊断糖尿病且与<span class="answer-text">T1DM鉴别困难</span>者。<br>⑤新诊断的T2DM伴有明显高血糖，<span class="answer-text">HbA1c>9.0%</span>或空腹血糖><span class="answer-text">11.1mmol/L</span>者可短期应用，或在糖尿病病程中无明显诱因出现体重显著下降者。<br>⑥T2DM <span class="answer-text">β细胞功能明显减退</span>者。<br>⑦T2DM在生活方式和口服降糖药联合治疗的基础上，若血糖仍未达到控制目标，即可开始<span class="answer-text">口服降糖药和胰岛素的联合治疗</span>。<br>⑧某些<span class="answer-text">特殊类型糖尿病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>糖尿病酮症酸中毒的治疗原则</strong><br>①<span class="blur-text">补液</span>：纠正脱水。<br>②<span class="blur-text">胰岛素</span>：控制血糖，纠正酸中毒。<br>③纠正<span class="blur-text">电解质紊乱和酸中毒</span>。<br>④<span class="blur-text">去除诱因</span>。<br>⑤<span class="blur-text">治疗并发症</span>。</td>
+                            <td>22.. <strong>糖尿病酮症酸中毒的治疗原则</strong><br>①<span class="answer-text">补液</span>：纠正脱水。<br>②<span class="answer-text">胰岛素</span>：控制血糖，纠正酸中毒。<br>③纠正<span class="answer-text">电解质紊乱和酸中毒</span>。<br>④<span class="answer-text">去除诱因</span>。<br>⑤<span class="answer-text">治疗并发症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>糖尿病肾病的治疗</strong><br>①<span class="blur-text">生活方式干预</span>。<br>②<span class="blur-text">血糖控制</span>。<br>③<span class="blur-text">血压控制</span>：<span class="blur-text">ACEI或ARB</span>治疗，<span class="blur-text">盐皮质激素受体拮抗剂</span>。<br>④<span class="blur-text">降脂治疗</span>。<br>⑤<span class="blur-text">终末期肾病</span>的治疗。</td>
+                            <td>23.. <strong>糖尿病肾病的治疗</strong><br>①<span class="answer-text">生活方式干预</span>。<br>②<span class="answer-text">血糖控制</span>。<br>③<span class="answer-text">血压控制</span>：<span class="answer-text">ACEI或ARB</span>治疗，<span class="answer-text">盐皮质激素受体拮抗剂</span>。<br>④<span class="answer-text">降脂治疗</span>。<br>⑤<span class="answer-text">终末期肾病</span>的治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>痛风的临床表现(急性关节炎期与间歇期)</strong><br>痛风的自然病程可分为<span class="blur-text">急性关节炎期</span>、<span class="blur-text">间歇期</span>、<span class="blur-text">慢性痛风石及慢性关节炎期</span>。<br>①Gout flare急性关节炎期：多<span class="blur-text">夜间起病</span>，关节<span class="blur-text">剧痛、红、肿、功能受限</span>。首次发作大多在<span class="blur-text">第一趾跖关节</span>。可伴有<span class="blur-text">发热、寒战</span>等全身症状。可伴有白细胞升高、ESR、CRP升高。发病可能的诱因有<span class="blur-text">外伤、手术、感染</span>等。<br>②Intercritical flare间歇期：可<span class="blur-text">完全无症状</span>。</td>
+                            <td>24.. <strong>痛风的临床表现(急性关节炎期与间歇期)</strong><br>痛风的自然病程可分为<span class="answer-text">急性关节炎期</span>、<span class="answer-text">间歇期</span>、<span class="answer-text">慢性痛风石及慢性关节炎期</span>。<br>①Gout flare急性关节炎期：多<span class="answer-text">夜间起病</span>，关节<span class="answer-text">剧痛、红、肿、功能受限</span>。首次发作大多在<span class="answer-text">第一趾跖关节</span>。可伴有<span class="answer-text">发热、寒战</span>等全身症状。可伴有白细胞升高、ESR、CRP升高。发病可能的诱因有<span class="answer-text">外伤、手术、感染</span>等。<br>②Intercritical flare间歇期：可<span class="answer-text">完全无症状</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>痛风的临床表现(慢性期与肾脏病变)</strong><br>③Tophus and chronic gouty arthritis痛风石及慢性关节炎期：<span class="blur-text">单钠尿酸盐</span>沉积于皮下、关节等部位形成<span class="blur-text">痛风石</span>。最典型的部位在<span class="blur-text">耳廓</span>。皮下痛风石外观：<span class="blur-text">黄白色隆起</span>，皮肤菲薄。破溃后可排出<span class="blur-text">白色粉状或糊状物</span>，较少继发感染。<br>慢性关节炎可由持续性关节肿痛、关节畸形、关节功能障碍。<br>④痛风性肾脏病变：①<span class="blur-text">慢性尿酸盐肾病</span>：尿酸盐沉积于肾脏导致。起病隐匿，早期仅表现为间歇性微量蛋白尿。进而发展为持续性蛋白尿，晚期可致肾功能不全。②<span class="blur-text">尿酸性尿路结石</span>：尿酸沉积于肾脏形成。结石小者可排出，结石大者可阻塞尿路，引起肾绞痛、血尿、排尿困难、泌尿系统感染、积水等。③<span class="blur-text">急性尿酸性肾病</span>：由于血和尿中尿酸水平急剧增加，大量尿酸盐结晶沉积于肾小管、集合管处造成急性尿路梗阻。表现为少尿、无尿、急性肾衰竭。原发型痛风中少见，多由于恶性肿瘤及其放射治疗、化疗引起。</td>
+                            <td>25.. <strong>痛风的临床表现(慢性期与肾脏病变)</strong><br>③Tophus and chronic gouty arthritis痛风石及慢性关节炎期：<span class="answer-text">单钠尿酸盐</span>沉积于皮下、关节等部位形成<span class="answer-text">痛风石</span>。最典型的部位在<span class="answer-text">耳廓</span>。皮下痛风石外观：<span class="answer-text">黄白色隆起</span>，皮肤菲薄。破溃后可排出<span class="answer-text">白色粉状或糊状物</span>，较少继发感染。<br>慢性关节炎可由持续性关节肿痛、关节畸形、关节功能障碍。<br>④痛风性肾脏病变：①<span class="answer-text">慢性尿酸盐肾病</span>：尿酸盐沉积于肾脏导致。起病隐匿，早期仅表现为间歇性微量蛋白尿。进而发展为持续性蛋白尿，晚期可致肾功能不全。②<span class="answer-text">尿酸性尿路结石</span>：尿酸沉积于肾脏形成。结石小者可排出，结石大者可阻塞尿路，引起肾绞痛、血尿、排尿困难、泌尿系统感染、积水等。③<span class="answer-text">急性尿酸性肾病</span>：由于血和尿中尿酸水平急剧增加，大量尿酸盐结晶沉积于肾小管、集合管处造成急性尿路梗阻。表现为少尿、无尿、急性肾衰竭。原发型痛风中少见，多由于恶性肿瘤及其放射治疗、化疗引起。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>痛风急性发作的治疗原则</strong><br>①<span class="blur-text">非甾体抗炎药(NSAIDS)</span>：痛风急性发作期的<span class="blur-text">一线用药</span>。<br>②<span class="blur-text">秋水仙碱</span>：急性发作时的<span class="blur-text">特效药物</span>。<br>③<span class="blur-text">糖皮质激素</span>：常用于上述药物不能耐受或无效者。</td>
+                            <td>26.. <strong>痛风急性发作的治疗原则</strong><br>①<span class="answer-text">非甾体抗炎药(NSAIDS)</span>：痛风急性发作期的<span class="answer-text">一线用药</span>。<br>②<span class="answer-text">秋水仙碱</span>：急性发作时的<span class="answer-text">特效药物</span>。<br>③<span class="answer-text">糖皮质激素</span>：常用于上述药物不能耐受或无效者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>降尿酸治疗的原则</strong><br>①<span class="blur-text">生活方式干预</span>：<span class="blur-text">低嘌呤饮食</span>、<span class="blur-text">减重</span>、<span class="blur-text">减少酒类摄入</span>、每日饮水<span class="blur-text">2000ml</span>以上。<br>②治疗合并症：<span class="blur-text">糖尿病、血脂异常、高血压、心血管疾病</span>等。<br>③药物降尿酸：<span class="blur-text">抑制尿酸生成剂</span>、<span class="blur-text">促进尿酸排泄剂</span>、<span class="blur-text">新型降尿酸药</span>。</td>
+                            <td>27.. <strong>降尿酸治疗的原则</strong><br>①<span class="answer-text">生活方式干预</span>：<span class="answer-text">低嘌呤饮食</span>、<span class="answer-text">减重</span>、<span class="answer-text">减少酒类摄入</span>、每日饮水<span class="answer-text">2000ml</span>以上。<br>②治疗合并症：<span class="answer-text">糖尿病、血脂异常、高血压、心血管疾病</span>等。<br>③药物降尿酸：<span class="answer-text">抑制尿酸生成剂</span>、<span class="answer-text">促进尿酸排泄剂</span>、<span class="answer-text">新型降尿酸药</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>骨质疏松的分类</strong><br>①原发性骨质疏松：①<span class="blur-text">绝经后骨质疏松症(I型)</span>；②<span class="blur-text">老年性骨质疏松症(II型)</span>。<br>②<span class="blur-text">继发性骨质疏松症</span>。<br>③<span class="blur-text">特发性骨质疏松症</span>。</td>
+                            <td>28.. <strong>骨质疏松的分类</strong><br>①原发性骨质疏松：①<span class="answer-text">绝经后骨质疏松症(I型)</span>；②<span class="answer-text">老年性骨质疏松症(II型)</span>。<br>②<span class="answer-text">继发性骨质疏松症</span>。<br>③<span class="answer-text">特发性骨质疏松症</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>骨质疏松症的临床表现和诊断</strong><br>①临床表现：①<span class="blur-text">疼痛</span>；②<span class="blur-text">驼背、身高变矮</span>；③<span class="blur-text">骨折</span>(脊柱、髋部、腕部)。<br>②诊断标准：图略<br>基于脆性骨折的诊断标准：①无明确暴力或具有<span class="blur-text">低能量损伤史</span>；②骨折<span class="blur-text">影像学检查</span>证据；③排除其他原因造成的骨折(如继发性骨质疏松，骨肿瘤等)。</td>
+                            <td>29.. <strong>骨质疏松症的临床表现和诊断</strong><br>①临床表现：①<span class="answer-text">疼痛</span>；②<span class="answer-text">驼背、身高变矮</span>；③<span class="answer-text">骨折</span>(脊柱、髋部、腕部)。<br>②诊断标准：图略<br>基于脆性骨折的诊断标准：①无明确暴力或具有<span class="answer-text">低能量损伤史</span>；②骨折<span class="answer-text">影像学检查</span>证据；③排除其他原因造成的骨折(如继发性骨质疏松，骨肿瘤等)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>骨质疏松症的预防</strong><br>①一级预防：具有<span class="blur-text">骨质疏松症的临床危险因素</span>，预防或延缓发展为骨质疏松。<br>②二级预防：已有<span class="blur-text">骨质疏松症或脆性骨折</span>者，预防发生骨质疏松性骨折或再次骨折。</td>
+                            <td>30.. <strong>骨质疏松症的预防</strong><br>①一级预防：具有<span class="answer-text">骨质疏松症的临床危险因素</span>，预防或延缓发展为骨质疏松。<br>②二级预防：已有<span class="answer-text">骨质疏松症或脆性骨折</span>者，预防发生骨质疏松性骨折或再次骨折。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>甲状腺癌的病理类型(乳头状癌与滤泡状腺癌)</strong><br>①乳头状癌：占成人甲状腺癌<span class="blur-text">90%</span>和儿童甲状腺癌的全部。<span class="blur-text">分化好，恶性程度低</span>。常为<span class="blur-text">多中心病灶</span>，早期<span class="blur-text">淋巴结转移</span>，但预后好。癌直径<<span class="blur-text">1cm</span>者称微小癌。光镜下：特征性表现为间质可见<span class="blur-text">同心圆状砂砾体</span>，特征性细胞核(<span class="blur-text">毛玻璃样核、核沟、核内包涵体</span>)。<span class="blur-text">根治性手术</span>。<br>②滤泡状腺癌：常见于<span class="blur-text">50岁</span>左右的中年人，有<span class="blur-text">血管侵犯</span>倾向，可经血行转移到<span class="blur-text">肺、肝、骨和神经系统</span>，预后不如乳头状癌。镜下：<span class="blur-text">侵袭性生长</span>，血管内可见瘤栓。乳头状癌和此类型称为<span class="blur-text">分化型甲状腺癌</span>。<span class="blur-text">手术+放疗</span>。</td>
+                            <td>31.. <strong>甲状腺癌的病理类型(乳头状癌与滤泡状腺癌)</strong><br>①乳头状癌：占成人甲状腺癌<span class="answer-text">90%</span>和儿童甲状腺癌的全部。<span class="answer-text">分化好，恶性程度低</span>。常为<span class="answer-text">多中心病灶</span>，早期<span class="answer-text">淋巴结转移</span>，但预后好。癌直径<<span class="answer-text">1cm</span>者称微小癌。光镜下：特征性表现为间质可见<span class="answer-text">同心圆状砂砾体</span>，特征性细胞核(<span class="answer-text">毛玻璃样核、核沟、核内包涵体</span>)。<span class="answer-text">根治性手术</span>。<br>②滤泡状腺癌：常见于<span class="answer-text">50岁</span>左右的中年人，有<span class="answer-text">血管侵犯</span>倾向，可经血行转移到<span class="answer-text">肺、肝、骨和神经系统</span>，预后不如乳头状癌。镜下：<span class="answer-text">侵袭性生长</span>，血管内可见瘤栓。乳头状癌和此类型称为<span class="answer-text">分化型甲状腺癌</span>。<span class="answer-text">手术+放疗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>甲状腺癌的病理类型(髓样癌与未分化癌)</strong><br>③髓样癌：来源于<span class="blur-text">滤泡旁降钙素分泌细胞</span>，间质内有<span class="blur-text">淀粉样物质</span>沉积，恶性程度<span class="blur-text">中等</span>，预后不如乳头状癌，但好于未分化癌。免疫组化：<span class="blur-text">降钙素阳性，甲状腺球蛋白阴性</span>。<span class="blur-text">手术</span>。<br>④未分化癌：多见于<span class="blur-text">70岁</span>左右的老人，<span class="blur-text">高度恶性</span>。早期<span class="blur-text">淋巴结转移</span>，或侵犯气管食管，常经血行转移至肺、骨。<span class="blur-text">放疗</span>。</td>
+                            <td>32.. <strong>甲状腺癌的病理类型(髓样癌与未分化癌)</strong><br>③髓样癌：来源于<span class="answer-text">滤泡旁降钙素分泌细胞</span>，间质内有<span class="answer-text">淀粉样物质</span>沉积，恶性程度<span class="answer-text">中等</span>，预后不如乳头状癌，但好于未分化癌。免疫组化：<span class="answer-text">降钙素阳性，甲状腺球蛋白阴性</span>。<span class="answer-text">手术</span>。<br>④未分化癌：多见于<span class="answer-text">70岁</span>左右的老人，<span class="answer-text">高度恶性</span>。早期<span class="answer-text">淋巴结转移</span>，或侵犯气管食管，常经血行转移至肺、骨。<span class="answer-text">放疗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>内分泌疾病的诊断</strong><br>①功能诊断：①<span class="blur-text">典型症状和体征</span>；②实验室检查及其资料分析：a.<span class="blur-text">代谢紊乱证据</span>；b.<span class="blur-text">基础激素体液浓度测定和动态功能试验</span>。<br>②定位诊断：①<span class="blur-text">影像学检查</span>，包括解剖和功能成像；②<span class="blur-text">细胞学检查</span>；③<span class="blur-text">静脉导管检查</span>；④<span class="blur-text">选择性动脉检查</span>；⑤<span class="blur-text">术中定位</span>。<br>③病因诊断：①<span class="blur-text">自身抗体检测</span>；②<span class="blur-text">白细胞染色体检查</span>；③<span class="blur-text">HLA鉴定和基因诊断</span>。</td>
+                            <td>33.. <strong>内分泌疾病的诊断</strong><br>①功能诊断：①<span class="answer-text">典型症状和体征</span>；②实验室检查及其资料分析：a.<span class="answer-text">代谢紊乱证据</span>；b.<span class="answer-text">基础激素体液浓度测定和动态功能试验</span>。<br>②定位诊断：①<span class="answer-text">影像学检查</span>，包括解剖和功能成像；②<span class="answer-text">细胞学检查</span>；③<span class="answer-text">静脉导管检查</span>；④<span class="answer-text">选择性动脉检查</span>；⑤<span class="answer-text">术中定位</span>。<br>③病因诊断：①<span class="answer-text">自身抗体检测</span>；②<span class="answer-text">白细胞染色体检查</span>；③<span class="answer-text">HLA鉴定和基因诊断</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>内分泌疾病的治疗</strong><br>①功能亢进的治疗：①<span class="blur-text">手术治疗</span>，强调多学科团队支持；②<span class="blur-text">放射和核素治疗</span>；③药物治疗：<span class="blur-text">抑制激素合成，阻断激素受体</span>；④<span class="blur-text">化学治疗</span>：包括细胞毒性和分子靶向治疗；⑤<span class="blur-text">介入治疗</span>。<br>②功能减退的治疗：①<span class="blur-text">缺乏激素的替代治疗</span>：替代缺乏的激素，部分需终身替代治疗；补充尽量模拟生理性激素分泌模式。②药物治疗：<span class="blur-text">促进激素的合成和分泌、促进激素的作用</span>。③<span class="blur-text">内分泌组织或者细胞的移植</span>。</td>
+                            <td>34.. <strong>内分泌疾病的治疗</strong><br>①功能亢进的治疗：①<span class="answer-text">手术治疗</span>，强调多学科团队支持；②<span class="answer-text">放射和核素治疗</span>；③药物治疗：<span class="answer-text">抑制激素合成，阻断激素受体</span>；④<span class="answer-text">化学治疗</span>：包括细胞毒性和分子靶向治疗；⑤<span class="answer-text">介入治疗</span>。<br>②功能减退的治疗：①<span class="answer-text">缺乏激素的替代治疗</span>：替代缺乏的激素，部分需终身替代治疗；补充尽量模拟生理性激素分泌模式。②药物治疗：<span class="answer-text">促进激素的合成和分泌、促进激素的作用</span>。③<span class="answer-text">内分泌组织或者细胞的移植</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>含氮激素分泌细胞的结构特点</strong><br>肾上腺皮质的球状带、束状带和网状带的细胞、卵巢黄体细胞、睾丸间质细胞等都能分泌<span class="blur-text">类固醇激素</span>。这类细胞超微结构的共同点：胞质内有丰富的<span class="blur-text">滑面内质网</span>、较多<span class="blur-text">管状嵴的线粒体</span>和<span class="blur-text">脂滴</span>，无分泌颗粒。这样的细胞在HE染色切片中，胞质呈<span class="blur-text">嗜酸性或泡沫状</span>。</td>
+                            <td>35.. <strong>含氮激素分泌细胞的结构特点</strong><br>肾上腺皮质的球状带、束状带和网状带的细胞、卵巢黄体细胞、睾丸间质细胞等都能分泌<span class="answer-text">类固醇激素</span>。这类细胞超微结构的共同点：胞质内有丰富的<span class="answer-text">滑面内质网</span>、较多<span class="answer-text">管状嵴的线粒体</span>和<span class="answer-text">脂滴</span>，无分泌颗粒。这样的细胞在HE染色切片中，胞质呈<span class="answer-text">嗜酸性或泡沫状</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>甲状腺激素的储存和释放过程</strong><br>甲状腺激素的形成经过<span class="blur-text">合成、储存、碘化、重吸收、分解和释放</span>等过程。<br>①滤泡上皮细胞从血中摄取<span class="blur-text">氨基酸</span>，在<span class="blur-text">粗面内质网</span>合成甲状腺球蛋白的前体，继而在<span class="blur-text">高尔基复合体</span>加糖并浓缩形成分泌颗粒，再以<span class="blur-text">胞吐</span>方式排放到滤泡腔内储存。<br>②滤泡上皮细胞能从血中摄取<span class="blur-text">I-</span>，它在<span class="blur-text">过氧化物酶</span>的作用下活化，再进入滤泡腔与甲状腺球蛋白结合成<span class="blur-text">碘化的甲状腺球蛋白</span>。</td>
+                            <td>36.. <strong>甲状腺激素的储存和释放过程</strong><br>甲状腺激素的形成经过<span class="answer-text">合成、储存、碘化、重吸收、分解和释放</span>等过程。<br>①滤泡上皮细胞从血中摄取<span class="answer-text">氨基酸</span>，在<span class="answer-text">粗面内质网</span>合成甲状腺球蛋白的前体，继而在<span class="answer-text">高尔基复合体</span>加糖并浓缩形成分泌颗粒，再以<span class="answer-text">胞吐</span>方式排放到滤泡腔内储存。<br>②滤泡上皮细胞能从血中摄取<span class="answer-text">I-</span>，它在<span class="answer-text">过氧化物酶</span>的作用下活化，再进入滤泡腔与甲状腺球蛋白结合成<span class="answer-text">碘化的甲状腺球蛋白</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>甲状腺激素的储存和释放过程(续)</strong><br>③滤泡上皮细胞在腺垂体分泌的<span class="blur-text">促甲状腺激素</span>的作用下，以<span class="blur-text">胞吞</span>方式将滤泡腔内的碘化甲状腺球蛋白再吸收入胞质，成为<span class="blur-text">胶质小泡</span>。<br>④胶质小泡与<span class="blur-text">溶酶体</span>融合，小泡内的甲状腺球蛋白被<span class="blur-text">水解酶</span>分解形成大量<span class="blur-text">四碘碘甲腺原氨酸(T4，即甲状腺素)</span>和少量<span class="blur-text">三碘甲腺原氨酸(T3)</span>。<br>⑤T3和T4经细胞基底部释放入<span class="blur-text">毛细血管</span>内。</td>
+                            <td>37.. <strong>甲状腺激素的储存和释放过程(续)</strong><br>③滤泡上皮细胞在腺垂体分泌的<span class="answer-text">促甲状腺激素</span>的作用下，以<span class="answer-text">胞吞</span>方式将滤泡腔内的碘化甲状腺球蛋白再吸收入胞质，成为<span class="answer-text">胶质小泡</span>。<br>④胶质小泡与<span class="answer-text">溶酶体</span>融合，小泡内的甲状腺球蛋白被<span class="answer-text">水解酶</span>分解形成大量<span class="answer-text">四碘碘甲腺原氨酸(T4，即甲状腺素)</span>和少量<span class="answer-text">三碘甲腺原氨酸(T3)</span>。<br>⑤T3和T4经细胞基底部释放入<span class="answer-text">毛细血管</span>内。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>抗利尿激素和催产素的合成与释放</strong><br>下丘脑<span class="blur-text">视上核、室旁核</span>的神经内分泌细胞合成<span class="blur-text">抗利尿素和催产素</span>。分泌颗粒沿细胞的<span class="blur-text">轴突</span>运输到神经部，轴突沿途分泌颗粒聚集呈<span class="blur-text">串珠状膨大</span>。分泌颗粒沿轴突运送到神经部储存，进而释放入<span class="blur-text">窦状毛细血管</span>内。光镜下可见神经部内有大小不等的<span class="blur-text">嗜酸性团块</span>，称<span class="blur-text">赫令体</span>。神经部内的胶质细胞又称<span class="blur-text">垂体细胞</span>，具有支持和营养神经纤维的作用。</td>
+                            <td>38.. <strong>抗利尿激素和催产素的合成与释放</strong><br>下丘脑<span class="answer-text">视上核、室旁核</span>的神经内分泌细胞合成<span class="answer-text">抗利尿素和催产素</span>。分泌颗粒沿细胞的<span class="answer-text">轴突</span>运输到神经部，轴突沿途分泌颗粒聚集呈<span class="answer-text">串珠状膨大</span>。分泌颗粒沿轴突运送到神经部储存，进而释放入<span class="answer-text">窦状毛细血管</span>内。光镜下可见神经部内有大小不等的<span class="answer-text">嗜酸性团块</span>，称<span class="answer-text">赫令体</span>。神经部内的胶质细胞又称<span class="answer-text">垂体细胞</span>，具有支持和营养神经纤维的作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>下丘脑与垂体之间的功能联系</strong><br>①下丘脑-神经垂体系统是通过<span class="blur-text">下丘脑垂体束</span>联系的。下丘脑的视上核、室旁核的大细胞肽能神经元合成的<span class="blur-text">ADH和催产素</span>，经下丘脑垂体束的<span class="blur-text">轴浆运输</span>到达神经垂体储存。<br>②下丘脑-腺垂体系统是通过<span class="blur-text">垂体门脉系统</span>联系的。下丘脑的"促垂体区"合成和分泌的<span class="blur-text">下丘脑调节肽</span>沿垂体门脉系统到达腺垂体，调节腺垂体激素的合成与释放。</td>
+                            <td>39.. <strong>下丘脑与垂体之间的功能联系</strong><br>①下丘脑-神经垂体系统是通过<span class="answer-text">下丘脑垂体束</span>联系的。下丘脑的视上核、室旁核的大细胞肽能神经元合成的<span class="answer-text">ADH和催产素</span>，经下丘脑垂体束的<span class="answer-text">轴浆运输</span>到达神经垂体储存。<br>②下丘脑-腺垂体系统是通过<span class="answer-text">垂体门脉系统</span>联系的。下丘脑的"促垂体区"合成和分泌的<span class="answer-text">下丘脑调节肽</span>沿垂体门脉系统到达腺垂体，调节腺垂体激素的合成与释放。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>生长激素的生理作用及其分泌调节</strong><br>①生理作用：促进机体<span class="blur-text">生长发育</span>，特别是<span class="blur-text">骨骼和肌肉组织</span>的生长。促进机体<span class="blur-text">蛋白质的合成</span>，抑制<span class="blur-text">蛋白质分解</span>。促进<span class="blur-text">脂肪分解</span>，抑制<span class="blur-text">糖的利用</span>，<span class="blur-text">升高血糖</span>。<br>②分泌调节：受下丘脑<span class="blur-text">生长素释放激素</span>和<span class="blur-text">生长抑素</span>双重调控，<span class="blur-text">胰岛素样生长因子IGF-1</span>负反馈调节GH的分泌，<span class="blur-text">慢波睡眠期</span>内GH分泌明显增多，<span class="blur-text">运动、低血糖、高蛋白饮食</span>刺激GH的分泌，<span class="blur-text">甲状腺激素、雌激素、睾酮</span>能促进GH分泌。</td>
+                            <td>40.. <strong>生长激素的生理作用及其分泌调节</strong><br>①生理作用：促进机体<span class="answer-text">生长发育</span>，特别是<span class="answer-text">骨骼和肌肉组织</span>的生长。促进机体<span class="answer-text">蛋白质的合成</span>，抑制<span class="answer-text">蛋白质分解</span>。促进<span class="answer-text">脂肪分解</span>，抑制<span class="answer-text">糖的利用</span>，<span class="answer-text">升高血糖</span>。<br>②分泌调节：受下丘脑<span class="answer-text">生长素释放激素</span>和<span class="answer-text">生长抑素</span>双重调控，<span class="answer-text">胰岛素样生长因子IGF-1</span>负反馈调节GH的分泌，<span class="answer-text">慢波睡眠期</span>内GH分泌明显增多，<span class="answer-text">运动、低血糖、高蛋白饮食</span>刺激GH的分泌，<span class="answer-text">甲状腺激素、雌激素、睾酮</span>能促进GH分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>甲状腺激素的生理作用</strong><br>①促进机体<span class="blur-text">新陈代谢</span>，使<span class="blur-text">基础代谢升高</span>，<span class="blur-text">产热量增加</span>，<span class="blur-text">耗氧量增加</span>。<br>②对物质代谢的作用：促进<span class="blur-text">糖的吸收</span>，小剂量促进<span class="blur-text">肝糖原合成</span>，大剂量促进<span class="blur-text">肝糖原分解</span>，加强外周组织对糖的利用。生理剂量促进<span class="blur-text">蛋白质合成</span>，大剂量促进<span class="blur-text">蛋白质分解</span>。促进<span class="blur-text">脂肪氧化分解</span>。<br>③促进机体<span class="blur-text">生长发育</span>，促进<span class="blur-text">神经系统的发育和分化</span>。<br>④其他：<span class="blur-text">兴奋中枢神经系统</span>；使<span class="blur-text">心率加快，心缩力增强，心输出量增加</span>。</td>
+                            <td>41.. <strong>甲状腺激素的生理作用</strong><br>①促进机体<span class="answer-text">新陈代谢</span>，使<span class="answer-text">基础代谢升高</span>，<span class="answer-text">产热量增加</span>，<span class="answer-text">耗氧量增加</span>。<br>②对物质代谢的作用：促进<span class="answer-text">糖的吸收</span>，小剂量促进<span class="answer-text">肝糖原合成</span>，大剂量促进<span class="answer-text">肝糖原分解</span>，加强外周组织对糖的利用。生理剂量促进<span class="answer-text">蛋白质合成</span>，大剂量促进<span class="answer-text">蛋白质分解</span>。促进<span class="answer-text">脂肪氧化分解</span>。<br>③促进机体<span class="answer-text">生长发育</span>，促进<span class="answer-text">神经系统的发育和分化</span>。<br>④其他：<span class="answer-text">兴奋中枢神经系统</span>；使<span class="answer-text">心率加快，心缩力增强，心输出量增加</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>甲状腺激素分泌调节</strong><br>①下丘脑-腺垂体对甲状腺的调节：腺垂体分泌的<span class="blur-text">TSH</span>是调节甲状腺分泌的主要激素。TSH的作用是促进甲状腺激素的<span class="blur-text">合成与释放</span>；刺激甲状腺腺泡细胞<span class="blur-text">增生，腺体增大</span>。腺垂体TSH分泌受下丘脑<span class="blur-text">TRH</span>控制，TRH通过垂体门脉作用于腺垂体，促进TSH释放。<br>②甲状腺激素的反馈调节：当血中游离的<span class="blur-text">T3、T4</span>浓度降低时，对腺垂体抑制减弱，使<span class="blur-text">TSH分泌增多</span>，对下丘脑TRH的抑制也减弱，TRH分泌增多，使T3、T4合成和释放增多。反之，当血中游离的T3、T4浓度增高时，抑制下丘脑、腺垂体，使TSH分泌减少，血中T3、T4浓度降至正常水平。<br>③甲状腺的自身调节：甲状腺本身是有适应<span class="blur-text">碘的供应变化</span>而调节自身对碘的摄取以及合成与释放甲状腺激素的能力。<br>④自主神经的影响：<span class="blur-text">交感神经</span>兴奋可使甲状腺激素合成与释放增加，<span class="blur-text">副交感神经</span>兴奋可能抑制甲状腺激素的合成与释放。</td>
+                            <td>42.. <strong>甲状腺激素分泌调节</strong><br>①下丘脑-腺垂体对甲状腺的调节：腺垂体分泌的<span class="answer-text">TSH</span>是调节甲状腺分泌的主要激素。TSH的作用是促进甲状腺激素的<span class="answer-text">合成与释放</span>；刺激甲状腺腺泡细胞<span class="answer-text">增生，腺体增大</span>。腺垂体TSH分泌受下丘脑<span class="answer-text">TRH</span>控制，TRH通过垂体门脉作用于腺垂体，促进TSH释放。<br>②甲状腺激素的反馈调节：当血中游离的<span class="answer-text">T3、T4</span>浓度降低时，对腺垂体抑制减弱，使<span class="answer-text">TSH分泌增多</span>，对下丘脑TRH的抑制也减弱，TRH分泌增多，使T3、T4合成和释放增多。反之，当血中游离的T3、T4浓度增高时，抑制下丘脑、腺垂体，使TSH分泌减少，血中T3、T4浓度降至正常水平。<br>③甲状腺的自身调节：甲状腺本身是有适应<span class="answer-text">碘的供应变化</span>而调节自身对碘的摄取以及合成与释放甲状腺激素的能力。<br>④自主神经的影响：<span class="answer-text">交感神经</span>兴奋可使甲状腺激素合成与释放增加，<span class="answer-text">副交感神经</span>兴奋可能抑制甲状腺激素的合成与释放。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>地方性甲状腺肿的发病机制</strong><br><span class="blur-text">碘</span>是合成甲状腺激素的不可缺少的重要原料，食物中长期<span class="blur-text">缺碘</span>可引起T3、T4合成减少。血中T3、T4减少，它对腺垂体TSH分泌的<span class="blur-text">反馈抑制作用减弱</span>，使<span class="blur-text">TSH分泌增多</span>，TSH分泌增多就刺激甲状腺腺泡细胞<span class="blur-text">增生，腺体增大</span>。因此，食物中长期缺碘，可以引起<span class="blur-text">甲状腺肿大</span>。</td>
+                            <td>43.. <strong>地方性甲状腺肿的发病机制</strong><br><span class="answer-text">碘</span>是合成甲状腺激素的不可缺少的重要原料，食物中长期<span class="answer-text">缺碘</span>可引起T3、T4合成减少。血中T3、T4减少，它对腺垂体TSH分泌的<span class="answer-text">反馈抑制作用减弱</span>，使<span class="answer-text">TSH分泌增多</span>，TSH分泌增多就刺激甲状腺腺泡细胞<span class="answer-text">增生，腺体增大</span>。因此，食物中长期缺碘，可以引起<span class="answer-text">甲状腺肿大</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>胰岛素的生理作用及其分泌调节</strong><br>①生理作用：对糖代谢的调节：促进组织细胞对<span class="blur-text">葡萄糖的摄取和利用</span>，加速葡萄糖合成<span class="blur-text">糖原</span>，并抑制<span class="blur-text">糖异生</span>，促进葡萄糖转变为<span class="blur-text">脂肪</span>，使血糖水平<span class="blur-text">下降</span>。促进<span class="blur-text">脂肪合成</span>，减少<span class="blur-text">脂肪分解</span>。对蛋白质的调节：促进<span class="blur-text">蛋白质的合成过程</span>，抑制<span class="blur-text">蛋白质分解</span>。<br>②分泌调节：<span class="blur-text">血糖浓度升高</span>，血中<span class="blur-text">氨基酸、脂肪酸、酮体</span>升高均可促进胰岛素分泌。<span class="blur-text">胰高血糖素、生长素、糖皮质激素、甲状腺激素</span>可以通过升高血糖而间接刺激胰岛素分泌，<span class="blur-text">胃肠道激素</span>促进胰岛素分泌。<span class="blur-text">迷走神经</span>促进胰岛素分泌。</td>
+                            <td>44.. <strong>胰岛素的生理作用及其分泌调节</strong><br>①生理作用：对糖代谢的调节：促进组织细胞对<span class="answer-text">葡萄糖的摄取和利用</span>，加速葡萄糖合成<span class="answer-text">糖原</span>，并抑制<span class="answer-text">糖异生</span>，促进葡萄糖转变为<span class="answer-text">脂肪</span>，使血糖水平<span class="answer-text">下降</span>。促进<span class="answer-text">脂肪合成</span>，减少<span class="answer-text">脂肪分解</span>。对蛋白质的调节：促进<span class="answer-text">蛋白质的合成过程</span>，抑制<span class="answer-text">蛋白质分解</span>。<br>②分泌调节：<span class="answer-text">血糖浓度升高</span>，血中<span class="answer-text">氨基酸、脂肪酸、酮体</span>升高均可促进胰岛素分泌。<span class="answer-text">胰高血糖素、生长素、糖皮质激素、甲状腺激素</span>可以通过升高血糖而间接刺激胰岛素分泌，<span class="answer-text">胃肠道激素</span>促进胰岛素分泌。<span class="answer-text">迷走神经</span>促进胰岛素分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>肾上腺皮质激素的生理作用</strong><br>分泌的激素：①<span class="blur-text">盐皮质激素(醛固酮)</span>；②<span class="blur-text">糖皮质激素(皮质醇)</span>；③<span class="blur-text">性激素</span>(少量雄激素和雌激素)。<br>①对物质代谢的影响：促进<span class="blur-text">肝糖原异生</span>，增加<span class="blur-text">糖原贮存</span>；具有<span class="blur-text">抗胰岛素作用</span>，使外周组织对糖的摄取和利用减少，<span class="blur-text">血糖浓度升高</span>。促进<span class="blur-text">蛋白质分解</span>，抑制<span class="blur-text">蛋白质合成</span>。促进<span class="blur-text">脂肪分解</span>，增加脂肪酸在肝内的氧化过程，有利于糖异生作用。</td>
+                            <td>45.. <strong>肾上腺皮质激素的生理作用</strong><br>分泌的激素：①<span class="answer-text">盐皮质激素(醛固酮)</span>；②<span class="answer-text">糖皮质激素(皮质醇)</span>；③<span class="answer-text">性激素</span>(少量雄激素和雌激素)。<br>①对物质代谢的影响：促进<span class="answer-text">肝糖原异生</span>，增加<span class="answer-text">糖原贮存</span>；具有<span class="answer-text">抗胰岛素作用</span>，使外周组织对糖的摄取和利用减少，<span class="answer-text">血糖浓度升高</span>。促进<span class="answer-text">蛋白质分解</span>，抑制<span class="answer-text">蛋白质合成</span>。促进<span class="answer-text">脂肪分解</span>，增加脂肪酸在肝内的氧化过程，有利于糖异生作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46.. <strong>肾上腺皮质激素的生理作用(续)</strong><br>②对水盐代谢的影响：有较弱的<span class="blur-text">保钠排钾</span>作用，皮质醇还可以降低肾小球<span class="blur-text">入球血管阻力</span>，增加<span class="blur-text">肾小球血浆流量</span>而使肾小球滤过率增加，有利于水的排出。<br>③糖皮质激素可使血中<span class="blur-text">红细胞、血小板、中性粒细胞</span>的数量增多，而使<span class="blur-text">淋巴细胞和嗜酸性粒细胞</span>减少。<br>④糖皮质激素能增加<span class="blur-text">血管平滑肌对儿茶酚胺的敏感性</span>，有利于提高血管的张力和维持血压。<br>⑤在应激反应中的作用：应激反应是一种以<span class="blur-text">ACTH和糖皮质激素分泌增加</span>为主，产生一系列非特异性防御性反应，提高机体对应激刺激的耐受能力和生存能力。</td>
+                            <td>46.. <strong>肾上腺皮质激素的生理作用(续)</strong><br>②对水盐代谢的影响：有较弱的<span class="answer-text">保钠排钾</span>作用，皮质醇还可以降低肾小球<span class="answer-text">入球血管阻力</span>，增加<span class="answer-text">肾小球血浆流量</span>而使肾小球滤过率增加，有利于水的排出。<br>③糖皮质激素可使血中<span class="answer-text">红细胞、血小板、中性粒细胞</span>的数量增多，而使<span class="answer-text">淋巴细胞和嗜酸性粒细胞</span>减少。<br>④糖皮质激素能增加<span class="answer-text">血管平滑肌对儿茶酚胺的敏感性</span>，有利于提高血管的张力和维持血压。<br>⑤在应激反应中的作用：应激反应是一种以<span class="answer-text">ACTH和糖皮质激素分泌增加</span>为主，产生一系列非特异性防御性反应，提高机体对应激刺激的耐受能力和生存能力。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47.. <strong>糖皮质激素分泌调节</strong><br>①糖皮质激素的分泌受腺垂体<span class="blur-text">ACTH</span>的调节，ACTH不但刺激肾上腺皮质束状带分泌糖皮质激素，也刺激束状带与网状带细胞的<span class="blur-text">生长发育</span>。ACTH的分泌受下丘脑<span class="blur-text">CRH</span>的控制与糖皮质激素的反馈调节。CRH作用于腺垂体促肾上腺皮质激素细胞，促进ACTH的合成与释放增多，使糖皮质激素分泌增多。<br>②当血中糖皮质激素浓度升高时，又可<span class="blur-text">抑制下丘脑和腺垂体</span>，使下丘脑CRH的释放减少，作用于腺垂体使ACTH合成释放减少，糖皮质激素分泌减少，血中糖皮质激素浓度降至正常水平。<br>③所以，<span class="blur-text">下丘脑-腺垂体-肾上腺皮质轴</span>可维持血中糖皮质激素的相对稳定，以适应机体不同状态的变化。</td>
+                            <td>47.. <strong>糖皮质激素分泌调节</strong><br>①糖皮质激素的分泌受腺垂体<span class="answer-text">ACTH</span>的调节，ACTH不但刺激肾上腺皮质束状带分泌糖皮质激素，也刺激束状带与网状带细胞的<span class="answer-text">生长发育</span>。ACTH的分泌受下丘脑<span class="answer-text">CRH</span>的控制与糖皮质激素的反馈调节。CRH作用于腺垂体促肾上腺皮质激素细胞，促进ACTH的合成与释放增多，使糖皮质激素分泌增多。<br>②当血中糖皮质激素浓度升高时，又可<span class="answer-text">抑制下丘脑和腺垂体</span>，使下丘脑CRH的释放减少，作用于腺垂体使ACTH合成释放减少，糖皮质激素分泌减少，血中糖皮质激素浓度降至正常水平。<br>③所以，<span class="answer-text">下丘脑-腺垂体-肾上腺皮质轴</span>可维持血中糖皮质激素的相对稳定，以适应机体不同状态的变化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48.. <strong>长期大量使用糖皮质激素为何须逐渐减量停药</strong><br>长期使用糖皮质激素时，由于这些激素对腺垂体及下丘脑有强大的<span class="blur-text">抑制作用</span>，<span class="blur-text">ACTH的分泌受到抑制</span>，病人肾上腺皮质渐趋<span class="blur-text">萎缩</span>，肾上腺皮质激素分泌不足。如果骤然停药将引起<span class="blur-text">肾上腺功能不全</span>，引起<span class="blur-text">低血糖、低血钠及血压下降</span>等严重情况，因此，应逐渐减量，使病人的肾上腺皮质功能逐渐恢复正常。</td>
+                            <td>48.. <strong>长期大量使用糖皮质激素为何须逐渐减量停药</strong><br>长期使用糖皮质激素时，由于这些激素对腺垂体及下丘脑有强大的<span class="answer-text">抑制作用</span>，<span class="answer-text">ACTH的分泌受到抑制</span>，病人肾上腺皮质渐趋<span class="answer-text">萎缩</span>，肾上腺皮质激素分泌不足。如果骤然停药将引起<span class="answer-text">肾上腺功能不全</span>，引起<span class="answer-text">低血糖、低血钠及血压下降</span>等严重情况，因此，应逐渐减量，使病人的肾上腺皮质功能逐渐恢复正常。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49.. <strong>弥漫性毒性甲状腺肿的主要病变特点</strong><br>①肉眼观：甲状腺<span class="blur-text">弥漫对称增大</span>，约为正常的<span class="blur-text">2~4倍</span>，表面光滑，较软，切面灰红呈<span class="blur-text">分叶状</span>，胶质少。<br>②光镜下：①滤泡上皮增生呈<span class="blur-text">高柱状</span>，有的呈<span class="blur-text">乳头状增生</span>，并有<span class="blur-text">小滤泡形成</span>；②滤泡腔内胶质<span class="blur-text">稀薄</span>，滤泡周边胶质出现许多大小不一的<span class="blur-text">上皮细胞吸收空泡</span>；③间质<span class="blur-text">血管丰富、充血</span>，<span class="blur-text">淋巴组织增生</span>。<br>③电镜下：滤泡上皮细胞质内<span class="blur-text">内质网丰富、扩张</span>，<span class="blur-text">高尔基体肥大</span>，<span class="blur-text">核糖体增多</span>，分泌活跃。</td>
+                            <td>49.. <strong>弥漫性毒性甲状腺肿的主要病变特点</strong><br>①肉眼观：甲状腺<span class="answer-text">弥漫对称增大</span>，约为正常的<span class="answer-text">2~4倍</span>，表面光滑，较软，切面灰红呈<span class="answer-text">分叶状</span>，胶质少。<br>②光镜下：①滤泡上皮增生呈<span class="answer-text">高柱状</span>，有的呈<span class="answer-text">乳头状增生</span>，并有<span class="answer-text">小滤泡形成</span>；②滤泡腔内胶质<span class="answer-text">稀薄</span>，滤泡周边胶质出现许多大小不一的<span class="answer-text">上皮细胞吸收空泡</span>；③间质<span class="answer-text">血管丰富、充血</span>，<span class="answer-text">淋巴组织增生</span>。<br>③电镜下：滤泡上皮细胞质内<span class="answer-text">内质网丰富、扩张</span>，<span class="answer-text">高尔基体肥大</span>，<span class="answer-text">核糖体增多</span>，分泌活跃。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50.. <strong>结节性甲状腺肿与甲状腺瘤的区别</strong><br>①前者常为<span class="blur-text">多发结节</span>、<span class="blur-text">无完整包膜</span>；后者一般<span class="blur-text">单发</span>，有<span class="blur-text">完整包膜</span>。<br>②前者滤泡大小<span class="blur-text">不一致</span>，一般比正常的<span class="blur-text">大</span>；后者则相反。<br>③前者周围甲状腺组织<span class="blur-text">无压迫现象</span>，邻近甲状腺内与结节内有<span class="blur-text">相似病变</span>；后者周围甲状腺有<span class="blur-text">压迫现象</span>，周围和远处甲状腺组织均<span class="blur-text">正常</span>。</td>
+                            <td>50.. <strong>结节性甲状腺肿与甲状腺瘤的区别</strong><br>①前者常为<span class="answer-text">多发结节</span>、<span class="answer-text">无完整包膜</span>；后者一般<span class="answer-text">单发</span>，有<span class="answer-text">完整包膜</span>。<br>②前者滤泡大小<span class="answer-text">不一致</span>，一般比正常的<span class="answer-text">大</span>；后者则相反。<br>③前者周围甲状腺组织<span class="answer-text">无压迫现象</span>，邻近甲状腺内与结节内有<span class="answer-text">相似病变</span>；后者周围甲状腺有<span class="answer-text">压迫现象</span>，周围和远处甲状腺组织均<span class="answer-text">正常</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51.. <strong>糖皮质激素的不良反应(停药反应)</strong><br>①肾上腺皮质功能不全：<br>原因：负反馈抑制<span class="blur-text">HPA轴</span>，致<span class="blur-text">肾上腺皮质萎缩</span>。<br>表现：遇应激发<span class="blur-text">肾上腺皮质危象</span>，需抢救。<br>措施：①<span class="blur-text">隔日疗法</span>，隔日早晨8时1次给予2日药量，负反馈抑制小；②<span class="blur-text">减慢减量停药</span>；③遇应激及时给予<span class="blur-text">足量糖皮质激素</span>。<br>②反跳现象：突然停药或减量过快致<span class="blur-text">原病复发或加重</span>的现象。<br>原因：对激素产生<span class="blur-text">依赖性</span>或病情尚未完全控制。<br>措施：<span class="blur-text">缓慢减量停药</span>。</td>
+                            <td>51.. <strong>糖皮质激素的不良反应(停药反应)</strong><br>①肾上腺皮质功能不全：<br>原因：负反馈抑制<span class="answer-text">HPA轴</span>，致<span class="answer-text">肾上腺皮质萎缩</span>。<br>表现：遇应激发<span class="answer-text">肾上腺皮质危象</span>，需抢救。<br>措施：①<span class="answer-text">隔日疗法</span>，隔日早晨8时1次给予2日药量，负反馈抑制小；②<span class="answer-text">减慢减量停药</span>；③遇应激及时给予<span class="answer-text">足量糖皮质激素</span>。<br>②反跳现象：突然停药或减量过快致<span class="answer-text">原病复发或加重</span>的现象。<br>原因：对激素产生<span class="answer-text">依赖性</span>或病情尚未完全控制。<br>措施：<span class="answer-text">缓慢减量停药</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52.. <strong>糖皮质激素的禁忌症</strong><br>①<span class="blur-text">严重精神病和癫痫</span>。<br>②<span class="blur-text">活动性消化性溃疡</span>。<br>③<span class="blur-text">骨折，创伤修复期，角膜溃疡</span>。<br>④<span class="blur-text">肾上腺皮质功能亢进症</span>。<br>⑤<span class="blur-text">严重高血压，糖尿病，孕妇</span>。<br>⑥抗菌药不能控制的感染，如<span class="blur-text">水痘，麻疹，真菌</span>。</td>
+                            <td>52.. <strong>糖皮质激素的禁忌症</strong><br>①<span class="answer-text">严重精神病和癫痫</span>。<br>②<span class="answer-text">活动性消化性溃疡</span>。<br>③<span class="answer-text">骨折，创伤修复期，角膜溃疡</span>。<br>④<span class="answer-text">肾上腺皮质功能亢进症</span>。<br>⑤<span class="answer-text">严重高血压，糖尿病，孕妇</span>。<br>⑥抗菌药不能控制的感染，如<span class="answer-text">水痘，麻疹，真菌</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>地塞米松与阿司匹林的抗炎作用比较(原理与环节)</strong><br>①作用原理：①地塞米松与其<span class="blur-text">受体</span>结合形成复合物，进入<span class="blur-text">细胞核</span>，与特定<span class="blur-text">DNA序列</span>结合，影响其<span class="blur-text">转录过程</span>，经翻译合成特异性诱导蛋白质，抑制炎症过程的某些环节，如对<span class="blur-text">细胞因子、炎症介质及一氧化氮合酶</span>等的影响等。②阿司匹林抑制合成前列腺素所必需的<span class="blur-text">环氧酶</span>使<span class="blur-text">前列腺素(PG)</span>及其合成减少。<br>②作用环节：①地塞米松在炎症早期可缓解<span class="blur-text">红、肿、热、痛</span>，抑制<span class="blur-text">致炎物质释放</span>，减轻<span class="blur-text">血管扩张、渗出和炎症细胞吞噬和浸润</span>，炎症后期可防止<span class="blur-text">粘连及瘢痕形成</span>，抑制<span class="blur-text">肉芽组织增生和胶原蛋白</span>等合成。②阿司匹林在炎症早期可缓解红、肿、热、痛，但对炎症后期的<span class="blur-text">瘢痕形成</span>没有影响。<br>③作用后果：①地塞米松可缓解红、肿、热、痛，可防止粘连及瘢痕形成，抑制肉芽组织增生。②阿司匹林可缓解红、肿、热、痛。</td>
+                            <td>53.. <strong>地塞米松与阿司匹林的抗炎作用比较(原理与环节)</strong><br>①作用原理：①地塞米松与其<span class="answer-text">受体</span>结合形成复合物，进入<span class="answer-text">细胞核</span>，与特定<span class="answer-text">DNA序列</span>结合，影响其<span class="answer-text">转录过程</span>，经翻译合成特异性诱导蛋白质，抑制炎症过程的某些环节，如对<span class="answer-text">细胞因子、炎症介质及一氧化氮合酶</span>等的影响等。②阿司匹林抑制合成前列腺素所必需的<span class="answer-text">环氧酶</span>使<span class="answer-text">前列腺素(PG)</span>及其合成减少。<br>②作用环节：①地塞米松在炎症早期可缓解<span class="answer-text">红、肿、热、痛</span>，抑制<span class="answer-text">致炎物质释放</span>，减轻<span class="answer-text">血管扩张、渗出和炎症细胞吞噬和浸润</span>，炎症后期可防止<span class="answer-text">粘连及瘢痕形成</span>，抑制<span class="answer-text">肉芽组织增生和胶原蛋白</span>等合成。②阿司匹林在炎症早期可缓解红、肿、热、痛，但对炎症后期的<span class="answer-text">瘢痕形成</span>没有影响。<br>③作用后果：①地塞米松可缓解红、肿、热、痛，可防止粘连及瘢痕形成，抑制肉芽组织增生。②阿司匹林可缓解红、肿、热、痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>口服降血糖药物的类型</strong><br>①<span class="blur-text">磺酰脲类</span>：甲苯磺丁脲、氯磺丙脲、格列齐特、格列喹酮。<br>②<span class="blur-text">双胍类</span>：二甲双胍、苯乙双胍。<br>③<span class="blur-text">α-糖苷酶抑制药</span>：阿卡波糖。<br>④<span class="blur-text">胰岛素增敏药</span>：罗格列酮、吡格列酮。<br>⑤<span class="blur-text">瑞格列奈</span>。</td>
+                            <td>54.. <strong>口服降血糖药物的类型</strong><br>①<span class="answer-text">磺酰脲类</span>：甲苯磺丁脲、氯磺丙脲、格列齐特、格列喹酮。<br>②<span class="answer-text">双胍类</span>：二甲双胍、苯乙双胍。<br>③<span class="answer-text">α-糖苷酶抑制药</span>：阿卡波糖。<br>④<span class="answer-text">胰岛素增敏药</span>：罗格列酮、吡格列酮。<br>⑤<span class="answer-text">瑞格列奈</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>胰岛素的主要临床用途</strong><br>①<span class="blur-text">1型糖尿病</span>患者的维持治疗用药。<br>②<span class="blur-text">2型糖尿病</span>经饮食控制和口服降糖药无效者。<br>③糖尿病发生<span class="blur-text">酮症酸中毒或糖尿病昏迷</span>时。<br>④糖尿病患者处于<span class="blur-text">应激状态</span>时(如合并感染、高热、消耗性疾病、妊娠、创伤、手术等)。<br>⑤纠正<span class="blur-text">细胞内低钾</span>：与葡萄糖合用。</td>
+                            <td>55.. <strong>胰岛素的主要临床用途</strong><br>①<span class="answer-text">1型糖尿病</span>患者的维持治疗用药。<br>②<span class="answer-text">2型糖尿病</span>经饮食控制和口服降糖药无效者。<br>③糖尿病发生<span class="answer-text">酮症酸中毒或糖尿病昏迷</span>时。<br>④糖尿病患者处于<span class="answer-text">应激状态</span>时(如合并感染、高热、消耗性疾病、妊娠、创伤、手术等)。<br>⑤纠正<span class="answer-text">细胞内低钾</span>：与葡萄糖合用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>丙硫氧嘧啶与大剂量碘合用治疗甲亢危象的药理依据</strong><br>①丙硫氧嘧啶可以通过抑制<span class="blur-text">过氧化物酶</span>、抑制外周<span class="blur-text">T4转化成T3</span>、<span class="blur-text">免疫抑制</span>的作用治疗甲亢，其起作用的时间<span class="blur-text">慢</span>但是<span class="blur-text">持久</span>。<br>②大剂量的碘抑制<span class="blur-text">甲状腺球蛋白水解酶</span>使T3、T4不能和甲状腺球蛋白解离从而在短时间内起到<span class="blur-text">减少甲状腺素的释放</span>的作用，但是其减少甲状腺素的释放的作用在用药<span class="blur-text">2周</span>后逐渐减弱。<br>③丙硫氧嘧啶和大剂量碘合用治疗甲亢危象可以<span class="blur-text">很快控制甲状腺素的释放</span>同时也可以<span class="blur-text">持久维持治疗作用</span>。</td>
+                            <td>56.. <strong>丙硫氧嘧啶与大剂量碘合用治疗甲亢危象的药理依据</strong><br>①丙硫氧嘧啶可以通过抑制<span class="answer-text">过氧化物酶</span>、抑制外周<span class="answer-text">T4转化成T3</span>、<span class="answer-text">免疫抑制</span>的作用治疗甲亢，其起作用的时间<span class="answer-text">慢</span>但是<span class="answer-text">持久</span>。<br>②大剂量的碘抑制<span class="answer-text">甲状腺球蛋白水解酶</span>使T3、T4不能和甲状腺球蛋白解离从而在短时间内起到<span class="answer-text">减少甲状腺素的释放</span>的作用，但是其减少甲状腺素的释放的作用在用药<span class="answer-text">2周</span>后逐渐减弱。<br>③丙硫氧嘧啶和大剂量碘合用治疗甲亢危象可以<span class="answer-text">很快控制甲状腺素的释放</span>同时也可以<span class="answer-text">持久维持治疗作用</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>丙硫氧嘧啶与大剂量碘合用作为甲亢术前准备用药的药理依据</strong><br>①丙硫氧嘧啶通过抑制<span class="blur-text">过氧化物酶</span>、抑制外周<span class="blur-text">T4转化成T3</span>、<span class="blur-text">免疫抑制</span>的作用使患者甲状腺功能恢复或接近正常，但是服丙硫氧嘧啶后<span class="blur-text">TSH分泌增多</span>，使腺体<span class="blur-text">增生，组织脆而充血</span>从而不利于手术进行。<br>②在手术前两周加服<span class="blur-text">大剂量的碘剂</span>可使甲状腺组织<span class="blur-text">退化，血管减少，腺体变小变韧</span>，利于手术进行及减少出血。</td>
+                            <td>57.. <strong>丙硫氧嘧啶与大剂量碘合用作为甲亢术前准备用药的药理依据</strong><br>①丙硫氧嘧啶通过抑制<span class="answer-text">过氧化物酶</span>、抑制外周<span class="answer-text">T4转化成T3</span>、<span class="answer-text">免疫抑制</span>的作用使患者甲状腺功能恢复或接近正常，但是服丙硫氧嘧啶后<span class="answer-text">TSH分泌增多</span>，使腺体<span class="answer-text">增生，组织脆而充血</span>从而不利于手术进行。<br>②在手术前两周加服<span class="answer-text">大剂量的碘剂</span>可使甲状腺组织<span class="answer-text">退化，血管减少，腺体变小变韧</span>，利于手术进行及减少出血。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

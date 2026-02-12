@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">预防医学大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>职业病的特点</strong><br>① 病因有<span class="blur-text">特异性</span><br>② 多数职业病与职业病危害因素之间存在<span class="blur-text">剂量-效应</span>和（或）<span class="blur-text">剂量-反应关系</span><br>③ 发病呈<span class="blur-text">群体性</span>，很少出现个别病例<br>④ <span class="blur-text">早期诊断预后好</span>，晚期效果差<br>⑤ <span class="blur-text">可预防</span></td>
+                            <td>1.. <strong>职业病的特点</strong><br>① 病因有<span class="answer-text">特异性</span><br>② 多数职业病与职业病危害因素之间存在<span class="answer-text">剂量-效应</span>和（或）<span class="answer-text">剂量-反应关系</span><br>③ 发病呈<span class="answer-text">群体性</span>，很少出现个别病例<br>④ <span class="answer-text">早期诊断预后好</span>，晚期效果差<br>⑤ <span class="answer-text">可预防</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>职业病的诊断依据</strong><br>① <span class="blur-text">职业史及职业病危害因素接触史</span>：职业接触史是职业病诊断的<span class="blur-text">首要条件</span><br>② <span class="blur-text">工作场所职业病危害因素情况</span>：即职业场所现场调查<br>③ <span class="blur-text">临床表现</span>：特别要了解症状发生与接触有害因素之间的<span class="blur-text">时序关系</span><br>④ <span class="blur-text">辅助检查</span>：接触性生物标志和效应性生物标志</td>
+                            <td>2.. <strong>职业病的诊断依据</strong><br>① <span class="answer-text">职业史及职业病危害因素接触史</span>：职业接触史是职业病诊断的<span class="answer-text">首要条件</span><br>② <span class="answer-text">工作场所职业病危害因素情况</span>：即职业场所现场调查<br>③ <span class="answer-text">临床表现</span>：特别要了解症状发生与接触有害因素之间的<span class="answer-text">时序关系</span><br>④ <span class="answer-text">辅助检查</span>：接触性生物标志和效应性生物标志</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>职业病的三级预防原则</strong><br>① <span class="blur-text">一级预防</span>：也称<span class="blur-text">病因预防</span>，即从根本上<span class="blur-text">消除和控制职业病危害因素</span>，使劳动者不接触职业病危害因素或接受水平低于<span class="blur-text">国家卫生标准</span>，例如<span class="blur-text">改革工艺、改进生产过程、制定职业接触限值、使用防护用品</span>等。第一级预防是预防职业病的<span class="blur-text">根本</span>。<br>② <span class="blur-text">二级预防</span>：又称<span class="blur-text">临床前期预防</span>，当一级预防措施未能完全达到要求，职业病危害因素开始损害劳动者健康时，应采取<span class="blur-text">早发现、早诊断、早治疗</span>的预防措施，防止职业性损害的进一步发展，争取得到好的疗效结果，例如，开展<span class="blur-text">职工的健康监护工作</span>。<br>③ <span class="blur-text">三级预防</span>：又称<span class="blur-text">临床预防</span>，目的是使确诊的职业病病人得到<span class="blur-text">及时合理的治疗</span>，防止病情恶化或出现并发症与继发症，防止病残，促进康复，延长寿命。</td>
+                            <td>3.. <strong>职业病的三级预防原则</strong><br>① <span class="answer-text">一级预防</span>：也称<span class="answer-text">病因预防</span>，即从根本上<span class="answer-text">消除和控制职业病危害因素</span>，使劳动者不接触职业病危害因素或接受水平低于<span class="answer-text">国家卫生标准</span>，例如<span class="answer-text">改革工艺、改进生产过程、制定职业接触限值、使用防护用品</span>等。第一级预防是预防职业病的<span class="answer-text">根本</span>。<br>② <span class="answer-text">二级预防</span>：又称<span class="answer-text">临床前期预防</span>，当一级预防措施未能完全达到要求，职业病危害因素开始损害劳动者健康时，应采取<span class="answer-text">早发现、早诊断、早治疗</span>的预防措施，防止职业性损害的进一步发展，争取得到好的疗效结果，例如，开展<span class="answer-text">职工的健康监护工作</span>。<br>③ <span class="answer-text">三级预防</span>：又称<span class="answer-text">临床预防</span>，目的是使确诊的职业病病人得到<span class="answer-text">及时合理的治疗</span>，防止病情恶化或出现并发症与继发症，防止病残，促进康复，延长寿命。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>职业健康检查</strong><br>① <span class="blur-text">上岗前健康检查</span><br>② <span class="blur-text">在岗期间定期健康检查</span><br>③ <span class="blur-text">离岗时健康检查</span><br>④ <span class="blur-text">离岗后健康检查</span><br>⑤ <span class="blur-text">应急健康检查</span><br>上岗前健康检查为<span class="blur-text">一级预防</span>，其余都为<span class="blur-text">二级预防</span>。</td>
+                            <td>4.. <strong>职业健康检查</strong><br>① <span class="answer-text">上岗前健康检查</span><br>② <span class="answer-text">在岗期间定期健康检查</span><br>③ <span class="answer-text">离岗时健康检查</span><br>④ <span class="answer-text">离岗后健康检查</span><br>⑤ <span class="answer-text">应急健康检查</span><br>上岗前健康检查为<span class="answer-text">一级预防</span>，其余都为<span class="answer-text">二级预防</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>铅中毒的高发行业</strong><br>① <span class="blur-text">铅冶炼行业</span><br>② <span class="blur-text">蓄电池制造行业</span><br>③ <span class="blur-text">船舶除锈、拆船业</span><br>④ <span class="blur-text">颜料、油漆、搪瓷、陶瓷</span></td>
+                            <td>5.. <strong>铅中毒的高发行业</strong><br>① <span class="answer-text">铅冶炼行业</span><br>② <span class="answer-text">蓄电池制造行业</span><br>③ <span class="answer-text">船舶除锈、拆船业</span><br>④ <span class="answer-text">颜料、油漆、搪瓷、陶瓷</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. A <strong>铅中毒的机制</strong><br>最重要和早期的变化之一：<span class="blur-text">卟啉代谢障碍</span><br>① 铅可抑制<span class="blur-text">ALAD</span>、<span class="blur-text">粪卟啉原氧化酶</span>和<span class="blur-text">亚铁络合酶（血红素合成酶）</span>的活性。ALAD受抑使<span class="blur-text">ALA形成胆色素原受阻</span>，血中<span class="blur-text">ALA增加</span>，由尿排出；粪卟啉原氧化酶受抑后阻碍<span class="blur-text">粪卟啉原III氧化形成原卟啉IX</span>，结果使血中<span class="blur-text">粪卟啉增多</span>，尿中粪卟啉排出增多。<br>② 血红素合成酶受抑阻碍<span class="blur-text">原卟啉IX和亚铁离子合成血红素</span>，导致红细胞<span class="blur-text">游离原卟啉（FEP）</span>增加，并与锌络合形成<span class="blur-text">锌原卟啉</span>。<br>③ <span class="blur-text">血红蛋白合成受阻</span>，发生<span class="blur-text">低色素性贫血</span>。</td>
+                            <td>6.. A <strong>铅中毒的机制</strong><br>最重要和早期的变化之一：<span class="answer-text">卟啉代谢障碍</span><br>① 铅可抑制<span class="answer-text">ALAD</span>、<span class="answer-text">粪卟啉原氧化酶</span>和<span class="answer-text">亚铁络合酶（血红素合成酶）</span>的活性。ALAD受抑使<span class="answer-text">ALA形成胆色素原受阻</span>，血中<span class="answer-text">ALA增加</span>，由尿排出；粪卟啉原氧化酶受抑后阻碍<span class="answer-text">粪卟啉原III氧化形成原卟啉IX</span>，结果使血中<span class="answer-text">粪卟啉增多</span>，尿中粪卟啉排出增多。<br>② 血红素合成酶受抑阻碍<span class="answer-text">原卟啉IX和亚铁离子合成血红素</span>，导致红细胞<span class="answer-text">游离原卟啉（FEP）</span>增加，并与锌络合形成<span class="answer-text">锌原卟啉</span>。<br>③ <span class="answer-text">血红蛋白合成受阻</span>，发生<span class="answer-text">低色素性贫血</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>6.. B <strong>铅中毒的机制（续）</strong><br>铅可以抑制红细胞膜<span class="blur-text">Na+-K+-ATP酶</span>的活性，引起<span class="blur-text">细胞膜破裂而溶血</span>。</td>
+                            <td>6.. B <strong>铅中毒的机制（续）</strong><br>铅可以抑制红细胞膜<span class="answer-text">Na+-K+-ATP酶</span>的活性，引起<span class="answer-text">细胞膜破裂而溶血</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>7.. <strong>慢性铅中毒的临床表现</strong><br>① <span class="blur-text">神经系统</span>：<span class="blur-text">中毒性神经衰弱样症状</span>，<span class="blur-text">周围神经病</span>，<span class="blur-text">铅中毒性脑病</span>（周围神经损害可分为<span class="blur-text">感觉型、运动型和混合型</span>）<br>② <span class="blur-text">消化系统</span>：<span class="blur-text">口内金属味、食欲不振、恶心、腹痛</span>，长期不注意口腔卫生者可见灰蓝色"<span class="blur-text">铅线</span>"，中度以上中毒病例可出现<span class="blur-text">铅性腹绞痛</span>。<br>③ <span class="blur-text">血液系统</span>：<span class="blur-text">血红素合成减少</span>，<span class="blur-text">血红蛋白减少</span>，导致<span class="blur-text">小细胞低色素型贫血</span><br>④ <span class="blur-text">肾脏损害</span></td>
+                            <td>7.. <strong>慢性铅中毒的临床表现</strong><br>① <span class="answer-text">神经系统</span>：<span class="answer-text">中毒性神经衰弱样症状</span>，<span class="answer-text">周围神经病</span>，<span class="answer-text">铅中毒性脑病</span>（周围神经损害可分为<span class="answer-text">感觉型、运动型和混合型</span>）<br>② <span class="answer-text">消化系统</span>：<span class="answer-text">口内金属味、食欲不振、恶心、腹痛</span>，长期不注意口腔卫生者可见灰蓝色"<span class="answer-text">铅线</span>"，中度以上中毒病例可出现<span class="answer-text">铅性腹绞痛</span>。<br>③ <span class="answer-text">血液系统</span>：<span class="answer-text">血红素合成减少</span>，<span class="answer-text">血红蛋白减少</span>，导致<span class="answer-text">小细胞低色素型贫血</span><br>④ <span class="answer-text">肾脏损害</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>8.. <strong>铅中毒腹绞痛的特点</strong><br>① 多为<span class="blur-text">突然发作</span>，呈<span class="blur-text">持续性绞痛，阵发性加剧</span><br>② 部位多在<span class="blur-text">脐周</span>，少数在<span class="blur-text">上腹部或下腹部</span><br>③ 发作时病人<span class="blur-text">面色苍白、出冷汗</span>，多伴有<span class="blur-text">呕吐、烦躁不安</span>，手压腹部疼痛可缓解<br>④ <span class="blur-text">一般止痛药不易缓解</span>，发作可持续数分钟以上<br>⑤ 检查时腹部<span class="blur-text">柔软平坦</span>，可能有轻度压痛，但<span class="blur-text">无固定压痛点</span>，<span class="blur-text">肠鸣音减弱</span></td>
+                            <td>8.. <strong>铅中毒腹绞痛的特点</strong><br>① 多为<span class="answer-text">突然发作</span>，呈<span class="answer-text">持续性绞痛，阵发性加剧</span><br>② 部位多在<span class="answer-text">脐周</span>，少数在<span class="answer-text">上腹部或下腹部</span><br>③ 发作时病人<span class="answer-text">面色苍白、出冷汗</span>，多伴有<span class="answer-text">呕吐、烦躁不安</span>，手压腹部疼痛可缓解<br>④ <span class="answer-text">一般止痛药不易缓解</span>，发作可持续数分钟以上<br>⑤ 检查时腹部<span class="answer-text">柔软平坦</span>，可能有轻度压痛，但<span class="answer-text">无固定压痛点</span>，<span class="answer-text">肠鸣音减弱</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>9.. <strong>中度及重度铅中毒的诊断</strong><br>（1）中度中毒：在轻度中毒的基础上，具有下列一项表现者：① <span class="blur-text">腹绞痛</span> ② <span class="blur-text">贫血</span> ③ <span class="blur-text">轻度中毒性周围神经病</span><br>（2）重度中毒：具有下列一项表现者：① <span class="blur-text">铅麻痹</span> ② <span class="blur-text">中毒性脑病</span></td>
+                            <td>9.. <strong>中度及重度铅中毒的诊断</strong><br>（1）中度中毒：在轻度中毒的基础上，具有下列一项表现者：① <span class="answer-text">腹绞痛</span> ② <span class="answer-text">贫血</span> ③ <span class="answer-text">轻度中毒性周围神经病</span><br>（2）重度中毒：具有下列一项表现者：① <span class="answer-text">铅麻痹</span> ② <span class="answer-text">中毒性脑病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>10.. <strong>慢性铅中毒的治疗</strong><br>（1）对因：<span class="blur-text">驱铅疗法</span>，常用<span class="blur-text">依地酸二钠钙</span>，<span class="blur-text">小剂量、短疗程</span>，注意"<span class="blur-text">过络合综合征</span>"。<br>（2）对症治疗：有类神经症者给予<span class="blur-text">镇静剂</span>，腹绞痛发作静注<span class="blur-text">10%葡萄糖酸钙</span>或皮下注射<span class="blur-text">阿托品</span><br>（3）支持治疗：注意休息，合理营养，补充<span class="blur-text">维生素</span></td>
+                            <td>10.. <strong>慢性铅中毒的治疗</strong><br>（1）对因：<span class="answer-text">驱铅疗法</span>，常用<span class="answer-text">依地酸二钠钙</span>，<span class="answer-text">小剂量、短疗程</span>，注意"<span class="answer-text">过络合综合征</span>"。<br>（2）对症治疗：有类神经症者给予<span class="answer-text">镇静剂</span>，腹绞痛发作静注<span class="answer-text">10%葡萄糖酸钙</span>或皮下注射<span class="answer-text">阿托品</span><br>（3）支持治疗：注意休息，合理营养，补充<span class="answer-text">维生素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>11.. <strong>慢性汞中毒的临床表现</strong><br>三大典型临床表现：<span class="blur-text">易兴奋症</span>、<span class="blur-text">震颤</span>、<span class="blur-text">口腔炎</span><br>① <span class="blur-text">神经系统</span>：<span class="blur-text">神经衰弱综合征及性格情绪改变（易兴奋症）</span>、<span class="blur-text">汞毒性震颤（意向性震颤）</span><br>② <span class="blur-text">口腔-牙龈炎</span>：多有<span class="blur-text">流涎、糜烂、牙龈肿胀、酸痛、易出血</span>；口腔卫生不良者，沿牙龈可见<span class="blur-text">蓝黑色汞线</span><br>③ <span class="blur-text">肾功能损害</span><br>④ 其他：<span class="blur-text">胃肠功能紊乱</span>等</td>
+                            <td>11.. <strong>慢性汞中毒的临床表现</strong><br>三大典型临床表现：<span class="answer-text">易兴奋症</span>、<span class="answer-text">震颤</span>、<span class="answer-text">口腔炎</span><br>① <span class="answer-text">神经系统</span>：<span class="answer-text">神经衰弱综合征及性格情绪改变（易兴奋症）</span>、<span class="answer-text">汞毒性震颤（意向性震颤）</span><br>② <span class="answer-text">口腔-牙龈炎</span>：多有<span class="answer-text">流涎、糜烂、牙龈肿胀、酸痛、易出血</span>；口腔卫生不良者，沿牙龈可见<span class="answer-text">蓝黑色汞线</span><br>③ <span class="answer-text">肾功能损害</span><br>④ 其他：<span class="answer-text">胃肠功能紊乱</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>12.. A <strong>慢性苯中毒的临床表现</strong><br>① <span class="blur-text">神经系统</span>：常为<span class="blur-text">非特异性类神经症</span>，<span class="blur-text">植物神经功能紊乱</span>。<br>② <span class="blur-text">造血系统</span>：造血系统的损害是慢性苯中毒的<span class="blur-text">主要特点</span>。<br>1）轻度中毒者无自觉症状，但<span class="blur-text">血象异常</span>。<br>2）最早和最常见的血象异常表现是<span class="blur-text">持续性白细胞计数减少</span>，主要是<span class="blur-text">中性粒细胞减少</span>，血液涂片可见白细胞有较多的<span class="blur-text">毒性颗粒、空泡、破碎细胞</span>等<br>3）中度中毒者可见<span class="blur-text">红细胞计数偏低或减少</span><br>4）重度中毒者<span class="blur-text">红细胞计数、血红蛋白、白细胞、血小板、网织红细胞</span>都明显减少，严重中毒者骨髓造血系统受损明显可出现<span class="blur-text">全血细胞减少症</span>、<span class="blur-text">再生障碍性贫血</span>甚至转化为<span class="blur-text">白血病</span>。</td>
+                            <td>12.. A <strong>慢性苯中毒的临床表现</strong><br>① <span class="answer-text">神经系统</span>：常为<span class="answer-text">非特异性类神经症</span>，<span class="answer-text">植物神经功能紊乱</span>。<br>② <span class="answer-text">造血系统</span>：造血系统的损害是慢性苯中毒的<span class="answer-text">主要特点</span>。<br>1）轻度中毒者无自觉症状，但<span class="answer-text">血象异常</span>。<br>2）最早和最常见的血象异常表现是<span class="answer-text">持续性白细胞计数减少</span>，主要是<span class="answer-text">中性粒细胞减少</span>，血液涂片可见白细胞有较多的<span class="answer-text">毒性颗粒、空泡、破碎细胞</span>等<br>3）中度中毒者可见<span class="answer-text">红细胞计数偏低或减少</span><br>4）重度中毒者<span class="answer-text">红细胞计数、血红蛋白、白细胞、血小板、网织红细胞</span>都明显减少，严重中毒者骨髓造血系统受损明显可出现<span class="answer-text">全血细胞减少症</span>、<span class="answer-text">再生障碍性贫血</span>甚至转化为<span class="answer-text">白血病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>12.. B <strong>慢性苯中毒的临床表现（续）</strong><br>③ 其他：<span class="blur-text">皮炎</span>、<span class="blur-text">生殖系统损害</span>等</td>
+                            <td>12.. B <strong>慢性苯中毒的临床表现（续）</strong><br>③ 其他：<span class="answer-text">皮炎</span>、<span class="answer-text">生殖系统损害</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>13.. <strong>有机磷农药中毒的临床表现</strong><br>（1）<span class="blur-text">急性中毒</span>：<br>① <span class="blur-text">毒蕈碱样症状</span>：<span class="blur-text">腺体分泌亢进、平滑肌痉挛、瞳孔缩小</span><br>② <span class="blur-text">烟碱样作用</span>：患者可出现<span class="blur-text">肌束震颤、肌肉痉挛</span>，进而发展为<span class="blur-text">肌无力、肌麻痹</span>等，严重者可出现<span class="blur-text">呼吸肌麻痹</span>而死亡<br>③ <span class="blur-text">中枢神经系统症状</span>：类神经症状，<span class="blur-text">烦躁不安、言语不清、意识障碍</span><br>（2）<span class="blur-text">迟发性神经病</span><br>（3）<span class="blur-text">中间期肌无力综合征</span><br>（4）<span class="blur-text">慢性中毒</span>：以<span class="blur-text">中毒性类神经症</span>表现为主</td>
+                            <td>13.. <strong>有机磷农药中毒的临床表现</strong><br>（1）<span class="answer-text">急性中毒</span>：<br>① <span class="answer-text">毒蕈碱样症状</span>：<span class="answer-text">腺体分泌亢进、平滑肌痉挛、瞳孔缩小</span><br>② <span class="answer-text">烟碱样作用</span>：患者可出现<span class="answer-text">肌束震颤、肌肉痉挛</span>，进而发展为<span class="answer-text">肌无力、肌麻痹</span>等，严重者可出现<span class="answer-text">呼吸肌麻痹</span>而死亡<br>③ <span class="answer-text">中枢神经系统症状</span>：类神经症状，<span class="answer-text">烦躁不安、言语不清、意识障碍</span><br>（2）<span class="answer-text">迟发性神经病</span><br>（3）<span class="answer-text">中间期肌无力综合征</span><br>（4）<span class="answer-text">慢性中毒</span>：以<span class="answer-text">中毒性类神经症</span>表现为主</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>14.. <strong>急性有机磷中毒的处理原则</strong><br>（1）<span class="blur-text">清除毒物，防止继续吸收</span><br>（2）<span class="blur-text">解毒剂的应用</span>：<br>① <span class="blur-text">乙酰胆碱拮抗剂</span>：<span class="blur-text">阿托品</span>，<span class="blur-text">早期、足量、反复给药</span>，注意<span class="blur-text">阿托品化</span>，防止<span class="blur-text">阿托品过量</span><br>② <span class="blur-text">胆碱酯酶复能剂</span>：<span class="blur-text">氯磷定</span>为首选<br>（3）<span class="blur-text">对症支持治疗，防止并发症</span></td>
+                            <td>14.. <strong>急性有机磷中毒的处理原则</strong><br>（1）<span class="answer-text">清除毒物，防止继续吸收</span><br>（2）<span class="answer-text">解毒剂的应用</span>：<br>① <span class="answer-text">乙酰胆碱拮抗剂</span>：<span class="answer-text">阿托品</span>，<span class="answer-text">早期、足量、反复给药</span>，注意<span class="answer-text">阿托品化</span>，防止<span class="answer-text">阿托品过量</span><br>② <span class="answer-text">胆碱酯酶复能剂</span>：<span class="answer-text">氯磷定</span>为首选<br>（3）<span class="answer-text">对症支持治疗，防止并发症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>15.. <strong>生产性粉尘的特征及其卫生学意义</strong><br>（1）<span class="blur-text">粉尘的化学组成</span>：粉尘化学组成是决定其对机体危害作用性质的<span class="blur-text">最主要因素</span><br>（2）<span class="blur-text">浓度</span>：浓度与危害程度呈<span class="blur-text">正相关</span><br>（3）<span class="blur-text">粉尘的分散度</span>：是指物质被粉碎的程度，以粉尘粒子<span class="blur-text">直径大小（μm）</span>的数量或质量组成百分比来表示。<br>① 分散度越高，<span class="blur-text">比表面积越大</span>，<span class="blur-text">生物活性越高</span>，危害越大<br>② 分散度越高，<span class="blur-text">沉降速度越慢</span>，越易为人体吸入<br>③ 分散度还影响粉尘在呼吸道中的阻留部位，<span class="blur-text"><15μm</span>的尘粒可进入呼吸道，粒径<span class="blur-text">10-15μm</span>的粉尘主要沉积在<span class="blur-text">上呼吸道</span>，粒径<span class="blur-text"><5μm</span>的粉尘可达呼吸道深部和肺泡，称之为<span class="blur-text">呼吸性粉尘</span></td>
+                            <td>15.. <strong>生产性粉尘的特征及其卫生学意义</strong><br>（1）<span class="answer-text">粉尘的化学组成</span>：粉尘化学组成是决定其对机体危害作用性质的<span class="answer-text">最主要因素</span><br>（2）<span class="answer-text">浓度</span>：浓度与危害程度呈<span class="answer-text">正相关</span><br>（3）<span class="answer-text">粉尘的分散度</span>：是指物质被粉碎的程度，以粉尘粒子<span class="answer-text">直径大小（μm）</span>的数量或质量组成百分比来表示。<br>① 分散度越高，<span class="answer-text">比表面积越大</span>，<span class="answer-text">生物活性越高</span>，危害越大<br>② 分散度越高，<span class="answer-text">沉降速度越慢</span>，越易为人体吸入<br>③ 分散度还影响粉尘在呼吸道中的阻留部位，<span class="answer-text"><15μm</span>的尘粒可进入呼吸道，粒径<span class="answer-text">10-15μm</span>的粉尘主要沉积在<span class="answer-text">上呼吸道</span>，粒径<span class="answer-text"><5μm</span>的粉尘可达呼吸道深部和肺泡，称之为<span class="answer-text">呼吸性粉尘</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>16.. <strong>粉尘危害控制八字方针</strong><br>① <span class="blur-text">革</span>：改革生产工艺和革新生产设备<br>② <span class="blur-text">水</span>：湿式作业<br>③ <span class="blur-text">密</span>：密闭尘源<br>④ <span class="blur-text">风</span>：抽风除尘<br>⑤ <span class="blur-text">护</span>：个体防护<br>⑥ <span class="blur-text">管</span>：加强防尘管理<br>⑦ <span class="blur-text">教</span>：进行宣传教育<br>⑧ <span class="blur-text">查</span>：定期对接触粉尘的职工进行体格检查</td>
+                            <td>16.. <strong>粉尘危害控制八字方针</strong><br>① <span class="answer-text">革</span>：改革生产工艺和革新生产设备<br>② <span class="answer-text">水</span>：湿式作业<br>③ <span class="answer-text">密</span>：密闭尘源<br>④ <span class="answer-text">风</span>：抽风除尘<br>⑤ <span class="answer-text">护</span>：个体防护<br>⑥ <span class="answer-text">管</span>：加强防尘管理<br>⑦ <span class="answer-text">教</span>：进行宣传教育<br>⑧ <span class="answer-text">查</span>：定期对接触粉尘的职工进行体格检查</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>17.. <strong>中暑的发病机制及临床表现</strong><br>中暑按发病机制可分为三种类型，即<span class="blur-text">热射病</span>、<span class="blur-text">热痉挛</span>和<span class="blur-text">热衰竭</span>。<br>（1）<span class="blur-text">热射病（heat stroke）</span>：含<span class="blur-text">日射病</span>，又称<span class="blur-text">中暑性高热</span>，是人体在高温环境下<span class="blur-text">散热途径受阻</span>、体内蓄热，<span class="blur-text">体温调节机制紊乱</span>所致的疾病，多发生在<span class="blur-text">强干热型或湿热型</span>高温作业，其特点是起病急，在高温环境中突然发病，体温迅速升高，可达<span class="blur-text">40°C以上</span>。<br>（2）<span class="blur-text">热痉挛（heat cramp）</span>：也称<span class="blur-text">中暑痉挛</span>，是由于人体<span class="blur-text">大量出汗</span>造成<span class="blur-text">钠、氯、钾</span>等严重丢失，<span class="blur-text">水和电解质平衡紊乱</span>，引起神经肌肉产生自发性活动，出现<span class="blur-text">肌痉挛</span>，多发生在<span class="blur-text">干热型</span>高温作业。其临床特点是肌肉痉挛伴收缩痛，肌痉挛好发于活动较多的<span class="blur-text">四肢肌肉及腹肌</span>，尤以<span class="blur-text">腓肠肌</span>为多见。常呈<span class="blur-text">对称性</span>，时而发作，时而缓解。病人<span class="blur-text">意识清楚</span>，体温多<span class="blur-text">正常</span>。<br>（3）<span class="blur-text">热衰竭（heat exhaustion）</span>：又称<span class="blur-text">中暑虚脱</span>，是一种较轻的热相关疾病，是机体对<span class="blur-text">过度脱水及电解质丢失</span>的一种反应。其发病也与<span class="blur-text">心血管功能失代偿</span>，导致脑部暂时血供减少等有关。多发生在<span class="blur-text">高气温、强热辐射</span>的工作场所。其主要临床表现包括<span class="blur-text">大量出汗、面色苍白、头晕、无力、恶心、呕吐</span>等。病人体温<span class="blur-text">正常或稍高</span>，一般不出现循环衰竭。<span class="blur-text">老年、体弱、高血压病人</span>等在炎热环境中容易发生中暑虚脱。</td>
+                            <td>17.. <strong>中暑的发病机制及临床表现</strong><br>中暑按发病机制可分为三种类型，即<span class="answer-text">热射病</span>、<span class="answer-text">热痉挛</span>和<span class="answer-text">热衰竭</span>。<br>（1）<span class="answer-text">热射病（heat stroke）</span>：含<span class="answer-text">日射病</span>，又称<span class="answer-text">中暑性高热</span>，是人体在高温环境下<span class="answer-text">散热途径受阻</span>、体内蓄热，<span class="answer-text">体温调节机制紊乱</span>所致的疾病，多发生在<span class="answer-text">强干热型或湿热型</span>高温作业，其特点是起病急，在高温环境中突然发病，体温迅速升高，可达<span class="answer-text">40°C以上</span>。<br>（2）<span class="answer-text">热痉挛（heat cramp）</span>：也称<span class="answer-text">中暑痉挛</span>，是由于人体<span class="answer-text">大量出汗</span>造成<span class="answer-text">钠、氯、钾</span>等严重丢失，<span class="answer-text">水和电解质平衡紊乱</span>，引起神经肌肉产生自发性活动，出现<span class="answer-text">肌痉挛</span>，多发生在<span class="answer-text">干热型</span>高温作业。其临床特点是肌肉痉挛伴收缩痛，肌痉挛好发于活动较多的<span class="answer-text">四肢肌肉及腹肌</span>，尤以<span class="answer-text">腓肠肌</span>为多见。常呈<span class="answer-text">对称性</span>，时而发作，时而缓解。病人<span class="answer-text">意识清楚</span>，体温多<span class="answer-text">正常</span>。<br>（3）<span class="answer-text">热衰竭（heat exhaustion）</span>：又称<span class="answer-text">中暑虚脱</span>，是一种较轻的热相关疾病，是机体对<span class="answer-text">过度脱水及电解质丢失</span>的一种反应。其发病也与<span class="answer-text">心血管功能失代偿</span>，导致脑部暂时血供减少等有关。多发生在<span class="answer-text">高气温、强热辐射</span>的工作场所。其主要临床表现包括<span class="answer-text">大量出汗、面色苍白、头晕、无力、恶心、呕吐</span>等。病人体温<span class="answer-text">正常或稍高</span>，一般不出现循环衰竭。<span class="answer-text">老年、体弱、高血压病人</span>等在炎热环境中容易发生中暑虚脱。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>18.. <strong>重症中暑的治疗</strong><br>（1）<span class="blur-text">院前急救措施</span>：<br>① 将中暑病人转移至<span class="blur-text">阴凉处</span><br>② 用任何能够采取的措施给病人<span class="blur-text">降温</span><br>③ <span class="blur-text">监测病人体温</span><br>④ <span class="blur-text">不要给病人大量饮水</span><br>⑤ <span class="blur-text">保持呼吸道通畅</span><br>（2）<span class="blur-text">入院后的医疗救治</span>：<br>救治原则：迅速<span class="blur-text">降低过高的体温</span>，纠正<span class="blur-text">水电解质及酸碱平衡紊乱</span>，积极防治<span class="blur-text">休克和脑水肿</span>。<br>① <span class="blur-text">物理降温</span><br>② <span class="blur-text">药物降温</span>：首选<span class="blur-text">氯丙嗪</span><br>③ 纠正<span class="blur-text">水、电解质、酸碱平衡紊乱</span><br>④ 其他对症支持治疗：<span class="blur-text">维生素B、C</span>和<span class="blur-text">钙、钾</span>等。</td>
+                            <td>18.. <strong>重症中暑的治疗</strong><br>（1）<span class="answer-text">院前急救措施</span>：<br>① 将中暑病人转移至<span class="answer-text">阴凉处</span><br>② 用任何能够采取的措施给病人<span class="answer-text">降温</span><br>③ <span class="answer-text">监测病人体温</span><br>④ <span class="answer-text">不要给病人大量饮水</span><br>⑤ <span class="answer-text">保持呼吸道通畅</span><br>（2）<span class="answer-text">入院后的医疗救治</span>：<br>救治原则：迅速<span class="answer-text">降低过高的体温</span>，纠正<span class="answer-text">水电解质及酸碱平衡紊乱</span>，积极防治<span class="answer-text">休克和脑水肿</span>。<br>① <span class="answer-text">物理降温</span><br>② <span class="answer-text">药物降温</span>：首选<span class="answer-text">氯丙嗪</span><br>③ 纠正<span class="answer-text">水、电解质、酸碱平衡紊乱</span><br>④ 其他对症支持治疗：<span class="answer-text">维生素B、C</span>和<span class="answer-text">钙、钾</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>19.. <strong>永久性听阈位移的表现</strong><br>① 噪声所致的永久性听阈位移早期常表现为<span class="blur-text">高频听力下降</span>，听力曲线在<span class="blur-text">3000~6000赫兹</span>，尤其常在<span class="blur-text">4000赫兹</span>处出现"<span class="blur-text">V</span>"形凹陷，低频似正常。主观上无耳聋的感觉，交谈和社交活动仍能进行。<br>② 随着接触噪声的时间延长，病损程度加重，<span class="blur-text">高频段</span>听力下降明显，同时<span class="blur-text">语音频段（500~2000赫兹）</span>听力也会受到影响，语言听力出现障碍，甚至出现<span class="blur-text">噪声聋</span>。</td>
+                            <td>19.. <strong>永久性听阈位移的表现</strong><br>① 噪声所致的永久性听阈位移早期常表现为<span class="answer-text">高频听力下降</span>，听力曲线在<span class="answer-text">3000~6000赫兹</span>，尤其常在<span class="answer-text">4000赫兹</span>处出现"<span class="answer-text">V</span>"形凹陷，低频似正常。主观上无耳聋的感觉，交谈和社交活动仍能进行。<br>② 随着接触噪声的时间延长，病损程度加重，<span class="answer-text">高频段</span>听力下降明显，同时<span class="answer-text">语音频段（500~2000赫兹）</span>听力也会受到影响，语言听力出现障碍，甚至出现<span class="answer-text">噪声聋</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>20.. <strong>生物放大作用和生物富集作用的异同点</strong><br>（1）定义：<br>① <span class="blur-text">生物富集</span>：一些<span class="blur-text">重金属和难分解的有机化合物</span>可在生物体内蓄积，使生物体内的浓度<span class="blur-text">远远高于</span>其在环境介质中的浓度，这种作用称为生物富集。<br>② <span class="blur-text">生物放大</span>：环境中某些污染物沿<span class="blur-text">食物链</span>在生物体之间转移并在生物体内的浓度<span class="blur-text">逐级增高</span>，使高位营养级生物体内的浓度<span class="blur-text">高于</span>低位营养级生物体内的浓度，此过程称为生物放大。<br>（2）相同点：<br>① 都指污染物蓄积而<span class="blur-text">生物体内的浓度升高</span><br>② 均用<span class="blur-text">浓缩系数</span>表示<br>③ 均带来<span class="blur-text">严重不良影响</span><br>（3）不同点：<br>① <span class="blur-text">比较的对象不同</span>：生物富集是指<span class="blur-text">生物体内的浓度与环境介质的浓度</span>相比，生物放大是指<span class="blur-text">高位营养级生物体内的浓度与低位营养级生物体内的浓度</span>相比<br>② <span class="blur-text">污染物蓄积的方式不同</span>：生物富集通过<span class="blur-text">非吞食方式</span>，生物放大通过<span class="blur-text">吞食的方式</span></td>
+                            <td>20.. <strong>生物放大作用和生物富集作用的异同点</strong><br>（1）定义：<br>① <span class="answer-text">生物富集</span>：一些<span class="answer-text">重金属和难分解的有机化合物</span>可在生物体内蓄积，使生物体内的浓度<span class="answer-text">远远高于</span>其在环境介质中的浓度，这种作用称为生物富集。<br>② <span class="answer-text">生物放大</span>：环境中某些污染物沿<span class="answer-text">食物链</span>在生物体之间转移并在生物体内的浓度<span class="answer-text">逐级增高</span>，使高位营养级生物体内的浓度<span class="answer-text">高于</span>低位营养级生物体内的浓度，此过程称为生物放大。<br>（2）相同点：<br>① 都指污染物蓄积而<span class="answer-text">生物体内的浓度升高</span><br>② 均用<span class="answer-text">浓缩系数</span>表示<br>③ 均带来<span class="answer-text">严重不良影响</span><br>（3）不同点：<br>① <span class="answer-text">比较的对象不同</span>：生物富集是指<span class="answer-text">生物体内的浓度与环境介质的浓度</span>相比，生物放大是指<span class="answer-text">高位营养级生物体内的浓度与低位营养级生物体内的浓度</span>相比<br>② <span class="answer-text">污染物蓄积的方式不同</span>：生物富集通过<span class="answer-text">非吞食方式</span>，生物放大通过<span class="answer-text">吞食的方式</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>21.. <strong>环境污染物发生生物放大作用的条件</strong><br>① 环境化学物质容易被<span class="blur-text">各种生物体吸收</span><br>② 进入生物体的环境化学物质较难<span class="blur-text">分解和排泄</span><br>③ 污染物在生物体内逐渐积累时，尚不会对该生物造成<span class="blur-text">致命性的损害</span><br>④ 生物放大通过<span class="blur-text">食物链</span>进行</td>
+                            <td>21.. <strong>环境污染物发生生物放大作用的条件</strong><br>① 环境化学物质容易被<span class="answer-text">各种生物体吸收</span><br>② 进入生物体的环境化学物质较难<span class="answer-text">分解和排泄</span><br>③ 污染物在生物体内逐渐积累时，尚不会对该生物造成<span class="answer-text">致命性的损害</span><br>④ 生物放大通过<span class="answer-text">食物链</span>进行</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>22.. <strong>环境致病因素的健康效应</strong><br>① 当环境有害因素作用于人群时，大多数人体内环境污染物负荷增加，但不引起生理功能改变，属于<span class="blur-text">正常生理调节范围</span>。<br>② 有些人则会处于<span class="blur-text">生理代偿状态</span>，机体还能保持着相对稳定，暂时不出现临床症状和体征。处于代偿状态，暂时尚未表现出临床症状的人，<span class="blur-text">不能认为是健康人</span>，其中一些人实际上已处于<span class="blur-text">疾病的早期阶段及临床前期</span>。<br>③ 如果环境有害因素继续作用，致使功能发生障碍，机体则向<span class="blur-text">病理状态转化</span>，出现疾病的症状和体征，少数人甚至可因病理反应而死亡，即<span class="blur-text">失代偿状态</span>。<br>人群对环境因素反应的健康效应谱呈<span class="blur-text">金字塔型</span>或称<span class="blur-text">冰山现象</span>。</td>
+                            <td>22.. <strong>环境致病因素的健康效应</strong><br>① 当环境有害因素作用于人群时，大多数人体内环境污染物负荷增加，但不引起生理功能改变，属于<span class="answer-text">正常生理调节范围</span>。<br>② 有些人则会处于<span class="answer-text">生理代偿状态</span>，机体还能保持着相对稳定，暂时不出现临床症状和体征。处于代偿状态，暂时尚未表现出临床症状的人，<span class="answer-text">不能认为是健康人</span>，其中一些人实际上已处于<span class="answer-text">疾病的早期阶段及临床前期</span>。<br>③ 如果环境有害因素继续作用，致使功能发生障碍，机体则向<span class="answer-text">病理状态转化</span>，出现疾病的症状和体征，少数人甚至可因病理反应而死亡，即<span class="answer-text">失代偿状态</span>。<br>人群对环境因素反应的健康效应谱呈<span class="answer-text">金字塔型</span>或称<span class="answer-text">冰山现象</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>23.. <strong>紫外线的分段及其生物学作用</strong><br>① <span class="blur-text">A段（UVA）</span>波长<span class="blur-text">320-400nm</span>，<span class="blur-text">长波紫外线</span>。生物学作用：<span class="blur-text">色素沉着作用</span><br>② <span class="blur-text">B段（UVB）</span>波长<span class="blur-text">290-320nm</span>，<span class="blur-text">中波紫外线</span>。生物学作用：<span class="blur-text">红斑作用</span>、<span class="blur-text">抗佝偻病作用</span><br>③ <span class="blur-text">C段（UVC）</span>波长<span class="blur-text">200-290nm</span>，<span class="blur-text">短波紫外线</span>。生物学作用：<span class="blur-text">杀菌作用</span></td>
+                            <td>23.. <strong>紫外线的分段及其生物学作用</strong><br>① <span class="answer-text">A段（UVA）</span>波长<span class="answer-text">320-400nm</span>，<span class="answer-text">长波紫外线</span>。生物学作用：<span class="answer-text">色素沉着作用</span><br>② <span class="answer-text">B段（UVB）</span>波长<span class="answer-text">290-320nm</span>，<span class="answer-text">中波紫外线</span>。生物学作用：<span class="answer-text">红斑作用</span>、<span class="answer-text">抗佝偻病作用</span><br>③ <span class="answer-text">C段（UVC）</span>波长<span class="answer-text">200-290nm</span>，<span class="answer-text">短波紫外线</span>。生物学作用：<span class="answer-text">杀菌作用</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>24.. A <strong>煤烟型烟雾事件和光化学型烟雾事件的定义和特点</strong><br>A. <span class="blur-text">煤烟型烟雾事件</span><br>（1）定义：是由于<span class="blur-text">煤烟和工业废气</span>大量排入大气且得不到充分扩散而引起的。主要污染物为<span class="blur-text">SO2和烟尘及硫酸烟雾</span>。<br>（2）特点：<br>① 污染物来自<span class="blur-text">煤炭的燃烧产物</span>及工业生产过程的污染物<br>② 气象条件为<span class="blur-text">气温低、气压高、风速很低、湿度大、有雾、有逆温产生</span>，多发生在<span class="blur-text">寒冷季节</span><br>③ <span class="blur-text">河谷盆地</span>易产生<br>④ 受害者主要以<span class="blur-text">呼吸道刺激症状</span>为主</td>
+                            <td>24.. A <strong>煤烟型烟雾事件和光化学型烟雾事件的定义和特点</strong><br>A. <span class="answer-text">煤烟型烟雾事件</span><br>（1）定义：是由于<span class="answer-text">煤烟和工业废气</span>大量排入大气且得不到充分扩散而引起的。主要污染物为<span class="answer-text">SO2和烟尘及硫酸烟雾</span>。<br>（2）特点：<br>① 污染物来自<span class="answer-text">煤炭的燃烧产物</span>及工业生产过程的污染物<br>② 气象条件为<span class="answer-text">气温低、气压高、风速很低、湿度大、有雾、有逆温产生</span>，多发生在<span class="answer-text">寒冷季节</span><br>③ <span class="answer-text">河谷盆地</span>易产生<br>④ 受害者主要以<span class="answer-text">呼吸道刺激症状</span>为主</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>24.. B <strong>煤烟型烟雾事件和光化学型烟雾事件的定义和特点（续）</strong><br>B. <span class="blur-text">光化学烟雾事件</span><br>（1）定义：由于汽车尾气中<span class="blur-text">氮氧化物和烃类污染物</span>在强烈日光作用下经过一系列<span class="blur-text">光化学反应</span>产生的光化学烟雾而引起。<br>（2）特点：<br>① 污染物主要来自<span class="blur-text">汽车尾气</span>，经日光紫外线的光化学作用生成的<span class="blur-text">强氧化型烟雾</span><br>② 气象条件为<span class="blur-text">气温高、天气晴朗、紫外线强烈</span>，多发生在<span class="blur-text">夏秋季节的白天</span><br>③ <span class="blur-text">大城市内机动车拥挤、高楼林立、街道透风不畅</span>，容易发生烟雾事件<br>④ 受害者症状主要是<span class="blur-text">眼结膜和呼吸道黏膜的刺激症状</span>为主</td>
+                            <td>24.. B <strong>煤烟型烟雾事件和光化学型烟雾事件的定义和特点（续）</strong><br>B. <span class="answer-text">光化学烟雾事件</span><br>（1）定义：由于汽车尾气中<span class="answer-text">氮氧化物和烃类污染物</span>在强烈日光作用下经过一系列<span class="answer-text">光化学反应</span>产生的光化学烟雾而引起。<br>（2）特点：<br>① 污染物主要来自<span class="answer-text">汽车尾气</span>，经日光紫外线的光化学作用生成的<span class="answer-text">强氧化型烟雾</span><br>② 气象条件为<span class="answer-text">气温高、天气晴朗、紫外线强烈</span>，多发生在<span class="answer-text">夏秋季节的白天</span><br>③ <span class="answer-text">大城市内机动车拥挤、高楼林立、街道透风不畅</span>，容易发生烟雾事件<br>④ 受害者症状主要是<span class="answer-text">眼结膜和呼吸道黏膜的刺激症状</span>为主</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>25.. <strong>室内空气污染的来源</strong><br>① <span class="blur-text">燃料燃烧</span><br>② <span class="blur-text">人类活动</span><br>③ <span class="blur-text">建筑材料和装饰材料</span>：<span class="blur-text">甲醛、挥发性有机化合物、氡</span>等<br>④ <span class="blur-text">家用化学品</span><br>⑤ <span class="blur-text">室外大气污染进入</span></td>
+                            <td>25.. <strong>室内空气污染的来源</strong><br>① <span class="answer-text">燃料燃烧</span><br>② <span class="answer-text">人类活动</span><br>③ <span class="answer-text">建筑材料和装饰材料</span>：<span class="answer-text">甲醛、挥发性有机化合物、氡</span>等<br>④ <span class="answer-text">家用化学品</span><br>⑤ <span class="answer-text">室外大气污染进入</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>26.. <strong>介水传染病的定义及流行病学特点</strong><br>（1）定义：指通过<span class="blur-text">饮用或接触</span>受病原体污染的水，或食用被这种水污染的食物而传播的疾病，又称<span class="blur-text">水性传染病</span>。<br>（2）流行病学特点：<br>① 水源一次大量污染后，可出现<span class="blur-text">爆发性流行</span>，绝大多数病例的发病日期集中在该病<span class="blur-text">最短和最长潜伏期</span>之内，但如水源经常受污染，则病例可终年不断<br>② 病例的分布与<span class="blur-text">供水范围</span>一致，绝大多数病人都有<span class="blur-text">饮用同一水源</span>的历史<br>③ 一旦对污染源采用治理措施，加强<span class="blur-text">饮用水的净化和消毒</span>，疾病的流行能迅速得到控制</td>
+                            <td>26.. <strong>介水传染病的定义及流行病学特点</strong><br>（1）定义：指通过<span class="answer-text">饮用或接触</span>受病原体污染的水，或食用被这种水污染的食物而传播的疾病，又称<span class="answer-text">水性传染病</span>。<br>（2）流行病学特点：<br>① 水源一次大量污染后，可出现<span class="answer-text">爆发性流行</span>，绝大多数病例的发病日期集中在该病<span class="answer-text">最短和最长潜伏期</span>之内，但如水源经常受污染，则病例可终年不断<br>② 病例的分布与<span class="answer-text">供水范围</span>一致，绝大多数病人都有<span class="answer-text">饮用同一水源</span>的历史<br>③ 一旦对污染源采用治理措施，加强<span class="answer-text">饮用水的净化和消毒</span>，疾病的流行能迅速得到控制</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>27.. <strong>水俣病的病因、发病机制及临床症状</strong><br>（1）病因：<span class="blur-text">慢性甲基汞中毒</span>（污染水体的汞、特别是在泥底中的汞，在<span class="blur-text">微生物</span>的作用下可被甲基化形成<span class="blur-text">甲基汞</span>，后者毒性较无机汞<span class="blur-text">增大数倍</span>，更易为生物体吸收，并可通过<span class="blur-text">食物链</span>在生物体内逐渐蓄集，致使某些水生生物体内汞含量达到致使人中毒的水平。<br>（2）发病机制：甲基汞通过<span class="blur-text">呼吸道、消化道</span>经吸收进入血液后，被红细胞的<span class="blur-text">脂类</span>吸收而侵入红细胞并与<span class="blur-text">血红蛋白的巯基</span>结合，随着血液通过<span class="blur-text">血脑屏障</span>进入脑组织，蓄积在脑组织中。成人可损害大脑皮层的<span class="blur-text">运动区、感觉区和视听觉区</span>，也可损伤<span class="blur-text">小脑</span>，也可通过<span class="blur-text">胎盘屏障</span>，对胎儿造成<span class="blur-text">全脑性损害</span>。<br>（3）临床症状：表现为<span class="blur-text">Hunter-Russel症候群</span>，即<span class="blur-text">末梢感觉神经障碍、视野向心性缩小、语言和听力障碍、共济运动失调</span>。</td>
+                            <td>27.. <strong>水俣病的病因、发病机制及临床症状</strong><br>（1）病因：<span class="answer-text">慢性甲基汞中毒</span>（污染水体的汞、特别是在泥底中的汞，在<span class="answer-text">微生物</span>的作用下可被甲基化形成<span class="answer-text">甲基汞</span>，后者毒性较无机汞<span class="answer-text">增大数倍</span>，更易为生物体吸收，并可通过<span class="answer-text">食物链</span>在生物体内逐渐蓄集，致使某些水生生物体内汞含量达到致使人中毒的水平。<br>（2）发病机制：甲基汞通过<span class="answer-text">呼吸道、消化道</span>经吸收进入血液后，被红细胞的<span class="answer-text">脂类</span>吸收而侵入红细胞并与<span class="answer-text">血红蛋白的巯基</span>结合，随着血液通过<span class="answer-text">血脑屏障</span>进入脑组织，蓄积在脑组织中。成人可损害大脑皮层的<span class="answer-text">运动区、感觉区和视听觉区</span>，也可损伤<span class="answer-text">小脑</span>，也可通过<span class="answer-text">胎盘屏障</span>，对胎儿造成<span class="answer-text">全脑性损害</span>。<br>（3）临床症状：表现为<span class="answer-text">Hunter-Russel症候群</span>，即<span class="answer-text">末梢感觉神经障碍、视野向心性缩小、语言和听力障碍、共济运动失调</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>28.. <strong>生活饮用水水质卫生要求</strong><br>生活饮用水应符合下列四项基本要求：<br>① 水中不得含有<span class="blur-text">病原微生物和寄生虫虫卵</span>，以保证不发生和传播介水传染病<br>② 水中所含<span class="blur-text">化学物质及放射性物质</span>不得危害人体健康<br>③ 水的<span class="blur-text">感官性状良好</span><br>④ 应经<span class="blur-text">消毒处理</span>，并符合出厂水消毒剂限值及出厂水和管网末梢水消毒剂余量的要求</td>
+                            <td>28.. <strong>生活饮用水水质卫生要求</strong><br>生活饮用水应符合下列四项基本要求：<br>① 水中不得含有<span class="answer-text">病原微生物和寄生虫虫卵</span>，以保证不发生和传播介水传染病<br>② 水中所含<span class="answer-text">化学物质及放射性物质</span>不得危害人体健康<br>③ 水的<span class="answer-text">感官性状良好</span><br>④ 应经<span class="answer-text">消毒处理</span>，并符合出厂水消毒剂限值及出厂水和管网末梢水消毒剂余量的要求</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>29.. <strong>生活饮用水指标</strong><br>常规指标分为四组：<br>① <span class="blur-text">微生物指标</span><br>② <span class="blur-text">毒理指标</span><br>③ <span class="blur-text">感官性状指标和一般化学指标</span><br>④ <span class="blur-text">放射性指标</span></td>
+                            <td>29.. <strong>生活饮用水指标</strong><br>常规指标分为四组：<br>① <span class="answer-text">微生物指标</span><br>② <span class="answer-text">毒理指标</span><br>③ <span class="answer-text">感官性状指标和一般化学指标</span><br>④ <span class="answer-text">放射性指标</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>30.. <strong>水源选择及卫生要求</strong><br>① <span class="blur-text">水质良好</span><br>② <span class="blur-text">水量充足</span><br>③ <span class="blur-text">便于防护</span><br>④ <span class="blur-text">技术和经济上合理</span></td>
+                            <td>30.. <strong>水源选择及卫生要求</strong><br>① <span class="answer-text">水质良好</span><br>② <span class="answer-text">水量充足</span><br>③ <span class="answer-text">便于防护</span><br>④ <span class="answer-text">技术和经济上合理</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>31.. <strong>影响混凝效果的因素</strong><br>① 水中<span class="blur-text">微粒的性质和含量</span>性质、粒度和含量<br>② 水中<span class="blur-text">溶解性有机物和离子</span>的成分和含量<br>③ <span class="blur-text">水温</span><br>④ 水的<span class="blur-text">pH值和碱度</span><br>⑤ <span class="blur-text">混凝剂的种类、质量和用量</span>等</td>
+                            <td>31.. <strong>影响混凝效果的因素</strong><br>① 水中<span class="answer-text">微粒的性质和含量</span>性质、粒度和含量<br>② 水中<span class="answer-text">溶解性有机物和离子</span>的成分和含量<br>③ <span class="answer-text">水温</span><br>④ 水的<span class="answer-text">pH值和碱度</span><br>⑤ <span class="answer-text">混凝剂的种类、质量和用量</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>32.. A <strong>氯化消毒的定义、原理、影响因素</strong><br>（1）定义：饮用水消毒中一种<span class="blur-text">最有效的方法</span>，供消毒的主要有<span class="blur-text">氯气和氯制剂</span>。<br>（2）原理：氯溶于水后的化学反应，漂白粉和漂白粉精在水中均能水解成<span class="blur-text">次氯酸</span>。氯的杀菌机制是由于次氯酸<span class="blur-text">体积小、电荷中性</span>，易于穿过微生物的<span class="blur-text">细胞壁</span>，同时它又是一种<span class="blur-text">强氧化剂</span>，能损害<span class="blur-text">细胞膜</span>，使其通透性增加，使细胞内容物如<span class="blur-text">蛋白质、RNA和DNA</span>漏出，并能干扰多种<span class="blur-text">酶系统</span>，而导致细菌死亡，次氯酸对病毒的作用在于对<span class="blur-text">核酸的致死性破坏</span>。</td>
+                            <td>32.. A <strong>氯化消毒的定义、原理、影响因素</strong><br>（1）定义：饮用水消毒中一种<span class="answer-text">最有效的方法</span>，供消毒的主要有<span class="answer-text">氯气和氯制剂</span>。<br>（2）原理：氯溶于水后的化学反应，漂白粉和漂白粉精在水中均能水解成<span class="answer-text">次氯酸</span>。氯的杀菌机制是由于次氯酸<span class="answer-text">体积小、电荷中性</span>，易于穿过微生物的<span class="answer-text">细胞壁</span>，同时它又是一种<span class="answer-text">强氧化剂</span>，能损害<span class="answer-text">细胞膜</span>，使其通透性增加，使细胞内容物如<span class="answer-text">蛋白质、RNA和DNA</span>漏出，并能干扰多种<span class="answer-text">酶系统</span>，而导致细菌死亡，次氯酸对病毒的作用在于对<span class="answer-text">核酸的致死性破坏</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>32.. B <strong>氯化消毒的影响因素</strong><br>（3）影响氯化消毒效果的因素：<br>① <span class="blur-text">加氯量和接触时间</span>：要保证氯化消毒的效果，必须向水中加入<span class="blur-text">足够的消毒剂</span>，并有<span class="blur-text">充分的接触时间</span><br>② 水的<span class="blur-text">pH值</span>：氯化消毒时，水的pH<span class="blur-text">不宜太高</span><br>③ <span class="blur-text">水温</span>：水温高，杀菌效果好<br>④ 水的<span class="blur-text">浑浊度</span>：消毒前应进行<span class="blur-text">混凝和过滤处理</span>，尽量降低水的浑浊度<br>⑤ 水的<span class="blur-text">微生物种类和数量</span>：如果水中微生物过多，则消毒后就难以达到卫生标准的要求</td>
+                            <td>32.. B <strong>氯化消毒的影响因素</strong><br>（3）影响氯化消毒效果的因素：<br>① <span class="answer-text">加氯量和接触时间</span>：要保证氯化消毒的效果，必须向水中加入<span class="answer-text">足够的消毒剂</span>，并有<span class="answer-text">充分的接触时间</span><br>② 水的<span class="answer-text">pH值</span>：氯化消毒时，水的pH<span class="answer-text">不宜太高</span><br>③ <span class="answer-text">水温</span>：水温高，杀菌效果好<br>④ 水的<span class="answer-text">浑浊度</span>：消毒前应进行<span class="answer-text">混凝和过滤处理</span>，尽量降低水的浑浊度<br>⑤ 水的<span class="answer-text">微生物种类和数量</span>：如果水中微生物过多，则消毒后就难以达到卫生标准的要求</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>33.. <strong>生物地球化学性疾病的特点（判定条件）</strong><br>① 疾病的发生有明显的<span class="blur-text">地区性</span><br>② 疾病的发生与<span class="blur-text">地质中某种化学元素水平</span>明显相关<br>③ 疾病的发生与当地人群某种化学元素的<span class="blur-text">总摄入量</span>之间存在<span class="blur-text">剂量反应关系</span><br>④ 上述相关性可以用<span class="blur-text">现代医学理论</span>加以解释</td>
+                            <td>33.. <strong>生物地球化学性疾病的特点（判定条件）</strong><br>① 疾病的发生有明显的<span class="answer-text">地区性</span><br>② 疾病的发生与<span class="answer-text">地质中某种化学元素水平</span>明显相关<br>③ 疾病的发生与当地人群某种化学元素的<span class="answer-text">总摄入量</span>之间存在<span class="answer-text">剂量反应关系</span><br>④ 上述相关性可以用<span class="answer-text">现代医学理论</span>加以解释</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>34.. A <strong>地氟病的病区类型和流行病学特点</strong><br>A. 病区类型：<br>（1）<span class="blur-text">饮水型</span>：即长期饮用<span class="blur-text">高氟水</span>而患病<br>（2）<span class="blur-text">燃煤型</span>：即在特定地区煤中含氟量过多，当地居民采取<span class="blur-text">落后的燃煤方式</span>，致使室内空气和食物中含氟量增加而导致<br>（3）<span class="blur-text">饮茶型</span>：长期饮用含氟过高的茶叶而引起，如<span class="blur-text">砖茶</span></td>
+                            <td>34.. A <strong>地氟病的病区类型和流行病学特点</strong><br>A. 病区类型：<br>（1）<span class="answer-text">饮水型</span>：即长期饮用<span class="answer-text">高氟水</span>而患病<br>（2）<span class="answer-text">燃煤型</span>：即在特定地区煤中含氟量过多，当地居民采取<span class="answer-text">落后的燃煤方式</span>，致使室内空气和食物中含氟量增加而导致<br>（3）<span class="answer-text">饮茶型</span>：长期饮用含氟过高的茶叶而引起，如<span class="answer-text">砖茶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>34.. B <strong>地氟病的流行病学特点</strong><br>B. 流行病学特点：<br>（1）<span class="blur-text">居住时间</span>：氟中毒有"<span class="blur-text">易侵袭外来人</span>"的现象，表现为从非病区搬入的居民比当地居民<span class="blur-text">更容易患病</span>，且<span class="blur-text">病情重</span><br>（2）<span class="blur-text">人群分布</span>：<br>① <span class="blur-text">摄入剂量</span>：发病时间、病情均与摄入量呈<span class="blur-text">正相关</span><br>② <span class="blur-text">时间长短</span><br>③ <span class="blur-text">个体排氟能力、对氟敏感性、蓄积量、生长发育状况</span>等<br>（3）<span class="blur-text">年龄分布</span>：<br>① <span class="blur-text">氟斑牙</span>主要和饮用高氟水<span class="blur-text">起始年龄</span>有关，一般<span class="blur-text">乳牙患病减少，恒牙多见</span>，以<span class="blur-text">7~15岁</span>发病率最高<br>② <span class="blur-text">氟骨症</span>多见于<span class="blur-text">成年人</span>，一般在<span class="blur-text">10或15岁</span>以后发病，患病率和病情均随年龄增加而<span class="blur-text">升高和加重</span><br>（4）<span class="blur-text">性别分布</span>：一般无明显的性别差异，但有些病区，<span class="blur-text">女性患者</span>的病情较重，可能与<span class="blur-text">妇女生育、授乳</span>有关</td>
+                            <td>34.. B <strong>地氟病的流行病学特点</strong><br>B. 流行病学特点：<br>（1）<span class="answer-text">居住时间</span>：氟中毒有"<span class="answer-text">易侵袭外来人</span>"的现象，表现为从非病区搬入的居民比当地居民<span class="answer-text">更容易患病</span>，且<span class="answer-text">病情重</span><br>（2）<span class="answer-text">人群分布</span>：<br>① <span class="answer-text">摄入剂量</span>：发病时间、病情均与摄入量呈<span class="answer-text">正相关</span><br>② <span class="answer-text">时间长短</span><br>③ <span class="answer-text">个体排氟能力、对氟敏感性、蓄积量、生长发育状况</span>等<br>（3）<span class="answer-text">年龄分布</span>：<br>① <span class="answer-text">氟斑牙</span>主要和饮用高氟水<span class="answer-text">起始年龄</span>有关，一般<span class="answer-text">乳牙患病减少，恒牙多见</span>，以<span class="answer-text">7~15岁</span>发病率最高<br>② <span class="answer-text">氟骨症</span>多见于<span class="answer-text">成年人</span>，一般在<span class="answer-text">10或15岁</span>以后发病，患病率和病情均随年龄增加而<span class="answer-text">升高和加重</span><br>（4）<span class="answer-text">性别分布</span>：一般无明显的性别差异，但有些病区，<span class="answer-text">女性患者</span>的病情较重，可能与<span class="answer-text">妇女生育、授乳</span>有关</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>35.. <strong>地方性碘缺乏病的流行病学特点</strong><br>（1）<span class="blur-text">地区分布</span>：<br>① <span class="blur-text">山区高于丘陵、丘陵高于平原、平原高于沿海</span><br>② <span class="blur-text">内陆高于沿海</span><br>③ 内陆河的<span class="blur-text">上游高于下游</span><br>④ <span class="blur-text">农业地区高于牧区</span><br>（2）<span class="blur-text">人群分布</span>：任何年龄。<br>① 发病年龄一般在<span class="blur-text">青春期</span>，<span class="blur-text">女性早于男性</span><br>② 患病率<span class="blur-text">女性高于男性</span><br>③ 甲状腺肿大在<span class="blur-text">儿童期</span>开始出现，<span class="blur-text">青春发育期</span>发病率急剧增高，<span class="blur-text">40岁</span>以后逐渐下降<br>④ 重病区年龄组有<span class="blur-text">提前和后移</span>的现象，以<span class="blur-text">15-20岁</span>年龄组，两性差异大<br>（3）<span class="blur-text">时间趋势</span></td>
+                            <td>35.. <strong>地方性碘缺乏病的流行病学特点</strong><br>（1）<span class="answer-text">地区分布</span>：<br>① <span class="answer-text">山区高于丘陵、丘陵高于平原、平原高于沿海</span><br>② <span class="answer-text">内陆高于沿海</span><br>③ 内陆河的<span class="answer-text">上游高于下游</span><br>④ <span class="answer-text">农业地区高于牧区</span><br>（2）<span class="answer-text">人群分布</span>：任何年龄。<br>① 发病年龄一般在<span class="answer-text">青春期</span>，<span class="answer-text">女性早于男性</span><br>② 患病率<span class="answer-text">女性高于男性</span><br>③ 甲状腺肿大在<span class="answer-text">儿童期</span>开始出现，<span class="answer-text">青春发育期</span>发病率急剧增高，<span class="answer-text">40岁</span>以后逐渐下降<br>④ 重病区年龄组有<span class="answer-text">提前和后移</span>的现象，以<span class="answer-text">15-20岁</span>年龄组，两性差异大<br>（3）<span class="answer-text">时间趋势</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>36.. <strong>合理营养的基本要求</strong><br>① 提供<span class="blur-text">充足能量和各种营养素</span><br>② 摄入营养素间<span class="blur-text">保持平衡</span><br>③ <span class="blur-text">合理的加工烹调，合理膳食制度</span><br>④ 食物应保证对机体<span class="blur-text">无毒无害</span></td>
+                            <td>36.. <strong>合理营养的基本要求</strong><br>① 提供<span class="answer-text">充足能量和各种营养素</span><br>② 摄入营养素间<span class="answer-text">保持平衡</span><br>③ <span class="answer-text">合理的加工烹调，合理膳食制度</span><br>④ 食物应保证对机体<span class="answer-text">无毒无害</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>37.. A <strong>不同膳食结构的特点及合理选择</strong><br>（1）<span class="blur-text">动植物食物平衡的膳食结构</span>：<span class="blur-text">日本模式</span><br>① 谷类年人均消费<span class="blur-text">94kg</span><br>② 每天能量维持在<span class="blur-text">2000kcal</span>左右<br>③ 碳水化合物<span class="blur-text">57.7%</span>，脂肪<span class="blur-text">26.3%</span>，蛋白质<span class="blur-text">16%</span><br>④ 动物性蛋白占总蛋白的<span class="blur-text">42.8%</span>，其中<span class="blur-text">海产品占一半</span><br>⑤ 是世界各国调整膳食结构的<span class="blur-text">参考</span><br>（2）<span class="blur-text">以植物性食物为主的膳食结构</span>：<span class="blur-text">发展中国家</span><br>① 谷物年人均消费<span class="blur-text">200kg</span><br>② 动物性蛋白占总蛋白的<span class="blur-text">10%~20%</span><br>③ <span class="blur-text">营养缺乏病</span>是主要问题，但动物性脂肪低，有利于<span class="blur-text">冠心病和高血脂</span>的预防</td>
+                            <td>37.. A <strong>不同膳食结构的特点及合理选择</strong><br>（1）<span class="answer-text">动植物食物平衡的膳食结构</span>：<span class="answer-text">日本模式</span><br>① 谷类年人均消费<span class="answer-text">94kg</span><br>② 每天能量维持在<span class="answer-text">2000kcal</span>左右<br>③ 碳水化合物<span class="answer-text">57.7%</span>，脂肪<span class="answer-text">26.3%</span>，蛋白质<span class="answer-text">16%</span><br>④ 动物性蛋白占总蛋白的<span class="answer-text">42.8%</span>，其中<span class="answer-text">海产品占一半</span><br>⑤ 是世界各国调整膳食结构的<span class="answer-text">参考</span><br>（2）<span class="answer-text">以植物性食物为主的膳食结构</span>：<span class="answer-text">发展中国家</span><br>① 谷物年人均消费<span class="answer-text">200kg</span><br>② 动物性蛋白占总蛋白的<span class="answer-text">10%~20%</span><br>③ <span class="answer-text">营养缺乏病</span>是主要问题，但动物性脂肪低，有利于<span class="answer-text">冠心病和高血脂</span>的预防</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>37.. B <strong>不同膳食结构的特点及合理选择（续）</strong><br>（3）<span class="blur-text">以动物性食物为主的膳食结构</span>：<span class="blur-text">欧美国家</span><br>① 谷物年人均消费<span class="blur-text">60~75kg</span><br>② 每天能量高达<span class="blur-text">3300~3500千卡</span><br>③ 属<span class="blur-text">营养过剩型</span>膳食，以<span class="blur-text">高能量、高蛋白、高脂肪、低膳食纤维</span>为主要特点<br>④ <span class="blur-text">肥胖相关慢性疾病</span>发病率高<br>（4）<span class="blur-text">地中海膳食结构</span>：<span class="blur-text">意大利、希腊</span><br>① <span class="blur-text">饱和脂肪摄入量低</span>，<span class="blur-text">单不饱和脂肪比例高</span>，膳食含大量<span class="blur-text">复合碳水化合物</span>，<span class="blur-text">蔬菜水果摄入量高</span><br>② 居民<span class="blur-text">心脑血管疾病</span>病率低<br>要合理营养并且防治疾病发生应采取<span class="blur-text">动植物食物平衡的膳食结构</span>，即<span class="blur-text">日本模式</span></td>
+                            <td>37.. B <strong>不同膳食结构的特点及合理选择（续）</strong><br>（3）<span class="answer-text">以动物性食物为主的膳食结构</span>：<span class="answer-text">欧美国家</span><br>① 谷物年人均消费<span class="answer-text">60~75kg</span><br>② 每天能量高达<span class="answer-text">3300~3500千卡</span><br>③ 属<span class="answer-text">营养过剩型</span>膳食，以<span class="answer-text">高能量、高蛋白、高脂肪、低膳食纤维</span>为主要特点<br>④ <span class="answer-text">肥胖相关慢性疾病</span>发病率高<br>（4）<span class="answer-text">地中海膳食结构</span>：<span class="answer-text">意大利、希腊</span><br>① <span class="answer-text">饱和脂肪摄入量低</span>，<span class="answer-text">单不饱和脂肪比例高</span>，膳食含大量<span class="answer-text">复合碳水化合物</span>，<span class="answer-text">蔬菜水果摄入量高</span><br>② 居民<span class="answer-text">心脑血管疾病</span>病率低<br>要合理营养并且防治疾病发生应采取<span class="answer-text">动植物食物平衡的膳食结构</span>，即<span class="answer-text">日本模式</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>38.. <strong>《中国居民膳食指南》（2022）</strong><br>① <span class="blur-text">食物多样，合理搭配</span><br>② <span class="blur-text">吃动平衡，健康体重</span><br>③ <span class="blur-text">多吃蔬果、奶类、全谷、大豆</span><br>④ <span class="blur-text">适量吃鱼、禽、蛋、瘦肉</span><br>⑤ <span class="blur-text">少盐少油，控糖限酒</span><br>⑥ <span class="blur-text">规律进餐，足量饮水</span><br>⑦ <span class="blur-text">会烹会选，会看标签</span><br>⑧ <span class="blur-text">公筷分餐，杜绝浪费</span></td>
+                            <td>38.. <strong>《中国居民膳食指南》（2022）</strong><br>① <span class="answer-text">食物多样，合理搭配</span><br>② <span class="answer-text">吃动平衡，健康体重</span><br>③ <span class="answer-text">多吃蔬果、奶类、全谷、大豆</span><br>④ <span class="answer-text">适量吃鱼、禽、蛋、瘦肉</span><br>⑤ <span class="answer-text">少盐少油，控糖限酒</span><br>⑥ <span class="answer-text">规律进餐，足量饮水</span><br>⑦ <span class="answer-text">会烹会选，会看标签</span><br>⑧ <span class="answer-text">公筷分餐，杜绝浪费</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>39.. <strong>备孕女性膳食指南（孕前3月-6月）</strong><br>① <span class="blur-text">调整孕前体重至适宜水平</span><br>② <span class="blur-text">常吃含铁丰富的食物，选用碘盐，孕前3个月开始补充叶酸</span><br>③ <span class="blur-text">禁烟酒，保持健康生活方式</span></td>
+                            <td>39.. <strong>备孕女性膳食指南（孕前3月-6月）</strong><br>① <span class="answer-text">调整孕前体重至适宜水平</span><br>② <span class="answer-text">常吃含铁丰富的食物，选用碘盐，孕前3个月开始补充叶酸</span><br>③ <span class="answer-text">禁烟酒，保持健康生活方式</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>40.. <strong>孕期女性膳食指南</strong><br>① <span class="blur-text">补充叶酸，常吃含铁丰富的食物，选用碘盐</span><br>② <span class="blur-text">孕吐严重者可少量多餐，保证摄入含必要量碳水化合物的食物</span><br>③ <span class="blur-text">适量身体活动，维持孕期适宜增重</span><br>④ <span class="blur-text">禁烟酒，积极准备母乳喂养</span></td>
+                            <td>40.. <strong>孕期女性膳食指南</strong><br>① <span class="answer-text">补充叶酸，常吃含铁丰富的食物，选用碘盐</span><br>② <span class="answer-text">孕吐严重者可少量多餐，保证摄入含必要量碳水化合物的食物</span><br>③ <span class="answer-text">适量身体活动，维持孕期适宜增重</span><br>④ <span class="answer-text">禁烟酒，积极准备母乳喂养</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>41.. <strong>哺乳期膳食的合理安排原则</strong><br>① <span class="blur-text">增加富含优质蛋白质及维生素A的动物性食物和海产品，选用碘盐</span><br>② <span class="blur-text">产褥期食物多样不过量，重视整个哺乳期营养</span><br>③ <span class="blur-text">愉快心情，充足睡眠，促进乳汁分泌</span><br>④ <span class="blur-text">坚持哺乳，适度运动，逐步恢复适宜体重</span><br>⑤ <span class="blur-text">忌烟酒，避免浓茶和咖啡</span></td>
+                            <td>41.. <strong>哺乳期膳食的合理安排原则</strong><br>① <span class="answer-text">增加富含优质蛋白质及维生素A的动物性食物和海产品，选用碘盐</span><br>② <span class="answer-text">产褥期食物多样不过量，重视整个哺乳期营养</span><br>③ <span class="answer-text">愉快心情，充足睡眠，促进乳汁分泌</span><br>④ <span class="answer-text">坚持哺乳，适度运动，逐步恢复适宜体重</span><br>⑤ <span class="answer-text">忌烟酒，避免浓茶和咖啡</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>42.. <strong>婴儿喂养指南（0月~6月）</strong><br>① <span class="blur-text">产后尽早开奶，坚持新生儿第一口食物是母乳</span><br>② <span class="blur-text">坚持6月龄内纯母乳喂养</span><br>③ <span class="blur-text">顺应喂养，建立良好的生活规律</span><br>④ <span class="blur-text">生后数日开始补充维生素D，不需补钙</span><br>⑤ <span class="blur-text">婴儿配方奶是不能纯母乳喂养时无奈选择</span><br>⑥ <span class="blur-text">监测体格指标，保持健康生长</span></td>
+                            <td>42.. <strong>婴儿喂养指南（0月~6月）</strong><br>① <span class="answer-text">产后尽早开奶，坚持新生儿第一口食物是母乳</span><br>② <span class="answer-text">坚持6月龄内纯母乳喂养</span><br>③ <span class="answer-text">顺应喂养，建立良好的生活规律</span><br>④ <span class="answer-text">生后数日开始补充维生素D，不需补钙</span><br>⑤ <span class="answer-text">婴儿配方奶是不能纯母乳喂养时无奈选择</span><br>⑥ <span class="answer-text">监测体格指标，保持健康生长</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>43.. <strong>添加辅助食品的原则和方法</strong><br>（1）<span class="blur-text">种类</span>：<br>① 第一种引入的食物：<span class="blur-text">强化铁的谷类食物</span>，如<span class="blur-text">米粉</span><br>② 其次是<span class="blur-text">蔬菜水果</span><br>③ 最后加<span class="blur-text">肉、鱼类（7-8月），蛋（9-11月）</span><br>（2）<span class="blur-text">方式</span>：<br>① <span class="blur-text">由少到多</span>：1勺→2勺→多勺→一餐<br>② <span class="blur-text">由稀到稠</span>：乳类→稀粥→软饭<br>③ <span class="blur-text">由细到粗</span>：汤→泥茸状→碎末→成人食品<br>④ <span class="blur-text">一种到多种</span>：每种观察<span class="blur-text">5~7日</span>，有无<span class="blur-text">腹泻、呕吐、红疹、气喘</span>等</td>
+                            <td>43.. <strong>添加辅助食品的原则和方法</strong><br>（1）<span class="answer-text">种类</span>：<br>① 第一种引入的食物：<span class="answer-text">强化铁的谷类食物</span>，如<span class="answer-text">米粉</span><br>② 其次是<span class="answer-text">蔬菜水果</span><br>③ 最后加<span class="answer-text">肉、鱼类（7-8月），蛋（9-11月）</span><br>（2）<span class="answer-text">方式</span>：<br>① <span class="answer-text">由少到多</span>：1勺→2勺→多勺→一餐<br>② <span class="answer-text">由稀到稠</span>：乳类→稀粥→软饭<br>③ <span class="answer-text">由细到粗</span>：汤→泥茸状→碎末→成人食品<br>④ <span class="answer-text">一种到多种</span>：每种观察<span class="answer-text">5~7日</span>，有无<span class="answer-text">腹泻、呕吐、红疹、气喘</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>44.. <strong>婴儿喂养指南（6~12月）</strong><br>① <span class="blur-text">继续母乳喂养，满6月龄起添加辅食</span><br>② <span class="blur-text">从富铁泥糊状食物开始，逐步添加达到食物多样</span><br>③ <span class="blur-text">提倡顺应喂养，鼓励但不强迫进食</span><br>④ <span class="blur-text">辅食不添加调味品，尽量减少糖和盐的摄入</span><br>⑤ <span class="blur-text">注重饮食卫生和饮食安全</span><br>⑥ <span class="blur-text">定期监测体格指标，追求健康生长</span></td>
+                            <td>44.. <strong>婴儿喂养指南（6~12月）</strong><br>① <span class="answer-text">继续母乳喂养，满6月龄起添加辅食</span><br>② <span class="answer-text">从富铁泥糊状食物开始，逐步添加达到食物多样</span><br>③ <span class="answer-text">提倡顺应喂养，鼓励但不强迫进食</span><br>④ <span class="answer-text">辅食不添加调味品，尽量减少糖和盐的摄入</span><br>⑤ <span class="answer-text">注重饮食卫生和饮食安全</span><br>⑥ <span class="answer-text">定期监测体格指标，追求健康生长</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>45.. <strong>老年人膳食指南</strong><br>① <span class="blur-text">少量多餐细软，预防营养缺乏</span><br>② <span class="blur-text">主动充足饮水，积极户外活动</span><br>③ <span class="blur-text">延缓肌肉衰减，维持适宜体重</span><br>④ <span class="blur-text">摄入充足食物，鼓励陪伴进餐</span></td>
+                            <td>45.. <strong>老年人膳食指南</strong><br>① <span class="answer-text">少量多餐细软，预防营养缺乏</span><br>② <span class="answer-text">主动充足饮水，积极户外活动</span><br>③ <span class="answer-text">延缓肌肉衰减，维持适宜体重</span><br>④ <span class="answer-text">摄入充足食物，鼓励陪伴进餐</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>46.. A <strong>肥胖症的治疗和预防</strong><br>（1）<span class="blur-text">营养治疗总体原则</span>：<br>① <span class="blur-text">控制总能量</span>：减少<span class="blur-text">300~500kcal</span><br>② <span class="blur-text">限制脂肪摄入</span><br>③ <span class="blur-text">减少简单糖类摄入</span><br>④ 保证充足<span class="blur-text">优质蛋白质</span>的供给：<span class="blur-text">脱脂奶、鱼、鸡、鸡蛋、瘦肉、豆类</span><br>⑤ 补充足量<span class="blur-text">微量营养素</span><br>（2）<span class="blur-text">药物治疗</span>：<br>① <span class="blur-text">适用人群</span>：适用于<span class="blur-text">BMI超过30</span>的肥胖者<br>② <span class="blur-text">种类</span>：<span class="blur-text">抑制食欲类、抑制肠道脂肪酶药物、缓泻剂</span><br>③ <span class="blur-text">注意事宜</span>：药物不良反应，导致营养不良</td>
+                            <td>46.. A <strong>肥胖症的治疗和预防</strong><br>（1）<span class="answer-text">营养治疗总体原则</span>：<br>① <span class="answer-text">控制总能量</span>：减少<span class="answer-text">300~500kcal</span><br>② <span class="answer-text">限制脂肪摄入</span><br>③ <span class="answer-text">减少简单糖类摄入</span><br>④ 保证充足<span class="answer-text">优质蛋白质</span>的供给：<span class="answer-text">脱脂奶、鱼、鸡、鸡蛋、瘦肉、豆类</span><br>⑤ 补充足量<span class="answer-text">微量营养素</span><br>（2）<span class="answer-text">药物治疗</span>：<br>① <span class="answer-text">适用人群</span>：适用于<span class="answer-text">BMI超过30</span>的肥胖者<br>② <span class="answer-text">种类</span>：<span class="answer-text">抑制食欲类、抑制肠道脂肪酶药物、缓泻剂</span><br>③ <span class="answer-text">注意事宜</span>：药物不良反应，导致营养不良</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>46.. B <strong>肥胖症的治疗和预防（续）</strong><br>（3）<span class="blur-text">手术治疗</span>：<br>① <span class="blur-text">适用人群</span>：仅适用于严重肥胖者（<span class="blur-text">BMI超过40</span>或<span class="blur-text">BMI超过35但伴有严重并发症者</span>）<br>② <span class="blur-text">种类</span>：<span class="blur-text">缩胃术</span></td>
+                            <td>46.. B <strong>肥胖症的治疗和预防（续）</strong><br>（3）<span class="answer-text">手术治疗</span>：<br>① <span class="answer-text">适用人群</span>：仅适用于严重肥胖者（<span class="answer-text">BMI超过40</span>或<span class="answer-text">BMI超过35但伴有严重并发症者</span>）<br>② <span class="answer-text">种类</span>：<span class="answer-text">缩胃术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>47.. <strong>肿瘤防治建议</strong><br>① <span class="blur-text">保持健康体重</span><br>② <span class="blur-text">保持足够的身体活动</span><br>③ 保持富含<span class="blur-text">全谷物、蔬菜、水果和豆类</span>饮食结构<br>④ <span class="blur-text">减少吃红肉和其他加工肉制品</span><br>⑤ <span class="blur-text">减少含糖饮料</span><br>⑥ <span class="blur-text">减少喝含酒精饮料</span><br>⑦ <span class="blur-text">不推荐使用膳食补充剂预防癌症</span><br>⑧ <span class="blur-text">尽可能进行母乳喂养</span><br>⑨ <span class="blur-text">确诊的癌症患者也应遵循本建议</span></td>
+                            <td>47.. <strong>肿瘤防治建议</strong><br>① <span class="answer-text">保持健康体重</span><br>② <span class="answer-text">保持足够的身体活动</span><br>③ 保持富含<span class="answer-text">全谷物、蔬菜、水果和豆类</span>饮食结构<br>④ <span class="answer-text">减少吃红肉和其他加工肉制品</span><br>⑤ <span class="answer-text">减少含糖饮料</span><br>⑥ <span class="answer-text">减少喝含酒精饮料</span><br>⑦ <span class="answer-text">不推荐使用膳食补充剂预防癌症</span><br>⑧ <span class="answer-text">尽可能进行母乳喂养</span><br>⑨ <span class="answer-text">确诊的癌症患者也应遵循本建议</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>48.. <strong>食物中毒的分类及特征</strong><br>（1）<span class="blur-text">分类</span>：<br>① <span class="blur-text">细菌性食物中毒</span><br>② <span class="blur-text">真菌毒素食物中毒</span><br>③ <span class="blur-text">有毒动植物食物中毒</span><br>④ <span class="blur-text">化学性食物中毒</span><br>（2）<span class="blur-text">食物中毒的特征</span>：<br>① <span class="blur-text">潜伏期短</span>，呈<span class="blur-text">暴发流行趋势</span><br>② 中毒患者有<span class="blur-text">相似临床症状体征</span>，以<span class="blur-text">胃肠道症状</span>为主<br>③ 发病与<span class="blur-text">进食某种食物</span>有明确关系<br>④ <span class="blur-text">无人群之间的传染性</span><br>⑤ 中毒食品和中毒患者生物样品中能检出与临床表现<span class="blur-text">一致的病原</span></td>
+                            <td>48.. <strong>食物中毒的分类及特征</strong><br>（1）<span class="answer-text">分类</span>：<br>① <span class="answer-text">细菌性食物中毒</span><br>② <span class="answer-text">真菌毒素食物中毒</span><br>③ <span class="answer-text">有毒动植物食物中毒</span><br>④ <span class="answer-text">化学性食物中毒</span><br>（2）<span class="answer-text">食物中毒的特征</span>：<br>① <span class="answer-text">潜伏期短</span>，呈<span class="answer-text">暴发流行趋势</span><br>② 中毒患者有<span class="answer-text">相似临床症状体征</span>，以<span class="answer-text">胃肠道症状</span>为主<br>③ 发病与<span class="answer-text">进食某种食物</span>有明确关系<br>④ <span class="answer-text">无人群之间的传染性</span><br>⑤ 中毒食品和中毒患者生物样品中能检出与临床表现<span class="answer-text">一致的病原</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>49.. <strong>细菌性食物中毒的流行病学特点和发生的三环节</strong><br>（1）<span class="blur-text">流行病学特点</span>：<span class="blur-text">发病率高</span>，<span class="blur-text">夏秋季</span>为高发季节，<span class="blur-text">动物性食品</span>为主要中毒食物<br>（2）<span class="blur-text">发生的三环节</span>：<br>① <span class="blur-text">食品生产、销售各环节受到污染</span><br>② 食物存放在<span class="blur-text">较高温度</span>的环境，致病菌<span class="blur-text">大量生长繁殖和产毒</span><br>③ 食用前<span class="blur-text">未充分加热杀菌</span></td>
+                            <td>49.. <strong>细菌性食物中毒的流行病学特点和发生的三环节</strong><br>（1）<span class="answer-text">流行病学特点</span>：<span class="answer-text">发病率高</span>，<span class="answer-text">夏秋季</span>为高发季节，<span class="answer-text">动物性食品</span>为主要中毒食物<br>（2）<span class="answer-text">发生的三环节</span>：<br>① <span class="answer-text">食品生产、销售各环节受到污染</span><br>② 食物存放在<span class="answer-text">较高温度</span>的环境，致病菌<span class="answer-text">大量生长繁殖和产毒</span><br>③ 食用前<span class="answer-text">未充分加热杀菌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>50.. A <strong>常见细菌性食物中毒</strong><br>（1）<span class="blur-text">沙门氏菌</span>：<br>① <span class="blur-text">中毒食品</span>：<span class="blur-text">禽蛋、畜禽肉、内脏、刚挤出来的牛奶、水产品</span><br>② <span class="blur-text">临床表现</span>：进食后<span class="blur-text">12-72小时</span>，出现明显的<span class="blur-text">腹痛、腹泻和发烧</span>，一般<span class="blur-text">4-7天</span>好转恢复<br>（2）<span class="blur-text">葡萄球菌</span>：<br>① <span class="blur-text">中毒食品</span>：<span class="blur-text">营养丰富含水分多的食品，剩饭、糕点、冰淇淋、奶和奶制品</span><br>② <span class="blur-text">临床表现</span>：潜伏期<span class="blur-text">2-3小时</span>，<span class="blur-text">反复剧烈呕吐</span>，<span class="blur-text">上腹及心窝部疼痛</span>，可致<span class="blur-text">脱水</span>，病程短，很少发生死亡<br>（3）<span class="blur-text">肉毒梭菌</span>：<br>① <span class="blur-text">中毒食品</span>：<span class="blur-text">家庭自制发酵制品（臭豆腐等）</span><br>② <span class="blur-text">临床表现</span>：潜伏期<span class="blur-text">1-5天</span>，<span class="blur-text">不影响体温和意识</span>，以<span class="blur-text">对称性颅脑神经损害症状</span>为特征，可因<span class="blur-text">呼吸肌麻痹</span>引起呼吸衰竭而死亡。及早使用<span class="blur-text">多价抗毒素血清</span>及对症治疗</td>
+                            <td>50.. A <strong>常见细菌性食物中毒</strong><br>（1）<span class="answer-text">沙门氏菌</span>：<br>① <span class="answer-text">中毒食品</span>：<span class="answer-text">禽蛋、畜禽肉、内脏、刚挤出来的牛奶、水产品</span><br>② <span class="answer-text">临床表现</span>：进食后<span class="answer-text">12-72小时</span>，出现明显的<span class="answer-text">腹痛、腹泻和发烧</span>，一般<span class="answer-text">4-7天</span>好转恢复<br>（2）<span class="answer-text">葡萄球菌</span>：<br>① <span class="answer-text">中毒食品</span>：<span class="answer-text">营养丰富含水分多的食品，剩饭、糕点、冰淇淋、奶和奶制品</span><br>② <span class="answer-text">临床表现</span>：潜伏期<span class="answer-text">2-3小时</span>，<span class="answer-text">反复剧烈呕吐</span>，<span class="answer-text">上腹及心窝部疼痛</span>，可致<span class="answer-text">脱水</span>，病程短，很少发生死亡<br>（3）<span class="answer-text">肉毒梭菌</span>：<br>① <span class="answer-text">中毒食品</span>：<span class="answer-text">家庭自制发酵制品（臭豆腐等）</span><br>② <span class="answer-text">临床表现</span>：潜伏期<span class="answer-text">1-5天</span>，<span class="answer-text">不影响体温和意识</span>，以<span class="answer-text">对称性颅脑神经损害症状</span>为特征，可因<span class="answer-text">呼吸肌麻痹</span>引起呼吸衰竭而死亡。及早使用<span class="answer-text">多价抗毒素血清</span>及对症治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>50.. B <strong>常见细菌性食物中毒（续）</strong><br>（4）<span class="blur-text">大肠埃希氏菌</span>：<br><span class="blur-text">出血性肠炎型</span>：主要由<span class="blur-text">O157:H7</span>引起，<span class="blur-text">突发性剧烈腹痛、腹泻</span>，从<span class="blur-text">水样便到血便</span>，甚至全为血水<br>（5）<span class="blur-text">副溶血性弧菌</span>：<span class="blur-text">嗜盐菌</span><br>① <span class="blur-text">中毒食品</span>：<span class="blur-text">海产品</span>为主，如<span class="blur-text">带鱼、螃蟹、虾、贝类</span>，<span class="blur-text">腌制食品和熟肉</span><br>② <span class="blur-text">临床表现</span>：<span class="blur-text">上腹脐周阵发性绞痛、腹泻、恶心、呕吐</span></td>
+                            <td>50.. B <strong>常见细菌性食物中毒（续）</strong><br>（4）<span class="answer-text">大肠埃希氏菌</span>：<br><span class="answer-text">出血性肠炎型</span>：主要由<span class="answer-text">O157:H7</span>引起，<span class="answer-text">突发性剧烈腹痛、腹泻</span>，从<span class="answer-text">水样便到血便</span>，甚至全为血水<br>（5）<span class="answer-text">副溶血性弧菌</span>：<span class="answer-text">嗜盐菌</span><br>① <span class="answer-text">中毒食品</span>：<span class="answer-text">海产品</span>为主，如<span class="answer-text">带鱼、螃蟹、虾、贝类</span>，<span class="answer-text">腌制食品和熟肉</span><br>② <span class="answer-text">临床表现</span>：<span class="answer-text">上腹脐周阵发性绞痛、腹泻、恶心、呕吐</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>51.. A <strong>亚硝酸盐中毒的原因、临床表现及急救措施</strong><br>（1）<span class="blur-text">原因</span>：<br>① <span class="blur-text">误食</span>：误将<span class="blur-text">工业盐或发色剂</span>当做调味品食盐使用（外观相似，但亚硝酸钠<span class="blur-text">熔点较食盐低</span>，可用<span class="blur-text">烧红铁锅试验</span>）<br>② <span class="blur-text">蔬菜储存时间过长</span>，腌制蔬菜时大量产生<br>③ <span class="blur-text">过量添加或违法添加</span>：肉类添加过多发色剂，餐饮行业违法使用亚硝酸盐<br>（2）<span class="blur-text">中毒机理</span>：亚硝酸盐进入血液后，将血红蛋白中<span class="blur-text">二价铁离子氧化成三价铁离子</span>，血红蛋白变为<span class="blur-text">高铁血红蛋白</span>，而失去<span class="blur-text">携带氧的能力</span>，引起<span class="blur-text">组织缺氧、发绀</span>。<br>（3）<span class="blur-text">临床表现</span>：潜伏期<span class="blur-text">10-20分钟</span>，<span class="blur-text">头晕乏力、胸闷、心跳加速、嗜睡、呼吸困难、恶心呕吐、腹胀</span>。<span class="blur-text">皮肤青紫</span>为典型特征，抽出的血液呈<span class="blur-text">深棕色</span>。</td>
+                            <td>51.. A <strong>亚硝酸盐中毒的原因、临床表现及急救措施</strong><br>（1）<span class="answer-text">原因</span>：<br>① <span class="answer-text">误食</span>：误将<span class="answer-text">工业盐或发色剂</span>当做调味品食盐使用（外观相似，但亚硝酸钠<span class="answer-text">熔点较食盐低</span>，可用<span class="answer-text">烧红铁锅试验</span>）<br>② <span class="answer-text">蔬菜储存时间过长</span>，腌制蔬菜时大量产生<br>③ <span class="answer-text">过量添加或违法添加</span>：肉类添加过多发色剂，餐饮行业违法使用亚硝酸盐<br>（2）<span class="answer-text">中毒机理</span>：亚硝酸盐进入血液后，将血红蛋白中<span class="answer-text">二价铁离子氧化成三价铁离子</span>，血红蛋白变为<span class="answer-text">高铁血红蛋白</span>，而失去<span class="answer-text">携带氧的能力</span>，引起<span class="answer-text">组织缺氧、发绀</span>。<br>（3）<span class="answer-text">临床表现</span>：潜伏期<span class="answer-text">10-20分钟</span>，<span class="answer-text">头晕乏力、胸闷、心跳加速、嗜睡、呼吸困难、恶心呕吐、腹胀</span>。<span class="answer-text">皮肤青紫</span>为典型特征，抽出的血液呈<span class="answer-text">深棕色</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>51.. B <strong>亚硝酸盐中毒的急救措施</strong><br>（4）<span class="blur-text">急救措施</span>：<br>① <span class="blur-text">排出毒物</span><br>② <span class="blur-text">吸氧、呼吸兴奋剂、呼吸肌</span><br>③ <span class="blur-text">解毒治疗</span>：口服或静脉注射<span class="blur-text">1%美蓝</span>，辅以<span class="blur-text">维生素C</span></td>
+                            <td>51.. B <strong>亚硝酸盐中毒的急救措施</strong><br>（4）<span class="answer-text">急救措施</span>：<br>① <span class="answer-text">排出毒物</span><br>② <span class="answer-text">吸氧、呼吸兴奋剂、呼吸肌</span><br>③ <span class="answer-text">解毒治疗</span>：口服或静脉注射<span class="answer-text">1%美蓝</span>，辅以<span class="answer-text">维生素C</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>52.. <strong>食物中毒的调查处理</strong><br>（1）<span class="blur-text">食物中毒的报告制度</span><br>（2）<span class="blur-text">食物中毒的调查工作</span>：<span class="blur-text">流行病学调查与现场卫生学调查</span><br>（3）<span class="blur-text">抢救和处理病人</span>：<br>① 及时、彻底排除胃肠道<span class="blur-text">未吸收的毒物</span><br>② 使用中毒物质的<span class="blur-text">拮抗剂、特效解毒药</span><br>③ 对感染型食物中毒可使用<span class="blur-text">抗生素</span><br>④ <span class="blur-text">补充液体</span>，促进毒物排泄<br>⑤ <span class="blur-text">对症治疗</span>，减少并发症，降低死亡率</td>
+                            <td>52.. <strong>食物中毒的调查处理</strong><br>（1）<span class="answer-text">食物中毒的报告制度</span><br>（2）<span class="answer-text">食物中毒的调查工作</span>：<span class="answer-text">流行病学调查与现场卫生学调查</span><br>（3）<span class="answer-text">抢救和处理病人</span>：<br>① 及时、彻底排除胃肠道<span class="answer-text">未吸收的毒物</span><br>② 使用中毒物质的<span class="answer-text">拮抗剂、特效解毒药</span><br>③ 对感染型食物中毒可使用<span class="answer-text">抗生素</span><br>④ <span class="answer-text">补充液体</span>，促进毒物排泄<br>⑤ <span class="answer-text">对症治疗</span>，减少并发症，降低死亡率</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

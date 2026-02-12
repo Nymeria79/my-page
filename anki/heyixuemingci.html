@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1. 核医学：<br>是利用<span class="blur-text">核素</span>及其<span class="blur-text">标记物</span><br>进行临床<span class="blur-text">诊</span>断，疾病治<span class="blur-text">疗</span>以及生物医学<span class="blur-text">研究</span>的一门学科，<br>是核医学技术与医学相结合的产物，是现在医学的重要组成部分。	1. 核医学：<br>是利用核素及其标记物进行临床诊断，疾病治疗以及生物医学研究的一门学科，<br>是核医学技术与医学相结合的产物，是现在医学的重要组成部分。</td>
+                            <td>1. 核医学：<br>是利用<span class="answer-text">核素</span>及其<span class="answer-text">标记物</span><br>进行临床<span class="answer-text">诊</span>断，疾病治<span class="answer-text">疗</span>以及生物医学<span class="answer-text">研究</span>的一门学科，<br>是核医学技术与医学相结合的产物，是现在医学的重要组成部分。	1. 核医学：<br>是利用核素及其标记物进行临床诊断，疾病治疗以及生物医学研究的一门学科，<br>是核医学技术与医学相结合的产物，是现在医学的重要组成部分。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. 放射性核素显像：<br>利用放射性核素实现<span class="blur-text">脏器</span>和<span class="blur-text">病变</span>显像的方法。<br><br>是以核素<span class="blur-text">示踪</span>技术为基础，<br>以放射性<span class="blur-text">浓度</span>为重建变量，<br>以组织<span class="blur-text">吸收</span>功能的差异为依据。	2. 放射性核素显像：<br>利用放射性核素实现脏器和病变显像的方法。是以核素示踪技术为基础，以放射性浓度为重建变量，以组织吸收功能的差异为依据。</td>
+                            <td>2. 放射性核素显像：<br>利用放射性核素实现<span class="answer-text">脏器</span>和<span class="answer-text">病变</span>显像的方法。<br><br>是以核素<span class="answer-text">示踪</span>技术为基础，<br>以放射性<span class="answer-text">浓度</span>为重建变量，<br>以组织<span class="answer-text">吸收</span>功能的差异为依据。	2. 放射性核素显像：<br>利用放射性核素实现脏器和病变显像的方法。是以核素示踪技术为基础，以放射性浓度为重建变量，以组织吸收功能的差异为依据。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. 核素 ：<br><span class="blur-text">质子</span>数、<span class="blur-text">中子</span>数均相同，<br>并且原子核处于相同<span class="blur-text">能级</span>状态的原子	3. 核素 ：<br>质子数、中子数均相同，并且原子核处于相同能级状态的原子</td>
+                            <td>3. 核素 ：<br><span class="answer-text">质子</span>数、<span class="answer-text">中子</span>数均相同，<br>并且原子核处于相同<span class="answer-text">能级</span>状态的原子	3. 核素 ：<br>质子数、中子数均相同，并且原子核处于相同能级状态的原子</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. <span class="blur-text">同位素</span><br>（ Isotope） ：<br><span class="blur-text">质子</span>数相同，<span class="blur-text">中子</span>数不同的核素，<br>在元素周期表相同位置，互称为同位素。	4. <span class="blur-text">同位素</span><br>（ Isotope） ：<br>质子数相同，中子数不同的核素，在元素周期表相同位置，互称为同位素。</td>
+                            <td>4. <span class="answer-text">同位素</span><br>（ Isotope） ：<br><span class="answer-text">质子</span>数相同，<span class="answer-text">中子</span>数不同的核素，<br>在元素周期表相同位置，互称为同位素。	4. <span class="answer-text">同位素</span><br>（ Isotope） ：<br>质子数相同，中子数不同的核素，在元素周期表相同位置，互称为同位素。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. 同质异能素：<br>核内中子数和质子数都相同<br>但<span class="blur-text">能量</span>状态不同的核素，<br>彼此称为同质异能素。	5. 同质异能素：<br>核内中子数和质子数都相同但能量状态不同的合核素，彼此称为同质异能素。</td>
+                            <td>5. 同质异能素：<br>核内中子数和质子数都相同<br>但<span class="answer-text">能量</span>状态不同的核素，<br>彼此称为同质异能素。	5. 同质异能素：<br>核内中子数和质子数都相同但能量状态不同的合核素，彼此称为同质异能素。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. 放射性药物：<br>凡引入体内用作<span class="blur-text">诊疗</span>的<br>放射性核素及其标记化合物。	6. 放射性药物：<br>凡引入体内用作诊疗的放射性核素及其标记化合物。</td>
+                            <td>6. 放射性药物：<br>凡引入体内用作<span class="answer-text">诊疗</span>的<br>放射性核素及其标记化合物。	6. 放射性药物：<br>凡引入体内用作诊疗的放射性核素及其标记化合物。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. 放射性试剂：<br><span class="blur-text">不需引入</span>体内的放射性核素及其标记化合物。	7. 放射性试剂：<br>不需引入体内的放射性核素及其标记化合物。</td>
+                            <td>7. 放射性试剂：<br><span class="answer-text">不需引入</span>体内的放射性核素及其标记化合物。	7. 放射性试剂：<br>不需引入体内的放射性核素及其标记化合物。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. 静态显像：<br>当显像剂在脏器内或病变处的<span class="blur-text">浓度</span>处于<span class="blur-text">稳定</span>状态时进行显像。<br>多用作观察脏器和病变的<span class="blur-text">位置</span>，<span class="blur-text">形态大小</span>和<span class="blur-text">放射性分布</span>。	8. 静态显像：<br>当显像剂在脏器内或病变处的浓度处于稳定状态时进行显像。多用作观察脏器和病变的位置，形态，大小和放射性分布。</td>
+                            <td>8. 静态显像：<br>当显像剂在脏器内或病变处的<span class="answer-text">浓度</span>处于<span class="answer-text">稳定</span>状态时进行显像。<br>多用作观察脏器和病变的<span class="answer-text">位置</span>，<span class="answer-text">形态大小</span>和<span class="answer-text">放射性分布</span>。	8. 静态显像：<br>当显像剂在脏器内或病变处的浓度处于稳定状态时进行显像。多用作观察脏器和病变的位置，形态，大小和放射性分布。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. 动态显像：<br>显像剂随血流<span class="blur-text">流经和灌注</span>脏器、<br>或被脏器不断<span class="blur-text">摄取和排泄</span>，<br>或在脏器内反复<span class="blur-text">充盈和射出</span>等过程，<br><br>造成脏器内的放射性在<span class="blur-text">数量/位置</span>上随时间而变化。	9. 动态显像：<br>显像剂随血流流经和灌注脏器、或被脏器不断摄取和排泄，或在脏器内反复充盈和射出等过程，造成脏器内的放射性在数量上或在位置上随时间而变化。</td>
+                            <td>9. 动态显像：<br>显像剂随血流<span class="answer-text">流经和灌注</span>脏器、<br>或被脏器不断<span class="answer-text">摄取和排泄</span>，<br>或在脏器内反复<span class="answer-text">充盈和射出</span>等过程，<br><br>造成脏器内的放射性在<span class="answer-text">数量/位置</span>上随时间而变化。	9. 动态显像：<br>显像剂随血流流经和灌注脏器、或被脏器不断摄取和排泄，或在脏器内反复充盈和射出等过程，造成脏器内的放射性在数量上或在位置上随时间而变化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. 局部显像：<br>指只显示身体某一<span class="blur-text">部分</span>或某一脏器的影像，<br>可以是<span class="blur-text">动、静</span>态的显像，<br>最常用。	10. 局部显像：<br>指只显示身体某一部分或某一脏器的影像，可以是动态的显像，也可以是静态的显像，最为常用。</td>
+                            <td>10. 局部显像：<br>指只显示身体某一<span class="answer-text">部分</span>或某一脏器的影像，<br>可以是<span class="answer-text">动、静</span>态的显像，<br>最常用。	10. 局部显像：<br>指只显示身体某一部分或某一脏器的影像，可以是动态的显像，也可以是静态的显像，最为常用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. 全身显像：<br>利用 <span class="blur-text">γ 照相机</span>、<span class="blur-text">ECT</span>、<span class="blur-text">PET</span> 的<span class="blur-text">放射性探测器</span>（探头）<br>沿<span class="blur-text">体表</span>做<span class="blur-text">匀</span>速移动，<br><span class="blur-text">从头至足</span>依序采集全身各部位的放射性，<br>将它们显示为全身显像。	11. 全身显像：<br>利用 γ 照相机、ECT、PET 的放射性探测器（探头）沿体表做匀速移动，从头至足依序采集全身各部位的放射性，将它们显示为全身显像。</td>
+                            <td>11. 全身显像：<br>利用 <span class="answer-text">γ 照相机</span>、<span class="answer-text">ECT</span>、<span class="answer-text">PET</span> 的<span class="answer-text">放射性探测器</span>（探头）<br>沿<span class="answer-text">体表</span>做<span class="answer-text">匀</span>速移动，<br><span class="answer-text">从头至足</span>依序采集全身各部位的放射性，<br>将它们显示为全身显像。	11. 全身显像：<br>利用 γ 照相机、ECT、PET 的放射性探测器（探头）沿体表做匀速移动，从头至足依序采集全身各部位的放射性，将它们显示为全身显像。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. 平面显像：<br>将放射性显像装置的放射性探测器置于体表的<span class="blur-text">一定</span>位置<br>采集某<span class="blur-text">脏器</span>的放射性影像，<br>分别从受检者的<span class="blur-text">前，后，侧，斜</span>方显像，<br>达到充分暴露脏器内放射性分布异常的目的。	12. 平面显像：<br>将放射性显像装置的放射性探测器置于体表的一定位置采集某脏器的放射性影像，分别从受检者的前方，后方，侧方和斜方显像，达到充分暴露脏器内放射性分布异常的目的。</td>
+                            <td>12. 平面显像：<br>将放射性显像装置的放射性探测器置于体表的<span class="answer-text">一定</span>位置<br>采集某<span class="answer-text">脏器</span>的放射性影像，<br>分别从受检者的<span class="answer-text">前，后，侧，斜</span>方显像，<br>达到充分暴露脏器内放射性分布异常的目的。	12. 平面显像：<br>将放射性显像装置的放射性探测器置于体表的一定位置采集某脏器的放射性影像，分别从受检者的前方，后方，侧方和斜方显像，达到充分暴露脏器内放射性分布异常的目的。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. 断层显像：<br>用特殊的放射性显像装置可以像 X 线和 CT 一样，<br>在体表连续或间断采集，再由计算机<span class="blur-text">重建</span>成为各种断层影像。<br>断层影像在一定程度上避免了放射性的<span class="blur-text">重叠</span>，<br>能比较正确的显示脏器的内放射性分布的真实情况，<br><br>有助于发现<span class="blur-text">深</span>在结构的放射性分布轻微异常，<br>检出较<span class="blur-text">小</span>的病变，<br>并可进行较为精确的定<span class="blur-text">量</span>分析，<br><br>是研究脏器局部<span class="blur-text">血流</span>量和<span class="blur-text">代谢</span>率必不可少的方法。	13. 断层显像：<br>用特殊的放射性显像装置可以像 X 线和 CT 一样，在体表连续或间断采集，再由计算机重建成为各种断层影像。断层影像在一定程度上避免了放射性的重叠，能比较正确的显示脏器的内放射性分布的真实情况，有助于发现深在结构的放射性分布轻微异常，检出较小的病变，并可进行较为精确的定量分析，是研究脏器局部血流量和代谢率必不可少的方法。</td>
+                            <td>13. 断层显像：<br>用特殊的放射性显像装置可以像 X 线和 CT 一样，<br>在体表连续或间断采集，再由计算机<span class="answer-text">重建</span>成为各种断层影像。<br>断层影像在一定程度上避免了放射性的<span class="answer-text">重叠</span>，<br>能比较正确的显示脏器的内放射性分布的真实情况，<br><br>有助于发现<span class="answer-text">深</span>在结构的放射性分布轻微异常，<br>检出较<span class="answer-text">小</span>的病变，<br>并可进行较为精确的定<span class="answer-text">量</span>分析，<br><br>是研究脏器局部<span class="answer-text">血流</span>量和<span class="answer-text">代谢</span>率必不可少的方法。	13. 断层显像：<br>用特殊的放射性显像装置可以像 X 线和 CT 一样，在体表连续或间断采集，再由计算机重建成为各种断层影像。断层影像在一定程度上避免了放射性的重叠，能比较正确的显示脏器的内放射性分布的真实情况，有助于发现深在结构的放射性分布轻微异常，检出较小的病变，并可进行较为精确的定量分析，是研究脏器局部血流量和代谢率必不可少的方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. 阳性显像：<br>又称<span class="blur-text">热区</span>显像，<br>指在<span class="blur-text">静</span>态影像上主要以放射性比正常<span class="blur-text">增高</span>为异常的显像，<br>这种显像较易于发现<span class="blur-text">异常</span>病灶。	14. 阳性显像：<br>又称热区显像，指在静态影像上主要以放射性比正常增高为异常的显像，这种显像较易于发现异常病灶。</td>
+                            <td>14. 阳性显像：<br>又称<span class="answer-text">热区</span>显像，<br>指在<span class="answer-text">静</span>态影像上主要以放射性比正常<span class="answer-text">增高</span>为异常的显像，<br>这种显像较易于发现<span class="answer-text">异常</span>病灶。	14. 阳性显像：<br>又称热区显像，指在静态影像上主要以放射性比正常增高为异常的显像，这种显像较易于发现异常病灶。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. 阴性显像：<br>又称为<span class="blur-text">冷区</span>显像，<br>指在<span class="blur-text">静</span>态影像上主要以放射性比正常<span class="blur-text">减低</span>或异常的显像，<br><br>临床上的<span class="blur-text">常规</span>显像<br>与<span class="blur-text">心肌灌注</span>显像、<span class="blur-text">肾</span>显像等属于此类型。	15. 阴性显像：<br>又称为冷区显像，指在静态影像上主要以放射性比正常减低或异常的显像，临床上的常规显像与心肌灌注显像、肾显像等属于此类型。</td>
+                            <td>15. 阴性显像：<br>又称为<span class="answer-text">冷区</span>显像，<br>指在<span class="answer-text">静</span>态影像上主要以放射性比正常<span class="answer-text">减低</span>或异常的显像，<br><br>临床上的<span class="answer-text">常规</span>显像<br>与<span class="answer-text">心肌灌注</span>显像、<span class="answer-text">肾</span>显像等属于此类型。	15. 阴性显像：<br>又称为冷区显像，指在静态影像上主要以放射性比正常减低或异常的显像，临床上的常规显像与心肌灌注显像、肾显像等属于此类型。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. 正电子衰变：<br>释放<span class="blur-text">β+</span>粒子的放射性元素衰变时<br>释放一个<span class="blur-text">β+（正电子）</span>和<span class="blur-text">中微子</span>，<br><br>核内一个质子转变为<span class="blur-text">中子</span>，<br>子核原子数减少 <span class="blur-text">1</span>。	16. 正电子衰变：<br>释放β+粒子的放射性元素衰变时释放一个β+（正电子）和中微子，核内一个质子转变为中子，子核原子数减少 1。</td>
+                            <td>16. 正电子衰变：<br>释放<span class="answer-text">β+</span>粒子的放射性元素衰变时<br>释放一个<span class="answer-text">β+（正电子）</span>和<span class="answer-text">中微子</span>，<br><br>核内一个质子转变为<span class="answer-text">中子</span>，<br>子核原子数减少 <span class="answer-text">1</span>。	16. 正电子衰变：<br>释放β+粒子的放射性元素衰变时释放一个β+（正电子）和中微子，核内一个质子转变为中子，子核原子数减少 1。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. 湮灭辐射：<br><span class="blur-text">正电子</span>药物发生<span class="blur-text">β+</span>衰变，<br>与组织作用生成 <span class="blur-text">方向</span>相反 <span class="blur-text">能量</span>相等 互成 <span class="blur-text">180</span> 的<br><span class="blur-text">&nbsp;511</span> kev 的 <span class="blur-text">γ</span> 光子。	17. 湮灭辐射：<br>正电子药物发生β+衰变，与组织作用生成个方向相反能量相等互成 180 服的 511 kev 的 γ 光子。</td>
+                            <td>17. 湮灭辐射：<br><span class="answer-text">正电子</span>药物发生<span class="answer-text">β+</span>衰变，<br>与组织作用生成 <span class="answer-text">方向</span>相反 <span class="answer-text">能量</span>相等 互成 <span class="answer-text">180</span> 的<br><span class="answer-text">&nbsp;511</span> kev 的 <span class="answer-text">γ</span> 光子。	17. 湮灭辐射：<br>正电子药物发生β+衰变，与组织作用生成个方向相反能量相等互成 180 服的 511 kev 的 γ 光子。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. <span class="blur-text">生物半衰期</span><br>（Tb）：<br>进入生物体内的放射性核素或其化合物，<br>由于<span class="blur-text">生物代谢</span>从体内排出到原来的一半所需的时间。	18. <span class="blur-text">生物半衰期</span><br>（Tb）：<br>进入生物体内的放射性核素或其化合物，由于生物代谢从体内排出到原来的一半所需的时间。</td>
+                            <td>18. <span class="answer-text">生物半衰期</span><br>（Tb）：<br>进入生物体内的放射性核素或其化合物，<br>由于<span class="answer-text">生物代谢</span>从体内排出到原来的一半所需的时间。	18. <span class="answer-text">生物半衰期</span><br>（Tb）：<br>进入生物体内的放射性核素或其化合物，由于生物代谢从体内排出到原来的一半所需的时间。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. <span class="blur-text">有效半衰期</span><br>（Teff）：<br><span class="blur-text">131 I</span> 在<span class="blur-text">甲状腺</span>部位因生物代谢和自身的物理衰变的共同作用<br>而使其放射性活度减少一半的时间，<br>主要反映其在该部位<span class="blur-text">滞留时间</span>的长短。	19. <span class="blur-text">有效半衰期</span><br>（Teff）：<br>131 I 在甲状腺部位因生物代谢和自身的物理衰变的共同作用而使其放射性活度减少一半的时间，主要反映 131 I 在甲状腺部位滞留时间的长短。</td>
+                            <td>19. <span class="answer-text">有效半衰期</span><br>（Teff）：<br><span class="answer-text">131 I</span> 在<span class="answer-text">甲状腺</span>部位因生物代谢和自身的物理衰变的共同作用<br>而使其放射性活度减少一半的时间，<br>主要反映其在该部位<span class="answer-text">滞留时间</span>的长短。	19. <span class="answer-text">有效半衰期</span><br>（Teff）：<br>131 I 在甲状腺部位因生物代谢和自身的物理衰变的共同作用而使其放射性活度减少一半的时间，主要反映 131 I 在甲状腺部位滞留时间的长短。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. 物理半衰期：<br>放射性核素的<span class="blur-text">原子核</span>数目经过衰变<br>减少到原来一半所需要的时间。	20. 物理半衰期：<br>放射性核素的原子核数目经过衰变减少到原来一半所需要的时间。</td>
+                            <td>20. 物理半衰期：<br>放射性核素的<span class="answer-text">原子核</span>数目经过衰变<br>减少到原来一半所需要的时间。	20. 物理半衰期：<br>放射性核素的原子核数目经过衰变减少到原来一半所需要的时间。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. <span class="blur-text">放射性活度</span> <br>（A）：<br>表示单位的时间内发生衰变的<span class="blur-text">原子核</span>数。<br>放射性活度一次衰变的单位是<span class="blur-text">贝可</span>，定义为每秒一次衰变。<br>1 Bq=2.703 x 10-11 Ci，1 Ci=3.7 x10^10 Bq	21. <span class="blur-text">放射性活度</span> （A）：表示单位的时间内发生衰变的原子核数。放射性活度一次衰变的单位是贝可，定义为每秒一次衰变。1 Bq=2.703 x 10-11 Ci，1 Ci=3.7 x10^10 Bq</td>
+                            <td>21. <span class="answer-text">放射性活度</span> <br>（A）：<br>表示单位的时间内发生衰变的<span class="answer-text">原子核</span>数。<br>放射性活度一次衰变的单位是<span class="answer-text">贝可</span>，定义为每秒一次衰变。<br>1 Bq=2.703 x 10-11 Ci，1 Ci=3.7 x10^10 Bq	21. <span class="answer-text">放射性活度</span> （A）：表示单位的时间内发生衰变的原子核数。放射性活度一次衰变的单位是贝可，定义为每秒一次衰变。1 Bq=2.703 x 10-11 Ci，1 Ci=3.7 x10^10 Bq</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. 核医学仪器：<br>凡是在医学中用以<br><span class="blur-text">探测</span>和<span class="blur-text">介入</span>放射性核素所发出<span class="blur-text">射线</span>的装置，<br>统称核医学仪器。	22. 核医学仪器：<br>凡是在医学中用以探测和介入放射性核素所发出射线的装置，统称核医学仪器。</td>
+                            <td>22. 核医学仪器：<br>凡是在医学中用以<br><span class="answer-text">探测</span>和<span class="answer-text">介入</span>放射性核素所发出<span class="answer-text">射线</span>的装置，<br>统称核医学仪器。	22. 核医学仪器：<br>凡是在医学中用以探测和介入放射性核素所发出射线的装置，统称核医学仪器。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. <span class="blur-text">示踪剂</span> / <span class="blur-text">显像剂</span><br>（tracer）/（ imaging agent）：<br>用于获得体内<span class="blur-text">靶</span>器官或<span class="blur-text">病变</span>组织的影像或功能参数，<br>进行疾病诊断的一类体内<span class="blur-text">放射性药物</span>。	23. <span class="blur-text">示踪剂</span>（tracer）/<span class="blur-text">显像剂</span>（ imaging agent）：<br>用于获得体内靶器官或病变组织的影像或功能参数，进行疾病诊断的一类体内放射性药物。</td>
+                            <td>23. <span class="answer-text">示踪剂</span> / <span class="answer-text">显像剂</span><br>（tracer）/（ imaging agent）：<br>用于获得体内<span class="answer-text">靶</span>器官或<span class="answer-text">病变</span>组织的影像或功能参数，<br>进行疾病诊断的一类体内<span class="answer-text">放射性药物</span>。	23. <span class="answer-text">示踪剂</span>（tracer）/<span class="answer-text">显像剂</span>（ imaging agent）：<br>用于获得体内靶器官或病变组织的影像或功能参数，进行疾病诊断的一类体内放射性药物。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. 放射性化学纯度：<br>是指在放射性药物中，<br><span class="blur-text">指定化学形态</span>的放射性<br>占该放射性药物总放射性强度的百分比。	24. 放射性化学纯度：<br>是指在放射性药物中，指定化学形态的放射性占该放射性药物总放射性强度的百分比。</td>
+                            <td>24. 放射性化学纯度：<br>是指在放射性药物中，<br><span class="answer-text">指定化学形态</span>的放射性<br>占该放射性药物总放射性强度的百分比。	24. 放射性化学纯度：<br>是指在放射性药物中，指定化学形态的放射性占该放射性药物总放射性强度的百分比。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25. 放射性核素纯度：<br>是指在放射性药物中，<br><span class="blur-text">指定放射性核素</span>的放射性强度<br>占该放射性药物总放射性强度的百分比。	25. 放射性核素纯度：<br>是指在放射性药物中，指定放射性核素的放射性强度占该放射性药物总放射性强度的百分比。</td>
+                            <td>25. 放射性核素纯度：<br>是指在放射性药物中，<br><span class="answer-text">指定放射性核素</span>的放射性强度<br>占该放射性药物总放射性强度的百分比。	25. 放射性核素纯度：<br>是指在放射性药物中，指定放射性核素的放射性强度占该放射性药物总放射性强度的百分比。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26. <span class="blur-text">体外分析技术</span><br>（ in vitro nuclear medicine）：<br>以<span class="blur-text">标记免疫</span>分析为核心，<br>其他分析方法为辅助的临床检验方法，<br><br>对取自人体的生物标本<br>（ <span class="blur-text">组织</span>，血液，尿液或其他<span class="blur-text">体液</span>等）<br>进行<span class="blur-text">微生物</span>学，<span class="blur-text">免疫</span>学，<span class="blur-text">生物化</span>学等检测。	26. <span class="blur-text">体外分析技术</span><br>（ in vitro nuclear medicine）：<br>以标记免疫分析为核心，其他分析方法为辅助的临床检验方法，对取自人体的生物标本（ 组织，血液，尿液或其他体液等）进行微生物学，免疫学，生物化学等检测。</td>
+                            <td>26. <span class="answer-text">体外分析技术</span><br>（ in vitro nuclear medicine）：<br>以<span class="answer-text">标记免疫</span>分析为核心，<br>其他分析方法为辅助的临床检验方法，<br><br>对取自人体的生物标本<br>（ <span class="answer-text">组织</span>，血液，尿液或其他<span class="answer-text">体液</span>等）<br>进行<span class="answer-text">微生物</span>学，<span class="answer-text">免疫</span>学，<span class="answer-text">生物化</span>学等检测。	26. <span class="answer-text">体外分析技术</span><br>（ in vitro nuclear medicine）：<br>以标记免疫分析为核心，其他分析方法为辅助的临床检验方法，对取自人体的生物标本（ 组织，血液，尿液或其他体液等）进行微生物学，免疫学，生物化学等检测。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27. <span class="blur-text">放射免疫分析</span><br>（Radio immunoassay，RIA）：<br>是在<span class="blur-text">体外</span>条件下，<br>由足量的<span class="blur-text">非标记</span>抗原 Ag 与定量的<span class="blur-text">标记</span>抗原 Ag<br><span class="blur-text">竞争</span>性的与限量的特异性抗体 Ab 发生<span class="blur-text">免疫结合</span>反应。	27. <span class="blur-text">放射免疫分析</span><br>（Radio immunoassay，RIA）：<br>是在体外条件下，由足量的非标记抗原 Ag 与定量的标记抗原 Ag竞争性的与限量的特异性抗体 Ab 发生免疫结合反应。</td>
+                            <td>27. <span class="answer-text">放射免疫分析</span><br>（Radio immunoassay，RIA）：<br>是在<span class="answer-text">体外</span>条件下，<br>由足量的<span class="answer-text">非标记</span>抗原 Ag 与定量的<span class="answer-text">标记</span>抗原 Ag<br><span class="answer-text">竞争</span>性的与限量的特异性抗体 Ab 发生<span class="answer-text">免疫结合</span>反应。	27. <span class="answer-text">放射免疫分析</span><br>（Radio immunoassay，RIA）：<br>是在体外条件下，由足量的非标记抗原 Ag 与定量的标记抗原 Ag竞争性的与限量的特异性抗体 Ab 发生免疫结合反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28. <span class="blur-text">免疫放射</span>分析法<br> IRMA：<br>用过量的<span class="blur-text">放射核素标记</span> 抗体Ab'<br>与限量的抗原Ag 结合，形成 AgAb'，<br><br>其放射性和所加 Ag（标准品或待测样本） 的量呈<span class="blur-text">正</span>相关，<br>通过 Ag 与 AgAb ＊放射性的<span class="blur-text">量效</span>关系，<br>求出待测样本的量。	28. <span class="blur-text">免疫放射分析法</span><br> IRMA：<br>用过量的放射核素标记抗体 Ab＊与限量的抗原 Ag 结合，形成 AgAb＊，其放射性和所加 Ag（标准品或待测样本） 的量呈正相关，通过 Ag 与 AgAb ＊放射性的量效关系，求出待测样本的量。</td>
+                            <td>28. <span class="answer-text">免疫放射</span>分析法<br> IRMA：<br>用过量的<span class="answer-text">放射核素标记</span> 抗体Ab'<br>与限量的抗原Ag 结合，形成 AgAb'，<br><br>其放射性和所加 Ag（标准品或待测样本） 的量呈<span class="answer-text">正</span>相关，<br>通过 Ag 与 AgAb ＊放射性的<span class="answer-text">量效</span>关系，<br>求出待测样本的量。	28. <span class="answer-text">免疫放射分析法</span><br> IRMA：<br>用过量的放射核素标记抗体 Ab＊与限量的抗原 Ag 结合，形成 AgAb＊，其放射性和所加 Ag（标准品或待测样本） 的量呈正相关，通过 Ag 与 AgAb ＊放射性的量效关系，求出待测样本的量。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29. 亲和力（抗体）：<br>表示<span class="blur-text">抗体</span>与<span class="blur-text">抗原</span>结合的能力，<br>亲和力越高，易结合和结合后不易<span class="blur-text">解离</span>，<br>抗体的亲合力由<span class="blur-text">亲和常数</span>来表示。	29. 亲和力（抗体）：<br>表示抗体与抗原结合的能力，亲和力越高，抗原抗体易结合和结合后不易解离，抗体的亲合力由亲和常数来表示。</td>
+                            <td>29. 亲和力（抗体）：<br>表示<span class="answer-text">抗体</span>与<span class="answer-text">抗原</span>结合的能力，<br>亲和力越高，易结合和结合后不易<span class="answer-text">解离</span>，<br>抗体的亲合力由<span class="answer-text">亲和常数</span>来表示。	29. 亲和力（抗体）：<br>表示抗体与抗原结合的能力，亲和力越高，抗原抗体易结合和结合后不易解离，抗体的亲合力由亲和常数来表示。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30. 滴度（抗体）：<br>抗体的滴度是指抗体实际应用时的<span class="blur-text">稀释</span>倍数，<br><br>滴度越高，所需的抗血清量就越<span class="blur-text">少</span>，<br>血清的稀释倍数越高，抗血清中<span class="blur-text">杂质</span>干扰也越<span class="blur-text">少</span>。<br><br>但通常滴度高到<span class="blur-text">1：1000</span>&nbsp;以上，血清中干扰物质影响就很小。	30. 滴度（抗体）：<br>抗体的滴度是指抗体实际应用时的稀释倍数，滴度越高，所需的抗血清量就越少，血清的稀释倍数越高，抗血清中杂质干扰也越少。但通常滴度高到1：<br>1000 以上，血清中干扰物质影响就很小。</td>
+                            <td>30. 滴度（抗体）：<br>抗体的滴度是指抗体实际应用时的<span class="answer-text">稀释</span>倍数，<br><br>滴度越高，所需的抗血清量就越<span class="answer-text">少</span>，<br>血清的稀释倍数越高，抗血清中<span class="answer-text">杂质</span>干扰也越<span class="answer-text">少</span>。<br><br>但通常滴度高到<span class="answer-text">1：1000</span>&nbsp;以上，血清中干扰物质影响就很小。	30. 滴度（抗体）：<br>抗体的滴度是指抗体实际应用时的稀释倍数，滴度越高，所需的抗血清量就越少，血清的稀释倍数越高，抗血清中杂质干扰也越少。但通常滴度高到1：<br>1000 以上，血清中干扰物质影响就很小。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31. <span class="blur-text">肺灌注显像</span><br>（pulmonary perfusion imaging）：<br><br>将<span class="blur-text">略大于</span>肺毛细管直径的放射性微粒注入<span class="blur-text">静脉</span>，<br>微粒随血流到达<span class="blur-text">肺血管床</span>，<br>一过性嵌顿在肺的毛细血管或肺小动脉内，<br>其分布与该处的灌注血流量成正比。<br><br>通过 <span class="blur-text">spect</span> 技术可以获得毛细血管床影像，<br>显像剂的分布反应肺各部位的<span class="blur-text">血流灌注</span>情况。	31. <span class="blur-text">肺灌注显像</span><br>（pulmonary perfusion imaging）：<br>将略大于肺毛细管直径的放射性微粒注入静脉，微粒随血流到达肺血管床，一过性嵌顿在肺的毛细血管或肺小动脉内，其分布与该处的灌注血流量成正比。通过 spect 可以获得毛细血管床影像，显像剂的分布反应肺各部位的血流灌注情况。</td>
+                            <td>31. <span class="answer-text">肺灌注显像</span><br>（pulmonary perfusion imaging）：<br><br>将<span class="answer-text">略大于</span>肺毛细管直径的放射性微粒注入<span class="answer-text">静脉</span>，<br>微粒随血流到达<span class="answer-text">肺血管床</span>，<br>一过性嵌顿在肺的毛细血管或肺小动脉内，<br>其分布与该处的灌注血流量成正比。<br><br>通过 <span class="answer-text">spect</span> 技术可以获得毛细血管床影像，<br>显像剂的分布反应肺各部位的<span class="answer-text">血流灌注</span>情况。	31. <span class="answer-text">肺灌注显像</span><br>（pulmonary perfusion imaging）：<br>将略大于肺毛细管直径的放射性微粒注入静脉，微粒随血流到达肺血管床，一过性嵌顿在肺的毛细血管或肺小动脉内，其分布与该处的灌注血流量成正比。通过 spect 可以获得毛细血管床影像，显像剂的分布反应肺各部位的血流灌注情况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32. <span class="blur-text">肺通气显像</span><br>（pulmonary ventilation imaging）：<br>吸入一定量的<span class="blur-text">微米/纳米</span>级放射性显像剂之后，<br><br>由于<span class="blur-text">直径</span>不同，<br>会沉积在<span class="blur-text">喉</span>，<span class="blur-text">气/支气/细支气</span>管和<span class="blur-text">肺泡</span>壁上，<br>这些放射性药物的有效期为 <span class="blur-text">1-8</span> 小时，<br><br>可通过 <span class="blur-text">spect</span> 显像得到反应肺局部~<span class="blur-text">通气</span>功能的影像。	32. <span class="blur-text">肺通气显像</span><br>（pulmonary ventilation imaging）：<br>吸入一定量的微米级或纳米级放射性显像剂之后，由于直径不同，会沉积在喉，气管，支气管，细支气管和肺泡壁上，这些放射性药物的有效期为 1-8 小时，可通过 spect 显像得到反应肺局部通气功能的影像。</td>
+                            <td>32. <span class="answer-text">肺通气显像</span><br>（pulmonary ventilation imaging）：<br>吸入一定量的<span class="answer-text">微米/纳米</span>级放射性显像剂之后，<br><br>由于<span class="answer-text">直径</span>不同，<br>会沉积在<span class="answer-text">喉</span>，<span class="answer-text">气/支气/细支气</span>管和<span class="answer-text">肺泡</span>壁上，<br>这些放射性药物的有效期为 <span class="answer-text">1-8</span> 小时，<br><br>可通过 <span class="answer-text">spect</span> 显像得到反应肺局部~<span class="answer-text">通气</span>功能的影像。	32. <span class="answer-text">肺通气显像</span><br>（pulmonary ventilation imaging）：<br>吸入一定量的微米级或纳米级放射性显像剂之后，由于直径不同，会沉积在喉，气管，支气管，细支气管和肺泡壁上，这些放射性药物的有效期为 1-8 小时，可通过 spect 显像得到反应肺局部通气功能的影像。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.<br>&nbsp;<span class="blur-text">肺灌注/通气</span> 显像不匹配<br>（mismatch）（V/Q 显像不匹配）<br><br><br>肺灌注显像时相应肺动脉灌注区的放射性分布<span class="blur-text">稀疏/缺损</span>，<br>肺通气显像放射性分布<span class="blur-text">正常</span>，<br><br>是诊断<span class="blur-text">肺栓塞</span>的主要依据。	33. <span class="blur-text">肺灌注/通气</span> 显像的不匹配<br>（V/Q 显像不匹配，mismatch）：<br>肺灌注显像时会出现相应肺动脉灌注区的放射性分布稀疏或缺损，肺通气显像放射性分布正常，是诊断肺栓塞的主要依据。</td>
+                            <td>33.<br>&nbsp;<span class="answer-text">肺灌注/通气</span> 显像不匹配<br>（mismatch）（V/Q 显像不匹配）<br><br><br>肺灌注显像时相应肺动脉灌注区的放射性分布<span class="answer-text">稀疏/缺损</span>，<br>肺通气显像放射性分布<span class="answer-text">正常</span>，<br><br>是诊断<span class="answer-text">肺栓塞</span>的主要依据。	33. <span class="answer-text">肺灌注/通气</span> 显像的不匹配<br>（V/Q 显像不匹配，mismatch）：<br>肺灌注显像时会出现相应肺动脉灌注区的放射性分布稀疏或缺损，肺通气显像放射性分布正常，是诊断肺栓塞的主要依据。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34. <span class="blur-text">前哨淋巴结</span><br>（sentinel lymph node）：<br>是距离恶性病变最近的<span class="blur-text">引流</span>淋巴结<br>或接收转移肿瘤播散的<span class="blur-text">第一站</span>淋巴结，<br><br>其组织病理学改变是判断肿瘤是否<span class="blur-text">淋巴结转移</span>的最好证据。	34. <span class="blur-text">前哨淋巴结</span><br>（sentinel lymph node）：<br>是距离恶性病变最近的引流淋巴结或接收转移肿瘤播散的第一站淋巴结，其组织病理学改变是判断肿瘤是否淋巴结转移的最好证据。</td>
+                            <td>34. <span class="answer-text">前哨淋巴结</span><br>（sentinel lymph node）：<br>是距离恶性病变最近的<span class="answer-text">引流</span>淋巴结<br>或接收转移肿瘤播散的<span class="answer-text">第一站</span>淋巴结，<br><br>其组织病理学改变是判断肿瘤是否<span class="answer-text">淋巴结转移</span>的最好证据。	34. <span class="answer-text">前哨淋巴结</span><br>（sentinel lymph node）：<br>是距离恶性病变最近的引流淋巴结或接收转移肿瘤播散的第一站淋巴结，其组织病理学改变是判断肿瘤是否淋巴结转移的最好证据。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35. 胃肠道出血显像：<br>静脉注射 <span class="blur-text">99 mTc-RBC</span> 后，<br>腹部只有大血管和血床丰富的脏器显影，<br>胃肠壁含血量较低，故基本不显影。<br><br>当胃肠壁因各种原因出现活动性<span class="blur-text">出血病灶</span>时，<br>其从血管破裂处外逸进入胃肠道，<br>形成异常<span class="blur-text">放射性浓聚</span>影像，<br>据此可对消化道出血作出诊断和大致定位。	35. 胃肠道出血显像：<br>静脉注射 99 mTc-RBC 后，腹部只有大血管和血床丰富的脏器显影，胃肠壁含血量较低，故基本不显影。当胃肠壁因各种原因出现活动性出血病灶时，99 mTc-RBC 从血管破裂处外逸进入胃肠道，形成异常放射性浓聚影像，据此可对消化道出血作出诊断和大致定位。</td>
+                            <td>35. 胃肠道出血显像：<br>静脉注射 <span class="answer-text">99 mTc-RBC</span> 后，<br>腹部只有大血管和血床丰富的脏器显影，<br>胃肠壁含血量较低，故基本不显影。<br><br>当胃肠壁因各种原因出现活动性<span class="answer-text">出血病灶</span>时，<br>其从血管破裂处外逸进入胃肠道，<br>形成异常<span class="answer-text">放射性浓聚</span>影像，<br>据此可对消化道出血作出诊断和大致定位。	35. 胃肠道出血显像：<br>静脉注射 99 mTc-RBC 后，腹部只有大血管和血床丰富的脏器显影，胃肠壁含血量较低，故基本不显影。当胃肠壁因各种原因出现活动性出血病灶时，99 mTc-RBC 从血管破裂处外逸进入胃肠道，形成异常放射性浓聚影像，据此可对消化道出血作出诊断和大致定位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36. 异位胃粘膜显像：<br>异位胃粘膜与正常胃粘膜一样能分泌<span class="blur-text">胃酸</span>及<span class="blur-text">胃蛋白酶</span>，<br>导致邻近粘膜<span class="blur-text">溃疡</span>和<span class="blur-text">出血</span>，<br>也能从血液中摄取 <span class="blur-text">99 mTCO</span> （什么显影剂）而显影。	36. 异位胃粘膜显像：<br>异位胃粘膜与正常胃粘膜一样能分泌胃酸及胃蛋白酶，导致邻近粘膜溃疡和出血，也能从血液中摄取 99 mTCO-而显影。</td>
+                            <td>36. 异位胃粘膜显像：<br>异位胃粘膜与正常胃粘膜一样能分泌<span class="answer-text">胃酸</span>及<span class="answer-text">胃蛋白酶</span>，<br>导致邻近粘膜<span class="answer-text">溃疡</span>和<span class="answer-text">出血</span>，<br>也能从血液中摄取 <span class="answer-text">99 mTCO</span> （什么显影剂）而显影。	36. 异位胃粘膜显像：<br>异位胃粘膜与正常胃粘膜一样能分泌胃酸及胃蛋白酶，导致邻近粘膜溃疡和出血，也能从血液中摄取 99 mTCO-而显影。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37. 美克尔憩室：<br>发生在小肠的<span class="blur-text">异位胃粘膜</span>，多位于<span class="blur-text">回肠</span>部位。<br>可终生无症状，但也可产生溃疡而出血，<br>发生<span class="blur-text">肠套叠</span>和<span class="blur-text">肠扭转</span>。<br><br><span class="blur-text">50</span>%的临床症状发生在<span class="blur-text">两</span>岁以下的小儿。	37. 美克尔憩室：<br>发生在小肠的异位胃粘膜，多位于回肠部位。可终生无症状，但也可产生溃疡而出血，发生肠套叠和肠扭转。50%的临床症状发生在两岁以下的小儿。</td>
+                            <td>37. 美克尔憩室：<br>发生在小肠的<span class="answer-text">异位胃粘膜</span>，多位于<span class="answer-text">回肠</span>部位。<br>可终生无症状，但也可产生溃疡而出血，<br>发生<span class="answer-text">肠套叠</span>和<span class="answer-text">肠扭转</span>。<br><br><span class="answer-text">50</span>%的临床症状发生在<span class="answer-text">两</span>岁以下的小儿。	37. 美克尔憩室：<br>发生在小肠的异位胃粘膜，多位于回肠部位。可终生无症状，但也可产生溃疡而出血，发生肠套叠和肠扭转。50%的临床症状发生在两岁以下的小儿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38. Barrett 食管：<br><span class="blur-text">胃</span>粘膜发生在<span class="blur-text">食管</span>下段的部位，<br><span class="blur-text">远</span>端的<span class="blur-text">鳞</span>状上皮<br>被<span class="blur-text">化生</span>的<span class="blur-text">柱</span>状上皮取代。	38. Barrett 食管：<br>胃粘膜发生在食管下段的部位，远端食管的鳞状上皮被化生的柱状上皮取代。</td>
+                            <td>38. Barrett 食管：<br><span class="answer-text">胃</span>粘膜发生在<span class="answer-text">食管</span>下段的部位，<br><span class="answer-text">远</span>端的<span class="answer-text">鳞</span>状上皮<br>被<span class="answer-text">化生</span>的<span class="answer-text">柱</span>状上皮取代。	38. Barrett 食管：<br>胃粘膜发生在食管下段的部位，远端食管的鳞状上皮被化生的柱状上皮取代。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39. 肝血流灌注显像：<br><span class="blur-text">静脉</span><span class="blur-text">弹丸</span>式注射显像剂后<br>立刻进行<span class="blur-text">动</span>态采集，<br>观察肝区有无异常的<span class="blur-text">放射性分布</span>。	39. 肝血流灌注显像：<br>静脉弹丸式注射显像剂后立刻进行动态采集，观察肝区有无异常的放射性分布。</td>
+                            <td>39. 肝血流灌注显像：<br><span class="answer-text">静脉</span><span class="answer-text">弹丸</span>式注射显像剂后<br>立刻进行<span class="answer-text">动</span>态采集，<br>观察肝区有无异常的<span class="answer-text">放射性分布</span>。	39. 肝血流灌注显像：<br>静脉弹丸式注射显像剂后立刻进行动态采集，观察肝区有无异常的放射性分布。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40. 肝动脉化征/灌注阳性：<br>在肝<span class="blur-text">恶性</span>病变时，其血供主要来自肝动脉，<br>因此在<span class="blur-text">动脉</span>相即可见到病变局部有<span class="blur-text">放射性积聚</span>。	40. 肝动脉化征/肝动脉灌注阳性：<br>在肝恶性病变时，其血供主要来自肝动脉，因此在动脉相即可见到病变局部有放射性积聚。</td>
+                            <td>40. 肝动脉化征/灌注阳性：<br>在肝<span class="answer-text">恶性</span>病变时，其血供主要来自肝动脉，<br>因此在<span class="answer-text">动脉</span>相即可见到病变局部有<span class="answer-text">放射性积聚</span>。	40. 肝动脉化征/肝动脉灌注阳性：<br>在肝恶性病变时，其血供主要来自肝动脉，因此在动脉相即可见到病变局部有放射性积聚。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41. 肝血池显像：<br>静脉注射 <span class="blur-text">99 mTC </span>-RBC,<br>待其在血液中充分混匀达到平衡后，<br>观察肝区的放射性分布，<br>各部分放射性的强弱反应了<span class="blur-text">血容量</span>的多少。	41. 肝血池显像：<br>静脉注射 99 mTC -RBC, 待其在血液中充分混匀达到平衡后，观察肝区的放射性分布，各部分放射性的强弱反应了血容量的多少。</td>
+                            <td>41. 肝血池显像：<br>静脉注射 <span class="answer-text">99 mTC </span>-RBC,<br>待其在血液中充分混匀达到平衡后，<br>观察肝区的放射性分布，<br>各部分放射性的强弱反应了<span class="answer-text">血容量</span>的多少。	41. 肝血池显像：<br>静脉注射 99 mTC -RBC, 待其在血液中充分混匀达到平衡后，观察肝区的放射性分布，各部分放射性的强弱反应了血容量的多少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42. 肝血池显像过度充填：<br>病变部位在肝血池显像上<br>表现为放射性分布<span class="blur-text">高于</span>周围正常肝组织，<br>是<span class="blur-text">肝血管瘤</span>的特征性表现。	42. 肝血池显像过度充填：<br>病变部位在肝血池显像上表现为放射性分布高于周围正常肝组织，是肝血管瘤的特征性表现。</td>
+                            <td>42. 肝血池显像过度充填：<br>病变部位在肝血池显像上<br>表现为放射性分布<span class="answer-text">高于</span>周围正常肝组织，<br>是<span class="answer-text">肝血管瘤</span>的特征性表现。	42. 肝血池显像过度充填：<br>病变部位在肝血池显像上表现为放射性分布高于周围正常肝组织，是肝血管瘤的特征性表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43. 201 Tl <span class="blur-text">再分布</span><br>（201 Tl redistribution）：<br>静脉注射 201 Tl 后 <span class="blur-text">5~10</span> 分钟，<br>正常心肌摄取量即达平衡，而缺血心肌摄取量<span class="blur-text">减少</span>，<br>心肌局部显像剂分布<span class="blur-text">稀疏缺损</span>。<br><br>此后由于正常心肌细胞清除 201 Tl 明显<span class="blur-text">快</span>于缺血心肌细胞，<br>在 <span class="blur-text">3~4</span> h进行延迟现象时，可见缺损区显象剂<span class="blur-text">再分布</span>，<br>据此可以诊断心肌<span class="blur-text">缺血</span>，而<span class="blur-text">梗死</span>心肌则无再分布。	43. 201 Tl <span class="blur-text">再分布</span><br>（201 Tl redistribution）：<br>静脉注射 201 Tl 后 5~10 分钟，正常心肌摄取量即达平衡，而缺血心肌摄取量减少，心肌局部显像剂分布稀疏缺损。此后由于正常心肌细胞清除 201 Tl 明显快于缺血心肌细胞，在 3~4 小时进行延迟现象时，可见缺损区有显象剂再分布，据此可以诊断心肌缺血，而梗死心肌则无再分布。</td>
+                            <td>43. 201 Tl <span class="answer-text">再分布</span><br>（201 Tl redistribution）：<br>静脉注射 201 Tl 后 <span class="answer-text">5~10</span> 分钟，<br>正常心肌摄取量即达平衡，而缺血心肌摄取量<span class="answer-text">减少</span>，<br>心肌局部显像剂分布<span class="answer-text">稀疏缺损</span>。<br><br>此后由于正常心肌细胞清除 201 Tl 明显<span class="answer-text">快</span>于缺血心肌细胞，<br>在 <span class="answer-text">3~4</span> h进行延迟现象时，可见缺损区显象剂<span class="answer-text">再分布</span>，<br>据此可以诊断心肌<span class="answer-text">缺血</span>，而<span class="answer-text">梗死</span>心肌则无再分布。	43. 201 Tl <span class="answer-text">再分布</span><br>（201 Tl redistribution）：<br>静脉注射 201 Tl 后 5~10 分钟，正常心肌摄取量即达平衡，而缺血心肌摄取量减少，心肌局部显像剂分布稀疏缺损。此后由于正常心肌细胞清除 201 Tl 明显快于缺血心肌细胞，在 3~4 小时进行延迟现象时，可见缺损区有显象剂再分布，据此可以诊断心肌缺血，而梗死心肌则无再分布。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44. <span class="blur-text">可逆性缺损</span><br>（ reversible defect）：<br>负荷显像呈分布<span class="blur-text">缺损</span>，<br>静息或延迟显像出现显像剂<span class="blur-text">填充</span>或<span class="blur-text">再分布</span>(恢复到正常)<br>提示心肌可逆性<span class="blur-text">缺血</span>。	44. <span class="blur-text">可逆性缺损</span><br>（ reversible defect）：<br>负荷显像呈分布缺损，静息或延迟显像出现显像剂填充或再分布（恢复到正常） ，提示心肌可逆性缺血。</td>
+                            <td>44. <span class="answer-text">可逆性缺损</span><br>（ reversible defect）：<br>负荷显像呈分布<span class="answer-text">缺损</span>，<br>静息或延迟显像出现显像剂<span class="answer-text">填充</span>或<span class="answer-text">再分布</span>(恢复到正常)<br>提示心肌可逆性<span class="answer-text">缺血</span>。	44. <span class="answer-text">可逆性缺损</span><br>（ reversible defect）：<br>负荷显像呈分布缺损，静息或延迟显像出现显像剂填充或再分布（恢复到正常） ，提示心肌可逆性缺血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45. <span class="blur-text">部分可逆性缺损</span><br>（partial reversible defect）：<br>负荷显像呈分布缺损，<br>再分布或静息显像时摄取显像剂增加，<span class="blur-text">部分填充</span>。<br>提示心肌<span class="blur-text">梗死</span>伴<span class="blur-text">缺血</span>或<span class="blur-text">侧支循环</span>形成。	45. <span class="blur-text">部分可逆性缺损</span><br>（partial reversible defect）：<br>负荷显像呈分布缺损，再分布或静息显像时摄取显像剂增加，部分填充。提示心肌梗死伴缺血或侧支循环形成。</td>
+                            <td>45. <span class="answer-text">部分可逆性缺损</span><br>（partial reversible defect）：<br>负荷显像呈分布缺损，<br>再分布或静息显像时摄取显像剂增加，<span class="answer-text">部分填充</span>。<br>提示心肌<span class="answer-text">梗死</span>伴<span class="answer-text">缺血</span>或<span class="answer-text">侧支循环</span>形成。	45. <span class="answer-text">部分可逆性缺损</span><br>（partial reversible defect）：<br>负荷显像呈分布缺损，再分布或静息显像时摄取显像剂增加，部分填充。提示心肌梗死伴缺血或侧支循环形成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46. <span class="blur-text">固定缺损</span><br>（fixed defect）：<br><span class="blur-text">运动</span>和<span class="blur-text">静息</span>（或延迟）显像都存在分布缺损，<br><br>见于心肌<span class="blur-text">梗死</span>、<span class="blur-text">瘢痕</span>和<span class="blur-text">冬眠</span>心肌。	46. <span class="blur-text">固定缺损</span><br>（fixed defect）：<br>运动和静息（或延迟）显像都存在分布缺损，见于心肌梗死，心肌瘢痕和冬眠心肌。</td>
+                            <td>46. <span class="answer-text">固定缺损</span><br>（fixed defect）：<br><span class="answer-text">运动</span>和<span class="answer-text">静息</span>（或延迟）显像都存在分布缺损，<br><br>见于心肌<span class="answer-text">梗死</span>、<span class="answer-text">瘢痕</span>和<span class="answer-text">冬眠</span>心肌。	46. <span class="answer-text">固定缺损</span><br>（fixed defect）：<br>运动和静息（或延迟）显像都存在分布缺损，见于心肌梗死，心肌瘢痕和冬眠心肌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47. 花斑型改变：<br>负荷及静息显像均见多处<span class="blur-text">小</span>范围，<br>与<span class="blur-text">冠脉</span>分布不一致，<br>严重程度不同的<span class="blur-text">稀疏或缺损</span>区，<br><br>见于<span class="blur-text">心肌</span>病&amp;炎。	47. 花斑型改变：<br>负荷及静息显像均见多处小范围，与冠脉分布不一致，严重程度不同的稀疏或缺损区，见于心肌病和心肌炎。</td>
+                            <td>47. 花斑型改变：<br>负荷及静息显像均见多处<span class="answer-text">小</span>范围，<br>与<span class="answer-text">冠脉</span>分布不一致，<br>严重程度不同的<span class="answer-text">稀疏或缺损</span>区，<br><br>见于<span class="answer-text">心肌</span>病&amp;炎。	47. 花斑型改变：<br>负荷及静息显像均见多处小范围，与冠脉分布不一致，严重程度不同的稀疏或缺损区，见于心肌病和心肌炎。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48. <span class="blur-text">反向再分布</span><br>（ reverse redistribution ）：<br>负荷显像分布正常，<br>静息或延迟现象分布稀疏或缺损，<br>或者负荷显像分布缺损，<br>静息或再分布显像原缺损更<span class="blur-text">严重</span>。<br><br>常见于严重的<span class="blur-text">冠脉</span>狭窄，稳定性<span class="blur-text">冠心</span>病，急性<span class="blur-text">心肌梗死</span>，<br>接受了<span class="blur-text">溶栓</span>治疗或 <span class="blur-text">ptca</span> 治疗的患者，<br>也可出现在个别的正常人，<br>多为<span class="blur-text">存活</span>心肌。<br><br>区别<br><br><br>44. 可逆性缺损}}<br>（ reversible defect）：<br>负荷显像呈分布:缺损}}，<br>静息或延迟显像出现显像剂:填充}}或::再分布}}(恢复到正常)<br>提示心肌可逆性::缺血}}。<br><br>45. 1::部分可逆性缺损}}<br>（partial reversible defect）：<br>负荷显像呈分布缺损，<br>再分布或静息显像时摄取显像剂增加，部分填充}}。<br>提示心肌梗死}}伴::缺血}}或::侧支循环}}形成。	48. 反向再分布}}<br>（ reverse redistribution ）：<br>负荷显像分布正常，静息或延迟现象分布稀疏或缺损，或者负荷显像分布缺损，静息或再分布显像原缺损更严重。常见于严重的冠状动脉狭窄，稳定性冠心病急性心肌梗司接受了溶栓治疗或 ptca 治疗的患者，也可出现在个别的正常人，多为存活心肌。<br><br><br>44. 可逆性缺损}}<br>（ reversible defect）：<br>负荷显像呈分布:缺损}}，<br>静息或延迟显像出现显像剂:填充}}或::再分布}}(恢复到正常)<br>提示心肌可逆性::缺血}}。<br><br>45. 1::部分可逆性缺损}}<br>（partial reversible defect）：<br>负荷显像呈分布缺损，<br>再分布或静息显像时摄取显像剂增加，部分填充}}。<br>提示心肌梗死}}伴::缺血}}或::侧支循环}}形成。<br><br></td>
+                            <td>48. <span class="answer-text">反向再分布</span><br>（ reverse redistribution ）：<br>负荷显像分布正常，<br>静息或延迟现象分布稀疏或缺损，<br>或者负荷显像分布缺损，<br>静息或再分布显像原缺损更<span class="answer-text">严重</span>。<br><br>常见于严重的<span class="answer-text">冠脉</span>狭窄，稳定性<span class="answer-text">冠心</span>病，急性<span class="answer-text">心肌梗死</span>，<br>接受了<span class="answer-text">溶栓</span>治疗或 <span class="answer-text">ptca</span> 治疗的患者，<br>也可出现在个别的正常人，<br>多为<span class="answer-text">存活</span>心肌。<br><br>区别<br><br><br>44. 可逆性缺损}}<br>（ reversible defect）：<br>负荷显像呈分布:缺损}}，<br>静息或延迟显像出现显像剂:填充}}或::再分布}}(恢复到正常)<br>提示心肌可逆性::缺血}}。<br><br>45. 1::部分可逆性缺损}}<br>（partial reversible defect）：<br>负荷显像呈分布缺损，<br>再分布或静息显像时摄取显像剂增加，部分填充}}。<br>提示心肌梗死}}伴::缺血}}或::侧支循环}}形成。	48. 反向再分布}}<br>（ reverse redistribution ）：<br>负荷显像分布正常，静息或延迟现象分布稀疏或缺损，或者负荷显像分布缺损，静息或再分布显像原缺损更严重。常见于严重的冠状动脉狭窄，稳定性冠心病急性心肌梗司接受了溶栓治疗或 ptca 治疗的患者，也可出现在个别的正常人，多为存活心肌。<br><br><br>44. 可逆性缺损}}<br>（ reversible defect）：<br>负荷显像呈分布:缺损}}，<br>静息或延迟显像出现显像剂:填充}}或::再分布}}(恢复到正常)<br>提示心肌可逆性::缺血}}。<br><br>45. 1::部分可逆性缺损}}<br>（partial reversible defect）：<br>负荷显像呈分布缺损，<br>再分布或静息显像时摄取显像剂增加，部分填充}}。<br>提示心肌梗死}}伴::缺血}}或::侧支循环}}形成。<br><br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49. 相角程：<br><span class="blur-text">心室峰</span>底部的宽度称相角程，<br>是心室<span class="blur-text">最早与最晚收缩</span>相位的差值，<br>其大小反映了心室的<span class="blur-text">协调</span>性，<br><br>正常的心室相角程＜ <span class="blur-text">65</span> °。	49. 相角程：<br>心室峰底部的宽度称相角程，是心室最早收缩相位与最晚收缩相位的差值，其大小反映了心室的协调性，正常的心室相角程＜ 65 °。</td>
+                            <td>49. 相角程：<br><span class="answer-text">心室峰</span>底部的宽度称相角程，<br>是心室<span class="answer-text">最早与最晚收缩</span>相位的差值，<br>其大小反映了心室的<span class="answer-text">协调</span>性，<br><br>正常的心室相角程＜ <span class="answer-text">65</span> °。	49. 相角程：<br>心室峰底部的宽度称相角程，是心室最早收缩相位与最晚收缩相位的差值，其大小反映了心室的协调性，正常的心室相角程＜ 65 °。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50. 相位图 ：<br>将心的各个区域按其<span class="blur-text">出现</span>时相的灰度还原于心血池影像中，<br>可得到一幅以不同灰度（或<span class="blur-text">色阶</span>）显示的<span class="blur-text">心血池</span>影。	50. 相位图 ：<br>将心的各个区域按其出现时相的灰度还原于心血池影像中，可得到一幅以不同灰度（或色阶）显示的心血池影。</td>
+                            <td>50. 相位图 ：<br>将心的各个区域按其<span class="answer-text">出现</span>时相的灰度还原于心血池影像中，<br>可得到一幅以不同灰度（或<span class="answer-text">色阶</span>）显示的<span class="answer-text">心血池</span>影。	50. 相位图 ：<br>将心的各个区域按其出现时相的灰度还原于心血池影像中，可得到一幅以不同灰度（或色阶）显示的心血池影。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51. 骨三时像：<br><span class="blur-text">一次静注</span>骨显像剂后分别与不同时间进行显像，<br>获得局部骨及周围组织的<br><span class="blur-text">血流</span>，<span class="blur-text">血池</span>及<span class="blur-text">延迟骨</span>显像的数据和图像，<br><br>分别称为<span class="blur-text">血流</span>相，<span class="blur-text">血池</span>相，<span class="blur-text">延迟</span>相。	51. 骨三时像：<br>一次静脉注射骨显像剂后分别与不同时间进行显像，获得局部骨及周围组织的血流、血池及延迟骨显像的数据和图像，分别称为血流相，血池相，延迟相。</td>
+                            <td>51. 骨三时像：<br><span class="answer-text">一次静注</span>骨显像剂后分别与不同时间进行显像，<br>获得局部骨及周围组织的<br><span class="answer-text">血流</span>，<span class="answer-text">血池</span>及<span class="answer-text">延迟骨</span>显像的数据和图像，<br><br>分别称为<span class="answer-text">血流</span>相，<span class="answer-text">血池</span>相，<span class="answer-text">延迟</span>相。	51. 骨三时像：<br>一次静脉注射骨显像剂后分别与不同时间进行显像，获得局部骨及周围组织的血流、血池及延迟骨显像的数据和图像，分别称为血流相，血池相，延迟相。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52. 骨断层显像：<br>以<span class="blur-text">病灶</span>、感兴趣部位为中心，<br>获得局部骨骼的<span class="blur-text">横断\矢状\冠状</span>面的断层影像。	52. 骨断层显像：<br>以病造感兴趣部位为中心，获得局部骨骼的横断面、矢状面及冠状面的断层影像。</td>
+                            <td>52. 骨断层显像：<br>以<span class="answer-text">病灶</span>、感兴趣部位为中心，<br>获得局部骨骼的<span class="answer-text">横断\矢状\冠状</span>面的断层影像。	52. 骨断层显像：<br>以病造感兴趣部位为中心，获得局部骨骼的横断面、矢状面及冠状面的断层影像。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53. 融合显像：<br>将 <span class="blur-text">spect</span> 影像与 <span class="blur-text">ct</span> 影像<br>利用图像融合技术进行<span class="blur-text">同或异机</span>融合，<br>实现两种影像的优势互补，<br>获得反应<span class="blur-text">功能</span>及<span class="blur-text">解剖结构</span>的影像。	53. 融合显像：<br>将 spect 影像与 ct 影像利用图像融合技术进行同机或异机融合，实现两种影像的优势互补，获得反应功能及解剖结构的影像。</td>
+                            <td>53. 融合显像：<br>将 <span class="answer-text">spect</span> 影像与 <span class="answer-text">ct</span> 影像<br>利用图像融合技术进行<span class="answer-text">同或异机</span>融合，<br>实现两种影像的优势互补，<br>获得反应<span class="answer-text">功能</span>及<span class="answer-text">解剖结构</span>的影像。	53. 融合显像：<br>将 spect 影像与 ct 影像利用图像融合技术进行同机或异机融合，实现两种影像的优势互补，获得反应功能及解剖结构的影像。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54. 超级骨显像：<br>放射性显像剂在全身骨骼分布<span class="blur-text">均匀</span>，<br><span class="blur-text">对称</span>性的异常<span class="blur-text">浓聚</span>，<br>骨骼影像非常清晰，双肾常不显影，膀胱不显影惑轻度显影，<br>软组织放射性分布极低，<br>主要见于<span class="blur-text">恶性肿瘤</span>广泛转移和部分<span class="blur-text">代谢</span>性骨病。	54. 超级骨显像：<br>放射性显像剂在全身骨骼分布均匀，对称性的异常浓聚，骨骼影像非常清晰，双肾常不显影，膀胱不显影惑轻度显影，软组织放射性分布极低，主要见于恶性肿瘤广泛转移和部分代谢性骨病。</td>
+                            <td>54. 超级骨显像：<br>放射性显像剂在全身骨骼分布<span class="answer-text">均匀</span>，<br><span class="answer-text">对称</span>性的异常<span class="answer-text">浓聚</span>，<br>骨骼影像非常清晰，双肾常不显影，膀胱不显影惑轻度显影，<br>软组织放射性分布极低，<br>主要见于<span class="answer-text">恶性肿瘤</span>广泛转移和部分<span class="answer-text">代谢</span>性骨病。	54. 超级骨显像：<br>放射性显像剂在全身骨骼分布均匀，对称性的异常浓聚，骨骼影像非常清晰，双肾常不显影，膀胱不显影惑轻度显影，软组织放射性分布极低，主要见于恶性肿瘤广泛转移和部分代谢性骨病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55. “炸面圈”样改变：<br>指在骨显像图上病灶中心呈放射性<span class="blur-text">减低</span>区（或冷区） ，<br>而且周边却表现为放射性<span class="blur-text">增高</span>的现象，<br><br>提示病灶中心为<span class="blur-text">破骨</span>细胞活跃占优势，<br>周围<span class="blur-text">成骨</span>细胞活跃占优势，<br><br>常见于骨<span class="blur-text">缺血</span>性病变的<span class="blur-text">中晚</span>期。	55. “炸面圈”样改变：<br>指在骨显像图上病灶中心呈放射性减低区（或冷区） ，而且周边却表现为放射性增高的现象，提示病灶中心为破骨细胞活跃占优势，周围成骨细胞活跃占优势，常见于骨缺血性病变的中晚期。</td>
+                            <td>55. “炸面圈”样改变：<br>指在骨显像图上病灶中心呈放射性<span class="answer-text">减低</span>区（或冷区） ，<br>而且周边却表现为放射性<span class="answer-text">增高</span>的现象，<br><br>提示病灶中心为<span class="answer-text">破骨</span>细胞活跃占优势，<br>周围<span class="answer-text">成骨</span>细胞活跃占优势，<br><br>常见于骨<span class="answer-text">缺血</span>性病变的<span class="answer-text">中晚</span>期。	55. “炸面圈”样改变：<br>指在骨显像图上病灶中心呈放射性减低区（或冷区） ，而且周边却表现为放射性增高的现象，提示病灶中心为破骨细胞活跃占优势，周围成骨细胞活跃占优势，常见于骨缺血性病变的中晚期。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56. 肾图：<br>肾<span class="blur-text">静脉</span>注射示踪剂后，<br>利用肾功能仪在肾区所测得的随时间推移而变化的<br>放射性强度曲线（ <span class="blur-text">时间—强度</span>曲线 ）。	56. 肾图：<br>肾静脉注射示踪剂后，利用肾功能仪在肾区所测得的随时间推移而变化的放射性强度曲线（ 时间—强度曲线 ）。</td>
+                            <td>56. 肾图：<br>肾<span class="answer-text">静脉</span>注射示踪剂后，<br>利用肾功能仪在肾区所测得的随时间推移而变化的<br>放射性强度曲线（ <span class="answer-text">时间—强度</span>曲线 ）。	56. 肾图：<br>肾静脉注射示踪剂后，利用肾功能仪在肾区所测得的随时间推移而变化的放射性强度曲线（ 时间—强度曲线 ）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57. 小肾图：<br>abc 三段均正常，<br>但图形对比一侧明显<span class="blur-text">低</span>于对侧，<br><br>提示低的一侧肾动脉<span class="blur-text">狭窄</span>或先天肾发育<span class="blur-text">不良</span>，<br>但功能尚可。	57. 小肾图：<br>abc 三段均正常，但图形对比一侧明显低于对侧，提示低的一侧肾动脉狭窄或先天肾发育不良，但功能尚可。</td>
+                            <td>57. 小肾图：<br>abc 三段均正常，<br>但图形对比一侧明显<span class="answer-text">低</span>于对侧，<br><br>提示低的一侧肾动脉<span class="answer-text">狭窄</span>或先天肾发育<span class="answer-text">不良</span>，<br>但功能尚可。	57. 小肾图：<br>abc 三段均正常，但图形对比一侧明显低于对侧，提示低的一侧肾动脉狭窄或先天肾发育不良，但功能尚可。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58. 介入试验（利尿肾图）：<br>功能性尿路<span class="blur-text">扩张</span>，肾盂张力<span class="blur-text">降低</span>，<br>从而改变尿液的动力学，尿流速度<span class="blur-text">减慢</span>，<br><br>示踪剂进入扩大的肾盂腔内不能迅速排出，<br>使肾图呈<span class="blur-text">梗阻</span>型曲线，<br><br>此时使用<span class="blur-text">利尿</span>剂加大尿量，<br>观察曲线的变化情况，<br>从而可鉴别尿路机械性<span class="blur-text">梗阻</span>及功能性<span class="blur-text">扩张</span>。	58. 介入试验（利尿肾图）：<br>功能性尿路扩张，肾盂张力降低，从而改变尿液的动力学，尿流速度减慢，示踪剂进入扩大的肾盂腔内不能迅速排出，使肾图呈梗阻型曲线，此时使用利尿剂加大尿量，观察曲线的变化情况，从而可鉴别尿路机械性梗阻及功能性扩张。</td>
+                            <td>58. 介入试验（利尿肾图）：<br>功能性尿路<span class="answer-text">扩张</span>，肾盂张力<span class="answer-text">降低</span>，<br>从而改变尿液的动力学，尿流速度<span class="answer-text">减慢</span>，<br><br>示踪剂进入扩大的肾盂腔内不能迅速排出，<br>使肾图呈<span class="answer-text">梗阻</span>型曲线，<br><br>此时使用<span class="answer-text">利尿</span>剂加大尿量，<br>观察曲线的变化情况，<br>从而可鉴别尿路机械性<span class="answer-text">梗阻</span>及功能性<span class="answer-text">扩张</span>。	58. 介入试验（利尿肾图）：<br>功能性尿路扩张，肾盂张力降低，从而改变尿液的动力学，尿流速度减慢，示踪剂进入扩大的肾盂腔内不能迅速排出，使肾图呈梗阻型曲线，此时使用利尿剂加大尿量，观察曲线的变化情况，从而可鉴别尿路机械性梗阻及功能性扩张。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59. 肾动态显像：<br>经静脉弹丸式注入<br>由肾小球<span class="blur-text">滤过</span>或肾小管分泌不被<span class="blur-text">再吸收</span><br>并迅速随尿液排出的<span class="blur-text">快速通过</span>型显像剂，<br><br>同时应用核医学显像仪器在体外<br>连续或间隔一定时间多次采集系列影像，<br><br>便可以动态观察显像剂通过<br><span class="blur-text">腹主</span>动脉，肾<span class="blur-text">动脉</span>，肾<span class="blur-text">实质</span><br>和<span class="blur-text">尿路</span>的全过程。	59. 肾动态显像：<br>经静脉弹丸式注入由肾小球滤过或肾小管分泌不被再吸收并迅速随尿液排出的快速通过型显像剂，同时应用核医学显像仪器在体外连续或间隔一定时间多次采集系列影像，便可以动态观察显像剂通过腹主动脉，肾动脉，肾实质和尿路的全过程。</td>
+                            <td>59. 肾动态显像：<br>经静脉弹丸式注入<br>由肾小球<span class="answer-text">滤过</span>或肾小管分泌不被<span class="answer-text">再吸收</span><br>并迅速随尿液排出的<span class="answer-text">快速通过</span>型显像剂，<br><br>同时应用核医学显像仪器在体外<br>连续或间隔一定时间多次采集系列影像，<br><br>便可以动态观察显像剂通过<br><span class="answer-text">腹主</span>动脉，肾<span class="answer-text">动脉</span>，肾<span class="answer-text">实质</span><br>和<span class="answer-text">尿路</span>的全过程。	59. 肾动态显像：<br>经静脉弹丸式注入由肾小球滤过或肾小管分泌不被再吸收并迅速随尿液排出的快速通过型显像剂，同时应用核医学显像仪器在体外连续或间隔一定时间多次采集系列影像，便可以动态观察显像剂通过腹主动脉，肾动脉，肾实质和尿路的全过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60. 倒相/逆转：<br>健侧先<span class="blur-text">显</span>后<span class="blur-text">淡</span>，<br>患侧先<span class="blur-text">淡</span>后<span class="blur-text">显</span>。	60. 倒相/逆转：<br>健侧先显后淡，患侧先淡后显。</td>
+                            <td>60. 倒相/逆转：<br>健侧先<span class="answer-text">显</span>后<span class="answer-text">淡</span>，<br>患侧先<span class="answer-text">淡</span>后<span class="answer-text">显</span>。	60. 倒相/逆转：<br>健侧先显后淡，患侧先淡后显。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61. <span class="blur-text">交叉失联络</span><br>（crossed cerebrellar diaschisis）：<br>脑<span class="blur-text">血流灌注</span>显像中，<br>一侧<span class="blur-text">大脑皮质</span>存在局限性放射性分布减低或缺损时，<br>对侧<span class="blur-text">小脑</span>放射性分布也减低，<br>见于脑<span class="blur-text">梗死</span>。	61. <span class="blur-text">交叉失联络</span><br>（crossed cerebrellar diaschisis）：<br>脑血流灌注显像中，一侧大脑皮质存在局限性放射性分布减低或缺损时，对侧小脑放射性分布也减低，见于脑梗死。</td>
+                            <td>61. <span class="answer-text">交叉失联络</span><br>（crossed cerebrellar diaschisis）：<br>脑<span class="answer-text">血流灌注</span>显像中，<br>一侧<span class="answer-text">大脑皮质</span>存在局限性放射性分布减低或缺损时，<br>对侧<span class="answer-text">小脑</span>放射性分布也减低，<br>见于脑<span class="answer-text">梗死</span>。	61. <span class="answer-text">交叉失联络</span><br>（crossed cerebrellar diaschisis）：<br>脑血流灌注显像中，一侧大脑皮质存在局限性放射性分布减低或缺损时，对侧小脑放射性分布也减低，见于脑梗死。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62. <span class="blur-text">过度灌注</span><br>（ luxury perfusion）：<br>核素<span class="blur-text">脑血流灌注</span>显像<br>在<span class="blur-text">脑梗死</span>区域，表现为<span class="blur-text">低</span>灌注区，<br>但由于局部代谢产物的<span class="blur-text">淤积</span>等因素引起脑血管<span class="blur-text">扩张</span>，<br><br>~导致<span class="blur-text">梗死</span>~区周围出现<span class="blur-text">过度灌注</span>~现象，<br>见于<span class="blur-text">脑梗死</span>亚急性期。	62. <span class="blur-text">过度灌注</span><br>（ luxury perfusion）：<br>核素脑血流灌注显像在脑梗死区域表现为低灌注区，但由于局部代谢产物的淤积等因素引起脑血管扩张，导致梗死区周围出现过度灌注现象，见于脑梗死亚急性期。</td>
+                            <td>62. <span class="answer-text">过度灌注</span><br>（ luxury perfusion）：<br>核素<span class="answer-text">脑血流灌注</span>显像<br>在<span class="answer-text">脑梗死</span>区域，表现为<span class="answer-text">低</span>灌注区，<br>但由于局部代谢产物的<span class="answer-text">淤积</span>等因素引起脑血管<span class="answer-text">扩张</span>，<br><br>~导致<span class="answer-text">梗死</span>~区周围出现<span class="answer-text">过度灌注</span>~现象，<br>见于<span class="answer-text">脑梗死</span>亚急性期。	62. <span class="answer-text">过度灌注</span><br>（ luxury perfusion）：<br>核素脑血流灌注显像在脑梗死区域表现为低灌注区，但由于局部代谢产物的淤积等因素引起脑血管扩张，导致梗死区周围出现过度灌注现象，见于脑梗死亚急性期。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63. 甲状腺静态显像：<br>将一种进入人体后能被甲状腺细胞<span class="blur-text">选择</span>性摄取的放射性药物引入患者体内，<br>一定时间后用特定的核医学显像仪器探测甲状腺内放射性核素衰变时所发出的 <span class="blur-text">γ</span>射线，<br>即可得到反映甲状腺<span class="blur-text">部位</span>，<span class="blur-text">形态大小</span>及<span class="blur-text">功能</span>等信息的甲状腺影像。	63. 甲状腺静态显像：<br>将一种进入人体后能被甲状腺细胞选择性摄取的放射性药物引入患者体内，一定时间后用特定的核医学显像仪器探测甲状腺内放射性核素衰变时所发出的 γ射线，即可得到反映甲状腺部位，形态，大小及功能等信息的甲状腺影像。</td>
+                            <td>63. 甲状腺静态显像：<br>将一种进入人体后能被甲状腺细胞<span class="answer-text">选择</span>性摄取的放射性药物引入患者体内，<br>一定时间后用特定的核医学显像仪器探测甲状腺内放射性核素衰变时所发出的 <span class="answer-text">γ</span>射线，<br>即可得到反映甲状腺<span class="answer-text">部位</span>，<span class="answer-text">形态大小</span>及<span class="answer-text">功能</span>等信息的甲状腺影像。	63. 甲状腺静态显像：<br>将一种进入人体后能被甲状腺细胞选择性摄取的放射性药物引入患者体内，一定时间后用特定的核医学显像仪器探测甲状腺内放射性核素衰变时所发出的 γ射线，即可得到反映甲状腺部位，形态，大小及功能等信息的甲状腺影像。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64. 热结节：<br>结节部位放射性分布<span class="blur-text">高</span>于周围正常甲状腺组织。	64. 热结节：<br>结节部位放射性分布高于周围正常甲状腺组织。</td>
+                            <td>64. 热结节：<br>结节部位放射性分布<span class="answer-text">高</span>于周围正常甲状腺组织。	64. 热结节：<br>结节部位放射性分布高于周围正常甲状腺组织。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65. 凉结节：<br>结节部位放射性分布<span class="blur-text">低</span>于周围正常甲状腺组织。	65. 凉结节：<br>结节部位放射性分布低于周围正常甲状腺组织。</td>
+                            <td>65. 凉结节：<br>结节部位放射性分布<span class="answer-text">低</span>于周围正常甲状腺组织。	65. 凉结节：<br>结节部位放射性分布低于周围正常甲状腺组织。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66. 冷结节：<br>结节周围<span class="blur-text">无</span>放射性分布。	66. 冷结节：<br>结节周围无放射性分布。</td>
+                            <td>66. 冷结节：<br>结节周围<span class="answer-text">无</span>放射性分布。	66. 冷结节：<br>结节周围无放射性分布。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67. 温结节：<br>结节部位放射性分布<span class="blur-text">等</span>于周围正常甲状腺组织。	67. 温结节：<br>结节部位放射性分布等于周围正常甲状腺组织。</td>
+                            <td>67. 温结节：<br>结节部位放射性分布<span class="answer-text">等</span>于周围正常甲状腺组织。	67. 温结节：<br>结节部位放射性分布等于周围正常甲状腺组织。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68. 甲状腺动态显像：<br>将 <span class="blur-text">99 mTcO 4</span>（显像剂）-经静脉<span class="blur-text">弹丸注射</span>引入患者体内，<br><br>用特定的核医学显像仪器连续记录显象剂<br>随动脉血<span class="blur-text">流经</span>甲状腺及被甲状腺<span class="blur-text">摄取</span>的动态变化影像，<br><br>从而了解甲状腺或其内<span class="blur-text">病灶</span>的<span class="blur-text">血供</span>及<span class="blur-text">功能</span>情况。	68. 甲状腺动态显像：<br>将 99 mTcO 4-经静脉弹丸注射引入患者体内，用特定的核医学显像仪器连续记录显象剂随动脉血流经甲状腺及被甲状腺摄取的动态变化影像，从而了解甲状腺或其内病灶的血供及功能情况。</td>
+                            <td>68. 甲状腺动态显像：<br>将 <span class="answer-text">99 mTcO 4</span>（显像剂）-经静脉<span class="answer-text">弹丸注射</span>引入患者体内，<br><br>用特定的核医学显像仪器连续记录显象剂<br>随动脉血<span class="answer-text">流经</span>甲状腺及被甲状腺<span class="answer-text">摄取</span>的动态变化影像，<br><br>从而了解甲状腺或其内<span class="answer-text">病灶</span>的<span class="answer-text">血供</span>及<span class="answer-text">功能</span>情况。	68. 甲状腺动态显像：<br>将 99 mTcO 4-经静脉弹丸注射引入患者体内，用特定的核医学显像仪器连续记录显象剂随动脉血流经甲状腺及被甲状腺摄取的动态变化影像，从而了解甲状腺或其内病灶的血供及功能情况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69. 低 T 3 综合征：<br>机体在一些特殊情况下出现 <span class="blur-text">T 3</span> 降低，<span class="blur-text">T 4</span> 正常或降低，<br>但无生物活性的 <span class="blur-text">rT 3</span> 却明显增高的现象，<br>这是机体的一种生理性<span class="blur-text">自我保护</span>机制，<br><br>其升高的水平可作为判断疾病<span class="blur-text">严重程度</span>的指标。	69. 低 T 3 综合征：<br>机体在一些特殊情况下出现 T 3 降低，T 4 正常或降低，但无生物活性的 rT 3 却明显增高的现象，这是机体的一种生理性自我保护机制，其升高的水平可作为判断疾病严重程度的指标。</td>
+                            <td>69. 低 T 3 综合征：<br>机体在一些特殊情况下出现 <span class="answer-text">T 3</span> 降低，<span class="answer-text">T 4</span> 正常或降低，<br>但无生物活性的 <span class="answer-text">rT 3</span> 却明显增高的现象，<br>这是机体的一种生理性<span class="answer-text">自我保护</span>机制，<br><br>其升高的水平可作为判断疾病<span class="answer-text">严重程度</span>的指标。	69. 低 T 3 综合征：<br>机体在一些特殊情况下出现 T 3 降低，T 4 正常或降低，但无生物活性的 rT 3 却明显增高的现象，这是机体的一种生理性自我保护机制，其升高的水平可作为判断疾病严重程度的指标。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70. 分离现象：<br><span class="blur-text">亚急</span>性<span class="blur-text">甲状腺</span>炎患者<br><span class="blur-text">甲吸</span>明显降低，<br>血清 <span class="blur-text">T 3</span>，<span class="blur-text">T 4</span> 水平却明显增高。	70. 分离现象：<br>亚急性甲状腺炎患者甲吸明显降低，血清 T 3，T 4 水平却明显增高。</td>
+                            <td>70. 分离现象：<br><span class="answer-text">亚急</span>性<span class="answer-text">甲状腺</span>炎患者<br><span class="answer-text">甲吸</span>明显降低，<br>血清 <span class="answer-text">T 3</span>，<span class="answer-text">T 4</span> 水平却明显增高。	70. 分离现象：<br>亚急性甲状腺炎患者甲吸明显降低，血清 T 3，T 4 水平却明显增高。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71. <span class="blur-text">标准摄取值</span><br>（SUV）：<br>是 <span class="blur-text">pet</span> 技术在<span class="blur-text">肿瘤</span>诊断中常用的半定<span class="blur-text">量</span>指标，<br><br>是指<span class="blur-text">局部组织摄取</span>的显象剂的放射性活度<br>与<span class="blur-text">全身平均注射</span>活度的比值。	71. <span class="blur-text">标准摄取值</span><br>（SUV）：<br>是 pet 在肿瘤诊断中常用的半定量指标，是指局部组织摄取的显象剂的放射性活度与全身平均注射活度的比值。</td>
+                            <td>71. <span class="answer-text">标准摄取值</span><br>（SUV）：<br>是 <span class="answer-text">pet</span> 技术在<span class="answer-text">肿瘤</span>诊断中常用的半定<span class="answer-text">量</span>指标，<br><br>是指<span class="answer-text">局部组织摄取</span>的显象剂的放射性活度<br>与<span class="answer-text">全身平均注射</span>活度的比值。	71. <span class="answer-text">标准摄取值</span><br>（SUV）：<br>是 pet 在肿瘤诊断中常用的半定量指标，是指局部组织摄取的显象剂的放射性活度与全身平均注射活度的比值。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72. 放射性核素治疗：<br>将<span class="blur-text">开放</span>型放射性核素或其标记物引入体内，<br>利用核素发射出的射线的<span class="blur-text">电离辐射</span>效应，<br><span class="blur-text">抑制/破坏</span>病变组织，达到治疗的目的。<br><br>区别	72. 放射性核素治疗：<br>将开放型放射性核素或其标记物引入体内，利用核素发射出的射线的电离辐射效应，抑制或破坏病变组织，达到治疗的目的。<br><br>放射性粒子植入<br>永久性植入&nbsp; 肿瘤 放射线</td>
+                            <td>72. 放射性核素治疗：<br>将<span class="answer-text">开放</span>型放射性核素或其标记物引入体内，<br>利用核素发射出的射线的<span class="answer-text">电离辐射</span>效应，<br><span class="answer-text">抑制/破坏</span>病变组织，达到治疗的目的。<br><br>区别	72. 放射性核素治疗：<br>将开放型放射性核素或其标记物引入体内，利用核素发射出的射线的电离辐射效应，抑制或破坏病变组织，达到治疗的目的。<br><br>放射性粒子植入<br>永久性植入&nbsp; 肿瘤 放射线</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73. 放射性粒子植入：<br>利用具有放射性活性的粒子  <span class="blur-text">永久</span>性植入  到<span class="blur-text">肿瘤</span>组织中，<br>借放射性粒子释放的<span class="blur-text">放射线</span>，对肿瘤进行治疗。	73. 放射性粒子植入：<br>利用具有放射性活性的粒子永久性植入到肿瘤组织中，借放射性粒子释放的放射线，对肿瘤进行治疗。</td>
+                            <td>73. 放射性粒子植入：<br>利用具有放射性活性的粒子  <span class="answer-text">永久</span>性植入  到<span class="answer-text">肿瘤</span>组织中，<br>借放射性粒子释放的<span class="answer-text">放射线</span>，对肿瘤进行治疗。	73. 放射性粒子植入：<br>利用具有放射性活性的粒子永久性植入到肿瘤组织中，借放射性粒子释放的放射线，对肿瘤进行治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74. <span class="blur-text">闪烁现象</span><br> flare sign：<br>部分患者再接受外<span class="blur-text">放</span>疗、放射性核素<span class="blur-text">靶向</span>治疗或<span class="blur-text">化</span>疗等后，<br>病灶可呈<span class="blur-text">一过</span>性放射性摄取<span class="blur-text">增加</span>的显像。<br>（ 骨<span class="blur-text">愈合</span>和<span class="blur-text">修复</span>的表现）	74. <span class="blur-text">闪烁现象</span><br> flare sign：<br>部分患者再接受外放疗、放射性核素靶向治疗或化疗等后，病灶可呈一过性放射性摄取增加的显像。（ 骨愈合和修复的表现）</td>
+                            <td>74. <span class="answer-text">闪烁现象</span><br> flare sign：<br>部分患者再接受外<span class="answer-text">放</span>疗、放射性核素<span class="answer-text">靶向</span>治疗或<span class="answer-text">化</span>疗等后，<br>病灶可呈<span class="answer-text">一过</span>性放射性摄取<span class="answer-text">增加</span>的显像。<br>（ 骨<span class="answer-text">愈合</span>和<span class="answer-text">修复</span>的表现）	74. <span class="answer-text">闪烁现象</span><br> flare sign：<br>部分患者再接受外放疗、放射性核素靶向治疗或化疗等后，病灶可呈一过性放射性摄取增加的显像。（ 骨愈合和修复的表现）</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

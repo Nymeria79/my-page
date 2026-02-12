@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">皮肤性病学名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.   表皮通过时间/更替时间❤：<br><br>新生的 <span class="blur-text">角质形成</span> 细胞有序上移，<br><br>由 <span class="blur-text">基底</span> 层移行至 <span class="blur-text">颗粒</span> 层约需 14 天，<br>再移行至 <span class="blur-text">角质</span> 层表面并脱落又需要14 天，<br><br>共约28 天，称为 <span class="blur-text">表皮通过时间或者更替时间</span> 。</td>
+                            <td>1.   表皮通过时间/更替时间❤：<br><br>新生的 <span class="answer-text">角质形成</span> 细胞有序上移，<br><br>由 <span class="answer-text">基底</span> 层移行至 <span class="answer-text">颗粒</span> 层约需 14 天，<br>再移行至 <span class="answer-text">角质</span> 层表面并脱落又需要14 天，<br><br>共约28 天，称为 <span class="answer-text">表皮通过时间或者更替时间</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.   <span class="blur-text">斑疹</span><br>（macule）：<br><br>皮肤黏膜的局限性 <span class="blur-text">颜色</span> 改变，<br>皮损与周围皮肤 <span class="blur-text">平齐</span> ，<br>无隆起或凹陷，大小可不一，形状可不规则，<br>直径一般小于 <span class="blur-text">1cm</span> ，<br><br>大于称为 <span class="blur-text">斑片</span><br>（patch）。</td>
+                            <td>2.   <span class="answer-text">斑疹</span><br>（macule）：<br><br>皮肤黏膜的局限性 <span class="answer-text">颜色</span> 改变，<br>皮损与周围皮肤 <span class="answer-text">平齐</span> ，<br>无隆起或凹陷，大小可不一，形状可不规则，<br>直径一般小于 <span class="answer-text">1cm</span> ，<br><br>大于称为 <span class="answer-text">斑片</span><br>（patch）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.   <span class="blur-text">丘疹</span><br>（papule）：<br><br>局限性、实质性的<span class="blur-text">表浅隆起</span>性皮损，直径 <span class="blur-text">≤1   ㎝</span> 。<br><br>可由表皮或真皮浅层细胞<span class="blur-text">增殖</span>（如银屑病）、<br><span class="blur-text">代谢产物</span>聚积（如皮肤淀粉样变）<br>或<span class="blur-text">炎症细胞</span>浸润（如湿疹）引起。</td>
+                            <td>3.   <span class="answer-text">丘疹</span><br>（papule）：<br><br>局限性、实质性的<span class="answer-text">表浅隆起</span>性皮损，直径 <span class="answer-text">≤1   ㎝</span> 。<br><br>可由表皮或真皮浅层细胞<span class="answer-text">增殖</span>（如银屑病）、<br><span class="answer-text">代谢产物</span>聚积（如皮肤淀粉样变）<br>或<span class="answer-text">炎症细胞</span>浸润（如湿疹）引起。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.   <span class="blur-text">斑块</span><br>（plaque）：<br><br>局限性、实质性的<span class="blur-text">表浅隆起</span>性皮损，直径<span class="blur-text">＞1   ㎝</span>，<br>可触及，为<span class="blur-text">丘疹</span>扩大或较多融合而成。<br><br>见于 <span class="blur-text">银屑病</span> 等。</td>
+                            <td>4.   <span class="answer-text">斑块</span><br>（plaque）：<br><br>局限性、实质性的<span class="answer-text">表浅隆起</span>性皮损，直径<span class="answer-text">＞1   ㎝</span>，<br>可触及，为<span class="answer-text">丘疹</span>扩大或较多融合而成。<br><br>见于 <span class="answer-text">银屑病</span> 等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. （wheal）<br> <span class="blur-text">风团</span><br>❤：<br><br>真皮浅层 <span class="blur-text">水肿</span> 引起的暂时性、隆起性皮损。<br>皮损可呈 <span class="blur-text">红/苍白</span> 色，周围常有 <span class="blur-text">红晕</span> ，一般大小不一，形态不规则。<br><br>皮损发生快，此起彼伏，一般经 <span class="blur-text">数小时</span> 消退，<br>消退后多 <span class="blur-text">不留</span> 痕迹，<br>常伴有 <span class="blur-text">瘙痒</span> 。<br><br>见于 <span class="blur-text">荨麻疹</span> 。</td>
+                            <td>5. （wheal）<br> <span class="answer-text">风团</span><br>❤：<br><br>真皮浅层 <span class="answer-text">水肿</span> 引起的暂时性、隆起性皮损。<br>皮损可呈 <span class="answer-text">红/苍白</span> 色，周围常有 <span class="answer-text">红晕</span> ，一般大小不一，形态不规则。<br><br>皮损发生快，此起彼伏，一般经 <span class="answer-text">数小时</span> 消退，<br>消退后多 <span class="answer-text">不留</span> 痕迹，<br>常伴有 <span class="answer-text">瘙痒</span> 。<br><br>见于 <span class="answer-text">荨麻疹</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.   <span class="blur-text">水疱</span> （vesicle）和 <span class="blur-text">大疱</span> （bulla）：<br><br>水疱为局限性、隆起性、内含 <span class="blur-text">液体</span> 的 <span class="blur-text">腔隙</span> 性皮损，<br>直径 <span class="blur-text">≤1㎝</span> --水疱，和直径 <span class="blur-text">＞1 ㎝</span> --大疱。</td>
+                            <td>6.   <span class="answer-text">水疱</span> （vesicle）和 <span class="answer-text">大疱</span> （bulla）：<br><br>水疱为局限性、隆起性、内含 <span class="answer-text">液体</span> 的 <span class="answer-text">腔隙</span> 性皮损，<br>直径 <span class="answer-text">≤1㎝</span> --水疱，和直径 <span class="answer-text">＞1 ㎝</span> --大疱。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. （pustule）<br>  <span class="blur-text">脓疱</span> <br>：<br><br>局限性、隆起性、内含 <span class="blur-text">脓液</span> 的 <span class="blur-text">腔隙</span> 性皮损，<br><br>可由 <span class="blur-text">细菌</span> （如 <span class="blur-text">脓疱疮</span> ）<br>或非感染性 <span class="blur-text">炎症</span> （如脓疱型 <span class="blur-text">银屑病</span> ）引起。<br><br>（水疱激发感染后形成的脓疱为<span class="blur-text">继发</span>性皮损）</td>
+                            <td>7. （pustule）<br>  <span class="answer-text">脓疱</span> <br>：<br><br>局限性、隆起性、内含 <span class="answer-text">脓液</span> 的 <span class="answer-text">腔隙</span> 性皮损，<br><br>可由 <span class="answer-text">细菌</span> （如 <span class="answer-text">脓疱疮</span> ）<br>或非感染性 <span class="answer-text">炎症</span> （如脓疱型 <span class="answer-text">银屑病</span> ）引起。<br><br>（水疱激发感染后形成的脓疱为<span class="answer-text">继发</span>性皮损）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.   <span class="blur-text">结节</span><br>（nodule）：<br><br><span class="blur-text">实</span>质性、<span class="blur-text">深</span>在性、<span class="blur-text">可</span>触及的皮损，<br>可隆起于皮面，亦可不隆起，呈圆形、椭圆形或不规则形。<br><br>可由真皮或皮下组织的<span class="blur-text">炎性</span>浸润（如结节性<span class="blur-text">红斑</span>）、<br><span class="blur-text">代谢产物</span>沉积 （如结节性<span class="blur-text">黄色瘤</span>）<br>或<span class="blur-text">组织</span>增生（如皮肤<span class="blur-text">纤维瘤及脂肪瘤</span>）。</td>
+                            <td>8.   <span class="answer-text">结节</span><br>（nodule）：<br><br><span class="answer-text">实</span>质性、<span class="answer-text">深</span>在性、<span class="answer-text">可</span>触及的皮损，<br>可隆起于皮面，亦可不隆起，呈圆形、椭圆形或不规则形。<br><br>可由真皮或皮下组织的<span class="answer-text">炎性</span>浸润（如结节性<span class="answer-text">红斑</span>）、<br><span class="answer-text">代谢产物</span>沉积 （如结节性<span class="answer-text">黄色瘤</span>）<br>或<span class="answer-text">组织</span>增生（如皮肤<span class="answer-text">纤维瘤及脂肪瘤</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.   <span class="blur-text">囊肿</span><br>（cyst）：<br><br>具有 <span class="blur-text">囊腔</span> 结构、<br>内含 <span class="blur-text">液体或细胞</span> 成分<br>的 <span class="blur-text">囊</span> 性皮损。<br><br>一般位于 <span class="blur-text">真皮</span> 或更深位置，<br>可隆起于皮面或仅可触及，<br>触之有 <span class="blur-text">囊性</span> 感，大小不等。</td>
+                            <td>9.   <span class="answer-text">囊肿</span><br>（cyst）：<br><br>具有 <span class="answer-text">囊腔</span> 结构、<br>内含 <span class="answer-text">液体或细胞</span> 成分<br>的 <span class="answer-text">囊</span> 性皮损。<br><br>一般位于 <span class="answer-text">真皮</span> 或更深位置，<br>可隆起于皮面或仅可触及，<br>触之有 <span class="answer-text">囊性</span> 感，大小不等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. <span class="blur-text">苔藓样变</span><br>（lichenification）❤：<br><br>因反复 <span class="blur-text">搔抓、摩擦</span> 导致的皮肤局限性 <span class="blur-text">增厚</span> 。<br><br>表现为皮嵴 <span class="blur-text">隆起</span> ，皮沟 <span class="blur-text">加深</span> ，皮损界限 <span class="blur-text">清楚</span> ，<br>常伴<span class="blur-text">剧痒</span>。<br><br>见于慢性<span class="blur-text">单纯性苔藓</span>、慢性<span class="blur-text">湿疹</span>。</td>
+                            <td>10. <span class="answer-text">苔藓样变</span><br>（lichenification）❤：<br><br>因反复 <span class="answer-text">搔抓、摩擦</span> 导致的皮肤局限性 <span class="answer-text">增厚</span> 。<br><br>表现为皮嵴 <span class="answer-text">隆起</span> ，皮沟 <span class="answer-text">加深</span> ，皮损界限 <span class="answer-text">清楚</span> ，<br>常伴<span class="answer-text">剧痒</span>。<br><br>见于慢性<span class="answer-text">单纯性苔藓</span>、慢性<span class="answer-text">湿疹</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. Contact dermatitis<br><span class="blur-text">接触性皮炎</span> ：<br><br>是由于接触某些<span class="blur-text">外</span>源性物质后，<br>在皮肤黏膜接触部位发生的急性或慢性<span class="blur-text">炎症</span>反应。</td>
+                            <td>11. Contact dermatitis<br><span class="answer-text">接触性皮炎</span> ：<br><br>是由于接触某些<span class="answer-text">外</span>源性物质后，<br>在皮肤黏膜接触部位发生的急性或慢性<span class="answer-text">炎症</span>反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. Eczema<br><span class="blur-text">湿疹</span> ：<br><br>是由于多种内、外因素引起的<span class="blur-text">真皮浅层</span>及<span class="blur-text">表皮</span>炎症，<br><br>临床上急性期皮损以<span class="blur-text">丘疱疹</span>为主，有<span class="blur-text">渗出</span>倾向，<br>慢性期<span class="blur-text">苔藓</span>样变为主，易<span class="blur-text">反复</span>发作。</td>
+                            <td>12. Eczema<br><span class="answer-text">湿疹</span> ：<br><br>是由于多种内、外因素引起的<span class="answer-text">真皮浅层</span>及<span class="answer-text">表皮</span>炎症，<br><br>临床上急性期皮损以<span class="answer-text">丘疱疹</span>为主，有<span class="answer-text">渗出</span>倾向，<br>慢性期<span class="answer-text">苔藓</span>样变为主，易<span class="answer-text">反复</span>发作。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. <span class="blur-text">荨麻疹</span><br>urticaria❤：<br><br>是由于各种因素引起，以 <span class="blur-text">一过性风团</span> 为特征，<br>伴有<span class="blur-text">剧烈瘙痒</span>的皮肤及黏膜的局限性<span class="blur-text">水肿</span>反应。</td>
+                            <td>13. <span class="answer-text">荨麻疹</span><br>urticaria❤：<br><br>是由于各种因素引起，以 <span class="answer-text">一过性风团</span> 为特征，<br>伴有<span class="answer-text">剧烈瘙痒</span>的皮肤及黏膜的局限性<span class="answer-text">水肿</span>反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. <span class="blur-text">皮肤划痕症</span><br>（deimatographism）❤：<br><br>亦称<span class="blur-text">人工荨麻疹</span>，<br>用手搔抓或用钝器划过皮肤后，沿划痕发生<span class="blur-text">条纹状隆起</span>，<br>伴或不伴瘙痒，<br><span class="blur-text">半小时</span>后自行消退，平均病程<span class="blur-text"> 2–3 年</span>。</td>
+                            <td>14. <span class="answer-text">皮肤划痕症</span><br>（deimatographism）❤：<br><br>亦称<span class="answer-text">人工荨麻疹</span>，<br>用手搔抓或用钝器划过皮肤后，沿划痕发生<span class="answer-text">条纹状隆起</span>，<br>伴或不伴瘙痒，<br><span class="answer-text">半小时</span>后自行消退，平均病程<span class="answer-text"> 2–3 年</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. 蜡滴现象：❤<br>银屑病的基本损害为表面有银白色鳞屑的<span class="blur-text">丘疹</span>或<span class="blur-text">斑丘疹</span>，<br>若刮除最上层的银白色鳞屑，可观察到鳞屑<span class="blur-text">成层</span>状的特点，就像在刮蜡一样。</td>
+                            <td>15. 蜡滴现象：❤<br>银屑病的基本损害为表面有银白色鳞屑的<span class="answer-text">丘疹</span>或<span class="answer-text">斑丘疹</span>，<br>若刮除最上层的银白色鳞屑，可观察到鳞屑<span class="answer-text">成层</span>状的特点，就像在刮蜡一样。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. 薄膜现象：❤<br>银屑病的皮损刮去银白色鳞屑<br>可见 <span class="blur-text">淡红色发光半透明</span> 薄膜。</td>
+                            <td>16. 薄膜现象：❤<br>银屑病的皮损刮去银白色鳞屑<br>可见 <span class="answer-text">淡红色发光半透明</span> 薄膜。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. Auspitz 征：❤<br>银屑病剥去薄膜可见<span class="blur-text">点</span>状出血，<br>是由于<span class="blur-text">真皮乳头</span>顶部<span class="blur-text">迂曲扩张</span>的毛细血管被刮破所致。</td>
+                            <td>17. Auspitz 征：❤<br>银屑病剥去薄膜可见<span class="answer-text">点</span>状出血，<br>是由于<span class="answer-text">真皮乳头</span>顶部<span class="answer-text">迂曲扩张</span>的毛细血管被刮破所致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. <span class="blur-text">同形反应</span><br>（isomorphism）/Kobner 现象：❤<br>累及<span class="blur-text">真皮乳头</span>层或以下部位的损伤发生后，<br>因<span class="blur-text">针刺、搔抓、手术</span>等损伤可导致受损部位出现与原发疹相同损害的现象。</td>
+                            <td>18. <span class="answer-text">同形反应</span><br>（isomorphism）/Kobner 现象：❤<br>累及<span class="answer-text">真皮乳头</span>层或以下部位的损伤发生后，<br>因<span class="answer-text">针刺、搔抓、手术</span>等损伤可导致受损部位出现与原发疹相同损害的现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. 带状疱疹：❤<br>是由 <span class="blur-text">水痘–带状疱疹病毒</span> （VZV）引起的，<br><br>以 <span class="blur-text">群集</span> 性 <span class="blur-text">小水疱</span> 沿神经走向 <span class="blur-text">单</span> 侧分布，<br>伴明显 <span class="blur-text">神经痛</span> 为特征，<br><br>多见于 <span class="blur-text">成人</span> ，俗称 <span class="blur-text">蛇缠腰</span> 。</td>
+                            <td>19. 带状疱疹：❤<br>是由 <span class="answer-text">水痘–带状疱疹病毒</span> （VZV）引起的，<br><br>以 <span class="answer-text">群集</span> 性 <span class="answer-text">小水疱</span> 沿神经走向 <span class="answer-text">单</span> 侧分布，<br>伴明显 <span class="answer-text">神经痛</span> 为特征，<br><br>多见于 <span class="answer-text">成人</span> ，俗称 <span class="answer-text">蛇缠腰</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. Ramsay-Hunt 综合征：❤<br>（18 级考）<br><span class="blur-text">带状疱疹</span> 如累及 <span class="blur-text">膝状神经节</span> 同时侵犯 <span class="blur-text">面</span> 神经<br>的 <span class="blur-text">运动、感觉</span> 神经纤维时，<br>可出现 <span class="blur-text">面瘫</span> 、 <span class="blur-text">耳痛</span> 和 <span class="blur-text">外耳道疱疹</span> 三联征。</td>
+                            <td>20. Ramsay-Hunt 综合征：❤<br>（18 级考）<br><span class="answer-text">带状疱疹</span> 如累及 <span class="answer-text">膝状神经节</span> 同时侵犯 <span class="answer-text">面</span> 神经<br>的 <span class="answer-text">运动、感觉</span> 神经纤维时，<br>可出现 <span class="answer-text">面瘫</span> 、 <span class="answer-text">耳痛</span> 和 <span class="answer-text">外耳道疱疹</span> 三联征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. 交叉过敏：❤<br>机体被某种药物致敏后，<br>可能同时对与该种药物化学结构相似或存在<span class="blur-text">共同化学基团</span>的药物产生过敏。</td>
+                            <td>21. 交叉过敏：❤<br>机体被某种药物致敏后，<br>可能同时对与该种药物化学结构相似或存在<span class="answer-text">共同化学基团</span>的药物产生过敏。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. 多价过敏：❤<br>机体处于<span class="blur-text">高敏</span>状态下，<br>可能对平常不过敏、与致敏药物化学结构不同的药物也产生过敏。</td>
+                            <td>22. 多价过敏：❤<br>机体处于<span class="answer-text">高敏</span>状态下，<br>可能对平常不过敏、与致敏药物化学结构不同的药物也产生过敏。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. Nikolsky sign（ <span class="blur-text">尼氏</span> 征）：❤<br>用手指将疱轻轻加以 <span class="blur-text">推压</span> ，<br>可使疱壁 <span class="blur-text">扩展</span> 、水疱 <span class="blur-text">加大</span> ，<br><br>或稍用力 <span class="blur-text">推擦</span> 外观正常的皮肤，<br>亦可使表皮 <span class="blur-text">脱落</span> 或于搓后不久出现 <span class="blur-text">水疱</span> ，<br><br>或称 <span class="blur-text">棘层松解</span> 征。</td>
+                            <td>23. Nikolsky sign（ <span class="answer-text">尼氏</span> 征）：❤<br>用手指将疱轻轻加以 <span class="answer-text">推压</span> ，<br>可使疱壁 <span class="answer-text">扩展</span> 、水疱 <span class="answer-text">加大</span> ，<br><br>或稍用力 <span class="answer-text">推擦</span> 外观正常的皮肤，<br>亦可使表皮 <span class="answer-text">脱落</span> 或于搓后不久出现 <span class="answer-text">水疱</span> ，<br><br>或称 <span class="answer-text">棘层松解</span> 征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. 棘层松解：❤<br>指表皮细胞间失去<span class="blur-text">粘连</span>而呈松解状态，<br>出现表皮内<span class="blur-text">裂隙</span>或<span class="blur-text">水疱</span>。</td>
+                            <td>24. 棘层松解：❤<br>指表皮细胞间失去<span class="answer-text">粘连</span>而呈松解状态，<br>出现表皮内<span class="answer-text">裂隙</span>或<span class="answer-text">水疱</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25. Gottron 征：<br><span class="blur-text">指指或掌指</span> 关节 <span class="blur-text">伸</span> 侧<br>对称性、扁平、紫红色、鳞屑性 <span class="blur-text">丘疹</span> 。</td>
+                            <td>25. Gottron 征：<br><span class="answer-text">指指或掌指</span> 关节 <span class="answer-text">伸</span> 侧<br>对称性、扁平、紫红色、鳞屑性 <span class="answer-text">丘疹</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26. 皮肤异色症：<br>部分患者 <span class="blur-text">面、颈、上胸躯干</span> 部在 <span class="blur-text">红斑鳞屑</span> 基础上<br><br>逐渐出现褐色色素<span class="blur-text">沉着</span>、点状色素<span class="blur-text">脱失</span>、点状<span class="blur-text">角化</span>、<br>轻度皮肤<span class="blur-text">萎缩</span>、毛细血管<span class="blur-text">扩张</span>等，<br><br>或称 <span class="blur-text">异色性皮肌炎</span> 。</td>
+                            <td>26. 皮肤异色症：<br>部分患者 <span class="answer-text">面、颈、上胸躯干</span> 部在 <span class="answer-text">红斑鳞屑</span> 基础上<br><br>逐渐出现褐色色素<span class="answer-text">沉着</span>、点状色素<span class="answer-text">脱失</span>、点状<span class="answer-text">角化</span>、<br>轻度皮肤<span class="answer-text">萎缩</span>、毛细血管<span class="answer-text">扩张</span>等，<br><br>或称 <span class="answer-text">异色性皮肌炎</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27. 雷诺现象：❤<br>患者双手在遇 <span class="blur-text">冷</span> 后<br>依次出现 <span class="blur-text">变白、变紫、发红</span> 现象，<br>提示患者 <span class="blur-text">血管舒缩</span> 功能障碍。</td>
+                            <td>27. 雷诺现象：❤<br>患者双手在遇 <span class="answer-text">冷</span> 后<br>依次出现 <span class="answer-text">变白、变紫、发红</span> 现象，<br>提示患者 <span class="answer-text">血管舒缩</span> 功能障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28. Syphilis：<br>梅毒，是由<span class="blur-text">梅毒螺旋体</span>引起，<br>主要经过<span class="blur-text">性接触</span>、<span class="blur-text">血液</span>传播和<span class="blur-text">母婴</span>传播，<br>侵犯多系统多脏器的<span class="blur-text">慢性</span>传染病。</td>
+                            <td>28. Syphilis：<br>梅毒，是由<span class="answer-text">梅毒螺旋体</span>引起，<br>主要经过<span class="answer-text">性接触</span>、<span class="answer-text">血液</span>传播和<span class="answer-text">母婴</span>传播，<br>侵犯多系统多脏器的<span class="answer-text">慢性</span>传染病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29. Syphilitic gumma：❤<br>（16 级考）<br><br><span class="blur-text">梅毒性树胶肿</span> ，又称为 <span class="blur-text">梅毒瘤</span> ，<br>是 <span class="blur-text">三</span> 期梅毒的标志，也是破坏性最强的一种皮损，<br>好发于 <span class="blur-text">小腿</span> 。<br><br>皮损初起常为单发的无痛性<span class="blur-text">皮下结节</span>，<br><br>逐渐增大和发生溃疡，形成直径<span class="blur-text"> 2–10</span> ㎝的<span class="blur-text">穿凿</span>性溃疡，<br>呈<span class="blur-text">肾/马蹄</span>形，边界清楚，边缘锐利，<br>溃疡面有 <span class="blur-text">黏稠树胶</span> 样分泌物，<br><br>愈后形成 <span class="blur-text">萎缩</span> 性瘢痕。</td>
+                            <td>29. Syphilitic gumma：❤<br>（16 级考）<br><br><span class="answer-text">梅毒性树胶肿</span> ，又称为 <span class="answer-text">梅毒瘤</span> ，<br>是 <span class="answer-text">三</span> 期梅毒的标志，也是破坏性最强的一种皮损，<br>好发于 <span class="answer-text">小腿</span> 。<br><br>皮损初起常为单发的无痛性<span class="answer-text">皮下结节</span>，<br><br>逐渐增大和发生溃疡，形成直径<span class="answer-text"> 2–10</span> ㎝的<span class="answer-text">穿凿</span>性溃疡，<br>呈<span class="answer-text">肾/马蹄</span>形，边界清楚，边缘锐利，<br>溃疡面有 <span class="answer-text">黏稠树胶</span> 样分泌物，<br><br>愈后形成 <span class="answer-text">萎缩</span> 性瘢痕。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30. 吉-海反应：<br><br><span class="blur-text">梅毒</span>患者接受高效<span class="blur-text">抗   TP</span> 药物治疗后<br>TP 被迅速杀死并释放出大量<span class="blur-text">异种蛋白</span>，<br>引起机体发生的 <span class="blur-text">急</span> 性 <span class="blur-text">变态</span> 反应，<br><br>多在用药后 <span class="blur-text">数小时</span> 发生，<br>表现为寒战、高热、头痛、呼吸加快、心动过速、全身不适及原发疾病加重，<br>严重时<span class="blur-text">心血管</span>梅毒患者可发生主动脉<span class="blur-text">破裂</span>。</td>
+                            <td>30. 吉-海反应：<br><br><span class="answer-text">梅毒</span>患者接受高效<span class="answer-text">抗   TP</span> 药物治疗后<br>TP 被迅速杀死并释放出大量<span class="answer-text">异种蛋白</span>，<br>引起机体发生的 <span class="answer-text">急</span> 性 <span class="answer-text">变态</span> 反应，<br><br>多在用药后 <span class="answer-text">数小时</span> 发生，<br>表现为寒战、高热、头痛、呼吸加快、心动过速、全身不适及原发疾病加重，<br>严重时<span class="answer-text">心血管</span>梅毒患者可发生主动脉<span class="answer-text">破裂</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.（chancre）<br> <span class="blur-text">硬下疳</span><br>（17 级考）：<br><br>由<span class="blur-text">梅毒螺旋体</span>在侵入部位引起的<span class="blur-text">无</span>痛性<span class="blur-text">炎症</span>反应，<br><br>表现为单个圆形或椭圆形无痛性<span class="blur-text">溃疡</span>，触之具有<span class="blur-text">软骨</span>样硬度，<br><br>内含大量<span class="blur-text">梅毒螺旋体</span>，传染性<span class="blur-text">极强</span>。</td>
+                            <td>31.（chancre）<br> <span class="answer-text">硬下疳</span><br>（17 级考）：<br><br>由<span class="answer-text">梅毒螺旋体</span>在侵入部位引起的<span class="answer-text">无</span>痛性<span class="answer-text">炎症</span>反应，<br><br>表现为单个圆形或椭圆形无痛性<span class="answer-text">溃疡</span>，触之具有<span class="answer-text">软骨</span>样硬度，<br><br>内含大量<span class="answer-text">梅毒螺旋体</span>，传染性<span class="answer-text">极强</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

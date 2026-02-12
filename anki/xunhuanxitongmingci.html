@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">循环系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>心力衰竭(heart failure)</strong><br>简称<span class="blur-text">心衰</span>，是指由于{{c2::心脏结构和功能异常}}，导致{{c3::心室充盈或射血能力受损}}的一组复杂临床综合征<br>临床表现：<span class="blur-text">活动耐力减退</span>和/或{{c2::体液潴留}}</td>
+                            <td>1.. <strong>心力衰竭(heart failure)</strong><br>简称<span class="answer-text">心衰</span>，是指由于{{c2::心脏结构和功能异常}}，导致{{c3::心室充盈或射血能力受损}}的一组复杂临床综合征<br>临床表现：<span class="answer-text">活动耐力减退</span>和/或{{c2::体液潴留}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. A <strong>急性心力衰竭(AHF)</strong><br>包括<span class="blur-text">新发心衰</span>及{{c2::急性失代偿性心衰}}，临床上以{{c3::急性左侧心力衰竭}}最常见<br>机制：急性发作或加重的<span class="blur-text">左心功能异常</span>所致{{c2::心肌收缩力明显降低}}、{{c3::心脏负荷加重}}</td>
+                            <td>2.. A <strong>急性心力衰竭(AHF)</strong><br>包括<span class="answer-text">新发心衰</span>及{{c2::急性失代偿性心衰}}，临床上以{{c3::急性左侧心力衰竭}}最常见<br>机制：急性发作或加重的<span class="answer-text">左心功能异常</span>所致{{c2::心肌收缩力明显降低}}、{{c3::心脏负荷加重}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2.. B <strong>急性心力衰竭(AHF)</strong><br>结果：造成<span class="blur-text">急性排血量骤降</span>、{{c2::肺循环压力突然升高}}、{{c3::周围循环阻力增加}}<br>表现：引起肺循环充血而出现<span class="blur-text">急性肺淤血</span>、{{c2::肺水肿}}以及伴{{c3::组织器官灌注不足}}的<span class="blur-text">心源性休克</span></td>
+                            <td>2.. B <strong>急性心力衰竭(AHF)</strong><br>结果：造成<span class="answer-text">急性排血量骤降</span>、{{c2::肺循环压力突然升高}}、{{c3::周围循环阻力增加}}<br>表现：引起肺循环充血而出现<span class="answer-text">急性肺淤血</span>、{{c2::肺水肿}}以及伴{{c3::组织器官灌注不足}}的<span class="answer-text">心源性休克</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3.. <strong>收缩性心力衰竭</strong><br>是指<span class="blur-text">心肌收缩力下降</span>使{{c2::心排血量}}（LVEF通常{{c3::<40%}}）不能满足机体代谢的需要<br>表现：<span class="blur-text">组织、器官血流灌注不足</span>，同时出现{{c2::肺循环}}和/或{{c3::体循环淤血}}</td>
+                            <td>3.. <strong>收缩性心力衰竭</strong><br>是指<span class="answer-text">心肌收缩力下降</span>使{{c2::心排血量}}（LVEF通常{{c3::<40%}}）不能满足机体代谢的需要<br>表现：<span class="answer-text">组织、器官血流灌注不足</span>，同时出现{{c2::肺循环}}和/或{{c3::体循环淤血}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>4.. <strong>舒张性心力衰竭</strong><br>是指<span class="blur-text">心肌收缩力尚可使心排血量维持正常</span>，但{{c2::异常增高的左心室充盈压}}使{{c3::肺静脉回流受阻}}，导致<span class="blur-text">肺循环淤血</span></td>
+                            <td>4.. <strong>舒张性心力衰竭</strong><br>是指<span class="answer-text">心肌收缩力尚可使心排血量维持正常</span>，但{{c2::异常增高的左心室充盈压}}使{{c3::肺静脉回流受阻}}，导致<span class="answer-text">肺循环淤血</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5.. <strong>心功能不全</strong><br>定义：心室腔压力高于正常（左室舒张末压><span class="blur-text">18mmHg</span>、右室舒张末压>{{c2::10mmHg}}）<br>分期：分为<span class="blur-text">无症状</span>和{{c2::有症状}}两个阶段，伴有临床症状的心功能不全称为{{c3::心力衰竭}}</td>
+                            <td>5.. <strong>心功能不全</strong><br>定义：心室腔压力高于正常（左室舒张末压><span class="answer-text">18mmHg</span>、右室舒张末压>{{c2::10mmHg}}）<br>分期：分为<span class="answer-text">无症状</span>和{{c2::有症状}}两个阶段，伴有临床症状的心功能不全称为{{c3::心力衰竭}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>6.. <strong>肝颈静脉回流征阳性</strong><br>出现时机：<span class="blur-text">轻度右心衰</span>时即可出现<br>操作：患者取{{c2::半卧位}}，按压{{c3::右上腹或肝脏}}，使回心血量增加<br>表现：在<span class="blur-text">锁骨上方</span>可见到{{c2::颈外静脉充盈}}</td>
+                            <td>6.. <strong>肝颈静脉回流征阳性</strong><br>出现时机：<span class="answer-text">轻度右心衰</span>时即可出现<br>操作：患者取{{c2::半卧位}}，按压{{c3::右上腹或肝脏}}，使回心血量增加<br>表现：在<span class="answer-text">锁骨上方</span>可见到{{c2::颈外静脉充盈}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>7.. <strong>心脏紧张源性扩张</strong><br>：指伴有心肌<span class="blur-text">收缩力增强</span>的心腔扩大。</td>
+                            <td>7.. <strong>心脏紧张源性扩张</strong><br>：指伴有心肌<span class="answer-text">收缩力增强</span>的心腔扩大。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>8.. <strong>心室重构</strong><br>是心室在<span class="blur-text">长期前负荷和后负荷增加</span>时，通过改变心室的{{c2::结构、代谢和功能}}而发生的{{c3::慢性代偿适应性反应}}</td>
+                            <td>8.. <strong>心室重构</strong><br>是心室在<span class="answer-text">长期前负荷和后负荷增加</span>时，通过改变心室的{{c2::结构、代谢和功能}}而发生的{{c3::慢性代偿适应性反应}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>9.. <strong>向心性肥厚</strong><br>原因：长期过度的<span class="blur-text">后负荷</span>增加，使{{c2::收缩期心室壁张力}}持续增加<br>机制：刺激心肌肌节呈{{c3::并联性增生}}，心肌细胞增粗<br>特征：<span class="blur-text">心室壁显著增厚</span>而{{c2::心腔容积正常甚至减小}}，常见于{{c3::高血压性心脏病}}以及<span class="blur-text">主动脉瓣狭窄</span></td>
+                            <td>9.. <strong>向心性肥厚</strong><br>原因：长期过度的<span class="answer-text">后负荷</span>增加，使{{c2::收缩期心室壁张力}}持续增加<br>机制：刺激心肌肌节呈{{c3::并联性增生}}，心肌细胞增粗<br>特征：<span class="answer-text">心室壁显著增厚</span>而{{c2::心腔容积正常甚至减小}}，常见于{{c3::高血压性心脏病}}以及<span class="answer-text">主动脉瓣狭窄</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>10.. <strong>离心性肥厚</strong><br>原因：长期过度的<span class="blur-text">前负荷</span>增加，使{{c2::舒张期心室壁张力}}持续增加<br>机制：刺激心肌肌节呈{{c3::串联性生长}}，心肌细胞增长，心腔容积增大<br>特征：<span class="blur-text">心腔容积显著增大</span>与{{c2::心室壁轻度增厚}}并存，常见于{{c3::二尖瓣或主动脉瓣关闭不全}}</td>
+                            <td>10.. <strong>离心性肥厚</strong><br>原因：长期过度的<span class="answer-text">前负荷</span>增加，使{{c2::舒张期心室壁张力}}持续增加<br>机制：刺激心肌肌节呈{{c3::串联性生长}}，心肌细胞增长，心腔容积增大<br>特征：<span class="answer-text">心腔容积显著增大</span>与{{c2::心室壁轻度增厚}}并存，常见于{{c3::二尖瓣或主动脉瓣关闭不全}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>11.. <strong>心律失常(arrhythmia)</strong><br>是指<span class="blur-text">心脏冲动的起源</span>和/或{{c2::传导异常}}而引起的{{c3::心脏节律、频率、激动顺序}}的异常</td>
+                            <td>11.. <strong>心律失常(arrhythmia)</strong><br>是指<span class="answer-text">心脏冲动的起源</span>和/或{{c2::传导异常}}而引起的{{c3::心脏节律、频率、激动顺序}}的异常</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>12.. <strong>期前收缩</strong><br>时机：在<span class="blur-text">心室肌的有效不应期后</span>、{{c2::下次窦房结兴奋到达前}}<br>定义：心室受到一次{{c3::额外刺激}}，可提前产生一次收缩</td>
+                            <td>12.. <strong>期前收缩</strong><br>时机：在<span class="answer-text">心室肌的有效不应期后</span>、{{c2::下次窦房结兴奋到达前}}<br>定义：心室受到一次{{c3::额外刺激}}，可提前产生一次收缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>13.. <strong>代偿间歇</strong><br>原因：由于<span class="blur-text">期前兴奋也有自己的有效不应期</span>，故期前兴奋后的一次窦房结兴奋传到心室时，若恰好落在{{c2::期前收缩的有效不应期内}}，将形成一次兴奋和收缩的"脱失"<br>定义：在期前收缩之后出现一段较长的{{c3::心室舒张期}}</td>
+                            <td>13.. <strong>代偿间歇</strong><br>原因：由于<span class="answer-text">期前兴奋也有自己的有效不应期</span>，故期前兴奋后的一次窦房结兴奋传到心室时，若恰好落在{{c2::期前收缩的有效不应期内}}，将形成一次兴奋和收缩的"脱失"<br>定义：在期前收缩之后出现一段较长的{{c3::心室舒张期}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>14.. <strong>病态窦房结综合征(SSS)</strong><br>病因：由<span class="blur-text">窦房结及其周围组织的器质性改变</span><br>结果：导致{{c2::起搏和/或传出功能障碍}}，引起各种{{c3::缓慢心律失常}}<br>伴随：伴有<span class="blur-text">脑、心、肾</span>等重要脏器供血不足的一组综合征</td>
+                            <td>14.. <strong>病态窦房结综合征(SSS)</strong><br>病因：由<span class="answer-text">窦房结及其周围组织的器质性改变</span><br>结果：导致{{c2::起搏和/或传出功能障碍}}，引起各种{{c3::缓慢心律失常}}<br>伴随：伴有<span class="answer-text">脑、心、肾</span>等重要脏器供血不足的一组综合征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>15.. <strong>窦性停搏</strong><br>定义：指由于<span class="blur-text">迷走神经张力增高</span>或{{c2::窦房结功能障碍}}，在一段时间内{{c3::窦房结停止发放激动}}引起的心律失常</td>
+                            <td>15.. <strong>窦性停搏</strong><br>定义：指由于<span class="answer-text">迷走神经张力增高</span>或{{c2::窦房结功能障碍}}，在一段时间内{{c3::窦房结停止发放激动}}引起的心律失常</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>16.. <strong>心房颤动</strong><br>简称<span class="blur-text">房颤</span>，是指{{c2::规则有序的心房电活动消失}}，代之以{{c3::快速无序的颤动波}}，是最严重的心房电活动紊乱</td>
+                            <td>16.. <strong>心房颤动</strong><br>简称<span class="answer-text">房颤</span>，是指{{c2::规则有序的心房电活动消失}}，代之以{{c3::快速无序的颤动波}}，是最严重的心房电活动紊乱</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>17.. <strong>预激综合征</strong><br>定义：是指<span class="blur-text">部分或全部心室</span>在正常房室传导系统顺序激动到达心室之前，经{{c2::房室旁路}}提前激动的心电图现象<br>合并：合并{{c3::AVRT}}称预激综合征</td>
+                            <td>17.. <strong>预激综合征</strong><br>定义：是指<span class="answer-text">部分或全部心室</span>在正常房室传导系统顺序激动到达心室之前，经{{c2::房室旁路}}提前激动的心电图现象<br>合并：合并{{c3::AVRT}}称预激综合征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>18.. <strong>室性心动过速</strong><br>起源：起源于<span class="blur-text">希氏束分支以下</span>的特殊传导系统或者心肌<br>定义：连续{{c2::3个或3个以上}}频率大于{{c3::100次/分}}的期前收缩组成的心律失常</td>
+                            <td>18.. <strong>室性心动过速</strong><br>起源：起源于<span class="answer-text">希氏束分支以下</span>的特殊传导系统或者心肌<br>定义：连续{{c2::3个或3个以上}}频率大于{{c3::100次/分}}的期前收缩组成的心律失常</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>19.. <strong>文氏现象</strong><br>即<span class="blur-text">二度1型房室传导阻滞</span><br>心电图表现：{{c2::PR间期进行性延长}}，直至{{c3::1个P波后脱漏1个QRS波}}，漏搏后PR间期缩短，之后又逐渐延长，如此周而复始</td>
+                            <td>19.. <strong>文氏现象</strong><br>即<span class="answer-text">二度1型房室传导阻滞</span><br>心电图表现：{{c2::PR间期进行性延长}}，直至{{c3::1个P波后脱漏1个QRS波}}，漏搏后PR间期缩短，之后又逐渐延长，如此周而复始</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>20.. <strong>高度房室传导阻滞</strong><br>定义：<span class="blur-text">二度2型房室传导阻滞</span>呈{{c2::3:1或3:1以上}}比例房室传导</td>
+                            <td>20.. <strong>高度房室传导阻滞</strong><br>定义：<span class="answer-text">二度2型房室传导阻滞</span>呈{{c2::3:1或3:1以上}}比例房室传导</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>21.. <strong>原发性颗粒性固缩肾</strong><br>见于：<span class="blur-text">原发性高血压</span>时双肾{{c2::对称性缩小}}、重量减轻，变硬<br>表面：呈{{c3::均匀细颗粒状}}，切面肾皮质变薄，肾盂周围脂肪组织填充性增生</td>
+                            <td>21.. <strong>原发性颗粒性固缩肾</strong><br>见于：<span class="answer-text">原发性高血压</span>时双肾{{c2::对称性缩小}}、重量减轻，变硬<br>表面：呈{{c3::均匀细颗粒状}}，切面肾皮质变薄，肾盂周围脂肪组织填充性增生</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>22.. <strong>高血压脑病</strong><br>机制：由于<span class="blur-text">脑血管病变及解痉</span>致血压骤升<br>表现：引起以{{c2::中枢神经功能障碍}}为主要表现的综合征</td>
+                            <td>22.. <strong>高血压脑病</strong><br>机制：由于<span class="answer-text">脑血管病变及解痉</span>致血压骤升<br>表现：引起以{{c2::中枢神经功能障碍}}为主要表现的综合征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>23.. <strong>难治性高血压</strong><br>定义：在改善生活方式的基础上，应用了合理可耐受的足量≥<span class="blur-text">3种降压药</span>（包括{{c2::利尿剂}}），治疗{{c3::1个月}}血压仍未达标<br>或：服用≥<span class="blur-text">4种降压药</span>后，血压才有效控制</td>
+                            <td>23.. <strong>难治性高血压</strong><br>定义：在改善生活方式的基础上，应用了合理可耐受的足量≥<span class="answer-text">3种降压药</span>（包括{{c2::利尿剂}}），治疗{{c3::1个月}}血压仍未达标<br>或：服用≥<span class="answer-text">4种降压药</span>后，血压才有效控制</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>24.. <strong>高血压危象</strong><br>临床表现：以血压<span class="blur-text">短时间内急剧升高</span>且同时{{c2::伴或不伴有靶器官的损伤}}<br>包括：{{c3::高血压急症}}及<span class="blur-text">高血压亚急症</span>，区别在于是否伴有{{c2::靶器官损伤}}</td>
+                            <td>24.. <strong>高血压危象</strong><br>临床表现：以血压<span class="answer-text">短时间内急剧升高</span>且同时{{c2::伴或不伴有靶器官的损伤}}<br>包括：{{c3::高血压急症}}及<span class="answer-text">高血压亚急症</span>，区别在于是否伴有{{c2::靶器官损伤}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>25.. <strong>恶性高血压</strong><br>定义：指<span class="blur-text">血压明显升高</span>，伴{{c2::血管损害}}，包括{{c3::视网膜出血、渗出}}和/或<span class="blur-text">视乳头水肿</span></td>
+                            <td>25.. <strong>恶性高血压</strong><br>定义：指<span class="answer-text">血压明显升高</span>，伴{{c2::血管损害}}，包括{{c3::视网膜出血、渗出}}和/或<span class="answer-text">视乳头水肿</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>26.. <strong>细动脉玻璃样变</strong><br>又称<span class="blur-text">细动脉硬化</span>，是指因{{c2::血浆蛋白质渗入}}和{{c3::基底膜代谢物沉积}}所致的细动脉管壁增厚、管腔狭窄、弹性减弱、脆性增加的症状</td>
+                            <td>26.. <strong>细动脉玻璃样变</strong><br>又称<span class="answer-text">细动脉硬化</span>，是指因{{c2::血浆蛋白质渗入}}和{{c3::基底膜代谢物沉积}}所致的细动脉管壁增厚、管腔狭窄、弹性减弱、脆性增加的症状</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>27.. <strong>肾血管性高血压</strong><br>机制：<span class="blur-text">肾动脉主干或大分支狭窄</span>，导致患肾{{c2::缺血缺氧}}，肾小球旁细胞分泌大量{{c3::肾素}}<br>结果：过多的血管紧张素2直接缩血管作用、刺激醛固酮分泌导致水钠潴留和兴奋交感神经，使血压升高</td>
+                            <td>27.. <strong>肾血管性高血压</strong><br>机制：<span class="answer-text">肾动脉主干或大分支狭窄</span>，导致患肾{{c2::缺血缺氧}}，肾小球旁细胞分泌大量{{c3::肾素}}<br>结果：过多的血管紧张素2直接缩血管作用、刺激醛固酮分泌导致水钠潴留和兴奋交感神经，使血压升高</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>28.. <strong>室壁瘤</strong><br>定义：是由于<span class="blur-text">梗死心肌或瘢痕组织</span>在心室内压作用下{{c2::局部向外膨隆}}而形成<br>发生时期：发生于心肌梗死的{{c3::急性期或愈合期}}<br>部位：多见于<span class="blur-text">左心室前壁近心尖处</span><br>并发症：可继发{{c2::附壁血栓}}、{{c3::乳头肌功能不全}}、心律失常、心力衰竭等</td>
+                            <td>28.. <strong>室壁瘤</strong><br>定义：是由于<span class="answer-text">梗死心肌或瘢痕组织</span>在心室内压作用下{{c2::局部向外膨隆}}而形成<br>发生时期：发生于心肌梗死的{{c3::急性期或愈合期}}<br>部位：多见于<span class="answer-text">左心室前壁近心尖处</span><br>并发症：可继发{{c2::附壁血栓}}、{{c3::乳头肌功能不全}}、心律失常、心力衰竭等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>29.. <strong>原发性高血压</strong><br>定义：是一种<span class="blur-text">原因未明的</span>、以{{c2::体循环动脉血压升高}}为主要表现的{{c3::独立性、全身性疾病}}<br>基本病变：<span class="blur-text">全身细动脉硬化</span>引起心、脑、肾和眼底病变及相应的临床表现</td>
+                            <td>29.. <strong>原发性高血压</strong><br>定义：是一种<span class="answer-text">原因未明的</span>、以{{c2::体循环动脉血压升高}}为主要表现的{{c3::独立性、全身性疾病}}<br>基本病变：<span class="answer-text">全身细动脉硬化</span>引起心、脑、肾和眼底病变及相应的临床表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>30.. <strong>阿少夫小体(Aschoff body)</strong><br>又称<span class="blur-text">风湿小体</span>，一种{{c2::肉芽肿性病变}}<br>镜下：为{{c3::球形、椭圆形或梭形结节}}，中心可见<span class="blur-text">纤维蛋白样坏死</span>，周围有较多{{c2::阿少夫细胞}}，外周有{{c3::淋巴细胞、浆细胞}}浸润</td>
+                            <td>30.. <strong>阿少夫小体(Aschoff body)</strong><br>又称<span class="answer-text">风湿小体</span>，一种{{c2::肉芽肿性病变}}<br>镜下：为{{c3::球形、椭圆形或梭形结节}}，中心可见<span class="answer-text">纤维蛋白样坏死</span>，周围有较多{{c2::阿少夫细胞}}，外周有{{c3::淋巴细胞、浆细胞}}浸润</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>31.. <strong>动脉粥样硬化(atherosclerosis)</strong><br>相关因素：与<span class="blur-text">血脂异常</span>及{{c2::血管壁成分改变}}有关的动脉疾病<br>累及：主要累及{{c3::弹力型动脉}}和<span class="blur-text">弹力肌型动脉</span><br>病变：动脉内膜脂质沉积以及灶性纤维性增厚、深部成分坏死、崩解，形成{{c2::粥样物}}，动脉壁变硬</td>
+                            <td>31.. <strong>动脉粥样硬化(atherosclerosis)</strong><br>相关因素：与<span class="answer-text">血脂异常</span>及{{c2::血管壁成分改变}}有关的动脉疾病<br>累及：主要累及{{c3::弹力型动脉}}和<span class="answer-text">弹力肌型动脉</span><br>病变：动脉内膜脂质沉积以及灶性纤维性增厚、深部成分坏死、崩解，形成{{c2::粥样物}}，动脉壁变硬</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>32.. <strong>冠状动脉性心脏病(coronary heart disease)</strong><br>简称<span class="blur-text">冠心病</span>，{{c2::冠状动脉缺血}}所引起，又称{{c3::缺血性心脏病}}<br>说明：是所有冠状动脉病的结果，但因<span class="blur-text">冠状动脉粥样硬化</span>占冠状动脉病的绝大多数，因此习惯上将冠心病视为{{c2::冠状动脉粥样硬化性心脏病}}的同义词</td>
+                            <td>32.. <strong>冠状动脉性心脏病(coronary heart disease)</strong><br>简称<span class="answer-text">冠心病</span>，{{c2::冠状动脉缺血}}所引起，又称{{c3::缺血性心脏病}}<br>说明：是所有冠状动脉病的结果，但因<span class="answer-text">冠状动脉粥样硬化</span>占冠状动脉病的绝大多数，因此习惯上将冠心病视为{{c2::冠状动脉粥样硬化性心脏病}}的同义词</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>33.. <strong>心绞痛(angina pectoris)</strong><br>机制：<span class="blur-text">冠状动脉供血不足</span>和/或{{c2::心肌耗氧量骤增}}，心肌发生急剧的、暂时性{{c3::缺血、缺氧}}<br>表现：引起的<span class="blur-text">阵发性胸骨后压榨性或紧缩性疼痛感</span>，放射至{{c2::心前区或左上肢}}，持续{{c3::数分钟}}，休息或用硝酸酯剂可缓解</td>
+                            <td>33.. <strong>心绞痛(angina pectoris)</strong><br>机制：<span class="answer-text">冠状动脉供血不足</span>和/或{{c2::心肌耗氧量骤增}}，心肌发生急剧的、暂时性{{c3::缺血、缺氧}}<br>表现：引起的<span class="answer-text">阵发性胸骨后压榨性或紧缩性疼痛感</span>，放射至{{c2::心前区或左上肢}}，持续{{c3::数分钟}}，休息或用硝酸酯剂可缓解</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>34.. <strong>稳定型心绞痛</strong><br>病因：因<span class="blur-text">冠状动脉发生动脉粥样硬化</span>而致血管腔明显狭窄<br>特点：虽然局部病变稳定，但在各种原因使{{c2::心脏负荷增加}}时，出现明显的{{c3::心肌缺血}}<br>结果：导致心肌急剧的、暂时的缺血缺氧的临床综合征，刺激心脏自主神经产生短时间疼痛或不适感</td>
+                            <td>34.. <strong>稳定型心绞痛</strong><br>病因：因<span class="answer-text">冠状动脉发生动脉粥样硬化</span>而致血管腔明显狭窄<br>特点：虽然局部病变稳定，但在各种原因使{{c2::心脏负荷增加}}时，出现明显的{{c3::心肌缺血}}<br>结果：导致心肌急剧的、暂时的缺血缺氧的临床综合征，刺激心脏自主神经产生短时间疼痛或不适感</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>35.. A <strong>不稳定型心绞痛</strong><br>定义：<span class="blur-text">劳力性心绞痛以外的缺血性胸痛</span>称为不稳定性心绞痛(UA)<br>包括：①{{c2::静息型心绞痛}}：休息或轻微活动诱发，大于{{c3::20分钟}}；②<span class="blur-text">初发型心绞痛</span>：{{c2::1~2月}}新发</td>
+                            <td>35.. A <strong>不稳定型心绞痛</strong><br>定义：<span class="answer-text">劳力性心绞痛以外的缺血性胸痛</span>称为不稳定性心绞痛(UA)<br>包括：①{{c2::静息型心绞痛}}：休息或轻微活动诱发，大于{{c3::20分钟}}；②<span class="answer-text">初发型心绞痛</span>：{{c2::1~2月}}新发</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>35.. B <strong>不稳定型心绞痛</strong><br>③<span class="blur-text">恶化性心绞痛</span>：原为稳定型，近{{c2::1个月内}}频率增加、程度加重、时间延长、诱因变化、缓解困难</td>
+                            <td>35.. B <strong>不稳定型心绞痛</strong><br>③<span class="answer-text">恶化性心绞痛</span>：原为稳定型，近{{c2::1个月内}}频率增加、程度加重、时间延长、诱因变化、缓解困难</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>36.. <strong>心肌梗死</strong><br>病因：<span class="blur-text">冠状动脉供血中断</span>引起的心肌坏死<br>临床表现：{{c2::剧烈而持久的胸骨后疼痛}}，{{c3::血清部分酶活性增高}}和进行性心电图改变</td>
+                            <td>36.. <strong>心肌梗死</strong><br>病因：<span class="answer-text">冠状动脉供血中断</span>引起的心肌坏死<br>临床表现：{{c2::剧烈而持久的胸骨后疼痛}}，{{c3::血清部分酶活性增高}}和进行性心电图改变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>37.. <strong>急性冠脉综合征(ACS)</strong><br>病理基础：在<span class="blur-text">冠状动脉粥样硬化的基础</span>上产生{{c2::斑块糜烂或破裂}}<br>机制：使冠脉内{{c3::血小板激活、血栓形成}}和血管痉挛，导致冠脉内血流显著减少或完全中断<br>表现：引起的一组以<span class="blur-text">心肌不稳定缺血</span>为主要特点的临床综合征<br>包括：{{c2::不稳定型心绞痛}}、{{c3::非ST段抬高型心肌梗死}}和ST抬高型心肌梗死</td>
+                            <td>37.. <strong>急性冠脉综合征(ACS)</strong><br>病理基础：在<span class="answer-text">冠状动脉粥样硬化的基础</span>上产生{{c2::斑块糜烂或破裂}}<br>机制：使冠脉内{{c3::血小板激活、血栓形成}}和血管痉挛，导致冠脉内血流显著减少或完全中断<br>表现：引起的一组以<span class="answer-text">心肌不稳定缺血</span>为主要特点的临床综合征<br>包括：{{c2::不稳定型心绞痛}}、{{c3::非ST段抬高型心肌梗死}}和ST抬高型心肌梗死</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>38.. <strong>STEMI</strong><br>全称：<span class="blur-text">急性ST段抬高型心肌梗死</span><br>病理：在冠状动脉粥样硬化基础上，继发{{c2::斑块糜烂、破裂}}使血栓形成阻塞冠状动脉，导致{{c3::较大面积心肌严重缺血}}，并迅速坏死<br>病理特点：往往有<span class="blur-text">透壁的心室肌坏死</span><br>心电图：以梗死相关导联出现{{c2::ST段抬高}}和{{c3::病理性Q波}}为特征</td>
+                            <td>38.. <strong>STEMI</strong><br>全称：<span class="answer-text">急性ST段抬高型心肌梗死</span><br>病理：在冠状动脉粥样硬化基础上，继发{{c2::斑块糜烂、破裂}}使血栓形成阻塞冠状动脉，导致{{c3::较大面积心肌严重缺血}}，并迅速坏死<br>病理特点：往往有<span class="answer-text">透壁的心室肌坏死</span><br>心电图：以梗死相关导联出现{{c2::ST段抬高}}和{{c3::病理性Q波}}为特征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>39.. <strong>风湿病</strong><br>相关：与<span class="blur-text">A组乙型溶血性链球菌感染</span>有关的{{c2::变态反应性疾病}}<br>侵犯：主要侵犯{{c3::结缔组织}}，以形成<span class="blur-text">Aschoff小体</span>为病变特征</td>
+                            <td>39.. <strong>风湿病</strong><br>相关：与<span class="answer-text">A组乙型溶血性链球菌感染</span>有关的{{c2::变态反应性疾病}}<br>侵犯：主要侵犯{{c3::结缔组织}}，以形成<span class="answer-text">Aschoff小体</span>为病变特征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>40.. <strong>阿少夫细胞</strong><br>形成：病灶部位的心脏组织细胞吞噬<span class="blur-text">纤维素样坏死物</span>后转变为{{c2::风湿细胞}}或阿少夫细胞<br>形态：风湿细胞{{c3::体积大}}，圆形、多边形，边界清楚而不规则，胞浆丰富均质而微嗜双色<br>核：核大，圆形或卵圆形，核膜清晰，染色质集中于中央，横切面呈<span class="blur-text">枭眼状</span>，纵切面呈{{c2::毛虫状}}</td>
+                            <td>40.. <strong>阿少夫细胞</strong><br>形成：病灶部位的心脏组织细胞吞噬<span class="answer-text">纤维素样坏死物</span>后转变为{{c2::风湿细胞}}或阿少夫细胞<br>形态：风湿细胞{{c3::体积大}}，圆形、多边形，边界清楚而不规则，胞浆丰富均质而微嗜双色<br>核：核大，圆形或卵圆形，核膜清晰，染色质集中于中央，横切面呈<span class="answer-text">枭眼状</span>，纵切面呈{{c2::毛虫状}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>41.. <strong>Austin-Flint杂音</strong><br>出现时机：<span class="blur-text">主动脉关闭不全</span>时<br>机制：舒张早期主动脉瓣大量血液反流并冲击{{c2::二尖瓣前叶}}，致二尖瓣瓣口{{c3::相对狭窄}}，左心房血流快速流经二尖瓣口时产生杂音</td>
+                            <td>41.. <strong>Austin-Flint杂音</strong><br>出现时机：<span class="answer-text">主动脉关闭不全</span>时<br>机制：舒张早期主动脉瓣大量血液反流并冲击{{c2::二尖瓣前叶}}，致二尖瓣瓣口{{c3::相对狭窄}}，左心房血流快速流经二尖瓣口时产生杂音</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>42.. <strong>Grahm Steel杂音</strong><br>原因：多由<span class="blur-text">相对性肺动脉瓣关闭不全</span>所引起<br>常见于：{{c2::二尖瓣狭窄}}、{{c3::肺心病}}等，伴有明显<span class="blur-text">肺动脉高压</span><br>听诊：在胸骨左缘第{{c2::2~4肋间}}第二心音后即开始出现的{{c3::舒张早期叹气样高调递减型杂音}}，吸气时增强</td>
+                            <td>42.. <strong>Grahm Steel杂音</strong><br>原因：多由<span class="answer-text">相对性肺动脉瓣关闭不全</span>所引起<br>常见于：{{c2::二尖瓣狭窄}}、{{c3::肺心病}}等，伴有明显<span class="answer-text">肺动脉高压</span><br>听诊：在胸骨左缘第{{c2::2~4肋间}}第二心音后即开始出现的{{c3::舒张早期叹气样高调递减型杂音}}，吸气时增强</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>43.. <strong>一天瓣虚</strong><br><span class="blur-text">二尖瓣面容</span>（原文为"一天瓣虚"，疑为OCR错误）</td>
+                            <td>43.. <strong>一天瓣虚</strong><br><span class="answer-text">二尖瓣面容</span>（原文为"一天瓣虚"，疑为OCR错误）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>44.. <strong>二尖瓣前叶"城墙样"改变</strong><br>见于：<span class="blur-text">二尖瓣狭窄</span>的病人<br>检查：在{{c2::M型超声心动图}}上，二尖瓣前叶活动曲线{{c3::EF斜率降低}}，双峰曲线消失，转变为"城墙样"曲线</td>
+                            <td>44.. <strong>二尖瓣前叶"城墙样"改变</strong><br>见于：<span class="answer-text">二尖瓣狭窄</span>的病人<br>检查：在{{c2::M型超声心动图}}上，二尖瓣前叶活动曲线{{c3::EF斜率降低}}，双峰曲线消失，转变为"城墙样"曲线</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>45.. <strong>梨形心</strong><br>又称<span class="blur-text">二尖瓣型心</span>，是二尖瓣狭窄病人的{{c2::肺动脉总干、左心耳和右心室}}扩张<br>X线：使心影在X线正位片上呈现{{c3::梨形}}</td>
+                            <td>45.. <strong>梨形心</strong><br>又称<span class="answer-text">二尖瓣型心</span>，是二尖瓣狭窄病人的{{c2::肺动脉总干、左心耳和右心室}}扩张<br>X线：使心影在X线正位片上呈现{{c3::梨形}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>46.. <strong>靴型心</strong><br>X线表现：在X线正位片上，<span class="blur-text">左心室扩大</span>使心脏左侧浊音界向{{c2::左、向下}}扩大，心腰部由正常的钝角变为近似直角，使心脏近似{{c3::靴型}}<br>见于：<span class="blur-text">主动脉瓣狭窄</span>、{{c2::主动脉瓣关闭不全}}、{{c3::高血压}}、法洛四联症</td>
+                            <td>46.. <strong>靴型心</strong><br>X线表现：在X线正位片上，<span class="answer-text">左心室扩大</span>使心脏左侧浊音界向{{c2::左、向下}}扩大，心腰部由正常的钝角变为近似直角，使心脏近似{{c3::靴型}}<br>见于：<span class="answer-text">主动脉瓣狭窄</span>、{{c2::主动脉瓣关闭不全}}、{{c3::高血压}}、法洛四联症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>47.. <strong>水冲脉</strong><br>机制：是由于<span class="blur-text">收缩压增高</span>或{{c2::舒张压降低}}使{{c3::脉压差增大}}所致<br>特点：脉搏骤起骤降，急促而有力<br>见于：<span class="blur-text">主动脉瓣关闭不全</span>、{{c2::甲亢}}、{{c3::严重贫血}}等</td>
+                            <td>47.. <strong>水冲脉</strong><br>机制：是由于<span class="answer-text">收缩压增高</span>或{{c2::舒张压降低}}使{{c3::脉压差增大}}所致<br>特点：脉搏骤起骤降，急促而有力<br>见于：<span class="answer-text">主动脉瓣关闭不全</span>、{{c2::甲亢}}、{{c3::严重贫血}}等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>48.. <strong>枪击音</strong><br>检查：<span class="blur-text">主动脉瓣关闭不全</span>时，将听诊器胸件放于{{c2::股动脉}}处<br>听诊：听到的"嗒、嗒"音即为枪击音，是由于{{c3::脉压增大}}使脉波冲击股动脉壁所致</td>
+                            <td>48.. <strong>枪击音</strong><br>检查：<span class="answer-text">主动脉瓣关闭不全</span>时，将听诊器胸件放于{{c2::股动脉}}处<br>听诊：听到的"嗒、嗒"音即为枪击音，是由于{{c3::脉压增大}}使脉波冲击股动脉壁所致</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>49.. <strong>Duroziez征(杜氏双重杂音)</strong><br>出现：<span class="blur-text">主动脉瓣关闭不全</span>时，{{c2::脉压增大}}，血流往返于听诊器胸件下所造成的人工动脉狭窄所引起</td>
+                            <td>49.. <strong>Duroziez征(杜氏双重杂音)</strong><br>出现：<span class="answer-text">主动脉瓣关闭不全</span>时，{{c2::脉压增大}}，血流往返于听诊器胸件下所造成的人工动脉狭窄所引起</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>50.. <strong>毛细血管搏动征</strong><br>出现：<span class="blur-text">主动脉瓣关闭不全</span>时，由于{{c2::脉压增大}}<br>检查：用手指按压病人指甲甲床末端，可见到{{c3::红、白交替}}的节律性血管搏动现象</td>
+                            <td>50.. <strong>毛细血管搏动征</strong><br>出现：<span class="answer-text">主动脉瓣关闭不全</span>时，由于{{c2::脉压增大}}<br>检查：用手指按压病人指甲甲床末端，可见到{{c3::红、白交替}}的节律性血管搏动现象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>51.. <strong>心脏瓣膜病</strong><br>病因：由于<span class="blur-text">炎症、黏液样变性、退行性变、先天性畸形、缺血性坏死、创伤</span>等原因引起的{{c2::瓣膜结构异常}}<br>结果：导致{{c3::瓣口狭窄}}和/或<span class="blur-text">关闭不全</span>所致的心脏疾病</td>
+                            <td>51.. <strong>心脏瓣膜病</strong><br>病因：由于<span class="answer-text">炎症、黏液样变性、退行性变、先天性畸形、缺血性坏死、创伤</span>等原因引起的{{c2::瓣膜结构异常}}<br>结果：导致{{c3::瓣口狭窄}}和/或<span class="answer-text">关闭不全</span>所致的心脏疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>52.. <strong>开瓣音</strong><br>出现：<span class="blur-text">二尖瓣狭窄</span>时，由于心室舒张早期血流自左心房快速流入左心室，{{c2::弹性尚好的二尖瓣}}迅速开放又迅速关闭而产生振动所致<br>听诊：是在{{c3::第二心音后}}出现的一个音调高而清脆的附加音</td>
+                            <td>52.. <strong>开瓣音</strong><br>出现：<span class="answer-text">二尖瓣狭窄</span>时，由于心室舒张早期血流自左心房快速流入左心室，{{c2::弹性尚好的二尖瓣}}迅速开放又迅速关闭而产生振动所致<br>听诊：是在{{c3::第二心音后}}出现的一个音调高而清脆的附加音</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>53.. <strong>感染性心内膜炎(IE)</strong><br>定义：是指由<span class="blur-text">病原微生物直接感染</span>心内膜、{{c2::心瓣膜}}或{{c3::邻近大动脉内膜}}而引起的感染性炎症</td>
+                            <td>53.. <strong>感染性心内膜炎(IE)</strong><br>定义：是指由<span class="answer-text">病原微生物直接感染</span>心内膜、{{c2::心瓣膜}}或{{c3::邻近大动脉内膜}}而引起的感染性炎症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>54.. <strong>心肌炎</strong><br>定义：是心肌<span class="blur-text">局灶性或者弥漫性</span>炎症疾病<br>病因：常见的感染性因素是{{c2::病毒感染}}，以{{c3::柯萨奇B病毒}}最常见</td>
+                            <td>54.. <strong>心肌炎</strong><br>定义：是心肌<span class="answer-text">局灶性或者弥漫性</span>炎症疾病<br>病因：常见的感染性因素是{{c2::病毒感染}}，以{{c3::柯萨奇B病毒}}最常见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>55.. <strong>扩张型心肌病(DCM)</strong><br>病因：一类既有<span class="blur-text">遗传</span>又有{{c2::非遗传}}原因造成的复合型心肌病<br>特征：以{{c3::左室、右室或双侧心室腔扩大}}伴<span class="blur-text">收缩功能障碍</span>为特征<br>后果：可导致左室收缩功能降低、进行性心力衰竭、室性和室上性心律失常、传导系统异常、血栓栓塞和猝死，是继{{c2::冠心病}}和{{c3::高血压性心脏病}}之后导致心力衰竭的最常见的病因</td>
+                            <td>55.. <strong>扩张型心肌病(DCM)</strong><br>病因：一类既有<span class="answer-text">遗传</span>又有{{c2::非遗传}}原因造成的复合型心肌病<br>特征：以{{c3::左室、右室或双侧心室腔扩大}}伴<span class="answer-text">收缩功能障碍</span>为特征<br>后果：可导致左室收缩功能降低、进行性心力衰竭、室性和室上性心律失常、传导系统异常、血栓栓塞和猝死，是继{{c2::冠心病}}和{{c3::高血压性心脏病}}之后导致心力衰竭的最常见的病因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>56.. A <strong>肥厚性心肌病(HCM)</strong><br>特征：是以<span class="blur-text">左心室和/或右心室肥厚</span>（常为{{c2::非对称性肥厚}}并累及{{c3::室间隔}}）、<span class="blur-text">心室腔变小</span>为特征<br>基本病变：以{{c2::左心室血液充盈受阻}}和{{c3::舒张期顺应性下降}}为基本病变</td>
+                            <td>56.. A <strong>肥厚性心肌病(HCM)</strong><br>特征：是以<span class="answer-text">左心室和/或右心室肥厚</span>（常为{{c2::非对称性肥厚}}并累及{{c3::室间隔}}）、<span class="answer-text">心室腔变小</span>为特征<br>基本病变：以{{c2::左心室血液充盈受阻}}和{{c3::舒张期顺应性下降}}为基本病变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>56.. B <strong>肥厚性心肌病(HCM)</strong><br>排除：需除外其他心脏或系统性疾病如<span class="blur-text">高血压</span>等疾病所致心脏肥厚和{{c2::运动员心脏肥厚}}<br>分类：分为{{c3::梗阻性肥厚型心脏病}}、隐匿梗阻性肥厚型心脏病和非梗阻性肥厚型心脏病三类</td>
+                            <td>56.. B <strong>肥厚性心肌病(HCM)</strong><br>排除：需除外其他心脏或系统性疾病如<span class="answer-text">高血压</span>等疾病所致心脏肥厚和{{c2::运动员心脏肥厚}}<br>分类：分为{{c3::梗阻性肥厚型心脏病}}、隐匿梗阻性肥厚型心脏病和非梗阻性肥厚型心脏病三类</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>57.. <strong>SAM征</strong><br>全称：<span class="blur-text">收缩期二尖瓣前向运动</span><br>原因：由于{{c2::肥厚梗阻型心肌病}}时，{{c3::左室流出道狭窄}}，收缩期左室流出道内血流速度异常增高所致<br>意义：是判断肥厚型心肌病有无左室流出道梗阻的重要征象</td>
+                            <td>57.. <strong>SAM征</strong><br>全称：<span class="answer-text">收缩期二尖瓣前向运动</span><br>原因：由于{{c2::肥厚梗阻型心肌病}}时，{{c3::左室流出道狭窄}}，收缩期左室流出道内血流速度异常增高所致<br>意义：是判断肥厚型心肌病有无左室流出道梗阻的重要征象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>58.. <strong>Ewart征</strong><br>出现：<span class="blur-text">大量心包积液</span>时，可在{{c2::左肩胛骨下}}出现叩浊音，听诊闻及{{c3::支气管呼吸音}}，是因为肺组织受压所致</td>
+                            <td>58.. <strong>Ewart征</strong><br>出现：<span class="answer-text">大量心包积液</span>时，可在{{c2::左肩胛骨下}}出现叩浊音，听诊闻及{{c3::支气管呼吸音}}，是因为肺组织受压所致</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>59.. <strong>缩窄性心包炎</strong><br>定义：由于<span class="blur-text">心包慢性炎症</span>导致心包{{c2::增厚、粘连}}甚至{{c3::钙化}}，使心脏舒张收缩受限，心功能减退而引起一系列循环障碍的表现</td>
+                            <td>59.. <strong>缩窄性心包炎</strong><br>定义：由于<span class="answer-text">心包慢性炎症</span>导致心包{{c2::增厚、粘连}}甚至{{c3::钙化}}，使心脏舒张收缩受限，心功能减退而引起一系列循环障碍的表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>60.. <strong>Kussmaul征</strong><br>主要见于：<span class="blur-text">心包缩窄炎</span><br>机制：由于吸气时{{c2::周围静脉回流增多}}而已缩窄的心包使心室失去适应性扩张的能力，致使吸气时{{c3::颈静脉更明显扩张}}</td>
+                            <td>60.. <strong>Kussmaul征</strong><br>主要见于：<span class="answer-text">心包缩窄炎</span><br>机制：由于吸气时{{c2::周围静脉回流增多}}而已缩窄的心包使心室失去适应性扩张的能力，致使吸气时{{c3::颈静脉更明显扩张}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>61.. <strong>心包叩击音</strong><br>主要见于：<span class="blur-text">缩窄性心包炎</span><br>机制：因{{c2::舒张期血流突然涌入舒张受限的心室}}引起心室壁振动产生的额外心音<br>听诊：位于{{c3::胸骨左缘第3~4肋间}}，发生在<span class="blur-text">第二心音后</span>，呈{{c2::拍击样}}</td>
+                            <td>61.. <strong>心包叩击音</strong><br>主要见于：<span class="answer-text">缩窄性心包炎</span><br>机制：因{{c2::舒张期血流突然涌入舒张受限的心室}}引起心室壁振动产生的额外心音<br>听诊：位于{{c3::胸骨左缘第3~4肋间}}，发生在<span class="answer-text">第二心音后</span>，呈{{c2::拍击样}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>62.. <strong>心脏压塞/心包填塞</strong><br>定义：当<span class="blur-text">心包腔内液体增长速度过快</span>或{{c2::积液量达到一定程度}}时，压迫心脏而限制{{c3::心室舒张及血液充盈}}<br>后果：可造成<span class="blur-text">心脏输出量</span>和{{c2::回心血量}}明显下降而产生临床症状</td>
+                            <td>62.. <strong>心脏压塞/心包填塞</strong><br>定义：当<span class="answer-text">心包腔内液体增长速度过快</span>或{{c2::积液量达到一定程度}}时，压迫心脏而限制{{c3::心室舒张及血液充盈}}<br>后果：可造成<span class="answer-text">心脏输出量</span>和{{c2::回心血量}}明显下降而产生临床症状</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>63.. <strong>腹主动脉瘤(AAA)</strong><br>定义：腹主动脉呈<span class="blur-text">局限性或弥漫性扩张、膨出</span>，通常直径增大{{c2::50%}}以上<br>临床：临床腹主动脉瘤多位于{{c3::肾动脉水平以下}}，又称为<span class="blur-text">肾下腹主动脉瘤</span></td>
+                            <td>63.. <strong>腹主动脉瘤(AAA)</strong><br>定义：腹主动脉呈<span class="answer-text">局限性或弥漫性扩张、膨出</span>，通常直径增大{{c2::50%}}以上<br>临床：临床腹主动脉瘤多位于{{c3::肾动脉水平以下}}，又称为<span class="answer-text">肾下腹主动脉瘤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>64.. A <strong>股白肿/股青肿</strong><br>股白肿：全下肢深静脉血栓形成后，患肢<span class="blur-text">明显肿胀、疼痛</span>，{{c2::股三角区、腘窝、小腿肌肉}}都可有压痛伴体温升高和脉率增快<br>股青肿：如病情继续进展，出现{{c3::剧痛}}，肢体极度肿胀，对下肢动脉造成压迫，以及动脉痉挛，导致<span class="blur-text">下肢动脉血供障碍</span>，出现{{c2::足背动脉和胫后动脉搏动消失}}</td>
+                            <td>64.. A <strong>股白肿/股青肿</strong><br>股白肿：全下肢深静脉血栓形成后，患肢<span class="answer-text">明显肿胀、疼痛</span>，{{c2::股三角区、腘窝、小腿肌肉}}都可有压痛伴体温升高和脉率增快<br>股青肿：如病情继续进展，出现{{c3::剧痛}}，肢体极度肿胀，对下肢动脉造成压迫，以及动脉痉挛，导致<span class="answer-text">下肢动脉血供障碍</span>，出现{{c2::足背动脉和胫后动脉搏动消失}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>64.. B <strong>股白肿/股青肿</strong><br>表现：小腿和足背出现<span class="blur-text">水泡或血泡</span>，皮肤温度明显降低，呈{{c2::青紫色}}，如不及时处理，可发生{{c3::静脉性坏疽}}<br>全身反应：患者全身反应性强烈，伴<span class="blur-text">高热</span>、{{c2::神志淡漠}}，有时有{{c3::休克表现}}</td>
+                            <td>64.. B <strong>股白肿/股青肿</strong><br>表现：小腿和足背出现<span class="answer-text">水泡或血泡</span>，皮肤温度明显降低，呈{{c2::青紫色}}，如不及时处理，可发生{{c3::静脉性坏疽}}<br>全身反应：患者全身反应性强烈，伴<span class="answer-text">高热</span>、{{c2::神志淡漠}}，有时有{{c3::休克表现}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>65.. <strong>间歇性跛行</strong><br>定义：机体因运动而诱发局部<span class="blur-text">疼痛、麻木、无力</span>，迫于跛行，机体停止运动后症状缓解；重复运动及休息，症状可重复出现<br>机制：这种因运动及休息反复出现的跛行<br>见于：{{c2::周围动脉狭窄性病变}}</td>
+                            <td>65.. <strong>间歇性跛行</strong><br>定义：机体因运动而诱发局部<span class="answer-text">疼痛、麻木、无力</span>，迫于跛行，机体停止运动后症状缓解；重复运动及休息，症状可重复出现<br>机制：这种因运动及休息反复出现的跛行<br>见于：{{c2::周围动脉狭窄性病变}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>66.. <strong>深静脉血栓形成</strong><br>定义：是血液在<span class="blur-text">深静脉内不正常凝结</span>引起的病症<br>好发：多发于{{c2::下肢}}<br>并发症：血栓脱落可引起{{c3::肺栓塞}}</td>
+                            <td>66.. <strong>深静脉血栓形成</strong><br>定义：是血液在<span class="answer-text">深静脉内不正常凝结</span>引起的病症<br>好发：多发于{{c2::下肢}}<br>并发症：血栓脱落可引起{{c3::肺栓塞}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>67.. <strong>主动脉夹层</strong><br>又称<span class="blur-text">主动脉夹层动脉瘤</span>，是指{{c2::主动脉内膜撕裂}}后，腔内的血液通过内膜破口进入{{c3::动脉壁中层}}形成夹层血肿，并沿血管长轴方向扩展，形成<span class="blur-text">动脉真、假腔</span>病理改变的严重主动脉疾病</td>
+                            <td>67.. <strong>主动脉夹层</strong><br>又称<span class="answer-text">主动脉夹层动脉瘤</span>，是指{{c2::主动脉内膜撕裂}}后，腔内的血液通过内膜破口进入{{c3::动脉壁中层}}形成夹层血肿，并沿血管长轴方向扩展，形成<span class="answer-text">动脉真、假腔</span>病理改变的严重主动脉疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>68.. <strong>猝死</strong><br>定义：是指<span class="blur-text">表面健康的个体</span>，在{{c2::急性症状发作后的极短时间内}}，发生{{c3::非创伤性、不可预测的突发死亡}}<br>时间：如果发病到死亡有记录和见证，时间定义为<span class="blur-text">1小时内</span>；如果发病到死亡没有记录和见证，时间可推移至{{c2::24小时}}</td>
+                            <td>68.. <strong>猝死</strong><br>定义：是指<span class="answer-text">表面健康的个体</span>，在{{c2::急性症状发作后的极短时间内}}，发生{{c3::非创伤性、不可预测的突发死亡}}<br>时间：如果发病到死亡有记录和见证，时间定义为<span class="answer-text">1小时内</span>；如果发病到死亡没有记录和见证，时间可推移至{{c2::24小时}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>69.. A <strong>心脏性猝死(SCD)</strong><br>定义：是指因<span class="blur-text">心脏问题</span>发生的猝死，包括以下几方面的情况：<br>①本身存在明确的{{c2::先天性或获得性的可致死性的心脏疾患}}<br>②不论有无基础心脏疾病，尸检证实{{c3::心脏或大血管异常}}是致死的主要原因</td>
+                            <td>69.. A <strong>心脏性猝死(SCD)</strong><br>定义：是指因<span class="answer-text">心脏问题</span>发生的猝死，包括以下几方面的情况：<br>①本身存在明确的{{c2::先天性或获得性的可致死性的心脏疾患}}<br>②不论有无基础心脏疾病，尸检证实{{c3::心脏或大血管异常}}是致死的主要原因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>69.. B <strong>心脏性猝死(SCD)</strong><br>③尸检已排除心脏外的其他可能致死因素，可考虑<span class="blur-text">致死性心律失常</span>导致的猝死</td>
+                            <td>69.. B <strong>心脏性猝死(SCD)</strong><br>③尸检已排除心脏外的其他可能致死因素，可考虑<span class="answer-text">致死性心律失常</span>导致的猝死</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>70.. <strong>心脏骤停(SCA)</strong><br>定义：是指各种原因导致突发<span class="blur-text">心脏泵血功能停止</span>和{{c2::循环衰竭}}，造成{{c3::全身血液的循环中断}}、呼吸停止和意识丧失</td>
+                            <td>70.. <strong>心脏骤停(SCA)</strong><br>定义：是指各种原因导致突发<span class="answer-text">心脏泵血功能停止</span>和{{c2::循环衰竭}}，造成{{c3::全身血液的循环中断}}、呼吸停止和意识丧失</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>71.. <strong>植入式心脏复律除颤器(ICD)</strong><br>定义：是一种埋藏在患者<span class="blur-text">胸部皮下</span>，能够自动识别{{c2::室速、室颤}}等恶性心律失常，并自发{{c3::快速起搏超速抑制}}或同步电复律及除颤治疗</td>
+                            <td>71.. <strong>植入式心脏复律除颤器(ICD)</strong><br>定义：是一种埋藏在患者<span class="answer-text">胸部皮下</span>，能够自动识别{{c2::室速、室颤}}等恶性心律失常，并自发{{c3::快速起搏超速抑制}}或同步电复律及除颤治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>72.. <strong>休克</strong><br>定义：是指<span class="blur-text">有效循环血量锐减</span>，导致{{c2::组织灌注不足}}，引起{{c3::细胞代谢紊乱}}和器官功能障碍的全身性病理生理改变过程<br>表现：临床上表现为一组序贯发生的急性重症综合征</td>
+                            <td>72.. <strong>休克</strong><br>定义：是指<span class="answer-text">有效循环血量锐减</span>，导致{{c2::组织灌注不足}}，引起{{c3::细胞代谢紊乱}}和器官功能障碍的全身性病理生理改变过程<br>表现：临床上表现为一组序贯发生的急性重症综合征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>73.. <strong>无复流现象</strong><br>原因：由于微血管中<span class="blur-text">白细胞黏附和嵌塞</span>、{{c2::毛细血管内皮细胞肿胀}}、{{c3::血小板聚集}}、微血栓阻塞等因素，造成毛细血管管腔严重阻塞<br>结果：即使在输血补液治疗后，毛细血管仍无血流重新灌流的现象</td>
+                            <td>73.. <strong>无复流现象</strong><br>原因：由于微血管中<span class="answer-text">白细胞黏附和嵌塞</span>、{{c2::毛细血管内皮细胞肿胀}}、{{c3::血小板聚集}}、微血栓阻塞等因素，造成毛细血管管腔严重阻塞<br>结果：即使在输血补液治疗后，毛细血管仍无血流重新灌流的现象</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>74.. <strong>休克指数</strong><br>定义：是指<span class="blur-text">脉率</span>与{{c2::收缩压}}的比值<br>意义：常用来评估休克是否存在及其严重程度<br>数值：指数为{{c3::0.5}}多提示无休克；<span class="blur-text">1.0~1.5</span>提示存在休克；大于{{c2::2.0}}提示存在严重的休克</td>
+                            <td>74.. <strong>休克指数</strong><br>定义：是指<span class="answer-text">脉率</span>与{{c2::收缩压}}的比值<br>意义：常用来评估休克是否存在及其严重程度<br>数值：指数为{{c3::0.5}}多提示无休克；<span class="answer-text">1.0~1.5</span>提示存在休克；大于{{c2::2.0}}提示存在严重的休克</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>75.. <strong>微循环收</strong><br>（原文内容不完整：气减少，组织缺血缺氧，故又称缺血期或缺血性缺氧期）<br>推测为<span class="blur-text">微循环收缩期</span>：微循环{{c2::灌流量减少}}，组织{{c3::缺血缺氧}}，又称<span class="blur-text">缺血期</span>或{{c2::缺血性缺氧期}}<br>特点：{{c3::少灌少流，灌少于流}}</td>
+                            <td>75.. <strong>微循环收</strong><br>（原文内容不完整：气减少，组织缺血缺氧，故又称缺血期或缺血性缺氧期）<br>推测为<span class="answer-text">微循环收缩期</span>：微循环{{c2::灌流量减少}}，组织{{c3::缺血缺氧}}，又称<span class="answer-text">缺血期</span>或{{c2::缺血性缺氧期}}<br>特点：{{c3::少灌少流，灌少于流}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>76.. <strong>微循环扩张期</strong><br>特点：<span class="blur-text">微循环血管扩张</span>，微循环处于{{c2::淤血状态}}<br>又称：{{c3::微循环淤血期}}，也称为<span class="blur-text">休克失代偿期</span>或{{c2::休克进展期}}<br>特点：{{c3::灌而少流，灌大于流}}</td>
+                            <td>76.. <strong>微循环扩张期</strong><br>特点：<span class="answer-text">微循环血管扩张</span>，微循环处于{{c2::淤血状态}}<br>又称：{{c3::微循环淤血期}}，也称为<span class="answer-text">休克失代偿期</span>或{{c2::休克进展期}}<br>特点：{{c3::灌而少流，灌大于流}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>77.. <strong>微循环衰竭期</strong><br>又称<span class="blur-text">难治期</span>，此期{{c2::微血管发生麻痹性扩张}}，毛细血管大量开放，微循环中有{{c3::微血栓形成}}，血流停止，出现<span class="blur-text">不灌不流</span>状态<br>后果：组织几乎完全不能进行物质交换，得不到氧气和营养物质供应</td>
+                            <td>77.. <strong>微循环衰竭期</strong><br>又称<span class="answer-text">难治期</span>，此期{{c2::微血管发生麻痹性扩张}}，毛细血管大量开放，微循环中有{{c3::微血栓形成}}，血流停止，出现<span class="answer-text">不灌不流</span>状态<br>后果：组织几乎完全不能进行物质交换，得不到氧气和营养物质供应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>78.. <strong>中心静脉压(CVP)</strong><br>代表：代表的是<span class="blur-text">右心房或腔静脉心脏入口处</span>血压<br>正常值：{{c2::5~12cmH2O}}<br>意义：相较于动脉压，能更早地反映机体的{{c3::血容量}}及<span class="blur-text">心功能</span>状况<br>数值意义：小于{{c2::5cmH2O}}提示血容量不足；大于{{c3::15cmH2O}}提示心功能不全、静脉血管床过度收缩或肺循环阻力过高；若超过<span class="blur-text">20cmH2O</span>时，则表示存在{{c2::充血性心力衰竭}}</td>
+                            <td>78.. <strong>中心静脉压(CVP)</strong><br>代表：代表的是<span class="answer-text">右心房或腔静脉心脏入口处</span>血压<br>正常值：{{c2::5~12cmH2O}}<br>意义：相较于动脉压，能更早地反映机体的{{c3::血容量}}及<span class="answer-text">心功能</span>状况<br>数值意义：小于{{c2::5cmH2O}}提示血容量不足；大于{{c3::15cmH2O}}提示心功能不全、静脉血管床过度收缩或肺循环阻力过高；若超过<span class="answer-text">20cmH2O</span>时，则表示存在{{c2::充血性心力衰竭}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>79.. <strong>心源性休</strong><br>（原文不完整，推测为心源性休克）<br><span class="blur-text">心源性休克</span>：由{{c2::心功能障碍}}所致的休克</td>
+                            <td>79.. <strong>心源性休</strong><br>（原文不完整，推测为心源性休克）<br><span class="answer-text">心源性休克</span>：由{{c2::心功能障碍}}所致的休克</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>80.. <strong>低血容量性休克</strong><br>原因：因为<span class="blur-text">大量血液或体液丧失</span>到体外，或{{c2::渗出聚集在第三间隙}}内，造成{{c3::血容量减少}}所致的休克</td>
+                            <td>80.. <strong>低血容量性休克</strong><br>原因：因为<span class="answer-text">大量血液或体液丧失</span>到体外，或{{c2::渗出聚集在第三间隙}}内，造成{{c3::血容量减少}}所致的休克</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>81.. <strong>感染性休克</strong><br>（原文不完整：症所诱发的休克）<br><span class="blur-text">感染性休克</span>：由{{c2::严重感染}}或{{c3::脓毒症}}所诱发的休克</td>
+                            <td>81.. <strong>感染性休克</strong><br>（原文不完整：症所诱发的休克）<br><span class="answer-text">感染性休克</span>：由{{c2::严重感染}}或{{c3::脓毒症}}所诱发的休克</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>82.. <strong>过敏性休克</strong><br>定义：是指一般对人体无害的<span class="blur-text">特异性过敏原</span>作用于过敏患者所致的以{{c2::全身性血管收缩功能障碍}}、{{c3::血管扩张}}为主的全身速发变态反应</td>
+                            <td>82.. <strong>过敏性休克</strong><br>定义：是指一般对人体无害的<span class="answer-text">特异性过敏原</span>作用于过敏患者所致的以{{c2::全身性血管收缩功能障碍}}、{{c3::血管扩张}}为主的全身速发变态反应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>83.. <strong>神经源性休克</strong><br>原因：是由于<span class="blur-text">强烈的神经刺激</span>，如{{c2::严重创伤、剧烈疼痛、高位脊髓麻痹或损伤}}等导致{{c3::周围血管的收缩功能障碍}}所致的休克</td>
+                            <td>83.. <strong>神经源性休克</strong><br>原因：是由于<span class="answer-text">强烈的神经刺激</span>，如{{c2::严重创伤、剧烈疼痛、高位脊髓麻痹或损伤}}等导致{{c3::周围血管的收缩功能障碍}}所致的休克</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>84.. <strong>艾森曼格综合征(Eisenmenger Syndrome)</strong><br>病因：<span class="blur-text">左向右分流</span>的先天性心脏病，如{{c2::房间隔缺损、室间隔缺损、动脉导管未闭}}等<br>机制：血液沿这些异常通道一开始是左向右分流，却因为{{c3::进行性肺动脉高压}}发展至<span class="blur-text">器质性肺动脉阻塞性病变</span>，最终{{c2::右心压力超过左心压力}}，出现{{c3::右向左分流}}<br>表现：皮肤黏膜从无青紫发展至<span class="blur-text">青紫</span>时，即为艾森曼格综合征<br>意义：一旦出现，是{{c2::手术的禁忌}}</td>
+                            <td>84.. <strong>艾森曼格综合征(Eisenmenger Syndrome)</strong><br>病因：<span class="answer-text">左向右分流</span>的先天性心脏病，如{{c2::房间隔缺损、室间隔缺损、动脉导管未闭}}等<br>机制：血液沿这些异常通道一开始是左向右分流，却因为{{c3::进行性肺动脉高压}}发展至<span class="answer-text">器质性肺动脉阻塞性病变</span>，最终{{c2::右心压力超过左心压力}}，出现{{c3::右向左分流}}<br>表现：皮肤黏膜从无青紫发展至<span class="answer-text">青紫</span>时，即为艾森曼格综合征<br>意义：一旦出现，是{{c2::手术的禁忌}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>85.. <strong>体外循环(extracorporeal circulation,ECC)</strong><br>定义：是指通过特殊装置将<span class="blur-text">回心静脉血</span>引流至体外，经{{c2::氧合}}后再输回人体{{c3::动脉}}，从而临时完成或部分代替<span class="blur-text">心、肺功能</span>的一种专业技术<br>又称：{{c2::心肺转流}}(cardiopulmonary bypass,CPB)</td>
+                            <td>85.. <strong>体外循环(extracorporeal circulation,ECC)</strong><br>定义：是指通过特殊装置将<span class="answer-text">回心静脉血</span>引流至体外，经{{c2::氧合}}后再输回人体{{c3::动脉}}，从而临时完成或部分代替<span class="answer-text">心、肺功能</span>的一种专业技术<br>又称：{{c2::心肺转流}}(cardiopulmonary bypass,CPB)</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>86.. <strong>动脉导管未闭</strong><br>解剖：动脉导管连接<span class="blur-text">肺动脉总干</span>与{{c2::降主动脉}}，是{{c3::胎儿期血液循环}}的主要渠道<br>闭合：出生后一般在<span class="blur-text">数月内</span>因废用而闭塞，如{{c2::一岁后}}仍未闭塞，即为动脉导管未闭</td>
+                            <td>86.. <strong>动脉导管未闭</strong><br>解剖：动脉导管连接<span class="answer-text">肺动脉总干</span>与{{c2::降主动脉}}，是{{c3::胎儿期血液循环}}的主要渠道<br>闭合：出生后一般在<span class="answer-text">数月内</span>因废用而闭塞，如{{c2::一岁后}}仍未闭塞，即为动脉导管未闭</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>87.. <strong>卵圆孔未闭</strong><br>解剖：卵圆孔是心脏房间隔在<span class="blur-text">胚胎时期</span>的一个{{c2::生理性通道}}<br>闭合：正常的情况下在出生后{{c3::5~7个月左右}}融合，若未能融合则形成卵圆孔未闭</td>
+                            <td>87.. <strong>卵圆孔未闭</strong><br>解剖：卵圆孔是心脏房间隔在<span class="answer-text">胚胎时期</span>的一个{{c2::生理性通道}}<br>闭合：正常的情况下在出生后{{c3::5~7个月左右}}融合，若未能融合则形成卵圆孔未闭</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>88.. <strong>心脏再同步治疗(CRT)</strong><br>定义：是指应用<span class="blur-text">双心室起搏装置</span>同时兴奋{{c2::左右心室}}，或通过重建左右室游离壁与室间隔之间的{{c3::同步收缩}}达到改善心功能目的的一种起搏疗法<br>效果：在加强心室收缩力的同时减轻<span class="blur-text">二尖瓣反流</span>，改善衰竭心肌的{{c2::生化特性}}，包括{{c3::能量利用}}</td>
+                            <td>88.. <strong>心脏再同步治疗(CRT)</strong><br>定义：是指应用<span class="answer-text">双心室起搏装置</span>同时兴奋{{c2::左右心室}}，或通过重建左右室游离壁与室间隔之间的{{c3::同步收缩}}达到改善心功能目的的一种起搏疗法<br>效果：在加强心室收缩力的同时减轻<span class="answer-text">二尖瓣反流</span>，改善衰竭心肌的{{c2::生化特性}}，包括{{c3::能量利用}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>89.. <strong>绒毛心</strong><br>出现：<span class="blur-text">纤维蛋白性心包炎</span>时，心包表面渗出的{{c2::纤维蛋白}}因心脏停搏牵拉而呈{{c3::绒毛状}}</td>
+                            <td>89.. <strong>绒毛心</strong><br>出现：<span class="answer-text">纤维蛋白性心包炎</span>时，心包表面渗出的{{c2::纤维蛋白}}因心脏停搏牵拉而呈{{c3::绒毛状}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>90.. <strong>SIRS</strong><br>全称：<span class="blur-text">全身炎症反应综合征</span><br>定义：指机体{{c2::失控的自我持续放大和自我破坏}}的炎症，表现为{{c3::播散性炎症细胞活化}}和炎症介质泛滥到血浆并在远隔部位引起<span class="blur-text">全身性炎症</span></td>
+                            <td>90.. <strong>SIRS</strong><br>全称：<span class="answer-text">全身炎症反应综合征</span><br>定义：指机体{{c2::失控的自我持续放大和自我破坏}}的炎症，表现为{{c3::播散性炎症细胞活化}}和炎症介质泛滥到血浆并在远隔部位引起<span class="answer-text">全身性炎症</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>91.. <strong>MODS</strong><br>全称：<span class="blur-text">多器官功能障碍综合征</span><br>定义：是指在{{c2::严重创伤、感染以及休克}}等急性危重病时，{{c3::两个或两个以上}}原无功能障碍的器官系统同时或短期内相继发生功能障碍</td>
+                            <td>91.. <strong>MODS</strong><br>全称：<span class="answer-text">多器官功能障碍综合征</span><br>定义：是指在{{c2::严重创伤、感染以及休克}}等急性危重病时，{{c3::两个或两个以上}}原无功能障碍的器官系统同时或短期内相继发生功能障碍</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>92.. <strong>下肢动脉硬化性闭塞症(ASO)</strong><br>病因：是由于<span class="blur-text">动脉硬化</span>造成的下肢供血动脉{{c2::内膜增厚、管腔狭窄或闭塞}}<br>表现：病变肢体血液供应不足，引起下肢{{c3::间歇性跛行}}、疼痛，乃至发生溃疡或坏死等临床表现的慢性进展性疾病<br>特点：多发于<span class="blur-text">50岁以上</span>，{{c2::男性}}多见，病变部位为{{c3::股浅动脉、髂动脉、腘动脉及胫动脉}}，病变呈<span class="blur-text">多节段分布</span></td>
+                            <td>92.. <strong>下肢动脉硬化性闭塞症(ASO)</strong><br>病因：是由于<span class="answer-text">动脉硬化</span>造成的下肢供血动脉{{c2::内膜增厚、管腔狭窄或闭塞}}<br>表现：病变肢体血液供应不足，引起下肢{{c3::间歇性跛行}}、疼痛，乃至发生溃疡或坏死等临床表现的慢性进展性疾病<br>特点：多发于<span class="answer-text">50岁以上</span>，{{c2::男性}}多见，病变部位为{{c3::股浅动脉、髂动脉、腘动脉及胫动脉}}，病变呈<span class="answer-text">多节段分布</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>93.. <strong>血栓闭塞性脉管炎(TAO)</strong><br>又称<span class="blur-text">Buerger氏病</span>，是一种以{{c2::无菌性炎症及节段性闭塞}}为特点的周围血管慢性病变<br>好发：好发于{{c3::青年男性}}，与<span class="blur-text">吸烟</span>有高度相关性<br>累及：主要累及{{c2::四肢中小动静脉}}</td>
+                            <td>93.. <strong>血栓闭塞性脉管炎(TAO)</strong><br>又称<span class="answer-text">Buerger氏病</span>，是一种以{{c2::无菌性炎症及节段性闭塞}}为特点的周围血管慢性病变<br>好发：好发于{{c3::青年男性}}，与<span class="answer-text">吸烟</span>有高度相关性<br>累及：主要累及{{c2::四肢中小动静脉}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>94.. <strong>单纯下肢静脉曲张</strong><br>定义：指下肢<span class="blur-text">浅静脉瓣膜关闭不全</span>时，静脉内血液{{c2::倒流}}，远端静脉瘀滞，继而病变静脉壁{{c3::伸长、扩张、变性、不规则膨出和扭曲}}<br>包括：包括<span class="blur-text">大隐静脉曲张</span>和{{c2::小隐静脉曲张}}<br>多见于：{{c3::从事持久站立工作}}、体力活动强度高或久坐者</td>
+                            <td>94.. <strong>单纯下肢静脉曲张</strong><br>定义：指下肢<span class="answer-text">浅静脉瓣膜关闭不全</span>时，静脉内血液{{c2::倒流}}，远端静脉瘀滞，继而病变静脉壁{{c3::伸长、扩张、变性、不规则膨出和扭曲}}<br>包括：包括<span class="answer-text">大隐静脉曲张</span>和{{c2::小隐静脉曲张}}<br>多见于：{{c3::从事持久站立工作}}、体力活动强度高或久坐者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>95.. <strong>Homans征阳性</strong><br>出现：<span class="blur-text">小腿深静脉血栓形成</span>后<br>表现：患足不能踏平，行走时疼痛加重，小腿压痛<br>检查：做{{c2::踝关节背屈试验}}可致{{c3::小腿剧痛}}</td>
+                            <td>95.. <strong>Homans征阳性</strong><br>出现：<span class="answer-text">小腿深静脉血栓形成</span>后<br>表现：患足不能踏平，行走时疼痛加重，小腿压痛<br>检查：做{{c2::踝关节背屈试验}}可致{{c3::小腿剧痛}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>96.. <strong>PCI</strong><br>全称：<span class="blur-text">经皮冠状动脉介入手术</span><br>途径：通过{{c2::动脉穿刺}}途径，利用{{c3::导管技术}}治疗冠状动脉狭窄或闭塞的微创治疗技术<br>主要包括：<span class="blur-text">冠状动脉球囊扩张术</span>和{{c2::冠状动脉内支架植入}}</td>
+                            <td>96.. <strong>PCI</strong><br>全称：<span class="answer-text">经皮冠状动脉介入手术</span><br>途径：通过{{c2::动脉穿刺}}途径，利用{{c3::导管技术}}治疗冠状动脉狭窄或闭塞的微创治疗技术<br>主要包括：<span class="answer-text">冠状动脉球囊扩张术</span>和{{c2::冠状动脉内支架植入}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>1.. <strong>Kerley B线</strong><br>出现：当<span class="blur-text">肺静脉压升高</span>引起渗出液存留在{{c2::小叶间隙}}内<br>X线表现：在{{c3::肋膈角附近}}见到与外侧胸壁垂直的间隔线</td>
+                            <td>1.. <strong>Kerley B线</strong><br>出现：当<span class="answer-text">肺静脉压升高</span>引起渗出液存留在{{c2::小叶间隙}}内<br>X线表现：在{{c3::肋膈角附近}}见到与外侧胸壁垂直的间隔线</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>2.. <strong>双腔主动脉</strong><br>定义：是<span class="blur-text">主动脉夹层</span>的影像学所见，由于{{c2::内膜撕裂形成内膜片}}，将主动脉分为{{c3::真腔和假腔}}，通常<span class="blur-text">假腔大于真腔</span></td>
+                            <td>2.. <strong>双腔主动脉</strong><br>定义：是<span class="answer-text">主动脉夹层</span>的影像学所见，由于{{c2::内膜撕裂形成内膜片}}，将主动脉分为{{c3::真腔和假腔}}，通常<span class="answer-text">假腔大于真腔</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>3.. <strong>双心房影</strong><br>出现：当<span class="blur-text">左心房增大</span>，心底部出现{{c2::圆形或椭圆形密度增高影}}，常略偏右，与右心房重叠<br>X线：在正位片上显示呈{{c3::双心房影}}</td>
+                            <td>3.. <strong>双心房影</strong><br>出现：当<span class="answer-text">左心房增大</span>，心底部出现{{c2::圆形或椭圆形密度增高影}}，常略偏右，与右心房重叠<br>X线：在正位片上显示呈{{c3::双心房影}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>4.. <strong>心胸比率</strong><br>定义：<span class="blur-text">心影最大横径</span>与{{c2::胸廓最大横径}}之比<br>测量：心影最大横径是{{c3::左右缘最突出一点至胸廓中线垂直距离之和}}，胸廓最大横径是在<span class="blur-text">右膈顶平面</span>两侧胸廓肋骨内缘间连线的长度</td>
+                            <td>4.. <strong>心胸比率</strong><br>定义：<span class="answer-text">心影最大横径</span>与{{c2::胸廓最大横径}}之比<br>测量：心影最大横径是{{c3::左右缘最突出一点至胸廓中线垂直距离之和}}，胸廓最大横径是在<span class="answer-text">右膈顶平面</span>两侧胸廓肋骨内缘间连线的长度</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>5.. <strong>蝶翼征</strong><br>出现：<span class="blur-text">肺泡性肺水肿</span>时<br>X线：表现为广泛的分布的{{c2::边缘模糊的斑片状阴影}}，重者两肺大片影聚集在肺门区形成{{c3::蝶翼状阴影}}</td>
+                            <td>5.. <strong>蝶翼征</strong><br>出现：<span class="answer-text">肺泡性肺水肿</span>时<br>X线：表现为广泛的分布的{{c2::边缘模糊的斑片状阴影}}，重者两肺大片影聚集在肺门区形成{{c3::蝶翼状阴影}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>6.. <strong>肺门截断现象</strong><br>又称<span class="blur-text">残根征</span>，{{c2::肺动脉高压}}时<br>X线：表现为{{c3::肺门动脉及大分支增粗}}，中小分支变细</td>
+                            <td>6.. <strong>肺门截断现象</strong><br>又称<span class="answer-text">残根征</span>，{{c2::肺动脉高压}}时<br>X线：表现为{{c3::肺门动脉及大分支增粗}}，中小分支变细</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>1.. <strong>血窦</strong><br>又称<span class="blur-text">窦状毛细血管</span>，是{{c2::通透性最大}}的一种毛细血管<br>分布：主要分布于{{c3::肝、脾、骨髓}}以及一些内分泌腺<br>特点：管腔较大而不规则，内皮细胞之间的间隙较大</td>
+                            <td>1.. <strong>血窦</strong><br>又称<span class="answer-text">窦状毛细血管</span>，是{{c2::通透性最大}}的一种毛细血管<br>分布：主要分布于{{c3::肝、脾、骨髓}}以及一些内分泌腺<br>特点：管腔较大而不规则，内皮细胞之间的间隙较大</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>2.. <strong>浦肯野纤维</strong><br>位置：是心传导系统的<span class="blur-text">终末</span>，位于{{c2::心室的心内膜下层}}，构成{{c3::房室束及其分支}}<br>形态：其较普通心肌细胞<span class="blur-text">短而宽</span>；常见{{c2::双核}}，胞质中有丰富的{{c3::线粒体和糖原}}，而肌原纤维较少<br>连接：彼此间有较发达的<span class="blur-text">缝隙连接</span>，将冲动传导至心室各处</td>
+                            <td>2.. <strong>浦肯野纤维</strong><br>位置：是心传导系统的<span class="answer-text">终末</span>，位于{{c2::心室的心内膜下层}}，构成{{c3::房室束及其分支}}<br>形态：其较普通心肌细胞<span class="answer-text">短而宽</span>；常见{{c2::双核}}，胞质中有丰富的{{c3::线粒体和糖原}}，而肌原纤维较少<br>连接：彼此间有较发达的<span class="answer-text">缝隙连接</span>，将冲动传导至心室各处</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>3.. <strong>微循环</strong><br>定义：是指<span class="blur-text">微动脉与微静脉</span>之间的血液循环，是{{c2::血液循环的基本功能单位}}<br>组成：一般包括{{c3::微动脉、毛细血管前微动脉、中间微动脉、真毛细血管网、直捷通路、动-静脉吻合和微静脉}}</td>
+                            <td>3.. <strong>微循环</strong><br>定义：是指<span class="answer-text">微动脉与微静脉</span>之间的血液循环，是{{c2::血液循环的基本功能单位}}<br>组成：一般包括{{c3::微动脉、毛细血管前微动脉、中间微动脉、真毛细血管网、直捷通路、动-静脉吻合和微静脉}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>4.. <strong>连续毛细血管</strong><br>特点：内皮细胞<span class="blur-text">相互连续</span>，细胞间有{{c2::紧密连接}}等连接结构，基膜完整<br>物质交换：主要以{{c3::吞饮小泡}}方式在血液和组织液之间进行物质交换<br>分布：分布于<span class="blur-text">结缔组织、肌组织、胸腺、肺和中枢神经系统</span>等处</td>
+                            <td>4.. <strong>连续毛细血管</strong><br>特点：内皮细胞<span class="answer-text">相互连续</span>，细胞间有{{c2::紧密连接}}等连接结构，基膜完整<br>物质交换：主要以{{c3::吞饮小泡}}方式在血液和组织液之间进行物质交换<br>分布：分布于<span class="answer-text">结缔组织、肌组织、胸腺、肺和中枢神经系统</span>等处</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>5.. <strong>有孔毛细血管</strong><br>特点：内皮细胞<span class="blur-text">不含核的部分极薄</span>，有许多贯穿胞质的{{c2::内皮窗孔}}，其直径一般为{{c3::60~80nm}}<br>分布：主要存在于<span class="blur-text">胃肠黏膜</span>、{{c2::某些内分泌腺}}和{{c3::肾血管球}}等处</td>
+                            <td>5.. <strong>有孔毛细血管</strong><br>特点：内皮细胞<span class="answer-text">不含核的部分极薄</span>，有许多贯穿胞质的{{c2::内皮窗孔}}，其直径一般为{{c3::60~80nm}}<br>分布：主要存在于<span class="answer-text">胃肠黏膜</span>、{{c2::某些内分泌腺}}和{{c3::肾血管球}}等处</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>6.. <strong>血岛</strong><br>来源：来源于<span class="blur-text">卵黄囊壁</span>的{{c2::胚外中胚层}}，是间充质细胞密集而成的细胞团<br>分化：中央的游离细胞分化成为{{c3::原始血细胞}}（造血干细胞）；周边细胞变扁，分化为<span class="blur-text">内皮细胞</span>，进而围成{{c2::内皮管}}，形成原始血管</td>
+                            <td>6.. <strong>血岛</strong><br>来源：来源于<span class="answer-text">卵黄囊壁</span>的{{c2::胚外中胚层}}，是间充质细胞密集而成的细胞团<br>分化：中央的游离细胞分化成为{{c3::原始血细胞}}（造血干细胞）；周边细胞变扁，分化为<span class="answer-text">内皮细胞</span>，进而围成{{c2::内皮管}}，形成原始血管</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>7.. <strong>法洛四联症(tetralogy of Fallot)</strong><br>原因：由于<span class="blur-text">心球和动脉干分隔时偏向右侧</span><br>导致：{{c2::肺动脉狭窄}}，{{c3::主动脉骑跨}}于室间隔肌部上缘，球嵴不能参与室间隔膜部的形成导致<span class="blur-text">室间隔膜部缺损</span>，肺动脉狭窄导致{{c2::右心室代偿性肥大}}</td>
+                            <td>7.. <strong>法洛四联症(tetralogy of Fallot)</strong><br>原因：由于<span class="answer-text">心球和动脉干分隔时偏向右侧</span><br>导致：{{c2::肺动脉狭窄}}，{{c3::主动脉骑跨}}于室间隔肌部上缘，球嵴不能参与室间隔膜部的形成导致<span class="answer-text">室间隔膜部缺损</span>，肺动脉狭窄导致{{c2::右心室代偿性肥大}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>8.. <strong>房间隔缺损(atrial septal defect)</strong><br>定义：指出生后，<span class="blur-text">左右心房间</span>不能分隔开<br>常见原因：①{{c2::第一房间隔的下部出现许多穿孔}}，卵圆孔无完整卵圆孔瓣遮盖；②第二房间孔吸收过大；③第二房间隔上的卵圆孔过大；④第一房间隔未与心内膜垫融合等</td>
+                            <td>8.. <strong>房间隔缺损(atrial septal defect)</strong><br>定义：指出生后，<span class="answer-text">左右心房间</span>不能分隔开<br>常见原因：①{{c2::第一房间隔的下部出现许多穿孔}}，卵圆孔无完整卵圆孔瓣遮盖；②第二房间孔吸收过大；③第二房间隔上的卵圆孔过大；④第一房间隔未与心内膜垫融合等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>9.. <strong>室间隔缺损(ventricular septal defect)</strong><br>组成：室间隔由<span class="blur-text">肌性部分</span>和{{c2::膜性部分}}组成<br>常见：室间隔缺损常见于{{c3::膜部缺损}}<br>形成：组成室间隔膜部的<span class="blur-text">心内膜垫</span>、{{c2::室间隔肌部上缘}}和{{c3::球嵴}}未能融合封闭室间孔，导致室间隔缺损</td>
+                            <td>9.. <strong>室间隔缺损(ventricular septal defect)</strong><br>组成：室间隔由<span class="answer-text">肌性部分</span>和{{c2::膜性部分}}组成<br>常见：室间隔缺损常见于{{c3::膜部缺损}}<br>形成：组成室间隔膜部的<span class="answer-text">心内膜垫</span>、{{c2::室间隔肌部上缘}}和{{c3::球嵴}}未能融合封闭室间孔，导致室间隔缺损</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>10.. <strong>心内膜垫</strong><br>形成：是<span class="blur-text">房室管背侧和腹侧壁</span>上的心内膜下组织增生形成的一对隆起<br>功能：两个隆起向中间线生长愈合，将房室管分隔为{{c2::左、右房室孔}}，并分化形成{{c3::二尖瓣和三尖瓣}}<br>参与：还参与了<span class="blur-text">心房的分隔</span>和{{c2::室间隔的膜部}}的形成</td>
+                            <td>10.. <strong>心内膜垫</strong><br>形成：是<span class="answer-text">房室管背侧和腹侧壁</span>上的心内膜下组织增生形成的一对隆起<br>功能：两个隆起向中间线生长愈合，将房室管分隔为{{c2::左、右房室孔}}，并分化形成{{c3::二尖瓣和三尖瓣}}<br>参与：还参与了<span class="answer-text">心房的分隔</span>和{{c2::室间隔的膜部}}的形成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>11.. <strong>卵圆孔</strong><br>形成：原始心房分隔时，在第一房间隔的右侧，从心房顶端向心内膜垫方向长出一个较厚的隔，即<span class="blur-text">第二房间隔</span>，其前、后缘与心内膜垫融合，中间部分与心内膜垫之间留有一个孔，即{{c2::卵圆孔}}<br>覆盖：第一房间隔下部覆盖在卵圆孔的左侧，称为{{c3::卵圆孔瓣}}<br>血流：出生前，<span class="blur-text">右心房</span>压力高于{{c2::左心房}}，血液经卵圆孔流入左心房；出生后左心房压力升高，第一房间隔与第二房间隔相贴，逐渐融合，卵圆孔封闭为{{c3::卵圆窝}}</td>
+                            <td>11.. <strong>卵圆孔</strong><br>形成：原始心房分隔时，在第一房间隔的右侧，从心房顶端向心内膜垫方向长出一个较厚的隔，即<span class="answer-text">第二房间隔</span>，其前、后缘与心内膜垫融合，中间部分与心内膜垫之间留有一个孔，即{{c2::卵圆孔}}<br>覆盖：第一房间隔下部覆盖在卵圆孔的左侧，称为{{c3::卵圆孔瓣}}<br>血流：出生前，<span class="answer-text">右心房</span>压力高于{{c2::左心房}}，血液经卵圆孔流入左心房；出生后左心房压力升高，第一房间隔与第二房间隔相贴，逐渐融合，卵圆孔封闭为{{c3::卵圆窝}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>12.. <strong>动脉导管未闭</strong><br>解剖：动脉导管连于<span class="blur-text">肺动脉</span>和{{c2::主动脉弓}}之间，胎儿肺动脉的血大部分经此流入主动脉弓<br>闭合：胎儿出生后，肺行使功能，肺动脉血流入肺，动脉导管因{{c3::平滑肌收缩}}而闭锁形成<span class="blur-text">动脉韧带</span><br>异常：因动脉导管管壁平滑肌不收缩等，导致的动脉导管不闭锁，称为动脉导管未闭，可致{{c2::肺动脉高压}}</td>
+                            <td>12.. <strong>动脉导管未闭</strong><br>解剖：动脉导管连于<span class="answer-text">肺动脉</span>和{{c2::主动脉弓}}之间，胎儿肺动脉的血大部分经此流入主动脉弓<br>闭合：胎儿出生后，肺行使功能，肺动脉血流入肺，动脉导管因{{c3::平滑肌收缩}}而闭锁形成<span class="answer-text">动脉韧带</span><br>异常：因动脉导管管壁平滑肌不收缩等，导致的动脉导管不闭锁，称为动脉导管未闭，可致{{c2::肺动脉高压}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>13.. <strong>心动周期</strong><br>定义：心脏一次<span class="blur-text">收缩和舒张</span>构成一个机械活动周期<br>分期：分为{{c2::收缩期}}和{{c3::舒张期}}<br>关系：与<span class="blur-text">心率</span>成反比</td>
+                            <td>13.. <strong>心动周期</strong><br>定义：心脏一次<span class="answer-text">收缩和舒张</span>构成一个机械活动周期<br>分期：分为{{c2::收缩期}}和{{c3::舒张期}}<br>关系：与<span class="answer-text">心率</span>成反比</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>14.. <strong>等容收缩期</strong><br>定义：从<span class="blur-text">房室瓣关闭</span>到{{c2::主动脉瓣开启前}}的这段时期，心室的收缩不能改变心室的容积<br>时间：持续约{{c3::0.05s}}</td>
+                            <td>14.. <strong>等容收缩期</strong><br>定义：从<span class="answer-text">房室瓣关闭</span>到{{c2::主动脉瓣开启前}}的这段时期，心室的收缩不能改变心室的容积<br>时间：持续约{{c3::0.05s}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>15.. <strong>等容舒张期</strong><br>定义：从<span class="blur-text">半月瓣关闭</span>到{{c2::房室瓣开启前}}的这段时期，心室舒张而心室的容积不变<br>时间：持续{{c3::0.06~0.08s}}</td>
+                            <td>15.. <strong>等容舒张期</strong><br>定义：从<span class="answer-text">半月瓣关闭</span>到{{c2::房室瓣开启前}}的这段时期，心室舒张而心室的容积不变<br>时间：持续{{c3::0.06~0.08s}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>16.. <strong>每搏输出量</strong><br>定义：一侧心室<span class="blur-text">一次心脏搏动</span>所射出的血液量<br>正常值：正常成年人在安静状态下的搏出量约{{c2::70ml}}（{{c3::60-80ml}}）<br>意义：是一项衡量心脏功能的基本指标</td>
+                            <td>16.. <strong>每搏输出量</strong><br>定义：一侧心室<span class="answer-text">一次心脏搏动</span>所射出的血液量<br>正常值：正常成年人在安静状态下的搏出量约{{c2::70ml}}（{{c3::60-80ml}}）<br>意义：是一项衡量心脏功能的基本指标</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>17.. <strong>射血分数</strong><br>定义：<span class="blur-text">搏出量</span>占{{c2::心室舒张末期容积}}的百分比<br>正常值：健康成年人的射血分数为{{c3::55%~65%}}<br>意义：比搏出量能更准确地反映<span class="blur-text">心脏泵血功能</span>，对早期发现心脏泵血功能异常有重要意义</td>
+                            <td>17.. <strong>射血分数</strong><br>定义：<span class="answer-text">搏出量</span>占{{c2::心室舒张末期容积}}的百分比<br>正常值：健康成年人的射血分数为{{c3::55%~65%}}<br>意义：比搏出量能更准确地反映<span class="answer-text">心脏泵血功能</span>，对早期发现心脏泵血功能异常有重要意义</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>19.. <strong>心指数</strong><br>定义：以<span class="blur-text">单位体表面积</span>（m²）计算的{{c2::心输出量}}<br>条件：在{{c3::安静和空腹}}情况下的静息心指数</td>
+                            <td>19.. <strong>心指数</strong><br>定义：以<span class="answer-text">单位体表面积</span>（m²）计算的{{c2::心输出量}}<br>条件：在{{c3::安静和空腹}}情况下的静息心指数</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>20.. <strong>每搏功</strong><br>定义：心室<span class="blur-text">一次收缩射血</span>所做的外功<br>计算：等于{{c2::搏出量}}乘以心动周期中{{c3::室内压增量}}加上血流动能<br>意义：是一项比较全面的<span class="blur-text">心功能评定</span>指标</td>
+                            <td>20.. <strong>每搏功</strong><br>定义：心室<span class="answer-text">一次收缩射血</span>所做的外功<br>计算：等于{{c2::搏出量}}乘以心动周期中{{c3::室内压增量}}加上血流动能<br>意义：是一项比较全面的<span class="answer-text">心功能评定</span>指标</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>21.. <strong>异长自身调节</strong><br>定义：通过改变<span class="blur-text">心肌细胞初长度</span>而引起{{c2::心肌收缩力}}改变的调节<br>机制：反映了{{c3::心肌初长度}}对心肌收缩功能的影响，当增加<span class="blur-text">前负荷</span>时，心肌收缩力加强，搏出量增多，搏功增大</td>
+                            <td>21.. <strong>异长自身调节</strong><br>定义：通过改变<span class="answer-text">心肌细胞初长度</span>而引起{{c2::心肌收缩力}}改变的调节<br>机制：反映了{{c3::心肌初长度}}对心肌收缩功能的影响，当增加<span class="answer-text">前负荷</span>时，心肌收缩力加强，搏出量增多，搏功增大</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>22.. <strong>心室顺应性</strong><br>定义：<span class="blur-text">心室壁</span>受外力作用时能发生变形的难易程度<br>表示：通常用心室在{{c2::单位压力差}}（△P）作用下所引起的{{c3::容积改变}}（△V）来表示</td>
+                            <td>22.. <strong>心室顺应性</strong><br>定义：<span class="answer-text">心室壁</span>受外力作用时能发生变形的难易程度<br>表示：通常用心室在{{c2::单位压力差}}（△P）作用下所引起的{{c3::容积改变}}（△V）来表示</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>23.. <strong>等长调节</strong><br>定义：通过改变<span class="blur-text">心肌收缩能力</span>来调节心脏泵血功能<br>机制：反映了{{c2::心肌收缩能力}}对心肌收缩功能的影响</td>
+                            <td>23.. <strong>等长调节</strong><br>定义：通过改变<span class="answer-text">心肌收缩能力</span>来调节心脏泵血功能<br>机制：反映了{{c2::心肌收缩能力}}对心肌收缩功能的影响</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>24.. <strong>慢反应细胞</strong><br>定义：在心脏电生理学中，通常将<span class="blur-text">慢Ca2+通道</span>开放引起动作电位{{c2::0期缓慢去极化}}的心肌细胞<br>例如：{{c3::窦房结}}和<span class="blur-text">房室结细胞</span>等</td>
+                            <td>24.. <strong>慢反应细胞</strong><br>定义：在心脏电生理学中，通常将<span class="answer-text">慢Ca2+通道</span>开放引起动作电位{{c2::0期缓慢去极化}}的心肌细胞<br>例如：{{c3::窦房结}}和<span class="answer-text">房室结细胞</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>25.. <strong>有效不应期</strong><br>定义：心肌细胞发生一次兴奋后，从<span class="blur-text">0期去极化开始</span>到{{c2::复极3期膜电位恢复到-60mV}}这一段时间内，兴奋性缺失或极度下降，任何刺激都不能让心肌细胞产生新的动作电位<br>原因：{{c3::Na+通道完全失活}}或仅有少量复活，但还没有恢复到可以被激活的静息状态</td>
+                            <td>25.. <strong>有效不应期</strong><br>定义：心肌细胞发生一次兴奋后，从<span class="answer-text">0期去极化开始</span>到{{c2::复极3期膜电位恢复到-60mV}}这一段时间内，兴奋性缺失或极度下降，任何刺激都不能让心肌细胞产生新的动作电位<br>原因：{{c3::Na+通道完全失活}}或仅有少量复活，但还没有恢复到可以被激活的静息状态</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>26.. <strong>房-室延搁</strong><br>原因：由于<span class="blur-text">房室结区的传导速度缓慢</span>，且房室结是兴奋由心房传向心室的{{c2::唯一通路}}<br>定义：故兴奋由心房传至心室需经一个时间延搁，这一现象称为房-室延搁<br>意义：保证了{{c3::心房和心室交替收缩}}，有利于心室的充盈和射血</td>
+                            <td>26.. <strong>房-室延搁</strong><br>原因：由于<span class="answer-text">房室结区的传导速度缓慢</span>，且房室结是兴奋由心房传向心室的{{c2::唯一通路}}<br>定义：故兴奋由心房传至心室需经一个时间延搁，这一现象称为房-室延搁<br>意义：保证了{{c3::心房和心室交替收缩}}，有利于心室的充盈和射血</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>27.. <strong>血压</strong><br>定义：血管内流动的血液对<span class="blur-text">单位面积血管壁</span>的侧压力（原文不完整，补充基本定义）</td>
+                            <td>27.. <strong>血压</strong><br>定义：血管内流动的血液对<span class="answer-text">单位面积血管壁</span>的侧压力（原文不完整，补充基本定义）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>28.. <strong>中心静脉压</strong><br>定义：<span class="blur-text">右心房</span>和胸腔内{{c2::大静脉}}的血压<br>正常值：正常范围为{{c3::4~12cmH2O}}<br>决定因素：其高低取决于<span class="blur-text">心脏射血能力</span>和{{c2::静脉回心血量}}的相互关系</td>
+                            <td>28.. <strong>中心静脉压</strong><br>定义：<span class="answer-text">右心房</span>和胸腔内{{c2::大静脉}}的血压<br>正常值：正常范围为{{c3::4~12cmH2O}}<br>决定因素：其高低取决于<span class="answer-text">心脏射血能力</span>和{{c2::静脉回心血量}}的相互关系</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>29.. <strong>有效滤过压</strong><br>定义：<span class="blur-text">滤过的力量</span>和{{c2::重吸收的力量}}之差<br>公式：有效滤过压=({{c3::毛细血管血压}}+<span class="blur-text">组织液胶体渗透压</span>)-({{c2::血浆胶体渗透压}}+{{c3::组织液静水压}})</td>
+                            <td>29.. <strong>有效滤过压</strong><br>定义：<span class="answer-text">滤过的力量</span>和{{c2::重吸收的力量}}之差<br>公式：有效滤过压=({{c3::毛细血管血压}}+<span class="answer-text">组织液胶体渗透压</span>)-({{c2::血浆胶体渗透压}}+{{c3::组织液静水压}})</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>30.. <strong>交感缩血管紧张</strong><br>定义：在安静状态下，<span class="blur-text">交感缩血管神经纤维</span>持续发放约{{c2::1~3Hz}}的低频冲动<br>意义：其意义在于使其支配的{{c3::血管平滑肌}}保持一定程度的收缩状态</td>
+                            <td>30.. <strong>交感缩血管紧张</strong><br>定义：在安静状态下，<span class="answer-text">交感缩血管神经纤维</span>持续发放约{{c2::1~3Hz}}的低频冲动<br>意义：其意义在于使其支配的{{c3::血管平滑肌}}保持一定程度的收缩状态</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>137</td>
+                            <td>31.. <strong>压力感受性反射</strong><br>定义：当<span class="blur-text">动脉血压突然升高</span>时，通过压力感受器的活动可反射性引起{{c2::心率减慢}}、{{c3::心输出量减少}}、血管舒张、外周阻力减小，血压下降<br>又称：<span class="blur-text">降压反射</span><br>特点：该反射可在短时间内快速调节动脉血压，维持动脉血压相对稳定</td>
+                            <td>31.. <strong>压力感受性反射</strong><br>定义：当<span class="answer-text">动脉血压突然升高</span>时，通过压力感受器的活动可反射性引起{{c2::心率减慢}}、{{c3::心输出量减少}}、血管舒张、外周阻力减小，血压下降<br>又称：<span class="answer-text">降压反射</span><br>特点：该反射可在短时间内快速调节动脉血压，维持动脉血压相对稳定</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>138</td>
+                            <td>32.. <strong>血-脑屏障</strong><br>位置：是在<span class="blur-text">血液和脑组织</span>之间存在的，可{{c2::限制物质在血液和脑组织中自由交换}}的屏障结构<br>意义：对于保持{{c3::脑组织的内环境}}理化因素的相对稳定，防止血液中有害物质进入脑组织具有重要意义</td>
+                            <td>32.. <strong>血-脑屏障</strong><br>位置：是在<span class="answer-text">血液和脑组织</span>之间存在的，可{{c2::限制物质在血液和脑组织中自由交换}}的屏障结构<br>意义：对于保持{{c3::脑组织的内环境}}理化因素的相对稳定，防止血液中有害物质进入脑组织具有重要意义</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>139</td>
+                            <td>33.. <strong>最大复极电位</strong><br>定义：<span class="blur-text">自律细胞</span>动作电位3期复极末达到{{c2::最大极化状态}}时的{{c3::膜电位值}}</td>
+                            <td>33.. <strong>最大复极电位</strong><br>定义：<span class="answer-text">自律细胞</span>动作电位3期复极末达到{{c2::最大极化状态}}时的{{c3::膜电位值}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>140</td>
+                            <td>1.. <strong>负性心尖搏动</strong><br>定义：心脏收缩时，<span class="blur-text">心尖搏动内陷</span><br>多见于：{{c2::粘连性心包炎}}或{{c3::心包与周围组织广泛粘连}}</td>
+                            <td>1.. <strong>负性心尖搏动</strong><br>定义：心脏收缩时，<span class="answer-text">心尖搏动内陷</span><br>多见于：{{c2::粘连性心包炎}}或{{c3::心包与周围组织广泛粘连}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>141</td>
+                            <td>2.. <strong>震颤(thrill)</strong><br>触诊：为触诊时手掌在心前区触及到的一种<span class="blur-text">细小颤动感</span><br>又称：与在猫喉部触摸到的呼吸颤动相似，故又称为{{c2::猫喘}}<br>意义：是{{c3::器质性心脏病}}的一种特殊体征</td>
+                            <td>2.. <strong>震颤(thrill)</strong><br>触诊：为触诊时手掌在心前区触及到的一种<span class="answer-text">细小颤动感</span><br>又称：与在猫喉部触摸到的呼吸颤动相似，故又称为{{c2::猫喘}}<br>意义：是{{c3::器质性心脏病}}的一种特殊体征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>142</td>
+                            <td>3.. <strong>心包摩擦感</strong><br>机制：心包膜发生炎症变化时，渗出的<span class="blur-text">纤维素蛋白</span>沉着于表面，使之变得粗糙，心脏搏动时，心包脏层与壁层相互摩擦引起振动传至胸壁<br>特点：随{{c2::渗出液增多}}，使心包脏层与壁层分离，摩擦感{{c3::消失}}</td>
+                            <td>3.. <strong>心包摩擦感</strong><br>机制：心包膜发生炎症变化时，渗出的<span class="answer-text">纤维素蛋白</span>沉着于表面，使之变得粗糙，心脏搏动时，心包脏层与壁层相互摩擦引起振动传至胸壁<br>特点：随{{c2::渗出液增多}}，使心包脏层与壁层分离，摩擦感{{c3::消失}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>143</td>
+                            <td>4.. <strong>奔马律(gallop rhythm)</strong><br>听诊：是出现在<span class="blur-text">第二心音后</span>响亮的{{c2::额外心音}}，常伴{{c3::心率增快}}<br>组成：与原有的<span class="blur-text">第一心音、第二心音</span>组合而成韵律极似马奔跑时马蹄触地发出的声音<br>意义：是{{c2::心肌严重受损}}的重要体征</td>
+                            <td>4.. <strong>奔马律(gallop rhythm)</strong><br>听诊：是出现在<span class="answer-text">第二心音后</span>响亮的{{c2::额外心音}}，常伴{{c3::心率增快}}<br>组成：与原有的<span class="answer-text">第一心音、第二心音</span>组合而成韵律极似马奔跑时马蹄触地发出的声音<br>意义：是{{c2::心肌严重受损}}的重要体征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>144</td>
+                            <td>5.. <strong>交替脉</strong><br>特点：指<span class="blur-text">脉率正常</span>而{{c2::脉搏强弱交替}}出现的一种病理现象<br>体位：以{{c3::坐位}}时明显<br>意义：为<span class="blur-text">心肌损害</span>的一种表现，是{{c2::隐性心力衰竭}}的有力证据，往往提示{{c3::左心功能不全}}</td>
+                            <td>5.. <strong>交替脉</strong><br>特点：指<span class="answer-text">脉率正常</span>而{{c2::脉搏强弱交替}}出现的一种病理现象<br>体位：以{{c3::坐位}}时明显<br>意义：为<span class="answer-text">心肌损害</span>的一种表现，是{{c2::隐性心力衰竭}}的有力证据，往往提示{{c3::左心功能不全}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>145</td>
+                            <td>6.. <strong>奇脉</strong><br>又称<span class="blur-text">吸停脉</span><br>表现：是指{{c2::吸气时脉搏明显减弱甚至消失}}，而{{c3::呼气时}}，脉搏可明显触及<br>常见：常见于<span class="blur-text">心包炎</span>，是{{c2::心包压塞}}的一个重要体征</td>
+                            <td>6.. <strong>奇脉</strong><br>又称<span class="answer-text">吸停脉</span><br>表现：是指{{c2::吸气时脉搏明显减弱甚至消失}}，而{{c3::呼气时}}，脉搏可明显触及<br>常见：常见于<span class="answer-text">心包炎</span>，是{{c2::心包压塞}}的一个重要体征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>146</td>
+                            <td>7.. <strong>心音</strong><br>产生：在心动周期中，<span class="blur-text">心肌收缩、瓣膜启闭、血液流速改变形成的湍流</span>和血流撞击心室壁和大动脉壁引起的机械振动<br>传导：可通过周围组织传递到胸壁，用听诊器可在胸部某些部位听到相应的声音</td>
+                            <td>7.. <strong>心音</strong><br>产生：在心动周期中，<span class="answer-text">心肌收缩、瓣膜启闭、血液流速改变形成的湍流</span>和血流撞击心室壁和大动脉壁引起的机械振动<br>传导：可通过周围组织传递到胸壁，用听诊器可在胸部某些部位听到相应的声音</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

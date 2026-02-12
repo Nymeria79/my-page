@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">法医学大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>法医学任务</strong><br>①为揭露<span class="blur-text">犯罪事实真相</span>提供科学依据;②为正确处理<span class="blur-text">民事纠纷</span>提供科学依据;③为处理<span class="blur-text">医疗纠纷</span>提供科学依据;④为处理<span class="blur-text">重大事故</span>提供科学依据;⑤为保险部门的有关人员伤亡的赔偿提供科学依据;⑥为卫生防疫部门处理<span class="blur-text">传染病</span>,<span class="blur-text">职业中毒</span>提供科学依据;⑦为<span class="blur-text">卫生立法</span>提供建设性的意见;⑧开拓新的学科领域,推动<span class="blur-text">医学</span>和<span class="blur-text">法医学</span>的发展。</td>
+                            <td>1.. <strong>法医学任务</strong><br>①为揭露<span class="answer-text">犯罪事实真相</span>提供科学依据;②为正确处理<span class="answer-text">民事纠纷</span>提供科学依据;③为处理<span class="answer-text">医疗纠纷</span>提供科学依据;④为处理<span class="answer-text">重大事故</span>提供科学依据;⑤为保险部门的有关人员伤亡的赔偿提供科学依据;⑥为卫生防疫部门处理<span class="answer-text">传染病</span>,<span class="answer-text">职业中毒</span>提供科学依据;⑦为<span class="answer-text">卫生立法</span>提供建设性的意见;⑧开拓新的学科领域,推动<span class="answer-text">医学</span>和<span class="answer-text">法医学</span>的发展。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>法医学研究范围</strong><br>①<span class="blur-text">死亡</span>和死亡学说;②各种<span class="blur-text">暴力</span>引起的人体损伤、死亡的机制、依据;③<span class="blur-text">猝死</span>及机制;④<span class="blur-text">劳动能力</span>的丧失程度、<span class="blur-text">损伤程度</span>的评定;⑤<span class="blur-text">性犯罪</span>、<span class="blur-text">性功能障碍</span>;⑥<span class="blur-text">个人识别</span>、<span class="blur-text">亲权鉴定</span>;⑦<span class="blur-text">生物物证</span>的检验鉴定;⑧<span class="blur-text">法医精神病</span>的鉴定;⑨<span class="blur-text">灾害事故</span>、<span class="blur-text">交通事故</span>或其他群体死亡的鉴定与赔偿;⑩<span class="blur-text">医疗纠纷</span>的鉴定;⑪虐待儿童与老人;⑫<span class="blur-text">卫生立法</span>;⑬其他</td>
+                            <td>2.. <strong>法医学研究范围</strong><br>①<span class="answer-text">死亡</span>和死亡学说;②各种<span class="answer-text">暴力</span>引起的人体损伤、死亡的机制、依据;③<span class="answer-text">猝死</span>及机制;④<span class="answer-text">劳动能力</span>的丧失程度、<span class="answer-text">损伤程度</span>的评定;⑤<span class="answer-text">性犯罪</span>、<span class="answer-text">性功能障碍</span>;⑥<span class="answer-text">个人识别</span>、<span class="answer-text">亲权鉴定</span>;⑦<span class="answer-text">生物物证</span>的检验鉴定;⑧<span class="answer-text">法医精神病</span>的鉴定;⑨<span class="answer-text">灾害事故</span>、<span class="answer-text">交通事故</span>或其他群体死亡的鉴定与赔偿;⑩<span class="answer-text">医疗纠纷</span>的鉴定;⑪虐待儿童与老人;⑫<span class="answer-text">卫生立法</span>;⑬其他</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>法医的研究对象</strong><br>(1)<span class="blur-text">尸体</span>:目的:①确定<span class="blur-text">死亡原因</span>②判定<span class="blur-text">死亡方式</span>③推断<span class="blur-text">死亡时间</span>④推断<span class="blur-text">损伤时间</span>⑤推断<span class="blur-text">致伤物</span>⑥<span class="blur-text">个人识别</span>方式:①尸表现场检验②尸体解剖法律与法规。<br>(2)<span class="blur-text">活体</span>:①对损伤、伤残、疾病进行检查和评定②<span class="blur-text">精神状态</span>的检查和法律上相关能力的评定③<span class="blur-text">虐待</span>的检查认定④分析判断<span class="blur-text">伤病关系</span>⑤<span class="blur-text">活体年龄</span>的推断。<br>(3)<span class="blur-text">生物源性物证</span></td>
+                            <td>3.. <strong>法医的研究对象</strong><br>(1)<span class="answer-text">尸体</span>:目的:①确定<span class="answer-text">死亡原因</span>②判定<span class="answer-text">死亡方式</span>③推断<span class="answer-text">死亡时间</span>④推断<span class="answer-text">损伤时间</span>⑤推断<span class="answer-text">致伤物</span>⑥<span class="answer-text">个人识别</span>方式:①尸表现场检验②尸体解剖法律与法规。<br>(2)<span class="answer-text">活体</span>:①对损伤、伤残、疾病进行检查和评定②<span class="answer-text">精神状态</span>的检查和法律上相关能力的评定③<span class="answer-text">虐待</span>的检查认定④分析判断<span class="answer-text">伤病关系</span>⑤<span class="answer-text">活体年龄</span>的推断。<br>(3)<span class="answer-text">生物源性物证</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>法医的分支学科</strong><br>①<span class="blur-text">法医病理学</span>:是研究涉及法律问题的暴力死和非暴力死的死亡原因、死亡方式及其规律的一门法医学分支学科。<br>②<span class="blur-text">法医临床学</span>:是以活体为研究对象,应用临床医学的理论与技术,研究并解决涉及法律问题的人体伤、残疾其他生理、病理问题的法医学分支学科。<br>③<span class="blur-text">法医物证学</span>:对涉及法律问题的生物检材进行研究并鉴定的法医学分支学科。<br>④<span class="blur-text">法医毒理学</span>:是研究与自杀、他杀为目的以及因滥用药物、意外事故引起中毒的一门法医学分支学科。<br>⑤<span class="blur-text">法医毒物分析</span>:研究涉及法律问题的生物检查或其他检材中毒物的分离与鉴定,为确定是否中毒致死,提供证据的科学。<br>⑥<span class="blur-text">法医人类学</span>:是应用体质人类学的理论与技术,对人体骨骼或其残部、毛发等进行个人识别。<br>⑦<span class="blur-text">法医精神病学</span>:是应用精神病学的理论与技术,对涉及法律问题的人的精神状态进行诊察,并对其责任能力或行为能力进行鉴定。</td>
+                            <td>4.. <strong>法医的分支学科</strong><br>①<span class="answer-text">法医病理学</span>:是研究涉及法律问题的暴力死和非暴力死的死亡原因、死亡方式及其规律的一门法医学分支学科。<br>②<span class="answer-text">法医临床学</span>:是以活体为研究对象,应用临床医学的理论与技术,研究并解决涉及法律问题的人体伤、残疾其他生理、病理问题的法医学分支学科。<br>③<span class="answer-text">法医物证学</span>:对涉及法律问题的生物检材进行研究并鉴定的法医学分支学科。<br>④<span class="answer-text">法医毒理学</span>:是研究与自杀、他杀为目的以及因滥用药物、意外事故引起中毒的一门法医学分支学科。<br>⑤<span class="answer-text">法医毒物分析</span>:研究涉及法律问题的生物检查或其他检材中毒物的分离与鉴定,为确定是否中毒致死,提供证据的科学。<br>⑥<span class="answer-text">法医人类学</span>:是应用体质人类学的理论与技术,对人体骨骼或其残部、毛发等进行个人识别。<br>⑦<span class="answer-text">法医精神病学</span>:是应用精神病学的理论与技术,对涉及法律问题的人的精神状态进行诊察,并对其责任能力或行为能力进行鉴定。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>脑死亡的诊断标准</strong><br>①确切的不可救治的<span class="blur-text">脑损害</span>;②<span class="blur-text">意识丧失</span>:不可逆的深昏迷,排除其他可逆转的昏迷;③<span class="blur-text">自主呼吸消失</span>;④<span class="blur-text">脑干反射消失</span>;⑤其他:脑生物电活动消失,脑电波图直平,脑血管造影显示<span class="blur-text">脑血液循环停止</span>。</td>
+                            <td>5.. <strong>脑死亡的诊断标准</strong><br>①确切的不可救治的<span class="answer-text">脑损害</span>;②<span class="answer-text">意识丧失</span>:不可逆的深昏迷,排除其他可逆转的昏迷;③<span class="answer-text">自主呼吸消失</span>;④<span class="answer-text">脑干反射消失</span>;⑤其他:脑生物电活动消失,脑电波图直平,脑血管造影显示<span class="answer-text">脑血液循环停止</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>脑死亡与持续性植物状态（植物人）的区别</strong><br><span class="blur-text">图略</span></td>
+                            <td>6.. <strong>脑死亡与持续性植物状态（植物人）的区别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>死亡原因的种类</strong><br>(1)<span class="blur-text">根本死因</span>:引起死亡的初始原因。包括:原发性疾病、机械性损伤、窒息、高低温损伤、电击、中毒等。<br>(2)<span class="blur-text">直接死因</span>:直接导致死亡的疾病或损伤,是主要死因(或根本死因)的致命性的并发症。可能不是一种独立的疾病,是直接导致死亡的病变,是死亡机制的直接启动因素。常见的直接死因(并发症):<span class="blur-text">感染</span>、<span class="blur-text">出血</span>、<span class="blur-text">栓塞</span>、梗死、中毒、肺水肿等。<br>(3)<span class="blur-text">辅助死因</span>:与直接导致死亡的疾病或损伤无关,但对死亡的全过程具有一定加速作用的其他疾病或损伤。这些疾病或损伤本身不足以致命,但在死亡过程中起到辅助作用。<br>(4)<span class="blur-text">诱因</span>:诱发体内潜在的疾病发作而导致死亡的原因,在死亡中起轻微作用。常见诱因:情绪波动、体力活动、疲劳、吸烟、饮酒等。<br>(5)<span class="blur-text">联合死因</span>:二种或以上难以区分主次的死因在同一案例中起共同作用。①疾病与疾病联合②疾病与损伤联合③损伤与损伤联合</td>
+                            <td>7.. <strong>死亡原因的种类</strong><br>(1)<span class="answer-text">根本死因</span>:引起死亡的初始原因。包括:原发性疾病、机械性损伤、窒息、高低温损伤、电击、中毒等。<br>(2)<span class="answer-text">直接死因</span>:直接导致死亡的疾病或损伤,是主要死因(或根本死因)的致命性的并发症。可能不是一种独立的疾病,是直接导致死亡的病变,是死亡机制的直接启动因素。常见的直接死因(并发症):<span class="answer-text">感染</span>、<span class="answer-text">出血</span>、<span class="answer-text">栓塞</span>、梗死、中毒、肺水肿等。<br>(3)<span class="answer-text">辅助死因</span>:与直接导致死亡的疾病或损伤无关,但对死亡的全过程具有一定加速作用的其他疾病或损伤。这些疾病或损伤本身不足以致命,但在死亡过程中起到辅助作用。<br>(4)<span class="answer-text">诱因</span>:诱发体内潜在的疾病发作而导致死亡的原因,在死亡中起轻微作用。常见诱因:情绪波动、体力活动、疲劳、吸烟、饮酒等。<br>(5)<span class="answer-text">联合死因</span>:二种或以上难以区分主次的死因在同一案例中起共同作用。①疾病与疾病联合②疾病与损伤联合③损伤与损伤联合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>暴力性死亡常用的方式与情节</strong><br>①<span class="blur-text">自杀死</span>:自己用暴力方法,结束自己的生命。②<span class="blur-text">他杀死</span>:用暴力方法,结束他人的生命。③<span class="blur-text">意外死</span>:自然灾害或意外事故造成的死亡。④<span class="blur-text">安乐死</span>:患有不治之症并受痛苦折磨的人安详无痛苦死去。</td>
+                            <td>8.. <strong>暴力性死亡常用的方式与情节</strong><br>①<span class="answer-text">自杀死</span>:自己用暴力方法,结束自己的生命。②<span class="answer-text">他杀死</span>:用暴力方法,结束他人的生命。③<span class="answer-text">意外死</span>:自然灾害或意外事故造成的死亡。④<span class="answer-text">安乐死</span>:患有不治之症并受痛苦折磨的人安详无痛苦死去。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>早期尸体现象</strong><br>(1)<span class="blur-text">尸冷</span>:推断死亡时间。<br>(2)<span class="blur-text">尸斑</span>:①确证死亡;②根据尸斑发生发展的程度推测死亡时间:<span class="blur-text">坠积期</span>:12小时内,<span class="blur-text">扩散期</span>:12~24小时,<span class="blur-text">浸润期</span>:24小时以后;③推测死亡时尸体的位置,及判断有移尸:根据尸斑的分布特点及转移性尸斑的情况;④推测死因:根据尸斑的颜色;⑤与生前伤、疾病区别(皮下出血)。<br>(3)<span class="blur-text">肌肉迟缓</span>:皮肤肌肉失去张力、弹性,体表受物体压迫时可形成与接触物表面形态相称的压痕:判断尸体死后停放位置、有无移尸及移尸的时间。<br>(4)<span class="blur-text">尸体痉挛</span>:推断死因、案情性质。<br>(5)<span class="blur-text">尸僵</span>:①确证死亡;②推测死亡时间;③判断尸体姿态与位置,有无移尸。<br>(6)局部干燥或皮革样变<br>(7)角膜浑浊<br>(8)<span class="blur-text">自溶</span>:①推断死亡时间;②正确辨认自溶与坏死;③自溶可破坏疾病或损伤,影响判断。<br>(9)<span class="blur-text">自身消化</span>:与生前伤区别。<br>(10)浸软</td>
+                            <td>9.. <strong>早期尸体现象</strong><br>(1)<span class="answer-text">尸冷</span>:推断死亡时间。<br>(2)<span class="answer-text">尸斑</span>:①确证死亡;②根据尸斑发生发展的程度推测死亡时间:<span class="answer-text">坠积期</span>:12小时内,<span class="answer-text">扩散期</span>:12~24小时,<span class="answer-text">浸润期</span>:24小时以后;③推测死亡时尸体的位置,及判断有移尸:根据尸斑的分布特点及转移性尸斑的情况;④推测死因:根据尸斑的颜色;⑤与生前伤、疾病区别(皮下出血)。<br>(3)<span class="answer-text">肌肉迟缓</span>:皮肤肌肉失去张力、弹性,体表受物体压迫时可形成与接触物表面形态相称的压痕:判断尸体死后停放位置、有无移尸及移尸的时间。<br>(4)<span class="answer-text">尸体痉挛</span>:推断死因、案情性质。<br>(5)<span class="answer-text">尸僵</span>:①确证死亡;②推测死亡时间;③判断尸体姿态与位置,有无移尸。<br>(6)局部干燥或皮革样变<br>(7)角膜浑浊<br>(8)<span class="answer-text">自溶</span>:①推断死亡时间;②正确辨认自溶与坏死;③自溶可破坏疾病或损伤,影响判断。<br>(9)<span class="answer-text">自身消化</span>:与生前伤区别。<br>(10)浸软</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>尸斑与皮下出血的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>10.. <strong>尸斑与皮下出血的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>尸斑各期的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>11.. <strong>尸斑各期的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>窒息的分类</strong><br>①<span class="blur-text">机械性窒息</span>②<span class="blur-text">空气中缺氧</span>所致的窒息③<span class="blur-text">电击</span>所致的窒息④<span class="blur-text">中毒性窒息</span>⑤<span class="blur-text">疾病性窒息</span></td>
+                            <td>12.. <strong>窒息的分类</strong><br>①<span class="answer-text">机械性窒息</span>②<span class="answer-text">空气中缺氧</span>所致的窒息③<span class="answer-text">电击</span>所致的窒息④<span class="answer-text">中毒性窒息</span>⑤<span class="answer-text">疾病性窒息</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>机械性窒息的分类</strong><br>①压迫<span class="blur-text">颈部呼吸道</span>所致的窒息②闭塞<span class="blur-text">呼吸道口</span>所致的窒息③<span class="blur-text">异物</span>堵塞呼吸道内部所致的窒息④<span class="blur-text">液体</span>流入呼吸道所致的窒息⑤压迫<span class="blur-text">胸腹部</span>所致的窒息</td>
+                            <td>13.. <strong>机械性窒息的分类</strong><br>①压迫<span class="answer-text">颈部呼吸道</span>所致的窒息②闭塞<span class="answer-text">呼吸道口</span>所致的窒息③<span class="answer-text">异物</span>堵塞呼吸道内部所致的窒息④<span class="answer-text">液体</span>流入呼吸道所致的窒息⑤压迫<span class="answer-text">胸腹部</span>所致的窒息</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>缢死与勒死的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>14.. <strong>缢死与勒死的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>自勒与他勒的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>15.. <strong>自勒与他勒的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>扼死及为什么人不可以自己扼死自己</strong><br>(1)扼死是指用手直接压迫颈部造成的窒息死亡,俗称<span class="blur-text">掐死</span>。<br>(2)人不可以自己扼死自己,因为自扼颈部者,当<span class="blur-text">意识开始丧失</span>时,肢体<span class="blur-text">肌张力</span>也迅速消失,不可能继续扼压颈部致死。</td>
+                            <td>16.. <strong>扼死及为什么人不可以自己扼死自己</strong><br>(1)扼死是指用手直接压迫颈部造成的窒息死亡,俗称<span class="answer-text">掐死</span>。<br>(2)人不可以自己扼死自己,因为自扼颈部者,当<span class="answer-text">意识开始丧失</span>时,肢体<span class="answer-text">肌张力</span>也迅速消失,不可能继续扼压颈部致死。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>溺死的过程及死亡机制</strong><br>(1)溺死的过程:全身淹没水中而溺死者,一般将其溺死经过及症状人为分为:①<span class="blur-text">前驱期</span>(窒息前期)②<span class="blur-text">呼吸困难期</span>(二氧化碳蓄积期)③<span class="blur-text">失神期</span>(意识丧失期)④<span class="blur-text">呼吸暂停期</span>⑤<span class="blur-text">终末呼吸期</span>⑥<span class="blur-text">呼吸停止期</span>。溺死全过程的时间大约<span class="blur-text">六分钟</span>,但有个体差异。<br>(2)溺死的死亡机制:①<span class="blur-text">缺氧</span>②<span class="blur-text">淡水溺死</span>:低渗性溺死③<span class="blur-text">海水溺死</span>:高渗性溺死④<span class="blur-text">迷走神经兴奋</span>:干性溺死⑤其他因素</td>
+                            <td>17.. <strong>溺死的过程及死亡机制</strong><br>(1)溺死的过程:全身淹没水中而溺死者,一般将其溺死经过及症状人为分为:①<span class="answer-text">前驱期</span>(窒息前期)②<span class="answer-text">呼吸困难期</span>(二氧化碳蓄积期)③<span class="answer-text">失神期</span>(意识丧失期)④<span class="answer-text">呼吸暂停期</span>⑤<span class="answer-text">终末呼吸期</span>⑥<span class="answer-text">呼吸停止期</span>。溺死全过程的时间大约<span class="answer-text">六分钟</span>,但有个体差异。<br>(2)溺死的死亡机制:①<span class="answer-text">缺氧</span>②<span class="answer-text">淡水溺死</span>:低渗性溺死③<span class="answer-text">海水溺死</span>:高渗性溺死④<span class="answer-text">迷走神经兴奋</span>:干性溺死⑤其他因素</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>溺死的早期尸体征象</strong><br>(1)尸表征象<br>A.溺死征象:①<span class="blur-text">蕈状泡沫</span>:是溺死的一种具有特征性的征象;②口唇、甲床<span class="blur-text">紫绀</span>;③手中握有<span class="blur-text">泥沙</span>、<span class="blur-text">水草</span>:可作为溺死的证据之一;④<span class="blur-text">鸡皮样皮肤</span>;⑤结膜常有点状出血;⑥尸斑浅淡且出现迟缓。<br>B.水中浸泡征象:①<span class="blur-text">漂妇样变</span>;②水中尸体腐败慢于陆上的尸体,但一旦从水中打捞起来后,则腐败发展很快;③溺死或死后入水的尸体,均可形成各种损伤;④可有尸蜡现象(较长时间),可有绿苔、藻类或菌丝形成。<br>(2)尸体内部征象:①呼吸道、与口、鼻相通的蝶窦腔内和肺脏内有泡沫状溺液、水草、泥沙、浮游生物及其他异物;②<span class="blur-text">水性肺气肿</span>:溺死的重要证据之一;③胃肠道有溺液及其他异物;④右心及静脉淤血;⑤呼吸辅助肌出血。</td>
+                            <td>18.. <strong>溺死的早期尸体征象</strong><br>(1)尸表征象<br>A.溺死征象:①<span class="answer-text">蕈状泡沫</span>:是溺死的一种具有特征性的征象;②口唇、甲床<span class="answer-text">紫绀</span>;③手中握有<span class="answer-text">泥沙</span>、<span class="answer-text">水草</span>:可作为溺死的证据之一;④<span class="answer-text">鸡皮样皮肤</span>;⑤结膜常有点状出血;⑥尸斑浅淡且出现迟缓。<br>B.水中浸泡征象:①<span class="answer-text">漂妇样变</span>;②水中尸体腐败慢于陆上的尸体,但一旦从水中打捞起来后,则腐败发展很快;③溺死或死后入水的尸体,均可形成各种损伤;④可有尸蜡现象(较长时间),可有绿苔、藻类或菌丝形成。<br>(2)尸体内部征象:①呼吸道、与口、鼻相通的蝶窦腔内和肺脏内有泡沫状溺液、水草、泥沙、浮游生物及其他异物;②<span class="answer-text">水性肺气肿</span>:溺死的重要证据之一;③胃肠道有溺液及其他异物;④右心及静脉淤血;⑤呼吸辅助肌出血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>生前溺死与死后抛尸入水的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>19.. <strong>生前溺死与死后抛尸入水的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>溺死的法医学鉴定</strong><br>①<span class="blur-text">死亡原因</span>鉴定②<span class="blur-text">损伤</span>鉴定③<span class="blur-text">个人识别</span>④<span class="blur-text">死亡时间</span>推断⑤<span class="blur-text">落水地点</span>判断⑥<span class="blur-text">死亡性质</span></td>
+                            <td>20.. <strong>溺死的法医学鉴定</strong><br>①<span class="answer-text">死亡原因</span>鉴定②<span class="answer-text">损伤</span>鉴定③<span class="answer-text">个人识别</span>④<span class="answer-text">死亡时间</span>推断⑤<span class="answer-text">落水地点</span>判断⑥<span class="answer-text">死亡性质</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>机械性损伤的形态学改变</strong><br>①<span class="blur-text">擦伤</span>②<span class="blur-text">挫伤</span>③<span class="blur-text">创</span>④<span class="blur-text">骨折</span>⑤<span class="blur-text">器官破裂</span>⑥<span class="blur-text">肢体离断</span></td>
+                            <td>21.. <strong>机械性损伤的形态学改变</strong><br>①<span class="answer-text">擦伤</span>②<span class="answer-text">挫伤</span>③<span class="answer-text">创</span>④<span class="answer-text">骨折</span>⑤<span class="answer-text">器官破裂</span>⑥<span class="answer-text">肢体离断</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>高坠伤的特点</strong><br>①<span class="blur-text">广泛而严重</span>,多种损伤并存;②体表损伤相对较轻,<span class="blur-text">内脏损伤重</span>;③损伤多集中在躯体的<span class="blur-text">一侧</span>,各种损伤均可一次性暴力所为;④损伤多为<span class="blur-text">复合性损伤</span>;⑤多发性肋骨或四肢长骨骨折,甚至肢体离断;⑥若在坠落过程中碰到其他物体,可造成相应的损伤。</td>
+                            <td>22.. <strong>高坠伤的特点</strong><br>①<span class="answer-text">广泛而严重</span>,多种损伤并存;②体表损伤相对较轻,<span class="answer-text">内脏损伤重</span>;③损伤多集中在躯体的<span class="answer-text">一侧</span>,各种损伤均可一次性暴力所为;④损伤多为<span class="answer-text">复合性损伤</span>;⑤多发性肋骨或四肢长骨骨折,甚至肢体离断;⑥若在坠落过程中碰到其他物体,可造成相应的损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>接触枪弹创</strong><br>①<span class="blur-text">烧伤</span>;②组织缺损:<span class="blur-text">污垢轮</span>;③伤口印痕;④<span class="blur-text">挫伤/擦伤轮</span>;⑤<span class="blur-text">火药烟晕</span>、<span class="blur-text">火药斑纹</span></td>
+                            <td>23.. <strong>接触枪弹创</strong><br>①<span class="answer-text">烧伤</span>;②组织缺损:<span class="answer-text">污垢轮</span>;③伤口印痕;④<span class="answer-text">挫伤/擦伤轮</span>;⑤<span class="answer-text">火药烟晕</span>、<span class="answer-text">火药斑纹</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>擦伤的法医学意义</strong><br>①标志<span class="blur-text">暴力作用点</span>;②推断<span class="blur-text">致伤物</span>及其打击方向,皮瓣翻转的方向和擦痕的形态;③推断<span class="blur-text">受伤的时间</span>:根据表皮剥脱的愈合程度;④推断<span class="blur-text">凶犯的犯罪意图</span>:根据特征性分布。</td>
+                            <td>24.. <strong>擦伤的法医学意义</strong><br>①标志<span class="answer-text">暴力作用点</span>;②推断<span class="answer-text">致伤物</span>及其打击方向,皮瓣翻转的方向和擦痕的形态;③推断<span class="answer-text">受伤的时间</span>:根据表皮剥脱的愈合程度;④推断<span class="answer-text">凶犯的犯罪意图</span>:根据特征性分布。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>挫裂创和锐器创的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>25.. <strong>挫裂创和锐器创的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>切创、砍创、刺创的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>26.. <strong>切创、砍创、刺创的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>自杀、他杀、灾害的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>27.. <strong>自杀、他杀、灾害的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>强奸罪、奸淫幼女罪的构成要件</strong><br>(1)侵犯的客体:是妇女<span class="blur-text">性的不可侵犯权利</span>,即妇女拒绝与其合法配偶以外的任何男子发生性行为的权利。<br>(2)客观方面:表现为<span class="blur-text">违背妇女的意愿</span>。以暴力、胁迫或其他方法强行与之发生性交的行为。<br>(3)犯罪的主体:通常情况下,是年满<span class="blur-text">14周岁</span>的具有刑事责任能力的男子。<br>(4)主观方面:只能由<span class="blur-text">故意</span>构成,并且行为人具有<span class="blur-text">强行奸淫</span>的目的。</td>
+                            <td>28.. <strong>强奸罪、奸淫幼女罪的构成要件</strong><br>(1)侵犯的客体:是妇女<span class="answer-text">性的不可侵犯权利</span>,即妇女拒绝与其合法配偶以外的任何男子发生性行为的权利。<br>(2)客观方面:表现为<span class="answer-text">违背妇女的意愿</span>。以暴力、胁迫或其他方法强行与之发生性交的行为。<br>(3)犯罪的主体:通常情况下,是年满<span class="answer-text">14周岁</span>的具有刑事责任能力的男子。<br>(4)主观方面:只能由<span class="answer-text">故意</span>构成,并且行为人具有<span class="answer-text">强行奸淫</span>的目的。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>强奸的法医学鉴定</strong><br>(1)<span class="blur-text">案情调查</span>:一般情况和案情情况。<br>(2)<span class="blur-text">现场勘验</span>:注意保护现场,注意现场遗留物的寻找及保管,如血痕、精斑、衣服扣子等,遗留物要拍照记录后送检。<br>(3)<span class="blur-text">受害人身体检查</span>:性交的证明,强奸手段的证明,成熟度的判定,会阴部检查,遗留物检查(加害人的体液等)。<br>(4)<span class="blur-text">加害嫌疑人的检查</span>:身体抵抗防卫伤,生殖器损伤,必要时冲洗会阴部收集冲洗液备检。</td>
+                            <td>29.. <strong>强奸的法医学鉴定</strong><br>(1)<span class="answer-text">案情调查</span>:一般情况和案情情况。<br>(2)<span class="answer-text">现场勘验</span>:注意保护现场,注意现场遗留物的寻找及保管,如血痕、精斑、衣服扣子等,遗留物要拍照记录后送检。<br>(3)<span class="answer-text">受害人身体检查</span>:性交的证明,强奸手段的证明,成熟度的判定,会阴部检查,遗留物检查(加害人的体液等)。<br>(4)<span class="answer-text">加害嫌疑人的检查</span>:身体抵抗防卫伤,生殖器损伤,必要时冲洗会阴部收集冲洗液备检。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>硬脑膜外热血肿与外伤性硬脑膜外血肿鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>30.. <strong>硬脑膜外热血肿与外伤性硬脑膜外血肿鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>烧死和死后焚尸的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>31.. <strong>烧死和死后焚尸的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>猝死的常见诱因</strong><br>①<span class="blur-text">精神</span>、<span class="blur-text">心理因素</span>②<span class="blur-text">冷热刺激</span>③<span class="blur-text">过度疲劳</span>④<span class="blur-text">轻微损伤</span>⑤其他情况。</td>
+                            <td>32.. <strong>猝死的常见诱因</strong><br>①<span class="answer-text">精神</span>、<span class="answer-text">心理因素</span>②<span class="answer-text">冷热刺激</span>③<span class="answer-text">过度疲劳</span>④<span class="answer-text">轻微损伤</span>⑤其他情况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>青壮年猝死综合征的特点</strong><br>①死者生前<span class="blur-text">身体健康</span>,发育和营养良好;②多发生于年龄在<span class="blur-text">20~40岁</span>的青壮年中;③男性明显多于女性,比例约为<span class="blur-text">11:1</span>;④多死于<span class="blur-text">夜间睡眠中</span>以凌晨<span class="blur-text">2:00~4:00</span>多见;⑤死亡过程快,多表现为睡眠中突然发生呻吟、惊叫、呼吸困难、抽搐等症状,从发病到死不过<span class="blur-text">数分钟</span>;⑥尸体检验未发现致命性的病理改变,死因不明。常见主要改变是<span class="blur-text">急性心力衰竭</span>表现。</td>
+                            <td>33.. <strong>青壮年猝死综合征的特点</strong><br>①死者生前<span class="answer-text">身体健康</span>,发育和营养良好;②多发生于年龄在<span class="answer-text">20~40岁</span>的青壮年中;③男性明显多于女性,比例约为<span class="answer-text">11:1</span>;④多死于<span class="answer-text">夜间睡眠中</span>以凌晨<span class="answer-text">2:00~4:00</span>多见;⑤死亡过程快,多表现为睡眠中突然发生呻吟、惊叫、呼吸困难、抽搐等症状,从发病到死不过<span class="answer-text">数分钟</span>;⑥尸体检验未发现致命性的病理改变,死因不明。常见主要改变是<span class="answer-text">急性心力衰竭</span>表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>婴幼儿猝死综合征的主要特征</strong><br>①发病年龄多为<span class="blur-text">4周到1岁</span>,以<span class="blur-text">2~4个月</span>多见;②男女婴幼儿的发病率差别不大;③多死于<span class="blur-text">睡眠中</span>,一般在<span class="blur-text">3:00-10:00</span>时;④死亡过程较迅速;⑤多数死者生前身体较健康,发育正常,部分患者有轻微的上呼吸道感染症状;⑥尸体检验不能确定死亡原因。</td>
+                            <td>34.. <strong>婴幼儿猝死综合征的主要特征</strong><br>①发病年龄多为<span class="answer-text">4周到1岁</span>,以<span class="answer-text">2~4个月</span>多见;②男女婴幼儿的发病率差别不大;③多死于<span class="answer-text">睡眠中</span>,一般在<span class="answer-text">3:00-10:00</span>时;④死亡过程较迅速;⑤多数死者生前身体较健康,发育正常,部分患者有轻微的上呼吸道感染症状;⑥尸体检验不能确定死亡原因。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>法医物证检材的采取原则</strong><br>①检材均应<span class="blur-text">直接提取</span>,易携带物品整体采取,不易携带品提取附着检材部分;②根据检材附着的不同载体采取,<span class="blur-text">擦拭</span>,<span class="blur-text">剪切</span>,<span class="blur-text">刮削</span>,吸附,浸泡,挖取的方法;③不同部位的检材应<span class="blur-text">分别提取</span>,<span class="blur-text">单独包装</span>,用标准的物证袋或物证标签贴封,做标记;④提取的检材需详细登记案件名称,提取地点及时间,提取方法,检查名称,数量,形状,颜色,提取人,保存方法;⑤检材提取者需带<span class="blur-text">手套</span>,持洁净器具,禁止赤手触摸;⑥凡是从各种载体上提取的检材,均应提取检材附近的<span class="blur-text">空白材料</span>;⑦提取新鲜体液保留部分应尽快检验,其余部分在阴凉通风处自然干燥,人体组织应干燥或冷冻;⑧提取的检材在包装和携带运送过程中应避免互相摩擦,碰撞,失落,易碎检材防止挤压和振动,人体组织应干燥和冷冻。</td>
+                            <td>35.. <strong>法医物证检材的采取原则</strong><br>①检材均应<span class="answer-text">直接提取</span>,易携带物品整体采取,不易携带品提取附着检材部分;②根据检材附着的不同载体采取,<span class="answer-text">擦拭</span>,<span class="answer-text">剪切</span>,<span class="answer-text">刮削</span>,吸附,浸泡,挖取的方法;③不同部位的检材应<span class="answer-text">分别提取</span>,<span class="answer-text">单独包装</span>,用标准的物证袋或物证标签贴封,做标记;④提取的检材需详细登记案件名称,提取地点及时间,提取方法,检查名称,数量,形状,颜色,提取人,保存方法;⑤检材提取者需带<span class="answer-text">手套</span>,持洁净器具,禁止赤手触摸;⑥凡是从各种载体上提取的检材,均应提取检材附近的<span class="answer-text">空白材料</span>;⑦提取新鲜体液保留部分应尽快检验,其余部分在阴凉通风处自然干燥,人体组织应干燥或冷冻;⑧提取的检材在包装和携带运送过程中应避免互相摩擦,碰撞,失落,易碎检材防止挤压和振动,人体组织应干燥和冷冻。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>血痕检验程序</strong><br>①<span class="blur-text">肉眼检查</span>②<span class="blur-text">预试验</span>③<span class="blur-text">确证试验</span>④<span class="blur-text">种属鉴定</span>⑤<span class="blur-text">个人识别</span></td>
+                            <td>36.. <strong>血痕检验程序</strong><br>①<span class="answer-text">肉眼检查</span>②<span class="answer-text">预试验</span>③<span class="answer-text">确证试验</span>④<span class="answer-text">种属鉴定</span>⑤<span class="answer-text">个人识别</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>临床发现中毒患者应注意哪些问题</strong><br>①作为医生首要任务是<span class="blur-text">救治患者</span>,注意记录和描述患者的症状、体征、病情变化等;②应注意保留所有中毒存活者的<span class="blur-text">血液样本</span>、<span class="blur-text">尿液样本</span>、<span class="blur-text">呕吐物</span>、胃灌洗液等冰冻保存;③注意患者中毒方式,如怀疑群体中毒或投毒,报警、请警方协助调查。</td>
+                            <td>37.. <strong>临床发现中毒患者应注意哪些问题</strong><br>①作为医生首要任务是<span class="answer-text">救治患者</span>,注意记录和描述患者的症状、体征、病情变化等;②应注意保留所有中毒存活者的<span class="answer-text">血液样本</span>、<span class="answer-text">尿液样本</span>、<span class="answer-text">呕吐物</span>、胃灌洗液等冰冻保存;③注意患者中毒方式,如怀疑群体中毒或投毒,报警、请警方协助调查。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>法医毒物结果分析</strong><br>(1)若阳性结果但不足以解释死因时,应考虑以下几种情况:①检出物是否是用于治疗的药物或因职业接触而进入人体,如催眠镇静安定药等;②是否为<span class="blur-text">死后污染</span>所致,如砷等;③是否为<span class="blur-text">腐败产生的干扰</span>,如氰化物等;④操作是否正确,仪器与试剂是否干净、不含杂质,盛装检材的容器有无污染;⑤是否为体内正常含有的金属元素;⑥是否为<span class="blur-text">多种毒物联合中毒</span>,而单种毒物的量并不高。<br>(2)阳性结果考虑:①毒物是否作为<span class="blur-text">药物</span>进入机体;②检验结果与调查材料是否相吻合;③毒物是否<span class="blur-text">死后进入尸体</span>;④采取检材过程中有无毒无污染;⑤技术操作是否正确;⑥仪器、试剂是否纯净,实验是否应混有其他物质而产生假阳性;⑦有些毒物分布广泛,部分金属元素在正常人体微量存在,所以必须进行<span class="blur-text">量的估计</span>,不可贸然定为中毒;⑧阳性结果已达致死量或致死浓度时,一般可肯定为中毒。<br>(3)阴性结果,不能完全否定中毒死亡,应考虑以下情况:①毒物是否<span class="blur-text">生前排出</span>;②是否<span class="blur-text">生前分解</span>;③是否<span class="blur-text">死后挥发</span>、分解;④是否未被化验的方法检出;⑤提取、包装送检是否恰当;⑥方法是否正确、结论是否科学。</td>
+                            <td>38.. <strong>法医毒物结果分析</strong><br>(1)若阳性结果但不足以解释死因时,应考虑以下几种情况:①检出物是否是用于治疗的药物或因职业接触而进入人体,如催眠镇静安定药等;②是否为<span class="answer-text">死后污染</span>所致,如砷等;③是否为<span class="answer-text">腐败产生的干扰</span>,如氰化物等;④操作是否正确,仪器与试剂是否干净、不含杂质,盛装检材的容器有无污染;⑤是否为体内正常含有的金属元素;⑥是否为<span class="answer-text">多种毒物联合中毒</span>,而单种毒物的量并不高。<br>(2)阳性结果考虑:①毒物是否作为<span class="answer-text">药物</span>进入机体;②检验结果与调查材料是否相吻合;③毒物是否<span class="answer-text">死后进入尸体</span>;④采取检材过程中有无毒无污染;⑤技术操作是否正确;⑥仪器、试剂是否纯净,实验是否应混有其他物质而产生假阳性;⑦有些毒物分布广泛,部分金属元素在正常人体微量存在,所以必须进行<span class="answer-text">量的估计</span>,不可贸然定为中毒;⑧阳性结果已达致死量或致死浓度时,一般可肯定为中毒。<br>(3)阴性结果,不能完全否定中毒死亡,应考虑以下情况:①毒物是否<span class="answer-text">生前排出</span>;②是否<span class="answer-text">生前分解</span>;③是否<span class="answer-text">死后挥发</span>、分解;④是否未被化验的方法检出;⑤提取、包装送检是否恰当;⑥方法是否正确、结论是否科学。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>虐待三要素，类型及特点</strong><br>(1)三要素:①<span class="blur-text">主观故意</span>②导致<span class="blur-text">身体</span>和<span class="blur-text">精神</span>上的伤害③关系是共同生活的家庭成员或照顾人<br>(2)类型:<span class="blur-text">积极虐待</span>,<span class="blur-text">消极虐待</span><br>(3)特点:由于致伤方式的多样性和虐待的经常性,致使虐待伤种类、性状不一,程度不等,新旧伤共存等。</td>
+                            <td>39.. <strong>虐待三要素，类型及特点</strong><br>(1)三要素:①<span class="answer-text">主观故意</span>②导致<span class="answer-text">身体</span>和<span class="answer-text">精神</span>上的伤害③关系是共同生活的家庭成员或照顾人<br>(2)类型:<span class="answer-text">积极虐待</span>,<span class="answer-text">消极虐待</span><br>(3)特点:由于致伤方式的多样性和虐待的经常性,致使虐待伤种类、性状不一,程度不等,新旧伤共存等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>医疗损害的概念及不利损害包括的内容</strong><br>(1)医疗损害:在诊疗护理过程中医疗过错(故意或过失)行为对患者产生的不利损害。<br>(2)不利损害包括:①患者<span class="blur-text">死亡</span>或丧失<span class="blur-text">生存机会</span>②<span class="blur-text">残疾</span>、<span class="blur-text">功能障碍</span>或丧失<span class="blur-text">康复机会</span>③<span class="blur-text">错误受孕</span>及出身④原有疾病<span class="blur-text">加重</span>或<span class="blur-text">病程延长</span></td>
+                            <td>40.. <strong>医疗损害的概念及不利损害包括的内容</strong><br>(1)医疗损害:在诊疗护理过程中医疗过错(故意或过失)行为对患者产生的不利损害。<br>(2)不利损害包括:①患者<span class="answer-text">死亡</span>或丧失<span class="answer-text">生存机会</span>②<span class="answer-text">残疾</span>、<span class="answer-text">功能障碍</span>或丧失<span class="answer-text">康复机会</span>③<span class="answer-text">错误受孕</span>及出身④原有疾病<span class="answer-text">加重</span>或<span class="answer-text">病程延长</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>医疗侵权责任构成要件</strong><br>①主体是<span class="blur-text">医疗机构</span>及其<span class="blur-text">医务人员</span>②存在有<span class="blur-text">过错</span>的医疗行为③给患者造成<span class="blur-text">人身损害</span>后果④医疗过错行为与患者人身损害之间存在<span class="blur-text">因果关系</span></td>
+                            <td>41.. <strong>医疗侵权责任构成要件</strong><br>①主体是<span class="answer-text">医疗机构</span>及其<span class="answer-text">医务人员</span>②存在有<span class="answer-text">过错</span>的医疗行为③给患者造成<span class="answer-text">人身损害</span>后果④医疗过错行为与患者人身损害之间存在<span class="answer-text">因果关系</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>医疗事故的概念及四个构成要件</strong><br>(1)医疗事故:是指医疗机构及其医务人员在医疗活动中违反医疗卫生管理法律、行政法规、部门规章和诊疗护理规范、常规,<span class="blur-text">过失</span>造成患者人身伤害的事故。<br>(2)四个构成要件:①主体是<span class="blur-text">医疗机构</span>及其<span class="blur-text">医务人员</span>②存在<span class="blur-text">危害性</span>的医疗行为:医疗因素是可控因素而不是不可抗拒的因素③对患者造成<span class="blur-text">人身损害</span>后果④违法医疗行为与患者人身损害之间存在<span class="blur-text">因果关系</span></td>
+                            <td>42.. <strong>医疗事故的概念及四个构成要件</strong><br>(1)医疗事故:是指医疗机构及其医务人员在医疗活动中违反医疗卫生管理法律、行政法规、部门规章和诊疗护理规范、常规,<span class="answer-text">过失</span>造成患者人身伤害的事故。<br>(2)四个构成要件:①主体是<span class="answer-text">医疗机构</span>及其<span class="answer-text">医务人员</span>②存在<span class="answer-text">危害性</span>的医疗行为:医疗因素是可控因素而不是不可抗拒的因素③对患者造成<span class="answer-text">人身损害</span>后果④违法医疗行为与患者人身损害之间存在<span class="answer-text">因果关系</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>医疗事故技术鉴定与医疗损害侵权责任鉴定的异同点</strong><br>(1)相同点:①目的相同:都是对医疗行为与患者损害事实进行<span class="blur-text">因果关系分析</span>、<span class="blur-text">参与度判定</span>,为医患纠纷案件处理提供证据②程序基本相同:委托、审理、受理、实施、出具鉴定意见③均具有<span class="blur-text">法律效力</span><br>(2)不同点:①鉴定性质:<span class="blur-text">行政鉴定</span> vs <span class="blur-text">司法鉴定</span>②委托主体不同③鉴定主体不同:<span class="blur-text">医学会</span> vs <span class="blur-text">司法鉴定机构</span>④主体责任不同:<span class="blur-text">专家集体负责制</span> vs <span class="blur-text">司法鉴定人负责制</span>⑤鉴定内容与依据不同</td>
+                            <td>43.. <strong>医疗事故技术鉴定与医疗损害侵权责任鉴定的异同点</strong><br>(1)相同点:①目的相同:都是对医疗行为与患者损害事实进行<span class="answer-text">因果关系分析</span>、<span class="answer-text">参与度判定</span>,为医患纠纷案件处理提供证据②程序基本相同:委托、审理、受理、实施、出具鉴定意见③均具有<span class="answer-text">法律效力</span><br>(2)不同点:①鉴定性质:<span class="answer-text">行政鉴定</span> vs <span class="answer-text">司法鉴定</span>②委托主体不同③鉴定主体不同:<span class="answer-text">医学会</span> vs <span class="answer-text">司法鉴定机构</span>④主体责任不同:<span class="answer-text">专家集体负责制</span> vs <span class="answer-text">司法鉴定人负责制</span>⑤鉴定内容与依据不同</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>医疗纠纷处理途径及方式</strong><br>①<span class="blur-text">双方协商</span>:医院的医务科或医患纠纷办公室调解;②申请<span class="blur-text">人民调解委员会</span>调解;③申请<span class="blur-text">卫生行政部门</span>调解;④向<span class="blur-text">人民法院</span>提起诉讼⑤<span class="blur-text">医疗技术鉴定</span></td>
+                            <td>44.. <strong>医疗纠纷处理途径及方式</strong><br>①<span class="answer-text">双方协商</span>:医院的医务科或医患纠纷办公室调解;②申请<span class="answer-text">人民调解委员会</span>调解;③申请<span class="answer-text">卫生行政部门</span>调解;④向<span class="answer-text">人民法院</span>提起诉讼⑤<span class="answer-text">医疗技术鉴定</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>今后工作中如何预防医疗纠纷的发生</strong><br>①严格遵守<span class="blur-text">医疗卫生管理法律</span>、法规、规章和诊疗护理规范、常规,恪守医疗服务职业道德,改善服务态度。②加强<span class="blur-text">质量管理</span>,堵塞漏洞③提高<span class="blur-text">病历</span>及各种医疗文书的书写质量并加强管理。④改进服务作风,提高医疗质量强化我们医务人员及时服务、应答服务、谨慎服务、非特异性服务以及廉洁服务观念⑤实施<span class="blur-text">知情同意</span>,防范医疗争议医院在医疗活动的不同阶段,自始至终都要根据患者的实际情况。⑥建立良好<span class="blur-text">医患关系</span>。</td>
+                            <td>45.. <strong>今后工作中如何预防医疗纠纷的发生</strong><br>①严格遵守<span class="answer-text">医疗卫生管理法律</span>、法规、规章和诊疗护理规范、常规,恪守医疗服务职业道德,改善服务态度。②加强<span class="answer-text">质量管理</span>,堵塞漏洞③提高<span class="answer-text">病历</span>及各种医疗文书的书写质量并加强管理。④改进服务作风,提高医疗质量强化我们医务人员及时服务、应答服务、谨慎服务、非特异性服务以及廉洁服务观念⑤实施<span class="answer-text">知情同意</span>,防范医疗争议医院在医疗活动的不同阶段,自始至终都要根据患者的实际情况。⑥建立良好<span class="answer-text">医患关系</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

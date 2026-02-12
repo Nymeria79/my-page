@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">皮肤性病学大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1. 外用药物治疗原则❤（17 级考）<br>一、正确选择<span class="blur-text">剂型</span>——根据临床症状及皮损特点<br>{{c2::急}}性期：<br>1. 无糜烂渗出的红斑丘疹—{{c3::粉剂、洗剂、乳剂}}<br>2.   渗出较多或伴水肿、糜烂—{{c3::溶液湿敷}}<br>{{c2::亚急}}性期：<br>1. 少量渗出且有厚—{{c3::糊剂、油剂}}<br>2. 无渗出或干燥鳞屑为主—{{c3::乳剂}}<br>{{c2::慢}}性期：<br>1. 泛发性—{{c3::乳剂、软膏}}<br>2. 局限性—{{c3::硬膏}}、软膏、乳剂<br>3. 单纯瘙痒—{{c3::酊剂}}、乳剂<br>二、正确选择<span class="blur-text">药物</span>（性能）——根据病因、病理变化、自觉症状<br>三、正确<span class="blur-text">用法</span>及注意事项，有不良反应应立即停药<br></td>
+                            <td>1. 外用药物治疗原则❤（17 级考）<br>一、正确选择<span class="answer-text">剂型</span>——根据临床症状及皮损特点<br>{{c2::急}}性期：<br>1. 无糜烂渗出的红斑丘疹—{{c3::粉剂、洗剂、乳剂}}<br>2.   渗出较多或伴水肿、糜烂—{{c3::溶液湿敷}}<br>{{c2::亚急}}性期：<br>1. 少量渗出且有厚—{{c3::糊剂、油剂}}<br>2. 无渗出或干燥鳞屑为主—{{c3::乳剂}}<br>{{c2::慢}}性期：<br>1. 泛发性—{{c3::乳剂、软膏}}<br>2. 局限性—{{c3::硬膏}}、软膏、乳剂<br>3. 单纯瘙痒—{{c3::酊剂}}、乳剂<br>二、正确选择<span class="answer-text">药物</span>（性能）——根据病因、病理变化、自觉症状<br>三、正确<span class="answer-text">用法</span>及注意事项，有不良反应应立即停药<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. Eczema 's clinical manifestations（<span class="blur-text">湿疹</span>的临床表现）<br>1. <span class="blur-text">急</span>性湿疹：<br>①自觉瘙痒剧烈；<br><br>②皮损多形性，常变现为红斑基础上的针尖至粟粒大小的{{c2::丘疹、丘疱疹}}，<br>皮损周边丘疱疹逐渐稀疏，常因搔抓形成点状{{c2::糜烂}}面，有明显{{c2::浆液}}性渗出；<br>③ 皮损境界不清楚；<br><br>④好发于{{c2::裸露}}部位，严重时可弥漫全身，常{{c2::对称}}分布。<br><br>2. <span class="blur-text">亚急</span>性湿疹：<br>①自觉瘙痒剧烈；<br>②因急性湿疹炎症减轻或不适当处理后病程较久发展而来；<br><br>③红肿及渗出减轻，但仍有丘疹及少量丘疱疹，皮损呈{{c3::暗红}}色；<br>④可有少许{{c3::鳞屑}}及轻度浸润；<br><br>⑤再次暴露于致敏原、新的刺激或处理不当可导致急性发作；<br>⑥经久不愈，可发展为慢性湿疹。<br><br>3. <span class="blur-text">慢</span>性湿疹：<br>①自觉明显瘙痒，常呈<span class="blur-text">阵发</span>性；<br>②由急性及亚急性湿疹迁延而来；<br><br>③好发于{{c4::手、足、肘窝、乳房}}等处，多{{c4::对称}}发病；<br>④表现为患处皮肤浸润性暗红斑上有丘疹、抓痕及鳞屑，<br>局部皮肤肥厚、表面粗糙，有不同程度的苔藓样变、色素沉着或色素减退；<br>⑤延续{{c4::数个月}}或更久。<br></td>
+                            <td>2. Eczema 's clinical manifestations（<span class="answer-text">湿疹</span>的临床表现）<br>1. <span class="answer-text">急</span>性湿疹：<br>①自觉瘙痒剧烈；<br><br>②皮损多形性，常变现为红斑基础上的针尖至粟粒大小的{{c2::丘疹、丘疱疹}}，<br>皮损周边丘疱疹逐渐稀疏，常因搔抓形成点状{{c2::糜烂}}面，有明显{{c2::浆液}}性渗出；<br>③ 皮损境界不清楚；<br><br>④好发于{{c2::裸露}}部位，严重时可弥漫全身，常{{c2::对称}}分布。<br><br>2. <span class="answer-text">亚急</span>性湿疹：<br>①自觉瘙痒剧烈；<br>②因急性湿疹炎症减轻或不适当处理后病程较久发展而来；<br><br>③红肿及渗出减轻，但仍有丘疹及少量丘疱疹，皮损呈{{c3::暗红}}色；<br>④可有少许{{c3::鳞屑}}及轻度浸润；<br><br>⑤再次暴露于致敏原、新的刺激或处理不当可导致急性发作；<br>⑥经久不愈，可发展为慢性湿疹。<br><br>3. <span class="answer-text">慢</span>性湿疹：<br>①自觉明显瘙痒，常呈<span class="answer-text">阵发</span>性；<br>②由急性及亚急性湿疹迁延而来；<br><br>③好发于{{c4::手、足、肘窝、乳房}}等处，多{{c4::对称}}发病；<br>④表现为患处皮肤浸润性暗红斑上有丘疹、抓痕及鳞屑，<br>局部皮肤肥厚、表面粗糙，有不同程度的苔藓样变、色素沉着或色素减退；<br>⑤延续{{c4::数个月}}或更久。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. Differential diagnosis between eczema and cantact dermatitis<br>（<span class="blur-text">湿疹</span>和<span class="blur-text">接触性皮炎</span>的鉴别诊断）❤（老师强调）<br>1. <span class="blur-text">病因</span>：<br>湿疹病因复杂，多属内因，不易查清；<br>接触性皮炎对属{{c2::外因}}，有{{c2::接触史}}<br><br>2. <span class="blur-text">皮损</span>特点：<br>湿疹呈{{c3::多形性}}，对称，无{{c3::大疱及坏死}}，炎症较轻；<br>接触性皮炎呈{{c3::单一}}形态，可有{{c3::大疱和坏死}}，炎症较重<br>3. 皮损境界：<br>湿疹{{c3::不清楚}}；<br>接触性皮炎{{c3::清楚}}<br>4. 好发部位：<br>湿疹好发于{{c3::任何}}部位；<br>接触性皮炎主要在{{c3::接触}}部位<br><br>5. <span class="blur-text">病程</span>：<br>湿疹较{{c4::长}}，易{{c4::复发}}；<br>接触性皮炎较{{c4::短}}，呈{{c4::一过性}}，祛除病因后可自愈，不接触不复发<br>6. <span class="blur-text">斑贴</span>试验：<br>湿疹常{{c4::阴}}性；<br>接触性皮炎常{{c4::阳}}性<br></td>
+                            <td>3. Differential diagnosis between eczema and cantact dermatitis<br>（<span class="answer-text">湿疹</span>和<span class="answer-text">接触性皮炎</span>的鉴别诊断）❤（老师强调）<br>1. <span class="answer-text">病因</span>：<br>湿疹病因复杂，多属内因，不易查清；<br>接触性皮炎对属{{c2::外因}}，有{{c2::接触史}}<br><br>2. <span class="answer-text">皮损</span>特点：<br>湿疹呈{{c3::多形性}}，对称，无{{c3::大疱及坏死}}，炎症较轻；<br>接触性皮炎呈{{c3::单一}}形态，可有{{c3::大疱和坏死}}，炎症较重<br>3. 皮损境界：<br>湿疹{{c3::不清楚}}；<br>接触性皮炎{{c3::清楚}}<br>4. 好发部位：<br>湿疹好发于{{c3::任何}}部位；<br>接触性皮炎主要在{{c3::接触}}部位<br><br>5. <span class="answer-text">病程</span>：<br>湿疹较{{c4::长}}，易{{c4::复发}}；<br>接触性皮炎较{{c4::短}}，呈{{c4::一过性}}，祛除病因后可自愈，不接触不复发<br>6. <span class="answer-text">斑贴</span>试验：<br>湿疹常{{c4::阴}}性；<br>接触性皮炎常{{c4::阳}}性<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. Eczema 's treatment（<span class="blur-text">湿疹</span>的治疗）<br>1.   <span class="blur-text">一般</span>治疗：<br>①{{c2::避免}}任何疑似病因；<br>②{{c2::心理}}治疗：减轻情绪和压力；<br>③{{c2::保湿}}润肤：用润肤剂保持受损皮肤的湿润<br><br>2.   <span class="blur-text">局部</span>治疗：{{c4::皮质激素}}治疗—根据情况选择激素效能（主要的方法）<br>（1）急性湿疹：<br>①渗出多者可用 3%{{c4::硼酸}}溶液湿敷；<br>②渗出减少后用{{c4::糖皮质激素}}霜剂，可和油剂交替使用；<br>③无渗出或渗出不多者可用{{c4::氧化锌}}油；；<br><br>④有感染时加用{{c4::高锰酸钾}}溶液和抗菌膏<br>（2）亚急性湿疹：<br>可选用糖皮质激素（低效或中效）{{c4::乳、糊}}剂，<br>为防止和控制继发性感染，可加用{{c4::抗生素}}类<br>（3）慢性湿疹：<br>可选用{{c4::软、硬}}膏、{{c4::涂膜}}剂；<br>顽固性局限性皮损可用糖皮质激素（强效） 作皮损内{{c4::注射}}<br><br>3.   新的局部<span class="blur-text">免疫抑制</span>剂<br>（1）系统治疗 1：①{{c3::抗组胺}}剂；②急性期可用{{c3::钙剂、维生素 C}}<br>（2）系统治疗 2：①系统{{c3::抗感染}}治疗；②葡萄球菌感染可用{{c3::莫匹罗星}}<br>（3）系统治疗 3：①{{c3::激素}}只建议用于严重情况及控制渗出<br></td>
+                            <td>4. Eczema 's treatment（<span class="answer-text">湿疹</span>的治疗）<br>1.   <span class="answer-text">一般</span>治疗：<br>①{{c2::避免}}任何疑似病因；<br>②{{c2::心理}}治疗：减轻情绪和压力；<br>③{{c2::保湿}}润肤：用润肤剂保持受损皮肤的湿润<br><br>2.   <span class="answer-text">局部</span>治疗：{{c4::皮质激素}}治疗—根据情况选择激素效能（主要的方法）<br>（1）急性湿疹：<br>①渗出多者可用 3%{{c4::硼酸}}溶液湿敷；<br>②渗出减少后用{{c4::糖皮质激素}}霜剂，可和油剂交替使用；<br>③无渗出或渗出不多者可用{{c4::氧化锌}}油；；<br><br>④有感染时加用{{c4::高锰酸钾}}溶液和抗菌膏<br>（2）亚急性湿疹：<br>可选用糖皮质激素（低效或中效）{{c4::乳、糊}}剂，<br>为防止和控制继发性感染，可加用{{c4::抗生素}}类<br>（3）慢性湿疹：<br>可选用{{c4::软、硬}}膏、{{c4::涂膜}}剂；<br>顽固性局限性皮损可用糖皮质激素（强效） 作皮损内{{c4::注射}}<br><br>3.   新的局部<span class="answer-text">免疫抑制</span>剂<br>（1）系统治疗 1：①{{c3::抗组胺}}剂；②急性期可用{{c3::钙剂、维生素 C}}<br>（2）系统治疗 2：①系统{{c3::抗感染}}治疗；②葡萄球菌感染可用{{c3::莫匹罗星}}<br>（3）系统治疗 3：①{{c3::激素}}只建议用于严重情况及控制渗出<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. <span class="blur-text">接触性皮炎</span>的诊断<br>（diagnosis of contact dermatitis）<br>1.   有明确的刺激物或变应性物质的<span class="blur-text">接触史</span>；<br><br>2.   皮损只发生在<span class="blur-text">接触</span>区域；<br>3.   皮损边界<span class="blur-text">清楚</span>；<br>4.   典型的临床表现：伴<span class="blur-text">痛痒</span><br><br>5.   去除接触物后病情很快改善，再次接触后很快复发；<br>6.   <span class="blur-text">斑贴</span>试验阳性<br></td>
+                            <td>5. <span class="answer-text">接触性皮炎</span>的诊断<br>（diagnosis of contact dermatitis）<br>1.   有明确的刺激物或变应性物质的<span class="answer-text">接触史</span>；<br><br>2.   皮损只发生在<span class="answer-text">接触</span>区域；<br>3.   皮损边界<span class="answer-text">清楚</span>；<br>4.   典型的临床表现：伴<span class="answer-text">痛痒</span><br><br>5.   去除接触物后病情很快改善，再次接触后很快复发；<br>6.   <span class="answer-text">斑贴</span>试验阳性<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. 急性荨麻疹的治疗❤<br>1.   首选<span class="blur-text">抗组胺</span>剂；<br>2.   降低血管通透性药物（<span class="blur-text">维生素 C、钙剂</span>）、肥大细胞膜稳定剂；<br>3.   <span class="blur-text">皮质类固醇</span>激素；<br><br>4.    胃肠道症状重者可给<span class="blur-text">解痉</span>剂（山莨菪碱、阿托品、溴丙胺太林）；<br>5.   脓毒血症或败血症引起者应立即使用<span class="blur-text">抗生素</span>控制感染；<br>6.   伴有过敏性休克、喉头水肿及呼吸困难者，应立即抢救（首选 0.1%<span class="blur-text">肾上腺素</span>）。<br></td>
+                            <td>6. 急性荨麻疹的治疗❤<br>1.   首选<span class="answer-text">抗组胺</span>剂；<br>2.   降低血管通透性药物（<span class="answer-text">维生素 C、钙剂</span>）、肥大细胞膜稳定剂；<br>3.   <span class="answer-text">皮质类固醇</span>激素；<br><br>4.    胃肠道症状重者可给<span class="answer-text">解痉</span>剂（山莨菪碱、阿托品、溴丙胺太林）；<br>5.   脓毒血症或败血症引起者应立即使用<span class="answer-text">抗生素</span>控制感染；<br>6.   伴有过敏性休克、喉头水肿及呼吸困难者，应立即抢救（首选 0.1%<span class="answer-text">肾上腺素</span>）。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. 急性荨麻疹伴休克、喉头水肿及呼吸困难的抢救方案❤<br>1.    <span class="blur-text">0.1%肾上腺素</span>皮下注射或肌内注射，必要时可重复使用（心脏病或高血压患者慎用）；<br>2.   糖皮质激素肌内注射或静脉注射，可选用<span class="blur-text">地塞米松</span>、<span class="blur-text">氢化可的松</span>或<span class="blur-text">甲泼尼龙</span>等；<br>3.   给与<span class="blur-text">吸氧</span>；<br><br>4.   支气管痉挛严重时可静脉注射<span class="blur-text">氨茶碱</span>；<br>5.   喉头水肿呼吸受阻时可行<span class="blur-text">气管切开</span>；<br>6.   心跳、呼吸骤停时，应进行<span class="blur-text">心肺复苏</span><br></td>
+                            <td>7. 急性荨麻疹伴休克、喉头水肿及呼吸困难的抢救方案❤<br>1.    <span class="answer-text">0.1%肾上腺素</span>皮下注射或肌内注射，必要时可重复使用（心脏病或高血压患者慎用）；<br>2.   糖皮质激素肌内注射或静脉注射，可选用<span class="answer-text">地塞米松</span>、<span class="answer-text">氢化可的松</span>或<span class="answer-text">甲泼尼龙</span>等；<br>3.   给与<span class="answer-text">吸氧</span>；<br><br>4.   支气管痉挛严重时可静脉注射<span class="answer-text">氨茶碱</span>；<br>5.   喉头水肿呼吸受阻时可行<span class="answer-text">气管切开</span>；<br>6.   心跳、呼吸骤停时，应进行<span class="answer-text">心肺复苏</span><br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. 银屑病分为哪几型？试述寻常型银屑病的临床特点<br>1. 银屑病可分为：<br><span class="blur-text">寻常</span>型银屑病、<br><span class="blur-text">关节</span>病型银屑病、<span class="blur-text">红皮</span>病型银屑病、<br><span class="blur-text">脓疱</span>型银屑病<br>2. 寻常型银屑病的临床特点：<br><br>（1）典型皮损：<br>初起皮损为红色{{c2::丘疹}}或斑丘疹，<br>逐渐扩展为边界清楚的红色{{c2::斑块}}，<br>可呈多种形态，上覆厚层{{c2::银白色鳞屑}}；<br>（2）三大特征：<br>若刮除最上层的银白色鳞屑，可观察到鳞屑成层状的特点，就像在刮蜡一样（{{c3::蜡滴}}现象），<br>刮去银白色鳞屑可见淡红色发光半透明薄膜（{{c3::薄膜}}现象），<br>剥去薄膜可见点状出血（{{c3::Auspitz}} 征），是由于真皮乳头顶部迂曲扩张的毛细血管被刮破所致；<br><br>（3）好发部位：<br>可发生于全身各处，以四肢{{c4::伸}}侧（{{c4::肘、膝}}部）和{{c4::骶尾}}部最为常见，<br>常成{{c4::对称}}性。<br>头皮皮损鳞屑较厚，常超出发际，头发呈{{c4::束}}状（{{c4::束}}状发），<br>少数可发生在唇、颊黏膜和龟头等处，甲受累呈"顶针状"凹陷；<br>（4）自觉症状：不同程度{{c4::瘙痒}}<br></td>
+                            <td>8. 银屑病分为哪几型？试述寻常型银屑病的临床特点<br>1. 银屑病可分为：<br><span class="answer-text">寻常</span>型银屑病、<br><span class="answer-text">关节</span>病型银屑病、<span class="answer-text">红皮</span>病型银屑病、<br><span class="answer-text">脓疱</span>型银屑病<br>2. 寻常型银屑病的临床特点：<br><br>（1）典型皮损：<br>初起皮损为红色{{c2::丘疹}}或斑丘疹，<br>逐渐扩展为边界清楚的红色{{c2::斑块}}，<br>可呈多种形态，上覆厚层{{c2::银白色鳞屑}}；<br>（2）三大特征：<br>若刮除最上层的银白色鳞屑，可观察到鳞屑成层状的特点，就像在刮蜡一样（{{c3::蜡滴}}现象），<br>刮去银白色鳞屑可见淡红色发光半透明薄膜（{{c3::薄膜}}现象），<br>剥去薄膜可见点状出血（{{c3::Auspitz}} 征），是由于真皮乳头顶部迂曲扩张的毛细血管被刮破所致；<br><br>（3）好发部位：<br>可发生于全身各处，以四肢{{c4::伸}}侧（{{c4::肘、膝}}部）和{{c4::骶尾}}部最为常见，<br>常成{{c4::对称}}性。<br>头皮皮损鳞屑较厚，常超出发际，头发呈{{c4::束}}状（{{c4::束}}状发），<br>少数可发生在唇、颊黏膜和龟头等处，甲受累呈"顶针状"凹陷；<br>（4）自觉症状：不同程度{{c4::瘙痒}}<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. 寻常型银屑病分为哪几期？各期的表现是什么？<br>1.   分为<span class="blur-text">进行</span>期、<span class="blur-text">静止</span>期、<span class="blur-text">消退</span>期<br>2.   各期表现：<br>（1）进行期：<br>旧皮损无消退，{{c2::新皮损}}不断出现，<br>皮损浸润炎症{{c2::明显}}，鳞屑较厚，有同形反应；<br>（2）静止期：<br>皮损{{c2::稳定}}，无新皮损出现，<br>炎症较{{c2::轻}}，鳞屑较多；<br>（3）退行期：<br>皮损{{c2::缩小}}或变平，<br>炎症基本{{c2::消退}}，遗留{{c2::色素}}沉着或减退斑。<br></td>
+                            <td>9. 寻常型银屑病分为哪几期？各期的表现是什么？<br>1.   分为<span class="answer-text">进行</span>期、<span class="answer-text">静止</span>期、<span class="answer-text">消退</span>期<br>2.   各期表现：<br>（1）进行期：<br>旧皮损无消退，{{c2::新皮损}}不断出现，<br>皮损浸润炎症{{c2::明显}}，鳞屑较厚，有同形反应；<br>（2）静止期：<br>皮损{{c2::稳定}}，无新皮损出现，<br>炎症较{{c2::轻}}，鳞屑较多；<br>（3）退行期：<br>皮损{{c2::缩小}}或变平，<br>炎症基本{{c2::消退}}，遗留{{c2::色素}}沉着或减退斑。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. 重型药疹的治疗❤（18 级考）<br>1.   及早、足量使用<span class="blur-text">糖皮质激素</span>（根据病情选择剂量）；<br>2.   防治激发<span class="blur-text">感染</span>；<br>3.   加强<span class="blur-text">支持</span>疗法；<br><br>4.   静脉注射人血<span class="blur-text">丙种球蛋白</span>（可以中和抗体）；<br>5.   <span class="blur-text">血浆</span>置换（清除致敏药物及其代谢毒性产物及炎症介质）；<br>6.   加强<span class="blur-text">护理</span>及外用药物治疗<br></td>
+                            <td>10. 重型药疹的治疗❤（18 级考）<br>1.   及早、足量使用<span class="answer-text">糖皮质激素</span>（根据病情选择剂量）；<br>2.   防治激发<span class="answer-text">感染</span>；<br>3.   加强<span class="answer-text">支持</span>疗法；<br><br>4.   静脉注射人血<span class="answer-text">丙种球蛋白</span>（可以中和抗体）；<br>5.   <span class="answer-text">血浆</span>置换（清除致敏药物及其代谢毒性产物及炎症介质）；<br>6.   加强<span class="answer-text">护理</span>及外用药物治疗<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. Treatment of tinea capitis（<span class="blur-text">头癣</span>的治疗）❤<br>1.    口服药物治疗：<span class="blur-text">伊曲康唑</span>或<span class="blur-text">特比萘芬</span>、<span class="blur-text">灰黄霉素</span>；<br><br>2.   剪发：尽可能将病发剪除，<br>每周 {{c2::1}} 次，连续 {{c2::8}} 周；<br>3.   洗头：用{{c2::硫磺皂}}或 2%{{c2::酮康唑}}洗剂洗头，<br>每天 {{c2::1}} 次。连续 {{c2::8}} 周；<br><br>4.   擦药：1%{{c3::联苯苄唑}}溶液或霜剂、1%{{c3::特比萘芬}}霜等，<br>每天 2 次，连续 8 周；<br>5.   消毒：患者使用过的毛巾、帽子等生活用品及理发工具煮沸消毒。<br></td>
+                            <td>11. Treatment of tinea capitis（<span class="answer-text">头癣</span>的治疗）❤<br>1.    口服药物治疗：<span class="answer-text">伊曲康唑</span>或<span class="answer-text">特比萘芬</span>、<span class="answer-text">灰黄霉素</span>；<br><br>2.   剪发：尽可能将病发剪除，<br>每周 {{c2::1}} 次，连续 {{c2::8}} 周；<br>3.   洗头：用{{c2::硫磺皂}}或 2%{{c2::酮康唑}}洗剂洗头，<br>每天 {{c2::1}} 次。连续 {{c2::8}} 周；<br><br>4.   擦药：1%{{c3::联苯苄唑}}溶液或霜剂、1%{{c3::特比萘芬}}霜等，<br>每天 2 次，连续 8 周；<br>5.   消毒：患者使用过的毛巾、帽子等生活用品及理发工具煮沸消毒。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. Diagnosis standard of SLE（<span class="blur-text">系统性红斑狼疮</span>的诊断标准）❤（ 16、18 级<br><br>1.   <span class="blur-text">蝶形；盘状</span>红斑；<br>2.   <span class="blur-text">光</span>敏感；<br>3.   口腔<span class="blur-text">溃疡</span>；<br><br>4.   非侵袭性{{c2::关节}}炎；{{c2::浆膜}}炎（胸膜炎或心包炎）；<br>5.   肾脏损害：{{c2::蛋白}}尿、{{c2::细胞}}管型；<br>6.   神经病变：{{c2::癫痫}}发作或{{c2::精神}}症状；<br><br>7.   血液学异常：{{c3::溶血性贫血}}伴网织红细胞增多，{{c3::白}}细胞、{{c3::淋巴}}细胞、{{c3::血小板}}降低；<br>8. 免疫学异常：抗 {{c3::dsDNA}} / 抗 {{c3::Sm}} / 抗{{c3::心磷脂}}抗体（+）；<br>9. {{c3::ANA}} 阳性<br></td>
+                            <td>12. Diagnosis standard of SLE（<span class="answer-text">系统性红斑狼疮</span>的诊断标准）❤（ 16、18 级<br><br>1.   <span class="answer-text">蝶形；盘状</span>红斑；<br>2.   <span class="answer-text">光</span>敏感；<br>3.   口腔<span class="answer-text">溃疡</span>；<br><br>4.   非侵袭性{{c2::关节}}炎；{{c2::浆膜}}炎（胸膜炎或心包炎）；<br>5.   肾脏损害：{{c2::蛋白}}尿、{{c2::细胞}}管型；<br>6.   神经病变：{{c2::癫痫}}发作或{{c2::精神}}症状；<br><br>7.   血液学异常：{{c3::溶血性贫血}}伴网织红细胞增多，{{c3::白}}细胞、{{c3::淋巴}}细胞、{{c3::血小板}}降低；<br>8. 免疫学异常：抗 {{c3::dsDNA}} / 抗 {{c3::Sm}} / 抗{{c3::心磷脂}}抗体（+）；<br>9. {{c3::ANA}} 阳性<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. 简述一期梅毒的临床表现<br>主要表现为<span class="blur-text">硬下疳</span>和<span class="blur-text">硬化性淋巴结炎</span>，一般无全身症状<br><br>1.   <span class="blur-text">硬下疳</span>：<br>是由梅毒螺旋体在侵入部位引起的{{c2::无}}痛性{{c2::炎症}}反应，<br>表现为单个圆形或椭圆形无痛性{{c2::溃疡}}，<br>边界清楚，周边{{c2::水肿}}并隆起，触之有{{c2::软骨}}样硬度，<br>表面有{{c2::浆液}}性分泌物，内含大量梅毒螺旋体，传染性极强。<br><br>2.   <span class="blur-text">硬化性淋巴结炎</span>：<br>发生于硬下疳出现 {{c3::1-2}}  周后，<br><br>常累及单侧{{c3::腹股沟}}或患处附近{{c3::淋巴结}}，<br>受累淋巴结明显{{c3::肿大}}，表面无红肿破溃，一般无疼痛、触痛，<br><br>消退常需要{{c3::数个月}}，{{c3::淋巴结穿刺}}检查可见打枊梅毒螺旋体。<br></td>
+                            <td>13. 简述一期梅毒的临床表现<br>主要表现为<span class="answer-text">硬下疳</span>和<span class="answer-text">硬化性淋巴结炎</span>，一般无全身症状<br><br>1.   <span class="answer-text">硬下疳</span>：<br>是由梅毒螺旋体在侵入部位引起的{{c2::无}}痛性{{c2::炎症}}反应，<br>表现为单个圆形或椭圆形无痛性{{c2::溃疡}}，<br>边界清楚，周边{{c2::水肿}}并隆起，触之有{{c2::软骨}}样硬度，<br>表面有{{c2::浆液}}性分泌物，内含大量梅毒螺旋体，传染性极强。<br><br>2.   <span class="answer-text">硬化性淋巴结炎</span>：<br>发生于硬下疳出现 {{c3::1-2}}  周后，<br><br>常累及单侧{{c3::腹股沟}}或患处附近{{c3::淋巴结}}，<br>受累淋巴结明显{{c3::肿大}}，表面无红肿破溃，一般无疼痛、触痛，<br><br>消退常需要{{c3::数个月}}，{{c3::淋巴结穿刺}}检查可见打枊梅毒螺旋体。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. 简述二期梅毒皮肤黏膜损害的共同特点❤<br>1.   皮疹广泛<span class="blur-text">对称</span>，多呈<span class="blur-text">铜红</span>色，好发于<span class="blur-text">掌跖</span>部；<br>2.   <span class="blur-text">客</span>观症状明显而<span class="blur-text">主</span>观症状轻微；<br>3.   皮疹破坏性弱但传染性强，皮损内含大量梅毒螺旋体；<br>4.   未经治疗或治疗不当，经<span class="blur-text">数周</span>自行消退，免疫力降低可复发。<br></td>
+                            <td>14. 简述二期梅毒皮肤黏膜损害的共同特点❤<br>1.   皮疹广泛<span class="answer-text">对称</span>，多呈<span class="answer-text">铜红</span>色，好发于<span class="answer-text">掌跖</span>部；<br>2.   <span class="answer-text">客</span>观症状明显而<span class="answer-text">主</span>观症状轻微；<br>3.   皮疹破坏性弱但传染性强，皮损内含大量梅毒螺旋体；<br>4.   未经治疗或治疗不当，经<span class="answer-text">数周</span>自行消退，免疫力降低可复发。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. 简述二期梅毒的临床表现<br>一期梅毒未经治疗或治疗不彻底，<br>TP  由淋巴系统进入血液循环形成<span class="blur-text">菌血</span>症播散全身，引起皮肤黏膜及系统性损害，<br>称二期梅毒，常发生于<span class="blur-text">硬下疳</span>消退 <span class="blur-text">3-4</span> 周后。<br><br>1.   {{c2::皮肤}}黏膜损害：<br>①梅毒{{c2::疹}}：<br>呈多形性，掌跖部梅毒疹表现为{{c3::铜红}}色、常有{{c3::领圈}}样脱屑；<br>②扁平{{c2::湿疣}}：<br>好发于肛周、外生殖器、会阴、腹股沟及股内侧等部位，<br>皮损呈{{c3::粉红}}色扁平{{c3::丘疹/斑块}}，内含大量 TP ，传染性极强；<br>③梅毒性{{c2::脱发}}：<br>局限性或弥漫性脱发，<br>呈{{c3::虫蚀}}状，非永久性脱发；<br>④黏膜损害：<br>多见于口腔、舌、生殖器等处黏膜，<br>表现为边界清楚的红斑、水肿和糜烂，<br>表面可覆盖有灰白色膜状物；<br>2.   {{c2::骨}}关节损害：{{c3::骨膜}}炎最常见，多发生于{{c3::长}}骨；<br>3.   {{c2::眼}}损害：引起眼部{{c3::虹膜}}炎等多种炎症，引起{{c3::视力}}损害；<br><br>4.   {{c2::神经}}损害：主要有无症状神经梅毒、梅毒性脑膜炎、脑血管梅毒；<br>5.   多发性硬化性淋巴结炎：表现为全身淋巴结无痛性肿大；<br>6.   {{c2::内脏}}梅毒：可引起肝炎、肾病等。<br></td>
+                            <td>15. 简述二期梅毒的临床表现<br>一期梅毒未经治疗或治疗不彻底，<br>TP  由淋巴系统进入血液循环形成<span class="answer-text">菌血</span>症播散全身，引起皮肤黏膜及系统性损害，<br>称二期梅毒，常发生于<span class="answer-text">硬下疳</span>消退 <span class="answer-text">3-4</span> 周后。<br><br>1.   {{c2::皮肤}}黏膜损害：<br>①梅毒{{c2::疹}}：<br>呈多形性，掌跖部梅毒疹表现为{{c3::铜红}}色、常有{{c3::领圈}}样脱屑；<br>②扁平{{c2::湿疣}}：<br>好发于肛周、外生殖器、会阴、腹股沟及股内侧等部位，<br>皮损呈{{c3::粉红}}色扁平{{c3::丘疹/斑块}}，内含大量 TP ，传染性极强；<br>③梅毒性{{c2::脱发}}：<br>局限性或弥漫性脱发，<br>呈{{c3::虫蚀}}状，非永久性脱发；<br>④黏膜损害：<br>多见于口腔、舌、生殖器等处黏膜，<br>表现为边界清楚的红斑、水肿和糜烂，<br>表面可覆盖有灰白色膜状物；<br>2.   {{c2::骨}}关节损害：{{c3::骨膜}}炎最常见，多发生于{{c3::长}}骨；<br>3.   {{c2::眼}}损害：引起眼部{{c3::虹膜}}炎等多种炎症，引起{{c3::视力}}损害；<br><br>4.   {{c2::神经}}损害：主要有无症状神经梅毒、梅毒性脑膜炎、脑血管梅毒；<br>5.   多发性硬化性淋巴结炎：表现为全身淋巴结无痛性肿大；<br>6.   {{c2::内脏}}梅毒：可引起肝炎、肾病等。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. 简述二期梅毒的诊断标准<br>1.   有不洁<span class="blur-text">性交</span>史或下疳史，病程 <span class="blur-text">2</span> 年以内；<br>2.   多种<span class="blur-text">皮疹</span>伴全身<span class="blur-text">淋巴结肿大</span>和早期<span class="blur-text">流感</span>症状；<br><br>3.   实验室检查：<br>黏膜损害处暗视野、直接<span class="blur-text">免疫荧光</span>或其他方法能找到梅毒螺旋体；<br>4.   梅毒血清实验<span class="blur-text">强阳</span>性<br></td>
+                            <td>16. 简述二期梅毒的诊断标准<br>1.   有不洁<span class="answer-text">性交</span>史或下疳史，病程 <span class="answer-text">2</span> 年以内；<br>2.   多种<span class="answer-text">皮疹</span>伴全身<span class="answer-text">淋巴结肿大</span>和早期<span class="answer-text">流感</span>症状；<br><br>3.   实验室检查：<br>黏膜损害处暗视野、直接<span class="answer-text">免疫荧光</span>或其他方法能找到梅毒螺旋体；<br>4.   梅毒血清实验<span class="answer-text">强阳</span>性<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. 简述三期梅毒梅毒的共同特点❤<br>1.   损害数目少，破坏性大，分布<span class="blur-text">不对称</span>，愈后留<span class="blur-text">瘢痕</span>；<br>2.   客观症状严重，主观症状轻微；<br>3. 损害内梅毒螺旋体少，传染性小或无<br></td>
+                            <td>17. 简述三期梅毒梅毒的共同特点❤<br>1.   损害数目少，破坏性大，分布<span class="answer-text">不对称</span>，愈后留<span class="answer-text">瘢痕</span>；<br>2.   客观症状严重，主观症状轻微；<br>3. 损害内梅毒螺旋体少，传染性小或无<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. 早期梅毒的治疗方案<br>1.   <span class="blur-text">苄星</span>青霉素 240 万 U，分两侧臀部肌内注射，使用 1-3 次；<br>2.   或<span class="blur-text">普鲁卡因</span>青霉素 G 120 万 U/d 肌内注射，连续 10-14 天；<br><br>3. 青霉素过敏者可选用<span class="blur-text">头孢曲松钠</span> 1.0-2.0 g/d 肌内注射或静脉注射，连续 10-14 天，<br>或连续口服<span class="blur-text">四环素</span>类药物 14 天，<span class="blur-text">阿奇</span>霉素 2 g，顿服。<br></td>
+                            <td>18. 早期梅毒的治疗方案<br>1.   <span class="answer-text">苄星</span>青霉素 240 万 U，分两侧臀部肌内注射，使用 1-3 次；<br>2.   或<span class="answer-text">普鲁卡因</span>青霉素 G 120 万 U/d 肌内注射，连续 10-14 天；<br><br>3. 青霉素过敏者可选用<span class="answer-text">头孢曲松钠</span> 1.0-2.0 g/d 肌内注射或静脉注射，连续 10-14 天，<br>或连续口服<span class="answer-text">四环素</span>类药物 14 天，<span class="answer-text">阿奇</span>霉素 2 g，顿服。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. 烧伤的分度❤（17、18 级考）<br>三度四分法：<br>1. Ⅰ度烧伤：<br>仅仅累及<span class="blur-text">表皮</span>层，但表皮屏障功能完整。<br>常见于太阳<span class="blur-text">晒伤</span>，烧伤局部轻微<span class="blur-text">疼痛或烧灼</span>样感、<span class="blur-text">红斑</span>，没有水疱，<br><span class="blur-text">3-7</span> 天后愈合，<span class="blur-text">不留</span>疤痕（红斑样烧伤）；<br><br>2. 浅Ⅱ度烧伤：<br>累及{{c2::真皮浅}}层，部分{{c2::生发}}层存在。<br>有大小不一的{{c2::水疱}}，疱皮薄液清亮、创基潮红、质地柔软、{{c2::剧烈}}疼痛，<br>{{c2::7-14}} 天后愈合，不留疤痕，但有{{c2::色素}}改变；<br>3. 深Ⅱ度烧伤：<br>累及{{c2::真皮深}}层，但未累及皮下。也可有小水疱，<br>去除水疱皮后，创面微湿，红白相间，触之{{c2::不易}}褪色，痛觉较{{c2::迟钝}}，<br>{{c2::3-4 周}}后愈合，愈合后有明显{{c2::瘢痕}}形成，有色素沉着；<br><br>(Ⅱ度烧伤称为{{c2::水疱}}样烧伤）<br><br>4. Ⅲ度烧伤：<br>累及皮肤{{c3::全}}层，可深达肌肉、骨骼、内脏器官等。<br>烧伤处形成一层{{c3::坚硬皮革}}样、{{c3::无}}痛、{{c3::黑色蜡白}}样痂皮，<br>可见明显{{c3::粗大树枝}}状栓塞削血管，不能自行愈合，需依赖于手术{{c3::植皮}}，<br>愈合后形成瘢痕，正常皮肤功能{{c3::丧失}}，常致{{c3::畸形}}。<br></td>
+                            <td>19. 烧伤的分度❤（17、18 级考）<br>三度四分法：<br>1. Ⅰ度烧伤：<br>仅仅累及<span class="answer-text">表皮</span>层，但表皮屏障功能完整。<br>常见于太阳<span class="answer-text">晒伤</span>，烧伤局部轻微<span class="answer-text">疼痛或烧灼</span>样感、<span class="answer-text">红斑</span>，没有水疱，<br><span class="answer-text">3-7</span> 天后愈合，<span class="answer-text">不留</span>疤痕（红斑样烧伤）；<br><br>2. 浅Ⅱ度烧伤：<br>累及{{c2::真皮浅}}层，部分{{c2::生发}}层存在。<br>有大小不一的{{c2::水疱}}，疱皮薄液清亮、创基潮红、质地柔软、{{c2::剧烈}}疼痛，<br>{{c2::7-14}} 天后愈合，不留疤痕，但有{{c2::色素}}改变；<br>3. 深Ⅱ度烧伤：<br>累及{{c2::真皮深}}层，但未累及皮下。也可有小水疱，<br>去除水疱皮后，创面微湿，红白相间，触之{{c2::不易}}褪色，痛觉较{{c2::迟钝}}，<br>{{c2::3-4 周}}后愈合，愈合后有明显{{c2::瘢痕}}形成，有色素沉着；<br><br>(Ⅱ度烧伤称为{{c2::水疱}}样烧伤）<br><br>4. Ⅲ度烧伤：<br>累及皮肤{{c3::全}}层，可深达肌肉、骨骼、内脏器官等。<br>烧伤处形成一层{{c3::坚硬皮革}}样、{{c3::无}}痛、{{c3::黑色蜡白}}样痂皮，<br>可见明显{{c3::粗大树枝}}状栓塞削血管，不能自行愈合，需依赖于手术{{c3::植皮}}，<br>愈合后形成瘢痕，正常皮肤功能{{c3::丧失}}，常致{{c3::畸形}}。<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. Clinical manifestation, diagnosis and fluid resuscitation of burn  shoke<br>（<span class="blur-text">烧伤性休克</span>的临床表现、诊断和补液）（ 16 级考）<br><br>1. 补液公式：<br>每人每 1%Ⅱ、Ⅲ烧伤面积每 kg 体重<br>补充胶体液 <span class="blur-text">0.5</span> ml 和晶体液 <span class="blur-text">1</span> ml，另加基础水分 <span class="blur-text">2000</span> ml；<br>2. 伤后 {{c2::8}} 小时内输入一半，后 {{c2::16}} 小时补入另一半；<br><br>3. 伤后第 2 个 24 小时补液量：<br>胶体液及晶体液均为第 1 个 24 小时实际输入量的{{c2::一半}}，另加水分 {{c2::2000}} ml<br></td>
+                            <td>20. Clinical manifestation, diagnosis and fluid resuscitation of burn  shoke<br>（<span class="answer-text">烧伤性休克</span>的临床表现、诊断和补液）（ 16 级考）<br><br>1. 补液公式：<br>每人每 1%Ⅱ、Ⅲ烧伤面积每 kg 体重<br>补充胶体液 <span class="answer-text">0.5</span> ml 和晶体液 <span class="answer-text">1</span> ml，另加基础水分 <span class="answer-text">2000</span> ml；<br>2. 伤后 {{c2::8}} 小时内输入一半，后 {{c2::16}} 小时补入另一半；<br><br>3. 伤后第 2 个 24 小时补液量：<br>胶体液及晶体液均为第 1 个 24 小时实际输入量的{{c2::一半}}，另加水分 {{c2::2000}} ml<br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. The principle of treatment on burn wounds<br>（烧伤伤口的治疗原则）<br><br>1.   保护创面，减少<span class="blur-text">渗出</span>；<br>2.   防止伤口<span class="blur-text">感染</span>；<br>3.   去除<span class="blur-text">坏死</span>组织，包扎表面；<br><br>4.   防止疤痕<span class="blur-text">挛缩和畸形</span>；<br>5.   有更好的<span class="blur-text">外观</span><br></td>
+                            <td>21. The principle of treatment on burn wounds<br>（烧伤伤口的治疗原则）<br><br>1.   保护创面，减少<span class="answer-text">渗出</span>；<br>2.   防止伤口<span class="answer-text">感染</span>；<br>3.   去除<span class="answer-text">坏死</span>组织，包扎表面；<br><br>4.   防止疤痕<span class="answer-text">挛缩和畸形</span>；<br>5.   有更好的<span class="answer-text">外观</span><br></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. 烧伤的治疗<br>1.   <span class="blur-text">一般</span>治疗<br>（1）烧伤的现场急救：<br>①脱离{{c2::火源}}；<br>②保护{{c2::创面}}；③{{c2::止痛}}；④{{c2::补液}}；<br>⑤其他措施：如天气寒冷注意{{c2::保暖}}等；<br>⑥伤员的后送与住院处理<br>（2）{{c2::严重大面积}}烧伤伤员的急诊处理<br><br>2.    <span class="blur-text">内科</span>治疗<br>（1）烧伤{{c4::休克}}的防治：<br>①补液治疗：{{c3::补液}}公式、{{c3::延迟}}复苏；<br>②保持良好的{{c3::呼吸}}功能；③镇静{{c3::止痛}}；<br>④其他药物治疗，{{c3::强心}}药等<br><br>（2）烧伤{{c4::营养}}支持<br>（3）烧伤{{c4::全身感染}}防治<br>（4）烧伤常见的{{c4::内脏并发症}}防治<br><br>3.   <span class="blur-text">外科</span>治疗<br>（1）创面的{{c5::非手术}}外科处理<br>（2）深度创面的{{c5::手术}}处理办法<br><br>（3）烧伤创面{{c5::植皮}}术<br>（4）{{c5::供皮}}部位<br><br></td>
+                            <td>22. 烧伤的治疗<br>1.   <span class="answer-text">一般</span>治疗<br>（1）烧伤的现场急救：<br>①脱离{{c2::火源}}；<br>②保护{{c2::创面}}；③{{c2::止痛}}；④{{c2::补液}}；<br>⑤其他措施：如天气寒冷注意{{c2::保暖}}等；<br>⑥伤员的后送与住院处理<br>（2）{{c2::严重大面积}}烧伤伤员的急诊处理<br><br>2.    <span class="answer-text">内科</span>治疗<br>（1）烧伤{{c4::休克}}的防治：<br>①补液治疗：{{c3::补液}}公式、{{c3::延迟}}复苏；<br>②保持良好的{{c3::呼吸}}功能；③镇静{{c3::止痛}}；<br>④其他药物治疗，{{c3::强心}}药等<br><br>（2）烧伤{{c4::营养}}支持<br>（3）烧伤{{c4::全身感染}}防治<br>（4）烧伤常见的{{c4::内脏并发症}}防治<br><br>3.   <span class="answer-text">外科</span>治疗<br>（1）创面的{{c5::非手术}}外科处理<br>（2）深度创面的{{c5::手术}}处理办法<br><br>（3）烧伤创面{{c5::植皮}}术<br>（4）{{c5::供皮}}部位<br><br></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

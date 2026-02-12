@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">血液系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1. <span class="blur-text">Auer小体</span> ：<br>白血病细胞胞浆染色后出现的 <span class="blur-text">红色棒状</span> 小体，<br>可见于 <span class="blur-text">AML</span> 。</td>
+                            <td>1. <span class="answer-text">Auer小体</span> ：<br>白血病细胞胞浆染色后出现的 <span class="answer-text">红色棒状</span> 小体，<br>可见于 <span class="answer-text">AML</span> 。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. <span class="blur-text">裂孔现象</span>：<br>在急性髓系白血病（AML）骨髓图片检查中<br>出现 <span class="blur-text">较成熟的中间阶段细胞缺如</span>，<br>残留少量成熟粒细胞的现象。</td>
+                            <td>2. <span class="answer-text">裂孔现象</span>：<br>在急性髓系白血病（AML）骨髓图片检查中<br>出现 <span class="answer-text">较成熟的中间阶段细胞缺如</span>，<br>残留少量成熟粒细胞的现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. <span class="blur-text">柴捆细胞</span><br>（faggot cell）：<br>在白血病患者骨髓涂片中，原始或早幼粒细胞胞浆中<br>出现异常增多的 <span class="blur-text">嗜苯胺蓝颗粒</span>，<br>有的浓集呈棍状即Auer小体，<br>胞浆中出现较多Auer小体呈 <span class="blur-text">束状交叉排列</span>，<br>酷似柴捆样，尤以 <span class="blur-text">AML-M3</span> 多见。</td>
+                            <td>3. <span class="answer-text">柴捆细胞</span><br>（faggot cell）：<br>在白血病患者骨髓涂片中，原始或早幼粒细胞胞浆中<br>出现异常增多的 <span class="answer-text">嗜苯胺蓝颗粒</span>，<br>有的浓集呈棍状即Auer小体，<br>胞浆中出现较多Auer小体呈 <span class="answer-text">束状交叉排列</span>，<br>酷似柴捆样，尤以 <span class="answer-text">AML-M3</span> 多见。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. <span class="blur-text">贫血</span><br>（anemia）：<br>是指外周血中单位容积的 <span class="blur-text">红细胞数（RBC）</span>、<br><span class="blur-text">血红蛋白量（Hb）</span> 和/或 <span class="blur-text">红细胞比容（HCT）</span><br>低于相同年龄、性别和地区的正常标准的一种病理状态。</td>
+                            <td>4. <span class="answer-text">贫血</span><br>（anemia）：<br>是指外周血中单位容积的 <span class="answer-text">红细胞数（RBC）</span>、<br><span class="answer-text">血红蛋白量（Hb）</span> 和/或 <span class="answer-text">红细胞比容（HCT）</span><br>低于相同年龄、性别和地区的正常标准的一种病理状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. <span class="blur-text">缺铁性贫血</span><br>（IDA）：<br>是指因 <span class="blur-text">体内贮存铁耗竭</span> 导致血红蛋白合成减少<br>而发生的一种 <span class="blur-text">小细胞低色素性</span> 贫血。</td>
+                            <td>5. <span class="answer-text">缺铁性贫血</span><br>（IDA）：<br>是指因 <span class="answer-text">体内贮存铁耗竭</span> 导致血红蛋白合成减少<br>而发生的一种 <span class="answer-text">小细胞低色素性</span> 贫血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. <span class="blur-text">自身免疫性溶血性贫血</span><br>（AIHA）：<br>是免疫功能调节紊乱，<br>针对红细胞产生 <span class="blur-text">自身抗体</span>，<br>经特异免疫反应导致的溶血性贫血。</td>
+                            <td>6. <span class="answer-text">自身免疫性溶血性贫血</span><br>（AIHA）：<br>是免疫功能调节紊乱，<br>针对红细胞产生 <span class="answer-text">自身抗体</span>，<br>经特异免疫反应导致的溶血性贫血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. <span class="blur-text">Coombs试验</span><br>（<span class="blur-text">抗人球蛋白试验</span>）：<br>试验结果阳性是诊断自身免疫性溶血性贫血的重要依据，<br>分为 <span class="blur-text">直接抗人球蛋白试验（DAT）</span> 和<br><span class="blur-text">间接抗人球蛋白试验（IDT）</span>，<br>DAT阳性和/或IAT阳性是诊断 <span class="blur-text">温抗体型AIHA（WAIHA）</span> 的重要依据。</td>
+                            <td>7. <span class="answer-text">Coombs试验</span><br>（<span class="answer-text">抗人球蛋白试验</span>）：<br>试验结果阳性是诊断自身免疫性溶血性贫血的重要依据，<br>分为 <span class="answer-text">直接抗人球蛋白试验（DAT）</span> 和<br><span class="answer-text">间接抗人球蛋白试验（IDT）</span>，<br>DAT阳性和/或IAT阳性是诊断 <span class="answer-text">温抗体型AIHA（WAIHA）</span> 的重要依据。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. <span class="blur-text">Evans综合征</span>：<br>原发免疫性血小板减少（ITP）<br>合并 <span class="blur-text">自身免疫性溶血性贫血（AIHA）</span>。</td>
+                            <td>8. <span class="answer-text">Evans综合征</span>：<br>原发免疫性血小板减少（ITP）<br>合并 <span class="answer-text">自身免疫性溶血性贫血（AIHA）</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. <span class="blur-text">再生障碍性贫血</span><br>（aplastic anemia，AA）：<br>是一组由化学、物理、生物因素、药物或不明原因等<br>引起 <span class="blur-text">骨髓干细胞及造血微环境损伤</span>，<br>以 <span class="blur-text">骨髓有核细胞增生减低</span> 和<br><span class="blur-text">外周全血细胞减少</span> 为特征的骨髓衰竭性疾病。</td>
+                            <td>9. <span class="answer-text">再生障碍性贫血</span><br>（aplastic anemia，AA）：<br>是一组由化学、物理、生物因素、药物或不明原因等<br>引起 <span class="answer-text">骨髓干细胞及造血微环境损伤</span>，<br>以 <span class="answer-text">骨髓有核细胞增生减低</span> 和<br><span class="answer-text">外周全血细胞减少</span> 为特征的骨髓衰竭性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. <span class="blur-text">Ph染色体</span>：<br>是 <span class="blur-text">9号染色体长臂3区4带</span> 与<br><span class="blur-text">22号染色体长臂1区1带</span> 部分片段相互易位而衍生的1条新染色体，<br>是 <span class="blur-text">慢性髓细胞白血病</span> 的特征性改变。</td>
+                            <td>10. <span class="answer-text">Ph染色体</span>：<br>是 <span class="answer-text">9号染色体长臂3区4带</span> 与<br><span class="answer-text">22号染色体长臂1区1带</span> 部分片段相互易位而衍生的1条新染色体，<br>是 <span class="answer-text">慢性髓细胞白血病</span> 的特征性改变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. <span class="blur-text">骨髓增生异常综合征</span><br>（MDS）：<br>是一组异质性、获得性、克隆性肿瘤，<br>其基本病变是 <span class="blur-text">克隆性造血干、祖细胞发育异常</span>，<br>表现为骨髓造血细胞 <span class="blur-text">形态学发育异常</span> 和<br>外周血 <span class="blur-text">一系或三系血细胞减少</span>，<br>转变为 <span class="blur-text">急性髓系白血病（AML）</span> 的危险性很高。</td>
+                            <td>11. <span class="answer-text">骨髓增生异常综合征</span><br>（MDS）：<br>是一组异质性、获得性、克隆性肿瘤，<br>其基本病变是 <span class="answer-text">克隆性造血干、祖细胞发育异常</span>，<br>表现为骨髓造血细胞 <span class="answer-text">形态学发育异常</span> 和<br>外周血 <span class="answer-text">一系或三系血细胞减少</span>，<br>转变为 <span class="answer-text">急性髓系白血病（AML）</span> 的危险性很高。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. <span class="blur-text">不成熟前体细胞异常定位</span><br>（ALIP）：<br>是指骨髓活检时在 <span class="blur-text">骨小梁旁区或骨小梁间区</span><br>出现 <span class="blur-text">3~5个或更多</span> 原始粒细胞、早幼粒细胞<br>呈 <span class="blur-text">簇状积聚</span> 的现象。<br>正常人原粒和早幼粒细胞沿骨小梁内膜分布。</td>
+                            <td>12. <span class="answer-text">不成熟前体细胞异常定位</span><br>（ALIP）：<br>是指骨髓活检时在 <span class="answer-text">骨小梁旁区或骨小梁间区</span><br>出现 <span class="answer-text">3~5个或更多</span> 原始粒细胞、早幼粒细胞<br>呈 <span class="answer-text">簇状积聚</span> 的现象。<br>正常人原粒和早幼粒细胞沿骨小梁内膜分布。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. <span class="blur-text">急性白血病</span><br>（AL）：<br>是 <span class="blur-text">造血干细胞的克隆性恶性疾病</span>，<br>发病时骨髓中 <span class="blur-text">异常原始细胞和/或幼稚细胞</span> 大量增殖并浸润各种器官、组织，<br>正常造血受抑制，<br>主要表现为 <span class="blur-text">贫血、出血、感染</span> 及肝脾淋巴结肿大。</td>
+                            <td>13. <span class="answer-text">急性白血病</span><br>（AL）：<br>是 <span class="answer-text">造血干细胞的克隆性恶性疾病</span>，<br>发病时骨髓中 <span class="answer-text">异常原始细胞和/或幼稚细胞</span> 大量增殖并浸润各种器官、组织，<br>正常造血受抑制，<br>主要表现为 <span class="answer-text">贫血、出血、感染</span> 及肝脾淋巴结肿大。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. <span class="blur-text">粒细胞肉瘤</span>：<br>粒细胞白血病细胞在 <span class="blur-text">骨髓以外的器官或组织内</span><br>聚集增生而形成的 <span class="blur-text">肿块</span>。</td>
+                            <td>14. <span class="answer-text">粒细胞肉瘤</span>：<br>粒细胞白血病细胞在 <span class="answer-text">骨髓以外的器官或组织内</span><br>聚集增生而形成的 <span class="answer-text">肿块</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. <span class="blur-text">绿色瘤</span>：<br>髓系肉瘤细胞含有 <span class="blur-text">原卟啉或绿色过氧化物酶</span>，<br>在新鲜时肉眼观呈 <span class="blur-text">绿色</span>，<br>而当暴露于日光后，绿色迅速消退；<br>若用还原剂可使绿色重现。</td>
+                            <td>15. <span class="answer-text">绿色瘤</span>：<br>髓系肉瘤细胞含有 <span class="answer-text">原卟啉或绿色过氧化物酶</span>，<br>在新鲜时肉眼观呈 <span class="answer-text">绿色</span>，<br>而当暴露于日光后，绿色迅速消退；<br>若用还原剂可使绿色重现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. <span class="blur-text">微小残留病灶</span><br>（MDR）：<br>诱导缓解获CR后体内白血病细胞<br>由发病时的 <span class="blur-text">10^10～10^12</span> 降至 <span class="blur-text">10^8～10^9</span>，<br>这些残留的白血病细胞称为微小残留病灶。</td>
+                            <td>16. <span class="answer-text">微小残留病灶</span><br>（MDR）：<br>诱导缓解获CR后体内白血病细胞<br>由发病时的 <span class="answer-text">10^10～10^12</span> 降至 <span class="answer-text">10^8～10^9</span>，<br>这些残留的白血病细胞称为微小残留病灶。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. <span class="blur-text">白细胞瘀滞症</span>：<br>当循环血液中白细胞数 <span class="blur-text">＞100×10^9/L</span> 时，<br>病人可产生白细胞瘀滞症，<br>表现为 <span class="blur-text">呼吸困难、低氧血症</span>、<br><span class="blur-text">反应迟钝、言语不清、颅内出血</span>。</td>
+                            <td>17. <span class="answer-text">白细胞瘀滞症</span>：<br>当循环血液中白细胞数 <span class="answer-text">＞100×10^9/L</span> 时，<br>病人可产生白细胞瘀滞症，<br>表现为 <span class="answer-text">呼吸困难、低氧血症</span>、<br><span class="answer-text">反应迟钝、言语不清、颅内出血</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. 白血病细胞的<span class="blur-text">"庇护所"</span>：<br><span class="blur-text">中枢神经系统和睾丸</span> 因存在 <span class="blur-text">血脑屏障和血睾屏障</span>，<br>很多化疗药物无法进入，是白血病细胞的"庇护所"。</td>
+                            <td>18. 白血病细胞的<span class="answer-text">"庇护所"</span>：<br><span class="answer-text">中枢神经系统和睾丸</span> 因存在 <span class="answer-text">血脑屏障和血睾屏障</span>，<br>很多化疗药物无法进入，是白血病细胞的"庇护所"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. <span class="blur-text">CR</span>：<br>完全缓解，白血病的症状和体征消失，<br>外周血无原始细胞，无髓外白细胞；<br>骨髓三系造血恢复，原始细胞 <span class="blur-text">＜5%</span>；<br>外周血中性粒细胞 <span class="blur-text">大于1×10^9/L</span>，<br>血小板 <span class="blur-text">≥100×10^9/L</span>。</td>
+                            <td>19. <span class="answer-text">CR</span>：<br>完全缓解，白血病的症状和体征消失，<br>外周血无原始细胞，无髓外白细胞；<br>骨髓三系造血恢复，原始细胞 <span class="answer-text">＜5%</span>；<br>外周血中性粒细胞 <span class="answer-text">大于1×10^9/L</span>，<br>血小板 <span class="answer-text">≥100×10^9/L</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. <span class="blur-text">白血病复发</span>：<br>完全缓解后，在外周血重新出现白血病细胞或<br>骨髓原始细胞 <span class="blur-text">＞5%</span>（除外其他原因），<br>或 <span class="blur-text">髓外出现白血病细胞浸润</span>。</td>
+                            <td>20. <span class="answer-text">白血病复发</span>：<br>完全缓解后，在外周血重新出现白血病细胞或<br>骨髓原始细胞 <span class="answer-text">＞5%</span>（除外其他原因），<br>或 <span class="answer-text">髓外出现白血病细胞浸润</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. <span class="blur-text">CML急变期</span>：<br>为CML的终末期，临床与急性白血病类似，<br>外周血或骨髓中原始细胞 <span class="blur-text">＞20%</span> 或<br>出现 <span class="blur-text">髓外原始细胞浸润</span>。</td>
+                            <td>21. <span class="answer-text">CML急变期</span>：<br>为CML的终末期，临床与急性白血病类似，<br>外周血或骨髓中原始细胞 <span class="answer-text">＞20%</span> 或<br>出现 <span class="answer-text">髓外原始细胞浸润</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. <span class="blur-text">淋巴瘤白血病</span>：<br>约 <span class="blur-text">20%</span> 的非霍奇金淋巴瘤病人<br>在晚期 <span class="blur-text">累及骨髓</span>，发展成淋巴瘤白血病。</td>
+                            <td>22. <span class="answer-text">淋巴瘤白血病</span>：<br>约 <span class="answer-text">20%</span> 的非霍奇金淋巴瘤病人<br>在晚期 <span class="answer-text">累及骨髓</span>，发展成淋巴瘤白血病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. <span class="blur-text">多发性骨髓瘤</span><br>（multiple myeloma，MM）：<br>是发生于 <span class="blur-text">浆细胞</span> 的恶性肿瘤，<br>浆细胞克隆性增生，浸润组织和器官并<br>分泌 <span class="blur-text">M蛋白</span> 导致相应症状。<br>常有 <span class="blur-text">贫血、骨痛或溶骨性骨质破坏</span>、<br><span class="blur-text">高钙血症和肾功能不全</span>。</td>
+                            <td>23. <span class="answer-text">多发性骨髓瘤</span><br>（multiple myeloma，MM）：<br>是发生于 <span class="answer-text">浆细胞</span> 的恶性肿瘤，<br>浆细胞克隆性增生，浸润组织和器官并<br>分泌 <span class="answer-text">M蛋白</span> 导致相应症状。<br>常有 <span class="answer-text">贫血、骨痛或溶骨性骨质破坏</span>、<br><span class="answer-text">高钙血症和肾功能不全</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. <span class="blur-text">M蛋白</span>：<br>血清或尿液在蛋白电泳时可见一 <span class="blur-text">浓而密集的染色带</span>，<br>扫描呈现 <span class="blur-text">基底较窄单峰突起</span> 的M蛋白。</td>
+                            <td>24. <span class="answer-text">M蛋白</span>：<br>血清或尿液在蛋白电泳时可见一 <span class="answer-text">浓而密集的染色带</span>，<br>扫描呈现 <span class="answer-text">基底较窄单峰突起</span> 的M蛋白。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25. <span class="blur-text">本-周蛋白</span>：<br>从病人的肾脏排出的 <span class="blur-text">轻链</span>，<br>或为 <span class="blur-text">κ链</span>，或为 <span class="blur-text">λ链</span>，<br>分子量小，可在尿中大量排出。</td>
+                            <td>25. <span class="answer-text">本-周蛋白</span>：<br>从病人的肾脏排出的 <span class="answer-text">轻链</span>，<br>或为 <span class="answer-text">κ链</span>，或为 <span class="answer-text">λ链</span>，<br>分子量小，可在尿中大量排出。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26. <span class="blur-text">出血性疾病</span>：<br>指由有遗传性或获得性原因导致 <span class="blur-text">止血机制发生障碍</span>，<br>以 <span class="blur-text">自发性出血或轻微损伤后出血不止</span> 为特征的一类疾病。</td>
+                            <td>26. <span class="answer-text">出血性疾病</span>：<br>指由有遗传性或获得性原因导致 <span class="answer-text">止血机制发生障碍</span>，<br>以 <span class="answer-text">自发性出血或轻微损伤后出血不止</span> 为特征的一类疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27. <span class="blur-text">原发免疫性血小板减少症</span><br>（ITP）：<br>无明确病因导致 <span class="blur-text">免疫性血小板破坏过多</span> 为主的血小板减少症。</td>
+                            <td>27. <span class="answer-text">原发免疫性血小板减少症</span><br>（ITP）：<br>无明确病因导致 <span class="answer-text">免疫性血小板破坏过多</span> 为主的血小板减少症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28. <span class="blur-text">弥漫性血管内凝血</span><br>（DIC）：<br>是一种获得性临床综合征，<br>由各种原因引起 <span class="blur-text">血管内凝血系统激活</span>，<br>导致 <span class="blur-text">微血管系统广泛血栓形成</span> 和微循环障碍，<br>严重时损伤脏器组织。<br>由于 <span class="blur-text">凝血因子和血小板大量消耗</span> 同时继发纤溶亢进，<br>临床可有明显出血。</td>
+                            <td>28. <span class="answer-text">弥漫性血管内凝血</span><br>（DIC）：<br>是一种获得性临床综合征，<br>由各种原因引起 <span class="answer-text">血管内凝血系统激活</span>，<br>导致 <span class="answer-text">微血管系统广泛血栓形成</span> 和微循环障碍，<br>严重时损伤脏器组织。<br>由于 <span class="answer-text">凝血因子和血小板大量消耗</span> 同时继发纤溶亢进，<br>临床可有明显出血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29. <span class="blur-text">抗Jo-1抗体综合征</span>：<br><span class="blur-text">发热、关节炎、技工手</span>、<br><span class="blur-text">雷诺现象、肌炎及肺间质病变</span>。</td>
+                            <td>29. <span class="answer-text">抗Jo-1抗体综合征</span>：<br><span class="answer-text">发热、关节炎、技工手</span>、<br><span class="answer-text">雷诺现象、肌炎及肺间质病变</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30. <span class="blur-text">Crest综合征</span>：<br>系统性硬皮病中的亚型，包括<br><span class="blur-text">钙质沉积、雷诺现象</span>、<br><span class="blur-text">食道功能障碍、指端硬化和毛细血管扩张</span>。</td>
+                            <td>30. <span class="answer-text">Crest综合征</span>：<br>系统性硬皮病中的亚型，包括<br><span class="answer-text">钙质沉积、雷诺现象</span>、<br><span class="answer-text">食道功能障碍、指端硬化和毛细血管扩张</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31. <span class="blur-text">抗磷脂抗体综合征</span><br>（APS）：<br>即一组 <span class="blur-text">抗磷脂抗体</span> 介导的，<br>以 <span class="blur-text">动静脉血栓形成</span>、<br><span class="blur-text">反复妊娠失败</span>（流产、早产、死胎）<br>及 <span class="blur-text">血小板减少、精神神经症状</span> 等为特征的自身免疫病。</td>
+                            <td>31. <span class="answer-text">抗磷脂抗体综合征</span><br>（APS）：<br>即一组 <span class="answer-text">抗磷脂抗体</span> 介导的，<br>以 <span class="answer-text">动静脉血栓形成</span>、<br><span class="answer-text">反复妊娠失败</span>（流产、早产、死胎）<br>及 <span class="answer-text">血小板减少、精神神经症状</span> 等为特征的自身免疫病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32. <span class="blur-text">雷诺现象</span>：<br>指寒冷、情绪激动等刺激下<br>出现双手（足）指（趾）尖等部位皮肤血管痉挛、短暂性缺血<br>而导致的皮肤突然先后 <span class="blur-text">变白、变紫、再恢复到正常色泽</span> 的过程，<br>持续数秒钟不等，可伴疼痛。</td>
+                            <td>32. <span class="answer-text">雷诺现象</span>：<br>指寒冷、情绪激动等刺激下<br>出现双手（足）指（趾）尖等部位皮肤血管痉挛、短暂性缺血<br>而导致的皮肤突然先后 <span class="answer-text">变白、变紫、再恢复到正常色泽</span> 的过程，<br>持续数秒钟不等，可伴疼痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33. <span class="blur-text">神经精神狼疮</span><br>（NP-SLE）：<br>又称为 <span class="blur-text">狼疮脑病</span>，提示病情活动且严重。<br>病变累及脑表现 <span class="blur-text">头痛、呕吐、偏瘫、癫痫、意识障碍</span>，<br><span class="blur-text">幻觉、妄想、猜疑</span> 等精神障碍症状。</td>
+                            <td>33. <span class="answer-text">神经精神狼疮</span><br>（NP-SLE）：<br>又称为 <span class="answer-text">狼疮脑病</span>，提示病情活动且严重。<br>病变累及脑表现 <span class="answer-text">头痛、呕吐、偏瘫、癫痫、意识障碍</span>，<br><span class="answer-text">幻觉、妄想、猜疑</span> 等精神障碍症状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34. <span class="blur-text">干燥综合征</span><br>（SS）：<br>以 <span class="blur-text">唾液腺和泪腺</span> 等外分泌腺功能不全为特征，<br>表现为 <span class="blur-text">口干、眼干、腮腺肿大</span>，<br><span class="blur-text">抗SSA（+）</span>，<span class="blur-text">抗SSB（+）</span>。</td>
+                            <td>34. <span class="answer-text">干燥综合征</span><br>（SS）：<br>以 <span class="answer-text">唾液腺和泪腺</span> 等外分泌腺功能不全为特征，<br>表现为 <span class="answer-text">口干、眼干、腮腺肿大</span>，<br><span class="answer-text">抗SSA（+）</span>，<span class="answer-text">抗SSB（+）</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35. <span class="blur-text">狼疮危象</span>：<br>急性的危及生命的重症SLE<br>（<span class="blur-text">急进性狼疮肾炎</span>，<br><span class="blur-text">严重心脏损害</span>，<br><span class="blur-text">严重肺出血</span> 等）。</td>
+                            <td>35. <span class="answer-text">狼疮危象</span>：<br>急性的危及生命的重症SLE<br>（<span class="answer-text">急进性狼疮肾炎</span>，<br><span class="answer-text">严重心脏损害</span>，<br><span class="answer-text">严重肺出血</span> 等）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36. <span class="blur-text">炎性腰背痛</span><br>（inflammatory low back pain）：<br>常隐匿起病，大多 <span class="blur-text">40岁以前</span> 出现。<br>起始部位为腰臀部伴僵硬感，<br>有 <span class="blur-text">静息痛</span>，<span class="blur-text">活动后可减轻或消失</span>，<br>持续时间在 <span class="blur-text">3个月以上</span>。<br>炎性腰背痛是AS最具有标志性的特点之一。</td>
+                            <td>36. <span class="answer-text">炎性腰背痛</span><br>（inflammatory low back pain）：<br>常隐匿起病，大多 <span class="answer-text">40岁以前</span> 出现。<br>起始部位为腰臀部伴僵硬感，<br>有 <span class="answer-text">静息痛</span>，<span class="answer-text">活动后可减轻或消失</span>，<br>持续时间在 <span class="answer-text">3个月以上</span>。<br>炎性腰背痛是AS最具有标志性的特点之一。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37. <span class="blur-text">骶髂关节炎</span><br>（sacroiliac arthritis）：<br>是AS的特征之一，<span class="blur-text">90%</span> 的患者最早表现为骶髂关节炎，<br>特点为隐匿发作，持续钝痛，<br>常表现为 <span class="blur-text">下腰痛、臀区痛</span> 和<br><span class="blur-text">大腿近端和腹股沟区痛</span>，<br>可伴晨僵，持续时间与病情轻重有关。</td>
+                            <td>37. <span class="answer-text">骶髂关节炎</span><br>（sacroiliac arthritis）：<br>是AS的特征之一，<span class="answer-text">90%</span> 的患者最早表现为骶髂关节炎，<br>特点为隐匿发作，持续钝痛，<br>常表现为 <span class="answer-text">下腰痛、臀区痛</span> 和<br><span class="answer-text">大腿近端和腹股沟区痛</span>，<br>可伴晨僵，持续时间与病情轻重有关。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38. <span class="blur-text">交替性臀区痛</span><br>（alternating hip pain）：<br>AS先是 <span class="blur-text">单侧臀区疼痛</span>，<br>逐渐 <span class="blur-text">交替臀部疼痛</span>，放射至大腿，<br>是AS的具体表现，多在早期出现。</td>
+                            <td>38. <span class="answer-text">交替性臀区痛</span><br>（alternating hip pain）：<br>AS先是 <span class="answer-text">单侧臀区疼痛</span>，<br>逐渐 <span class="answer-text">交替臀部疼痛</span>，放射至大腿，<br>是AS的具体表现，多在早期出现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39. <span class="blur-text">脊柱强直</span><br>（ankylosis of spine）：<br>由于 <span class="blur-text">椎体韧带、椎骨肋骨和胸肋关节骨化</span>，<br>出现 <span class="blur-text">脊柱活动受限</span>，甚至假关节出现。</td>
+                            <td>39. <span class="answer-text">脊柱强直</span><br>（ankylosis of spine）：<br>由于 <span class="answer-text">椎体韧带、椎骨肋骨和胸肋关节骨化</span>，<br>出现 <span class="answer-text">脊柱活动受限</span>，甚至假关节出现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40. <span class="blur-text">晨僵</span><br>（morning stiffness）：<br>早晨起床后 <span class="blur-text">关节及其周围发紧、僵硬</span>，<br><span class="blur-text">活动不灵或受限</span>。</td>
+                            <td>40. <span class="answer-text">晨僵</span><br>（morning stiffness）：<br>早晨起床后 <span class="answer-text">关节及其周围发紧、僵硬</span>，<br><span class="answer-text">活动不灵或受限</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41. <span class="blur-text">附着点炎</span><br>（enthesitis）：<br>指 <span class="blur-text">肌腱、韧带和关节囊</span> 等<br>附着于骨关节部位的 <span class="blur-text">非特异性炎症、纤维化以至骨化</span>，<br>为 <span class="blur-text">强直性脊柱炎和脊柱关节病</span> 的特征性病变。</td>
+                            <td>41. <span class="answer-text">附着点炎</span><br>（enthesitis）：<br>指 <span class="answer-text">肌腱、韧带和关节囊</span> 等<br>附着于骨关节部位的 <span class="answer-text">非特异性炎症、纤维化以至骨化</span>，<br>为 <span class="answer-text">强直性脊柱炎和脊柱关节病</span> 的特征性病变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42. <span class="blur-text">类风湿关节炎</span><br>（RA）：<br>是以 <span class="blur-text">侵袭性关节炎</span> 为主要表现的<br>慢性、全身性、自身免疫性疾病。<br>表现为以 <span class="blur-text">双手、腕、踝、足关节</span> 等小关节受累为主的<br><span class="blur-text">对称性、持续性、多关节</span> 慢性炎症，<br>可有发热、贫血、皮下结节及淋巴结肿大等关节外表现。</td>
+                            <td>42. <span class="answer-text">类风湿关节炎</span><br>（RA）：<br>是以 <span class="answer-text">侵袭性关节炎</span> 为主要表现的<br>慢性、全身性、自身免疫性疾病。<br>表现为以 <span class="answer-text">双手、腕、踝、足关节</span> 等小关节受累为主的<br><span class="answer-text">对称性、持续性、多关节</span> 慢性炎症，<br>可有发热、贫血、皮下结节及淋巴结肿大等关节外表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43. <span class="blur-text">Felty综合征</span>：<br>是指类风湿关节炎患者伴有<br><span class="blur-text">脾大</span>、<span class="blur-text">中性粒细胞减少</span>，<br>有的甚至有贫血和血小板减少。</td>
+                            <td>43. <span class="answer-text">Felty综合征</span>：<br>是指类风湿关节炎患者伴有<br><span class="answer-text">脾大</span>、<span class="answer-text">中性粒细胞减少</span>，<br>有的甚至有贫血和血小板减少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44. <span class="blur-text">类风湿结节</span><br>（rheumatoid module）：<br>是类风湿关节炎 <span class="blur-text">特异的皮肤表现</span>，<br>出现在 <span class="blur-text">20%~30%</span> 的病人，<br>多位于 <span class="blur-text">关节隆突及受压部位的皮下</span>，<br>质硬，无压痛，对称性分布，<br>其提示类风湿关节炎的活动。</td>
+                            <td>44. <span class="answer-text">类风湿结节</span><br>（rheumatoid module）：<br>是类风湿关节炎 <span class="answer-text">特异的皮肤表现</span>，<br>出现在 <span class="answer-text">20%~30%</span> 的病人，<br>多位于 <span class="answer-text">关节隆突及受压部位的皮下</span>，<br>质硬，无压痛，对称性分布，<br>其提示类风湿关节炎的活动。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45. <span class="blur-text">类风湿因子</span><br>（rheumatoid factor，RF）：<br>是一种自身抗体，<br><span class="blur-text">70%</span> 的类风湿关节炎病人有较高水平类风湿因子，<br>但类风湿因子阳性也见于 <span class="blur-text">慢性感染、其他结缔组织病和正常老年人</span>，<br>特异性低。</td>
+                            <td>45. <span class="answer-text">类风湿因子</span><br>（rheumatoid factor，RF）：<br>是一种自身抗体，<br><span class="answer-text">70%</span> 的类风湿关节炎病人有较高水平类风湿因子，<br>但类风湿因子阳性也见于 <span class="answer-text">慢性感染、其他结缔组织病和正常老年人</span>，<br>特异性低。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46. <span class="blur-text">血浆晶体渗透压</span>：<br>由血浆中 <span class="blur-text">晶体物质</span> 形成的渗透压称为晶体渗透压，<br>约 <span class="blur-text">80%</span> 来自 <span class="blur-text">Na+和Cl-</span>；<br>主要作用在于保持 <span class="blur-text">细胞内外水的平衡</span> 和细胞的正常体积。</td>
+                            <td>46. <span class="answer-text">血浆晶体渗透压</span>：<br>由血浆中 <span class="answer-text">晶体物质</span> 形成的渗透压称为晶体渗透压，<br>约 <span class="answer-text">80%</span> 来自 <span class="answer-text">Na+和Cl-</span>；<br>主要作用在于保持 <span class="answer-text">细胞内外水的平衡</span> 和细胞的正常体积。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47. <span class="blur-text">血浆胶体渗透压</span>：<br>由血浆中的 <span class="blur-text">蛋白质</span> 所形成的渗透压称为胶体渗透压，<br><span class="blur-text">75%~80%</span> 来自 <span class="blur-text">白蛋白</span>；<br>在调节 <span class="blur-text">血管内外水平衡</span> 和<br>维持正常的血浆容量中起重要作用。</td>
+                            <td>47. <span class="answer-text">血浆胶体渗透压</span>：<br>由血浆中的 <span class="answer-text">蛋白质</span> 所形成的渗透压称为胶体渗透压，<br><span class="answer-text">75%~80%</span> 来自 <span class="answer-text">白蛋白</span>；<br>在调节 <span class="answer-text">血管内外水平衡</span> 和<br>维持正常的血浆容量中起重要作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48. <span class="blur-text">红细胞悬浮稳定性</span><br>（suspension stability）：<br>红细胞能相对稳定地悬浮于血浆中，这一特性称为悬浮稳定性；<br>以 <span class="blur-text">红细胞沉降率</span> 来表示，<br>沉降愈快，表示红细胞悬浮稳定性愈小。</td>
+                            <td>48. <span class="answer-text">红细胞悬浮稳定性</span><br>（suspension stability）：<br>红细胞能相对稳定地悬浮于血浆中，这一特性称为悬浮稳定性；<br>以 <span class="answer-text">红细胞沉降率</span> 来表示，<br>沉降愈快，表示红细胞悬浮稳定性愈小。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49. <span class="blur-text">红细胞沉降率</span><br>（ESR）：<br>红细胞在 <span class="blur-text">第一小时末</span> 下沉的距离，称为红细胞沉降率。<br>正常成年男性红细胞沉降率为 <span class="blur-text">0~15 mm/h</span>，<br>成年女性为 <span class="blur-text">0~20 mm/h</span>。</td>
+                            <td>49. <span class="answer-text">红细胞沉降率</span><br>（ESR）：<br>红细胞在 <span class="answer-text">第一小时末</span> 下沉的距离，称为红细胞沉降率。<br>正常成年男性红细胞沉降率为 <span class="answer-text">0~15 mm/h</span>，<br>成年女性为 <span class="answer-text">0~20 mm/h</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50. <span class="blur-text">渗透脆性</span><br>（osmotic fragility）：<br>是指红细胞在 <span class="blur-text">低渗盐溶液</span> 中<br>发生 <span class="blur-text">膨胀破裂</span> 的特性。<br>该特性可用来表示红细胞膜对低渗盐溶液的抵抗力。</td>
+                            <td>50. <span class="answer-text">渗透脆性</span><br>（osmotic fragility）：<br>是指红细胞在 <span class="answer-text">低渗盐溶液</span> 中<br>发生 <span class="answer-text">膨胀破裂</span> 的特性。<br>该特性可用来表示红细胞膜对低渗盐溶液的抵抗力。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51. <span class="blur-text">生理性止血</span><br>（physiological hemostasis）：<br>正常情况下，小血管受损后引起的出血，<br>在几分钟内就会自行停止，称为生理性止血；<br>包括 <span class="blur-text">血管收缩</span>、<span class="blur-text">血小板血栓形成</span> 和<br><span class="blur-text">血液凝固</span> 三个过程。</td>
+                            <td>51. <span class="answer-text">生理性止血</span><br>（physiological hemostasis）：<br>正常情况下，小血管受损后引起的出血，<br>在几分钟内就会自行停止，称为生理性止血；<br>包括 <span class="answer-text">血管收缩</span>、<span class="answer-text">血小板血栓形成</span> 和<br><span class="answer-text">血液凝固</span> 三个过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52. <span class="blur-text">血小板聚集</span><br>（platelet aggression）：<br><span class="blur-text">血小板与血小板之间的相互黏着</span>，称为血小板聚集；<br>需要 <span class="blur-text">纤维蛋白原、Ca2+</span> 及<br>血小板膜上 <span class="blur-text">GPⅡb/Ⅲa</span> 的参与。<br>血小板的聚集通常出现两个时相。</td>
+                            <td>52. <span class="answer-text">血小板聚集</span><br>（platelet aggression）：<br><span class="answer-text">血小板与血小板之间的相互黏着</span>，称为血小板聚集；<br>需要 <span class="answer-text">纤维蛋白原、Ca2+</span> 及<br>血小板膜上 <span class="answer-text">GPⅡb/Ⅲa</span> 的参与。<br>血小板的聚集通常出现两个时相。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53. <span class="blur-text">血小板释放</span><br>（platelet release）：<br>血小板受刺激后将贮存在<br><span class="blur-text">致密体、α-颗粒或溶酶体</span> 内的物质排出的现象，<br>称为血小板释放。</td>
+                            <td>53. <span class="answer-text">血小板释放</span><br>（platelet release）：<br>血小板受刺激后将贮存在<br><span class="answer-text">致密体、α-颗粒或溶酶体</span> 内的物质排出的现象，<br>称为血小板释放。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54. <span class="blur-text">血液凝固</span><br>（blood coagulation）：<br>指血液由流动的液体状态变成不能流动的凝胶状态的过程，<br>其实质就是血浆中的 <span class="blur-text">可溶性纤维蛋白原</span> 转变成<br><span class="blur-text">不溶性的纤维蛋白</span> 的过程。</td>
+                            <td>54. <span class="answer-text">血液凝固</span><br>（blood coagulation）：<br>指血液由流动的液体状态变成不能流动的凝胶状态的过程，<br>其实质就是血浆中的 <span class="answer-text">可溶性纤维蛋白原</span> 转变成<br><span class="answer-text">不溶性的纤维蛋白</span> 的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55. <span class="blur-text">内源性凝血途径</span>：<br>是指参与凝血的因子 <span class="blur-text">全部来自血液</span>，<br>通常因血液与 <span class="blur-text">带负电荷的异物表面</span> 接触而启动。</td>
+                            <td>55. <span class="answer-text">内源性凝血途径</span>：<br>是指参与凝血的因子 <span class="answer-text">全部来自血液</span>，<br>通常因血液与 <span class="answer-text">带负电荷的异物表面</span> 接触而启动。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56. <span class="blur-text">外源性凝血途径</span>：<br>由来自于 <span class="blur-text">血液之外的组织因子</span> 暴露于血液而启动的凝血过程，<br>称为外源性凝血过程。</td>
+                            <td>56. <span class="answer-text">外源性凝血途径</span>：<br>由来自于 <span class="answer-text">血液之外的组织因子</span> 暴露于血液而启动的凝血过程，<br>称为外源性凝血过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57. <span class="blur-text">血型</span>：<br>指 <span class="blur-text">红细胞膜上特异性抗原</span> 的类型，<br>与临床关系最为密切的是 <span class="blur-text">ABO血型</span> 和 <span class="blur-text">Rh血型</span> 系统。</td>
+                            <td>57. <span class="answer-text">血型</span>：<br>指 <span class="answer-text">红细胞膜上特异性抗原</span> 的类型，<br>与临床关系最为密切的是 <span class="answer-text">ABO血型</span> 和 <span class="answer-text">Rh血型</span> 系统。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58. <span class="blur-text">红细胞凝集</span>：<br>将血型不相容的两个人的血液滴加在玻片上并使之混合，<br>则红细胞可 <span class="blur-text">凝集成簇</span>，这种现象称红细胞凝集，<br>其本质是 <span class="blur-text">抗原抗体反应</span>。</td>
+                            <td>58. <span class="answer-text">红细胞凝集</span>：<br>将血型不相容的两个人的血液滴加在玻片上并使之混合，<br>则红细胞可 <span class="answer-text">凝集成簇</span>，这种现象称红细胞凝集，<br>其本质是 <span class="answer-text">抗原抗体反应</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59. <span class="blur-text">凝集素</span>：<br>能与红细胞膜上的 <span class="blur-text">凝集原</span> 起反应的特异性抗体称为凝集素，<br>凝集素为 <span class="blur-text">γ-球蛋白</span>，存在于血浆中。</td>
+                            <td>59. <span class="answer-text">凝集素</span>：<br>能与红细胞膜上的 <span class="answer-text">凝集原</span> 起反应的特异性抗体称为凝集素，<br>凝集素为 <span class="answer-text">γ-球蛋白</span>，存在于血浆中。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60. <span class="blur-text">单核巨噬细胞系统</span><br>（mononuclear phagocytic system, MPS）：<br>系统包括 <span class="blur-text">单核细胞</span>、结缔组织和淋巴组织中的 <span class="blur-text">巨噬细胞</span>、<br>肝的巨噬细胞、肺的尘细胞等。<br>它们均来源于 <span class="blur-text">骨髓内单核细胞</span>，<br>主要功能为 <span class="blur-text">吞噬、清除异物</span>；<br>合成、分泌多种免疫活性分子；参与免疫调节、应答。</td>
+                            <td>60. <span class="answer-text">单核巨噬细胞系统</span><br>（mononuclear phagocytic system, MPS）：<br>系统包括 <span class="answer-text">单核细胞</span>、结缔组织和淋巴组织中的 <span class="answer-text">巨噬细胞</span>、<br>肝的巨噬细胞、肺的尘细胞等。<br>它们均来源于 <span class="answer-text">骨髓内单核细胞</span>，<br>主要功能为 <span class="answer-text">吞噬、清除异物</span>；<br>合成、分泌多种免疫活性分子；参与免疫调节、应答。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61. <span class="blur-text">淋巴小结/淋巴滤泡</span><br>（lymphoid nodule/lymphoid follicle）：<br>淋巴小结又称淋巴滤泡，呈圆形或卵圆形，<br>含大量 <span class="blur-text">B细胞</span> 和一定量的Th细胞、滤泡树突细胞等。<br>分 <span class="blur-text">初级淋巴小结和次级淋巴小结</span>。<br>初级淋巴小结在抗原刺激下，<br>其中央出现 <span class="blur-text">生发中心</span>，变成次级淋巴小结。<br>生发中心的周边有一层密集的小型B细胞，<br>尤以顶部最厚，称为 <span class="blur-text">小结帽</span>。</td>
+                            <td>61. <span class="answer-text">淋巴小结/淋巴滤泡</span><br>（lymphoid nodule/lymphoid follicle）：<br>淋巴小结又称淋巴滤泡，呈圆形或卵圆形，<br>含大量 <span class="answer-text">B细胞</span> 和一定量的Th细胞、滤泡树突细胞等。<br>分 <span class="answer-text">初级淋巴小结和次级淋巴小结</span>。<br>初级淋巴小结在抗原刺激下，<br>其中央出现 <span class="answer-text">生发中心</span>，变成次级淋巴小结。<br>生发中心的周边有一层密集的小型B细胞，<br>尤以顶部最厚，称为 <span class="answer-text">小结帽</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62. <span class="blur-text">血-胸腺屏障</span><br>（blood-thymus barrier）：<br>胸腺皮质的 <span class="blur-text">毛细血管及其周围结构</span> 具有屏障作用。<br>结构组成：<span class="blur-text">连续性毛细血管内皮</span> 及内皮细胞之间的紧密连接、<br>内皮周围连续的基膜、含有巨噬细胞的血管周隙、<br>胸腺上皮细胞基膜、一层连续的胸腺上皮细胞。<br>作用：血液内一般抗原物质和某些药物不易透过此屏障，<br>从而维持胸腺内环境的稳定，保证 <span class="blur-text">T细胞的正常发育</span>。</td>
+                            <td>62. <span class="answer-text">血-胸腺屏障</span><br>（blood-thymus barrier）：<br>胸腺皮质的 <span class="answer-text">毛细血管及其周围结构</span> 具有屏障作用。<br>结构组成：<span class="answer-text">连续性毛细血管内皮</span> 及内皮细胞之间的紧密连接、<br>内皮周围连续的基膜、含有巨噬细胞的血管周隙、<br>胸腺上皮细胞基膜、一层连续的胸腺上皮细胞。<br>作用：血液内一般抗原物质和某些药物不易透过此屏障，<br>从而维持胸腺内环境的稳定，保证 <span class="answer-text">T细胞的正常发育</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63. <span class="blur-text">胸腺小体</span><br>（thymic corpuscle）：<br>胸腺小体是 <span class="blur-text">胸腺髓质</span> 的特征性结构，<br>由 <span class="blur-text">胸腺上皮细胞</span> 呈 <span class="blur-text">同心圆状包绕</span> 而成。<br>是胸腺重要的特征性结构。<br>胸腺小体外周的细胞较幼稚，<br>中心的细胞则完全 <span class="blur-text">角质化</span>，嗜酸性。<br>作用：胸腺小体的功能不明确，<br>但缺乏胸腺小体的胸腺不能培育出 <span class="blur-text">T细胞</span>。</td>
+                            <td>63. <span class="answer-text">胸腺小体</span><br>（thymic corpuscle）：<br>胸腺小体是 <span class="answer-text">胸腺髓质</span> 的特征性结构，<br>由 <span class="answer-text">胸腺上皮细胞</span> 呈 <span class="answer-text">同心圆状包绕</span> 而成。<br>是胸腺重要的特征性结构。<br>胸腺小体外周的细胞较幼稚，<br>中心的细胞则完全 <span class="answer-text">角质化</span>，嗜酸性。<br>作用：胸腺小体的功能不明确，<br>但缺乏胸腺小体的胸腺不能培育出 <span class="answer-text">T细胞</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64. <span class="blur-text">诊断性R-S细胞</span><br>（diagnostic Reed Sternberg cell）：<br>是 <span class="blur-text">霍奇金淋巴瘤</span> 独特的瘤巨细胞，<br>典型R-S细胞是一种直径 <span class="blur-text">15~50 μm</span> 的<br><span class="blur-text">双核或多核</span> 的瘤巨细胞。<br>瘤细胞胞质丰富，核膜厚而清楚，<br>核染色质细而分散（泡状核），<br>有一非常大的、直径与红细胞相当的、<br><span class="blur-text">嗜酸性的中位核仁</span>，周围有空晕。</td>
+                            <td>64. <span class="answer-text">诊断性R-S细胞</span><br>（diagnostic Reed Sternberg cell）：<br>是 <span class="answer-text">霍奇金淋巴瘤</span> 独特的瘤巨细胞，<br>典型R-S细胞是一种直径 <span class="answer-text">15~50 μm</span> 的<br><span class="answer-text">双核或多核</span> 的瘤巨细胞。<br>瘤细胞胞质丰富，核膜厚而清楚，<br>核染色质细而分散（泡状核），<br>有一非常大的、直径与红细胞相当的、<br><span class="answer-text">嗜酸性的中位核仁</span>，周围有空晕。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65. <span class="blur-text">镜影细胞</span><br>（mirror image cell）：<br>是诊断性R-S细胞的一种，<br>双核R-S细胞的双叶核 <span class="blur-text">面对面的排列</span>，<br>彼此对称，形似镜中之影，称为"镜影细胞"。</td>
+                            <td>65. <span class="answer-text">镜影细胞</span><br>（mirror image cell）：<br>是诊断性R-S细胞的一种，<br>双核R-S细胞的双叶核 <span class="answer-text">面对面的排列</span>，<br>彼此对称，形似镜中之影，称为"镜影细胞"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66. <span class="blur-text">陷窝细胞</span><br>（lacunar cell）：<br>是一种变异的R-S细胞，主要见于 <span class="blur-text">结节硬化型</span>。<br>腔隙型细胞大（<span class="blur-text">40~50 μm</span> 直径），<br>胞质丰富而空亮，核多叶而皱折，<br>好似细胞位于陷窝内。</td>
+                            <td>66. <span class="answer-text">陷窝细胞</span><br>（lacunar cell）：<br>是一种变异的R-S细胞，主要见于 <span class="answer-text">结节硬化型</span>。<br>腔隙型细胞大（<span class="answer-text">40~50 μm</span> 直径），<br>胞质丰富而空亮，核多叶而皱折，<br>好似细胞位于陷窝内。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67. <span class="blur-text">"爆米花"细胞</span><br>（popcorn cell）：<br>是一种变异的R-S细胞，<br>亦称LP细胞（lymphocyte predominant cell），<br>瘤细胞体积大，<span class="blur-text">多叶状核</span>，<br>细胞核皱折，染色质细，核仁小、多个。<br>见于 <span class="blur-text">结节性淋巴细胞为主型</span>。</td>
+                            <td>67. <span class="answer-text">"爆米花"细胞</span><br>（popcorn cell）：<br>是一种变异的R-S细胞，<br>亦称LP细胞（lymphocyte predominant cell），<br>瘤细胞体积大，<span class="answer-text">多叶状核</span>，<br>细胞核皱折，染色质细，核仁小、多个。<br>见于 <span class="answer-text">结节性淋巴细胞为主型</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68. <span class="blur-text">木乃伊细胞</span><br>（mummified cell）：<br><span class="blur-text">变性或凋亡</span> 的R-S细胞，<br>核固缩浓染，胞质嗜酸性，<br>即所谓木乃伊化，又称"干尸细胞"。</td>
+                            <td>68. <span class="answer-text">木乃伊细胞</span><br>（mummified cell）：<br><span class="answer-text">变性或凋亡</span> 的R-S细胞，<br>核固缩浓染，胞质嗜酸性，<br>即所谓木乃伊化，又称"干尸细胞"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69. <span class="blur-text">"满天星"</span><br>（starry sky）现象：<br>高增殖活性的淋巴瘤如 <span class="blur-text">Burkitt淋巴瘤</span>，<br>瘤细胞间有散在的 <span class="blur-text">巨噬细胞</span>，<br>巨噬细胞胞质丰富而透亮，吞噬核碎片，<br>形成所谓"满天星"图像。</td>
+                            <td>69. <span class="answer-text">"满天星"</span><br>（starry sky）现象：<br>高增殖活性的淋巴瘤如 <span class="answer-text">Burkitt淋巴瘤</span>，<br>瘤细胞间有散在的 <span class="answer-text">巨噬细胞</span>，<br>巨噬细胞胞质丰富而透亮，吞噬核碎片，<br>形成所谓"满天星"图像。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70. <span class="blur-text">狼疮小体</span><br>（Lupus body）：<br><span class="blur-text">SLE</span> 中抗核抗体攻击变性或胞膜受损的细胞，<br>导致 <span class="blur-text">细胞核肿胀，呈均质一片</span>，并被挤出胞体，<br>形成 <span class="blur-text">苏木素小体</span> 即狼疮小体，<br>为诊断SLE的特征性依据。</td>
+                            <td>70. <span class="answer-text">狼疮小体</span><br>（Lupus body）：<br><span class="answer-text">SLE</span> 中抗核抗体攻击变性或胞膜受损的细胞，<br>导致 <span class="answer-text">细胞核肿胀，呈均质一片</span>，并被挤出胞体，<br>形成 <span class="answer-text">苏木素小体</span> 即狼疮小体，<br>为诊断SLE的特征性依据。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71. <span class="blur-text">狼疮细胞</span><br>（Lupus cell）：<br>狼疮小体对 <span class="blur-text">中性粒细胞和巨噬细胞</span> 有趋化作用，<br>在补体存在时可促进细胞的吞噬作用。<br>吞噬了 <span class="blur-text">狼疮小体的巨噬细胞</span> 称狼疮细胞。</td>
+                            <td>71. <span class="answer-text">狼疮细胞</span><br>（Lupus cell）：<br>狼疮小体对 <span class="answer-text">中性粒细胞和巨噬细胞</span> 有趋化作用，<br>在补体存在时可促进细胞的吞噬作用。<br>吞噬了 <span class="answer-text">狼疮小体的巨噬细胞</span> 称狼疮细胞。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72. <span class="blur-text">类风湿小结</span><br>（rheumatoid nodule）：<br>类风湿关节炎形成的一种特征性病变。<br>镜下，类风湿小结中央为 <span class="blur-text">大片纤维素样坏死</span>，<br>周围有呈 <span class="blur-text">栅状或放射状排列</span> 的上皮样细胞，<br>外围为肉芽组织。<br>主要发生于皮肤，也可发生于肺、脾、心包等。</td>
+                            <td>72. <span class="answer-text">类风湿小结</span><br>（rheumatoid nodule）：<br>类风湿关节炎形成的一种特征性病变。<br>镜下，类风湿小结中央为 <span class="answer-text">大片纤维素样坏死</span>，<br>周围有呈 <span class="answer-text">栅状或放射状排列</span> 的上皮样细胞，<br>外围为肉芽组织。<br>主要发生于皮肤，也可发生于肺、脾、心包等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73. <span class="blur-text">口眼干燥综合征</span><br>（Sjogren syndrome）：<br>基本病变是 <span class="blur-text">腮腺、泪腺</span> 的破坏，<br>伴有 <span class="blur-text">淋巴细胞浸润</span>，<br>从而引起临床以 <span class="blur-text">眼干、口干</span> 表现为特征的自身免疫病。</td>
+                            <td>73. <span class="answer-text">口眼干燥综合征</span><br>（Sjogren syndrome）：<br>基本病变是 <span class="answer-text">腮腺、泪腺</span> 的破坏，<br>伴有 <span class="answer-text">淋巴细胞浸润</span>，<br>从而引起临床以 <span class="answer-text">眼干、口干</span> 表现为特征的自身免疫病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74. <span class="blur-text">GVHD</span>：<br><span class="blur-text">移植物抗宿主病</span>，<br>指在机体的免疫功能缺陷，<br>而移植物又具有大量的免疫活性细胞的情况下，<br><span class="blur-text">移植物中的供体免疫活性细胞</span> 可被宿主的组织相容性抗原所活化，<br>从而产生针对 <span class="blur-text">宿主组织细胞</span> 的免疫应答，<br>最终导致宿主全身性的组织损伤。</td>
+                            <td>74. <span class="answer-text">GVHD</span>：<br><span class="answer-text">移植物抗宿主病</span>，<br>指在机体的免疫功能缺陷，<br>而移植物又具有大量的免疫活性细胞的情况下，<br><span class="answer-text">移植物中的供体免疫活性细胞</span> 可被宿主的组织相容性抗原所活化，<br>从而产生针对 <span class="answer-text">宿主组织细胞</span> 的免疫应答，<br>最终导致宿主全身性的组织损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75. <span class="blur-text">纤维素样坏死</span>：<br>常是 <span class="blur-text">结缔组织、血管壁</span> 的坏死；<br>呈 <span class="blur-text">强嗜酸性</span> 细丝、颗粒状，似纤维素样。<br>常见于变态反应如 <span class="blur-text">风湿病、红斑狼疮、类风湿关节炎</span> 等。</td>
+                            <td>75. <span class="answer-text">纤维素样坏死</span>：<br>常是 <span class="answer-text">结缔组织、血管壁</span> 的坏死；<br>呈 <span class="answer-text">强嗜酸性</span> 细丝、颗粒状，似纤维素样。<br>常见于变态反应如 <span class="answer-text">风湿病、红斑狼疮、类风湿关节炎</span> 等。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

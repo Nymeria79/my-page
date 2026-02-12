@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">口腔科学名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1. <strong>口腔科学</strong><br>整体医学的一部分，主要任务是研究<span class="blur-text">牙体</span>、<span class="blur-text">牙周</span>及颌面部软、硬组织的疾病，以及这些组织的病变与<span class="blur-text">全身疾病</span>的关系，并对其预防和治疗的一门临床学科</td>
+                            <td>1. <strong>口腔科学</strong><br>整体医学的一部分，主要任务是研究<span class="answer-text">牙体</span>、<span class="answer-text">牙周</span>及颌面部软、硬组织的疾病，以及这些组织的病变与<span class="answer-text">全身疾病</span>的关系，并对其预防和治疗的一门临床学科</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. <strong>口腔</strong><br>位于<span class="blur-text">颌面部</span>区域内，是<span class="blur-text">牙</span>、<span class="blur-text">颌骨</span>及唇、颊、腭、舌、口底、唾液腺等组织器官组成的功能性器官</td>
+                            <td>2. <strong>口腔</strong><br>位于<span class="answer-text">颌面部</span>区域内，是<span class="answer-text">牙</span>、<span class="answer-text">颌骨</span>及唇、颊、腭、舌、口底、唾液腺等组织器官组成的功能性器官</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. <strong>口腔前庭</strong><br>为<span class="blur-text">牙列</span>的外围间隙，位于<span class="blur-text">唇</span>、<span class="blur-text">颊</span>与牙列、牙龈及牙槽粘膜之间。因唇、颊软组织与牙列通常处于贴合状态而呈一潜在腔隙，与牙列的形态一致，呈<span class="blur-text">马蹄形</span></td>
+                            <td>3. <strong>口腔前庭</strong><br>为<span class="answer-text">牙列</span>的外围间隙，位于<span class="answer-text">唇</span>、<span class="answer-text">颊</span>与牙列、牙龈及牙槽粘膜之间。因唇、颊软组织与牙列通常处于贴合状态而呈一潜在腔隙，与牙列的形态一致，呈<span class="answer-text">马蹄形</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. <strong>固有口腔</strong><br>是口腔的<span class="blur-text">主要部分</span>，其范围上为<span class="blur-text">硬腭</span>与<span class="blur-text">软腭</span>，下为舌和口底，前界和两侧界为上下牙弓，后界为<span class="blur-text">咽门</span></td>
+                            <td>4. <strong>固有口腔</strong><br>是口腔的<span class="answer-text">主要部分</span>，其范围上为<span class="answer-text">硬腭</span>与<span class="answer-text">软腭</span>，下为舌和口底，前界和两侧界为上下牙弓，后界为<span class="answer-text">咽门</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. <strong>混合牙列期</strong><br>一般从<span class="blur-text">6岁</span>至<span class="blur-text">12岁</span>之间，口腔内乳牙逐渐脱落，恒牙相继萌出，乳牙、恒牙混合排列于牙弓上的时期</td>
+                            <td>5. <strong>混合牙列期</strong><br>一般从<span class="answer-text">6岁</span>至<span class="answer-text">12岁</span>之间，口腔内乳牙逐渐脱落，恒牙相继萌出，乳牙、恒牙混合排列于牙弓上的时期</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. <strong>龋病</strong><br>是以<span class="blur-text">细菌</span>为主的多种因素影响下，牙体硬组织发生的<span class="blur-text">慢性</span>、<span class="blur-text">进行性</span>、破坏性疾病</td>
+                            <td>6. <strong>龋病</strong><br>是以<span class="answer-text">细菌</span>为主的多种因素影响下，牙体硬组织发生的<span class="answer-text">慢性</span>、<span class="answer-text">进行性</span>、破坏性疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. <strong>楔状缺损</strong><br>指发生在牙<span class="blur-text">唇面</span>、<span class="blur-text">颊面</span>颈部硬组织的慢性缺损</td>
+                            <td>7. <strong>楔状缺损</strong><br>指发生在牙<span class="answer-text">唇面</span>、<span class="answer-text">颊面</span>颈部硬组织的慢性缺损</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. A <strong>可复性牙髓炎</strong><br>是牙髓组织以<span class="blur-text">血管扩张</span>、<span class="blur-text">充血</span>为主要病理变化的初期炎症。患牙受冷热刺激或甜酸刺激时立即产生<span class="blur-text">短暂</span>、<span class="blur-text">尖锐</span>的疼痛，去除刺激后疼痛立即消失。无自发痛史。常伴有牙体硬组织缺损。若彻底去除病原刺激因素，同时给予患牙适当的治疗，牙髓可恢复原有状态</td>
+                            <td>8. A <strong>可复性牙髓炎</strong><br>是牙髓组织以<span class="answer-text">血管扩张</span>、<span class="answer-text">充血</span>为主要病理变化的初期炎症。患牙受冷热刺激或甜酸刺激时立即产生<span class="answer-text">短暂</span>、<span class="answer-text">尖锐</span>的疼痛，去除刺激后疼痛立即消失。无自发痛史。常伴有牙体硬组织缺损。若彻底去除病原刺激因素，同时给予患牙适当的治疗，牙髓可恢复原有状态</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>8. B <strong>可复性牙髓炎（治疗预后）</strong><br>若彻底去除<span class="blur-text">病原刺激因素</span>，同时给予患牙适当的<span class="blur-text">治疗</span>，牙髓可恢复原有状态</td>
+                            <td>8. B <strong>可复性牙髓炎（治疗预后）</strong><br>若彻底去除<span class="answer-text">病原刺激因素</span>，同时给予患牙适当的<span class="answer-text">治疗</span>，牙髓可恢复原有状态</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>9. A <strong>不可复性牙髓炎</strong><br>是一类病变严重的牙髓炎症，经处理<span class="blur-text">不能恢复</span>正常牙髓组织功能，只能<span class="blur-text">摘除牙髓</span>以去除病变。可分为<span class="blur-text">急性牙髓炎</span>、<span class="blur-text">慢性牙髓炎</span>、残髓炎和逆行性牙髓炎</td>
+                            <td>9. A <strong>不可复性牙髓炎</strong><br>是一类病变严重的牙髓炎症，经处理<span class="answer-text">不能恢复</span>正常牙髓组织功能，只能<span class="answer-text">摘除牙髓</span>以去除病变。可分为<span class="answer-text">急性牙髓炎</span>、<span class="answer-text">慢性牙髓炎</span>、残髓炎和逆行性牙髓炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>9. B <strong>不可复性牙髓炎（分型）</strong><br>可分为急性牙髓炎、慢性牙髓炎、<span class="blur-text">残髓炎</span>和<span class="blur-text">逆行性牙髓炎</span></td>
+                            <td>9. B <strong>不可复性牙髓炎（分型）</strong><br>可分为急性牙髓炎、慢性牙髓炎、<span class="answer-text">残髓炎</span>和<span class="answer-text">逆行性牙髓炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10. <strong>逆行性牙髓炎</strong><br>是患牙因<span class="blur-text">牙周病</span>造成深牙周袋，而袋内的细菌和毒素通过<span class="blur-text">根尖孔</span>或<span class="blur-text">侧支副根管</span>逆行进入牙髓，引起牙髓的慢性炎症</td>
+                            <td>10. <strong>逆行性牙髓炎</strong><br>是患牙因<span class="answer-text">牙周病</span>造成深牙周袋，而袋内的细菌和毒素通过<span class="answer-text">根尖孔</span>或<span class="answer-text">侧支副根管</span>逆行进入牙髓，引起牙髓的慢性炎症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>11. <strong>急性根尖周炎</strong><br>是指发生在牙齿根尖部<span class="blur-text">牙骨质</span>及其周围的<span class="blur-text">牙周膜</span>和<span class="blur-text">牙槽骨</span>的炎症性疾病。从根尖部牙周膜出现浆液性炎症，继续发展到根尖周组织形成化脓性炎症甚至发展为牙槽骨的局限性骨髓炎或颌骨骨髓炎一系列反应过程</td>
+                            <td>11. <strong>急性根尖周炎</strong><br>是指发生在牙齿根尖部<span class="answer-text">牙骨质</span>及其周围的<span class="answer-text">牙周膜</span>和<span class="answer-text">牙槽骨</span>的炎症性疾病。从根尖部牙周膜出现浆液性炎症，继续发展到根尖周组织形成化脓性炎症甚至发展为牙槽骨的局限性骨髓炎或颌骨骨髓炎一系列反应过程</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>12. <strong>慢性根尖周炎</strong><br>根管内由于长期<span class="blur-text">感染</span>及病原刺激存在，根尖周围组织呈现慢性炎症反应，表现为<span class="blur-text">根尖肉芽肿</span>、<span class="blur-text">慢性根尖周脓肿</span>和根尖周囊肿</td>
+                            <td>12. <strong>慢性根尖周炎</strong><br>根管内由于长期<span class="answer-text">感染</span>及病原刺激存在，根尖周围组织呈现慢性炎症反应，表现为<span class="answer-text">根尖肉芽肿</span>、<span class="answer-text">慢性根尖周脓肿</span>和根尖周囊肿</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>13. <strong>牙周病</strong><br>是人类口腔的常见病、多发病，包括<span class="blur-text">牙龈病</span>和<span class="blur-text">牙周炎</span>两大类疾病</td>
+                            <td>13. <strong>牙周病</strong><br>是人类口腔的常见病、多发病，包括<span class="answer-text">牙龈病</span>和<span class="answer-text">牙周炎</span>两大类疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>14. <strong>慢性龈炎</strong><br>是菌斑性牙龈病中最常见的疾病，又称<span class="blur-text">边缘性龈炎</span>和<span class="blur-text">单纯性龈炎</span>，牙龈的炎症主要位于游离龈和龈乳头</td>
+                            <td>14. <strong>慢性龈炎</strong><br>是菌斑性牙龈病中最常见的疾病，又称<span class="answer-text">边缘性龈炎</span>和<span class="answer-text">单纯性龈炎</span>，牙龈的炎症主要位于游离龈和龈乳头</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>15. <strong>药物性牙龈增生</strong><br>指长期服用某些药物而引起的牙龈的<span class="blur-text">纤维性增生</span>和<span class="blur-text">体积增大</span></td>
+                            <td>15. <strong>药物性牙龈增生</strong><br>指长期服用某些药物而引起的牙龈的<span class="answer-text">纤维性增生</span>和<span class="answer-text">体积增大</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>16. <strong>妊娠期龈炎</strong><br>指妇女在<span class="blur-text">妊娠期间</span>，由于<span class="blur-text">女性激素水平升高</span>，原有的牙龈慢性炎症加重，牙龈肿胀或形成龈瘤样的改变，<span class="blur-text">分娩后</span>病损可自行减轻或消退</td>
+                            <td>16. <strong>妊娠期龈炎</strong><br>指妇女在<span class="answer-text">妊娠期间</span>，由于<span class="answer-text">女性激素水平升高</span>，原有的牙龈慢性炎症加重，牙龈肿胀或形成龈瘤样的改变，<span class="answer-text">分娩后</span>病损可自行减轻或消退</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>17. <strong>牙菌斑</strong><br>是一种<span class="blur-text">细菌性生物膜</span>，为基质包裹的互相黏附、或黏附于牙面的软而未矿化的<span class="blur-text">细菌性群体</span></td>
+                            <td>17. <strong>牙菌斑</strong><br>是一种<span class="answer-text">细菌性生物膜</span>，为基质包裹的互相黏附、或黏附于牙面的软而未矿化的<span class="answer-text">细菌性群体</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>18. <strong>牙龈瘤</strong><br>是一种<span class="blur-text">炎症反应性瘤样增生</span>物，多发生于牙龈乳头，亦可发生于龈缘。来源于<span class="blur-text">牙周膜</span>及<span class="blur-text">牙龈的结缔组织</span>，因无肿瘤的生物学特征和结构，故非真性肿瘤，但切除后易复发</td>
+                            <td>18. <strong>牙龈瘤</strong><br>是一种<span class="answer-text">炎症反应性瘤样增生</span>物，多发生于牙龈乳头，亦可发生于龈缘。来源于<span class="answer-text">牙周膜</span>及<span class="answer-text">牙龈的结缔组织</span>，因无肿瘤的生物学特征和结构，故非真性肿瘤，但切除后易复发</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>19. A <strong>口腔扁平苔藓(OLP)</strong><br>是口腔黏膜中最常见的疾病之一，好发于<span class="blur-text">中年人</span>，<span class="blur-text">女性</span>多于男性，多数患者有疼痛、粗糙不适等临床症状，因其长期糜烂病损有恶变现象，<span class="blur-text">WHO</span>将其列入<span class="blur-text">癌前病变</span></td>
+                            <td>19. A <strong>口腔扁平苔藓(OLP)</strong><br>是口腔黏膜中最常见的疾病之一，好发于<span class="answer-text">中年人</span>，<span class="answer-text">女性</span>多于男性，多数患者有疼痛、粗糙不适等临床症状，因其长期糜烂病损有恶变现象，<span class="answer-text">WHO</span>将其列入<span class="answer-text">癌前病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>19. B <strong>口腔扁平苔藓(OLP)（病理特征）</strong><br>可见<span class="blur-text">胶样小体</span>，是上皮的棘层、基底层或固有层的圆形或卵圆形嗜酸性小体，是<span class="blur-text">细胞凋亡</span>的产物</td>
+                            <td>19. B <strong>口腔扁平苔藓(OLP)（病理特征）</strong><br>可见<span class="answer-text">胶样小体</span>，是上皮的棘层、基底层或固有层的圆形或卵圆形嗜酸性小体，是<span class="answer-text">细胞凋亡</span>的产物</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>20. <strong>牙周炎</strong><br>是由于<span class="blur-text">牙菌斑生物膜</span>引起的牙周组织的慢性感染性疾病，导致牙支持组织（<span class="blur-text">牙龈</span>、<span class="blur-text">牙周膜</span>、<span class="blur-text">牙槽骨</span>和牙骨质）的炎症、牙周袋形成、进行性附着丧失和牙槽骨吸收，最后导致牙松动、丧失</td>
+                            <td>20. <strong>牙周炎</strong><br>是由于<span class="answer-text">牙菌斑生物膜</span>引起的牙周组织的慢性感染性疾病，导致牙支持组织（<span class="answer-text">牙龈</span>、<span class="answer-text">牙周膜</span>、<span class="answer-text">牙槽骨</span>和牙骨质）的炎症、牙周袋形成、进行性附着丧失和牙槽骨吸收，最后导致牙松动、丧失</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>21. <strong>慢性牙周炎</strong><br>是最常见的一类牙周炎，约占牙周炎患者的<span class="blur-text">95%</span>，由长期存在的<span class="blur-text">牙龈炎</span>向深部牙周组织扩展而引起</td>
+                            <td>21. <strong>慢性牙周炎</strong><br>是最常见的一类牙周炎，约占牙周炎患者的<span class="answer-text">95%</span>，由长期存在的<span class="answer-text">牙龈炎</span>向深部牙周组织扩展而引起</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>22. <strong>牙齿松动</strong><br>牙齿松动程度超过正常生理范围。牙齿在健康状态有一定的活动度，主要是<span class="blur-text">水平方向</span>的，垂直方向更是非常微小，不超过<span class="blur-text">0.02mm</span>，不易被察觉。当由于某些疾病因素或其他因素造成牙齿的活动度大于这个范围时，就称作牙齿松动</td>
+                            <td>22. <strong>牙齿松动</strong><br>牙齿松动程度超过正常生理范围。牙齿在健康状态有一定的活动度，主要是<span class="answer-text">水平方向</span>的，垂直方向更是非常微小，不超过<span class="answer-text">0.02mm</span>，不易被察觉。当由于某些疾病因素或其他因素造成牙齿的活动度大于这个范围时，就称作牙齿松动</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>23. A <strong>牙周袋</strong><br>炎症破坏牙龈正常的在牙颈部的附着形成。牙周袋是<span class="blur-text">病理性加深的龈沟</span>，是牙周炎最重要的临床表现之一。由于牙龈的肿胀或增生使龈缘位置向牙冠方向移动，使龈沟加深，形成<span class="blur-text">假性牙周袋</span>；结合上皮向根方增殖，其冠方部分与牙根表面分离使龈沟加深，则形成<span class="blur-text">真性牙周袋</span></td>
+                            <td>23. A <strong>牙周袋</strong><br>炎症破坏牙龈正常的在牙颈部的附着形成。牙周袋是<span class="answer-text">病理性加深的龈沟</span>，是牙周炎最重要的临床表现之一。由于牙龈的肿胀或增生使龈缘位置向牙冠方向移动，使龈沟加深，形成<span class="answer-text">假性牙周袋</span>；结合上皮向根方增殖，其冠方部分与牙根表面分离使龈沟加深，则形成<span class="answer-text">真性牙周袋</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>23. B <strong>牙周袋（分型）</strong><br>假性牙周袋：由于<span class="blur-text">牙龈的肿胀或增生</span>使龈缘位置向牙冠方向移动；真性牙周袋：<span class="blur-text">结合上皮向根方增殖</span>，其冠方部分与牙根表面分离</td>
+                            <td>23. B <strong>牙周袋（分型）</strong><br>假性牙周袋：由于<span class="answer-text">牙龈的肿胀或增生</span>使龈缘位置向牙冠方向移动；真性牙周袋：<span class="answer-text">结合上皮向根方增殖</span>，其冠方部分与牙根表面分离</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>24. <strong>舍格伦综合征</strong><br>是一种<span class="blur-text">自身免疫性疾病</span>，其特征表现为<span class="blur-text">外分泌腺的进行性破坏</span>，导致黏膜及结膜干燥，并伴有自身免疫性病征</td>
+                            <td>24. <strong>舍格伦综合征</strong><br>是一种<span class="answer-text">自身免疫性疾病</span>，其特征表现为<span class="answer-text">外分泌腺的进行性破坏</span>，导致黏膜及结膜干燥，并伴有自身免疫性病征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>25. <strong>复发性阿弗他口炎/复发性口腔溃疡</strong><br>是最常见的口腔黏膜溃疡类病，溃疡<span class="blur-text">灼痛明显</span>。病损表现为孤立、圆形、或椭圆形浅表性溃疡，具有<span class="blur-text">周期性</span>、<span class="blur-text">复发性</span>及<span class="blur-text">自限性</span>特点</td>
+                            <td>25. <strong>复发性阿弗他口炎/复发性口腔溃疡</strong><br>是最常见的口腔黏膜溃疡类病，溃疡<span class="answer-text">灼痛明显</span>。病损表现为孤立、圆形、或椭圆形浅表性溃疡，具有<span class="answer-text">周期性</span>、<span class="answer-text">复发性</span>及<span class="answer-text">自限性</span>特点</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>26. <strong>口腔白斑病</strong><br>是指发生在口腔黏膜上以<span class="blur-text">白色黏膜</span>为主的损害，不能擦去，也不能以临床和组织病理学的方法诊断为其他可定义的疾病，属于<span class="blur-text">癌前病变</span>或潜在恶性疾病范畴</td>
+                            <td>26. <strong>口腔白斑病</strong><br>是指发生在口腔黏膜上以<span class="answer-text">白色黏膜</span>为主的损害，不能擦去，也不能以临床和组织病理学的方法诊断为其他可定义的疾病，属于<span class="answer-text">癌前病变</span>或潜在恶性疾病范畴</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>27. <strong>胶样小体</strong><br>上皮的<span class="blur-text">棘层</span>、<span class="blur-text">基底层</span>或固有层的圆形或卵圆形嗜酸性小体。是<span class="blur-text">细胞凋亡</span>的产物，口腔扁平苔藓可见</td>
+                            <td>27. <strong>胶样小体</strong><br>上皮的<span class="answer-text">棘层</span>、<span class="answer-text">基底层</span>或固有层的圆形或卵圆形嗜酸性小体。是<span class="answer-text">细胞凋亡</span>的产物，口腔扁平苔藓可见</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>28. <strong>口腔颌面部感染</strong><br>是因为<span class="blur-text">致病微生物的入侵</span>引起口腔颌面部软、硬组织局部乃至全身的一系列病理反应过程。其中<span class="blur-text">牙源性</span>占大多数</td>
+                            <td>28. <strong>口腔颌面部感染</strong><br>是因为<span class="answer-text">致病微生物的入侵</span>引起口腔颌面部软、硬组织局部乃至全身的一系列病理反应过程。其中<span class="answer-text">牙源性</span>占大多数</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>29. <strong>危险三角区</strong><br>即<span class="blur-text">鼻唇区</span>。<span class="blur-text">鼻根</span>到两侧<span class="blur-text">口角</span>连线的三角区。该区静脉瓣稀少或缺如。<span class="blur-text">内眦静脉</span>和<span class="blur-text">翼静脉丛</span>直接与颅内海绵窦相通。这些静脉受到挤压容易导致血液逆流，一旦发生感染可循此途径引起海绵窦血栓性静脉炎、脑膜炎、脑脓肿等严重并发症</td>
+                            <td>29. <strong>危险三角区</strong><br>即<span class="answer-text">鼻唇区</span>。<span class="answer-text">鼻根</span>到两侧<span class="answer-text">口角</span>连线的三角区。该区静脉瓣稀少或缺如。<span class="answer-text">内眦静脉</span>和<span class="answer-text">翼静脉丛</span>直接与颅内海绵窦相通。这些静脉受到挤压容易导致血液逆流，一旦发生感染可循此途径引起海绵窦血栓性静脉炎、脑膜炎、脑脓肿等严重并发症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>30. <strong>牙源性感染</strong><br>由<span class="blur-text">牙冠周炎</span>、<span class="blur-text">根尖周炎</span>或颌骨骨髓炎等炎症扩散所致感染。是颌面部间隙感染的最常见病因</td>
+                            <td>30. <strong>牙源性感染</strong><br>由<span class="answer-text">牙冠周炎</span>、<span class="answer-text">根尖周炎</span>或颌骨骨髓炎等炎症扩散所致感染。是颌面部间隙感染的最常见病因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>31. <strong>腺源性感染(Adenogenous infection)</strong><br>细菌经由<span class="blur-text">淋巴道</span>，引起局部淋巴结的化脓性炎症，继而感染穿破腺被膜后向周围扩散引起的口底多间隙感染。包括扁桃体炎、唾液腺炎或颌面部淋巴结炎等炎症扩散所致的感染。尤其是婴幼儿<span class="blur-text">淋巴网状内皮系统发育尚未完善</span>，较易发生淋巴组织来源的感染</td>
+                            <td>31. <strong>腺源性感染(Adenogenous infection)</strong><br>细菌经由<span class="answer-text">淋巴道</span>，引起局部淋巴结的化脓性炎症，继而感染穿破腺被膜后向周围扩散引起的口底多间隙感染。包括扁桃体炎、唾液腺炎或颌面部淋巴结炎等炎症扩散所致的感染。尤其是婴幼儿<span class="answer-text">淋巴网状内皮系统发育尚未完善</span>，较易发生淋巴组织来源的感染</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>32. <strong>下颌第三磨牙冠周炎</strong><br>又称<span class="blur-text">智齿冠周炎</span>，是指发生在萌出不全或萌出受阻的第三磨牙牙冠周围的软组织的炎症，常见于<span class="blur-text">18-25岁</span>的青年，是口腔科的常见病和多发病</td>
+                            <td>32. <strong>下颌第三磨牙冠周炎</strong><br>又称<span class="answer-text">智齿冠周炎</span>，是指发生在萌出不全或萌出受阻的第三磨牙牙冠周围的软组织的炎症，常见于<span class="answer-text">18-25岁</span>的青年，是口腔科的常见病和多发病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>33. <strong>盲袋</strong><br>正在萌出的第三磨牙牙冠被牙龈部分或全部覆盖，形成盲袋，食物残渣进入盲袋后不易清除（或答：智齿牙冠表面有<span class="blur-text">软组织覆盖</span>，可导致冠周炎）</td>
+                            <td>33. <strong>盲袋</strong><br>正在萌出的第三磨牙牙冠被牙龈部分或全部覆盖，形成盲袋，食物残渣进入盲袋后不易清除（或答：智齿牙冠表面有<span class="answer-text">软组织覆盖</span>，可导致冠周炎）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>34. <strong>龈瓣切除术</strong><br>垂直阻生牙萌出后，若与对颌牙能够建立良好的咬合关系，可以<span class="blur-text">切除覆盖牙冠的龈瓣</span>以助其正常萌出</td>
+                            <td>34. <strong>龈瓣切除术</strong><br>垂直阻生牙萌出后，若与对颌牙能够建立良好的咬合关系，可以<span class="answer-text">切除覆盖牙冠的龈瓣</span>以助其正常萌出</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>35. <strong>路德维希咽峡炎</strong><br>即<span class="blur-text">腐败坏死性口底蜂窝织炎</span></td>
+                            <td>35. <strong>路德维希咽峡炎</strong><br>即<span class="answer-text">腐败坏死性口底蜂窝织炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>36. <strong>疖</strong><br><span class="blur-text">单个</span>毛囊和皮脂腺发生浅层组织的急性化脓性炎症</td>
+                            <td>36. <strong>疖</strong><br><span class="answer-text">单个</span>毛囊和皮脂腺发生浅层组织的急性化脓性炎症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>37. <strong>痈</strong><br>感染累及<span class="blur-text">多个</span>毛囊和皮脂腺，引起较深层组织的化脓性炎症</td>
+                            <td>37. <strong>痈</strong><br>感染累及<span class="answer-text">多个</span>毛囊和皮脂腺，引起较深层组织的化脓性炎症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>38. <strong>局部麻醉(local anesthesia)</strong><br>是指药物暂时阻断机体某一区域的<span class="blur-text">感觉神经传导</span>，使该区域的痛觉消失，从而达到在无痛的情况下进行治疗的目的</td>
+                            <td>38. <strong>局部麻醉(local anesthesia)</strong><br>是指药物暂时阻断机体某一区域的<span class="answer-text">感觉神经传导</span>，使该区域的痛觉消失，从而达到在无痛的情况下进行治疗的目的</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>39. <strong>表面麻醉(superfacial anesthesia)</strong><br>是将麻醉剂<span class="blur-text">涂布或喷射于手术区表面</span>，药物被吸收而使末梢神经麻痹，以达到痛觉消失的效果</td>
+                            <td>39. <strong>表面麻醉(superfacial anesthesia)</strong><br>是将麻醉剂<span class="answer-text">涂布或喷射于手术区表面</span>，药物被吸收而使末梢神经麻痹，以达到痛觉消失的效果</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>40. <strong>浸润麻醉(infiltration anesthesia)</strong><br>将局麻药<span class="blur-text">注射于组织内</span>，作用于该区域神经末梢，使之失去传导痛觉的能力而产生麻醉效果</td>
+                            <td>40. <strong>浸润麻醉(infiltration anesthesia)</strong><br>将局麻药<span class="answer-text">注射于组织内</span>，作用于该区域神经末梢，使之失去传导痛觉的能力而产生麻醉效果</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>41. <strong>阻滞麻醉(block anesthesia)</strong><br>将局麻药注射到<span class="blur-text">神经干</span>或<span class="blur-text">主要分支周围</span>，以阻断神经末梢传入的刺激，使该神经分布区域产生麻醉效果</td>
+                            <td>41. <strong>阻滞麻醉(block anesthesia)</strong><br>将局麻药注射到<span class="answer-text">神经干</span>或<span class="answer-text">主要分支周围</span>，以阻断神经末梢传入的刺激，使该神经分布区域产生麻醉效果</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>42. A <strong>干槽症(dry socket)</strong><br>是拔牙创急性感染的另一种类型，<span class="blur-text">阻生下颌第三磨牙</span>多见。如果拔牙术后<span class="blur-text">2~3天后</span>出现剧烈疼痛，向耳颞部下颌下区或头顶部放射，服用一般的止疼片不能缓解疼痛，则可能发生了干槽症</td>
+                            <td>42. A <strong>干槽症(dry socket)</strong><br>是拔牙创急性感染的另一种类型，<span class="answer-text">阻生下颌第三磨牙</span>多见。如果拔牙术后<span class="answer-text">2~3天后</span>出现剧烈疼痛，向耳颞部下颌下区或头顶部放射，服用一般的止疼片不能缓解疼痛，则可能发生了干槽症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>42. B <strong>干槽症(dry socket)（临床表现）</strong><br>临床表现为<span class="blur-text">牙槽窝空虚</span>、<span class="blur-text">坏死物恶臭</span>、<span class="blur-text">探及骨面锐痛</span></td>
+                            <td>42. B <strong>干槽症(dry socket)（临床表现）</strong><br>临床表现为<span class="answer-text">牙槽窝空虚</span>、<span class="answer-text">坏死物恶臭</span>、<span class="answer-text">探及骨面锐痛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>43. <strong>清创术</strong><br>除去创内的<span class="blur-text">异物</span>和<span class="blur-text">血凝块</span>，切除创内失活组织（呈暗紫色，不出血，无疼痛），对创缘做必要的修整，保证排液畅通，力求使新鲜污染创转变为<span class="blur-text">新鲜手术创</span>，争取第一期愈合</td>
+                            <td>43. <strong>清创术</strong><br>除去创内的<span class="answer-text">异物</span>和<span class="answer-text">血凝块</span>，切除创内失活组织（呈暗紫色，不出血，无疼痛），对创缘做必要的修整，保证排液畅通，力求使新鲜污染创转变为<span class="answer-text">新鲜手术创</span>，争取第一期愈合</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>44. <strong>牙齿移位</strong><br>牙齿完全萌出，达到咬合平面，本已建立稳定的咬合关系及邻面接触关系，但由于<span class="blur-text">牙周支持组织的破坏</span>，或外力/咬合力等因素导致的牙齿位置发生改变</td>
+                            <td>44. <strong>牙齿移位</strong><br>牙齿完全萌出，达到咬合平面，本已建立稳定的咬合关系及邻面接触关系，但由于<span class="answer-text">牙周支持组织的破坏</span>，或外力/咬合力等因素导致的牙齿位置发生改变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>45. <strong>眼镜征</strong><br>由于眼睑周围组织疏松，上颌骨骨折时眶周容易水肿，皮下淤血，青紫，呈蓝紫色，成为典型的"<span class="blur-text">眼镜</span>"症状</td>
+                            <td>45. <strong>眼镜征</strong><br>由于眼睑周围组织疏松，上颌骨骨折时眶周容易水肿，皮下淤血，青紫，呈蓝紫色，成为典型的"<span class="answer-text">眼镜</span>"症状</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>46. <strong>交界性肿瘤</strong><br>有些肿瘤虽为良性，但具有<span class="blur-text">局部浸润生长</span>和<span class="blur-text">恶变倾向</span></td>
+                            <td>46. <strong>交界性肿瘤</strong><br>有些肿瘤虽为良性，但具有<span class="answer-text">局部浸润生长</span>和<span class="answer-text">恶变倾向</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>47. <strong>牙体缺损</strong><br>指牙体硬组织不同程度的<span class="blur-text">外形</span>和<span class="blur-text">结构</span>破坏、缺损或发育畸形，造成牙体形态、咬合和邻接关系异常，影响牙髓和牙周组织甚至全身健康，对咀嚼、发音和美观等也将产生不同程度的影响</td>
+                            <td>47. <strong>牙体缺损</strong><br>指牙体硬组织不同程度的<span class="answer-text">外形</span>和<span class="answer-text">结构</span>破坏、缺损或发育畸形，造成牙体形态、咬合和邻接关系异常，影响牙髓和牙周组织甚至全身健康，对咀嚼、发音和美观等也将产生不同程度的影响</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>48. <strong>牙列缺损</strong><br>是指上颌或下颌的牙列内有<span class="blur-text">数目不等的牙缺少</span>，同时仍余留不同数目的天然牙</td>
+                            <td>48. <strong>牙列缺损</strong><br>是指上颌或下颌的牙列内有<span class="answer-text">数目不等的牙缺少</span>，同时仍余留不同数目的天然牙</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>49. <strong>牙列缺失</strong><br>指整个牙弓上不存留任何天然牙或牙根，又称<span class="blur-text">无牙颌</span></td>
+                            <td>49. <strong>牙列缺失</strong><br>指整个牙弓上不存留任何天然牙或牙根，又称<span class="answer-text">无牙颌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>50. <strong>固定局部义齿</strong><br>修复牙列中一个或几个缺失牙的修复体，靠粘固剂或固定装置与缺牙两侧预备好的<span class="blur-text">基牙</span>或<span class="blur-text">种植牙</span>连接在一起，从而修复缺失牙的解剖形态和生理功能，患者不能自行摘戴，其结构很像工程上的桥梁结构，故称为<span class="blur-text">固定桥</span></td>
+                            <td>50. <strong>固定局部义齿</strong><br>修复牙列中一个或几个缺失牙的修复体，靠粘固剂或固定装置与缺牙两侧预备好的<span class="answer-text">基牙</span>或<span class="answer-text">种植牙</span>连接在一起，从而修复缺失牙的解剖形态和生理功能，患者不能自行摘戴，其结构很像工程上的桥梁结构，故称为<span class="answer-text">固定桥</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>51. <strong>可摘局部义齿</strong><br>它是利用<span class="blur-text">天然牙</span>、<span class="blur-text">基托下黏膜</span>、<span class="blur-text">骨组织</span>作支持，依靠义齿的固位体和基托固位，用人工牙恢复缺失牙的形态和功能，用基托材料恢复缺损的牙槽嵴、颌骨及其周围的软组织形态，患者能自行摘戴的一种修复体</td>
+                            <td>51. <strong>可摘局部义齿</strong><br>它是利用<span class="answer-text">天然牙</span>、<span class="answer-text">基托下黏膜</span>、<span class="answer-text">骨组织</span>作支持，依靠义齿的固位体和基托固位，用人工牙恢复缺失牙的形态和功能，用基托材料恢复缺损的牙槽嵴、颌骨及其周围的软组织形态，患者能自行摘戴的一种修复体</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>52. <strong>口腔正畸学</strong><br>是口腔医学的一个分支科学，它的学科内容是研究<span class="blur-text">错牙合畸形的病因机制</span>、<span class="blur-text">诊断分析</span>及<span class="blur-text">治疗和预防</span></td>
+                            <td>52. <strong>口腔正畸学</strong><br>是口腔医学的一个分支科学，它的学科内容是研究<span class="answer-text">错牙合畸形的病因机制</span>、<span class="answer-text">诊断分析</span>及<span class="answer-text">治疗和预防</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>53. <strong>错牙合畸形</strong><br>是指儿童在生长发育期因<span class="blur-text">遗传因素</span>、<span class="blur-text">后天的环境因素</span>或口腔不良习惯所致的牙齿排列不齐、上下牙弓间、颌骨间位置异常，以及牙颌与颅面间的关系不调等，如牙列不齐，牙合关系异常，上下颌骨位置形态大小异常等，不仅影响外貌也影响功能</td>
+                            <td>53. <strong>错牙合畸形</strong><br>是指儿童在生长发育期因<span class="answer-text">遗传因素</span>、<span class="answer-text">后天的环境因素</span>或口腔不良习惯所致的牙齿排列不齐、上下牙弓间、颌骨间位置异常，以及牙颌与颅面间的关系不调等，如牙列不齐，牙合关系异常，上下颌骨位置形态大小异常等，不仅影响外貌也影响功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>54. <strong>矫治器</strong><br>产生和传导<span class="blur-text">矫治力</span>，以矫治错牙合畸形的装置</td>
+                            <td>54. <strong>矫治器</strong><br>产生和传导<span class="answer-text">矫治力</span>，以矫治错牙合畸形的装置</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>55. <strong>深龋</strong><br>龋坏已达<span class="blur-text">牙本质深层</span>。大而深的龋洞，或入口小而深层有较为广泛的破坏，对外界刺激反应较中龋为重，但刺激源去除后，仍可立即止痛，无自发性痛</td>
+                            <td>55. <strong>深龋</strong><br>龋坏已达<span class="answer-text">牙本质深层</span>。大而深的龋洞，或入口小而深层有较为广泛的破坏，对外界刺激反应较中龋为重，但刺激源去除后，仍可立即止痛，无自发性痛</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

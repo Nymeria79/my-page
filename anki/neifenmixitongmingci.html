@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">内分泌系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>异位内分泌综合征</strong><br>非内分泌腺肿瘤能产生和分泌<span class="blur-text">激素或激素类物质</span>，引起<span class="blur-text">内分泌代谢紊乱</span>的临床症状。此类肿瘤多为<span class="blur-text">恶性肿瘤</span>。</td>
+                            <td>1.. <strong>异位内分泌综合征</strong><br>非内分泌腺肿瘤能产生和分泌<span class="answer-text">激素或激素类物质</span>，引起<span class="answer-text">内分泌代谢紊乱</span>的临床症状。此类肿瘤多为<span class="answer-text">恶性肿瘤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>自身免疫性多内分泌腺病综合征(APS)</strong><br>是指同时或先后发生<span class="blur-text">两种或以上</span>的自身免疫性内分泌腺病，多数表现为<span class="blur-text">腺体功能减退</span>。</td>
+                            <td>2.. <strong>自身免疫性多内分泌腺病综合征(APS)</strong><br>是指同时或先后发生<span class="answer-text">两种或以上</span>的自身免疫性内分泌腺病，多数表现为<span class="answer-text">腺体功能减退</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>多发性内分泌腺瘤病(MEN)</strong><br>为一组遗传性多种内分泌组织发生肿瘤综合征的总称，有<span class="blur-text">2个或2个以上</span>的内分泌腺体病变。</td>
+                            <td>3.. <strong>多发性内分泌腺瘤病(MEN)</strong><br>为一组遗传性多种内分泌组织发生肿瘤综合征的总称，有<span class="answer-text">2个或2个以上</span>的内分泌腺体病变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>内分泌</strong><br>内分泌腺或散在的内分泌细胞的分泌物(<span class="blur-text">激素</span>)通过<span class="blur-text">血液或淋巴</span>运抵全身，通过受体作用于<span class="blur-text">靶细胞</span>，调节其功能活动，这种分泌活动称内分泌。</td>
+                            <td>4.. <strong>内分泌</strong><br>内分泌腺或散在的内分泌细胞的分泌物(<span class="answer-text">激素</span>)通过<span class="answer-text">血液或淋巴</span>运抵全身，通过受体作用于<span class="answer-text">靶细胞</span>，调节其功能活动，这种分泌活动称内分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>靶细胞</strong><br>能与某种激素起<span class="blur-text">特异性反应</span>的细胞，称为该激素的靶细胞。</td>
+                            <td>5.. <strong>靶细胞</strong><br>能与某种激素起<span class="answer-text">特异性反应</span>的细胞，称为该激素的靶细胞。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>旁分泌</strong><br>内分泌细胞分泌的激素或激素样物质，通过其受体直接作用于<span class="blur-text">邻近的细胞</span>，调节邻近细胞的功能活动，这种分泌活动称为旁分泌。</td>
+                            <td>6.. <strong>旁分泌</strong><br>内分泌细胞分泌的激素或激素样物质，通过其受体直接作用于<span class="answer-text">邻近的细胞</span>，调节邻近细胞的功能活动，这种分泌活动称为旁分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>滤泡旁细胞</strong><br>位于<span class="blur-text">甲状腺滤泡之间</span>和<span class="blur-text">滤泡上皮细胞之间</span>。细胞较大，在HE染色切片中胞质着色较浅，银染法可见胞质内有棕黑色颗粒。滤泡旁细胞分泌<span class="blur-text">降钙素</span>，使<span class="blur-text">血钙浓度降低</span>。</td>
+                            <td>7.. <strong>滤泡旁细胞</strong><br>位于<span class="answer-text">甲状腺滤泡之间</span>和<span class="answer-text">滤泡上皮细胞之间</span>。细胞较大，在HE染色切片中胞质着色较浅，银染法可见胞质内有棕黑色颗粒。滤泡旁细胞分泌<span class="answer-text">降钙素</span>，使<span class="answer-text">血钙浓度降低</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>嗜铬细胞</strong><br>为<span class="blur-text">肾上腺髓质</span>的腺细胞，呈多边形，如用含铬盐的固定液固定标本，此类细胞的胞质内可见黄褐色的<span class="blur-text">嗜铬颗粒</span>。嗜铬细胞又分为<span class="blur-text">肾上腺素细胞</span>和<span class="blur-text">去甲肾上腺素细胞</span>，分别分泌<span class="blur-text">肾上腺素</span>和<span class="blur-text">去甲肾上腺素</span>。</td>
+                            <td>8.. <strong>嗜铬细胞</strong><br>为<span class="answer-text">肾上腺髓质</span>的腺细胞，呈多边形，如用含铬盐的固定液固定标本，此类细胞的胞质内可见黄褐色的<span class="answer-text">嗜铬颗粒</span>。嗜铬细胞又分为<span class="answer-text">肾上腺素细胞</span>和<span class="answer-text">去甲肾上腺素细胞</span>，分别分泌<span class="answer-text">肾上腺素</span>和<span class="answer-text">去甲肾上腺素</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>垂体门脉系统</strong><br><span class="blur-text">垂体上动脉</span>从结节部上端伸入神经垂体的漏斗，分支并吻合形成<span class="blur-text">第一级毛细血管网</span>。第一级毛细血管网于结节部汇集成数条<span class="blur-text">垂体门微静脉</span>。垂体门微静脉下行进入远侧部，分支并吻合形成<span class="blur-text">第二级毛细血管网</span>。垂体门微静脉及其两端的第一、第二级毛细血管网构成垂体门脉系统。下丘脑弓状核分泌的释放激素和释放抑制激素经过垂体门脉系统进入<span class="blur-text">腺垂体远侧部</span>，从而调节远侧部细胞的分泌活动。</td>
+                            <td>9.. <strong>垂体门脉系统</strong><br><span class="answer-text">垂体上动脉</span>从结节部上端伸入神经垂体的漏斗，分支并吻合形成<span class="answer-text">第一级毛细血管网</span>。第一级毛细血管网于结节部汇集成数条<span class="answer-text">垂体门微静脉</span>。垂体门微静脉下行进入远侧部，分支并吻合形成<span class="answer-text">第二级毛细血管网</span>。垂体门微静脉及其两端的第一、第二级毛细血管网构成垂体门脉系统。下丘脑弓状核分泌的释放激素和释放抑制激素经过垂体门脉系统进入<span class="answer-text">腺垂体远侧部</span>，从而调节远侧部细胞的分泌活动。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>赫令体</strong><br>下丘脑视上核和室旁核神经元分泌的<span class="blur-text">抗利尿激素</span>和<span class="blur-text">催产素</span>，沿神经元的轴突运输至神经部，分泌颗粒在轴突内聚集，光镜下呈大小不等的<span class="blur-text">嗜酸性团块</span>。</td>
+                            <td>10.. <strong>赫令体</strong><br>下丘脑视上核和室旁核神经元分泌的<span class="answer-text">抗利尿激素</span>和<span class="answer-text">催产素</span>，沿神经元的轴突运输至神经部，分泌颗粒在轴突内聚集，光镜下呈大小不等的<span class="answer-text">嗜酸性团块</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>激素</strong><br>是由<span class="blur-text">内分泌腺或散在内分泌细胞</span>所分泌的，在细胞间传递信息的<span class="blur-text">高效能生物活性物质</span>。</td>
+                            <td>11.. <strong>激素</strong><br>是由<span class="answer-text">内分泌腺或散在内分泌细胞</span>所分泌的，在细胞间传递信息的<span class="answer-text">高效能生物活性物质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>远距分泌</strong><br>激素经<span class="blur-text">血液运输</span>到远距离的靶组织或靶细胞而发挥作用。</td>
+                            <td>12.. <strong>远距分泌</strong><br>激素经<span class="answer-text">血液运输</span>到远距离的靶组织或靶细胞而发挥作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>旁分泌</strong><br>激素经<span class="blur-text">组织液扩散</span>作用于邻近细胞，这种方式称旁分泌。</td>
+                            <td>13.. <strong>旁分泌</strong><br>激素经<span class="answer-text">组织液扩散</span>作用于邻近细胞，这种方式称旁分泌。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>自分泌</strong><br>内分泌细胞分泌的激素在局部扩散，又返回作用于<span class="blur-text">该细胞自身</span>而发挥反馈作用。</td>
+                            <td>14.. <strong>自分泌</strong><br>内分泌细胞分泌的激素在局部扩散，又返回作用于<span class="answer-text">该细胞自身</span>而发挥反馈作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>神经分泌</strong><br>神经内分泌细胞分泌的激素沿轴突借<span class="blur-text">轴浆流动</span>运送至末梢而释放入血。</td>
+                            <td>15.. <strong>神经分泌</strong><br>神经内分泌细胞分泌的激素沿轴突借<span class="answer-text">轴浆流动</span>运送至末梢而释放入血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>允许作用</strong><br>有的激素本身并不能直接对某些器官组织或细胞产生生物效应，但它的存在却是<span class="blur-text">另一种激素发挥作用的必备基础</span>。</td>
+                            <td>16.. <strong>允许作用</strong><br>有的激素本身并不能直接对某些器官组织或细胞产生生物效应，但它的存在却是<span class="answer-text">另一种激素发挥作用的必备基础</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>球状带</strong><br>位于<span class="blur-text">肾上腺皮质外侧</span>，能够分泌<span class="blur-text">盐皮质激素</span>。</td>
+                            <td>17.. <strong>球状带</strong><br>位于<span class="answer-text">肾上腺皮质外侧</span>，能够分泌<span class="answer-text">盐皮质激素</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>束状带</strong><br>位于<span class="blur-text">肾上腺皮质中间</span>，能够分泌<span class="blur-text">糖皮质激素</span>。</td>
+                            <td>18.. <strong>束状带</strong><br>位于<span class="answer-text">肾上腺皮质中间</span>，能够分泌<span class="answer-text">糖皮质激素</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>网状带</strong><br>位于<span class="blur-text">肾上腺皮质内侧</span>，能够分泌<span class="blur-text">性激素</span>和少量<span class="blur-text">糖皮质激素</span>。</td>
+                            <td>19.. <strong>网状带</strong><br>位于<span class="answer-text">肾上腺皮质内侧</span>，能够分泌<span class="answer-text">性激素</span>和少量<span class="answer-text">糖皮质激素</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>负反馈</strong><br>受控部分发出的反馈信息，调整控制部分的活动，最终使受控部分的活动朝着与它原先活动<span class="blur-text">相反的方向</span>改变。</td>
+                            <td>20.. <strong>负反馈</strong><br>受控部分发出的反馈信息，调整控制部分的活动，最终使受控部分的活动朝着与它原先活动<span class="answer-text">相反的方向</span>改变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>下丘脑调节肽</strong><br>由下丘脑促垂体区肽能神经元分泌的，能调节<span class="blur-text">腺垂体活动</span>的肽类激素。</td>
+                            <td>21.. <strong>下丘脑调节肽</strong><br>由下丘脑促垂体区肽能神经元分泌的，能调节<span class="answer-text">腺垂体活动</span>的肽类激素。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>应激</strong><br>当机体受到各种有害刺激时，腺垂体释放<span class="blur-text">ACTH</span>增加，导致血液中<span class="blur-text">糖皮质激素</span>增多，并产生一系列防御性反应。</td>
+                            <td>22.. <strong>应激</strong><br>当机体受到各种有害刺激时，腺垂体释放<span class="answer-text">ACTH</span>增加，导致血液中<span class="answer-text">糖皮质激素</span>增多，并产生一系列防御性反应。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>垂体性侏儒症</strong><br>是指因垂体前叶分泌<span class="blur-text">生长激素(GH)</span>部分或完全缺乏(常伴<span class="blur-text">促性腺激素</span>缺乏)所致儿童期生长发育障碍性疾病，表现为<span class="blur-text">骨骼、躯体生长发育迟缓</span>，体型停滞于儿童期，身材矮小，皮肤和颜面可有皱纹，常伴<span class="blur-text">性器官发育障碍</span>。但智力发育正常。</td>
+                            <td>23.. <strong>垂体性侏儒症</strong><br>是指因垂体前叶分泌<span class="answer-text">生长激素(GH)</span>部分或完全缺乏(常伴<span class="answer-text">促性腺激素</span>缺乏)所致儿童期生长发育障碍性疾病，表现为<span class="answer-text">骨骼、躯体生长发育迟缓</span>，体型停滞于儿童期，身材矮小，皮肤和颜面可有皱纹，常伴<span class="answer-text">性器官发育障碍</span>。但智力发育正常。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>Simond综合征</strong><br>是由于炎症、肿瘤、血液循环障碍、损伤等原因使<span class="blur-text">垂体前叶全部激素</span>分泌障碍的一种综合征，导致相应的靶器官如<span class="blur-text">甲状腺、肾上腺、性腺</span>等的萎缩，病程呈慢性经过，以出现<span class="blur-text">恶病质、过早衰老</span>及各种激素分泌低下和产生相应临床症状为特征。</td>
+                            <td>24.. <strong>Simond综合征</strong><br>是由于炎症、肿瘤、血液循环障碍、损伤等原因使<span class="answer-text">垂体前叶全部激素</span>分泌障碍的一种综合征，导致相应的靶器官如<span class="answer-text">甲状腺、肾上腺、性腺</span>等的萎缩，病程呈慢性经过，以出现<span class="answer-text">恶病质、过早衰老</span>及各种激素分泌低下和产生相应临床症状为特征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>髓样癌</strong><br>是由<span class="blur-text">滤泡旁细胞(即C细胞)</span>发生的恶性肿瘤，属于<span class="blur-text">APUD瘤</span>。</td>
+                            <td>25.. <strong>髓样癌</strong><br>是由<span class="answer-text">滤泡旁细胞(即C细胞)</span>发生的恶性肿瘤，属于<span class="answer-text">APUD瘤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>嗜铬细胞瘤</strong><br>起源于<span class="blur-text">肾上腺髓质、交感神经节</span>或其他部位的嗜铬组织，这种瘤组织持续或间断释放大量<span class="blur-text">儿茶酚胺</span>，引起持续性或阵发性<span class="blur-text">高血压</span>和多个器官功能及代谢紊乱。</td>
+                            <td>26.. <strong>嗜铬细胞瘤</strong><br>起源于<span class="answer-text">肾上腺髓质、交感神经节</span>或其他部位的嗜铬组织，这种瘤组织持续或间断释放大量<span class="answer-text">儿茶酚胺</span>，引起持续性或阵发性<span class="answer-text">高血压</span>和多个器官功能及代谢紊乱。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>垂体前叶功能减退症</strong><br>又称腺垂体功能减退症，指<span class="blur-text">垂体前叶激素</span>分泌减少，可以是单种激素减少，也可以为多种垂体激素同时缺乏。可原发于<span class="blur-text">垂体病变</span>，也可继发于<span class="blur-text">下丘脑病变、鞍区占位性病变</span>，表现为<span class="blur-text">甲状腺、性腺、肾上腺</span>等靶腺功能减退。</td>
+                            <td>27.. <strong>垂体前叶功能减退症</strong><br>又称腺垂体功能减退症，指<span class="answer-text">垂体前叶激素</span>分泌减少，可以是单种激素减少，也可以为多种垂体激素同时缺乏。可原发于<span class="answer-text">垂体病变</span>，也可继发于<span class="answer-text">下丘脑病变、鞍区占位性病变</span>，表现为<span class="answer-text">甲状腺、性腺、肾上腺</span>等靶腺功能减退。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>Sheehan syndrome</strong><br>是垂体<span class="blur-text">缺血性萎缩、坏死</span>，前叶激素全部分泌减少的一种综合征，多由于<span class="blur-text">分娩时大出血或休克</span>引起。</td>
+                            <td>28.. <strong>Sheehan syndrome</strong><br>是垂体<span class="answer-text">缺血性萎缩、坏死</span>，前叶激素全部分泌减少的一种综合征，多由于<span class="answer-text">分娩时大出血或休克</span>引起。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>垂体危象</strong><br>指在<span class="blur-text">垂体功能减退</span>的基础上，各种<span class="blur-text">应激因素</span>诱发的垂体功能减退性危象。</td>
+                            <td>29.. <strong>垂体危象</strong><br>指在<span class="answer-text">垂体功能减退</span>的基础上，各种<span class="answer-text">应激因素</span>诱发的垂体功能减退性危象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>Cushing syndrome(CS)</strong><br>由于长期分泌过多的<span class="blur-text">糖皮质激素</span>，促进蛋白质异化、脂肪沉积，表现为<span class="blur-text">满月脸、向心性肥胖、高血压、皮肤紫纹、多毛、糖耐量降低、月经失调、性欲减退、骨质疏松、肌肉乏力</span>等。</td>
+                            <td>30.. <strong>Cushing syndrome(CS)</strong><br>由于长期分泌过多的<span class="answer-text">糖皮质激素</span>，促进蛋白质异化、脂肪沉积，表现为<span class="answer-text">满月脸、向心性肥胖、高血压、皮肤紫纹、多毛、糖耐量降低、月经失调、性欲减退、骨质疏松、肌肉乏力</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>向心性肥胖</strong><br>是指以<span class="blur-text">心脏、腹部</span>等为中心脂肪分布较多，而在<span class="blur-text">四肢</span>脂肪分布较少的一种特殊体型，通常四肢比较纤细，躯体部位脂肪比较多，通常<span class="blur-text">腰围大于臀围</span>，多见于<span class="blur-text">皮质醇增多症</span>的患者。</td>
+                            <td>31.. <strong>向心性肥胖</strong><br>是指以<span class="answer-text">心脏、腹部</span>等为中心脂肪分布较多，而在<span class="answer-text">四肢</span>脂肪分布较少的一种特殊体型，通常四肢比较纤细，躯体部位脂肪比较多，通常<span class="answer-text">腰围大于臀围</span>，多见于<span class="answer-text">皮质醇增多症</span>的患者。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>ACTH依赖性库欣综合征</strong><br>指下丘脑-垂体或垂体以外的某些肿瘤组织分泌过量<span class="blur-text">ACTH</span>和(或)<span class="blur-text">促肾上腺皮质素释放素(CRH)</span>引起双侧肾上腺皮质增生并分泌过量糖皮质激素。</td>
+                            <td>32.. <strong>ACTH依赖性库欣综合征</strong><br>指下丘脑-垂体或垂体以外的某些肿瘤组织分泌过量<span class="answer-text">ACTH</span>和(或)<span class="answer-text">促肾上腺皮质素释放素(CRH)</span>引起双侧肾上腺皮质增生并分泌过量糖皮质激素。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>Cushing's disease(库欣病)</strong><br>指<span class="blur-text">垂体ACTH分泌过多</span>，导致<span class="blur-text">双侧肾上腺皮质增生</span>。</td>
+                            <td>33.. <strong>Cushing's disease(库欣病)</strong><br>指<span class="answer-text">垂体ACTH分泌过多</span>，导致<span class="answer-text">双侧肾上腺皮质增生</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>Ectopic ACTH syndrome(异位ACTH综合征)</strong><br><span class="blur-text">垂体以外肿瘤</span>分泌大量ACTH，刺激肾上腺皮质增生分泌过量的皮质醇而发病。</td>
+                            <td>34.. <strong>Ectopic ACTH syndrome(异位ACTH综合征)</strong><br><span class="answer-text">垂体以外肿瘤</span>分泌大量ACTH，刺激肾上腺皮质增生分泌过量的皮质醇而发病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>ACTH非依赖性库欣综合征</strong><br>指<span class="blur-text">肾上腺皮质肿瘤或增生</span>导致分泌过量糖皮质激素，由于下丘脑-垂体-肾上腺皮质的负反馈作用，ACTH分泌常受抑制。</td>
+                            <td>35.. <strong>ACTH非依赖性库欣综合征</strong><br>指<span class="answer-text">肾上腺皮质肿瘤或增生</span>导致分泌过量糖皮质激素，由于下丘脑-垂体-肾上腺皮质的负反馈作用，ACTH分泌常受抑制。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>1mg overnight DST</strong><br>为库欣综合征的初筛试验，第1天早晨8点取血(对照)，于次日0点口服地塞米松<span class="blur-text">1mg</span>，晨8点再次取血(服药后)测定血清皮质醇水平。服药后的血清皮质醇水平正常切点值定为<span class="blur-text">50nmol/L</span>。</td>
+                            <td>36.. <strong>1mg overnight DST</strong><br>为库欣综合征的初筛试验，第1天早晨8点取血(对照)，于次日0点口服地塞米松<span class="answer-text">1mg</span>，晨8点再次取血(服药后)测定血清皮质醇水平。服药后的血清皮质醇水平正常切点值定为<span class="answer-text">50nmol/L</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>低剂量地塞米松抑制试验(LDDST)</strong><br>是库欣综合征的确诊试验，第三天血清皮质醇浓度应小于<span class="blur-text">50nmol/L</span>。</td>
+                            <td>37.. <strong>低剂量地塞米松抑制试验(LDDST)</strong><br>是库欣综合征的确诊试验，第三天血清皮质醇浓度应小于<span class="answer-text">50nmol/L</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>大剂量地塞米松抑制试验(HDDST)</strong><br>是库欣综合征的病因鉴别试验，用于鉴别<span class="blur-text">库欣病</span>和<span class="blur-text">异位ACTH综合征</span>，如用药后24小时UFC或血皮质醇水平被抑制超过对照值的<span class="blur-text">50%</span>，则提示为库欣病，反之提示为异位ACTH综合征。</td>
+                            <td>38.. <strong>大剂量地塞米松抑制试验(HDDST)</strong><br>是库欣综合征的病因鉴别试验，用于鉴别<span class="answer-text">库欣病</span>和<span class="answer-text">异位ACTH综合征</span>，如用药后24小时UFC或血皮质醇水平被抑制超过对照值的<span class="answer-text">50%</span>，则提示为库欣病，反之提示为异位ACTH综合征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>Nelson综合征</strong><br>库欣病患者双侧肾上腺切除后，<span class="blur-text">ACTH升高</span>，刺激垂体肿瘤迅速增大。</td>
+                            <td>39.. <strong>Nelson综合征</strong><br>库欣病患者双侧肾上腺切除后，<span class="answer-text">ACTH升高</span>，刺激垂体肿瘤迅速增大。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>原发性醛固酮增多症(PA, Conn's syndrome)</strong><br>是由于<span class="blur-text">肾上腺皮质球状带</span>分泌过量的<span class="blur-text">醛固酮</span>而导致肾素-血管紧张素系统受抑制，出现<span class="blur-text">高醛固酮和低肾素血症</span>，临床上以<span class="blur-text">高血压伴(或不伴)低血钾、高醛固酮和低肾素血症</span>为主要表现的临床综合征。</td>
+                            <td>40.. <strong>原发性醛固酮增多症(PA, Conn's syndrome)</strong><br>是由于<span class="answer-text">肾上腺皮质球状带</span>分泌过量的<span class="answer-text">醛固酮</span>而导致肾素-血管紧张素系统受抑制，出现<span class="answer-text">高醛固酮和低肾素血症</span>，临床上以<span class="answer-text">高血压伴(或不伴)低血钾、高醛固酮和低肾素血症</span>为主要表现的临床综合征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>特发性醛固酮增多症</strong><br>简称特醛症，是<span class="blur-text">双侧肾上腺皮质增生</span>致醛固酮分泌过多，但双侧肾上腺形态可正常，也可表现为增生，甚是局限性"瘤样"结节。</td>
+                            <td>41.. <strong>特发性醛固酮增多症</strong><br>简称特醛症，是<span class="answer-text">双侧肾上腺皮质增生</span>致醛固酮分泌过多，但双侧肾上腺形态可正常，也可表现为增生，甚是局限性"瘤样"结节。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>卡托普利抑制试验(CCT)</strong><br>原醛症确诊试验，取坐位，口服<span class="blur-text">50mg</span>卡托普利，服药前及服用后2小时测定血浆肾素、醛固酮，正常人服药后血浆醛固酮水平下降<span class="blur-text">30%</span>以上，而原醛症病人则无明显变化。也有少数特醛症患者被抑制(假阴性)。</td>
+                            <td>42.. <strong>卡托普利抑制试验(CCT)</strong><br>原醛症确诊试验，取坐位，口服<span class="answer-text">50mg</span>卡托普利，服药前及服用后2小时测定血浆肾素、醛固酮，正常人服药后血浆醛固酮水平下降<span class="answer-text">30%</span>以上，而原醛症病人则无明显变化。也有少数特醛症患者被抑制(假阴性)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>静脉盐水负荷试验</strong><br>原醛症确诊试验，平卧位静脉滴注<span class="blur-text">0.9%NaCl溶液</span>，<span class="blur-text">4小时</span>内共<span class="blur-text">2000ml</span>，在输注前及输注后测血浆肾素、醛固酮。正常人滴注盐水后，血浆醛固酮水平下降<span class="blur-text">50%</span>以上。盐水负荷后血浆醛固酮大于<span class="blur-text">10ng/dl</span>可确立原醛症诊断；小于<span class="blur-text">5ng/dl</span>排除原醛症。</td>
+                            <td>43.. <strong>静脉盐水负荷试验</strong><br>原醛症确诊试验，平卧位静脉滴注<span class="answer-text">0.9%NaCl溶液</span>，<span class="answer-text">4小时</span>内共<span class="answer-text">2000ml</span>，在输注前及输注后测血浆肾素、醛固酮。正常人滴注盐水后，血浆醛固酮水平下降<span class="answer-text">50%</span>以上。盐水负荷后血浆醛固酮大于<span class="answer-text">10ng/dl</span>可确立原醛症诊断；小于<span class="answer-text">5ng/dl</span>排除原醛症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>血浆醛固酮/肾素比值(ARR)</strong><br>原醛症的筛查试验，晨起立位<span class="blur-text">PAC(ng/dl)/PRA[ng/(ml·h)]</span>值大于<span class="blur-text">30</span>或<span class="blur-text">PAC/PRC(ng/dl)/PRC(μIU/ml)</span>值大于<span class="blur-text">2.0</span>提示原醛症可能。</td>
+                            <td>44.. <strong>血浆醛固酮/肾素比值(ARR)</strong><br>原醛症的筛查试验，晨起立位<span class="answer-text">PAC(ng/dl)/PRA[ng/(ml·h)]</span>值大于<span class="answer-text">30</span>或<span class="answer-text">PAC/PRC(ng/dl)/PRC(μIU/ml)</span>值大于<span class="answer-text">2.0</span>提示原醛症可能。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>Liddle综合征</strong><br>常染色体显性遗传疾病，患者呈<span class="blur-text">高血压、肾素受抑制，醛固酮低</span>并常伴<span class="blur-text">低血钾</span>，用<span class="blur-text">螺内酯</span>无效，表明病因非盐皮质激素过多，现已知此症的病因为<span class="blur-text">上皮细胞钠通道的异常</span>，导致钠重吸收过多及体液容量扩张。</td>
+                            <td>45.. <strong>Liddle综合征</strong><br>常染色体显性遗传疾病，患者呈<span class="answer-text">高血压、肾素受抑制，醛固酮低</span>并常伴<span class="answer-text">低血钾</span>，用<span class="answer-text">螺内酯</span>无效，表明病因非盐皮质激素过多，现已知此症的病因为<span class="answer-text">上皮细胞钠通道的异常</span>，导致钠重吸收过多及体液容量扩张。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46.. <strong>糖尿病(DM)</strong><br>是一种体内<span class="blur-text">胰岛素相对或绝对不足</span>及靶细胞对胰岛素敏感性降低，或胰岛素本身存在结构上的缺陷而引起的<span class="blur-text">糖、脂肪和蛋白质代谢异常</span>的一种慢性疾病。</td>
+                            <td>46.. <strong>糖尿病(DM)</strong><br>是一种体内<span class="answer-text">胰岛素相对或绝对不足</span>及靶细胞对胰岛素敏感性降低，或胰岛素本身存在结构上的缺陷而引起的<span class="answer-text">糖、脂肪和蛋白质代谢异常</span>的一种慢性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47.. <strong>空腹血糖受损</strong><br>指一类非糖尿病性血糖异常，其血糖浓度<span class="blur-text">高于正常，但低于糖尿病诊断价值</span>。</td>
+                            <td>47.. <strong>空腹血糖受损</strong><br>指一类非糖尿病性血糖异常，其血糖浓度<span class="answer-text">高于正常，但低于糖尿病诊断价值</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48.. <strong>糖化血红蛋白(HbA1c)</strong><br><span class="blur-text">HbA1c</span>是葡萄糖或其他糖与血红蛋白的氨基发生<span class="blur-text">非酶催化反应</span>的产物，其量与血糖浓度和持续时间呈<span class="blur-text">正相关</span>。HbA1有a、b、c三种，以<span class="blur-text">HbA1c</span>最为主要。</td>
+                            <td>48.. <strong>糖化血红蛋白(HbA1c)</strong><br><span class="answer-text">HbA1c</span>是葡萄糖或其他糖与血红蛋白的氨基发生<span class="answer-text">非酶催化反应</span>的产物，其量与血糖浓度和持续时间呈<span class="answer-text">正相关</span>。HbA1有a、b、c三种，以<span class="answer-text">HbA1c</span>最为主要。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49.. <strong>胰岛素抵抗</strong><br>指胰岛素作用的靶器官(主要是<span class="blur-text">肝脏、肌肉和脂肪组织</span>)对胰岛素作用的<span class="blur-text">敏感性降低</span>。</td>
+                            <td>49.. <strong>胰岛素抵抗</strong><br>指胰岛素作用的靶器官(主要是<span class="answer-text">肝脏、肌肉和脂肪组织</span>)对胰岛素作用的<span class="answer-text">敏感性降低</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50.. <strong>糖尿病足</strong><br>是指与<span class="blur-text">下肢远端神经异常</span>和<span class="blur-text">不同程度周围血管病变</span>相关的足部溃烂、感染和(或)深层组织破坏，是糖尿病最严重和治疗费用最高的慢性并发症之一，是糖尿病非外伤性截肢的最主要原因。</td>
+                            <td>50.. <strong>糖尿病足</strong><br>是指与<span class="answer-text">下肢远端神经异常</span>和<span class="answer-text">不同程度周围血管病变</span>相关的足部溃烂、感染和(或)深层组织破坏，是糖尿病最严重和治疗费用最高的慢性并发症之一，是糖尿病非外伤性截肢的最主要原因。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51.. <strong>T1DM</strong><br>特征是<span class="blur-text">胰岛β细胞破坏</span>，使<span class="blur-text">胰岛素绝对缺乏</span>。多数是由于<span class="blur-text">自身免疫</span>导致的β细胞破坏。遗传因素和环境因素共同参与了T1DM的发病。</td>
+                            <td>51.. <strong>T1DM</strong><br>特征是<span class="answer-text">胰岛β细胞破坏</span>，使<span class="answer-text">胰岛素绝对缺乏</span>。多数是由于<span class="answer-text">自身免疫</span>导致的β细胞破坏。遗传因素和环境因素共同参与了T1DM的发病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52.. <strong>T2DM</strong><br>患者表现为不同程度的<span class="blur-text">胰岛素抵抗</span>伴<span class="blur-text">胰岛素相对缺乏</span>，两者都受遗传或环境影响。因此在个体患者中很难确定其确切病因。高血糖本身又可损伤<span class="blur-text">胰岛β细胞功能</span>，并加重胰岛素抵抗，导致高血糖恶性循环，并使代谢状态恶化。</td>
+                            <td>52.. <strong>T2DM</strong><br>患者表现为不同程度的<span class="answer-text">胰岛素抵抗</span>伴<span class="answer-text">胰岛素相对缺乏</span>，两者都受遗传或环境影响。因此在个体患者中很难确定其确切病因。高血糖本身又可损伤<span class="answer-text">胰岛β细胞功能</span>，并加重胰岛素抵抗，导致高血糖恶性循环，并使代谢状态恶化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>成人隐匿性免疫性糖尿病(LADA)</strong><br>属于<span class="blur-text">免疫介导型1型糖尿病</span>的亚型，临床表现的特征介于<span class="blur-text">1型糖尿病和2型糖尿病</span>之间，临床进展分为<span class="blur-text">非胰岛素依赖期</span>和<span class="blur-text">胰岛素依赖期</span>两个阶段。</td>
+                            <td>53.. <strong>成人隐匿性免疫性糖尿病(LADA)</strong><br>属于<span class="answer-text">免疫介导型1型糖尿病</span>的亚型，临床表现的特征介于<span class="answer-text">1型糖尿病和2型糖尿病</span>之间，临床进展分为<span class="answer-text">非胰岛素依赖期</span>和<span class="answer-text">胰岛素依赖期</span>两个阶段。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>糖尿病酮症酸中毒(DKA)</strong><br>是最常见的糖尿病急性并发症。糖尿病患者在各种诱因作用下，<span class="blur-text">胰岛素严重不足</span>，升糖激素不适当升高，引起糖、蛋白质、脂肪以及水、电解质、酸碱平衡失调，最终导致<span class="blur-text">高血糖、高血酮、酮尿、脱水、电解质紊乱</span>，并伴有<span class="blur-text">代谢性酸中毒</span>。</td>
+                            <td>54.. <strong>糖尿病酮症酸中毒(DKA)</strong><br>是最常见的糖尿病急性并发症。糖尿病患者在各种诱因作用下，<span class="answer-text">胰岛素严重不足</span>，升糖激素不适当升高，引起糖、蛋白质、脂肪以及水、电解质、酸碱平衡失调，最终导致<span class="answer-text">高血糖、高血酮、酮尿、脱水、电解质紊乱</span>，并伴有<span class="answer-text">代谢性酸中毒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>高渗高血糖综合征(HHS)</strong><br>是糖尿病急性代谢紊乱的另一种临床类型，以<span class="blur-text">严重高血糖、高血浆渗透压、脱水</span>为特点，无明显<span class="blur-text">酮症</span>，患者可有不同程度的意识障碍或昏迷。</td>
+                            <td>55.. <strong>高渗高血糖综合征(HHS)</strong><br>是糖尿病急性代谢紊乱的另一种临床类型，以<span class="answer-text">严重高血糖、高血浆渗透压、脱水</span>为特点，无明显<span class="answer-text">酮症</span>，患者可有不同程度的意识障碍或昏迷。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>糖尿病低血糖症</strong><br>糖尿病患者在药物治疗过程中发生的<span class="blur-text">血糖过低</span>的现象，可导致患者不适甚至生命危险，也是血糖达标的主要障碍。</td>
+                            <td>56.. <strong>糖尿病低血糖症</strong><br>糖尿病患者在药物治疗过程中发生的<span class="answer-text">血糖过低</span>的现象，可导致患者不适甚至生命危险，也是血糖达标的主要障碍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>远端对称性多发性神经病变(DSPN)</strong><br>最为常见的糖尿病周围神经病变。多为<span class="blur-text">对称性</span>，以<span class="blur-text">手足远端感觉运动神经</span>受累最多见，由远端向近端发展，呈<span class="blur-text">手套或袜套式分布</span>；下肢较上肢严重，可表现为感觉减退，也可表现为感觉异常或痛觉过敏、疼痛；后期感觉丧失，可伴运动神经受累，手足小肌群萎缩，出现<span class="blur-text">感觉性共济失调</span>及神经性关节病(<span class="blur-text">Charcot关节</span>)。<br>腱反射早期<span class="blur-text">亢进</span>，后期<span class="blur-text">减弱</span>，针刺痛觉、温度觉、振动觉、压力觉等减弱或消失。</td>
+                            <td>57.. <strong>远端对称性多发性神经病变(DSPN)</strong><br>最为常见的糖尿病周围神经病变。多为<span class="answer-text">对称性</span>，以<span class="answer-text">手足远端感觉运动神经</span>受累最多见，由远端向近端发展，呈<span class="answer-text">手套或袜套式分布</span>；下肢较上肢严重，可表现为感觉减退，也可表现为感觉异常或痛觉过敏、疼痛；后期感觉丧失，可伴运动神经受累，手足小肌群萎缩，出现<span class="answer-text">感觉性共济失调</span>及神经性关节病(<span class="answer-text">Charcot关节</span>)。<br>腱反射早期<span class="answer-text">亢进</span>，后期<span class="answer-text">减弱</span>，针刺痛觉、温度觉、振动觉、压力觉等减弱或消失。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.. <strong>黎明现象</strong><br>夜间血糖控制良好，也无低血糖发生，仅于<span class="blur-text">黎明短时间</span>出现高血糖，可能由于清晨<span class="blur-text">皮质醇、生长激素</span>等分泌增多所致。</td>
+                            <td>58.. <strong>黎明现象</strong><br>夜间血糖控制良好，也无低血糖发生，仅于<span class="answer-text">黎明短时间</span>出现高血糖，可能由于清晨<span class="answer-text">皮质醇、生长激素</span>等分泌增多所致。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59.. <strong>Somogyi效应</strong><br>在夜间曾有<span class="blur-text">低血糖</span>，在睡眠中未察觉，但导致体内<span class="blur-text">胰岛素拮抗激素分泌增加</span>，继而发生低血糖后的反跳性高血糖。</td>
+                            <td>59.. <strong>Somogyi效应</strong><br>在夜间曾有<span class="answer-text">低血糖</span>，在睡眠中未察觉，但导致体内<span class="answer-text">胰岛素拮抗激素分泌增加</span>，继而发生低血糖后的反跳性高血糖。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60.. <strong>痛风</strong><br>是长期<span class="blur-text">嘌呤代谢紊乱</span>和(或)<span class="blur-text">尿酸排泄减少</span>，使<span class="blur-text">单钠尿酸盐</span>沉积于骨关节、肾脏和皮下组织等部位而引起的代谢性疾病。</td>
+                            <td>60.. <strong>痛风</strong><br>是长期<span class="answer-text">嘌呤代谢紊乱</span>和(或)<span class="answer-text">尿酸排泄减少</span>，使<span class="answer-text">单钠尿酸盐</span>沉积于骨关节、肾脏和皮下组织等部位而引起的代谢性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61.. <strong>痛风石(tophi)</strong><br>是<span class="blur-text">谷氨酸钠尿酸盐</span>在皮下聚集形成的结晶。痛风石是痛风的特征性临床表现。皮下痛风石外观可见单个或数个大小不一的<span class="blur-text">黄白色隆起</span>，皮肤表面微菲薄。破溃后排出<span class="blur-text">白色粉状或糊状物</span>，经久不愈，较少继发感染。发生的典型部位在<span class="blur-text">耳廓</span>，也常见于足趾、指尖关节周围。</td>
+                            <td>61.. <strong>痛风石(tophi)</strong><br>是<span class="answer-text">谷氨酸钠尿酸盐</span>在皮下聚集形成的结晶。痛风石是痛风的特征性临床表现。皮下痛风石外观可见单个或数个大小不一的<span class="answer-text">黄白色隆起</span>，皮肤表面微菲薄。破溃后排出<span class="answer-text">白色粉状或糊状物</span>，经久不愈，较少继发感染。发生的典型部位在<span class="answer-text">耳廓</span>，也常见于足趾、指尖关节周围。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62.. <strong>急性高尿酸肾病</strong><br>是严重的<span class="blur-text">高尿酸血症</span>导致的过量的尿酸沉积，堵塞<span class="blur-text">肾小管</span>，会引起<span class="blur-text">少尿、无尿</span>。</td>
+                            <td>62.. <strong>急性高尿酸肾病</strong><br>是严重的<span class="answer-text">高尿酸血症</span>导致的过量的尿酸沉积，堵塞<span class="answer-text">肾小管</span>，会引起<span class="answer-text">少尿、无尿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63.. <strong>骨质疏松</strong><br>一种以<span class="blur-text">骨强度降低</span>导致<span class="blur-text">骨折危险增加</span>为特征的骨骼疾病。</td>
+                            <td>63.. <strong>骨质疏松</strong><br>一种以<span class="answer-text">骨强度降低</span>导致<span class="answer-text">骨折危险增加</span>为特征的骨骼疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64.. <strong>脆性骨折</strong><br>由于骨正常组成及结构变化，使骨骼失去正常力学特性，在<span class="blur-text">很轻微的外力</span>或日常活动中或者体重本身的作用下即可发生骨折。从站立位或低于站立位的高度跌倒在地或相似程度的外伤骨折。</td>
+                            <td>64.. <strong>脆性骨折</strong><br>由于骨正常组成及结构变化，使骨骼失去正常力学特性，在<span class="answer-text">很轻微的外力</span>或日常活动中或者体重本身的作用下即可发生骨折。从站立位或低于站立位的高度跌倒在地或相似程度的外伤骨折。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65.. <strong>甲状腺毒症</strong><br>指血循环中过量的<span class="blur-text">甲状腺激素</span>所引起的特殊的代谢变化和组织功能的病理生理改变。</td>
+                            <td>65.. <strong>甲状腺毒症</strong><br>指血循环中过量的<span class="answer-text">甲状腺激素</span>所引起的特殊的代谢变化和组织功能的病理生理改变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66.. <strong>甲状腺功能亢进症</strong><br>因<span class="blur-text">甲状腺腺体功能亢进</span>，产生甲状腺激素过多而引起以<span class="blur-text">神经、循环、消化</span>等系统兴奋性增高和代谢亢进为主要表现的一组临床综合征，称甲状腺功能亢进症，简称甲亢。</td>
+                            <td>66.. <strong>甲状腺功能亢进症</strong><br>因<span class="answer-text">甲状腺腺体功能亢进</span>，产生甲状腺激素过多而引起以<span class="answer-text">神经、循环、消化</span>等系统兴奋性增高和代谢亢进为主要表现的一组临床综合征，称甲状腺功能亢进症，简称甲亢。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67.. <strong>弥漫性毒性甲状腺肿(Graves病)</strong><br>一种伴甲状腺激素分泌增多的<span class="blur-text">器官特异性自身免疫疾病</span>。</td>
+                            <td>67.. <strong>弥漫性毒性甲状腺肿(Graves病)</strong><br>一种伴甲状腺激素分泌增多的<span class="answer-text">器官特异性自身免疫疾病</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68.. <strong>甲亢性心脏病</strong><br>甲状腺毒症对心脏有3个作用：①增强<span class="blur-text">心β受体</span>对儿茶酚胺的敏感性；②直接作用于心肌收缩蛋白，发挥<span class="blur-text">正性肌力作用</span>；③继发于甲状腺激素导致的<span class="blur-text">外周血管扩张，阻力下降</span>，心脏输出量代偿性增加。上述作用导致的明显心率失常，心脏扩大和心力衰竭者称为甲亢性心脏病。</td>
+                            <td>68.. <strong>甲亢性心脏病</strong><br>甲状腺毒症对心脏有3个作用：①增强<span class="answer-text">心β受体</span>对儿茶酚胺的敏感性；②直接作用于心肌收缩蛋白，发挥<span class="answer-text">正性肌力作用</span>；③继发于甲状腺激素导致的<span class="answer-text">外周血管扩张，阻力下降</span>，心脏输出量代偿性增加。上述作用导致的明显心率失常，心脏扩大和心力衰竭者称为甲亢性心脏病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69.. <strong>goiter(甲状腺肿)</strong><br>是指良性甲状腺上皮细胞过度增生形成的甲状腺肿大，可为<span class="blur-text">地方性或者散发性</span>，可为<span class="blur-text">结节性或者弥漫性</span>，甲状腺功能可以亢进，也可正常。</td>
+                            <td>69.. <strong>goiter(甲状腺肿)</strong><br>是指良性甲状腺上皮细胞过度增生形成的甲状腺肿大，可为<span class="answer-text">地方性或者散发性</span>，可为<span class="answer-text">结节性或者弥漫性</span>，甲状腺功能可以亢进，也可正常。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70.. <strong>单纯性甲状腺肿</strong><br>由于多种原因引起的<span class="blur-text">非炎症性或者肿瘤性</span>甲状腺肿大，不伴<span class="blur-text">甲状腺功能亢进或减退</span>表现。</td>
+                            <td>70.. <strong>单纯性甲状腺肿</strong><br>由于多种原因引起的<span class="answer-text">非炎症性或者肿瘤性</span>甲状腺肿大，不伴<span class="answer-text">甲状腺功能亢进或减退</span>表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71.. <strong>Pendred综合征</strong><br>是指<span class="blur-text">先天性甲状腺功能减退</span>伴<span class="blur-text">神经性耳聋</span>的免疫性疾病。</td>
+                            <td>71.. <strong>Pendred综合征</strong><br>是指<span class="answer-text">先天性甲状腺功能减退</span>伴<span class="answer-text">神经性耳聋</span>的免疫性疾病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72.. <strong>桥本甲状腺炎(Hashimoto thyroiditis)</strong><br>是一种<span class="blur-text">自身免疫性疾病</span>，临床上常为甲状腺<span class="blur-text">弥漫性肿大</span>。晚期一般有<span class="blur-text">甲状腺功能低下</span>的表现，病变特点为甲状腺实质组织广泛破坏、萎缩，大量<span class="blur-text">淋巴细胞浸润</span>，淋巴滤泡形成，纤维组织增生。</td>
+                            <td>72.. <strong>桥本甲状腺炎(Hashimoto thyroiditis)</strong><br>是一种<span class="answer-text">自身免疫性疾病</span>，临床上常为甲状腺<span class="answer-text">弥漫性肿大</span>。晚期一般有<span class="answer-text">甲状腺功能低下</span>的表现，病变特点为甲状腺实质组织广泛破坏、萎缩，大量<span class="answer-text">淋巴细胞浸润</span>，淋巴滤泡形成，纤维组织增生。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73.. <strong>非浸润性突眼</strong><br>甲亢本身所引起，是由于<span class="blur-text">交感神经兴奋眼外肌群和提上睑肌</span>张力升高所致。表现为<span class="blur-text">上眼睑挛缩、眼裂增宽、上眼睑移动滞缓、瞬目减少和凝视、惊恐眼神、向上看时前额不能皱起、两眼内聚不能</span>。</td>
+                            <td>73.. <strong>非浸润性突眼</strong><br>甲亢本身所引起，是由于<span class="answer-text">交感神经兴奋眼外肌群和提上睑肌</span>张力升高所致。表现为<span class="answer-text">上眼睑挛缩、眼裂增宽、上眼睑移动滞缓、瞬目减少和凝视、惊恐眼神、向上看时前额不能皱起、两眼内聚不能</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74.. <strong>浸润性突眼(GO)</strong><br>为GD的特有表现，是由于<span class="blur-text">自身免疫炎症反应</span>导致眶内和球后组织体积增加，淋巴细胞浸润和组织水肿引起的。患者有<span class="blur-text">畏光流泪、复视、视力减退、眼部刺痛、异物感</span>。查体可发现<span class="blur-text">眼睑肿胀、结膜充血水肿、眼球活动受限</span>，严重者出现全眼球炎和失明。</td>
+                            <td>74.. <strong>浸润性突眼(GO)</strong><br>为GD的特有表现，是由于<span class="answer-text">自身免疫炎症反应</span>导致眶内和球后组织体积增加，淋巴细胞浸润和组织水肿引起的。患者有<span class="answer-text">畏光流泪、复视、视力减退、眼部刺痛、异物感</span>。查体可发现<span class="answer-text">眼睑肿胀、结膜充血水肿、眼球活动受限</span>，严重者出现全眼球炎和失明。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75.. <strong>淡漠型甲亢</strong><br>多见于<span class="blur-text">老年患者</span>，高代谢综合征和眼病表现较少，主要表现为明显<span class="blur-text">消瘦</span>，<span class="blur-text">心悸、乏力、晕厥、神经质或抑郁淡漠</span>，有时神志模糊，甚至昏迷。可伴有<span class="blur-text">心房颤动、震颤及肌病</span>等体征。</td>
+                            <td>75.. <strong>淡漠型甲亢</strong><br>多见于<span class="answer-text">老年患者</span>，高代谢综合征和眼病表现较少，主要表现为明显<span class="answer-text">消瘦</span>，<span class="answer-text">心悸、乏力、晕厥、神经质或抑郁淡漠</span>，有时神志模糊，甚至昏迷。可伴有<span class="answer-text">心房颤动、震颤及肌病</span>等体征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>76.. <strong>亚临床甲亢</strong><br>实验室查血<span class="blur-text">T3、T4正常</span>，但<span class="blur-text">TSH显著降低</span>。患者无症状或有轻微的甲亢症状，可发展为临床甲亢病，可引起心血管系统、肌肉或骨骼损害。</td>
+                            <td>76.. <strong>亚临床甲亢</strong><br>实验室查血<span class="answer-text">T3、T4正常</span>，但<span class="answer-text">TSH显著降低</span>。患者无症状或有轻微的甲亢症状，可发展为临床甲亢病，可引起心血管系统、肌肉或骨骼损害。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>77.. <strong>pretibial myxedema(胫前粘液性水肿)</strong><br>多发生在<span class="blur-text">胫骨前下1/3部位</span>，也可见于足背、踝关节、肩部、手背或手术瘢痕处，甚至面部。早期呈<span class="blur-text">暗紫红色皮损</span>、皮肤粗厚，以后呈片状或结节状叠起，最后呈树皮状，可伴继发感染和色素沉着。在少数患者中尚可见到指端软组织肿胀，呈<span class="blur-text">杵状</span>，掌指骨骨膜下新骨形成(肥皂泡样)，以及指或趾甲的邻近游离边缘部分和甲床分离，称为<span class="blur-text">杵状指</span>，为GD的特征性表现。</td>
+                            <td>77.. <strong>pretibial myxedema(胫前粘液性水肿)</strong><br>多发生在<span class="answer-text">胫骨前下1/3部位</span>，也可见于足背、踝关节、肩部、手背或手术瘢痕处，甚至面部。早期呈<span class="answer-text">暗紫红色皮损</span>、皮肤粗厚，以后呈片状或结节状叠起，最后呈树皮状，可伴继发感染和色素沉着。在少数患者中尚可见到指端软组织肿胀，呈<span class="answer-text">杵状</span>，掌指骨骨膜下新骨形成(肥皂泡样)，以及指或趾甲的邻近游离边缘部分和甲床分离，称为<span class="answer-text">杵状指</span>，为GD的特征性表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>78.. <strong>甲状腺危象</strong><br>也称甲亢危象，是本病严重表现，可危及生命，发生原因可能与循环内<span class="blur-text">甲状腺激素水平增高</span>有关，常见诱因为<span class="blur-text">感染、精神刺激、甲状腺手术前准备不充分</span>等。</td>
+                            <td>78.. <strong>甲状腺危象</strong><br>也称甲亢危象，是本病严重表现，可危及生命，发生原因可能与循环内<span class="answer-text">甲状腺激素水平增高</span>有关，常见诱因为<span class="answer-text">感染、精神刺激、甲状腺手术前准备不充分</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>79.. <strong>克汀病</strong><br>又称呆小症，是发生在<span class="blur-text">新生儿或者胎儿</span>的甲状腺功能减退症，有<span class="blur-text">地方性和散发性</span>两种，主要表现为<span class="blur-text">智力低下和发育迟缓</span>。</td>
+                            <td>79.. <strong>克汀病</strong><br>又称呆小症，是发生在<span class="answer-text">新生儿或者胎儿</span>的甲状腺功能减退症，有<span class="answer-text">地方性和散发性</span>两种，主要表现为<span class="answer-text">智力低下和发育迟缓</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>80.. <strong>甲状腺功能减退症</strong><br>简称甲减，是由各种原因导致的<span class="blur-text">低甲状腺激素血症</span>或<span class="blur-text">甲状腺激素抵抗</span>而引起的全身性低代谢综合征，重者可引起<span class="blur-text">黏液性水肿</span>，更为严重者可引起<span class="blur-text">黏液性水肿昏迷</span>。</td>
+                            <td>80.. <strong>甲状腺功能减退症</strong><br>简称甲减，是由各种原因导致的<span class="answer-text">低甲状腺激素血症</span>或<span class="answer-text">甲状腺激素抵抗</span>而引起的全身性低代谢综合征，重者可引起<span class="answer-text">黏液性水肿</span>，更为严重者可引起<span class="answer-text">黏液性水肿昏迷</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>81.. <strong>甲状舌管癌</strong><br>是最常见的甲状腺恶性肿瘤，有四种病理类型：<span class="blur-text">乳头状癌、滤泡状癌、未分化癌和髓样癌</span>。</td>
+                            <td>81.. <strong>甲状舌管癌</strong><br>是最常见的甲状腺恶性肿瘤，有四种病理类型：<span class="answer-text">乳头状癌、滤泡状癌、未分化癌和髓样癌</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>82.. <strong>甲状舌管囊肿</strong><br>是与<span class="blur-text">甲状腺发育</span>有关的先天性畸形。胚胎期，甲状腺是由口底向颈部伸展的<span class="blur-text">甲状腺舌管</span>下端发生的。甲状腺舌管通常在胎儿<span class="blur-text">6周</span>左右自行闭锁，若甲状腺舌管退化不全，即可形成先天性囊肿，感染破溃后成为甲状舌管瘘。</td>
+                            <td>82.. <strong>甲状舌管囊肿</strong><br>是与<span class="answer-text">甲状腺发育</span>有关的先天性畸形。胚胎期，甲状腺是由口底向颈部伸展的<span class="answer-text">甲状腺舌管</span>下端发生的。甲状腺舌管通常在胎儿<span class="answer-text">6周</span>左右自行闭锁，若甲状腺舌管退化不全，即可形成先天性囊肿，感染破溃后成为甲状舌管瘘。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>83.. <strong>射乳反射</strong><br>婴儿吮吸乳头时，传入信息抵达下丘脑，兴奋室旁核和分泌<span class="blur-text">OT(催产素)</span>，然后通过下丘脑垂体束促使神经垂体释放<span class="blur-text">OT</span>入血，引起乳腺腺泡周围收缩性肌上皮细胞收缩，使乳汁排出。</td>
+                            <td>83.. <strong>射乳反射</strong><br>婴儿吮吸乳头时，传入信息抵达下丘脑，兴奋室旁核和分泌<span class="answer-text">OT(催产素)</span>，然后通过下丘脑垂体束促使神经垂体释放<span class="answer-text">OT</span>入血，引起乳腺腺泡周围收缩性肌上皮细胞收缩，使乳汁排出。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>84.. <strong>兴奋试验</strong><br>适用于拟诊<span class="blur-text">内分泌腺功能减退</span>时，通过生理性或病理性刺激，以评估激素合成和分泌的<span class="blur-text">储备功能</span>。</td>
+                            <td>84.. <strong>兴奋试验</strong><br>适用于拟诊<span class="answer-text">内分泌腺功能减退</span>时，通过生理性或病理性刺激，以评估激素合成和分泌的<span class="answer-text">储备功能</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>85.. <strong>抑制试验</strong><br>适用于拟诊<span class="blur-text">内分泌功能亢进</span>时，观察其负反馈调节是否消失，有无<span class="blur-text">自主性激素分泌过多</span>，是否有功能性肿瘤存在。</td>
+                            <td>85.. <strong>抑制试验</strong><br>适用于拟诊<span class="answer-text">内分泌功能亢进</span>时，观察其负反馈调节是否消失，有无<span class="answer-text">自主性激素分泌过多</span>，是否有功能性肿瘤存在。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>86.. <strong>糖皮质激素抗炎作用</strong><br>抑制<span class="blur-text">炎症介质和细胞因子</span>产生，诱导<span class="blur-text">抗炎蛋白凋亡</span>，促炎症细胞凋亡。</td>
+                            <td>86.. <strong>糖皮质激素抗炎作用</strong><br>抑制<span class="answer-text">炎症介质和细胞因子</span>产生，诱导<span class="answer-text">抗炎蛋白凋亡</span>，促炎症细胞凋亡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>87.. <strong>糖皮质激素抗免疫作用</strong><br>抑制对<span class="blur-text">抗原的吞噬和处理</span>，减少<span class="blur-text">淋巴细胞数量</span>，抑制<span class="blur-text">细胞免疫和体液免疫</span>，抑制<span class="blur-text">肥大细胞脱颗粒</span>。</td>
+                            <td>87.. <strong>糖皮质激素抗免疫作用</strong><br>抑制对<span class="answer-text">抗原的吞噬和处理</span>，减少<span class="answer-text">淋巴细胞数量</span>，抑制<span class="answer-text">细胞免疫和体液免疫</span>，抑制<span class="answer-text">肥大细胞脱颗粒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>88.. <strong>糖皮质激素抗毒作用</strong><br>增加机体对<span class="blur-text">细菌内毒素</span>的耐受力，但不中和内毒素，对外毒素无作用。具有良好的<span class="blur-text">退热作用</span>。</td>
+                            <td>88.. <strong>糖皮质激素抗毒作用</strong><br>增加机体对<span class="answer-text">细菌内毒素</span>的耐受力，但不中和内毒素，对外毒素无作用。具有良好的<span class="answer-text">退热作用</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>89.. <strong>糖皮质激素的抗休克作用</strong><br>扩张<span class="blur-text">痉挛血管</span>，改善<span class="blur-text">微循环</span>，增加<span class="blur-text">心肌收缩力</span>，稳定细胞膜，减少<span class="blur-text">心肌抑制因子</span>。</td>
+                            <td>89.. <strong>糖皮质激素的抗休克作用</strong><br>扩张<span class="answer-text">痉挛血管</span>，改善<span class="answer-text">微循环</span>，增加<span class="answer-text">心肌收缩力</span>，稳定细胞膜，减少<span class="answer-text">心肌抑制因子</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

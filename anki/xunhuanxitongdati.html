@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">循环系统大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>影响心输出量的因素</strong><br>心输出量=<span class="blur-text">搏出量</span>×{{c2::心率}}<br>影响搏出量的因素：①{{c3::心室收缩的前负荷}}；②<span class="blur-text">心室收缩的后负荷</span>；③{{c2::心肌收缩能力}}</td>
+                            <td>1.. <strong>影响心输出量的因素</strong><br>心输出量=<span class="answer-text">搏出量</span>×{{c2::心率}}<br>影响搏出量的因素：①{{c3::心室收缩的前负荷}}；②<span class="answer-text">心室收缩的后负荷</span>；③{{c2::心肌收缩能力}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. A <strong>心室收缩的前负荷</strong><br>定义：<span class="blur-text">心室舒张末期的容积或压力</span>相当于心室的前负荷<br>机制：前负荷可以影响心肌的{{c2::初长度}}，在一定范围内，回心血量增多，心脏舒张末期容积增大，心肌的前负荷和初长度增加，则{{c3::心室收缩力量加强}}，搏出量增加<br>地位：前负荷是调节搏出量的<span class="blur-text">主要因素</span>，其受{{c2::静脉回心血量}}和{{c3::射血后心室内剩余血量}}的影响</td>
+                            <td>2.. A <strong>心室收缩的前负荷</strong><br>定义：<span class="answer-text">心室舒张末期的容积或压力</span>相当于心室的前负荷<br>机制：前负荷可以影响心肌的{{c2::初长度}}，在一定范围内，回心血量增多，心脏舒张末期容积增大，心肌的前负荷和初长度增加，则{{c3::心室收缩力量加强}}，搏出量增加<br>地位：前负荷是调节搏出量的<span class="answer-text">主要因素</span>，其受{{c2::静脉回心血量}}和{{c3::射血后心室内剩余血量}}的影响</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>2.. B <strong>心室收缩的后负荷</strong><br>定义：心室收缩的后负荷是指心脏射血时遇到的阻力，即<span class="blur-text">动脉血压</span><br>机制：①若动脉血压升高，心室{{c2::等容收缩期室内压的峰值}}相应增高，{{c3::等容收缩期延长}}而射血时间缩短，射血速度减慢，搏出量暂时减少<br>②搏出量减少造成<span class="blur-text">心室内剩余血量增加</span>，下一心动周期的心室舒张末期容积增大，可通过{{c2::异长自身调节}}使心肌收缩增强，搏出量回升<br>③后负荷也可通过{{c3::等长调节}}改变心肌自身收缩能力而调节搏出量<br>整体：在整体条件下，主动脉压在<span class="blur-text">80~170mmHg</span>范围内变动时，心输出量一般无明显改变</td>
+                            <td>2.. B <strong>心室收缩的后负荷</strong><br>定义：心室收缩的后负荷是指心脏射血时遇到的阻力，即<span class="answer-text">动脉血压</span><br>机制：①若动脉血压升高，心室{{c2::等容收缩期室内压的峰值}}相应增高，{{c3::等容收缩期延长}}而射血时间缩短，射血速度减慢，搏出量暂时减少<br>②搏出量减少造成<span class="answer-text">心室内剩余血量增加</span>，下一心动周期的心室舒张末期容积增大，可通过{{c2::异长自身调节}}使心肌收缩增强，搏出量回升<br>③后负荷也可通过{{c3::等长调节}}改变心肌自身收缩能力而调节搏出量<br>整体：在整体条件下，主动脉压在<span class="answer-text">80~170mmHg</span>范围内变动时，心输出量一般无明显改变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>2.. C <strong>心肌收缩能力与心率</strong><br>心肌收缩能力：指心肌<span class="blur-text">不依赖于前后负荷</span>而改变其力学活动的{{c2::内在特性}}<br>调节：交感神经兴奋、血中{{c3::儿茶酚胺}}浓度升高，均能使心肌收缩能力增强；<span class="blur-text">迷走神经</span>兴奋、{{c2::乙酰胆碱}}、低氧等使心肌收缩能力减弱<br>心率：①{{c3::40~180次/分}}范围内，心率加快，心输出量增加<br>②心率超过<span class="blur-text">180次/分</span>，心室充盈时间过短而充盈量减少，心输出量下降<br>③心率低于{{c2::40次/分}}，心舒期虽然延长，但心室充盈已接近最大限度，心输出量也减小</td>
+                            <td>2.. C <strong>心肌收缩能力与心率</strong><br>心肌收缩能力：指心肌<span class="answer-text">不依赖于前后负荷</span>而改变其力学活动的{{c2::内在特性}}<br>调节：交感神经兴奋、血中{{c3::儿茶酚胺}}浓度升高，均能使心肌收缩能力增强；<span class="answer-text">迷走神经</span>兴奋、{{c2::乙酰胆碱}}、低氧等使心肌收缩能力减弱<br>心率：①{{c3::40~180次/分}}范围内，心率加快，心输出量增加<br>②心率超过<span class="answer-text">180次/分</span>，心室充盈时间过短而充盈量减少，心输出量下降<br>③心率低于{{c2::40次/分}}，心舒期虽然延长，但心室充盈已接近最大限度，心输出量也减小</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>3.. A <strong>影响静脉回心血量的因素(1)</strong><br>①<span class="blur-text">静脉充盈时间</span>：当心率增快时，心动周期尤其是{{c2::心室舒张期}}缩短，因而心室充盈时间持续缩短，心室充盈不完全，静脉回心血量减少<br>②{{c3::静脉回流速度}}：在心室充盈持续时间不变的情况下，静脉回流速度越快，静脉回心血量越大<br>决定：静脉回流速度取决于<span class="blur-text">外周静脉压与心房压之差</span>，当外周静脉压增高或心房、心室内压降低时，静脉回流速度加快</td>
+                            <td>3.. A <strong>影响静脉回心血量的因素(1)</strong><br>①<span class="answer-text">静脉充盈时间</span>：当心率增快时，心动周期尤其是{{c2::心室舒张期}}缩短，因而心室充盈时间持续缩短，心室充盈不完全，静脉回心血量减少<br>②{{c3::静脉回流速度}}：在心室充盈持续时间不变的情况下，静脉回流速度越快，静脉回心血量越大<br>决定：静脉回流速度取决于<span class="answer-text">外周静脉压与心房压之差</span>，当外周静脉压增高或心房、心室内压降低时，静脉回流速度加快</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>3.. B <strong>影响静脉回心血量的因素(2)</strong><br>③<span class="blur-text">心包腔内压</span>：当发生心包积液等导致心包内压增高时，使心室充盈受到限制，导致静脉回流速度及回心血量减少<br>④{{c2::心室顺应性}}：心室顺应性降低时，静脉回流速度及回心血量减少<br>⑤{{c3::心室舒张功能}}：心室舒张是一个耗能的过程，若心室舒张功能障碍，会导致回心血量减少</td>
+                            <td>3.. B <strong>影响静脉回心血量的因素(2)</strong><br>③<span class="answer-text">心包腔内压</span>：当发生心包积液等导致心包内压增高时，使心室充盈受到限制，导致静脉回流速度及回心血量减少<br>④{{c2::心室顺应性}}：心室顺应性降低时，静脉回流速度及回心血量减少<br>⑤{{c3::心室舒张功能}}：心室舒张是一个耗能的过程，若心室舒张功能障碍，会导致回心血量减少</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>4.. A <strong>心室肌细胞动作电位特点及离子基础(0-2期)</strong><br>0期（去极化期）：①特点：去极化幅度大，约<span class="blur-text">120mV</span>（-90mV→+30mV）；持续时间短，约{{c2::1~2ms}}<br>②离子基础：主要由{{c3::Na+内向电流(INa)}}引起，<span class="blur-text">快钠通道</span>激活后，引起再生性循环的Na+内流（被{{c2::河豚毒TTX}}阻断）<br>1期（快速复极初期）：①特点：膜电位由+30mV迅速下降至<span class="blur-text">0mV</span>左右；持续时间约{{c2::10ms}}<br>②离子基础：由{{c3::瞬时外向电流(一过性K+外流)}}引起，经<span class="blur-text">Ito</span>通道完成<br>2期（平台期）：①特点：复极极其缓慢，膜电位保持在<span class="blur-text">0mV</span>水平；持续时间长，{{c2::100~150ms}}<br>②离子基础：同时存在{{c3::内向电流}}（Ca2+和Na+内流）和<span class="blur-text">外向电流</span>（K+外流）。内向电流主要为{{c2::L型钙电流}}，外向电流主要为{{c3::内向整流钾电流(Ik1)}}和延迟整流钾电流(Ik)</td>
+                            <td>4.. A <strong>心室肌细胞动作电位特点及离子基础(0-2期)</strong><br>0期（去极化期）：①特点：去极化幅度大，约<span class="answer-text">120mV</span>（-90mV→+30mV）；持续时间短，约{{c2::1~2ms}}<br>②离子基础：主要由{{c3::Na+内向电流(INa)}}引起，<span class="answer-text">快钠通道</span>激活后，引起再生性循环的Na+内流（被{{c2::河豚毒TTX}}阻断）<br>1期（快速复极初期）：①特点：膜电位由+30mV迅速下降至<span class="answer-text">0mV</span>左右；持续时间约{{c2::10ms}}<br>②离子基础：由{{c3::瞬时外向电流(一过性K+外流)}}引起，经<span class="answer-text">Ito</span>通道完成<br>2期（平台期）：①特点：复极极其缓慢，膜电位保持在<span class="answer-text">0mV</span>水平；持续时间长，{{c2::100~150ms}}<br>②离子基础：同时存在{{c3::内向电流}}（Ca2+和Na+内流）和<span class="answer-text">外向电流</span>（K+外流）。内向电流主要为{{c2::L型钙电流}}，外向电流主要为{{c3::内向整流钾电流(Ik1)}}和延迟整流钾电流(Ik)</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>4.. B <strong>心室肌细胞动作电位特点及离子基础(3-4期)</strong><br>3期（快速复极末期）：①特点：复极速度快，膜电位从0mV左右复极化至<span class="blur-text">-90mV</span>，持续时间约{{c2::100~150ms}}<br>②离子基础：{{c3::Ca2+通道失活}}，内向电流消失；K+外流进一步加强，主要经<span class="blur-text">Ik</span>通道完成，{{c2::Ik1}}也有明显作用<br>4期（静息期）：①特点：膜电位稳定于<span class="blur-text">静息电位</span>（-90mV）水平<br>②离子基础：通过{{c2::钠泵}}、{{c3::Na+-Ca2+交换}}和钙泵等主动转运体，恢复细胞内外的正常浓度梯度</td>
+                            <td>4.. B <strong>心室肌细胞动作电位特点及离子基础(3-4期)</strong><br>3期（快速复极末期）：①特点：复极速度快，膜电位从0mV左右复极化至<span class="answer-text">-90mV</span>，持续时间约{{c2::100~150ms}}<br>②离子基础：{{c3::Ca2+通道失活}}，内向电流消失；K+外流进一步加强，主要经<span class="answer-text">Ik</span>通道完成，{{c2::Ik1}}也有明显作用<br>4期（静息期）：①特点：膜电位稳定于<span class="answer-text">静息电位</span>（-90mV）水平<br>②离子基础：通过{{c2::钠泵}}、{{c3::Na+-Ca2+交换}}和钙泵等主动转运体，恢复细胞内外的正常浓度梯度</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>5.. <strong>窦房结细胞动作电位特点及离子基础</strong><br>特点：①静息电位<span class="blur-text">-70mV</span>，阈电位{{c2::-40mV}}；②超射小；③由{{c3::0期、3期和4期}}组成，0期除极速度慢；④4期自动除极速度快<br>产生机制：①0期（除极期）：<span class="blur-text">L型钙内流</span>；②3期（快速复极末期）：{{c2::钾快速外流}}（主要经Ik通道）；③4期（自动去极）：速度快，取决于3种离子流：a.{{c3::进行性衰减的K+外流}}（Ik，最重要的离子基础）；b.<span class="blur-text">进行性增强的Na+内流</span>（If，可被铯Cs阻断）；c.{{c2::Ca2+内流}}（T型钙通道，可被镍阻断）</td>
+                            <td>5.. <strong>窦房结细胞动作电位特点及离子基础</strong><br>特点：①静息电位<span class="answer-text">-70mV</span>，阈电位{{c2::-40mV}}；②超射小；③由{{c3::0期、3期和4期}}组成，0期除极速度慢；④4期自动除极速度快<br>产生机制：①0期（除极期）：<span class="answer-text">L型钙内流</span>；②3期（快速复极末期）：{{c2::钾快速外流}}（主要经Ik通道）；③4期（自动去极）：速度快，取决于3种离子流：a.{{c3::进行性衰减的K+外流}}（Ik，最重要的离子基础）；b.<span class="answer-text">进行性增强的Na+内流</span>（If，可被铯Cs阻断）；c.{{c2::Ca2+内流}}（T型钙通道，可被镍阻断）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>6.. A <strong>心室肌细胞的兴奋性周期(1)</strong><br>有效不应期(ERP)：包括<span class="blur-text">绝对不应期</span>（ARP，0期除极——-55mV）和{{c2::局部反应期}}（LRP，复极-55——-60mV）<br>特点：①兴奋性为{{c3::0}}，给予任何强度的刺激均不产生动作电位；②持续时间长，保证心脏<span class="blur-text">舒缩交替</span>进行，有利于心室充盈<br>原因：{{c2::Na+通道全部失活}}或刚开始复活，还没有完全恢复到静息（备用）状态</td>
+                            <td>6.. A <strong>心室肌细胞的兴奋性周期(1)</strong><br>有效不应期(ERP)：包括<span class="answer-text">绝对不应期</span>（ARP，0期除极——-55mV）和{{c2::局部反应期}}（LRP，复极-55——-60mV）<br>特点：①兴奋性为{{c3::0}}，给予任何强度的刺激均不产生动作电位；②持续时间长，保证心脏<span class="answer-text">舒缩交替</span>进行，有利于心室充盈<br>原因：{{c2::Na+通道全部失活}}或刚开始复活，还没有完全恢复到静息（备用）状态</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>6.. B <strong>心室肌细胞的兴奋性周期(2)</strong><br>相对不应期(RRP，复极<span class="blur-text">-60——-80mV</span>)：①特点：兴奋性逐渐恢复，但{{c2::低于正常}}，给予较大强度刺激，可以产生动作电位；②原因：有相当数量的{{c3::Na+通道}}复活至备用状态<br>超常期(SNP，复极<span class="blur-text">-80——-90mV</span>)：①特点：兴奋性{{c2::高于正常}}，略低于阈值的刺激可诱发AP；②原因：Na+通道基本复活至备用状态，且{{c3::最大复极电位}}与阈电位水平差距小</td>
+                            <td>6.. B <strong>心室肌细胞的兴奋性周期(2)</strong><br>相对不应期(RRP，复极<span class="answer-text">-60——-80mV</span>)：①特点：兴奋性逐渐恢复，但{{c2::低于正常}}，给予较大强度刺激，可以产生动作电位；②原因：有相当数量的{{c3::Na+通道}}复活至备用状态<br>超常期(SNP，复极<span class="answer-text">-80——-90mV</span>)：①特点：兴奋性{{c2::高于正常}}，略低于阈值的刺激可诱发AP；②原因：Na+通道基本复活至备用状态，且{{c3::最大复极电位}}与阈电位水平差距小</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>7.. <strong>心脏特殊传导系统</strong><br>路径：<span class="blur-text">窦房结</span>产生兴奋→经心房肌传到左、右心房→通过{{c2::优势传导通路}}传至{{c3::房室交界}}→<span class="blur-text">房室延搁</span>→传导至{{c2::房室束及其分支}}→再传到{{c3::浦肯野纤维}}→最后传导至心室肌（心内膜到心外膜）</td>
+                            <td>7.. <strong>心脏特殊传导系统</strong><br>路径：<span class="answer-text">窦房结</span>产生兴奋→经心房肌传到左、右心房→通过{{c2::优势传导通路}}传至{{c3::房室交界}}→<span class="answer-text">房室延搁</span>→传导至{{c2::房室束及其分支}}→再传到{{c3::浦肯野纤维}}→最后传导至心室肌（心内膜到心外膜）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>8.. <strong>心肌收缩的特点</strong><br>①<span class="blur-text">同步收缩</span>；②{{c2::不发生强直收缩}}；③{{c3::对细胞外Ca2+依赖性大}}</td>
+                            <td>8.. <strong>心肌收缩的特点</strong><br>①<span class="answer-text">同步收缩</span>；②{{c2::不发生强直收缩}}；③{{c3::对细胞外Ca2+依赖性大}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>9.. <strong>动脉血压形成机制</strong><br>前提：<span class="blur-text">心血管系统有足够的血液充盈</span><br>动力：{{c2::心脏射血}}，是血压形成的能量来源，是动脉血压形成的必要条件<br>阻力：{{c3::外周阻力}}，主要是指小动脉和微动脉对血流的阻力<br>弹性储器作用：<span class="blur-text">大动脉的弹性储器作用</span>，心室收缩射血时，大动脉扩张，使收缩期动脉压不至于过高</td>
+                            <td>9.. <strong>动脉血压形成机制</strong><br>前提：<span class="answer-text">心血管系统有足够的血液充盈</span><br>动力：{{c2::心脏射血}}，是血压形成的能量来源，是动脉血压形成的必要条件<br>阻力：{{c3::外周阻力}}，主要是指小动脉和微动脉对血流的阻力<br>弹性储器作用：<span class="answer-text">大动脉的弹性储器作用</span>，心室收缩射血时，大动脉扩张，使收缩期动脉压不至于过高</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>10.. A <strong>动脉血压的影响因素(1)</strong><br>每搏输出量：主要影响<span class="blur-text">收缩压</span>。在心率与外周阻力不变的情况下，搏出量增加，{{c2::收缩压明显增高}}；由于收缩压升高时血流加速，舒张压的升高不如收缩压，{{c3::脉压增加}}<br>心率：主要影响<span class="blur-text">舒张压</span>。心率加快，{{c2::心舒期缩短}}，在心舒期从大动脉流向外周的血量减少，{{c3::舒张压明显升高}}；收缩压升高程度不如舒张压，脉压减小</td>
+                            <td>10.. A <strong>动脉血压的影响因素(1)</strong><br>每搏输出量：主要影响<span class="answer-text">收缩压</span>。在心率与外周阻力不变的情况下，搏出量增加，{{c2::收缩压明显增高}}；由于收缩压升高时血流加速，舒张压的升高不如收缩压，{{c3::脉压增加}}<br>心率：主要影响<span class="answer-text">舒张压</span>。心率加快，{{c2::心舒期缩短}}，在心舒期从大动脉流向外周的血量减少，{{c3::舒张压明显升高}}；收缩压升高程度不如舒张压，脉压减小</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>10.. B <strong>动脉血压的影响因素(2)</strong><br>外周阻力：主要影响<span class="blur-text">舒张压</span>。外周阻力增加时，{{c2::心舒期血流速度减慢}}，心舒期末动脉内存留的血量增加，因此{{c3::舒张压明显升高}}；收缩压升高不如舒张压升高明显，脉压减小<br>主动脉和大动脉的弹性储器作用：弹性储器作用主要是<span class="blur-text">缓冲心动周期中动脉血压的波动幅度</span>。当大动脉硬化时，弹性下降，{{c2::收缩压升高}}而{{c3::舒张压降低}}，脉压增大<br>循环血量与血管容积之比：影响<span class="blur-text">循环系统平均充盈压</span>。大失血时，循环血量减少，动脉血压下降</td>
+                            <td>10.. B <strong>动脉血压的影响因素(2)</strong><br>外周阻力：主要影响<span class="answer-text">舒张压</span>。外周阻力增加时，{{c2::心舒期血流速度减慢}}，心舒期末动脉内存留的血量增加，因此{{c3::舒张压明显升高}}；收缩压升高不如舒张压升高明显，脉压减小<br>主动脉和大动脉的弹性储器作用：弹性储器作用主要是<span class="answer-text">缓冲心动周期中动脉血压的波动幅度</span>。当大动脉硬化时，弹性下降，{{c2::收缩压升高}}而{{c3::舒张压降低}}，脉压增大<br>循环血量与血管容积之比：影响<span class="answer-text">循环系统平均充盈压</span>。大失血时，循环血量减少，动脉血压下降</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>11.. A <strong>静脉回心血量的影响因素(1)</strong><br>体循环平均充盈压：是反映<span class="blur-text">循环系统充盈程度</span>的指标。当血量增加或容量血管收缩时，体循环平均充盈压升高，静脉回心血量增多<br>心肌收缩力：若心脏收缩力量较强，{{c2::射血分数较高}}，心室收缩末期心室内剩余血量减少。心舒期心室内压较低，对心房和大静脉内血液的{{c3::抽吸力量}}也较大，回心血量增加<br>骨骼肌挤压作用：骨骼肌收缩时对其间的静脉产生<span class="blur-text">挤压作用</span>，静脉回流加快；{{c2::静脉瓣}}则保证血液只能向心脏方向流动，称"{{c3::肌肉泵}}"或"静脉泵"</td>
+                            <td>11.. A <strong>静脉回心血量的影响因素(1)</strong><br>体循环平均充盈压：是反映<span class="answer-text">循环系统充盈程度</span>的指标。当血量增加或容量血管收缩时，体循环平均充盈压升高，静脉回心血量增多<br>心肌收缩力：若心脏收缩力量较强，{{c2::射血分数较高}}，心室收缩末期心室内剩余血量减少。心舒期心室内压较低，对心房和大静脉内血液的{{c3::抽吸力量}}也较大，回心血量增加<br>骨骼肌挤压作用：骨骼肌收缩时对其间的静脉产生<span class="answer-text">挤压作用</span>，静脉回流加快；{{c2::静脉瓣}}则保证血液只能向心脏方向流动，称"{{c3::肌肉泵}}"或"静脉泵"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>11.. B <strong>静脉回心血量的影响因素(2)</strong><br>体位改变：体位改变主要通过影响静脉的<span class="blur-text">跨壁压</span>而改变回心血量。由平卧位转为直立位时，身体低垂部位的静脉因跨壁压增大而扩张，容纳更多血液，{{c2::静脉回心血量减少}}<br>呼吸运动：{{c3::胸膜腔负压}}。在吸气时，胸腔容积加大，胸膜腔负压值进一步增大，使胸腔内的大静脉和右心房更加扩张，压力进一步降低，因此有利于外周静脉内的血液回流至右心房，回心血量增加，称"<span class="blur-text">呼吸泵</span>"</td>
+                            <td>11.. B <strong>静脉回心血量的影响因素(2)</strong><br>体位改变：体位改变主要通过影响静脉的<span class="answer-text">跨壁压</span>而改变回心血量。由平卧位转为直立位时，身体低垂部位的静脉因跨壁压增大而扩张，容纳更多血液，{{c2::静脉回心血量减少}}<br>呼吸运动：{{c3::胸膜腔负压}}。在吸气时，胸腔容积加大，胸膜腔负压值进一步增大，使胸腔内的大静脉和右心房更加扩张，压力进一步降低，因此有利于外周静脉内的血液回流至右心房，回心血量增加，称"<span class="answer-text">呼吸泵</span>"</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>12.. <strong>微循环的血流通路及其功能</strong><br>迂回通路（营养通路）：①组成：<span class="blur-text">微动脉→后微动脉→毛细血管前括约肌→真毛细血管→微静脉</span>；②特点：路径长而迂曲，血流速度慢，管壁薄，通透性好；③功能：{{c2::物质交换}}的主要场所<br>直捷通路：①组成：<span class="blur-text">微动脉→后微动脉→通血毛细血管→微静脉</span>；②特点：短而直，壁厚，血流阻力小，血流速度快；③功能：使部分血液迅速回流，保证{{c2::回心血量}}；少量的物质交换<br>动-静脉短路：①组成：<span class="blur-text">微动脉→动-静脉吻合支→微静脉</span>；②特点：路径短，管壁厚，血流迅速，无物质交换功能；③功能：利于{{c2::散热}}，调节{{c3::体温}}</td>
+                            <td>12.. <strong>微循环的血流通路及其功能</strong><br>迂回通路（营养通路）：①组成：<span class="answer-text">微动脉→后微动脉→毛细血管前括约肌→真毛细血管→微静脉</span>；②特点：路径长而迂曲，血流速度慢，管壁薄，通透性好；③功能：{{c2::物质交换}}的主要场所<br>直捷通路：①组成：<span class="answer-text">微动脉→后微动脉→通血毛细血管→微静脉</span>；②特点：短而直，壁厚，血流阻力小，血流速度快；③功能：使部分血液迅速回流，保证{{c2::回心血量}}；少量的物质交换<br>动-静脉短路：①组成：<span class="answer-text">微动脉→动-静脉吻合支→微静脉</span>；②特点：路径短，管壁厚，血流迅速，无物质交换功能；③功能：利于{{c2::散热}}，调节{{c3::体温}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>13.. <strong>有效滤过压的定义及影响因素</strong><br>定义：<span class="blur-text">滤过的力量</span>与{{c2::重吸收的力量}}之差称为有效滤过压，是{{c3::组织液生成}}的动力<br>公式：有效滤过压=(<span class="blur-text">毛细血管压</span>+{{c2::组织液胶体渗透压}})-({{c3::血浆胶体渗透压}}+<span class="blur-text">组织液静水压</span>)<br>影响因素：①{{c2::毛细血管压}}；②{{c3::血浆胶体渗透压}}；③<span class="blur-text">淋巴回流</span>；④{{c2::毛细血管通透性}}</td>
+                            <td>13.. <strong>有效滤过压的定义及影响因素</strong><br>定义：<span class="answer-text">滤过的力量</span>与{{c2::重吸收的力量}}之差称为有效滤过压，是{{c3::组织液生成}}的动力<br>公式：有效滤过压=(<span class="answer-text">毛细血管压</span>+{{c2::组织液胶体渗透压}})-({{c3::血浆胶体渗透压}}+<span class="answer-text">组织液静水压</span>)<br>影响因素：①{{c2::毛细血管压}}；②{{c3::血浆胶体渗透压}}；③<span class="answer-text">淋巴回流</span>；④{{c2::毛细血管通透性}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>14.. A <strong>心脏的神经支配-心交感神经</strong><br>起源：<span class="blur-text">脊髓T1-T5</span>中间外侧<br>递质：节后纤维释放{{c2::NA}}，作用于{{c3::β1肾上腺素能受体}}<br>作用机制：①变时：NA加强窦房结细胞4期<span class="blur-text">If内向电流</span>活动，{{c2::T型Ca2+内流}}增加，4期自动除极速度增加，{{c3::自律性增加}}，心率增快<br>②变力：NA作用于β受体，激活蛋白激酶，<span class="blur-text">L型钙通道</span>通透性增加，心室肌细胞2期平台内流{{c2::Ca2+增加}}，{{c3::收缩力增强}}<br>③变传导：NA和β受体结合，L型钙通道开放的概率增加，Ca2+内流增加，房室交界细胞0期自动除极<span class="blur-text">速度、幅度</span>增加，{{c2::传导速度}}增加，{{c3::传导性增强}}</td>
+                            <td>14.. A <strong>心脏的神经支配-心交感神经</strong><br>起源：<span class="answer-text">脊髓T1-T5</span>中间外侧<br>递质：节后纤维释放{{c2::NA}}，作用于{{c3::β1肾上腺素能受体}}<br>作用机制：①变时：NA加强窦房结细胞4期<span class="answer-text">If内向电流</span>活动，{{c2::T型Ca2+内流}}增加，4期自动除极速度增加，{{c3::自律性增加}}，心率增快<br>②变力：NA作用于β受体，激活蛋白激酶，<span class="answer-text">L型钙通道</span>通透性增加，心室肌细胞2期平台内流{{c2::Ca2+增加}}，{{c3::收缩力增强}}<br>③变传导：NA和β受体结合，L型钙通道开放的概率增加，Ca2+内流增加，房室交界细胞0期自动除极<span class="answer-text">速度、幅度</span>增加，{{c2::传导速度}}增加，{{c3::传导性增强}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>14.. B <strong>心脏的神经支配-心迷走神经</strong><br>起源：<span class="blur-text">延髓迷走神经背核和疑核</span><br>递质：节后纤维释放{{c2::Ach}}，作用于{{c3::M型胆碱能受体}}<br>作用机制：①变时：Ach和M受体结合，<span class="blur-text">Ik通道</span>激活，K+外流增加，窦房结细胞{{c2::最大舒张电位}}（绝对值）增加，4期自动除极时间延长，同时Ach直接抑制{{c3::If内向电流}}，使4期自动除极速度下降，自律性降低，心率减慢<br>②变力：Ach和M受体结合，抑制<span class="blur-text">腺苷酸环化酶</span>活性，{{c2::cAMP}}生成减少，肌浆网释放Ca2+减少，{{c3::心肌收缩力减弱}}<br>③变传导：Ach抑制钙通道，使Ca2+内流减少，房室交界细胞0期除极速度、幅度降低，减慢<span class="blur-text">传导速度</span></td>
+                            <td>14.. B <strong>心脏的神经支配-心迷走神经</strong><br>起源：<span class="answer-text">延髓迷走神经背核和疑核</span><br>递质：节后纤维释放{{c2::Ach}}，作用于{{c3::M型胆碱能受体}}<br>作用机制：①变时：Ach和M受体结合，<span class="answer-text">Ik通道</span>激活，K+外流增加，窦房结细胞{{c2::最大舒张电位}}（绝对值）增加，4期自动除极时间延长，同时Ach直接抑制{{c3::If内向电流}}，使4期自动除极速度下降，自律性降低，心率减慢<br>②变力：Ach和M受体结合，抑制<span class="answer-text">腺苷酸环化酶</span>活性，{{c2::cAMP}}生成减少，肌浆网释放Ca2+减少，{{c3::心肌收缩力减弱}}<br>③变传导：Ach抑制钙通道，使Ca2+内流减少，房室交界细胞0期除极速度、幅度降低，减慢<span class="answer-text">传导速度</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>15.. A <strong>颈动脉窦和主动脉弓压力感受性反射</strong><br>反射弧组成：①感受器：<span class="blur-text">颈动脉窦、主动脉弓</span>；②传入神经：{{c2::窦神经和迷走神经}}；③中枢：{{c3::延髓心血管中枢}}；④传出神经：<span class="blur-text">心交感神经、心迷走神经、交感缩血管神经</span>；⑤效应器：{{c2::心脏和血管}}<br>反射特点：①在平均动脉压为{{c3::100mmHg}}范围内波动时，压力感受性反射最为敏感；②压力感受器对<span class="blur-text">快速变化的血压波动</span>敏感；③可进行{{c2::重调定}}</td>
+                            <td>15.. A <strong>颈动脉窦和主动脉弓压力感受性反射</strong><br>反射弧组成：①感受器：<span class="answer-text">颈动脉窦、主动脉弓</span>；②传入神经：{{c2::窦神经和迷走神经}}；③中枢：{{c3::延髓心血管中枢}}；④传出神经：<span class="answer-text">心交感神经、心迷走神经、交感缩血管神经</span>；⑤效应器：{{c2::心脏和血管}}<br>反射特点：①在平均动脉压为{{c3::100mmHg}}范围内波动时，压力感受性反射最为敏感；②压力感受器对<span class="answer-text">快速变化的血压波动</span>敏感；③可进行{{c2::重调定}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>15.. B <strong>颈动脉窦和主动脉弓压力感受性反射的生理意义</strong><br>生理意义：①<span class="blur-text">缓冲血压变化</span>（负反馈、快速、双向）；②经常性的监视血压波动，{{c2::维持血压相对稳定}}</td>
+                            <td>15.. B <strong>颈动脉窦和主动脉弓压力感受性反射的生理意义</strong><br>生理意义：①<span class="answer-text">缓冲血压变化</span>（负反馈、快速、双向）；②经常性的监视血压波动，{{c2::维持血压相对稳定}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>16.. <strong>牵拉颈总动脉对血压的影响及机制</strong><br>变化：引起<span class="blur-text">血压下降</span><br>机制：牵拉颈总动脉{{c2::颈动脉窦}}处的血管壁受到机械牵张刺激，颈动脉窦压力感受器传入冲动增多，经{{c3::窦神经和舌咽神经}}传入心血管中枢，心血管中枢整合作用，使<span class="blur-text">迷走紧张加强</span>，{{c2::心交感紧张和缩血管紧张减弱}}，心率减慢，心输出量减少，血管扩张，外周阻力下降，动脉血压下降</td>
+                            <td>16.. <strong>牵拉颈总动脉对血压的影响及机制</strong><br>变化：引起<span class="answer-text">血压下降</span><br>机制：牵拉颈总动脉{{c2::颈动脉窦}}处的血管壁受到机械牵张刺激，颈动脉窦压力感受器传入冲动增多，经{{c3::窦神经和舌咽神经}}传入心血管中枢，心血管中枢整合作用，使<span class="answer-text">迷走紧张加强</span>，{{c2::心交感紧张和缩血管紧张减弱}}，心率减慢，心输出量减少，血管扩张，外周阻力下降，动脉血压下降</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>17.. <strong>血管紧张素Ⅱ的作用机制</strong><br>①直接收缩<span class="blur-text">微动脉</span>，升高血压；促进{{c2::静脉收缩}}，增加回心血量<br>②促进{{c3::交感缩血管神经}}释放去甲肾上腺素<br>③降低中枢对<span class="blur-text">压力感受性反射</span>的敏感性，使交感缩血管中枢紧张加强；促进神经垂体释放{{c2::血管升压素和缩宫素}}；增强{{c3::促肾上腺皮质激素释放激素(CRH)}}的作用<br>④促进<span class="blur-text">醛固酮</span>的合成和释放；刺激下丘脑，增加{{c2::渴觉}}，导致{{c3::饮水}}</td>
+                            <td>17.. <strong>血管紧张素Ⅱ的作用机制</strong><br>①直接收缩<span class="answer-text">微动脉</span>，升高血压；促进{{c2::静脉收缩}}，增加回心血量<br>②促进{{c3::交感缩血管神经}}释放去甲肾上腺素<br>③降低中枢对<span class="answer-text">压力感受性反射</span>的敏感性，使交感缩血管中枢紧张加强；促进神经垂体释放{{c2::血管升压素和缩宫素}}；增强{{c3::促肾上腺皮质激素释放激素(CRH)}}的作用<br>④促进<span class="answer-text">醛固酮</span>的合成和释放；刺激下丘脑，增加{{c2::渴觉}}，导致{{c3::饮水}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>18.. A <strong>肾上腺素与去甲肾上腺素对心血管系统的作用比较(1)</strong><br>与受体的亲和力：①去甲肾上腺素与血管平滑肌<span class="blur-text">α受体</span>亲和力高，可以和心肌的{{c2::β1受体}}结合，但与血管平滑肌的β2受体结合能力弱<br>②肾上腺素与{{c3::α受体和β受体}}都有较高的亲和力，但对α受体的作用不如去甲肾上腺素的作用强，对β受体的作用远比去甲肾上腺素强<br>对心脏的作用：①肾上腺素和去甲肾上腺素都能激活心肌细胞膜上的<span class="blur-text">β1受体</span>引起心率增加、心肌收缩能力增强、心输出量增大<br>②由于肾上腺素对β1受体的作用比去甲肾上腺素{{c2::强得多}}，故在临床上将肾上腺素作为{{c3::强心剂}}使用</td>
+                            <td>18.. A <strong>肾上腺素与去甲肾上腺素对心血管系统的作用比较(1)</strong><br>与受体的亲和力：①去甲肾上腺素与血管平滑肌<span class="answer-text">α受体</span>亲和力高，可以和心肌的{{c2::β1受体}}结合，但与血管平滑肌的β2受体结合能力弱<br>②肾上腺素与{{c3::α受体和β受体}}都有较高的亲和力，但对α受体的作用不如去甲肾上腺素的作用强，对β受体的作用远比去甲肾上腺素强<br>对心脏的作用：①肾上腺素和去甲肾上腺素都能激活心肌细胞膜上的<span class="answer-text">β1受体</span>引起心率增加、心肌收缩能力增强、心输出量增大<br>②由于肾上腺素对β1受体的作用比去甲肾上腺素{{c2::强得多}}，故在临床上将肾上腺素作为{{c3::强心剂}}使用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>18.. B <strong>肾上腺素与去甲肾上腺素对心血管系统的作用比较(2)</strong><br>完整机体内静脉注射去甲肾上腺素：由于血压明显增高，可通过<span class="blur-text">减压反射</span>使心率减慢，从而掩盖了去甲肾上腺素对心脏的直接效应<br>对血管的作用：①去甲肾上腺素可使全身血管{{c2::广泛收缩}}，外周阻力明显增高，血压急剧升高，故在临床上将去甲肾上腺素作为{{c3::升压药}}<br>②肾上腺素对血管的作用取决于该血管平滑肌上何种受体占优势，以<span class="blur-text">α受体</span>占优势的血管肾上腺素使其收缩，以{{c2::β2受体}}占优势的血管肾上腺素使其舒张。因此肾上腺素可调节{{c3::全身器官的血流分配}}</td>
+                            <td>18.. B <strong>肾上腺素与去甲肾上腺素对心血管系统的作用比较(2)</strong><br>完整机体内静脉注射去甲肾上腺素：由于血压明显增高，可通过<span class="answer-text">减压反射</span>使心率减慢，从而掩盖了去甲肾上腺素对心脏的直接效应<br>对血管的作用：①去甲肾上腺素可使全身血管{{c2::广泛收缩}}，外周阻力明显增高，血压急剧升高，故在临床上将去甲肾上腺素作为{{c3::升压药}}<br>②肾上腺素对血管的作用取决于该血管平滑肌上何种受体占优势，以<span class="answer-text">α受体</span>占优势的血管肾上腺素使其收缩，以{{c2::β2受体}}占优势的血管肾上腺素使其舒张。因此肾上腺素可调节{{c3::全身器官的血流分配}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>1.. A <strong>慢性心力衰竭的分级与分期(1)</strong><br>NYHA心功能分级：①<span class="blur-text">I级</span>：心脏病病人日常活动量不受限制，一般活动不引起乏力、呼吸困难等心衰症状<br>②{{c2::II级}}：心脏病病人体力活动轻度受限，休息时无自觉症状，一般活动下可出现心衰症状<br>③{{c3::III级}}：心脏病病人体力活动明显受限，低于平时一般活动即引起心衰症状<br>④<span class="blur-text">IV级</span>：心脏病病人不能从事任何体力活动，休息状态下也存在心衰症状，活动后加重</td>
+                            <td>1.. A <strong>慢性心力衰竭的分级与分期(1)</strong><br>NYHA心功能分级：①<span class="answer-text">I级</span>：心脏病病人日常活动量不受限制，一般活动不引起乏力、呼吸困难等心衰症状<br>②{{c2::II级}}：心脏病病人体力活动轻度受限，休息时无自觉症状，一般活动下可出现心衰症状<br>③{{c3::III级}}：心脏病病人体力活动明显受限，低于平时一般活动即引起心衰症状<br>④<span class="answer-text">IV级</span>：心脏病病人不能从事任何体力活动，休息状态下也存在心衰症状，活动后加重</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>1.. B <strong>慢性心力衰竭的分级与分期(2)</strong><br>心力衰竭分期：①<span class="blur-text">A期</span>（前心衰阶段）：病人存在心衰高危因素，但目前尚无心脏结构或功能异常，也无心衰的症状和（或）体征<br>②{{c2::B期}}（前临床心衰阶段）：病人无心衰的症状和（或）体征，但已出现心脏结构改变<br>③{{c3::C期}}（临床心衰阶段）：病人已有心脏结构改变，既往或目前有心衰的症状和（或）体征<br>④<span class="blur-text">D期</span>（难治性终末期心衰阶段）：病人虽经严格优化内科治疗，但休息时仍有症状，常伴{{c2::心源性恶病质}}，须反复长期住院</td>
+                            <td>1.. B <strong>慢性心力衰竭的分级与分期(2)</strong><br>心力衰竭分期：①<span class="answer-text">A期</span>（前心衰阶段）：病人存在心衰高危因素，但目前尚无心脏结构或功能异常，也无心衰的症状和（或）体征<br>②{{c2::B期}}（前临床心衰阶段）：病人无心衰的症状和（或）体征，但已出现心脏结构改变<br>③{{c3::C期}}（临床心衰阶段）：病人已有心脏结构改变，既往或目前有心衰的症状和（或）体征<br>④<span class="answer-text">D期</span>（难治性终末期心衰阶段）：病人虽经严格优化内科治疗，但休息时仍有症状，常伴{{c2::心源性恶病质}}，须反复长期住院</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>2.. A <strong>洋地黄类药物(1)</strong><br>机制：洋地黄类药物通过抑制<span class="blur-text">Na+-K+-ATP酶</span>发挥药理作用：①{{c2::正性肌力作用}}；②可抑制心脏传导系统，对{{c3::房室交界区}}的抑制最为明显；③<span class="blur-text">迷走神经兴奋作用</span>，可对抗心衰时交感神经兴奋的不利影响；④作用于肾小管细胞减少{{c2::钠的重吸收}}并抑制{{c3::肾素}}分泌<br>适应证：伴有<span class="blur-text">快速心房颤动/心房扑动</span>的收缩性心力衰竭是应用洋地黄的最佳指征</td>
+                            <td>2.. A <strong>洋地黄类药物(1)</strong><br>机制：洋地黄类药物通过抑制<span class="answer-text">Na+-K+-ATP酶</span>发挥药理作用：①{{c2::正性肌力作用}}；②可抑制心脏传导系统，对{{c3::房室交界区}}的抑制最为明显；③<span class="answer-text">迷走神经兴奋作用</span>，可对抗心衰时交感神经兴奋的不利影响；④作用于肾小管细胞减少{{c2::钠的重吸收}}并抑制{{c3::肾素}}分泌<br>适应证：伴有<span class="answer-text">快速心房颤动/心房扑动</span>的收缩性心力衰竭是应用洋地黄的最佳指征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>2.. B <strong>洋地黄类药物(2)</strong><br>禁忌证：①<span class="blur-text">洋地黄过量或中毒</span>；②{{c2::肥厚型心肌病}}；③{{c3::二度或高度、三度房室传导阻滞}}而无永久性心脏起搏器保护者；④<span class="blur-text">预激综合征</span>伴心房颤动或心房扑动；⑤{{c2::重度二尖瓣狭窄}}伴窦性心律并发肺水肿者<br>中毒表现：①{{c3::心律失常}}（如室性期前收缩、折返性心律失常、传导阻滞等），是洋地黄中毒的特征性表现；②<span class="blur-text">肠道症状</span>（厌食、恶心、呕吐等）；③{{c2::神经系统症状}}（视觉障碍等）</td>
+                            <td>2.. B <strong>洋地黄类药物(2)</strong><br>禁忌证：①<span class="answer-text">洋地黄过量或中毒</span>；②{{c2::肥厚型心肌病}}；③{{c3::二度或高度、三度房室传导阻滞}}而无永久性心脏起搏器保护者；④<span class="answer-text">预激综合征</span>伴心房颤动或心房扑动；⑤{{c2::重度二尖瓣狭窄}}伴窦性心律并发肺水肿者<br>中毒表现：①{{c3::心律失常}}（如室性期前收缩、折返性心律失常、传导阻滞等），是洋地黄中毒的特征性表现；②<span class="answer-text">肠道症状</span>（厌食、恶心、呕吐等）；③{{c2::神经系统症状}}（视觉障碍等）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>2.. C <strong>洋地黄类药物(3)</strong><br>中毒治疗：①立即<span class="blur-text">停用洋地黄</span>；②维持{{c2::电解质平衡}}；③快速性室性心律失常可用{{c3::利多卡因}}；④缓慢性心律失常可用<span class="blur-text">阿托品</span>；⑤{{c2::完全性房室传导阻滞}}者，伴发血流动力学障碍时可安置{{c3::临时起搏器}}</td>
+                            <td>2.. C <strong>洋地黄类药物(3)</strong><br>中毒治疗：①立即<span class="answer-text">停用洋地黄</span>；②维持{{c2::电解质平衡}}；③快速性室性心律失常可用{{c3::利多卡因}}；④缓慢性心律失常可用<span class="answer-text">阿托品</span>；⑤{{c2::完全性房室传导阻滞}}者，伴发血流动力学障碍时可安置{{c3::临时起搏器}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>3.. A <strong>心力衰竭的代偿机制(1)</strong><br>神经-体液调节机制激活：<span class="blur-text">交感-肾上腺髓质系统</span>激活，{{c2::肾素-血管紧张素-醛固酮系统}}激活，{{c3::钠尿肽系统}}激活<br>心脏本身的代偿：①<span class="blur-text">心率增快</span>：压力感受器、容量感受器、化学感受器→意义：动员迅速，见效快，一定程度上心率增加可增加心输出量，舒张压增加有利于冠脉灌流<br>②{{c2::心脏紧张源性扩张}}：通过交感-肾上腺髓质系统兴奋<br>③{{c3::心肌收缩性增强}}</td>
+                            <td>3.. A <strong>心力衰竭的代偿机制(1)</strong><br>神经-体液调节机制激活：<span class="answer-text">交感-肾上腺髓质系统</span>激活，{{c2::肾素-血管紧张素-醛固酮系统}}激活，{{c3::钠尿肽系统}}激活<br>心脏本身的代偿：①<span class="answer-text">心率增快</span>：压力感受器、容量感受器、化学感受器→意义：动员迅速，见效快，一定程度上心率增加可增加心输出量，舒张压增加有利于冠脉灌流<br>②{{c2::心脏紧张源性扩张}}：通过交感-肾上腺髓质系统兴奋<br>③{{c3::心肌收缩性增强}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>3.. B <strong>心力衰竭的代偿机制(2)</strong><br>④<span class="blur-text">心室重塑</span>：心肌细胞重塑→{{c2::向心性肥大}}、{{c3::离心性肥大}}；心肌细胞表型改变；非心肌细胞及细胞外基质的变化<br>心脏以外的代偿：<span class="blur-text">血容量增加</span>、{{c2::血液重新分布}}、{{c3::红细胞增多}}、组织利用氧能力增加</td>
+                            <td>3.. B <strong>心力衰竭的代偿机制(2)</strong><br>④<span class="answer-text">心室重塑</span>：心肌细胞重塑→{{c2::向心性肥大}}、{{c3::离心性肥大}}；心肌细胞表型改变；非心肌细胞及细胞外基质的变化<br>心脏以外的代偿：<span class="answer-text">血容量增加</span>、{{c2::血液重新分布}}、{{c3::红细胞增多}}、组织利用氧能力增加</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>4.. <strong>治疗舒张性心力衰竭的主要措施</strong><br>①极力控制血压：血压目标<<span class="blur-text">130/80mmHg</span>；②应用{{c2::利尿药}}；③同时合并有收缩性心力衰竭，则以治疗后者为主；④控制{{c3::房颤心室率}}，转复并维持窦性心律；⑤积极<span class="blur-text">血运重建</span>；⑥逆转{{c2::左室肥厚}}；⑦改善舒张功能，包括使用{{c3::ACEI、ARB、β受体阻滞剂、钙通道拮抗剂}}等；⑧单纯舒张性心力衰竭不宜应用<span class="blur-text">正性肌力药</span></td>
+                            <td>4.. <strong>治疗舒张性心力衰竭的主要措施</strong><br>①极力控制血压：血压目标<<span class="answer-text">130/80mmHg</span>；②应用{{c2::利尿药}}；③同时合并有收缩性心力衰竭，则以治疗后者为主；④控制{{c3::房颤心室率}}，转复并维持窦性心律；⑤积极<span class="answer-text">血运重建</span>；⑥逆转{{c2::左室肥厚}}；⑦改善舒张功能，包括使用{{c3::ACEI、ARB、β受体阻滞剂、钙通道拮抗剂}}等；⑧单纯舒张性心力衰竭不宜应用<span class="answer-text">正性肌力药</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>5.. <strong>慢性心力衰竭的诊断依据</strong><br>主要依据：原有<span class="blur-text">基础心脏病的证据</span>及{{c2::循环淤血}}的表现<br>症状体征：①左心衰竭的{{c3::不同程度呼吸困难}}、肺部啰音等肺淤血表现；②右心衰竭的<span class="blur-text">颈静脉征、肝大、水肿</span>的体循环淤血的表现；③心脏{{c2::奔马律}}、瓣膜区杂音等；④心排血量减少导致组织灌注不足的表现：{{c3::乏力、尿少、心率加快}}等<br>客观检查：<span class="blur-text">BNP</span>测定也可作为诊断依据，并能帮助鉴别呼吸困难的病因</td>
+                            <td>5.. <strong>慢性心力衰竭的诊断依据</strong><br>主要依据：原有<span class="answer-text">基础心脏病的证据</span>及{{c2::循环淤血}}的表现<br>症状体征：①左心衰竭的{{c3::不同程度呼吸困难}}、肺部啰音等肺淤血表现；②右心衰竭的<span class="answer-text">颈静脉征、肝大、水肿</span>的体循环淤血的表现；③心脏{{c2::奔马律}}、瓣膜区杂音等；④心排血量减少导致组织灌注不足的表现：{{c3::乏力、尿少、心率加快}}等<br>客观检查：<span class="answer-text">BNP</span>测定也可作为诊断依据，并能帮助鉴别呼吸困难的病因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>6.. <strong>急性心力衰竭的治疗</strong><br>①患者取<span class="blur-text">坐位</span>，双腿下垂；②{{c2::高流量吸氧}}；③{{c3::吗啡}}静脉注射；④快速利尿，<span class="blur-text">呋塞米</span>等；⑤血管扩张剂：{{c2::硝普钠、硝酸甘油}}；⑥正性肌力药，如{{c3::洋地黄类}}；⑦<span class="blur-text">氨茶碱</span>；⑧{{c2::主动脉内球囊反搏}}、机械通气、血液净化疗法、心室机械辅助装置</td>
+                            <td>6.. <strong>急性心力衰竭的治疗</strong><br>①患者取<span class="answer-text">坐位</span>，双腿下垂；②{{c2::高流量吸氧}}；③{{c3::吗啡}}静脉注射；④快速利尿，<span class="answer-text">呋塞米</span>等；⑤血管扩张剂：{{c2::硝普钠、硝酸甘油}}；⑥正性肌力药，如{{c3::洋地黄类}}；⑦<span class="answer-text">氨茶碱</span>；⑧{{c2::主动脉内球囊反搏}}、机械通气、血液净化疗法、心室机械辅助装置</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>7.. <strong>向心性肥厚和离心性肥厚的比较</strong><br>向心性肥厚：长期过度的<span class="blur-text">后负荷</span>增加，使收缩期心室壁张力持续增加，刺激心肌肌节呈{{c2::并联性增生}}，心肌细胞增粗<br>特征：{{c3::心室壁显著增厚}}而心腔容积正常甚至减小，常见于<span class="blur-text">高血压性心脏病</span>以及{{c2::主动脉瓣狭窄}}<br>离心性肥厚：长期过度的{{c3::前负荷}}增加，使舒张期心室壁张力持续增加，刺激心肌肌节呈<span class="blur-text">串联性生长</span>，心肌细胞增长，心腔容积增大<br>特征：{{c2::心腔容积显著增大}}与心室壁轻度增厚并存，常见于{{c3::二尖瓣或主动脉瓣关闭不全}}</td>
+                            <td>7.. <strong>向心性肥厚和离心性肥厚的比较</strong><br>向心性肥厚：长期过度的<span class="answer-text">后负荷</span>增加，使收缩期心室壁张力持续增加，刺激心肌肌节呈{{c2::并联性增生}}，心肌细胞增粗<br>特征：{{c3::心室壁显著增厚}}而心腔容积正常甚至减小，常见于<span class="answer-text">高血压性心脏病</span>以及{{c2::主动脉瓣狭窄}}<br>离心性肥厚：长期过度的{{c3::前负荷}}增加，使舒张期心室壁张力持续增加，刺激心肌肌节呈<span class="answer-text">串联性生长</span>，心肌细胞增长，心腔容积增大<br>特征：{{c2::心腔容积显著增大}}与心室壁轻度增厚并存，常见于{{c3::二尖瓣或主动脉瓣关闭不全}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>8.. <strong>慢性心衰的治疗原则</strong><br>①前心衰阶段：主要是<span class="blur-text">控制危险因素</span>，早期阻断心脏重塑的始动环节，预防心室重塑的发生<br>②无症状心力衰竭阶段：需针对{{c2::病因治疗}}，以减慢甚至逆转心脏重塑<br>③有症状心力衰竭阶段：以{{c3::改善或消除心衰的症状和体征}}，逆转或减缓心脏重塑，降低病死率及致残率为目标<br>④终末心力衰竭阶段：旨在<span class="blur-text">提高患者生活质量</span>，降低{{c2::心衰住院率}}</td>
+                            <td>8.. <strong>慢性心衰的治疗原则</strong><br>①前心衰阶段：主要是<span class="answer-text">控制危险因素</span>，早期阻断心脏重塑的始动环节，预防心室重塑的发生<br>②无症状心力衰竭阶段：需针对{{c2::病因治疗}}，以减慢甚至逆转心脏重塑<br>③有症状心力衰竭阶段：以{{c3::改善或消除心衰的症状和体征}}，逆转或减缓心脏重塑，降低病死率及致残率为目标<br>④终末心力衰竭阶段：旨在<span class="answer-text">提高患者生活质量</span>，降低{{c2::心衰住院率}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>9.. <strong>心律失常折返机制形成的条件</strong><br>①心脏存在<span class="blur-text">解剖或功能性电活动闭合环</span>；②其中一条兴奋传导路径存在{{c2::单向传导阻滞}}；③另一条传导路径{{c3::缓慢}}，使原先发生阻滞的通道具有足够时间恢复兴奋性；④有适时诱发因素如<span class="blur-text">期前收缩</span><br>结果：冲动在环内反复循环，产生持续而快速的心律失常，如{{c2::房室结折返性心动过速}}和{{c3::房室折返性心动过速}}</td>
+                            <td>9.. <strong>心律失常折返机制形成的条件</strong><br>①心脏存在<span class="answer-text">解剖或功能性电活动闭合环</span>；②其中一条兴奋传导路径存在{{c2::单向传导阻滞}}；③另一条传导路径{{c3::缓慢}}，使原先发生阻滞的通道具有足够时间恢复兴奋性；④有适时诱发因素如<span class="answer-text">期前收缩</span><br>结果：冲动在环内反复循环，产生持续而快速的心律失常，如{{c2::房室结折返性心动过速}}和{{c3::房室折返性心动过速}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>10.. <strong>抗心律失常药物分类</strong><br>I类药物阻断<span class="blur-text">快钠通道</span>：①IA类减慢动作电位0相上升速度，减慢传导，延长动作电位时程，如{{c2::奎尼丁}}；②IB类药物轻度减慢动作电位0相上升速度，显著减慢传导，轻微延长动作电位时程，如{{c3::利多卡因}}；③IC类药物明显减慢动作电位0相上升速度，显著减慢传导，轻微延长动作电位时程，如<span class="blur-text">心律平</span><br>II类药物：{{c2::β受体阻断剂}}，如心得安<br>III类药物：阻断{{c3::钾通道}}与延长复极，如<span class="blur-text">胺碘酮</span><br>IV类药物：阻断{{c2::慢钙通道}}，如{{c3::维拉帕米}}</td>
+                            <td>10.. <strong>抗心律失常药物分类</strong><br>I类药物阻断<span class="answer-text">快钠通道</span>：①IA类减慢动作电位0相上升速度，减慢传导，延长动作电位时程，如{{c2::奎尼丁}}；②IB类药物轻度减慢动作电位0相上升速度，显著减慢传导，轻微延长动作电位时程，如{{c3::利多卡因}}；③IC类药物明显减慢动作电位0相上升速度，显著减慢传导，轻微延长动作电位时程，如<span class="answer-text">心律平</span><br>II类药物：{{c2::β受体阻断剂}}，如心得安<br>III类药物：阻断{{c3::钾通道}}与延长复极，如<span class="answer-text">胺碘酮</span><br>IV类药物：阻断{{c2::慢钙通道}}，如{{c3::维拉帕米}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>11.. <strong>三度房室传导阻滞的心电图特点</strong><br>①<span class="blur-text">P-P间期相等</span>，R-R间期相等；②{{c2::P波与QRS波群无固定时间关系}}，即房室分离；③{{c3::心房率快于心室率}}；④QRS波群可正常（<span class="blur-text">交界性逸搏心律</span>，心室率约40-60次/分），可增宽（{{c2::室性逸搏心律}}，心室率约{{c3::20-40次/分}}）</td>
+                            <td>11.. <strong>三度房室传导阻滞的心电图特点</strong><br>①<span class="answer-text">P-P间期相等</span>，R-R间期相等；②{{c2::P波与QRS波群无固定时间关系}}，即房室分离；③{{c3::心房率快于心室率}}；④QRS波群可正常（<span class="answer-text">交界性逸搏心律</span>，心室率约40-60次/分），可增宽（{{c2::室性逸搏心律}}，心室率约{{c3::20-40次/分}}）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>12.. A <strong>房颤的心电图特点及治疗(1)</strong><br>心电图特点：①<span class="blur-text">P波消失</span>，代之以大小不一、形态不同、间距不等的{{c2::f波}}；②频率约为{{c3::350-600次/分}}；③<span class="blur-text">R-R间期绝对不等</span>；④通常为{{c2::窄QRS波}}，如伴室内阻滞也可增宽<br>治疗：①{{c3::病因治疗}}；②室律控制：<span class="blur-text">洋地黄、II类、III类、IV类</span>（伴预激禁用）</td>
+                            <td>12.. A <strong>房颤的心电图特点及治疗(1)</strong><br>心电图特点：①<span class="answer-text">P波消失</span>，代之以大小不一、形态不同、间距不等的{{c2::f波}}；②频率约为{{c3::350-600次/分}}；③<span class="answer-text">R-R间期绝对不等</span>；④通常为{{c2::窄QRS波}}，如伴室内阻滞也可增宽<br>治疗：①{{c3::病因治疗}}；②室律控制：<span class="answer-text">洋地黄、II类、III类、IV类</span>（伴预激禁用）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>12.. B <strong>房颤的心电图特点及治疗(2)</strong><br>③抗凝治疗：口服<span class="blur-text">华法林</span>；④节律控制：{{c2::复律}}（奎尼丁、胺碘酮等药物）、预防复发；⑤{{c3::导管射频消融}}：根治</td>
+                            <td>12.. B <strong>房颤的心电图特点及治疗(2)</strong><br>③抗凝治疗：口服<span class="answer-text">华法林</span>；④节律控制：{{c2::复律}}（奎尼丁、胺碘酮等药物）、预防复发；⑤{{c3::导管射频消融}}：根治</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>13.. <strong>心房扑动的心电图特点</strong><br>①窦性<span class="blur-text">P波消失</span>，代之以形态、振幅、间距相同的{{c2::锯齿状波(F波)}}；②频率为{{c3::250-350次/分}}；③<span class="blur-text">无等电线</span>；④QRS波群形态可与窦性基本相同；⑤若房室传导阻滞，部分未下传，则{{c2::心室率不规则}}</td>
+                            <td>13.. <strong>心房扑动的心电图特点</strong><br>①窦性<span class="answer-text">P波消失</span>，代之以形态、振幅、间距相同的{{c2::锯齿状波(F波)}}；②频率为{{c3::250-350次/分}}；③<span class="answer-text">无等电线</span>；④QRS波群形态可与窦性基本相同；⑤若房室传导阻滞，部分未下传，则{{c2::心室率不规则}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>14.. A <strong>病态窦房结综合征的心电图特点及治疗(1)</strong><br>心电图特点：①持续<span class="blur-text">窦缓</span>（<50次/分）；②{{c2::窦性停搏与窦房阻滞}}；③{{c3::房室传导阻滞}}并存；④<span class="blur-text">心动过缓-心动过速综合征</span><br>治疗：①明确病因，{{c2::针对病因治疗}}；②症状不明显时：{{c3::定期随访}}</td>
+                            <td>14.. A <strong>病态窦房结综合征的心电图特点及治疗(1)</strong><br>心电图特点：①持续<span class="answer-text">窦缓</span>（<50次/分）；②{{c2::窦性停搏与窦房阻滞}}；③{{c3::房室传导阻滞}}并存；④<span class="answer-text">心动过缓-心动过速综合征</span><br>治疗：①明确病因，{{c2::针对病因治疗}}；②症状不明显时：{{c3::定期随访}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>14.. B <strong>病态窦房结综合征的心电图特点及治疗(2)</strong><br>③有症状者：短期可应用提升心率的药物，如<span class="blur-text">阿托品</span>、{{c2::异丙肾上腺素}}、{{c3::氨茶碱}}；④有血液动力学不稳定表现者，安置<span class="blur-text">永久起搏器</span></td>
+                            <td>14.. B <strong>病态窦房结综合征的心电图特点及治疗(2)</strong><br>③有症状者：短期可应用提升心率的药物，如<span class="answer-text">阿托品</span>、{{c2::异丙肾上腺素}}、{{c3::氨茶碱}}；④有血液动力学不稳定表现者，安置<span class="answer-text">永久起搏器</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>15.. A <strong>阵发性室上性心动过速的治疗(1)</strong><br>急性发作期：①<span class="blur-text">兴奋迷走神经</span>；②药物（首选{{c2::腺苷}}，其次是{{c3::维拉帕米和地尔硫卓}}或β受体阻断剂等）；③<span class="blur-text">食道心房调搏</span>；④{{c2::电复律}}<br>预防复发：①{{c3::射频导管消融}}（可根治，一线治疗方案）；②药物：首选<span class="blur-text">维拉帕米</span>、{{c2::地尔硫卓}}或{{c3::β受体阻断剂}}</td>
+                            <td>15.. A <strong>阵发性室上性心动过速的治疗(1)</strong><br>急性发作期：①<span class="answer-text">兴奋迷走神经</span>；②药物（首选{{c2::腺苷}}，其次是{{c3::维拉帕米和地尔硫卓}}或β受体阻断剂等）；③<span class="answer-text">食道心房调搏</span>；④{{c2::电复律}}<br>预防复发：①{{c3::射频导管消融}}（可根治，一线治疗方案）；②药物：首选<span class="answer-text">维拉帕米</span>、{{c2::地尔硫卓}}或{{c3::β受体阻断剂}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>16.. <strong>心律失常的发生机制</strong><br>冲动形成异常：①<span class="blur-text">自律性异常</span>；②{{c2::触发活动}}<br>冲动传导异常：①{{c3::折返激动}}；②<span class="blur-text">传导延迟或阻滞</span></td>
+                            <td>16.. <strong>心律失常的发生机制</strong><br>冲动形成异常：①<span class="answer-text">自律性异常</span>；②{{c2::触发活动}}<br>冲动传导异常：①{{c3::折返激动}}；②<span class="answer-text">传导延迟或阻滞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>17.. <strong>高血压的诊断标准及分类</strong><br>诊断标准：①在未使用降压药物的情况下，非同日3次诊室测量血压，<span class="blur-text">收缩压≥140mmHg和/或舒张压≥90mmHg</span>；②既往有高血压史，目前在使用降压药物，血压虽低于140/90mmHg，也诊断为高血压；③收缩压≥140mmHg和舒张压≤90mmHg为{{c2::单纯性收缩期高血压}}<br>分类：1级：收缩压{{c3::140-159mmHg}}和/或舒张压90-99mmHg；2级：收缩压160-179mmHg和/或舒张压100-109mmHg；3级：收缩压≥180mmHg和/或舒张压≥110mmHg</td>
+                            <td>17.. <strong>高血压的诊断标准及分类</strong><br>诊断标准：①在未使用降压药物的情况下，非同日3次诊室测量血压，<span class="answer-text">收缩压≥140mmHg和/或舒张压≥90mmHg</span>；②既往有高血压史，目前在使用降压药物，血压虽低于140/90mmHg，也诊断为高血压；③收缩压≥140mmHg和舒张压≤90mmHg为{{c2::单纯性收缩期高血压}}<br>分类：1级：收缩压{{c3::140-159mmHg}}和/或舒张压90-99mmHg；2级：收缩压160-179mmHg和/或舒张压100-109mmHg；3级：收缩压≥180mmHg和/或舒张压≥110mmHg</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>18.. <strong>高血压的发病机制</strong><br>①<span class="blur-text">神经机制</span>：交感神经系统亢进；②{{c2::肾脏机制}}：肾脏排钠能力下降，钠水潴留；③{{c3::激素机制}}：RAAS系统激活；④<span class="blur-text">血管机制</span>：内皮细胞功能异常；⑤{{c2::胰岛素抵抗}}：肥胖、糖尿病，高胰岛素血症</td>
+                            <td>18.. <strong>高血压的发病机制</strong><br>①<span class="answer-text">神经机制</span>：交感神经系统亢进；②{{c2::肾脏机制}}：肾脏排钠能力下降，钠水潴留；③{{c3::激素机制}}：RAAS系统激活；④<span class="answer-text">血管机制</span>：内皮细胞功能异常；⑤{{c2::胰岛素抵抗}}：肥胖、糖尿病，高胰岛素血症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>19.. A <strong>高血压病理改变-缓进型高血压(1)</strong><br>动脉功能紊乱期：无器质性变化，细小动脉<span class="blur-text">间歇性痉挛</span><br>动脉系统病变期：受累血管发生器质性病变<br>①细动脉（<{{c2::1mm}}）：表现为{{c3::玻璃样变}}，如肾入球动脉和视网膜动脉<br>②小动脉（肌型动脉）：内膜胶原弹力纤维增生，内弹力膜分裂，中膜增厚，致管腔狭窄，如<span class="blur-text">肾小球叶间动脉、弓形动脉</span>以及脑的小动脉<br>③弹力肌型及弹力型大动脉：{{c2::动脉粥样硬化}}，如主动脉、冠状动脉及肾动脉等</td>
+                            <td>19.. A <strong>高血压病理改变-缓进型高血压(1)</strong><br>动脉功能紊乱期：无器质性变化，细小动脉<span class="answer-text">间歇性痉挛</span><br>动脉系统病变期：受累血管发生器质性病变<br>①细动脉（<{{c2::1mm}}）：表现为{{c3::玻璃样变}}，如肾入球动脉和视网膜动脉<br>②小动脉（肌型动脉）：内膜胶原弹力纤维增生，内弹力膜分裂，中膜增厚，致管腔狭窄，如<span class="answer-text">肾小球叶间动脉、弓形动脉</span>以及脑的小动脉<br>③弹力肌型及弹力型大动脉：{{c2::动脉粥样硬化}}，如主动脉、冠状动脉及肾动脉等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>19.. B <strong>高血压病理改变-缓进型高血压(2)</strong><br>内脏病变期（靶器官损伤）：<br>①心脏：<span class="blur-text">高血压性心脏病</span>，左心室先为{{c2::向心性肥大}}，失代偿后为{{c3::离心性肥大}}<br>②肾脏：<span class="blur-text">原发性颗粒性固缩肾</span>，肾入球动脉玻璃样变、小叶间动脉及弓形动脉；病变严重区肾小球萎缩、体积缩小，所属肾小管萎缩、消失，间质纤维化、淋巴细胞浸润，导致凹陷；病变轻微区肾小球及所属肾小管代偿性肥大、扩张，向表面凸起<br>③脑：{{c2::高血压脑病、脑软化、脑栓塞、脑出血}}<br>④眼：视网膜小动脉早期发生细动脉硬化及痉挛，晚期可有{{c3::视乳头水肿}}，血压急骤升高时可引起视网膜出血及渗出</td>
+                            <td>19.. B <strong>高血压病理改变-缓进型高血压(2)</strong><br>内脏病变期（靶器官损伤）：<br>①心脏：<span class="answer-text">高血压性心脏病</span>，左心室先为{{c2::向心性肥大}}，失代偿后为{{c3::离心性肥大}}<br>②肾脏：<span class="answer-text">原发性颗粒性固缩肾</span>，肾入球动脉玻璃样变、小叶间动脉及弓形动脉；病变严重区肾小球萎缩、体积缩小，所属肾小管萎缩、消失，间质纤维化、淋巴细胞浸润，导致凹陷；病变轻微区肾小球及所属肾小管代偿性肥大、扩张，向表面凸起<br>③脑：{{c2::高血压脑病、脑软化、脑栓塞、脑出血}}<br>④眼：视网膜小动脉早期发生细动脉硬化及痉挛，晚期可有{{c3::视乳头水肿}}，血压急骤升高时可引起视网膜出血及渗出</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>19.. C <strong>高血压病理改变-恶性高血压</strong><br>①<span class="blur-text">增生性小动脉硬化</span>：同心性排列，葱皮样；②{{c2::坏死性细动脉炎}}：纤维素样坏死，小出血；③{{c3::微血栓}}，微梗死</td>
+                            <td>19.. C <strong>高血压病理改变-恶性高血压</strong><br>①<span class="answer-text">增生性小动脉硬化</span>：同心性排列，葱皮样；②{{c2::坏死性细动脉炎}}：纤维素样坏死，小出血；③{{c3::微血栓}}，微梗死</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>20.. <strong>高血压的并发症</strong><br>①脑：<span class="blur-text">脑血管病</span>（脑出血、脑血栓、腔隙性脑梗塞、短暂性脑出血发作）；②心脏：{{c2::高血压性心脏病}}，心力衰竭和冠心病；③肾脏：{{c3::慢性肾功能衰竭}}；④血管：<span class="blur-text">主动脉夹层</span></td>
+                            <td>20.. <strong>高血压的并发症</strong><br>①脑：<span class="answer-text">脑血管病</span>（脑出血、脑血栓、腔隙性脑梗塞、短暂性脑出血发作）；②心脏：{{c2::高血压性心脏病}}，心力衰竭和冠心病；③肾脏：{{c3::慢性肾功能衰竭}}；④血管：<span class="answer-text">主动脉夹层</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>21.. <strong>高血压患者血压控制目标值</strong><br>①原则上将血压降到患者最大耐受的水平，主张血压控制目标值至少<<span class="blur-text">140/90mmHg</span>；②合并糖尿病，慢性肾脏病，心力衰竭或冠心病患者血压控制目标值<{{c2::130/80mmHg}}；③老年收缩压<{{c3::150mmHg}}，如能耐受还可以进一步降低；④大多数患者数周至数月逐渐达标，年轻、病程短者可较快达标；老年人、病程长或已有靶器官损害者，降压速度宜适度缓慢</td>
+                            <td>21.. <strong>高血压患者血压控制目标值</strong><br>①原则上将血压降到患者最大耐受的水平，主张血压控制目标值至少<<span class="answer-text">140/90mmHg</span>；②合并糖尿病，慢性肾脏病，心力衰竭或冠心病患者血压控制目标值<{{c2::130/80mmHg}}；③老年收缩压<{{c3::150mmHg}}，如能耐受还可以进一步降低；④大多数患者数周至数月逐渐达标，年轻、病程短者可较快达标；老年人、病程长或已有靶器官损害者，降压速度宜适度缓慢</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>22.. <strong>降压药治疗对象</strong><br>①<span class="blur-text">高血压2级以上</span>；②高血压合并{{c2::糖尿病}}，或已有心、脑、肾靶器官损害和并发症；③血压持续升高，改善生活方式后血压仍未获得有效控制；④{{c3::高危和很高危}}患者</td>
+                            <td>22.. <strong>降压药治疗对象</strong><br>①<span class="answer-text">高血压2级以上</span>；②高血压合并{{c2::糖尿病}}，或已有心、脑、肾靶器官损害和并发症；③血压持续升高，改善生活方式后血压仍未获得有效控制；④{{c3::高危和很高危}}患者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>23.. <strong>高血压降压药物的种类及药物应用原则</strong><br>种类：①<span class="blur-text">利尿剂</span>；②{{c2::β受体阻滞剂}}；③{{c3::钙拮抗剂}}；④<span class="blur-text">血管紧张素转换酶抑制剂(ACEI)</span>；⑤{{c2::血管紧张素II受体拮抗剂(ARB)}}<br>原则：①{{c3::小剂量开始}}；②优先选择<span class="blur-text">长效制剂</span>；③{{c2::联合用药}}；④{{c3::个体化}}</td>
+                            <td>23.. <strong>高血压降压药物的种类及药物应用原则</strong><br>种类：①<span class="answer-text">利尿剂</span>；②{{c2::β受体阻滞剂}}；③{{c3::钙拮抗剂}}；④<span class="answer-text">血管紧张素转换酶抑制剂(ACEI)</span>；⑤{{c2::血管紧张素II受体拮抗剂(ARB)}}<br>原则：①{{c3::小剂量开始}}；②优先选择<span class="answer-text">长效制剂</span>；③{{c2::联合用药}}；④{{c3::个体化}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>24.. <strong>难治性高血压的定义及原因</strong><br>定义：在改善生活方式的基础上，应用了合理耐受的足量≥<span class="blur-text">3种降压药</span>（包括{{c2::利尿剂}}）治疗>{{c3::1个月}}血压仍未达标，或服用≥<span class="blur-text">4种降压药</span>后，血压才能有效控制<br>原因：①{{c2::假性难治性高血压}}（单纯性诊所高血压、假性高血压）；②{{c3::降压治疗方案不合理}}；③<span class="blur-text">药物性高血压</span>；④{{c2::容量超负荷}}；⑤{{c3::胰岛素抵抗}}；⑥合并脏器损伤；⑦依从性差；⑧<span class="blur-text">睡眠呼吸暂停低通气综合征</span></td>
+                            <td>24.. <strong>难治性高血压的定义及原因</strong><br>定义：在改善生活方式的基础上，应用了合理耐受的足量≥<span class="answer-text">3种降压药</span>（包括{{c2::利尿剂}}）治疗>{{c3::1个月}}血压仍未达标，或服用≥<span class="answer-text">4种降压药</span>后，血压才能有效控制<br>原因：①{{c2::假性难治性高血压}}（单纯性诊所高血压、假性高血压）；②{{c3::降压治疗方案不合理}}；③<span class="answer-text">药物性高血压</span>；④{{c2::容量超负荷}}；⑤{{c3::胰岛素抵抗}}；⑥合并脏器损伤；⑦依从性差；⑧<span class="answer-text">睡眠呼吸暂停低通气综合征</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>25.. <strong>继发性高血压的类型</strong><br>①<span class="blur-text">肾实质性病变</span>；②{{c2::肾血管性高血压}}（肾动脉狭窄）；③{{c3::原发性醛固酮增多症}}；④<span class="blur-text">嗜铬细胞瘤</span>；⑤{{c2::库欣综合征}}；⑥{{c3::妊娠高血压}}；⑦<span class="blur-text">睡眠呼吸暂停低通气综合征</span></td>
+                            <td>25.. <strong>继发性高血压的类型</strong><br>①<span class="answer-text">肾实质性病变</span>；②{{c2::肾血管性高血压}}（肾动脉狭窄）；③{{c3::原发性醛固酮增多症}}；④<span class="answer-text">嗜铬细胞瘤</span>；⑤{{c2::库欣综合征}}；⑥{{c3::妊娠高血压}}；⑦<span class="answer-text">睡眠呼吸暂停低通气综合征</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>26.. A <strong>高血压急症的定义及处理原则(1)</strong><br>定义：原发性或继发性高血压患者在某些诱因作用下，血压<span class="blur-text">突然和显著升高</span>（一般超过{{c2::180/120mmHg}}），同时伴有{{c3::心、脑、肾等靶器官功能不全}}的表现<br>包括：高血压脑病、颅内出血、脑梗死、急性心力衰竭、肺水肿、急性冠状动脉综合征、主动脉夹层、子痫等</td>
+                            <td>26.. A <strong>高血压急症的定义及处理原则(1)</strong><br>定义：原发性或继发性高血压患者在某些诱因作用下，血压<span class="answer-text">突然和显著升高</span>（一般超过{{c2::180/120mmHg}}），同时伴有{{c3::心、脑、肾等靶器官功能不全}}的表现<br>包括：高血压脑病、颅内出血、脑梗死、急性心力衰竭、肺水肿、急性冠状动脉综合征、主动脉夹层、子痫等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>26.. B <strong>高血压急症的定义及处理原则(2)</strong><br>处理原则：①及时<span class="blur-text">降低血压</span>：静脉给药，及早口服降压药；②{{c2::控制性降压}}：1小时内，平均动脉压降低幅度≤{{c3::25%}}，2-6小时内，血压降至<span class="blur-text">160/100mmHg</span>左右，24-48小时逐步降至正常水平；③合理选择降压药：{{c2::起效迅速}}，作用持续时间短；④避免使用{{c3::利血平}}等药物</td>
+                            <td>26.. B <strong>高血压急症的定义及处理原则(2)</strong><br>处理原则：①及时<span class="answer-text">降低血压</span>：静脉给药，及早口服降压药；②{{c2::控制性降压}}：1小时内，平均动脉压降低幅度≤{{c3::25%}}，2-6小时内，血压降至<span class="answer-text">160/100mmHg</span>左右，24-48小时逐步降至正常水平；③合理选择降压药：{{c2::起效迅速}}，作用持续时间短；④避免使用{{c3::利血平}}等药物</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>27.. <strong>高血压治疗的目的及治疗原则</strong><br>目的：减少高血压患者<span class="blur-text">心、脑血管病</span>的发生率和死亡率<br>原则：①{{c2::治疗性生活方式干预}}；②{{c3::降压药物对象}}；③<span class="blur-text">血压控制目标</span>；④{{c2::多重心血管危险因素协同控制}}</td>
+                            <td>27.. <strong>高血压治疗的目的及治疗原则</strong><br>目的：减少高血压患者<span class="answer-text">心、脑血管病</span>的发生率和死亡率<br>原则：①{{c2::治疗性生活方式干预}}；②{{c3::降压药物对象}}；③<span class="answer-text">血压控制目标</span>；④{{c2::多重心血管危险因素协同控制}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>28.. <strong>动脉粥样硬化的基本病变</strong><br>脂纹期：肉眼观察，动脉内膜面见<span class="blur-text">黄色帽针头大的斑点或条纹</span>；光镜观察，病灶处大量{{c2::泡沫细胞}}聚集等<br>纤维斑块期：肉眼观察，内膜面散在{{c3::灰白色不规则形隆起的斑块}}；光镜观察，表层为<span class="blur-text">纤维帽</span>，下方见泡沫细胞等；晚期可见脂质池及肉芽组织<br>粥样斑块期：肉眼观察，内膜面见{{c2::灰黄色斑块}}，纤维帽的下方有黄色粥糜样物；光镜观察，在纤维帽深部有{{c3::粉红染的无定形物质、胆固醇结晶及钙化}}，底部及周边部可见肉芽组织；粥瘤处中膜变薄，外膜可见新生的毛细血管结缔组织增生</td>
+                            <td>28.. <strong>动脉粥样硬化的基本病变</strong><br>脂纹期：肉眼观察，动脉内膜面见<span class="answer-text">黄色帽针头大的斑点或条纹</span>；光镜观察，病灶处大量{{c2::泡沫细胞}}聚集等<br>纤维斑块期：肉眼观察，内膜面散在{{c3::灰白色不规则形隆起的斑块}}；光镜观察，表层为<span class="answer-text">纤维帽</span>，下方见泡沫细胞等；晚期可见脂质池及肉芽组织<br>粥样斑块期：肉眼观察，内膜面见{{c2::灰黄色斑块}}，纤维帽的下方有黄色粥糜样物；光镜观察，在纤维帽深部有{{c3::粉红染的无定形物质、胆固醇结晶及钙化}}，底部及周边部可见肉芽组织；粥瘤处中膜变薄，外膜可见新生的毛细血管结缔组织增生</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>29.. <strong>稳定型心绞痛的症状</strong><br>诱因：较平时负荷更大的<span class="blur-text">体力活动</span>是稳定型心绞痛发作最常见的诱因，如劳累、登山等，此外激动、饱食、寒冷、吸烟等也可诱发<br>部位：{{c2::胸骨后及心前区}}，常放射至左肩、后背、臂内侧达无名指、小指或至颈、咽及下颌部，部分为剑下或上腹部痛<br>性质：胸部疼痛或不适常为{{c3::压迫感、紧缩感、憋闷感}}，常不自觉地停止活动<br>持续时间：<span class="blur-text">数分钟至10余分钟</span>，不少于1分钟，不超过半小时<br>缓解方式：静止休息数分钟至10余分钟，含服{{c2::硝酸甘油}}可迅速缓解；发作频率：在较长时间内发作频度保持大致稳定</td>
+                            <td>29.. <strong>稳定型心绞痛的症状</strong><br>诱因：较平时负荷更大的<span class="answer-text">体力活动</span>是稳定型心绞痛发作最常见的诱因，如劳累、登山等，此外激动、饱食、寒冷、吸烟等也可诱发<br>部位：{{c2::胸骨后及心前区}}，常放射至左肩、后背、臂内侧达无名指、小指或至颈、咽及下颌部，部分为剑下或上腹部痛<br>性质：胸部疼痛或不适常为{{c3::压迫感、紧缩感、憋闷感}}，常不自觉地停止活动<br>持续时间：<span class="answer-text">数分钟至10余分钟</span>，不少于1分钟，不超过半小时<br>缓解方式：静止休息数分钟至10余分钟，含服{{c2::硝酸甘油}}可迅速缓解；发作频率：在较长时间内发作频度保持大致稳定</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>30.. <strong>心绞痛严重程度分级</strong><br>I级：一般体力活动（如步行和登楼）不受限，但在紧张、快速或持续用力时，可诱发心绞痛<br>II级：一般体力活动轻度受限，饭后、快步、寒冷或风中行走、情绪激动或醒后数小时内发作的心绞痛。一般情况下以常速平地步行<span class="blur-text">200m</span>以上或相当于{{c2::一层楼}}以上的高度时可诱发心绞痛<br>III级：日常体力活动明显受限，正常情况下，以常速平地步行{{c3::100-200m}}或登一层楼时可诱发心绞痛<br>IV级：<span class="blur-text">轻微活动或休息时</span>即可诱发心绞痛</td>
+                            <td>30.. <strong>心绞痛严重程度分级</strong><br>I级：一般体力活动（如步行和登楼）不受限，但在紧张、快速或持续用力时，可诱发心绞痛<br>II级：一般体力活动轻度受限，饭后、快步、寒冷或风中行走、情绪激动或醒后数小时内发作的心绞痛。一般情况下以常速平地步行<span class="answer-text">200m</span>以上或相当于{{c2::一层楼}}以上的高度时可诱发心绞痛<br>III级：日常体力活动明显受限，正常情况下，以常速平地步行{{c3::100-200m}}或登一层楼时可诱发心绞痛<br>IV级：<span class="answer-text">轻微活动或休息时</span>即可诱发心绞痛</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>31.. <strong>急性ST段抬高型心肌梗死的并发症</strong><br>①<span class="blur-text">乳头肌功能失调或断裂</span>；②{{c2::室间隔穿孔}}；③{{c3::心室壁破裂}}；④<span class="blur-text">栓塞</span>；⑤{{c2::心肌梗死后综合征}}</td>
+                            <td>31.. <strong>急性ST段抬高型心肌梗死的并发症</strong><br>①<span class="answer-text">乳头肌功能失调或断裂</span>；②{{c2::室间隔穿孔}}；③{{c3::心室壁破裂}}；④<span class="answer-text">栓塞</span>；⑤{{c2::心肌梗死后综合征}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>32.. <strong>STEMI溶栓的适应症</strong><br>①起病后<span class="blur-text">12小时内</span>，心电图至少相邻两个或以上导联ST段抬高≥{{c2::0.1mV}}，年龄≤{{c3::75岁}}；②发病在<span class="blur-text">12-24小时</span>，胸痛持续不缓解，ST段仍持续抬高者；③年龄虽>{{c2::75岁}}，但ST段仍持续抬高者，权衡利弊可考虑</td>
+                            <td>32.. <strong>STEMI溶栓的适应症</strong><br>①起病后<span class="answer-text">12小时内</span>，心电图至少相邻两个或以上导联ST段抬高≥{{c2::0.1mV}}，年龄≤{{c3::75岁}}；②发病在<span class="answer-text">12-24小时</span>，胸痛持续不缓解，ST段仍持续抬高者；③年龄虽>{{c2::75岁}}，但ST段仍持续抬高者，权衡利弊可考虑</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>33.. <strong>STEMI溶栓再通的标准</strong><br>①胸痛<span class="blur-text">2小时内</span>迅速缓解或消失；②2小时内抬高的ST段迅速回降>{{c2::50%}}或恢复到等电位；③血清心肌酶{{c3::CK-MB峰值}}提前至发病后<span class="blur-text">14小时内</span>；④2小时内出现{{c2::再灌注心律失常}}（室性心律失常或传导阻滞）；⑤{{c3::冠状动脉造影}}证实原来闭塞的血管恢复前向血流</td>
+                            <td>33.. <strong>STEMI溶栓再通的标准</strong><br>①胸痛<span class="answer-text">2小时内</span>迅速缓解或消失；②2小时内抬高的ST段迅速回降>{{c2::50%}}或恢复到等电位；③血清心肌酶{{c3::CK-MB峰值}}提前至发病后<span class="answer-text">14小时内</span>；④2小时内出现{{c2::再灌注心律失常}}（室性心律失常或传导阻滞）；⑤{{c3::冠状动脉造影}}证实原来闭塞的血管恢复前向血流</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>34.. <strong>Killip分级</strong><br>I级：尚无明显<span class="blur-text">心衰</span>表现<br>II级：出现轻度心衰，肺部湿啰音小于{{c2::50%}}肺野<br>III级：急性肺水肿，肺部湿啰音>{{c3::50%}}肺野，甚至全肺湿啰音<br>IV级：出现<span class="blur-text">心源性休克</span></td>
+                            <td>34.. <strong>Killip分级</strong><br>I级：尚无明显<span class="answer-text">心衰</span>表现<br>II级：出现轻度心衰，肺部湿啰音小于{{c2::50%}}肺野<br>III级：急性肺水肿，肺部湿啰音>{{c3::50%}}肺野，甚至全肺湿啰音<br>IV级：出现<span class="answer-text">心源性休克</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>35.. A <strong>STEMI的治疗(1)</strong><br>①监护和一般治疗；②镇痛：必要时用<span class="blur-text">吗啡</span>；③抗血栓治疗：{{c2::阿司匹林}}加氯吡格雷或替格瑞洛，抗凝用{{c3::低分子肝素}}；④保护心肌治疗：<span class="blur-text">β受体阻滞剂</span>、{{c2::RAAS拮抗剂}}；⑤调脂治疗：{{c3::他汀类药物}}</td>
+                            <td>35.. A <strong>STEMI的治疗(1)</strong><br>①监护和一般治疗；②镇痛：必要时用<span class="answer-text">吗啡</span>；③抗血栓治疗：{{c2::阿司匹林}}加氯吡格雷或替格瑞洛，抗凝用{{c3::低分子肝素}}；④保护心肌治疗：<span class="answer-text">β受体阻滞剂</span>、{{c2::RAAS拮抗剂}}；⑤调脂治疗：{{c3::他汀类药物}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>35.. B <strong>STEMI的治疗(2)</strong><br>⑥心律失常和传导阻滞：伴发室颤时给予<span class="blur-text">同步直流电复律</span>，伴发室早时静脉注射{{c2::利多卡因}}，伴发传导阻滞者肌肉注射{{c3::阿托品}}<br>⑦心肌再灌注治疗：<span class="blur-text">急诊冠状动脉PCI治疗</span>、{{c2::溶栓治疗}}、紧急{{c3::冠状动脉旁路移植术}}<br>⑧并发症治疗：心力衰竭、右室心梗、心源性休克</td>
+                            <td>35.. B <strong>STEMI的治疗(2)</strong><br>⑥心律失常和传导阻滞：伴发室颤时给予<span class="answer-text">同步直流电复律</span>，伴发室早时静脉注射{{c2::利多卡因}}，伴发传导阻滞者肌肉注射{{c3::阿托品}}<br>⑦心肌再灌注治疗：<span class="answer-text">急诊冠状动脉PCI治疗</span>、{{c2::溶栓治疗}}、紧急{{c3::冠状动脉旁路移植术}}<br>⑧并发症治疗：心力衰竭、右室心梗、心源性休克</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>36.. <strong>冠心病的二级预防</strong><br>A：<span class="blur-text">抗心绞痛</span>治疗如硝酸酯类，{{c2::抗血小板}}治疗如阿司匹林等，{{c3::ACEI}}（药物处方）<br>B：<span class="blur-text">β受体阻滞剂</span>，控制血压<{{c2::130/80mmHg}}<br>C：降低{{c3::胆固醇}}（LDL<<span class="blur-text">1.8mmol/L</span>），{{c2::戒烟}}（戒烟处方）<br>D：控制{{c3::糖尿病}}、<span class="blur-text">合理饮食</span>（营养处方）<br>E：{{c2::适度运动}}（运动处方）、{{c3::健康教育}}（心理处方）</td>
+                            <td>36.. <strong>冠心病的二级预防</strong><br>A：<span class="answer-text">抗心绞痛</span>治疗如硝酸酯类，{{c2::抗血小板}}治疗如阿司匹林等，{{c3::ACEI}}（药物处方）<br>B：<span class="answer-text">β受体阻滞剂</span>，控制血压<{{c2::130/80mmHg}}<br>C：降低{{c3::胆固醇}}（LDL<<span class="answer-text">1.8mmol/L</span>），{{c2::戒烟}}（戒烟处方）<br>D：控制{{c3::糖尿病}}、<span class="answer-text">合理饮食</span>（营养处方）<br>E：{{c2::适度运动}}（运动处方）、{{c3::健康教育}}（心理处方）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>37.. <strong>风湿性心脏病的基本病变特点</strong><br>可表现为非特异性或肉芽肿性炎，典型病变分为三期<br>①<span class="blur-text">变质渗出期</span>：即结缔组织黏液变性和纤维蛋白样坏死<br>②{{c2::增生期（肉芽肿期）}}：由纤维蛋白样坏死物、{{c3::阿少夫细胞}}、淋巴细胞及浆细胞构成的阿少夫小体<br>③<span class="blur-text">纤维化期（愈合期）</span>：纤维素样坏死物被溶解吸收</td>
+                            <td>37.. <strong>风湿性心脏病的基本病变特点</strong><br>可表现为非特异性或肉芽肿性炎，典型病变分为三期<br>①<span class="answer-text">变质渗出期</span>：即结缔组织黏液变性和纤维蛋白样坏死<br>②{{c2::增生期（肉芽肿期）}}：由纤维蛋白样坏死物、{{c3::阿少夫细胞}}、淋巴细胞及浆细胞构成的阿少夫小体<br>③<span class="answer-text">纤维化期（愈合期）</span>：纤维素样坏死物被溶解吸收</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>38.. A <strong>风湿性心脏病二尖瓣狭窄的X线表现及并发症(1)</strong><br>X线表现：轻度二尖瓣狭窄X线所见心脏外形基本正常。最早的改变是<span class="blur-text">左心缘的左心房弧度</span>明显，{{c2::肺动脉干突出}}，左、右肺动脉分支增宽<br>中度及重度：①心脏{{c3::梨形扩大}}、<span class="blur-text">双房影</span>；②长期肺淤血者可见{{c2::Kerley B线}}；③反复咯血者，肺下部可见{{c3::含铁血黄素沉积}}的散在性小结；④二尖瓣瓣膜可有<span class="blur-text">钙化</span></td>
+                            <td>38.. A <strong>风湿性心脏病二尖瓣狭窄的X线表现及并发症(1)</strong><br>X线表现：轻度二尖瓣狭窄X线所见心脏外形基本正常。最早的改变是<span class="answer-text">左心缘的左心房弧度</span>明显，{{c2::肺动脉干突出}}，左、右肺动脉分支增宽<br>中度及重度：①心脏{{c3::梨形扩大}}、<span class="answer-text">双房影</span>；②长期肺淤血者可见{{c2::Kerley B线}}；③反复咯血者，肺下部可见{{c3::含铁血黄素沉积}}的散在性小结；④二尖瓣瓣膜可有<span class="answer-text">钙化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>38.. B <strong>风湿性心脏病二尖瓣狭窄的X线表现及并发症(2)</strong><br>并发症：①<span class="blur-text">心房纤颤</span>；②{{c2::急性肺水肿}}；③{{c3::血栓栓塞}}；④<span class="blur-text">右心衰竭</span>；⑤{{c2::感染性心内膜炎}}；⑥{{c3::肺部感染}}</td>
+                            <td>38.. B <strong>风湿性心脏病二尖瓣狭窄的X线表现及并发症(2)</strong><br>并发症：①<span class="answer-text">心房纤颤</span>；②{{c2::急性肺水肿}}；③{{c3::血栓栓塞}}；④<span class="answer-text">右心衰竭</span>；⑤{{c2::感染性心内膜炎}}；⑥{{c3::肺部感染}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>39.. <strong>二尖瓣区听到3/6级收缩期杂音的鉴别诊断</strong><br>①二尖瓣区可以出现<span class="blur-text">生理性杂音</span>的情况：{{c2::贫血}}、{{c3::高热}}等；②<span class="blur-text">相对性二尖瓣关闭不全</span>（如主动脉瓣关闭不全时）；③{{c2::二尖瓣脱垂}}；④{{c3::乳头肌功能不全}}；⑤<span class="blur-text">感染性心内膜炎</span>；⑥{{c2::老年性瓣膜退行性钙化}}</td>
+                            <td>39.. <strong>二尖瓣区听到3/6级收缩期杂音的鉴别诊断</strong><br>①二尖瓣区可以出现<span class="answer-text">生理性杂音</span>的情况：{{c2::贫血}}、{{c3::高热}}等；②<span class="answer-text">相对性二尖瓣关闭不全</span>（如主动脉瓣关闭不全时）；③{{c2::二尖瓣脱垂}}；④{{c3::乳头肌功能不全}}；⑤<span class="answer-text">感染性心内膜炎</span>；⑥{{c2::老年性瓣膜退行性钙化}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>40.. A <strong>慢性主动脉瓣关闭不全的体征(1)</strong><br>视诊：<span class="blur-text">心尖搏动向左下移位</span><br>触诊：{{c2::心尖搏动向左下移位}}<br>叩诊：{{c3::心界向左下扩大}}<br>听诊：①<span class="blur-text">第一心音减弱</span>；②{{c2::主动脉瓣区第二心音减弱或消失}}；③心尖区常可闻及{{c3::第三心音}}；④<span class="blur-text">主动脉瓣区舒张期杂音</span>，为一高调递减型叹气样杂音，{{c2::舒张早期}}出现，{{c3::坐位前倾位呼气末}}明显，向心尖区传导；⑤反流明显者，常在心尖区闻及柔和低调的隆隆样舒张期杂音（<span class="blur-text">Austin-Flint杂音</span>）</td>
+                            <td>40.. A <strong>慢性主动脉瓣关闭不全的体征(1)</strong><br>视诊：<span class="answer-text">心尖搏动向左下移位</span><br>触诊：{{c2::心尖搏动向左下移位}}<br>叩诊：{{c3::心界向左下扩大}}<br>听诊：①<span class="answer-text">第一心音减弱</span>；②{{c2::主动脉瓣区第二心音减弱或消失}}；③心尖区常可闻及{{c3::第三心音}}；④<span class="answer-text">主动脉瓣区舒张期杂音</span>，为一高调递减型叹气样杂音，{{c2::舒张早期}}出现，{{c3::坐位前倾位呼气末}}明显，向心尖区传导；⑤反流明显者，常在心尖区闻及柔和低调的隆隆样舒张期杂音（<span class="answer-text">Austin-Flint杂音</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>40.. B <strong>慢性主动脉瓣关闭不全的体征(2)</strong><br>周围血管征：动脉<span class="blur-text">收缩压增高</span>，{{c2::舒张压降低}}，{{c3::脉压增宽}}，可出现周围血管征，如<span class="blur-text">点头征</span>、{{c2::水冲脉}}、{{c3::枪击音}}、<span class="blur-text">毛细血管搏动征</span>、{{c2::Duroziez双重音}}</td>
+                            <td>40.. B <strong>慢性主动脉瓣关闭不全的体征(2)</strong><br>周围血管征：动脉<span class="answer-text">收缩压增高</span>，{{c2::舒张压降低}}，{{c3::脉压增宽}}，可出现周围血管征，如<span class="answer-text">点头征</span>、{{c2::水冲脉}}、{{c3::枪击音}}、<span class="answer-text">毛细血管搏动征</span>、{{c2::Duroziez双重音}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>41.. <strong>严重主动脉瓣狭窄引起心肌缺血的机制</strong><br>①<span class="blur-text">左室壁增厚</span>，心室收缩压升高和射血时间延长，增加{{c2::心肌耗氧}}；②左室肥厚，{{c3::心肌毛细血管密度}}相对减少；③舒张期心脏内压力增高，压迫<span class="blur-text">心内膜下冠状动脉</span>；④左室舒张末期压力升高致舒张期{{c2::主动脉-左心室压差}}降低，{{c3::冠状动脉灌注压}}降低</td>
+                            <td>41.. <strong>严重主动脉瓣狭窄引起心肌缺血的机制</strong><br>①<span class="answer-text">左室壁增厚</span>，心室收缩压升高和射血时间延长，增加{{c2::心肌耗氧}}；②左室肥厚，{{c3::心肌毛细血管密度}}相对减少；③舒张期心脏内压力增高，压迫<span class="answer-text">心内膜下冠状动脉</span>；④左室舒张末期压力升高致舒张期{{c2::主动脉-左心室压差}}降低，{{c3::冠状动脉灌注压}}降低</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>42.. A <strong>二尖瓣狭窄的常见症状和体征(1)</strong><br>症状：①<span class="blur-text">呼吸困难</span>，为最常见的早期症状，多先有{{c2::劳力性呼吸困难}}，随狭窄加重，出现静息时呼吸困难、端坐呼吸和夜间阵发性呼吸困难，甚至发生{{c3::急性肺水肿}}；②<span class="blur-text">咯血</span>：a.突然咯大量鲜血；b.咳嗽是血性痰或带血丝痰；c.急性肺水肿时咯大量{{c2::粉红色泡沫状痰}}；d.肺梗死伴咯血；③{{c3::咳嗽}}；④<span class="blur-text">声嘶</span>：扩大的左心房与肺动脉压迫{{c2::左喉返神经}}</td>
+                            <td>42.. A <strong>二尖瓣狭窄的常见症状和体征(1)</strong><br>症状：①<span class="answer-text">呼吸困难</span>，为最常见的早期症状，多先有{{c2::劳力性呼吸困难}}，随狭窄加重，出现静息时呼吸困难、端坐呼吸和夜间阵发性呼吸困难，甚至发生{{c3::急性肺水肿}}；②<span class="answer-text">咯血</span>：a.突然咯大量鲜血；b.咳嗽是血性痰或带血丝痰；c.急性肺水肿时咯大量{{c2::粉红色泡沫状痰}}；d.肺梗死伴咯血；③{{c3::咳嗽}}；④<span class="answer-text">声嘶</span>：扩大的左心房与肺动脉压迫{{c2::左喉返神经}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>42.. B <strong>二尖瓣狭窄的常见症状和体征(2)</strong><br>体征：①视诊：<span class="blur-text">心尖搏动正常或不明显</span><br>②触诊：{{c2::心尖区有低调的隆隆样舒张中晚期杂音}}，常可触及{{c3::震颤}}<br>③听诊：若心尖区闻及<span class="blur-text">第一心音亢进</span>和{{c2::开瓣音}}，提示前叶弹性好，若瓣膜钙化则第一心音减弱，开瓣音消失<br>④{{c3::肺动脉高压}}和右心室扩大的体征，<span class="blur-text">Graham-Steel杂音</span></td>
+                            <td>42.. B <strong>二尖瓣狭窄的常见症状和体征(2)</strong><br>体征：①视诊：<span class="answer-text">心尖搏动正常或不明显</span><br>②触诊：{{c2::心尖区有低调的隆隆样舒张中晚期杂音}}，常可触及{{c3::震颤}}<br>③听诊：若心尖区闻及<span class="answer-text">第一心音亢进</span>和{{c2::开瓣音}}，提示前叶弹性好，若瓣膜钙化则第一心音减弱，开瓣音消失<br>④{{c3::肺动脉高压}}和右心室扩大的体征，<span class="answer-text">Graham-Steel杂音</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>43.. <strong>下肢动脉硬化性闭塞症的Fontaine分期</strong><br>第1期（轻微主诉期）：为病变早期，仅感觉患肢<span class="blur-text">皮温降低、怕冷</span>，或轻度麻木，活动后易疲劳<br>第2期（间歇性跛行期）：当患者在行走时，由于缺血和缺氧，{{c2::小腿的肌肉产生痉挛、疼痛和无力}}，必须停止行走，休息片刻后症状才能缓解<br>第3期（静息痛期）：当病变加重而侧支循环建立严重不足，使患肢处于严重缺血状态，即使在患者{{c3::休息时}}也感到疼痛<br>第4期（组织坏死期）：血管病变继续发展，无法维持下肢基本血供而发生<span class="blur-text">组织坏死</span>，导致{{c2::坏疽和溃疡}}</td>
+                            <td>43.. <strong>下肢动脉硬化性闭塞症的Fontaine分期</strong><br>第1期（轻微主诉期）：为病变早期，仅感觉患肢<span class="answer-text">皮温降低、怕冷</span>，或轻度麻木，活动后易疲劳<br>第2期（间歇性跛行期）：当患者在行走时，由于缺血和缺氧，{{c2::小腿的肌肉产生痉挛、疼痛和无力}}，必须停止行走，休息片刻后症状才能缓解<br>第3期（静息痛期）：当病变加重而侧支循环建立严重不足，使患肢处于严重缺血状态，即使在患者{{c3::休息时}}也感到疼痛<br>第4期（组织坏死期）：血管病变继续发展，无法维持下肢基本血供而发生<span class="answer-text">组织坏死</span>，导致{{c2::坏疽和溃疡}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>44.. <strong>闭塞性动脉粥样硬化与血栓闭塞性脉管炎的鉴别诊断</strong><br>发病人群：闭塞性动脉粥样硬化多见于<span class="blur-text">老年男性</span>，血栓栓塞性脉管炎多好发于{{c2::青年男性}}重度吸烟者<br>发病部位：闭塞性动脉粥样硬化累及下肢为主，{{c3::股-腘动脉}}多见，多为大、中动脉；血栓栓塞性脉管炎累及全身中、小动脉，<span class="blur-text">上肢</span>也经常累及<br>伴有症状：闭塞性动脉粥样硬化常有受累动脉{{c2::钙化}}及其他部位动脉病变；血栓闭塞性脉管炎常有反复发作{{c3::游走性血栓性浅静脉炎}}及<span class="blur-text">雷诺现象</span><br>病因：闭塞性动脉粥样硬化与常伴发{{c2::冠心病、血脂异常、糖尿病、高血压}}等疾病；血栓闭塞性脉管炎与长期大量{{c3::吸烟}}及免疫功能紊乱有关</td>
+                            <td>44.. <strong>闭塞性动脉粥样硬化与血栓闭塞性脉管炎的鉴别诊断</strong><br>发病人群：闭塞性动脉粥样硬化多见于<span class="answer-text">老年男性</span>，血栓栓塞性脉管炎多好发于{{c2::青年男性}}重度吸烟者<br>发病部位：闭塞性动脉粥样硬化累及下肢为主，{{c3::股-腘动脉}}多见，多为大、中动脉；血栓栓塞性脉管炎累及全身中、小动脉，<span class="answer-text">上肢</span>也经常累及<br>伴有症状：闭塞性动脉粥样硬化常有受累动脉{{c2::钙化}}及其他部位动脉病变；血栓闭塞性脉管炎常有反复发作{{c3::游走性血栓性浅静脉炎}}及<span class="answer-text">雷诺现象</span><br>病因：闭塞性动脉粥样硬化与常伴发{{c2::冠心病、血脂异常、糖尿病、高血压}}等疾病；血栓闭塞性脉管炎与长期大量{{c3::吸烟}}及免疫功能紊乱有关</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>45.. <strong>深静脉血栓形成的治疗措施</strong><br>一般治疗：<span class="blur-text">卧床休息</span>，抬高患肢，适当使用{{c2::利尿剂}}减轻水肿，病情允许穿医用弹力袜或弹力绷带后起床活动<br>药物治疗：{{c3::抗凝治疗}}和<span class="blur-text">溶栓治疗</span><br>手术治疗：{{c2::经皮穿刺导管溶栓术}}、{{c3::机械性血栓抽吸术}}、<span class="blur-text">取栓术</span><br>并发症治疗：{{c2::肺栓塞}}、{{c3::深静脉血栓形成后综合征}}</td>
+                            <td>45.. <strong>深静脉血栓形成的治疗措施</strong><br>一般治疗：<span class="answer-text">卧床休息</span>，抬高患肢，适当使用{{c2::利尿剂}}减轻水肿，病情允许穿医用弹力袜或弹力绷带后起床活动<br>药物治疗：{{c3::抗凝治疗}}和<span class="answer-text">溶栓治疗</span><br>手术治疗：{{c2::经皮穿刺导管溶栓术}}、{{c3::机械性血栓抽吸术}}、<span class="answer-text">取栓术</span><br>并发症治疗：{{c2::肺栓塞}}、{{c3::深静脉血栓形成后综合征}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>46.. <strong>下肢静脉血栓形成的病因</strong><br>①<span class="blur-text">静脉壁损伤</span>；②{{c2::血流缓慢}}；③{{c3::血液高凝状态}}</td>
+                            <td>46.. <strong>下肢静脉血栓形成的病因</strong><br>①<span class="answer-text">静脉壁损伤</span>；②{{c2::血流缓慢}}；③{{c3::血液高凝状态}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>47.. <strong>休克的病理生理分期</strong><br>微循环收缩期（缺血缺氧期）：此期为休克早期或休克代偿期，全身小动脉、微动脉、后微动脉、毛细血管前括约肌和微静脉、小静脉都处于<span class="blur-text">收缩状态</span>，大量真毛细血管网关闭，微循环灌流特点是：{{c2::少灌少流，灌少于流}}，组织呈缺血缺氧状态<br>微循环扩张期（淤血期）：{{c3::微循环血管扩张}}，处于淤血状态，微动脉、后微动脉和毛细血管前括约肌收缩性减弱甚至扩张，大量血液涌入真毛细血管网，微循环灌流特点是：<span class="blur-text">灌而少流，灌大于流</span><br>微循环衰竭期（难治期）：{{c2::微血管发生麻痹性扩张}}，毛细血管大量开放，微循环中有{{c3::微血栓形成}}，血流停止，出现<span class="blur-text">不灌不流</span>状态</td>
+                            <td>47.. <strong>休克的病理生理分期</strong><br>微循环收缩期（缺血缺氧期）：此期为休克早期或休克代偿期，全身小动脉、微动脉、后微动脉、毛细血管前括约肌和微静脉、小静脉都处于<span class="answer-text">收缩状态</span>，大量真毛细血管网关闭，微循环灌流特点是：{{c2::少灌少流，灌少于流}}，组织呈缺血缺氧状态<br>微循环扩张期（淤血期）：{{c3::微循环血管扩张}}，处于淤血状态，微动脉、后微动脉和毛细血管前括约肌收缩性减弱甚至扩张，大量血液涌入真毛细血管网，微循环灌流特点是：<span class="answer-text">灌而少流，灌大于流</span><br>微循环衰竭期（难治期）：{{c2::微血管发生麻痹性扩张}}，毛细血管大量开放，微循环中有{{c3::微血栓形成}}，血流停止，出现<span class="answer-text">不灌不流</span>状态</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>48.. <strong>休克微循环收缩期的代偿意义</strong><br>稳压效应：①回心血流量增加，<span class="blur-text">自身输血</span>（肝、脾储血减少，血管床容量减少）、{{c2::自身输液}}（组织间液进入毛细血管增多）、{{c3::醛固酮和抗利尿激素}}分泌增加（重吸收水钠增加）<br>②<span class="blur-text">心排出量增加</span>：心率增快、收缩力增强<br>③{{c2::外周阻力增高}}：全身小动脉收缩、痉挛，血压升高<br>血液重新分布：保证{{c3::心脑血液供应}}：①脑血管：交感缩血管纤维分布稀疏，α受体密度低；②冠状动脉：β受体兴奋的扩血管效应大于α受体兴奋的缩血管效应</td>
+                            <td>48.. <strong>休克微循环收缩期的代偿意义</strong><br>稳压效应：①回心血流量增加，<span class="answer-text">自身输血</span>（肝、脾储血减少，血管床容量减少）、{{c2::自身输液}}（组织间液进入毛细血管增多）、{{c3::醛固酮和抗利尿激素}}分泌增加（重吸收水钠增加）<br>②<span class="answer-text">心排出量增加</span>：心率增快、收缩力增强<br>③{{c2::外周阻力增高}}：全身小动脉收缩、痉挛，血压升高<br>血液重新分布：保证{{c3::心脑血液供应}}：①脑血管：交感缩血管纤维分布稀疏，α受体密度低；②冠状动脉：β受体兴奋的扩血管效应大于α受体兴奋的缩血管效应</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>49.. <strong>微循环血管扩张的机制</strong><br>①<span class="blur-text">酸中毒</span>：持续缺氧使无氧酵解增强，使乳酸、CO2等酸性物质堆积，导致酸中毒，使血管对儿茶酚胺的反应性下降<br>②{{c2::扩血管物质生成增多}}：长期缺血缺氧刺激肥大细胞释放{{c3::组胺}}增多；ATP分解增强，<span class="blur-text">腺苷</span>增多；激肽系统激活，{{c2::缓激肽}}生成增多<br>③{{c3::内毒素的作用}}：感染性休克或其他休克引起肠源性内毒素或细菌移位入血，内毒素激活巨噬细胞，产生大量细胞因子<br>④<span class="blur-text">血液流变学异常</span>：白细胞滚动、黏附；毛细血管通透性增高，血液黏度增加</td>
+                            <td>49.. <strong>微循环血管扩张的机制</strong><br>①<span class="answer-text">酸中毒</span>：持续缺氧使无氧酵解增强，使乳酸、CO2等酸性物质堆积，导致酸中毒，使血管对儿茶酚胺的反应性下降<br>②{{c2::扩血管物质生成增多}}：长期缺血缺氧刺激肥大细胞释放{{c3::组胺}}增多；ATP分解增强，<span class="answer-text">腺苷</span>增多；激肽系统激活，{{c2::缓激肽}}生成增多<br>③{{c3::内毒素的作用}}：感染性休克或其他休克引起肠源性内毒素或细菌移位入血，内毒素激活巨噬细胞，产生大量细胞因子<br>④<span class="answer-text">血液流变学异常</span>：白细胞滚动、黏附；毛细血管通透性增高，血液黏度增加</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>50.. <strong>休克的临床表现和程度</strong><br>（原文未给出具体内容，建议补充）<br><span class="blur-text">图略</span></td>
+                            <td>50.. <strong>休克的临床表现和程度</strong><br>（原文未给出具体内容，建议补充）<br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>51.. A <strong>体外循环的定义、目的、方法及基本设备(1)</strong><br>定义：将回心的静脉血从<span class="blur-text">上、下腔静脉或右心房</span>引出体外，在人工心肺机内进行{{c2::氧气交换和排出二氧化碳}}（人工肺），再由血泵输回体内进行血液循环（人工心）<br>目的：①提供{{c3::静止、无血的手术视野}}；②为心肺以外的组织器官提供血液灌注以维持生命<br>方法：①将静脉血引出体外；②人工肺变静脉血为动脉血；③人工心将动脉血注回体内</td>
+                            <td>51.. A <strong>体外循环的定义、目的、方法及基本设备(1)</strong><br>定义：将回心的静脉血从<span class="answer-text">上、下腔静脉或右心房</span>引出体外，在人工心肺机内进行{{c2::氧气交换和排出二氧化碳}}（人工肺），再由血泵输回体内进行血液循环（人工心）<br>目的：①提供{{c3::静止、无血的手术视野}}；②为心肺以外的组织器官提供血液灌注以维持生命<br>方法：①将静脉血引出体外；②人工肺变静脉血为动脉血；③人工心将动脉血注回体内</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>51.. B <strong>体外循环的定义、目的、方法及基本设备(2)</strong><br>基本设备：①<span class="blur-text">人工心（血泵）</span>；②{{c2::人工肺（氧合器）}}；③{{c3::变温器}}；④<span class="blur-text">过滤器</span>；⑤监测仪、连接管道等</td>
+                            <td>51.. B <strong>体外循环的定义、目的、方法及基本设备(2)</strong><br>基本设备：①<span class="answer-text">人工心（血泵）</span>；②{{c2::人工肺（氧合器）}}；③{{c3::变温器}}；④<span class="answer-text">过滤器</span>；⑤监测仪、连接管道等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>52.. <strong>体外循环后的病理生理改变</strong><br>①<span class="blur-text">代谢改变</span>：代谢性酸中毒，呼吸性碱中毒；②{{c2::电解质失衡}}：突出的是{{c3::低血钾}}；③<span class="blur-text">血液改变</span>：红细胞破坏，纤维蛋白原和血小板减少等，常引起{{c2::凝血机制紊乱}}；④{{c3::肾、肺}}等器官的功能减退</td>
+                            <td>52.. <strong>体外循环后的病理生理改变</strong><br>①<span class="answer-text">代谢改变</span>：代谢性酸中毒，呼吸性碱中毒；②{{c2::电解质失衡}}：突出的是{{c3::低血钾}}；③<span class="answer-text">血液改变</span>：红细胞破坏，纤维蛋白原和血小板减少等，常引起{{c2::凝血机制紊乱}}；④{{c3::肾、肺}}等器官的功能减退</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

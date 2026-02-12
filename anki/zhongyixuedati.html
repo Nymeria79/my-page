@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">中医学大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1. 心的功能<br>心主 <span class="blur-text">血脉</span> ：推动血液在<strong>脉管</strong>中运行，正常表现<strong>面色红润</strong>、<strong>脉象和缓有力</strong>。<br>心主 <span class="blur-text">神志</span> ：心为<strong>五脏六腑</strong>之大主，异常表现为<strong>心烦失眠</strong>或<strong>神志昏迷</strong>。<br>心在液为 <span class="blur-text">汗</span> ：<strong>汗血同源</strong>，<strong>大汗伤阳</strong>。<br>心与 <span class="blur-text">小肠</span> 相表里：心火可移热于小肠导致<strong>尿赤</strong>、<strong>尿痛</strong>。</td>
+                            <td>1. 心的功能<br>心主 <span class="answer-text">血脉</span> ：推动血液在<strong>脉管</strong>中运行，正常表现<strong>面色红润</strong>、<strong>脉象和缓有力</strong>。<br>心主 <span class="answer-text">神志</span> ：心为<strong>五脏六腑</strong>之大主，异常表现为<strong>心烦失眠</strong>或<strong>神志昏迷</strong>。<br>心在液为 <span class="answer-text">汗</span> ：<strong>汗血同源</strong>，<strong>大汗伤阳</strong>。<br>心与 <span class="answer-text">小肠</span> 相表里：心火可移热于小肠导致<strong>尿赤</strong>、<strong>尿痛</strong>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. 肺的功能<br>肺主 <span class="blur-text">气</span> ，司 <span class="blur-text">呼吸</span> ：主<strong>一身之气</strong>，参与<strong>宗气</strong>生成（<strong>清气</strong>+<strong>水谷精气</strong>，聚于<strong>胸中</strong>）。<br>肺主 <span class="blur-text">宣发</span> ：呼出<strong>浊气</strong>，布散<strong>津液</strong>和<strong>水谷精微</strong>，宣发<strong>卫气</strong>，排出<strong>代谢产物</strong>。<br>肺主 <span class="blur-text">肃降</span> ：吸入<strong>清气</strong>，将清气、津液、水谷精微向<strong>下</strong>布散，肃清<strong>呼吸道</strong>。<br>肺 <span class="blur-text">通调水道</span> ：参与<strong>水液代谢</strong>调节，肺为<strong>水之上源</strong>，异常表现为<strong>水肿</strong>（尤其<strong>上半身</strong>）。<br>肺 <span class="blur-text">朝百脉</span> ，主 <span class="blur-text">治节</span> ：全身血液汇聚于<strong>肺</strong>，协助<strong>心</strong>调节<strong>气血</strong>运行。<br>肺与 <span class="blur-text">大肠</span> 相表里：肺气<strong>肃降</strong>有助于大肠<strong>传导</strong>。</td>
+                            <td>2. 肺的功能<br>肺主 <span class="answer-text">气</span> ，司 <span class="answer-text">呼吸</span> ：主<strong>一身之气</strong>，参与<strong>宗气</strong>生成（<strong>清气</strong>+<strong>水谷精气</strong>，聚于<strong>胸中</strong>）。<br>肺主 <span class="answer-text">宣发</span> ：呼出<strong>浊气</strong>，布散<strong>津液</strong>和<strong>水谷精微</strong>，宣发<strong>卫气</strong>，排出<strong>代谢产物</strong>。<br>肺主 <span class="answer-text">肃降</span> ：吸入<strong>清气</strong>，将清气、津液、水谷精微向<strong>下</strong>布散，肃清<strong>呼吸道</strong>。<br>肺 <span class="answer-text">通调水道</span> ：参与<strong>水液代谢</strong>调节，肺为<strong>水之上源</strong>，异常表现为<strong>水肿</strong>（尤其<strong>上半身</strong>）。<br>肺 <span class="answer-text">朝百脉</span> ，主 <span class="answer-text">治节</span> ：全身血液汇聚于<strong>肺</strong>，协助<strong>心</strong>调节<strong>气血</strong>运行。<br>肺与 <span class="answer-text">大肠</span> 相表里：肺气<strong>肃降</strong>有助于大肠<strong>传导</strong>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. 脾的功能<br>脾主 <span class="blur-text">运化</span> ：运化<strong>水谷精微</strong>和<strong>水液</strong>，脾为<strong>后天之本</strong>、<strong>气血生化之源</strong>。<br>脾主 <span class="blur-text">升清</span> ：将水谷精微向<strong>上</strong>输布，<strong>升举内脏</strong>，异常表现为<strong>中气下陷</strong>、内脏<strong>下垂</strong>。<br>脾主 <span class="blur-text">统血</span> ：脾气<strong>固摄</strong>血液在脉中运行，异常表现为各种<strong>出血</strong>（尤其<strong>慢性</strong>出血）。<br>脾与 <span class="blur-text">胃</span> 相表里：胃主<strong>受纳</strong>、<strong>腐熟</strong>水谷，胃主<strong>通降</strong>，<strong>脾升胃降</strong>相反相成。</td>
+                            <td>3. 脾的功能<br>脾主 <span class="answer-text">运化</span> ：运化<strong>水谷精微</strong>和<strong>水液</strong>，脾为<strong>后天之本</strong>、<strong>气血生化之源</strong>。<br>脾主 <span class="answer-text">升清</span> ：将水谷精微向<strong>上</strong>输布，<strong>升举内脏</strong>，异常表现为<strong>中气下陷</strong>、内脏<strong>下垂</strong>。<br>脾主 <span class="answer-text">统血</span> ：脾气<strong>固摄</strong>血液在脉中运行，异常表现为各种<strong>出血</strong>（尤其<strong>慢性</strong>出血）。<br>脾与 <span class="answer-text">胃</span> 相表里：胃主<strong>受纳</strong>、<strong>腐熟</strong>水谷，胃主<strong>通降</strong>，<strong>脾升胃降</strong>相反相成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. 肝的功能<br>肝主 <span class="blur-text">疏泄</span> ：调畅<strong>气机</strong>、<strong>情志</strong>，促进<strong>消化</strong>，调节<strong>生殖</strong>功能。<br>异常表现：<strong>肝气郁结</strong>→胸胁<strong>胀痛</strong>、情志<strong>抑郁</strong>；<strong>肝气上逆</strong>→头<strong>胀痛</strong>、面<strong>红</strong>。<br>肝主 <span class="blur-text">藏血</span> ：<strong>贮藏</strong>血液，<strong>调节</strong>血量，<strong>防止</strong>出血。<br>异常表现：肝血虚→面色<strong>无华</strong>、头晕目眩、月经量<strong>少</strong>。<br>肝与 <span class="blur-text">胆</span> 相表里：胆贮存和排泄<strong>胆汁</strong>，胆主<strong>决断</strong>。</td>
+                            <td>4. 肝的功能<br>肝主 <span class="answer-text">疏泄</span> ：调畅<strong>气机</strong>、<strong>情志</strong>，促进<strong>消化</strong>，调节<strong>生殖</strong>功能。<br>异常表现：<strong>肝气郁结</strong>→胸胁<strong>胀痛</strong>、情志<strong>抑郁</strong>；<strong>肝气上逆</strong>→头<strong>胀痛</strong>、面<strong>红</strong>。<br>肝主 <span class="answer-text">藏血</span> ：<strong>贮藏</strong>血液，<strong>调节</strong>血量，<strong>防止</strong>出血。<br>异常表现：肝血虚→面色<strong>无华</strong>、头晕目眩、月经量<strong>少</strong>。<br>肝与 <span class="answer-text">胆</span> 相表里：胆贮存和排泄<strong>胆汁</strong>，胆主<strong>决断</strong>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. 肾的功能<br>肾 <span class="blur-text">藏精</span> （肾的<strong>最基本</strong>功能）：肾精来源为<strong>先天之精</strong>（父母）+<strong>后天之精</strong>（脏腑化生）。<br>肾精生理周期：女子<strong>7</strong>岁肾气盛→<strong>14</strong>岁天癸至月经来→<strong>49</strong>岁天癸竭绝经；男子<strong>8</strong>岁肾气盛→<strong>16</strong>岁天癸至能生育→<strong>64</strong>岁天癸竭。<br>肾主 <span class="blur-text">水</span> ：调节<strong>水液代谢</strong>，肾阳<strong>蒸腾气化</strong>，异常表现为<strong>水肿</strong>（尤其<strong>下半身</strong>、<strong>腰以下</strong>）。<br>肾主 <span class="blur-text">纳气</span> ：摄纳肺吸入的<strong>清气</strong>，保持呼吸<strong>深度</strong>。肾不纳气表现为呼吸<strong>表浅</strong>、<strong>呼多吸少</strong>、动则<strong>气喘</strong>。<br>肾阴肾阳：肾阴为<strong>一身阴液</strong>之本（<strong>滋养润泽</strong>全身），肾阳为<strong>一身阳气</strong>之本（<strong>温煦推动</strong>全身）。<br>肾与 <span class="blur-text">膀胱</span> 相表里：膀胱贮存和排泄<strong>尿液</strong>，气化功能依赖<strong>肾阳</strong>。</td>
+                            <td>5. 肾的功能<br>肾 <span class="answer-text">藏精</span> （肾的<strong>最基本</strong>功能）：肾精来源为<strong>先天之精</strong>（父母）+<strong>后天之精</strong>（脏腑化生）。<br>肾精生理周期：女子<strong>7</strong>岁肾气盛→<strong>14</strong>岁天癸至月经来→<strong>49</strong>岁天癸竭绝经；男子<strong>8</strong>岁肾气盛→<strong>16</strong>岁天癸至能生育→<strong>64</strong>岁天癸竭。<br>肾主 <span class="answer-text">水</span> ：调节<strong>水液代谢</strong>，肾阳<strong>蒸腾气化</strong>，异常表现为<strong>水肿</strong>（尤其<strong>下半身</strong>、<strong>腰以下</strong>）。<br>肾主 <span class="answer-text">纳气</span> ：摄纳肺吸入的<strong>清气</strong>，保持呼吸<strong>深度</strong>。肾不纳气表现为呼吸<strong>表浅</strong>、<strong>呼多吸少</strong>、动则<strong>气喘</strong>。<br>肾阴肾阳：肾阴为<strong>一身阴液</strong>之本（<strong>滋养润泽</strong>全身），肾阳为<strong>一身阳气</strong>之本（<strong>温煦推动</strong>全身）。<br>肾与 <span class="answer-text">膀胱</span> 相表里：膀胱贮存和排泄<strong>尿液</strong>，气化功能依赖<strong>肾阳</strong>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">一、导论部分</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>1. 四大经典-黄帝内经<br><span class="blur-text">《黄帝内经》</span>是最早的中医学专著,<br>确立了中医学独特的<span class="blur-text">理论体系</span>。</td>
+                            <td>1. 四大经典-黄帝内经<br><span class="answer-text">《黄帝内经》</span>是最早的中医学专著,<br>确立了中医学独特的<span class="answer-text">理论体系</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>2. 四大经典-难经<br><span class="blur-text">《难经》</span>发展了<span class="blur-text">脉诊</span>。</td>
+                            <td>2. 四大经典-难经<br><span class="answer-text">《难经》</span>发展了<span class="answer-text">脉诊</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>3. 四大经典-神农本草经<br><span class="blur-text">《神农本草经》</span>是最早的<span class="blur-text">药学</span>专著,<br>记载<span class="blur-text">365</span>种药物。</td>
+                            <td>3. 四大经典-神农本草经<br><span class="answer-text">《神农本草经》</span>是最早的<span class="answer-text">药学</span>专著,<br>记载<span class="answer-text">365</span>种药物。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>4. 四大经典-伤寒杂病论<br><span class="blur-text">《伤寒杂病论》</span>是<span class="blur-text">临证医学</span>专著,<br>作者是<span class="blur-text">张仲景</span>,<br>后分为<span class="blur-text">《伤寒论》</span>和<span class="blur-text">《金匮要略》</span>。</td>
+                            <td>4. 四大经典-伤寒杂病论<br><span class="answer-text">《伤寒杂病论》</span>是<span class="answer-text">临证医学</span>专著,<br>作者是<span class="answer-text">张仲景</span>,<br>后分为<span class="answer-text">《伤寒论》</span>和<span class="answer-text">《金匮要略》</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>5. 金元四大家-寒凉派<br><span class="blur-text">刘完素</span>属于<span class="blur-text">寒凉派</span>,<br>善用<span class="blur-text">寒凉药物</span>。</td>
+                            <td>5. 金元四大家-寒凉派<br><span class="answer-text">刘完素</span>属于<span class="answer-text">寒凉派</span>,<br>善用<span class="answer-text">寒凉药物</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>6. 金元四大家-攻下派<br><span class="blur-text">张从正</span>属于<span class="blur-text">攻下派</span>,<br>主张"<span class="blur-text">邪去正自安</span>",善用<span class="blur-text">汗、吐、下</span>三法。</td>
+                            <td>6. 金元四大家-攻下派<br><span class="answer-text">张从正</span>属于<span class="answer-text">攻下派</span>,<br>主张"<span class="answer-text">邪去正自安</span>",善用<span class="answer-text">汗、吐、下</span>三法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>7. 金元四大家-补脾胃派<br><span class="blur-text">李东垣</span>(李杲)属于<span class="blur-text">补脾胃派</span>,<br>强调脾胃为<span class="blur-text">后天之本</span>。</td>
+                            <td>7. 金元四大家-补脾胃派<br><span class="answer-text">李东垣</span>(李杲)属于<span class="answer-text">补脾胃派</span>,<br>强调脾胃为<span class="answer-text">后天之本</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>8. 金元四大家-滋阴派<br><span class="blur-text">朱震亨</span>(朱丹溪)属于<span class="blur-text">滋阴派</span>,<br>主张<span class="blur-text">滋阴降火</span>。</td>
+                            <td>8. 金元四大家-滋阴派<br><span class="answer-text">朱震亨</span>(朱丹溪)属于<span class="answer-text">滋阴派</span>,<br>主张<span class="answer-text">滋阴降火</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>9. 中医学基本特点-整体观<br>整体观包括三个方面:<br>人是<span class="blur-text">有机整体</span>;人与<span class="blur-text">环境</span>的统一;人与<span class="blur-text">社会环境</span>的统一。</td>
+                            <td>9. 中医学基本特点-整体观<br>整体观包括三个方面:<br>人是<span class="answer-text">有机整体</span>;人与<span class="answer-text">环境</span>的统一;人与<span class="answer-text">社会环境</span>的统一。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>10. 中医学基本特点-恒动观<br>恒动观包括四个方面:<br>自然界万物<span class="blur-text">恒动不休</span>;人的生命活动<span class="blur-text">恒动不休</span>;<br>疾病的发展转化<span class="blur-text">不停变化</span>;疾病的防治也在<span class="blur-text">变化调整</span>。</td>
+                            <td>10. 中医学基本特点-恒动观<br>恒动观包括四个方面:<br>自然界万物<span class="answer-text">恒动不休</span>;人的生命活动<span class="answer-text">恒动不休</span>;<br>疾病的发展转化<span class="answer-text">不停变化</span>;疾病的防治也在<span class="answer-text">变化调整</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>11. 辨证论治-概念<br>辨证论治的含义:在中医理论指导下,<br>对疾病进行<span class="blur-text">辨证分析</span>,确定<span class="blur-text">治疗原则</span>和<span class="blur-text">方法</span>。</td>
+                            <td>11. 辨证论治-概念<br>辨证论治的含义:在中医理论指导下,<br>对疾病进行<span class="answer-text">辨证分析</span>,确定<span class="answer-text">治疗原则</span>和<span class="answer-text">方法</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>12. 辨证论治-病症证的区别<br><span class="blur-text">证</span>:疾病发展过程中某一阶段的病理概括;<br><span class="blur-text">病</span>:疾病的全过程;<br><span class="blur-text">症</span>:具体的临床表现。</td>
+                            <td>12. 辨证论治-病症证的区别<br><span class="answer-text">证</span>:疾病发展过程中某一阶段的病理概括;<br><span class="answer-text">病</span>:疾病的全过程;<br><span class="answer-text">症</span>:具体的临床表现。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>13. 辨证论治-同病异治异病同治<br><span class="blur-text">同病异治</span>:同一疾病因病机不同采用不同治法;<br><span class="blur-text">异病同治</span>:不同疾病因病机相同采用相同治法。</td>
+                            <td>13. 辨证论治-同病异治异病同治<br><span class="answer-text">同病异治</span>:同一疾病因病机不同采用不同治法;<br><span class="answer-text">异病同治</span>:不同疾病因病机相同采用相同治法。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">二、阴阳五行学说</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>14. 元气论-气的概念<br><span class="blur-text">气</span>是自然界万物活跃的<span class="blur-text">精微物质</span>,<br>是构成宇宙万物的<span class="blur-text">最基本物质</span>。</td>
+                            <td>14. 元气论-气的概念<br><span class="answer-text">气</span>是自然界万物活跃的<span class="answer-text">精微物质</span>,<br>是构成宇宙万物的<span class="answer-text">最基本物质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>15. 元气论-元气<br><span class="blur-text">元气</span>是产生构成自然界万物的<span class="blur-text">原始物质</span>,<br>是推动宇宙万物运动变化的<span class="blur-text">动力</span>。</td>
+                            <td>15. 元气论-元气<br><span class="answer-text">元气</span>是产生构成自然界万物的<span class="answer-text">原始物质</span>,<br>是推动宇宙万物运动变化的<span class="answer-text">动力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>16. 元气论-气机<br><span class="blur-text">气机</span>是气的运动,<br>包括<span class="blur-text">升</span>、<span class="blur-text">降</span>、<span class="blur-text">出</span>、<span class="blur-text">入</span>四种形式。</td>
+                            <td>16. 元气论-气机<br><span class="answer-text">气机</span>是气的运动,<br>包括<span class="answer-text">升</span>、<span class="answer-text">降</span>、<span class="answer-text">出</span>、<span class="answer-text">入</span>四种形式。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>17. 阴阳划分-脏腑<br>五脏为<span class="blur-text">阴</span>,六腑为<span class="blur-text">阳</span>。<br>每个脏腑又分阴阳:如<span class="blur-text">心阴</span><span class="blur-text">心阳</span>、<span class="blur-text">肝阴</span><span class="blur-text">肝阳</span>等。</td>
+                            <td>17. 阴阳划分-脏腑<br>五脏为<span class="answer-text">阴</span>,六腑为<span class="answer-text">阳</span>。<br>每个脏腑又分阴阳:如<span class="answer-text">心阴</span><span class="answer-text">心阳</span>、<span class="answer-text">肝阴</span><span class="answer-text">肝阳</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>18. 阴阳划分-身体部位(1)<br><span class="blur-text">上</span>为阳,<span class="blur-text">下</span>为阴;<br><span class="blur-text">外</span>为阳,<span class="blur-text">内</span>为阴。</td>
+                            <td>18. 阴阳划分-身体部位(1)<br><span class="answer-text">上</span>为阳,<span class="answer-text">下</span>为阴;<br><span class="answer-text">外</span>为阳,<span class="answer-text">内</span>为阴。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>19. 阴阳划分-身体部位(2)<br><span class="blur-text">背</span>为阳,<span class="blur-text">腹</span>为阴;<br><span class="blur-text">左</span>为阳,<span class="blur-text">右</span>为阴。</td>
+                            <td>19. 阴阳划分-身体部位(2)<br><span class="answer-text">背</span>为阳,<span class="answer-text">腹</span>为阴;<br><span class="answer-text">左</span>为阳,<span class="answer-text">右</span>为阴。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>20. 阴阳学说-对立制约<br>阴阳<span class="blur-text">对立制约</span>:阴阳双方相互制约、相互斗争,<br>维持<span class="blur-text">动态平衡</span>,实现<span class="blur-text">升降出入</span>的平衡。</td>
+                            <td>20. 阴阳学说-对立制约<br>阴阳<span class="answer-text">对立制约</span>:阴阳双方相互制约、相互斗争,<br>维持<span class="answer-text">动态平衡</span>,实现<span class="answer-text">升降出入</span>的平衡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>21. 阴阳学说-互根互用<br>阴阳<span class="blur-text">互根互用</span>:<br><span class="blur-text">孤阴不生</span>,<span class="blur-text">独阳不长</span>;<br><span class="blur-text">阴平阳秘</span>,精神乃治。</td>
+                            <td>21. 阴阳学说-互根互用<br>阴阳<span class="answer-text">互根互用</span>:<br><span class="answer-text">孤阴不生</span>,<span class="answer-text">独阳不长</span>;<br><span class="answer-text">阴平阳秘</span>,精神乃治。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>22. 阴阳学说-消长平衡<br>阴阳<span class="blur-text">消长平衡</span>:阴阳在<span class="blur-text">变化</span>中保持相对平衡。<br>春夏<span class="blur-text">阳长阴消</span>,秋冬<span class="blur-text">阴长阳消</span>。</td>
+                            <td>22. 阴阳学说-消长平衡<br>阴阳<span class="answer-text">消长平衡</span>:阴阳在<span class="answer-text">变化</span>中保持相对平衡。<br>春夏<span class="answer-text">阳长阴消</span>,秋冬<span class="answer-text">阴长阳消</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>23. 阴阳学说-相互转化<br>阴阳<span class="blur-text">相互转化</span>:<br><span class="blur-text">寒极生热</span>,<span class="blur-text">热极生寒</span>;<br><span class="blur-text">重阴必阳</span>,<span class="blur-text">重阳必阴</span>。</td>
+                            <td>23. 阴阳学说-相互转化<br>阴阳<span class="answer-text">相互转化</span>:<br><span class="answer-text">寒极生热</span>,<span class="answer-text">热极生寒</span>;<br><span class="answer-text">重阴必阳</span>,<span class="answer-text">重阳必阴</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>24. 阴阳失调-阳盛阴盛<br><span class="blur-text">阳盛</span>则<span class="blur-text">热</span>(实热证);<br><span class="blur-text">阴盛</span>则<span class="blur-text">寒</span>(实寒证)。</td>
+                            <td>24. 阴阳失调-阳盛阴盛<br><span class="answer-text">阳盛</span>则<span class="answer-text">热</span>(实热证);<br><span class="answer-text">阴盛</span>则<span class="answer-text">寒</span>(实寒证)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>25. 阴阳失调-阴虚阳虚<br><span class="blur-text">阴虚</span>则<span class="blur-text">热</span>(虚热证);<br><span class="blur-text">阳虚</span>则<span class="blur-text">寒</span>(虚寒证)。</td>
+                            <td>25. 阴阳失调-阴虚阳虚<br><span class="answer-text">阴虚</span>则<span class="answer-text">热</span>(虚热证);<br><span class="answer-text">阳虚</span>则<span class="answer-text">寒</span>(虚寒证)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>26. 五行特性-木曰曲直<br>木曰<span class="blur-text">曲直</span>:特性为<span class="blur-text">生长</span>、<span class="blur-text">舒畅</span>;<br>对应脏腑:<span class="blur-text">肝</span>属木。</td>
+                            <td>26. 五行特性-木曰曲直<br>木曰<span class="answer-text">曲直</span>:特性为<span class="answer-text">生长</span>、<span class="answer-text">舒畅</span>;<br>对应脏腑:<span class="answer-text">肝</span>属木。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>27. 五行特性-火曰炎上<br>火曰<span class="blur-text">炎上</span>:特性为<span class="blur-text">温热</span>、<span class="blur-text">向上</span>;<br>对应脏腑:<span class="blur-text">心</span>属火。</td>
+                            <td>27. 五行特性-火曰炎上<br>火曰<span class="answer-text">炎上</span>:特性为<span class="answer-text">温热</span>、<span class="answer-text">向上</span>;<br>对应脏腑:<span class="answer-text">心</span>属火。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>28. 五行特性-土爰稼穑<br>土爰<span class="blur-text">稼穑</span>:特性为<span class="blur-text">受纳</span>、<span class="blur-text">化生</span>;<br>对应脏腑:<span class="blur-text">脾</span>属土。</td>
+                            <td>28. 五行特性-土爰稼穑<br>土爰<span class="answer-text">稼穑</span>:特性为<span class="answer-text">受纳</span>、<span class="answer-text">化生</span>;<br>对应脏腑:<span class="answer-text">脾</span>属土。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>29. 五行特性-金曰从革<br>金曰<span class="blur-text">从革</span>:特性为<span class="blur-text">肃降</span>、<span class="blur-text">收敛</span>;<br>对应脏腑:<span class="blur-text">肺</span>属金。</td>
+                            <td>29. 五行特性-金曰从革<br>金曰<span class="answer-text">从革</span>:特性为<span class="answer-text">肃降</span>、<span class="answer-text">收敛</span>;<br>对应脏腑:<span class="answer-text">肺</span>属金。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>30. 五行特性-水曰润下<br>水曰<span class="blur-text">润下</span>:特性为<span class="blur-text">滋润</span>、<span class="blur-text">闭藏</span>;<br>对应脏腑:<span class="blur-text">肾</span>属水。</td>
+                            <td>30. 五行特性-水曰润下<br>水曰<span class="answer-text">润下</span>:特性为<span class="answer-text">滋润</span>、<span class="answer-text">闭藏</span>;<br>对应脏腑:<span class="answer-text">肾</span>属水。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>31. 五行归类-五脏六腑<br>五脏:<span class="blur-text">肝</span>、<span class="blur-text">心</span>、<span class="blur-text">脾</span>、<span class="blur-text">肺</span>、<span class="blur-text">肾</span>;<br>六腑:<span class="blur-text">胆</span>、<span class="blur-text">小肠</span>、<span class="blur-text">胃</span>、<span class="blur-text">大肠</span>、<span class="blur-text">膀胱</span>、<span class="blur-text">三焦</span>。</td>
+                            <td>31. 五行归类-五脏六腑<br>五脏:<span class="answer-text">肝</span>、<span class="answer-text">心</span>、<span class="answer-text">脾</span>、<span class="answer-text">肺</span>、<span class="answer-text">肾</span>;<br>六腑:<span class="answer-text">胆</span>、<span class="answer-text">小肠</span>、<span class="answer-text">胃</span>、<span class="answer-text">大肠</span>、<span class="answer-text">膀胱</span>、<span class="answer-text">三焦</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>32. 五行归类-五体五官<br>五体:<span class="blur-text">筋</span>、<span class="blur-text">脉</span>、<span class="blur-text">肉</span>、<span class="blur-text">皮毛</span>、<span class="blur-text">骨</span>;<br>五官:<span class="blur-text">目</span>、<span class="blur-text">舌</span>、<span class="blur-text">口</span>、<span class="blur-text">鼻</span>、<span class="blur-text">耳</span>。</td>
+                            <td>32. 五行归类-五体五官<br>五体:<span class="answer-text">筋</span>、<span class="answer-text">脉</span>、<span class="answer-text">肉</span>、<span class="answer-text">皮毛</span>、<span class="answer-text">骨</span>;<br>五官:<span class="answer-text">目</span>、<span class="answer-text">舌</span>、<span class="answer-text">口</span>、<span class="answer-text">鼻</span>、<span class="answer-text">耳</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>33. 五行归类-五志<br>五志:<span class="blur-text">怒</span>、<span class="blur-text">喜</span>、<span class="blur-text">思</span>、<span class="blur-text">悲忧</span>、<span class="blur-text">恐惊</span>。</td>
+                            <td>33. 五行归类-五志<br>五志:<span class="answer-text">怒</span>、<span class="answer-text">喜</span>、<span class="answer-text">思</span>、<span class="answer-text">悲忧</span>、<span class="answer-text">恐惊</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>34. 五行归类-五液<br>五液:<span class="blur-text">泪</span>、<span class="blur-text">汗</span>、<span class="blur-text">涎</span>、<span class="blur-text">涕</span>、<span class="blur-text">唾</span>。</td>
+                            <td>34. 五行归类-五液<br>五液:<span class="answer-text">泪</span>、<span class="answer-text">汗</span>、<span class="answer-text">涎</span>、<span class="answer-text">涕</span>、<span class="answer-text">唾</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>35. 五行归类-五色五味<br>五色:<span class="blur-text">青</span>、<span class="blur-text">赤</span>、<span class="blur-text">黄</span>、<span class="blur-text">白</span>、<span class="blur-text">黑</span>;<br>五味:<span class="blur-text">酸</span>、<span class="blur-text">苦</span>、<span class="blur-text">甘</span>、<span class="blur-text">辛</span>、<span class="blur-text">咸</span>。</td>
+                            <td>35. 五行归类-五色五味<br>五色:<span class="answer-text">青</span>、<span class="answer-text">赤</span>、<span class="answer-text">黄</span>、<span class="answer-text">白</span>、<span class="answer-text">黑</span>;<br>五味:<span class="answer-text">酸</span>、<span class="answer-text">苦</span>、<span class="answer-text">甘</span>、<span class="answer-text">辛</span>、<span class="answer-text">咸</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>36. 五行相生规律<br><span class="blur-text">木</span>生<span class="blur-text">火</span>,<span class="blur-text">火</span>生<span class="blur-text">土</span>,<span class="blur-text">土</span>生<span class="blur-text">金</span>,<br><span class="blur-text">金</span>生<span class="blur-text">水</span>,<span class="blur-text">水</span>生<span class="blur-text">木</span>。</td>
+                            <td>36. 五行相生规律<br><span class="answer-text">木</span>生<span class="answer-text">火</span>,<span class="answer-text">火</span>生<span class="answer-text">土</span>,<span class="answer-text">土</span>生<span class="answer-text">金</span>,<br><span class="answer-text">金</span>生<span class="answer-text">水</span>,<span class="answer-text">水</span>生<span class="answer-text">木</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>37. 五行相克规律<br><span class="blur-text">木</span>克<span class="blur-text">土</span>,<span class="blur-text">土</span>克<span class="blur-text">水</span>,<span class="blur-text">水</span>克<span class="blur-text">火</span>,<br><span class="blur-text">火</span>克<span class="blur-text">金</span>,<span class="blur-text">金</span>克<span class="blur-text">木</span>。</td>
+                            <td>37. 五行相克规律<br><span class="answer-text">木</span>克<span class="answer-text">土</span>,<span class="answer-text">土</span>克<span class="answer-text">水</span>,<span class="answer-text">水</span>克<span class="answer-text">火</span>,<br><span class="answer-text">火</span>克<span class="answer-text">金</span>,<span class="answer-text">金</span>克<span class="answer-text">木</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">三、藏象学说</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>38. 藏象-基本概念<br><span class="blur-text">藏</span>:指藏于体内的<span class="blur-text">脏腑</span>;<br><span class="blur-text">象</span>:指表现于外的<span class="blur-text">生理病理现象</span>。</td>
+                            <td>38. 藏象-基本概念<br><span class="answer-text">藏</span>:指藏于体内的<span class="answer-text">脏腑</span>;<br><span class="answer-text">象</span>:指表现于外的<span class="answer-text">生理病理现象</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>39. 五脏六腑-特点<br><span class="blur-text">五脏</span>:<span class="blur-text">化生</span>和<span class="blur-text">贮藏</span>精气,多为<span class="blur-text">实质</span>器官;<br><span class="blur-text">六腑</span>:<span class="blur-text">受纳</span>和<span class="blur-text">传化</span>水谷,多为<span class="blur-text">空腔</span>器官。</td>
+                            <td>39. 五脏六腑-特点<br><span class="answer-text">五脏</span>:<span class="answer-text">化生</span>和<span class="answer-text">贮藏</span>精气,多为<span class="answer-text">实质</span>器官;<br><span class="answer-text">六腑</span>:<span class="answer-text">受纳</span>和<span class="answer-text">传化</span>水谷,多为<span class="answer-text">空腔</span>器官。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>40. 奇恒之腑<br>奇恒之腑包括:<br><span class="blur-text">脑</span>、<span class="blur-text">髓</span>、<span class="blur-text">骨</span>、<span class="blur-text">脉</span>、<span class="blur-text">胆</span>、<span class="blur-text">女子胞</span>。</td>
+                            <td>40. 奇恒之腑<br>奇恒之腑包括:<br><span class="answer-text">脑</span>、<span class="answer-text">髓</span>、<span class="answer-text">骨</span>、<span class="answer-text">脉</span>、<span class="answer-text">胆</span>、<span class="answer-text">女子胞</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>41. 心-主血脉<br>心<span class="blur-text">主血脉</span>:心推动血液在<span class="blur-text">脉管</span>中运行。<br>正常表现:<span class="blur-text">面色红润</span>,<span class="blur-text">脉象和缓有力</span>。</td>
+                            <td>41. 心-主血脉<br>心<span class="answer-text">主血脉</span>:心推动血液在<span class="answer-text">脉管</span>中运行。<br>正常表现:<span class="answer-text">面色红润</span>,<span class="answer-text">脉象和缓有力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>42. 心-主神志<br>心<span class="blur-text">主神志</span>:心为<span class="blur-text">五脏六腑</span>之大主。<br>异常:心火亢盛→<span class="blur-text">心烦失眠</span>;痰蒙心窍→<span class="blur-text">神志昏迷</span>。</td>
+                            <td>42. 心-主神志<br>心<span class="answer-text">主神志</span>:心为<span class="answer-text">五脏六腑</span>之大主。<br>异常:心火亢盛→<span class="answer-text">心烦失眠</span>;痰蒙心窍→<span class="answer-text">神志昏迷</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>43. 心-在液为汗<br>心在液为<span class="blur-text">汗</span>。<br><span class="blur-text">汗血同源</span>,<span class="blur-text">大汗伤阳</span>。</td>
+                            <td>43. 心-在液为汗<br>心在液为<span class="answer-text">汗</span>。<br><span class="answer-text">汗血同源</span>,<span class="answer-text">大汗伤阳</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>44. 心与小肠相表里<br>心与<span class="blur-text">小肠</span>相表里。<br>心火可移热于小肠导致<span class="blur-text">尿赤</span>、<span class="blur-text">尿痛</span>。</td>
+                            <td>44. 心与小肠相表里<br>心与<span class="answer-text">小肠</span>相表里。<br>心火可移热于小肠导致<span class="answer-text">尿赤</span>、<span class="answer-text">尿痛</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>45. 肺-主气司呼吸<br>肺<span class="blur-text">主气</span>,<span class="blur-text">司呼吸</span>。<br>肺主<span class="blur-text">一身之气</span>,参与<span class="blur-text">宗气</span>的生成。</td>
+                            <td>45. 肺-主气司呼吸<br>肺<span class="answer-text">主气</span>,<span class="answer-text">司呼吸</span>。<br>肺主<span class="answer-text">一身之气</span>,参与<span class="answer-text">宗气</span>的生成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>46. 宗气的组成<br>宗气组成:肺吸入的<span class="blur-text">清气</span>+脾胃运化的<span class="blur-text">水谷精气</span>。<br>聚集于<span class="blur-text">胸中</span>(膻中)。</td>
+                            <td>46. 宗气的组成<br>宗气组成:肺吸入的<span class="answer-text">清气</span>+脾胃运化的<span class="answer-text">水谷精气</span>。<br>聚集于<span class="answer-text">胸中</span>(膻中)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>47. 肺-主宣发肃降(1)<br>肺主<span class="blur-text">宣发</span>:呼出<span class="blur-text">浊气</span>,布散<span class="blur-text">津液</span>和<span class="blur-text">水谷精微</span>,<br>宣发<span class="blur-text">卫气</span>,排出<span class="blur-text">代谢产物</span>。</td>
+                            <td>47. 肺-主宣发肃降(1)<br>肺主<span class="answer-text">宣发</span>:呼出<span class="answer-text">浊气</span>,布散<span class="answer-text">津液</span>和<span class="answer-text">水谷精微</span>,<br>宣发<span class="answer-text">卫气</span>,排出<span class="answer-text">代谢产物</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>48. 肺-主宣发肃降(2)<br>肺主<span class="blur-text">肃降</span>:吸入<span class="blur-text">清气</span>,<br>将清气、津液、水谷精微向<span class="blur-text">下</span>布散,肃清<span class="blur-text">呼吸道</span>。</td>
+                            <td>48. 肺-主宣发肃降(2)<br>肺主<span class="answer-text">肃降</span>:吸入<span class="answer-text">清气</span>,<br>将清气、津液、水谷精微向<span class="answer-text">下</span>布散,肃清<span class="answer-text">呼吸道</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>49. 肺-通调水道<br>肺<span class="blur-text">通调水道</span>:肺参与<span class="blur-text">水液代谢</span>的调节。<br>肺为<span class="blur-text">水之上源</span>。异常:<span class="blur-text">水肿</span>,尤其是<span class="blur-text">上半身</span>水肿。</td>
+                            <td>49. 肺-通调水道<br>肺<span class="answer-text">通调水道</span>:肺参与<span class="answer-text">水液代谢</span>的调节。<br>肺为<span class="answer-text">水之上源</span>。异常:<span class="answer-text">水肿</span>,尤其是<span class="answer-text">上半身</span>水肿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>50. 肺-朝百脉主治节<br>肺<span class="blur-text">朝百脉</span>:全身血液都汇聚于<span class="blur-text">肺</span>。<br>肺<span class="blur-text">主治节</span>:肺协助<span class="blur-text">心</span>调节全身<span class="blur-text">气血</span>运行。</td>
+                            <td>50. 肺-朝百脉主治节<br>肺<span class="answer-text">朝百脉</span>:全身血液都汇聚于<span class="answer-text">肺</span>。<br>肺<span class="answer-text">主治节</span>:肺协助<span class="answer-text">心</span>调节全身<span class="answer-text">气血</span>运行。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>51. 肺与大肠相表里<br>肺与<span class="blur-text">大肠</span>相表里。<br>肺气<span class="blur-text">肃降</span>有助于大肠<span class="blur-text">传导</span>。</td>
+                            <td>51. 肺与大肠相表里<br>肺与<span class="answer-text">大肠</span>相表里。<br>肺气<span class="answer-text">肃降</span>有助于大肠<span class="answer-text">传导</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>52. 脾-主运化(1)<br>脾<span class="blur-text">主运化</span>:运化<span class="blur-text">水谷精微</span>,运化<span class="blur-text">水液</span>。<br>脾为<span class="blur-text">后天之本</span>、<span class="blur-text">气血生化之源</span>。</td>
+                            <td>52. 脾-主运化(1)<br>脾<span class="answer-text">主运化</span>:运化<span class="answer-text">水谷精微</span>,运化<span class="answer-text">水液</span>。<br>脾为<span class="answer-text">后天之本</span>、<span class="answer-text">气血生化之源</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>53. 脾-主升清<br>脾<span class="blur-text">主升清</span>:将水谷精微向<span class="blur-text">上</span>输布,<span class="blur-text">升举内脏</span>。<br>异常:<span class="blur-text">中气下陷</span>→内脏<span class="blur-text">下垂</span>(胃下垂、脱肛、子宫脱垂)。</td>
+                            <td>53. 脾-主升清<br>脾<span class="answer-text">主升清</span>:将水谷精微向<span class="answer-text">上</span>输布,<span class="answer-text">升举内脏</span>。<br>异常:<span class="answer-text">中气下陷</span>→内脏<span class="answer-text">下垂</span>(胃下垂、脱肛、子宫脱垂)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>54. 脾-主统血<br>脾<span class="blur-text">主统血</span>:脾气<span class="blur-text">固摄</span>血液在脉中运行。<br>异常:各种<span class="blur-text">出血</span>,尤其是<span class="blur-text">慢性</span>出血。</td>
+                            <td>54. 脾-主统血<br>脾<span class="answer-text">主统血</span>:脾气<span class="answer-text">固摄</span>血液在脉中运行。<br>异常:各种<span class="answer-text">出血</span>,尤其是<span class="answer-text">慢性</span>出血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>55. 脾与胃相表里<br>脾与<span class="blur-text">胃</span>相表里。<br>胃主<span class="blur-text">受纳</span>、<span class="blur-text">腐熟</span>水谷;胃主<span class="blur-text">通降</span>。<br><span class="blur-text">脾升胃降</span>,相反相成。</td>
+                            <td>55. 脾与胃相表里<br>脾与<span class="answer-text">胃</span>相表里。<br>胃主<span class="answer-text">受纳</span>、<span class="answer-text">腐熟</span>水谷;胃主<span class="answer-text">通降</span>。<br><span class="answer-text">脾升胃降</span>,相反相成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>56. 肝-主疏泄(1)<br>肝<span class="blur-text">主疏泄</span>包括:<br>调畅<span class="blur-text">气机</span>;调畅<span class="blur-text">情志</span>;促进<span class="blur-text">消化</span>;调节<span class="blur-text">生殖</span>功能。</td>
+                            <td>56. 肝-主疏泄(1)<br>肝<span class="answer-text">主疏泄</span>包括:<br>调畅<span class="answer-text">气机</span>;调畅<span class="answer-text">情志</span>;促进<span class="answer-text">消化</span>;调节<span class="answer-text">生殖</span>功能。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>57. 肝-主疏泄(2)<br>调畅气机异常:<br><span class="blur-text">肝气郁结</span>→胸胁<span class="blur-text">胀痛</span>、情志<span class="blur-text">抑郁</span>;<br><span class="blur-text">肝气上逆</span>→头<span class="blur-text">胀痛</span>、面<span class="blur-text">红</span>。</td>
+                            <td>57. 肝-主疏泄(2)<br>调畅气机异常:<br><span class="answer-text">肝气郁结</span>→胸胁<span class="answer-text">胀痛</span>、情志<span class="answer-text">抑郁</span>;<br><span class="answer-text">肝气上逆</span>→头<span class="answer-text">胀痛</span>、面<span class="answer-text">红</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>58. 肝-主藏血<br>肝<span class="blur-text">主藏血</span>:<span class="blur-text">贮藏</span>血液,<span class="blur-text">调节</span>血量,<span class="blur-text">防止</span>出血。<br>异常:肝血虚→面色<span class="blur-text">无华</span>、头晕目眩、月经量<span class="blur-text">少</span>。</td>
+                            <td>58. 肝-主藏血<br>肝<span class="answer-text">主藏血</span>:<span class="answer-text">贮藏</span>血液,<span class="answer-text">调节</span>血量,<span class="answer-text">防止</span>出血。<br>异常:肝血虚→面色<span class="answer-text">无华</span>、头晕目眩、月经量<span class="answer-text">少</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>59. 肝与胆相表里<br>肝与<span class="blur-text">胆</span>相表里。<br>胆贮存和排泄<span class="blur-text">胆汁</span>;胆主<span class="blur-text">决断</span>。</td>
+                            <td>59. 肝与胆相表里<br>肝与<span class="answer-text">胆</span>相表里。<br>胆贮存和排泄<span class="answer-text">胆汁</span>;胆主<span class="answer-text">决断</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>60. 肾-藏精<br>肾<span class="blur-text">藏精</span>是肾的<span class="blur-text">最基本</span>功能。<br>肾精来源:<span class="blur-text">先天之精</span>(父母)+<span class="blur-text">后天之精</span>(脏腑化生)。</td>
+                            <td>60. 肾-藏精<br>肾<span class="answer-text">藏精</span>是肾的<span class="answer-text">最基本</span>功能。<br>肾精来源:<span class="answer-text">先天之精</span>(父母)+<span class="answer-text">后天之精</span>(脏腑化生)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>61. 肾精的生理周期<br>女子:<span class="blur-text">7</span>岁肾气盛→<span class="blur-text">14</span>岁天癸至月经来→<span class="blur-text">49</span>岁天癸竭绝经;<br>男子:<span class="blur-text">8</span>岁肾气盛→<span class="blur-text">16</span>岁天癸至能生育→<span class="blur-text">64</span>岁天癸竭。</td>
+                            <td>61. 肾精的生理周期<br>女子:<span class="answer-text">7</span>岁肾气盛→<span class="answer-text">14</span>岁天癸至月经来→<span class="answer-text">49</span>岁天癸竭绝经;<br>男子:<span class="answer-text">8</span>岁肾气盛→<span class="answer-text">16</span>岁天癸至能生育→<span class="answer-text">64</span>岁天癸竭。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>62. 肾-主水<br>肾<span class="blur-text">主水</span>:肾调节<span class="blur-text">水液代谢</span>,肾阳<span class="blur-text">蒸腾气化</span>。<br>异常:<span class="blur-text">水肿</span>,尤其是<span class="blur-text">下半身</span>、<span class="blur-text">腰以下</span>水肿。</td>
+                            <td>62. 肾-主水<br>肾<span class="answer-text">主水</span>:肾调节<span class="answer-text">水液代谢</span>,肾阳<span class="answer-text">蒸腾气化</span>。<br>异常:<span class="answer-text">水肿</span>,尤其是<span class="answer-text">下半身</span>、<span class="answer-text">腰以下</span>水肿。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>63. 肾-主纳气<br>肾<span class="blur-text">主纳气</span>:摄纳肺吸入的<span class="blur-text">清气</span>,保持呼吸<span class="blur-text">深度</span>。<br>肾不纳气:呼吸<span class="blur-text">表浅</span>、<span class="blur-text">呼多吸少</span>、动则<span class="blur-text">气喘</span>。</td>
+                            <td>63. 肾-主纳气<br>肾<span class="answer-text">主纳气</span>:摄纳肺吸入的<span class="answer-text">清气</span>,保持呼吸<span class="answer-text">深度</span>。<br>肾不纳气:呼吸<span class="answer-text">表浅</span>、<span class="answer-text">呼多吸少</span>、动则<span class="answer-text">气喘</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>64. 肾阴肾阳<br>肾阴:<span class="blur-text">一身阴液</span>之本,<span class="blur-text">滋养润泽</span>全身;<br>肾阳:<span class="blur-text">一身阳气</span>之本,<span class="blur-text">温煦推动</span>全身。</td>
+                            <td>64. 肾阴肾阳<br>肾阴:<span class="answer-text">一身阴液</span>之本,<span class="answer-text">滋养润泽</span>全身;<br>肾阳:<span class="answer-text">一身阳气</span>之本,<span class="answer-text">温煦推动</span>全身。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>65. 肾与膀胱相表里<br>肾与<span class="blur-text">膀胱</span>相表里。<br>膀胱贮存和排泄<span class="blur-text">尿液</span>,气化功能依赖<span class="blur-text">肾阳</span>。</td>
+                            <td>65. 肾与膀胱相表里<br>肾与<span class="answer-text">膀胱</span>相表里。<br>膀胱贮存和排泄<span class="answer-text">尿液</span>,气化功能依赖<span class="answer-text">肾阳</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>66. 气的分类-元气<br><span class="blur-text">元气</span>是人体<span class="blur-text">最根本、最重要</span>的气,<br>是生命活动的<span class="blur-text">原动力</span>。</td>
+                            <td>66. 气的分类-元气<br><span class="answer-text">元气</span>是人体<span class="answer-text">最根本、最重要</span>的气,<br>是生命活动的<span class="answer-text">原动力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>67. 气的分类-宗气<br><span class="blur-text">宗气</span>聚集于<span class="blur-text">胸中</span>(膻中)。<br>功能:推动<span class="blur-text">呼吸</span>,贯注<span class="blur-text">心脉</span>。</td>
+                            <td>67. 气的分类-宗气<br><span class="answer-text">宗气</span>聚集于<span class="answer-text">胸中</span>(膻中)。<br>功能:推动<span class="answer-text">呼吸</span>,贯注<span class="answer-text">心脉</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>68. 气的分类-营气<br><span class="blur-text">营气</span>分布在<span class="blur-text">脉管</span>中,随<span class="blur-text">血</span>运行。<br>功能:化生<span class="blur-text">血液</span>,<span class="blur-text">营养</span>全身。</td>
+                            <td>68. 气的分类-营气<br><span class="answer-text">营气</span>分布在<span class="answer-text">脉管</span>中,随<span class="answer-text">血</span>运行。<br>功能:化生<span class="answer-text">血液</span>,<span class="answer-text">营养</span>全身。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>69. 气的分类-卫气<br><span class="blur-text">卫气</span>分布在<span class="blur-text">脉外</span>,皮肤、肌肉、腠理。<br>功能:<span class="blur-text">防御</span>外邪,<span class="blur-text">温养</span>全身,调控<span class="blur-text">腠理</span>开合。</td>
+                            <td>69. 气的分类-卫气<br><span class="answer-text">卫气</span>分布在<span class="answer-text">脉外</span>,皮肤、肌肉、腠理。<br>功能:<span class="answer-text">防御</span>外邪,<span class="answer-text">温养</span>全身,调控<span class="answer-text">腠理</span>开合。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>70. 气的功能<br>气的功能包括:<br><span class="blur-text">推动</span>作用、<span class="blur-text">温煦</span>作用、<span class="blur-text">防御</span>作用、<br><span class="blur-text">固摄</span>作用、<span class="blur-text">气化</span>作用。</td>
+                            <td>70. 气的功能<br>气的功能包括:<br><span class="answer-text">推动</span>作用、<span class="answer-text">温煦</span>作用、<span class="answer-text">防御</span>作用、<br><span class="answer-text">固摄</span>作用、<span class="answer-text">气化</span>作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>71. 气机失常-气逆<br><span class="blur-text">气逆</span>:上升太过或下降不及。<br>肺气上逆→<span class="blur-text">咳喘</span>;胃气上逆→<span class="blur-text">呕吐</span>、<span class="blur-text">呃逆</span>;肝气上逆→<span class="blur-text">头胀痛</span>。</td>
+                            <td>71. 气机失常-气逆<br><span class="answer-text">气逆</span>:上升太过或下降不及。<br>肺气上逆→<span class="answer-text">咳喘</span>;胃气上逆→<span class="answer-text">呕吐</span>、<span class="answer-text">呃逆</span>;肝气上逆→<span class="answer-text">头胀痛</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>72. 气机失常-气陷<br><span class="blur-text">气陷</span>:上升不及或下降太过。<br>中气下陷→脏器<span class="blur-text">下垂</span>、久<span class="blur-text">泻</span>脱肛。</td>
+                            <td>72. 气机失常-气陷<br><span class="answer-text">气陷</span>:上升不及或下降太过。<br>中气下陷→脏器<span class="answer-text">下垂</span>、久<span class="answer-text">泻</span>脱肛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>73. 血的生成<br>血的主要来源:<span class="blur-text">水谷精微</span>(<span class="blur-text">脾胃</span>运化)。<br>心肺参与血的<span class="blur-text">生成</span>,肾精<span class="blur-text">化</span>血,津液<span class="blur-text">化</span>血。</td>
+                            <td>73. 血的生成<br>血的主要来源:<span class="answer-text">水谷精微</span>(<span class="answer-text">脾胃</span>运化)。<br>心肺参与血的<span class="answer-text">生成</span>,肾精<span class="answer-text">化</span>血,津液<span class="answer-text">化</span>血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>74. 血的运行<br><span class="blur-text">心</span>主血脉:心推动血液运行;<br><span class="blur-text">肺</span>朝百脉:肺助心行血;<br><span class="blur-text">肝</span>藏血:肝调节血量;<br><span class="blur-text">脾</span>统血:脾固摄血液。</td>
+                            <td>74. 血的运行<br><span class="answer-text">心</span>主血脉:心推动血液运行;<br><span class="answer-text">肺</span>朝百脉:肺助心行血;<br><span class="answer-text">肝</span>藏血:肝调节血量;<br><span class="answer-text">脾</span>统血:脾固摄血液。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>75. 津液的概念<br>广义:体内一切<span class="blur-text">正常水液</span>。<br>狭义:<span class="blur-text">津</span>(清稀、流动性大)和<span class="blur-text">液</span>(稠厚、流动性小)。</td>
+                            <td>75. 津液的概念<br>广义:体内一切<span class="answer-text">正常水液</span>。<br>狭义:<span class="answer-text">津</span>(清稀、流动性大)和<span class="answer-text">液</span>(稠厚、流动性小)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>76. 津液的生成输布<br><span class="blur-text">胃</span>受纳,<span class="blur-text">脾</span>运化,<span class="blur-text">小肠</span>泌别清浊,<br><span class="blur-text">肺</span>通调水道,<span class="blur-text">肾</span>主水。</td>
+                            <td>76. 津液的生成输布<br><span class="answer-text">胃</span>受纳,<span class="answer-text">脾</span>运化,<span class="answer-text">小肠</span>泌别清浊,<br><span class="answer-text">肺</span>通调水道,<span class="answer-text">肾</span>主水。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>77. 气与血的关系(1)<br>气为血之<span class="blur-text">帅</span>:<br>气能<span class="blur-text">生</span>血,气能<span class="blur-text">行</span>血,气能<span class="blur-text">摄</span>血。</td>
+                            <td>77. 气与血的关系(1)<br>气为血之<span class="answer-text">帅</span>:<br>气能<span class="answer-text">生</span>血,气能<span class="answer-text">行</span>血,气能<span class="answer-text">摄</span>血。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>78. 气与血的关系(2)<br>血为气之<span class="blur-text">母</span>:<br>血能<span class="blur-text">载</span>气,血能<span class="blur-text">养</span>气。</td>
+                            <td>78. 气与血的关系(2)<br>血为气之<span class="answer-text">母</span>:<br>血能<span class="answer-text">载</span>气,血能<span class="answer-text">养</span>气。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>79. 气与津液的关系<br>气能<span class="blur-text">生</span>津,气能<span class="blur-text">行</span>津,气能<span class="blur-text">摄</span>津;<br>津能<span class="blur-text">载</span>气,津能<span class="blur-text">养</span>气。</td>
+                            <td>79. 气与津液的关系<br>气能<span class="answer-text">生</span>津,气能<span class="answer-text">行</span>津,气能<span class="answer-text">摄</span>津;<br>津能<span class="answer-text">载</span>气,津能<span class="answer-text">养</span>气。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>80. 血与津液的关系<br><span class="blur-text">津血同源</span>:都来自<span class="blur-text">水谷精微</span>。<br>病理:<span class="blur-text">津伤血亏</span>,<span class="blur-text">失血伤津</span>。</td>
+                            <td>80. 血与津液的关系<br><span class="answer-text">津血同源</span>:都来自<span class="answer-text">水谷精微</span>。<br>病理:<span class="answer-text">津伤血亏</span>,<span class="answer-text">失血伤津</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">四、病因病机</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>81. 六淫致病-共同特点(1)<br>六淫致病特点:<br><span class="blur-text">外感性</span>:从<span class="blur-text">肌表</span>、<span class="blur-text">口鼻</span>侵入;<br><span class="blur-text">季节性</span>:春风、夏暑、长夏湿、秋燥、冬寒。</td>
+                            <td>81. 六淫致病-共同特点(1)<br>六淫致病特点:<br><span class="answer-text">外感性</span>:从<span class="answer-text">肌表</span>、<span class="answer-text">口鼻</span>侵入;<br><span class="answer-text">季节性</span>:春风、夏暑、长夏湿、秋燥、冬寒。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>82. 六淫致病-共同特点(2)<br><span class="blur-text">地域性</span>:东南方多<span class="blur-text">湿</span>,西北方多<span class="blur-text">燥</span>;<br><span class="blur-text">相兼性</span>:风寒、风热、湿热等;<br><span class="blur-text">转化性</span>:寒可化<span class="blur-text">热</span>,热可化<span class="blur-text">燥</span>。</td>
+                            <td>82. 六淫致病-共同特点(2)<br><span class="answer-text">地域性</span>:东南方多<span class="answer-text">湿</span>,西北方多<span class="answer-text">燥</span>;<br><span class="answer-text">相兼性</span>:风寒、风热、湿热等;<br><span class="answer-text">转化性</span>:寒可化<span class="answer-text">热</span>,热可化<span class="answer-text">燥</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>83. 风邪-风为阳邪<br>风为<span class="blur-text">阳</span>邪,其性<span class="blur-text">开泄</span>,易袭<span class="blur-text">阳</span>位。<br>侵犯人体<span class="blur-text">上部</span>(头面)、<span class="blur-text">肌表</span>,使腠理<span class="blur-text">开泄</span>。<br>表现:<span class="blur-text">头痛</span>、<span class="blur-text">恶风</span>、<span class="blur-text">自汗</span>。</td>
+                            <td>83. 风邪-风为阳邪<br>风为<span class="answer-text">阳</span>邪,其性<span class="answer-text">开泄</span>,易袭<span class="answer-text">阳</span>位。<br>侵犯人体<span class="answer-text">上部</span>(头面)、<span class="answer-text">肌表</span>,使腠理<span class="answer-text">开泄</span>。<br>表现:<span class="answer-text">头痛</span>、<span class="answer-text">恶风</span>、<span class="answer-text">自汗</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>84. 风邪-善行数变<br>风性<span class="blur-text">善行</span>而<span class="blur-text">数变</span>。<br>善行:病变部位<span class="blur-text">游走不定</span>;<br>数变:发病<span class="blur-text">急</span>、变化<span class="blur-text">快</span>。</td>
+                            <td>84. 风邪-善行数变<br>风性<span class="answer-text">善行</span>而<span class="answer-text">数变</span>。<br>善行:病变部位<span class="answer-text">游走不定</span>;<br>数变:发病<span class="answer-text">急</span>、变化<span class="answer-text">快</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>85. 风邪-主动和百病之长<br>风性<span class="blur-text">主动</span>:致病表现为<span class="blur-text">动摇</span>、<span class="blur-text">眩晕</span>、<span class="blur-text">抽搐</span>。<br>风为<span class="blur-text">百病之长</span>:风邪常为外邪致病的<span class="blur-text">先导</span>。</td>
+                            <td>85. 风邪-主动和百病之长<br>风性<span class="answer-text">主动</span>:致病表现为<span class="answer-text">动摇</span>、<span class="answer-text">眩晕</span>、<span class="answer-text">抽搐</span>。<br>风为<span class="answer-text">百病之长</span>:风邪常为外邪致病的<span class="answer-text">先导</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>86. 寒邪-寒为阴邪<br>寒为<span class="blur-text">阴</span>邪,易伤<span class="blur-text">阳</span>气。<br>表现:<span class="blur-text">恶寒</span>、<span class="blur-text">肢冷</span>、面色<span class="blur-text">苍白</span>。</td>
+                            <td>86. 寒邪-寒为阴邪<br>寒为<span class="answer-text">阴</span>邪,易伤<span class="answer-text">阳</span>气。<br>表现:<span class="answer-text">恶寒</span>、<span class="answer-text">肢冷</span>、面色<span class="answer-text">苍白</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>87. 寒邪-凝滞收引<br>寒性<span class="blur-text">凝滞</span>:使气血运行<span class="blur-text">缓慢凝滞</span>,主<span class="blur-text">痛</span>;<br>寒性<span class="blur-text">收引</span>:使腠理、经络、筋脉<span class="blur-text">收缩拘急</span>。</td>
+                            <td>87. 寒邪-凝滞收引<br>寒性<span class="answer-text">凝滞</span>:使气血运行<span class="answer-text">缓慢凝滞</span>,主<span class="answer-text">痛</span>;<br>寒性<span class="answer-text">收引</span>:使腠理、经络、筋脉<span class="answer-text">收缩拘急</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>88. 暑邪特点<br>暑为<span class="blur-text">阳</span>邪,其性<span class="blur-text">炎热</span>。<br>暑性<span class="blur-text">升散</span>,<span class="blur-text">扰神</span><span class="blur-text">耗气</span><span class="blur-text">伤津</span>。<br>暑多夹<span class="blur-text">湿</span>。</td>
+                            <td>88. 暑邪特点<br>暑为<span class="answer-text">阳</span>邪,其性<span class="answer-text">炎热</span>。<br>暑性<span class="answer-text">升散</span>,<span class="answer-text">扰神</span><span class="answer-text">耗气</span><span class="answer-text">伤津</span>。<br>暑多夹<span class="answer-text">湿</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>89. 湿邪-湿为阴邪<br>湿为<span class="blur-text">阴</span>邪,易<span class="blur-text">阻气机</span>,损伤<span class="blur-text">阳气</span>。<br>表现:<span class="blur-text">胸闷</span>、<span class="blur-text">纳呆</span>、<span class="blur-text">便溏</span>、小便<span class="blur-text">不利</span>。</td>
+                            <td>89. 湿邪-湿为阴邪<br>湿为<span class="answer-text">阴</span>邪,易<span class="answer-text">阻气机</span>,损伤<span class="answer-text">阳气</span>。<br>表现:<span class="answer-text">胸闷</span>、<span class="answer-text">纳呆</span>、<span class="answer-text">便溏</span>、小便<span class="answer-text">不利</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>90. 湿邪-重浊黏滞<br>湿性<span class="blur-text">重浊</span>:<span class="blur-text">重</span>(头重如裹、肢体困重),<span class="blur-text">浊</span>(分泌物浊);<br>湿性<span class="blur-text">黏滞</span>:<span class="blur-text">黏</span>(分泌物黏腻),<span class="blur-text">滞</span>(病程缠绵)。</td>
+                            <td>90. 湿邪-重浊黏滞<br>湿性<span class="answer-text">重浊</span>:<span class="answer-text">重</span>(头重如裹、肢体困重),<span class="answer-text">浊</span>(分泌物浊);<br>湿性<span class="answer-text">黏滞</span>:<span class="answer-text">黏</span>(分泌物黏腻),<span class="answer-text">滞</span>(病程缠绵)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>91. 湿邪-趋下易袭阴位<br>湿性<span class="blur-text">趋下</span>,易袭<span class="blur-text">阴</span>位。<br>易侵犯<span class="blur-text">下半身</span>,表现:<span class="blur-text">水肿</span>(以下肢为主)、<span class="blur-text">带下</span>。</td>
+                            <td>91. 湿邪-趋下易袭阴位<br>湿性<span class="answer-text">趋下</span>,易袭<span class="answer-text">阴</span>位。<br>易侵犯<span class="answer-text">下半身</span>,表现:<span class="answer-text">水肿</span>(以下肢为主)、<span class="answer-text">带下</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>92. 燥邪特点<br>燥性<span class="blur-text">干涩</span>,易伤<span class="blur-text">津液</span>。<br>燥易伤<span class="blur-text">肺</span>:肺为娇脏,喜<span class="blur-text">润</span>恶<span class="blur-text">燥</span>。<br>表现:<span class="blur-text">干咳</span>无痰或少痰、口鼻<span class="blur-text">干燥</span>。</td>
+                            <td>92. 燥邪特点<br>燥性<span class="answer-text">干涩</span>,易伤<span class="answer-text">津液</span>。<br>燥易伤<span class="answer-text">肺</span>:肺为娇脏,喜<span class="answer-text">润</span>恶<span class="answer-text">燥</span>。<br>表现:<span class="answer-text">干咳</span>无痰或少痰、口鼻<span class="answer-text">干燥</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>93. 火邪-火为阳邪<br>火为<span class="blur-text">阳</span>邪,其性<span class="blur-text">炎上</span>。<br>易侵犯<span class="blur-text">上部</span>,表现:<span class="blur-text">高热</span>、面红目赤、口舌生疮。</td>
+                            <td>93. 火邪-火为阳邪<br>火为<span class="answer-text">阳</span>邪,其性<span class="answer-text">炎上</span>。<br>易侵犯<span class="answer-text">上部</span>,表现:<span class="answer-text">高热</span>、面红目赤、口舌生疮。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>94. 火邪-扰心神伤津耗气<br>火易<span class="blur-text">扰心神</span>:<span class="blur-text">心烦</span>、<span class="blur-text">失眠</span>、神昏谵语;<br>火易<span class="blur-text">伤津耗气</span>:<span class="blur-text">口渴</span>、尿少、大汗、气短乏力。</td>
+                            <td>94. 火邪-扰心神伤津耗气<br>火易<span class="answer-text">扰心神</span>:<span class="answer-text">心烦</span>、<span class="answer-text">失眠</span>、神昏谵语;<br>火易<span class="answer-text">伤津耗气</span>:<span class="answer-text">口渴</span>、尿少、大汗、气短乏力。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>95. 火邪-生风动血致肿疡<br>火易<span class="blur-text">生风</span><span class="blur-text">动血</span>:<br>生风:高热<span class="blur-text">抽搐</span>;<br>动血:各种<span class="blur-text">出血</span>。<br>火易致<span class="blur-text">肿疡</span>:痈肿疮疡。</td>
+                            <td>95. 火邪-生风动血致肿疡<br>火易<span class="answer-text">生风</span><span class="answer-text">动血</span>:<br>生风:高热<span class="answer-text">抽搐</span>;<br>动血:各种<span class="answer-text">出血</span>。<br>火易致<span class="answer-text">肿疡</span>:痈肿疮疡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>96. 七情内伤-怒喜<br><span class="blur-text">怒</span>则气<span class="blur-text">上</span>(肝):肝气上逆,面红目赤、头胀头痛;<br><span class="blur-text">喜</span>则气<span class="blur-text">缓</span>(心):心气涣散,心悸、失眠。</td>
+                            <td>96. 七情内伤-怒喜<br><span class="answer-text">怒</span>则气<span class="answer-text">上</span>(肝):肝气上逆,面红目赤、头胀头痛;<br><span class="answer-text">喜</span>则气<span class="answer-text">缓</span>(心):心气涣散,心悸、失眠。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>97. 七情内伤-思悲<br><span class="blur-text">思</span>则气<span class="blur-text">结</span>(脾):气机郁结,纳呆、腹胀;<br><span class="blur-text">悲</span>则气<span class="blur-text">消</span>(肺):肺气耗散,精神萎靡、气短。</td>
+                            <td>97. 七情内伤-思悲<br><span class="answer-text">思</span>则气<span class="answer-text">结</span>(脾):气机郁结,纳呆、腹胀;<br><span class="answer-text">悲</span>则气<span class="answer-text">消</span>(肺):肺气耗散,精神萎靡、气短。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>98. 七情内伤-恐惊<br><span class="blur-text">恐</span>则气<span class="blur-text">下</span>(肾):肾气下陷,二便失禁、遗精;<br><span class="blur-text">惊</span>则气<span class="blur-text">乱</span>:心气紊乱,心悸、失眠。</td>
+                            <td>98. 七情内伤-恐惊<br><span class="answer-text">恐</span>则气<span class="answer-text">下</span>(肾):肾气下陷,二便失禁、遗精;<br><span class="answer-text">惊</span>则气<span class="answer-text">乱</span>:心气紊乱,心悸、失眠。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>99. 正邪相争-虚实<br><span class="blur-text">实证</span>:<span class="blur-text">邪气盛</span>,正气不虚;<br><span class="blur-text">虚证</span>:<span class="blur-text">正气虚</span>,邪气不盛。</td>
+                            <td>99. 正邪相争-虚实<br><span class="answer-text">实证</span>:<span class="answer-text">邪气盛</span>,正气不虚;<br><span class="answer-text">虚证</span>:<span class="answer-text">正气虚</span>,邪气不盛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>100. 阴阳失调-阳盛阴盛<br><span class="blur-text">阳盛</span>则<span class="blur-text">热</span>(实热证):高热、面红、口渴、脉数;<br><span class="blur-text">阴盛</span>则<span class="blur-text">寒</span>(实寒证):恶寒、肢冷、腹痛、脉迟。</td>
+                            <td>100. 阴阳失调-阳盛阴盛<br><span class="answer-text">阳盛</span>则<span class="answer-text">热</span>(实热证):高热、面红、口渴、脉数;<br><span class="answer-text">阴盛</span>则<span class="answer-text">寒</span>(实寒证):恶寒、肢冷、腹痛、脉迟。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>101. 阴阳失调-阳虚阴虚<br><span class="blur-text">阳虚</span>则<span class="blur-text">寒</span>(虚寒证):畏寒肢冷、面色苍白、脉沉细;<br><span class="blur-text">阴虚</span>则<span class="blur-text">热</span>(虚热证):潮热盗汗、五心烦热、脉细数。</td>
+                            <td>101. 阴阳失调-阳虚阴虚<br><span class="answer-text">阳虚</span>则<span class="answer-text">寒</span>(虚寒证):畏寒肢冷、面色苍白、脉沉细;<br><span class="answer-text">阴虚</span>则<span class="answer-text">热</span>(虚热证):潮热盗汗、五心烦热、脉细数。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>102. 气机失常类型<br>气机失常包括:<br><span class="blur-text">气虚</span>:元气不足;<br><span class="blur-text">气滞</span>:气机郁滞不通;<br><span class="blur-text">气逆</span>、<span class="blur-text">气陷</span>、<span class="blur-text">气脱</span>、<span class="blur-text">气闭</span>。</td>
+                            <td>102. 气机失常类型<br>气机失常包括:<br><span class="answer-text">气虚</span>:元气不足;<br><span class="answer-text">气滞</span>:气机郁滞不通;<br><span class="answer-text">气逆</span>、<span class="answer-text">气陷</span>、<span class="answer-text">气脱</span>、<span class="answer-text">气闭</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">五、诊法(望闻问切)</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>103. 望神-得神少神<br><span class="blur-text">得神</span>:神志清楚、目光有神、面色红润,预后<span class="blur-text">良好</span>;<br><span class="blur-text">少神</span>:精神不振、目光少神、面色不华,病情<span class="blur-text">较重</span>但可治。</td>
+                            <td>103. 望神-得神少神<br><span class="answer-text">得神</span>:神志清楚、目光有神、面色红润,预后<span class="answer-text">良好</span>;<br><span class="answer-text">少神</span>:精神不振、目光少神、面色不华,病情<span class="answer-text">较重</span>但可治。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>104. 望神-失神假神<br><span class="blur-text">失神</span>(无神):神志昏迷、目光无神、面色晦暗,病情<span class="blur-text">危重</span>;<br><span class="blur-text">假神</span>:久病重病突然精神转好的<span class="blur-text">假象</span>,是<span class="blur-text">回光返照</span>。</td>
+                            <td>104. 望神-失神假神<br><span class="answer-text">失神</span>(无神):神志昏迷、目光无神、面色晦暗,病情<span class="answer-text">危重</span>;<br><span class="answer-text">假神</span>:久病重病突然精神转好的<span class="answer-text">假象</span>,是<span class="answer-text">回光返照</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>105. 五色主病-青赤<br><span class="blur-text">青</span>色主病:<span class="blur-text">寒</span>证、<span class="blur-text">痛</span>证、<span class="blur-text">瘀血</span>、惊风;<br><span class="blur-text">赤</span>色主病:<span class="blur-text">热</span>证(里热、实热)。</td>
+                            <td>105. 五色主病-青赤<br><span class="answer-text">青</span>色主病:<span class="answer-text">寒</span>证、<span class="answer-text">痛</span>证、<span class="answer-text">瘀血</span>、惊风;<br><span class="answer-text">赤</span>色主病:<span class="answer-text">热</span>证(里热、实热)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>106. 五色主病-黄白<br><span class="blur-text">黄</span>色主病:<span class="blur-text">湿</span>证、<span class="blur-text">虚</span>证、<span class="blur-text">黄疸</span>;<br><span class="blur-text">白</span>色主病:<span class="blur-text">虚</span>证、<span class="blur-text">寒</span>证、<span class="blur-text">失血</span>。</td>
+                            <td>106. 五色主病-黄白<br><span class="answer-text">黄</span>色主病:<span class="answer-text">湿</span>证、<span class="answer-text">虚</span>证、<span class="answer-text">黄疸</span>;<br><span class="answer-text">白</span>色主病:<span class="answer-text">虚</span>证、<span class="answer-text">寒</span>证、<span class="answer-text">失血</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>107. 五色主病-黑<br><span class="blur-text">黑</span>色主病:<br><span class="blur-text">肾虚</span>、<span class="blur-text">水饮</span>、<span class="blur-text">瘀血</span>。</td>
+                            <td>107. 五色主病-黑<br><span class="answer-text">黑</span>色主病:<br><span class="answer-text">肾虚</span>、<span class="answer-text">水饮</span>、<span class="answer-text">瘀血</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>108. 舌诊-正常舌象<br>正常舌象:<br><span class="blur-text">淡红</span>舌,<span class="blur-text">薄白</span>苔。</td>
+                            <td>108. 舌诊-正常舌象<br>正常舌象:<br><span class="answer-text">淡红</span>舌,<span class="answer-text">薄白</span>苔。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>109. 望舌质-淡白红<br><span class="blur-text">淡白</span>舌:主<span class="blur-text">虚</span>证、<span class="blur-text">寒</span>证,气血两虚、阳虚;<br><span class="blur-text">红</span>舌:主<span class="blur-text">热</span>证,里热、实热。</td>
+                            <td>109. 望舌质-淡白红<br><span class="answer-text">淡白</span>舌:主<span class="answer-text">虚</span>证、<span class="answer-text">寒</span>证,气血两虚、阳虚;<br><span class="answer-text">红</span>舌:主<span class="answer-text">热</span>证,里热、实热。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>110. 望舌质-绛紫<br><span class="blur-text">绛</span>舌(深红):主<span class="blur-text">热盛</span>、<span class="blur-text">血瘀</span>,热入营分、阴虚火旺;<br><span class="blur-text">青紫</span>舌:主<span class="blur-text">血瘀</span>、<span class="blur-text">寒</span>证。</td>
+                            <td>110. 望舌质-绛紫<br><span class="answer-text">绛</span>舌(深红):主<span class="answer-text">热盛</span>、<span class="answer-text">血瘀</span>,热入营分、阴虚火旺;<br><span class="answer-text">青紫</span>舌:主<span class="answer-text">血瘀</span>、<span class="answer-text">寒</span>证。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>111. 望舌形-胖大瘦薄<br><span class="blur-text">胖大</span>舌:主<span class="blur-text">脾虚</span><span class="blur-text">水湿</span>内停、痰饮;<br><span class="blur-text">瘦薄</span>舌:主<span class="blur-text">气血两虚</span>、<span class="blur-text">阴虚</span>。</td>
+                            <td>111. 望舌形-胖大瘦薄<br><span class="answer-text">胖大</span>舌:主<span class="answer-text">脾虚</span><span class="answer-text">水湿</span>内停、痰饮;<br><span class="answer-text">瘦薄</span>舌:主<span class="answer-text">气血两虚</span>、<span class="answer-text">阴虚</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>112. 望舌形-齿痕裂纹<br><span class="blur-text">齿痕</span>舌:舌边有<span class="blur-text">齿印</span>,主<span class="blur-text">脾虚</span><span class="blur-text">水湿</span>内停;<br><span class="blur-text">裂纹</span>舌:舌面有<span class="blur-text">裂纹</span>,主<span class="blur-text">热盛</span>伤阴、<span class="blur-text">阴虚</span>。</td>
+                            <td>112. 望舌形-齿痕裂纹<br><span class="answer-text">齿痕</span>舌:舌边有<span class="answer-text">齿印</span>,主<span class="answer-text">脾虚</span><span class="answer-text">水湿</span>内停;<br><span class="answer-text">裂纹</span>舌:舌面有<span class="answer-text">裂纹</span>,主<span class="answer-text">热盛</span>伤阴、<span class="answer-text">阴虚</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>113. 望舌苔-厚薄润燥<br><span class="blur-text">薄</span>苔:正常或病轻;<span class="blur-text">厚</span>苔:邪气盛、病情重;<br><span class="blur-text">润</span>苔:津液未伤;<span class="blur-text">燥</span>苔:津液已伤;<span class="blur-text">滑</span>苔:水湿内停。</td>
+                            <td>113. 望舌苔-厚薄润燥<br><span class="answer-text">薄</span>苔:正常或病轻;<span class="answer-text">厚</span>苔:邪气盛、病情重;<br><span class="answer-text">润</span>苔:津液未伤;<span class="answer-text">燥</span>苔:津液已伤;<span class="answer-text">滑</span>苔:水湿内停。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>114. 望舌苔-白黄灰黑<br><span class="blur-text">白</span>苔:主<span class="blur-text">寒</span>证、<span class="blur-text">表</span>证;<br><span class="blur-text">黄</span>苔:主<span class="blur-text">热</span>证、里热;<br><span class="blur-text">灰黑</span>苔:主<span class="blur-text">里</span>证、热极或寒盛。</td>
+                            <td>114. 望舌苔-白黄灰黑<br><span class="answer-text">白</span>苔:主<span class="answer-text">寒</span>证、<span class="answer-text">表</span>证;<br><span class="answer-text">黄</span>苔:主<span class="answer-text">热</span>证、里热;<br><span class="answer-text">灰黑</span>苔:主<span class="answer-text">里</span>证、热极或寒盛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>115. 望舌苔-腻剥<br><span class="blur-text">腻</span>苔:苔质致密,主<span class="blur-text">湿浊</span>、<span class="blur-text">痰饮</span>、<span class="blur-text">食积</span>;<br><span class="blur-text">剥落</span>苔:舌苔部分或全部脱落,主<span class="blur-text">胃阴不足</span>、<span class="blur-text">胃气大伤</span>。</td>
+                            <td>115. 望舌苔-腻剥<br><span class="answer-text">腻</span>苔:苔质致密,主<span class="answer-text">湿浊</span>、<span class="answer-text">痰饮</span>、<span class="answer-text">食积</span>;<br><span class="answer-text">剥落</span>苔:舌苔部分或全部脱落,主<span class="answer-text">胃阴不足</span>、<span class="answer-text">胃气大伤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>116. 问寒热-恶寒发热<br><span class="blur-text">恶寒发热</span>(寒热同时出现):主<span class="blur-text">表</span>证。<br>恶寒<span class="blur-text">重</span>发热轻→<span class="blur-text">风寒</span>表证;<br>恶寒<span class="blur-text">轻</span>发热重→<span class="blur-text">风热</span>表证。</td>
+                            <td>116. 问寒热-恶寒发热<br><span class="answer-text">恶寒发热</span>(寒热同时出现):主<span class="answer-text">表</span>证。<br>恶寒<span class="answer-text">重</span>发热轻→<span class="answer-text">风寒</span>表证;<br>恶寒<span class="answer-text">轻</span>发热重→<span class="answer-text">风热</span>表证。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>117. 问寒热-但寒不热<br><span class="blur-text">但寒不热</span>:只有恶寒,没有发热。<br><span class="blur-text">实寒</span>证:外感寒邪;<br><span class="blur-text">虚寒</span>证:阳气虚衰。</td>
+                            <td>117. 问寒热-但寒不热<br><span class="answer-text">但寒不热</span>:只有恶寒,没有发热。<br><span class="answer-text">实寒</span>证:外感寒邪;<br><span class="answer-text">虚寒</span>证:阳气虚衰。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>118. 问寒热-但热不寒<br><span class="blur-text">但热不寒</span>:只有发热,没有恶寒。<br><span class="blur-text">实热</span>证:邪热内盛;<br><span class="blur-text">虚热</span>证:阴虚内热。</td>
+                            <td>118. 问寒热-但热不寒<br><span class="answer-text">但热不寒</span>:只有发热,没有恶寒。<br><span class="answer-text">实热</span>证:邪热内盛;<br><span class="answer-text">虚热</span>证:阴虚内热。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>119. 问寒热-寒热往来<br><span class="blur-text">寒热往来</span>:寒热交替出现,先恶寒后发热。<br>主<span class="blur-text">少阳</span>证/<span class="blur-text">半表半里</span>证。</td>
+                            <td>119. 问寒热-寒热往来<br><span class="answer-text">寒热往来</span>:寒热交替出现,先恶寒后发热。<br>主<span class="answer-text">少阳</span>证/<span class="answer-text">半表半里</span>证。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>120. 问汗-自汗盗汗<br><span class="blur-text">自汗</span>:汗出不已,动则加重,主<span class="blur-text">阳气虚损</span>,<span class="blur-text">卫阳不固</span>;<br><span class="blur-text">盗汗</span>:睡时出汗,醒则汗止,主<span class="blur-text">阴虚内热</span>。</td>
+                            <td>120. 问汗-自汗盗汗<br><span class="answer-text">自汗</span>:汗出不已,动则加重,主<span class="answer-text">阳气虚损</span>,<span class="answer-text">卫阳不固</span>;<br><span class="answer-text">盗汗</span>:睡时出汗,醒则汗止,主<span class="answer-text">阴虚内热</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>121. 问疼痛-胀刺冷<br><span class="blur-text">胀</span>痛:主<span class="blur-text">气滞</span>;<br><span class="blur-text">刺</span>痛:固定针刺样疼痛,主<span class="blur-text">瘀血</span>;<br><span class="blur-text">冷</span>痛:得温痛减,主<span class="blur-text">寒凝</span>。</td>
+                            <td>121. 问疼痛-胀刺冷<br><span class="answer-text">胀</span>痛:主<span class="answer-text">气滞</span>;<br><span class="answer-text">刺</span>痛:固定针刺样疼痛,主<span class="answer-text">瘀血</span>;<br><span class="answer-text">冷</span>痛:得温痛减,主<span class="answer-text">寒凝</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>122. 问疼痛-灼隐重绞<br><span class="blur-text">灼</span>痛:主<span class="blur-text">热</span>证;<br><span class="blur-text">隐</span>痛:隐隐作痛,主<span class="blur-text">虚</span>证;<br><span class="blur-text">重</span>痛:沉重疼痛,主<span class="blur-text">湿</span>邪;<br><span class="blur-text">绞</span>痛:剧烈绞痛,主<span class="blur-text">气滞</span>、<span class="blur-text">寒凝</span>。</td>
+                            <td>122. 问疼痛-灼隐重绞<br><span class="answer-text">灼</span>痛:主<span class="answer-text">热</span>证;<br><span class="answer-text">隐</span>痛:隐隐作痛,主<span class="answer-text">虚</span>证;<br><span class="answer-text">重</span>痛:沉重疼痛,主<span class="answer-text">湿</span>邪;<br><span class="answer-text">绞</span>痛:剧烈绞痛,主<span class="answer-text">气滞</span>、<span class="answer-text">寒凝</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>123. 脉诊-正常脉象<br>正常脉象(平脉/常脉):<br>有<span class="blur-text">胃</span>:从容和缓、流利有力;<br>有<span class="blur-text">神</span>:快慢适度、节律整齐、应指有力;<br>有<span class="blur-text">根</span>:尺脉有力、沉取不绝。</td>
+                            <td>123. 脉诊-正常脉象<br>正常脉象(平脉/常脉):<br>有<span class="answer-text">胃</span>:从容和缓、流利有力;<br>有<span class="answer-text">神</span>:快慢适度、节律整齐、应指有力;<br>有<span class="answer-text">根</span>:尺脉有力、沉取不绝。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>124. 脉诊-寸关尺<br><span class="blur-text">寸</span>:对应<span class="blur-text">上焦</span>(心肺);<br><span class="blur-text">关</span>:对应<span class="blur-text">中焦</span>(脾胃肝胆);<br><span class="blur-text">尺</span>:对应<span class="blur-text">下焦</span>(肾膀胱大小肠)。</td>
+                            <td>124. 脉诊-寸关尺<br><span class="answer-text">寸</span>:对应<span class="answer-text">上焦</span>(心肺);<br><span class="answer-text">关</span>:对应<span class="answer-text">中焦</span>(脾胃肝胆);<br><span class="answer-text">尺</span>:对应<span class="answer-text">下焦</span>(肾膀胱大小肠)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>125. 常见病脉-浮沉<br><span class="blur-text">浮</span>脉:轻取即得,重按减弱,主<span class="blur-text">表</span>证;<br><span class="blur-text">沉</span>脉:轻取不应,重按始得,主<span class="blur-text">里</span>证。</td>
+                            <td>125. 常见病脉-浮沉<br><span class="answer-text">浮</span>脉:轻取即得,重按减弱,主<span class="answer-text">表</span>证;<br><span class="answer-text">沉</span>脉:轻取不应,重按始得,主<span class="answer-text">里</span>证。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>126. 常见病脉-迟数<br><span class="blur-text">迟</span>脉:一息不足<span class="blur-text">四</span>至(<60次/分),主<span class="blur-text">寒</span>证;<br><span class="blur-text">数</span>脉:一息<span class="blur-text">五</span>至以上(>90次/分),主<span class="blur-text">热</span>证。</td>
+                            <td>126. 常见病脉-迟数<br><span class="answer-text">迟</span>脉:一息不足<span class="answer-text">四</span>至(<60次/分),主<span class="answer-text">寒</span>证;<br><span class="answer-text">数</span>脉:一息<span class="answer-text">五</span>至以上(>90次/分),主<span class="answer-text">热</span>证。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>127. 常见病脉-虚实<br><span class="blur-text">虚</span>脉:举按<span class="blur-text">无力</span>,主<span class="blur-text">虚</span>证(气血两虚);<br><span class="blur-text">实</span>脉:举按均<span class="blur-text">有力</span>,主<span class="blur-text">实</span>证、热结。</td>
+                            <td>127. 常见病脉-虚实<br><span class="answer-text">虚</span>脉:举按<span class="answer-text">无力</span>,主<span class="answer-text">虚</span>证(气血两虚);<br><span class="answer-text">实</span>脉:举按均<span class="answer-text">有力</span>,主<span class="answer-text">实</span>证、热结。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>128. 常见病脉-滑涩<br><span class="blur-text">滑</span>脉:往来流利,如珠走盘,主<span class="blur-text">痰饮</span>、<span class="blur-text">食积</span>、实热,也见于孕妇;<br><span class="blur-text">涩</span>脉:往来艰涩不畅,主<span class="blur-text">血虚</span>、<span class="blur-text">血瘀</span>、精伤。</td>
+                            <td>128. 常见病脉-滑涩<br><span class="answer-text">滑</span>脉:往来流利,如珠走盘,主<span class="answer-text">痰饮</span>、<span class="answer-text">食积</span>、实热,也见于孕妇;<br><span class="answer-text">涩</span>脉:往来艰涩不畅,主<span class="answer-text">血虚</span>、<span class="answer-text">血瘀</span>、精伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>129. 常见病脉-弦细洪<br><span class="blur-text">弦</span>脉:端直以长,如按琴弦,主<span class="blur-text">肝胆病</span>、痛证、痰饮;<br><span class="blur-text">细</span>脉:脉细如线,主气血两虚、阴虚;<br><span class="blur-text">洪</span>脉:脉来盛大如波涛汹涌,主<span class="blur-text">热盛</span>。</td>
+                            <td>129. 常见病脉-弦细洪<br><span class="answer-text">弦</span>脉:端直以长,如按琴弦,主<span class="answer-text">肝胆病</span>、痛证、痰饮;<br><span class="answer-text">细</span>脉:脉细如线,主气血两虚、阴虚;<br><span class="answer-text">洪</span>脉:脉来盛大如波涛汹涌,主<span class="answer-text">热盛</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">六、八纲辨证</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>130. 八纲<br>八纲包括:<br><span class="blur-text">表</span>、<span class="blur-text">里</span>、<span class="blur-text">寒</span>、<span class="blur-text">热</span>、<span class="blur-text">虚</span>、<span class="blur-text">实</span>、<span class="blur-text">阴</span>、<span class="blur-text">阳</span>。<br>阴阳是八纲辨证的<span class="blur-text">总纲</span>。</td>
+                            <td>130. 八纲<br>八纲包括:<br><span class="answer-text">表</span>、<span class="answer-text">里</span>、<span class="answer-text">寒</span>、<span class="answer-text">热</span>、<span class="answer-text">虚</span>、<span class="answer-text">实</span>、<span class="answer-text">阴</span>、<span class="answer-text">阳</span>。<br>阴阳是八纲辨证的<span class="answer-text">总纲</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>131. 八纲-阴阳归属<br>属阳:<span class="blur-text">表</span>、<span class="blur-text">热</span>、<span class="blur-text">实</span>;<br>属阴:<span class="blur-text">里</span>、<span class="blur-text">寒</span>、<span class="blur-text">虚</span>。</td>
+                            <td>131. 八纲-阴阳归属<br>属阳:<span class="answer-text">表</span>、<span class="answer-text">热</span>、<span class="answer-text">实</span>;<br>属阴:<span class="answer-text">里</span>、<span class="answer-text">寒</span>、<span class="answer-text">虚</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>137</td>
+                            <td>132. 风寒表证-临床表现<br>恶寒<span class="blur-text">重</span>,发热<span class="blur-text">轻</span>,<span class="blur-text">无汗</span>,头身<span class="blur-text">疼痛</span>,<br>鼻塞流<span class="blur-text">清</span>涕,苔<span class="blur-text">薄白</span>,脉<span class="blur-text">浮紧</span>。</td>
+                            <td>132. 风寒表证-临床表现<br>恶寒<span class="answer-text">重</span>,发热<span class="answer-text">轻</span>,<span class="answer-text">无汗</span>,头身<span class="answer-text">疼痛</span>,<br>鼻塞流<span class="answer-text">清</span>涕,苔<span class="answer-text">薄白</span>,脉<span class="answer-text">浮紧</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>138</td>
+                            <td>133. 风寒表证-病机治法<br>病机:<span class="blur-text">风寒束表</span>,<span class="blur-text">卫阳被遏</span>,<span class="blur-text">肺气失宣</span>。<br>治法:<span class="blur-text">辛温解表</span>。<br>代表方:<span class="blur-text">麻黄汤</span>。</td>
+                            <td>133. 风寒表证-病机治法<br>病机:<span class="answer-text">风寒束表</span>,<span class="answer-text">卫阳被遏</span>,<span class="answer-text">肺气失宣</span>。<br>治法:<span class="answer-text">辛温解表</span>。<br>代表方:<span class="answer-text">麻黄汤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>139</td>
+                            <td>134. 风热表证-临床表现<br>发热<span class="blur-text">重</span>,恶寒<span class="blur-text">轻</span>,<span class="blur-text">有汗</span>或少汗,<span class="blur-text">头痛</span>,<br>咽喉<span class="blur-text">肿痛</span>,<span class="blur-text">口渴</span>,苔<span class="blur-text">薄黄</span>,脉<span class="blur-text">浮数</span>。</td>
+                            <td>134. 风热表证-临床表现<br>发热<span class="answer-text">重</span>,恶寒<span class="answer-text">轻</span>,<span class="answer-text">有汗</span>或少汗,<span class="answer-text">头痛</span>,<br>咽喉<span class="answer-text">肿痛</span>,<span class="answer-text">口渴</span>,苔<span class="answer-text">薄黄</span>,脉<span class="answer-text">浮数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>140</td>
+                            <td>135. 风热表证-病机治法<br>病机:<span class="blur-text">风热犯表</span>,<span class="blur-text">卫表失和</span>,<span class="blur-text">肺气失宣</span>。<br>治法:<span class="blur-text">辛凉解表</span>。<br>代表方:<span class="blur-text">银翘散</span>。</td>
+                            <td>135. 风热表证-病机治法<br>病机:<span class="answer-text">风热犯表</span>,<span class="answer-text">卫表失和</span>,<span class="answer-text">肺气失宣</span>。<br>治法:<span class="answer-text">辛凉解表</span>。<br>代表方:<span class="answer-text">银翘散</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>141</td>
+                            <td>136. 里证概念<br>里证:病位在<span class="blur-text">脏腑</span>、<span class="blur-text">气血</span>,<br>病位<span class="blur-text">深</span>,病程<span class="blur-text">长</span>。<br>主要以<span class="blur-text">脏腑辨证</span>为主。</td>
+                            <td>136. 里证概念<br>里证:病位在<span class="answer-text">脏腑</span>、<span class="answer-text">气血</span>,<br>病位<span class="answer-text">深</span>,病程<span class="answer-text">长</span>。<br>主要以<span class="answer-text">脏腑辨证</span>为主。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>142</td>
+                            <td>137. 实寒证-表现治法<br>寒邪侵袭。表现:<span class="blur-text">恶寒</span>、口淡不渴、面色<span class="blur-text">苍白</span>、<br>肢冷、腹痛、便<span class="blur-text">溏</span>,苔<span class="blur-text">白</span>,脉<span class="blur-text">迟</span>。<br>治法:<span class="blur-text">温里散寒</span>。</td>
+                            <td>137. 实寒证-表现治法<br>寒邪侵袭。表现:<span class="answer-text">恶寒</span>、口淡不渴、面色<span class="answer-text">苍白</span>、<br>肢冷、腹痛、便<span class="answer-text">溏</span>,苔<span class="answer-text">白</span>,脉<span class="answer-text">迟</span>。<br>治法:<span class="answer-text">温里散寒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>143</td>
+                            <td>138. 虚寒证-表现治法<br>阳气虚衰。表现:<span class="blur-text">畏寒</span>肢冷、面色<span class="blur-text">晄白</span>、神疲乏力、<br>小便<span class="blur-text">清长</span>,舌<span class="blur-text">淡</span>苔白,脉沉<span class="blur-text">细</span>。<br>治法:<span class="blur-text">温阳散寒</span>。</td>
+                            <td>138. 虚寒证-表现治法<br>阳气虚衰。表现:<span class="answer-text">畏寒</span>肢冷、面色<span class="answer-text">晄白</span>、神疲乏力、<br>小便<span class="answer-text">清长</span>,舌<span class="answer-text">淡</span>苔白,脉沉<span class="answer-text">细</span>。<br>治法:<span class="answer-text">温阳散寒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>144</td>
+                            <td>139. 实热证-表现治法<br>邪热内盛。表现:<span class="blur-text">高热</span>、口渴喜<span class="blur-text">冷</span>饮、面红目赤、<br>大便<span class="blur-text">干结</span>,小便<span class="blur-text">短赤</span>,舌<span class="blur-text">红</span>苔<span class="blur-text">黄</span>,脉<span class="blur-text">数</span>。<br>治法:<span class="blur-text">清热泻火</span>。</td>
+                            <td>139. 实热证-表现治法<br>邪热内盛。表现:<span class="answer-text">高热</span>、口渴喜<span class="answer-text">冷</span>饮、面红目赤、<br>大便<span class="answer-text">干结</span>,小便<span class="answer-text">短赤</span>,舌<span class="answer-text">红</span>苔<span class="answer-text">黄</span>,脉<span class="answer-text">数</span>。<br>治法:<span class="answer-text">清热泻火</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>145</td>
+                            <td>140. 虚热证-表现治法<br>阴虚生内热。表现:<span class="blur-text">潮热</span><span class="blur-text">盗汗</span>、<span class="blur-text">五心烦热</span>、两颧<span class="blur-text">潮红</span>,<br>口燥咽干,舌红<span class="blur-text">少苔</span>,脉细<span class="blur-text">数</span>。<br>治法:<span class="blur-text">滋阴降火</span>。</td>
+                            <td>140. 虚热证-表现治法<br>阴虚生内热。表现:<span class="answer-text">潮热</span><span class="answer-text">盗汗</span>、<span class="answer-text">五心烦热</span>、两颧<span class="answer-text">潮红</span>,<br>口燥咽干,舌红<span class="answer-text">少苔</span>,脉细<span class="answer-text">数</span>。<br>治法:<span class="answer-text">滋阴降火</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>146</td>
+                            <td>141. 气虚证-表现<br>神疲<span class="blur-text">乏力</span>,<span class="blur-text">气短</span>懒言,<span class="blur-text">自汗</span>,<br>面色<span class="blur-text">淡白</span>或萎黄,头晕目眩,<br>舌<span class="blur-text">淡</span>苔白,脉<span class="blur-text">虚无力</span>。</td>
+                            <td>141. 气虚证-表现<br>神疲<span class="answer-text">乏力</span>,<span class="answer-text">气短</span>懒言,<span class="answer-text">自汗</span>,<br>面色<span class="answer-text">淡白</span>或萎黄,头晕目眩,<br>舌<span class="answer-text">淡</span>苔白,脉<span class="answer-text">虚无力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>147</td>
+                            <td>142. 气虚证-病机治法方<br>病机:<span class="blur-text">元气不足</span>,脏腑功能<span class="blur-text">减退</span>。<br>治法:<span class="blur-text">补气</span>。<br>代表方:<span class="blur-text">四君子汤</span>。</td>
+                            <td>142. 气虚证-病机治法方<br>病机:<span class="answer-text">元气不足</span>,脏腑功能<span class="answer-text">减退</span>。<br>治法:<span class="answer-text">补气</span>。<br>代表方:<span class="answer-text">四君子汤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>148</td>
+                            <td>143. 血虚证-表现<br>面色<span class="blur-text">无华</span>或萎黄,唇甲色<span class="blur-text">淡</span>,<br>头晕目眩,<span class="blur-text">心悸</span>失眠,手足发<span class="blur-text">麻</span>,<br>舌<span class="blur-text">淡</span>苔白,脉<span class="blur-text">细</span>。</td>
+                            <td>143. 血虚证-表现<br>面色<span class="answer-text">无华</span>或萎黄,唇甲色<span class="answer-text">淡</span>,<br>头晕目眩,<span class="answer-text">心悸</span>失眠,手足发<span class="answer-text">麻</span>,<br>舌<span class="answer-text">淡</span>苔白,脉<span class="answer-text">细</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>149</td>
+                            <td>144. 血虚证-病机治法方<br>病机:<span class="blur-text">血液亏虚</span>,<span class="blur-text">濡养失职</span>。<br>治法:<span class="blur-text">补血</span>。<br>代表方:<span class="blur-text">四物汤</span>。</td>
+                            <td>144. 血虚证-病机治法方<br>病机:<span class="answer-text">血液亏虚</span>,<span class="answer-text">濡养失职</span>。<br>治法:<span class="answer-text">补血</span>。<br>代表方:<span class="answer-text">四物汤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>150</td>
+                            <td>145. 阴虚证-表现<br><span class="blur-text">潮热</span><span class="blur-text">盗汗</span>,<span class="blur-text">五心烦热</span>,两颧<span class="blur-text">潮红</span>,<br>口燥咽干,形体<span class="blur-text">消瘦</span>,眩晕耳鸣,<br>舌红<span class="blur-text">少苔</span>,脉细<span class="blur-text">数</span>。</td>
+                            <td>145. 阴虚证-表现<br><span class="answer-text">潮热</span><span class="answer-text">盗汗</span>,<span class="answer-text">五心烦热</span>,两颧<span class="answer-text">潮红</span>,<br>口燥咽干,形体<span class="answer-text">消瘦</span>,眩晕耳鸣,<br>舌红<span class="answer-text">少苔</span>,脉细<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>151</td>
+                            <td>146. 阴虚证-病机治法方<br>病机:<span class="blur-text">阴液亏虚</span>,<span class="blur-text">虚热内生</span>。<br>治法:<span class="blur-text">滋阴降火</span>。<br>代表方:<span class="blur-text">六味地黄丸</span>。</td>
+                            <td>146. 阴虚证-病机治法方<br>病机:<span class="answer-text">阴液亏虚</span>,<span class="answer-text">虚热内生</span>。<br>治法:<span class="answer-text">滋阴降火</span>。<br>代表方:<span class="answer-text">六味地黄丸</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>152</td>
+                            <td>147. 阳虚证-表现<br><span class="blur-text">畏寒</span>肢冷,面色<span class="blur-text">晄白</span>,神疲乏力,<span class="blur-text">自汗</span>,<br>小便<span class="blur-text">清长</span>,大便<span class="blur-text">溏薄</span>,<br>舌淡<span class="blur-text">胖嫩</span>,脉沉细<span class="blur-text">无力</span>。</td>
+                            <td>147. 阳虚证-表现<br><span class="answer-text">畏寒</span>肢冷,面色<span class="answer-text">晄白</span>,神疲乏力,<span class="answer-text">自汗</span>,<br>小便<span class="answer-text">清长</span>,大便<span class="answer-text">溏薄</span>,<br>舌淡<span class="answer-text">胖嫩</span>,脉沉细<span class="answer-text">无力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>153</td>
+                            <td>148. 阳虚证-病机治法<br>病机:<span class="blur-text">阳气不足</span>,<span class="blur-text">温煦失职</span>。<br>治法:<span class="blur-text">温阳散寒</span>。</td>
+                            <td>148. 阳虚证-病机治法<br>病机:<span class="answer-text">阳气不足</span>,<span class="answer-text">温煦失职</span>。<br>治法:<span class="answer-text">温阳散寒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>154</td>
+                            <td>149. 实证-表现<br>起病<span class="blur-text">急</span>,病程<span class="blur-text">短</span>,形体<span class="blur-text">壮实</span>,<br>声高气<span class="blur-text">粗</span>,腹胀痛<span class="blur-text">拒按</span>,<br>大便<span class="blur-text">秘结</span>,舌苔<span class="blur-text">厚腻</span>,脉<span class="blur-text">实有力</span>。</td>
+                            <td>149. 实证-表现<br>起病<span class="answer-text">急</span>,病程<span class="answer-text">短</span>,形体<span class="answer-text">壮实</span>,<br>声高气<span class="answer-text">粗</span>,腹胀痛<span class="answer-text">拒按</span>,<br>大便<span class="answer-text">秘结</span>,舌苔<span class="answer-text">厚腻</span>,脉<span class="answer-text">实有力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>155</td>
+                            <td>150. 实证-病机治法<br>病机:<span class="blur-text">邪气盛实</span>,正气<span class="blur-text">未虚</span>。<br>治法:<span class="blur-text">祛邪</span>(泻下、清热、理气、化痰等)。</td>
+                            <td>150. 实证-病机治法<br>病机:<span class="answer-text">邪气盛实</span>,正气<span class="answer-text">未虚</span>。<br>治法:<span class="answer-text">祛邪</span>(泻下、清热、理气、化痰等)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>156</td>
+                            <td>151. 虚实鉴别-病程体质<br>虚证:病程<span class="blur-text">长</span>,体质<span class="blur-text">瘦弱</span>,精神<span class="blur-text">萎靡</span>,语言<span class="blur-text">低微</span>;<br>实证:病程<span class="blur-text">短</span>,体质<span class="blur-text">壮实</span>,精神<span class="blur-text">烦躁</span>,语言<span class="blur-text">洪亮</span>。</td>
+                            <td>151. 虚实鉴别-病程体质<br>虚证:病程<span class="answer-text">长</span>,体质<span class="answer-text">瘦弱</span>,精神<span class="answer-text">萎靡</span>,语言<span class="answer-text">低微</span>;<br>实证:病程<span class="answer-text">短</span>,体质<span class="answer-text">壮实</span>,精神<span class="answer-text">烦躁</span>,语言<span class="answer-text">洪亮</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>157</td>
+                            <td>152. 虚实鉴别-疼痛脉象<br>虚证:疼痛<span class="blur-text">隐痛</span><span class="blur-text">喜按</span>,脉象<span class="blur-text">虚无力</span>;<br>实证:疼痛<span class="blur-text">胀痛</span><span class="blur-text">拒按</span>,脉象<span class="blur-text">实有力</span>。</td>
+                            <td>152. 虚实鉴别-疼痛脉象<br>虚证:疼痛<span class="answer-text">隐痛</span><span class="answer-text">喜按</span>,脉象<span class="answer-text">虚无力</span>;<br>实证:疼痛<span class="answer-text">胀痛</span><span class="answer-text">拒按</span>,脉象<span class="answer-text">实有力</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">七、脏腑辨证</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>158</td>
+                            <td>153. 心气虚-表现<br><span class="blur-text">心悸</span>,<span class="blur-text">气短</span>,<span class="blur-text">自汗</span>,神疲乏力,<br>面色<span class="blur-text">淡白</span>,舌<span class="blur-text">淡</span>苔白,脉<span class="blur-text">虚无力</span>。</td>
+                            <td>153. 心气虚-表现<br><span class="answer-text">心悸</span>,<span class="answer-text">气短</span>,<span class="answer-text">自汗</span>,神疲乏力,<br>面色<span class="answer-text">淡白</span>,舌<span class="answer-text">淡</span>苔白,脉<span class="answer-text">虚无力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>159</td>
+                            <td>154. 心气虚-病机治法<br>病机:<span class="blur-text">心气不足</span>,<span class="blur-text">鼓动无力</span>。<br>治法:<span class="blur-text">益气养心</span>。</td>
+                            <td>154. 心气虚-病机治法<br>病机:<span class="answer-text">心气不足</span>,<span class="answer-text">鼓动无力</span>。<br>治法:<span class="answer-text">益气养心</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>160</td>
+                            <td>155. 心阳虚-表现<br>心气虚证+<span class="blur-text">虚寒</span>证。<br>形寒肢<span class="blur-text">冷</span>,面色<span class="blur-text">苍白</span>,<span class="blur-text">心痛</span>,<br>舌淡<span class="blur-text">胖</span>,脉沉细<span class="blur-text">无力</span>。</td>
+                            <td>155. 心阳虚-表现<br>心气虚证+<span class="answer-text">虚寒</span>证。<br>形寒肢<span class="answer-text">冷</span>,面色<span class="answer-text">苍白</span>,<span class="answer-text">心痛</span>,<br>舌淡<span class="answer-text">胖</span>,脉沉细<span class="answer-text">无力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>161</td>
+                            <td>156. 心血虚-表现<br><span class="blur-text">心悸</span>,<span class="blur-text">失眠</span>多梦,面色<span class="blur-text">无华</span>,<br>唇舌色<span class="blur-text">淡</span>,脉<span class="blur-text">细</span>。</td>
+                            <td>156. 心血虚-表现<br><span class="answer-text">心悸</span>,<span class="answer-text">失眠</span>多梦,面色<span class="answer-text">无华</span>,<br>唇舌色<span class="answer-text">淡</span>,脉<span class="answer-text">细</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>162</td>
+                            <td>157. 心阴虚-表现<br><span class="blur-text">心悸</span>,<span class="blur-text">失眠</span>多梦,<span class="blur-text">潮热</span><span class="blur-text">盗汗</span>,<br><span class="blur-text">五心烦热</span>,口燥咽干,<br>舌红<span class="blur-text">少苔</span>,脉细<span class="blur-text">数</span>。</td>
+                            <td>157. 心阴虚-表现<br><span class="answer-text">心悸</span>,<span class="answer-text">失眠</span>多梦,<span class="answer-text">潮热</span><span class="answer-text">盗汗</span>,<br><span class="answer-text">五心烦热</span>,口燥咽干,<br>舌红<span class="answer-text">少苔</span>,脉细<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>163</td>
+                            <td>158. 心火亢盛-表现<br><span class="blur-text">心烦</span>,<span class="blur-text">失眠</span>,口舌<span class="blur-text">生疮</span>,<span class="blur-text">面红</span>,<br><span class="blur-text">口渴</span>,小便<span class="blur-text">短赤</span>,<br>舌尖<span class="blur-text">红</span>,脉<span class="blur-text">数</span>。</td>
+                            <td>158. 心火亢盛-表现<br><span class="answer-text">心烦</span>,<span class="answer-text">失眠</span>,口舌<span class="answer-text">生疮</span>,<span class="answer-text">面红</span>,<br><span class="answer-text">口渴</span>,小便<span class="answer-text">短赤</span>,<br>舌尖<span class="answer-text">红</span>,脉<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>164</td>
+                            <td>159. 心火亢盛-病机治法<br>病机:<span class="blur-text">心火上炎</span>。<br>治法:<span class="blur-text">清心泻火</span>。</td>
+                            <td>159. 心火亢盛-病机治法<br>病机:<span class="answer-text">心火上炎</span>。<br>治法:<span class="answer-text">清心泻火</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>165</td>
+                            <td>160. 心脉瘀阻-表现<br>心痛(<span class="blur-text">刺痛</span>、<span class="blur-text">绞痛</span>),痛有<span class="blur-text">定处</span>,<br><span class="blur-text">胸闷</span>,心悸,<br>唇舌<span class="blur-text">紫暗</span>,脉<span class="blur-text">涩</span>或结代。</td>
+                            <td>160. 心脉瘀阻-表现<br>心痛(<span class="answer-text">刺痛</span>、<span class="answer-text">绞痛</span>),痛有<span class="answer-text">定处</span>,<br><span class="answer-text">胸闷</span>,心悸,<br>唇舌<span class="answer-text">紫暗</span>,脉<span class="answer-text">涩</span>或结代。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>166</td>
+                            <td>161. 肺气虚-表现<br>咳喘<span class="blur-text">无力</span>,痰多<span class="blur-text">清稀</span>,<span class="blur-text">气短</span>,<br>声音<span class="blur-text">低微</span>,<span class="blur-text">自汗</span>,易<span class="blur-text">感冒</span>,<br>面色淡白,舌淡苔白,脉<span class="blur-text">虚无力</span>。</td>
+                            <td>161. 肺气虚-表现<br>咳喘<span class="answer-text">无力</span>,痰多<span class="answer-text">清稀</span>,<span class="answer-text">气短</span>,<br>声音<span class="answer-text">低微</span>,<span class="answer-text">自汗</span>,易<span class="answer-text">感冒</span>,<br>面色淡白,舌淡苔白,脉<span class="answer-text">虚无力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>167</td>
+                            <td>162. 肺阴虚-表现<br><span class="blur-text">干咳</span><span class="blur-text">少痰</span>,痰中<span class="blur-text">带血</span>,口燥咽干,<br><span class="blur-text">潮热</span><span class="blur-text">盗汗</span>,<span class="blur-text">五心烦热</span>,<br>舌红<span class="blur-text">少苔</span>,脉细<span class="blur-text">数</span>。</td>
+                            <td>162. 肺阴虚-表现<br><span class="answer-text">干咳</span><span class="answer-text">少痰</span>,痰中<span class="answer-text">带血</span>,口燥咽干,<br><span class="answer-text">潮热</span><span class="answer-text">盗汗</span>,<span class="answer-text">五心烦热</span>,<br>舌红<span class="answer-text">少苔</span>,脉细<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>168</td>
+                            <td>163. 风寒束肺-表现<br><span class="blur-text">咳嗽</span>,痰<span class="blur-text">白</span>稀薄,恶寒<span class="blur-text">发热</span>,<span class="blur-text">无汗</span>,<br>头身<span class="blur-text">疼痛</span>,鼻塞流<span class="blur-text">清</span>涕,<br>苔<span class="blur-text">薄白</span>,脉<span class="blur-text">浮紧</span>。</td>
+                            <td>163. 风寒束肺-表现<br><span class="answer-text">咳嗽</span>,痰<span class="answer-text">白</span>稀薄,恶寒<span class="answer-text">发热</span>,<span class="answer-text">无汗</span>,<br>头身<span class="answer-text">疼痛</span>,鼻塞流<span class="answer-text">清</span>涕,<br>苔<span class="answer-text">薄白</span>,脉<span class="answer-text">浮紧</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>169</td>
+                            <td>164. 风寒束肺-辨证要点<br>辨证要点:<br><span class="blur-text">恶寒发热</span>、<span class="blur-text">无汗</span>而<span class="blur-text">喘</span>、脉浮紧。<br>代表方:<span class="blur-text">麻黄汤</span>。</td>
+                            <td>164. 风寒束肺-辨证要点<br>辨证要点:<br><span class="answer-text">恶寒发热</span>、<span class="answer-text">无汗</span>而<span class="answer-text">喘</span>、脉浮紧。<br>代表方:<span class="answer-text">麻黄汤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>170</td>
+                            <td>165. 风热犯肺-表现<br><span class="blur-text">咳嗽</span>,痰<span class="blur-text">黄</span>黏稠,<span class="blur-text">发热</span>,微恶风寒,<br><span class="blur-text">有汗</span>或少汗,咽喉<span class="blur-text">肿痛</span>,<span class="blur-text">口渴</span>,<br>苔<span class="blur-text">薄黄</span>,脉<span class="blur-text">浮数</span>。</td>
+                            <td>165. 风热犯肺-表现<br><span class="answer-text">咳嗽</span>,痰<span class="answer-text">黄</span>黏稠,<span class="answer-text">发热</span>,微恶风寒,<br><span class="answer-text">有汗</span>或少汗,咽喉<span class="answer-text">肿痛</span>,<span class="answer-text">口渴</span>,<br>苔<span class="answer-text">薄黄</span>,脉<span class="answer-text">浮数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>171</td>
+                            <td>166. 风热犯肺-方<br>治法:<span class="blur-text">疏风清热</span>。<br>代表方:<span class="blur-text">银翘散</span>。</td>
+                            <td>166. 风热犯肺-方<br>治法:<span class="answer-text">疏风清热</span>。<br>代表方:<span class="answer-text">银翘散</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>172</td>
+                            <td>167. 燥邪犯肺-表现<br><span class="blur-text">干咳</span>,<span class="blur-text">无痰</span>或少痰,痰黏难<span class="blur-text">咯</span>,<br>鼻燥咽干,<span class="blur-text">口渴</span>,皮肤<span class="blur-text">干燥</span>,<br>舌红少<span class="blur-text">津</span>,脉细<span class="blur-text">数</span>。</td>
+                            <td>167. 燥邪犯肺-表现<br><span class="answer-text">干咳</span>,<span class="answer-text">无痰</span>或少痰,痰黏难<span class="answer-text">咯</span>,<br>鼻燥咽干,<span class="answer-text">口渴</span>,皮肤<span class="answer-text">干燥</span>,<br>舌红少<span class="answer-text">津</span>,脉细<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>173</td>
+                            <td>168. 痰湿阻肺-表现方<br>咳嗽<span class="blur-text">痰多</span>,痰<span class="blur-text">白</span>黏腻,<br><span class="blur-text">胸闷</span>气憋,<span class="blur-text">纳呆</span>,<br>苔<span class="blur-text">白腻</span>,脉<span class="blur-text">滑</span>。<br>代表方:<span class="blur-text">二陈汤</span>。</td>
+                            <td>168. 痰湿阻肺-表现方<br>咳嗽<span class="answer-text">痰多</span>,痰<span class="answer-text">白</span>黏腻,<br><span class="answer-text">胸闷</span>气憋,<span class="answer-text">纳呆</span>,<br>苔<span class="answer-text">白腻</span>,脉<span class="answer-text">滑</span>。<br>代表方:<span class="answer-text">二陈汤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>174</td>
+                            <td>169. 邪热壅肺-表现<br>咳嗽<span class="blur-text">气喘</span>,痰<span class="blur-text">黄</span>稠,<span class="blur-text">高热</span>,<br><span class="blur-text">口渴</span>,<span class="blur-text">胸痛</span>,鼻翼<span class="blur-text">煽动</span>,<br>舌<span class="blur-text">红</span>苔<span class="blur-text">黄</span>,脉<span class="blur-text">数</span>。</td>
+                            <td>169. 邪热壅肺-表现<br>咳嗽<span class="answer-text">气喘</span>,痰<span class="answer-text">黄</span>稠,<span class="answer-text">高热</span>,<br><span class="answer-text">口渴</span>,<span class="answer-text">胸痛</span>,鼻翼<span class="answer-text">煽动</span>,<br>舌<span class="answer-text">红</span>苔<span class="answer-text">黄</span>,脉<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>175</td>
+                            <td>170. 脾气虚-表现<br>纳少腹<span class="blur-text">胀</span>,便<span class="blur-text">溏</span>,神疲<span class="blur-text">乏力</span>,<br>气短懒言,面色<span class="blur-text">萎黄</span>,<br>舌<span class="blur-text">淡</span>苔白,脉<span class="blur-text">虚无力</span>。</td>
+                            <td>170. 脾气虚-表现<br>纳少腹<span class="answer-text">胀</span>,便<span class="answer-text">溏</span>,神疲<span class="answer-text">乏力</span>,<br>气短懒言,面色<span class="answer-text">萎黄</span>,<br>舌<span class="answer-text">淡</span>苔白,脉<span class="answer-text">虚无力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>176</td>
+                            <td>171. 脾气虚-方<br>治法:<span class="blur-text">补气健脾</span>。<br>代表方:<span class="blur-text">四君子汤</span>。</td>
+                            <td>171. 脾气虚-方<br>治法:<span class="answer-text">补气健脾</span>。<br>代表方:<span class="answer-text">四君子汤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>177</td>
+                            <td>172. 脾气下陷-表现<br>脾气虚证+头晕目眩,久<span class="blur-text">泻</span><span class="blur-text">脱肛</span>,<br>内脏<span class="blur-text">下垂</span>(胃下垂、子宫脱垂),<br>舌淡,脉<span class="blur-text">弱</span>。</td>
+                            <td>172. 脾气下陷-表现<br>脾气虚证+头晕目眩,久<span class="answer-text">泻</span><span class="answer-text">脱肛</span>,<br>内脏<span class="answer-text">下垂</span>(胃下垂、子宫脱垂),<br>舌淡,脉<span class="answer-text">弱</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>178</td>
+                            <td>173. 脾气下陷-治法<br>治法:<span class="blur-text">补中益气</span>,<span class="blur-text">升阳举陷</span>。</td>
+                            <td>173. 脾气下陷-治法<br>治法:<span class="answer-text">补中益气</span>,<span class="answer-text">升阳举陷</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>179</td>
+                            <td>174. 脾不统血-表现<br>脾气虚证+<span class="blur-text">便血</span>,<span class="blur-text">尿血</span>,<span class="blur-text">崩漏</span>,<br>皮下<span class="blur-text">出血</span>,舌淡,脉<span class="blur-text">细</span>。</td>
+                            <td>174. 脾不统血-表现<br>脾气虚证+<span class="answer-text">便血</span>,<span class="answer-text">尿血</span>,<span class="answer-text">崩漏</span>,<br>皮下<span class="answer-text">出血</span>,舌淡,脉<span class="answer-text">细</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>180</td>
+                            <td>175. 脾不统血-病机治法<br>病机:脾气虚弱,<span class="blur-text">统摄无力</span>。<br>治法:<span class="blur-text">补气摄血</span>。</td>
+                            <td>175. 脾不统血-病机治法<br>病机:脾气虚弱,<span class="answer-text">统摄无力</span>。<br>治法:<span class="answer-text">补气摄血</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>181</td>
+                            <td>176. 脾阳虚-表现<br>脾气虚证+<span class="blur-text">虚寒</span>证。<br><span class="blur-text">畏寒</span>肢冷,腹痛<span class="blur-text">喜温</span><span class="blur-text">喜按</span>,<br>便溏或<span class="blur-text">完谷不化</span>,<span class="blur-text">水肿</span>,<br>舌淡<span class="blur-text">胖</span>,脉沉<span class="blur-text">细</span>。</td>
+                            <td>176. 脾阳虚-表现<br>脾气虚证+<span class="answer-text">虚寒</span>证。<br><span class="answer-text">畏寒</span>肢冷,腹痛<span class="answer-text">喜温</span><span class="answer-text">喜按</span>,<br>便溏或<span class="answer-text">完谷不化</span>,<span class="answer-text">水肿</span>,<br>舌淡<span class="answer-text">胖</span>,脉沉<span class="answer-text">细</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>182</td>
+                            <td>177. 脾阳虚-方<br>治法:<span class="blur-text">温中健脾</span>。<br>代表方:<span class="blur-text">理中丸</span>。</td>
+                            <td>177. 脾阳虚-方<br>治法:<span class="answer-text">温中健脾</span>。<br>代表方:<span class="answer-text">理中丸</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>183</td>
+                            <td>178. 寒湿困脾-表现<br>脘腹<span class="blur-text">胀满</span>,<span class="blur-text">纳呆</span>呕恶,便<span class="blur-text">溏</span>,<br>口淡不<span class="blur-text">渴</span>,头身<span class="blur-text">困重</span>,面色晄白,<br>苔<span class="blur-text">白腻</span>,脉<span class="blur-text">濡缓</span>。</td>
+                            <td>178. 寒湿困脾-表现<br>脘腹<span class="answer-text">胀满</span>,<span class="answer-text">纳呆</span>呕恶,便<span class="answer-text">溏</span>,<br>口淡不<span class="answer-text">渴</span>,头身<span class="answer-text">困重</span>,面色晄白,<br>苔<span class="answer-text">白腻</span>,脉<span class="answer-text">濡缓</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>184</td>
+                            <td>179. 寒湿困脾-方<br>治法:<span class="blur-text">温化寒湿</span>。<br>代表方:<span class="blur-text">五苓散</span>。</td>
+                            <td>179. 寒湿困脾-方<br>治法:<span class="answer-text">温化寒湿</span>。<br>代表方:<span class="answer-text">五苓散</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>185</td>
+                            <td>180. 湿热蕴脾-表现<br>脘腹<span class="blur-text">胀满</span>,<span class="blur-text">纳呆</span>呕恶,便溏<span class="blur-text">不爽</span>,<br>口<span class="blur-text">苦</span>口黏,身热不扬,身目发<span class="blur-text">黄</span>(鲜明),<br>苔<span class="blur-text">黄腻</span>,脉濡<span class="blur-text">数</span>。</td>
+                            <td>180. 湿热蕴脾-表现<br>脘腹<span class="answer-text">胀满</span>,<span class="answer-text">纳呆</span>呕恶,便溏<span class="answer-text">不爽</span>,<br>口<span class="answer-text">苦</span>口黏,身热不扬,身目发<span class="answer-text">黄</span>(鲜明),<br>苔<span class="answer-text">黄腻</span>,脉濡<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>186</td>
+                            <td>181. 食滞胃脘-表现<br>胃脘<span class="blur-text">胀痛</span>,<span class="blur-text">拒按</span>,<span class="blur-text">嗳腐</span>吞酸,<br><span class="blur-text">呕吐</span>食物,吐后痛<span class="blur-text">减</span>,不思<span class="blur-text">饮食</span>,<br>大便<span class="blur-text">不爽</span>,苔<span class="blur-text">厚腻</span>,脉<span class="blur-text">滑</span>。</td>
+                            <td>181. 食滞胃脘-表现<br>胃脘<span class="answer-text">胀痛</span>,<span class="answer-text">拒按</span>,<span class="answer-text">嗳腐</span>吞酸,<br><span class="answer-text">呕吐</span>食物,吐后痛<span class="answer-text">减</span>,不思<span class="answer-text">饮食</span>,<br>大便<span class="answer-text">不爽</span>,苔<span class="answer-text">厚腻</span>,脉<span class="answer-text">滑</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>187</td>
+                            <td>182. 食滞胃脘-方<br>治法:<span class="blur-text">消食导滞</span>。<br>代表方:<span class="blur-text">保和丸</span>。</td>
+                            <td>182. 食滞胃脘-方<br>治法:<span class="answer-text">消食导滞</span>。<br>代表方:<span class="answer-text">保和丸</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>188</td>
+                            <td>183. 肝气郁结-表现<br>情志<span class="blur-text">抑郁</span>,易<span class="blur-text">怒</span>,胸胁<span class="blur-text">胀痛</span>,<br><span class="blur-text">嗳气</span>,腹<span class="blur-text">胀</span>,或胁下<span class="blur-text">肿块</span>,<br>或月经<span class="blur-text">不调</span>、<span class="blur-text">痛经</span>,<br>苔薄白,脉<span class="blur-text">弦</span>。</td>
+                            <td>183. 肝气郁结-表现<br>情志<span class="answer-text">抑郁</span>,易<span class="answer-text">怒</span>,胸胁<span class="answer-text">胀痛</span>,<br><span class="answer-text">嗳气</span>,腹<span class="answer-text">胀</span>,或胁下<span class="answer-text">肿块</span>,<br>或月经<span class="answer-text">不调</span>、<span class="answer-text">痛经</span>,<br>苔薄白,脉<span class="answer-text">弦</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>189</td>
+                            <td>184. 肝气郁结-方<br>治法:<span class="blur-text">疏肝解郁</span>。<br>代表方:<span class="blur-text">逍遥散</span>。</td>
+                            <td>184. 肝气郁结-方<br>治法:<span class="answer-text">疏肝解郁</span>。<br>代表方:<span class="answer-text">逍遥散</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>190</td>
+                            <td>185. 肝阳上亢-表现<br><span class="blur-text">眩晕</span>,头痛头<span class="blur-text">胀</span>,面红目<span class="blur-text">赤</span>,<br>急躁易<span class="blur-text">怒</span>,失眠多梦,腰膝<span class="blur-text">酸软</span>,<br>舌<span class="blur-text">红</span>,脉弦<span class="blur-text">有力</span>。</td>
+                            <td>185. 肝阳上亢-表现<br><span class="answer-text">眩晕</span>,头痛头<span class="answer-text">胀</span>,面红目<span class="answer-text">赤</span>,<br>急躁易<span class="answer-text">怒</span>,失眠多梦,腰膝<span class="answer-text">酸软</span>,<br>舌<span class="answer-text">红</span>,脉弦<span class="answer-text">有力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>191</td>
+                            <td>186. 肝胆湿热-表现<br>胁肋<span class="blur-text">胀痛</span>,身目发<span class="blur-text">黄</span>(鲜明),口<span class="blur-text">苦</span>,<br><span class="blur-text">纳呆</span>,恶心呕吐,小便<span class="blur-text">短赤</span>,<br>或阴部<span class="blur-text">瘙痒</span>、<span class="blur-text">带下</span>,<br>苔<span class="blur-text">黄腻</span>,脉弦<span class="blur-text">数</span>。</td>
+                            <td>186. 肝胆湿热-表现<br>胁肋<span class="answer-text">胀痛</span>,身目发<span class="answer-text">黄</span>(鲜明),口<span class="answer-text">苦</span>,<br><span class="answer-text">纳呆</span>,恶心呕吐,小便<span class="answer-text">短赤</span>,<br>或阴部<span class="answer-text">瘙痒</span>、<span class="answer-text">带下</span>,<br>苔<span class="answer-text">黄腻</span>,脉弦<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>192</td>
+                            <td>187. 肝血虚-表现<br>头晕目<span class="blur-text">眩</span>,面色<span class="blur-text">无华</span>,视物<span class="blur-text">昏花</span>,<br>肢体<span class="blur-text">麻木</span>,筋脉<span class="blur-text">拘急</span>,<br>月经量<span class="blur-text">少</span>色淡、<span class="blur-text">经闭</span>,<br>舌<span class="blur-text">淡</span>苔白,脉<span class="blur-text">细</span>。</td>
+                            <td>187. 肝血虚-表现<br>头晕目<span class="answer-text">眩</span>,面色<span class="answer-text">无华</span>,视物<span class="answer-text">昏花</span>,<br>肢体<span class="answer-text">麻木</span>,筋脉<span class="answer-text">拘急</span>,<br>月经量<span class="answer-text">少</span>色淡、<span class="answer-text">经闭</span>,<br>舌<span class="answer-text">淡</span>苔白,脉<span class="answer-text">细</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>193</td>
+                            <td>188. 肝血虚-方<br>治法:<span class="blur-text">养血柔肝</span>。<br>代表方:<span class="blur-text">四物汤</span>。</td>
+                            <td>188. 肝血虚-方<br>治法:<span class="answer-text">养血柔肝</span>。<br>代表方:<span class="answer-text">四物汤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>194</td>
+                            <td>189. 肝阴虚-表现<br>头晕目<span class="blur-text">眩</span>,两目<span class="blur-text">干涩</span>,视物<span class="blur-text">昏花</span>,<br>胁肋<span class="blur-text">隐痛</span>,<span class="blur-text">五心烦热</span>,<span class="blur-text">潮热</span><span class="blur-text">盗汗</span>,<br>口燥咽干,舌红<span class="blur-text">少苔</span>,脉弦细<span class="blur-text">数</span>。</td>
+                            <td>189. 肝阴虚-表现<br>头晕目<span class="answer-text">眩</span>,两目<span class="answer-text">干涩</span>,视物<span class="answer-text">昏花</span>,<br>胁肋<span class="answer-text">隐痛</span>,<span class="answer-text">五心烦热</span>,<span class="answer-text">潮热</span><span class="answer-text">盗汗</span>,<br>口燥咽干,舌红<span class="answer-text">少苔</span>,脉弦细<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>195</td>
+                            <td>190. 肾阳虚-表现(1)<br>面色<span class="blur-text">晄白</span>,<span class="blur-text">畏寒</span>肢冷,腰膝<span class="blur-text">酸软</span>,<br>神疲乏力,小便<span class="blur-text">清长</span>或<span class="blur-text">夜尿</span>多,<br>男子<span class="blur-text">阳痿</span>、遗精,女子<span class="blur-text">宫寒不孕</span>,<br>或<span class="blur-text">水肿</span>(<span class="blur-text">腰以下</span>为主)。</td>
+                            <td>190. 肾阳虚-表现(1)<br>面色<span class="answer-text">晄白</span>,<span class="answer-text">畏寒</span>肢冷,腰膝<span class="answer-text">酸软</span>,<br>神疲乏力,小便<span class="answer-text">清长</span>或<span class="answer-text">夜尿</span>多,<br>男子<span class="answer-text">阳痿</span>、遗精,女子<span class="answer-text">宫寒不孕</span>,<br>或<span class="answer-text">水肿</span>(<span class="answer-text">腰以下</span>为主)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>196</td>
+                            <td>191. 肾阳虚-表现(2)<br>舌淡<span class="blur-text">胖</span>,脉沉细<span class="blur-text">无力</span>。</td>
+                            <td>191. 肾阳虚-表现(2)<br>舌淡<span class="answer-text">胖</span>,脉沉细<span class="answer-text">无力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>197</td>
+                            <td>192. 肾阳虚-病机治法<br>病机:<span class="blur-text">肾阳不足</span>,<span class="blur-text">温煦失职</span>。<br>治法:<span class="blur-text">温补肾阳</span>。</td>
+                            <td>192. 肾阳虚-病机治法<br>病机:<span class="answer-text">肾阳不足</span>,<span class="answer-text">温煦失职</span>。<br>治法:<span class="answer-text">温补肾阳</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>198</td>
+                            <td>193. 肾阴虚-表现(1)<br>腰膝<span class="blur-text">酸软</span>,头晕目<span class="blur-text">眩</span>,<span class="blur-text">耳鸣</span>耳聋,<br><span class="blur-text">失眠</span>多梦,<span class="blur-text">潮热</span><span class="blur-text">盗汗</span>,<span class="blur-text">五心烦热</span>,<br>口燥咽干,男子<span class="blur-text">遗精</span>,女子<span class="blur-text">经少</span>或经闭。</td>
+                            <td>193. 肾阴虚-表现(1)<br>腰膝<span class="answer-text">酸软</span>,头晕目<span class="answer-text">眩</span>,<span class="answer-text">耳鸣</span>耳聋,<br><span class="answer-text">失眠</span>多梦,<span class="answer-text">潮热</span><span class="answer-text">盗汗</span>,<span class="answer-text">五心烦热</span>,<br>口燥咽干,男子<span class="answer-text">遗精</span>,女子<span class="answer-text">经少</span>或经闭。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>199</td>
+                            <td>194. 肾阴虚-表现(2)<br>舌红<span class="blur-text">少苔</span>,脉细<span class="blur-text">数</span>。</td>
+                            <td>194. 肾阴虚-表现(2)<br>舌红<span class="answer-text">少苔</span>,脉细<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>200</td>
+                            <td>195. 肾阴虚-方<br>治法:<span class="blur-text">滋补肾阴</span>。<br>代表方:<span class="blur-text">六味地黄丸</span>。</td>
+                            <td>195. 肾阴虚-方<br>治法:<span class="answer-text">滋补肾阴</span>。<br>代表方:<span class="answer-text">六味地黄丸</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>201</td>
+                            <td>196. 肾阴虚肾阳虚鉴别-寒热<br>肾阴虚:<span class="blur-text">虚热</span>(潮热盗汗、五心烦热);<br>肾阳虚:<span class="blur-text">虚寒</span>(畏寒肢冷、面色晄白)。</td>
+                            <td>196. 肾阴虚肾阳虚鉴别-寒热<br>肾阴虚:<span class="answer-text">虚热</span>(潮热盗汗、五心烦热);<br>肾阳虚:<span class="answer-text">虚寒</span>(畏寒肢冷、面色晄白)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>202</td>
+                            <td>197. 肾阴虚肾阳虚鉴别-二便生殖<br>肾阴虚:口燥咽干、便秘,男子<span class="blur-text">遗精</span>、女子<span class="blur-text">经少</span>;<br>肾阳虚:小便<span class="blur-text">清长</span>、夜尿多,男子<span class="blur-text">阳痿</span>、女子<span class="blur-text">宫寒不孕</span>。</td>
+                            <td>197. 肾阴虚肾阳虚鉴别-二便生殖<br>肾阴虚:口燥咽干、便秘,男子<span class="answer-text">遗精</span>、女子<span class="answer-text">经少</span>;<br>肾阳虚:小便<span class="answer-text">清长</span>、夜尿多,男子<span class="answer-text">阳痿</span>、女子<span class="answer-text">宫寒不孕</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>203</td>
+                            <td>198. 肾阴虚肾阳虚鉴别-水肿舌脉<br>肾阴虚:一般<span class="blur-text">无</span>水肿,舌红少苔,脉细<span class="blur-text">数</span>;<br>肾阳虚:常有水肿(<span class="blur-text">腰以下</span>),舌淡<span class="blur-text">胖</span>,脉沉细<span class="blur-text">无力</span>。</td>
+                            <td>198. 肾阴虚肾阳虚鉴别-水肿舌脉<br>肾阴虚:一般<span class="answer-text">无</span>水肿,舌红少苔,脉细<span class="answer-text">数</span>;<br>肾阳虚:常有水肿(<span class="answer-text">腰以下</span>),舌淡<span class="answer-text">胖</span>,脉沉细<span class="answer-text">无力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>204</td>
+                            <td>199. 肾气虚-表现<br>腰膝<span class="blur-text">酸软</span>,神疲乏力,<span class="blur-text">耳鸣</span>,听力<span class="blur-text">减退</span>,<br>小便<span class="blur-text">频数</span>或失禁,男子<span class="blur-text">遗精</span>早泄,<br>女子带下<span class="blur-text">清稀</span>,舌淡,脉<span class="blur-text">弱</span>。</td>
+                            <td>199. 肾气虚-表现<br>腰膝<span class="answer-text">酸软</span>,神疲乏力,<span class="answer-text">耳鸣</span>,听力<span class="answer-text">减退</span>,<br>小便<span class="answer-text">频数</span>或失禁,男子<span class="answer-text">遗精</span>早泄,<br>女子带下<span class="answer-text">清稀</span>,舌淡,脉<span class="answer-text">弱</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>205</td>
+                            <td>200. 肾气不固-表现<br>肾气虚证+小便频数而<span class="blur-text">清长</span>或<span class="blur-text">遗尿</span>,<br>男子<span class="blur-text">滑精</span>早泄,女子带下清稀量<span class="blur-text">多</span>、<span class="blur-text">胎动不安</span>。</td>
+                            <td>200. 肾气不固-表现<br>肾气虚证+小便频数而<span class="answer-text">清长</span>或<span class="answer-text">遗尿</span>,<br>男子<span class="answer-text">滑精</span>早泄,女子带下清稀量<span class="answer-text">多</span>、<span class="answer-text">胎动不安</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>206</td>
+                            <td>201. 肾不纳气-表现<br><span class="blur-text">喘促</span>、气短,<span class="blur-text">呼多吸少</span>,气不得<span class="blur-text">续</span>,<br>动则喘息<span class="blur-text">益甚</span>,<span class="blur-text">自汗</span>,神疲,<br>声音<span class="blur-text">低怯</span>,腰膝酸软,<br>舌淡苔白,脉沉细<span class="blur-text">无力</span>。</td>
+                            <td>201. 肾不纳气-表现<br><span class="answer-text">喘促</span>、气短,<span class="answer-text">呼多吸少</span>,气不得<span class="answer-text">续</span>,<br>动则喘息<span class="answer-text">益甚</span>,<span class="answer-text">自汗</span>,神疲,<br>声音<span class="answer-text">低怯</span>,腰膝酸软,<br>舌淡苔白,脉沉细<span class="answer-text">无力</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">八、防治原则与治疗方法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>207</td>
+                            <td>202. 防治原则<br><span class="blur-text">未病先防</span>,<span class="blur-text">既病防变</span>,<span class="blur-text">病后康复</span>,<br><span class="blur-text">治病求本</span>,<span class="blur-text">调整阴阳</span>,<span class="blur-text">扶正祛邪</span>。</td>
+                            <td>202. 防治原则<br><span class="answer-text">未病先防</span>,<span class="answer-text">既病防变</span>,<span class="answer-text">病后康复</span>,<br><span class="answer-text">治病求本</span>,<span class="answer-text">调整阴阳</span>,<span class="answer-text">扶正祛邪</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>208</td>
+                            <td>203. 正治与反治-正治<br><span class="blur-text">正治</span>(逆治):逆其疾病证候性质而治。<br>寒者<span class="blur-text">热</span>之,热者<span class="blur-text">寒</span>之,<br>虚则<span class="blur-text">补</span>之,实则<span class="blur-text">泻</span>之。</td>
+                            <td>203. 正治与反治-正治<br><span class="answer-text">正治</span>(逆治):逆其疾病证候性质而治。<br>寒者<span class="answer-text">热</span>之,热者<span class="answer-text">寒</span>之,<br>虚则<span class="answer-text">补</span>之,实则<span class="answer-text">泻</span>之。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>209</td>
+                            <td>204. 正治与反治-反治<br><span class="blur-text">反治</span>(从治):顺从疾病假象而治。<br><span class="blur-text">寒因寒用</span>:真热假寒用寒药;<br><span class="blur-text">热因热用</span>:真寒假热用热药;<br><span class="blur-text">塞因塞用</span>、<span class="blur-text">通因通用</span>。</td>
+                            <td>204. 正治与反治-反治<br><span class="answer-text">反治</span>(从治):顺从疾病假象而治。<br><span class="answer-text">寒因寒用</span>:真热假寒用寒药;<br><span class="answer-text">热因热用</span>:真寒假热用热药;<br><span class="answer-text">塞因塞用</span>、<span class="answer-text">通因通用</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>210</td>
+                            <td>205. 同病异治异病同治<br><span class="blur-text">同病异治</span>:同一疾病因病机不同采用不同治法;<br><span class="blur-text">异病同治</span>:不同疾病因病机相同采用相同治法。</td>
+                            <td>205. 同病异治异病同治<br><span class="answer-text">同病异治</span>:同一疾病因病机不同采用不同治法;<br><span class="answer-text">异病同治</span>:不同疾病因病机相同采用相同治法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>211</td>
+                            <td>206. 三因制宜<br><span class="blur-text">因时</span>制宜:根据<span class="blur-text">季节气候</span>特点用药;<br><span class="blur-text">因地</span>制宜:根据<span class="blur-text">地域环境</span>特点用药;<br><span class="blur-text">因人</span>制宜:根据<span class="blur-text">年龄、性别、体质</span>等用药。</td>
+                            <td>206. 三因制宜<br><span class="answer-text">因时</span>制宜:根据<span class="answer-text">季节气候</span>特点用药;<br><span class="answer-text">因地</span>制宜:根据<span class="answer-text">地域环境</span>特点用药;<br><span class="answer-text">因人</span>制宜:根据<span class="answer-text">年龄、性别、体质</span>等用药。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>212</td>
+                            <td>207. 八法-汗法<br><span class="blur-text">汗法</span>(解表法):适用<span class="blur-text">表</span>证。<br>作用:<span class="blur-text">发汗解表</span>,驱邪外出。<br>代表方:<span class="blur-text">麻黄汤</span>(风寒)、<span class="blur-text">银翘散</span>(风热)。</td>
+                            <td>207. 八法-汗法<br><span class="answer-text">汗法</span>(解表法):适用<span class="answer-text">表</span>证。<br>作用:<span class="answer-text">发汗解表</span>,驱邪外出。<br>代表方:<span class="answer-text">麻黄汤</span>(风寒)、<span class="answer-text">银翘散</span>(风热)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>213</td>
+                            <td>208. 八法-下法<br><span class="blur-text">下法</span>(泻下法):适用<span class="blur-text">里实</span>证。<br>作用:通泻<span class="blur-text">大便</span>,攻逐<span class="blur-text">实邪</span>。<br>代表方:<span class="blur-text">大承气汤</span>。</td>
+                            <td>208. 八法-下法<br><span class="answer-text">下法</span>(泻下法):适用<span class="answer-text">里实</span>证。<br>作用:通泻<span class="answer-text">大便</span>,攻逐<span class="answer-text">实邪</span>。<br>代表方:<span class="answer-text">大承气汤</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>214</td>
+                            <td>209. 八法-清法<br><span class="blur-text">清法</span>(清热法):适用<span class="blur-text">热</span>证。<br>作用:清除<span class="blur-text">热邪</span>。<br>代表方:<span class="blur-text">白虎汤</span>(清气分热)、<span class="blur-text">龙胆泻肝汤</span>(清脏腑热)。</td>
+                            <td>209. 八法-清法<br><span class="answer-text">清法</span>(清热法):适用<span class="answer-text">热</span>证。<br>作用:清除<span class="answer-text">热邪</span>。<br>代表方:<span class="answer-text">白虎汤</span>(清气分热)、<span class="answer-text">龙胆泻肝汤</span>(清脏腑热)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>215</td>
+                            <td>210. 八法-消法<br><span class="blur-text">消法</span>(消导法):适用<span class="blur-text">食积</span>内停、气滞血瘀、痰饮水肿。<br>作用:<span class="blur-text">消导积滞</span>、<span class="blur-text">行气化痰</span>、<span class="blur-text">消肿散结</span>。<br>代表方:<span class="blur-text">保和丸</span>。</td>
+                            <td>210. 八法-消法<br><span class="answer-text">消法</span>(消导法):适用<span class="answer-text">食积</span>内停、气滞血瘀、痰饮水肿。<br>作用:<span class="answer-text">消导积滞</span>、<span class="answer-text">行气化痰</span>、<span class="answer-text">消肿散结</span>。<br>代表方:<span class="answer-text">保和丸</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>216</td>
+                            <td>211. 八法-补法<br><span class="blur-text">补法</span>(补益法):适用<span class="blur-text">虚</span>证。<br>补<span class="blur-text">气</span>:四君子汤;补<span class="blur-text">血</span>:四物汤;<br>补<span class="blur-text">阴</span>:六味地黄丸;补<span class="blur-text">阳</span>:肾气丸。</td>
+                            <td>211. 八法-补法<br><span class="answer-text">补法</span>(补益法):适用<span class="answer-text">虚</span>证。<br>补<span class="answer-text">气</span>:四君子汤;补<span class="answer-text">血</span>:四物汤;<br>补<span class="answer-text">阴</span>:六味地黄丸;补<span class="answer-text">阳</span>:肾气丸。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>217</td>
+                            <td>212. 八法-和温<br><span class="blur-text">和法</span>:适用<span class="blur-text">半表半里</span>证、肝脾不和,代表方<span class="blur-text">逍遥散</span>;<br><span class="blur-text">温法</span>:适用<span class="blur-text">寒</span>证,代表方<span class="blur-text">理中丸</span>。</td>
+                            <td>212. 八法-和温<br><span class="answer-text">和法</span>:适用<span class="answer-text">半表半里</span>证、肝脾不和,代表方<span class="answer-text">逍遥散</span>;<br><span class="answer-text">温法</span>:适用<span class="answer-text">寒</span>证,代表方<span class="answer-text">理中丸</span>。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">九、方药学</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>218</td>
+                            <td>213. 四气-寒热<br><span class="blur-text">寒</span>:清热泻火解毒凉血,主治<span class="blur-text">热</span>证,药物:<span class="blur-text">知母</span>、石膏、黄连;<br><span class="blur-text">热</span>:温里散寒回阳救逆,主治<span class="blur-text">寒</span>证,药物:<span class="blur-text">附子</span>、干姜。</td>
+                            <td>213. 四气-寒热<br><span class="answer-text">寒</span>:清热泻火解毒凉血,主治<span class="answer-text">热</span>证,药物:<span class="answer-text">知母</span>、石膏、黄连;<br><span class="answer-text">热</span>:温里散寒回阳救逆,主治<span class="answer-text">寒</span>证,药物:<span class="answer-text">附子</span>、干姜。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>219</td>
+                            <td>214. 四气-温凉<br><span class="blur-text">温</span>:温里散寒温经通络,主治<span class="blur-text">寒</span>证,药物:<span class="blur-text">桂枝</span>;<br><span class="blur-text">凉</span>:清热解暑,主治<span class="blur-text">热</span>证,药物:<span class="blur-text">薄荷</span>。</td>
+                            <td>214. 四气-温凉<br><span class="answer-text">温</span>:温里散寒温经通络,主治<span class="answer-text">寒</span>证,药物:<span class="answer-text">桂枝</span>;<br><span class="answer-text">凉</span>:清热解暑,主治<span class="answer-text">热</span>证,药物:<span class="answer-text">薄荷</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>220</td>
+                            <td>215. 五味-辛甘<br><span class="blur-text">辛</span>:能<span class="blur-text">行</span>能<span class="blur-text">散</span>,行气行血,药物:麻黄、桂枝、生姜;<br><span class="blur-text">甘</span>:能<span class="blur-text">补</span>能<span class="blur-text">缓</span>,补益气血,缓急止痛,药物:人参、甘草、大枣。</td>
+                            <td>215. 五味-辛甘<br><span class="answer-text">辛</span>:能<span class="answer-text">行</span>能<span class="answer-text">散</span>,行气行血,药物:麻黄、桂枝、生姜;<br><span class="answer-text">甘</span>:能<span class="answer-text">补</span>能<span class="answer-text">缓</span>,补益气血,缓急止痛,药物:人参、甘草、大枣。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>221</td>
+                            <td>216. 五味-酸苦咸<br><span class="blur-text">酸</span>:能<span class="blur-text">收</span>能<span class="blur-text">涩</span>,收敛固涩,药物:五味子、山茱萸;<br><span class="blur-text">苦</span>:能<span class="blur-text">泄</span>能<span class="blur-text">燥</span>能<span class="blur-text">坚</span>,药物:黄连、大黄、黄芩;<br><span class="blur-text">咸</span>:能<span class="blur-text">软</span>能<span class="blur-text">下</span>,软坚散结,药物:海藻、昆布、芒硝。</td>
+                            <td>216. 五味-酸苦咸<br><span class="answer-text">酸</span>:能<span class="answer-text">收</span>能<span class="answer-text">涩</span>,收敛固涩,药物:五味子、山茱萸;<br><span class="answer-text">苦</span>:能<span class="answer-text">泄</span>能<span class="answer-text">燥</span>能<span class="answer-text">坚</span>,药物:黄连、大黄、黄芩;<br><span class="answer-text">咸</span>:能<span class="answer-text">软</span>能<span class="answer-text">下</span>,软坚散结,药物:海藻、昆布、芒硝。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>222</td>
+                            <td>217. 升降浮沉<br><span class="blur-text">升</span>:向上升举,药物:<span class="blur-text">升麻</span>、<span class="blur-text">柴胡</span>;<br><span class="blur-text">降</span>:向下降泻,药物:<span class="blur-text">大黄</span>、<span class="blur-text">芒硝</span>;<br><span class="blur-text">浮</span>:向外发散,药物:<span class="blur-text">麻黄</span>、<span class="blur-text">薄荷</span>;<br><span class="blur-text">沉</span>:向内收敛,药物:<span class="blur-text">龙骨</span>、<span class="blur-text">牡蛎</span>。</td>
+                            <td>217. 升降浮沉<br><span class="answer-text">升</span>:向上升举,药物:<span class="answer-text">升麻</span>、<span class="answer-text">柴胡</span>;<br><span class="answer-text">降</span>:向下降泻,药物:<span class="answer-text">大黄</span>、<span class="answer-text">芒硝</span>;<br><span class="answer-text">浮</span>:向外发散,药物:<span class="answer-text">麻黄</span>、<span class="answer-text">薄荷</span>;<br><span class="answer-text">沉</span>:向内收敛,药物:<span class="answer-text">龙骨</span>、<span class="answer-text">牡蛎</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>223</td>
+                            <td>218. 七情-单相须使<br><span class="blur-text">单行</span>:单用一味药;<br><span class="blur-text">相须</span>:两种性能功效<span class="blur-text">相同或相似</span>的药物合用,增强疗效;<br><span class="blur-text">相使</span>:两药合用,一<span class="blur-text">主</span>一<span class="blur-text">辅</span>,辅药提高主药疗效。</td>
+                            <td>218. 七情-单相须使<br><span class="answer-text">单行</span>:单用一味药;<br><span class="answer-text">相须</span>:两种性能功效<span class="answer-text">相同或相似</span>的药物合用,增强疗效;<br><span class="answer-text">相使</span>:两药合用,一<span class="answer-text">主</span>一<span class="answer-text">辅</span>,辅药提高主药疗效。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>224</td>
+                            <td>219. 七情-畏杀恶反<br><span class="blur-text">相畏</span>:一种药的<span class="blur-text">毒副作用</span>被另一种药抑制;<br><span class="blur-text">相杀</span>:一种药能<span class="blur-text">消除</span>另一种药的毒副作用;<br><span class="blur-text">相恶</span>:一种药<span class="blur-text">破坏</span>另一种药的功效;<br><span class="blur-text">相反</span>:两药合用产生<span class="blur-text">毒性</span>反应,配伍<span class="blur-text">禁忌</span>。</td>
+                            <td>219. 七情-畏杀恶反<br><span class="answer-text">相畏</span>:一种药的<span class="answer-text">毒副作用</span>被另一种药抑制;<br><span class="answer-text">相杀</span>:一种药能<span class="answer-text">消除</span>另一种药的毒副作用;<br><span class="answer-text">相恶</span>:一种药<span class="answer-text">破坏</span>另一种药的功效;<br><span class="answer-text">相反</span>:两药合用产生<span class="answer-text">毒性</span>反应,配伍<span class="answer-text">禁忌</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>225</td>
+                            <td>220. 君臣佐使-君臣<br><span class="blur-text">君药</span>:针对<span class="blur-text">主病</span>或主证起<span class="blur-text">主要</span>治疗作用,是方剂的<span class="blur-text">核心</span>;<br><span class="blur-text">臣药</span>:<span class="blur-text">辅助</span>君药加强治疗,或针对<span class="blur-text">重要兼证</span>起治疗作用。</td>
+                            <td>220. 君臣佐使-君臣<br><span class="answer-text">君药</span>:针对<span class="answer-text">主病</span>或主证起<span class="answer-text">主要</span>治疗作用,是方剂的<span class="answer-text">核心</span>;<br><span class="answer-text">臣药</span>:<span class="answer-text">辅助</span>君药加强治疗,或针对<span class="answer-text">重要兼证</span>起治疗作用。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>226</td>
+                            <td>221. 君臣佐使-佐使<br><span class="blur-text">佐药</span>:佐助药/佐制药/反佐药;<br><span class="blur-text">使药</span>:<span class="blur-text">引经</span>药(引导诸药直达病所),<span class="blur-text">调和</span>药(调和诸药)。</td>
+                            <td>221. 君臣佐使-佐使<br><span class="answer-text">佐药</span>:佐助药/佐制药/反佐药;<br><span class="answer-text">使药</span>:<span class="answer-text">引经</span>药(引导诸药直达病所),<span class="answer-text">调和</span>药(调和诸药)。</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3">十、常用中药和方剂</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>227</td>
+                            <td>222. 麻黄桂枝-功效区别<br><span class="blur-text">麻黄</span>:辛温解表,治表<span class="blur-text">实</span><span class="blur-text">无汗</span>,宣肺平喘,利水消肿;<br><span class="blur-text">桂枝</span>:辛温解表,治表<span class="blur-text">虚</span><span class="blur-text">有汗</span>,温通经脉,助阳化气。</td>
+                            <td>222. 麻黄桂枝-功效区别<br><span class="answer-text">麻黄</span>:辛温解表,治表<span class="answer-text">实</span><span class="answer-text">无汗</span>,宣肺平喘,利水消肿;<br><span class="answer-text">桂枝</span>:辛温解表,治表<span class="answer-text">虚</span><span class="answer-text">有汗</span>,温通经脉,助阳化气。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>228</td>
+                            <td>223. 柴胡-功效<br>柴胡功效:<br>①疏风散热→外感<span class="blur-text">风热</span>表证;<br>②和解表里→<span class="blur-text">半表半里</span>证(少阳证);<br>③疏肝解郁→<span class="blur-text">肝气郁结</span>证;<br>④升阳举陷→气虚<span class="blur-text">下陷</span>。</td>
+                            <td>223. 柴胡-功效<br>柴胡功效:<br>①疏风散热→外感<span class="answer-text">风热</span>表证;<br>②和解表里→<span class="answer-text">半表半里</span>证(少阳证);<br>③疏肝解郁→<span class="answer-text">肝气郁结</span>证;<br>④升阳举陷→气虚<span class="answer-text">下陷</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>229</td>
+                            <td>224. 知母-功效<br>知母功效:<br>①清热泻火→肺胃<span class="blur-text">气分</span>实热证;<br>②滋阴降火→<span class="blur-text">阴虚</span>所致的骨蒸潮热;<br>③生津润燥→内热伤津及<span class="blur-text">消渴</span>病。</td>
+                            <td>224. 知母-功效<br>知母功效:<br>①清热泻火→肺胃<span class="answer-text">气分</span>实热证;<br>②滋阴降火→<span class="answer-text">阴虚</span>所致的骨蒸潮热;<br>③生津润燥→内热伤津及<span class="answer-text">消渴</span>病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>230</td>
+                            <td>225. 半夏-功效<br>半夏功效:<br>①温化寒痰→寒饮伏<span class="blur-text">肺</span>;<br>②燥湿化痰→痰湿阻<span class="blur-text">肺</span>;<br>③降逆止呕→<span class="blur-text">呕吐</span>(寒热均可);<br>④消痞散结→<span class="blur-text">梅核气</span>;瘿瘤、痰核。</td>
+                            <td>225. 半夏-功效<br>半夏功效:<br>①温化寒痰→寒饮伏<span class="answer-text">肺</span>;<br>②燥湿化痰→痰湿阻<span class="answer-text">肺</span>;<br>③降逆止呕→<span class="answer-text">呕吐</span>(寒热均可);<br>④消痞散结→<span class="answer-text">梅核气</span>;瘿瘤、痰核。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>231</td>
+                            <td>226. 附子-功效<br>附子功效:<br>①温里助阳→脾胃虚寒证、脾肾<span class="blur-text">阳虚</span>证;<br>②回阳救逆→<span class="blur-text">亡阳</span>证;<br>③祛寒止痛→风寒湿痹、虚寒腹痛、痛经。<br><strong>特别注意:附子有<span class="blur-text">毒</span>,需<span class="blur-text">久煎</span>。</strong></td>
+                            <td>226. 附子-功效<br>附子功效:<br>①温里助阳→脾胃虚寒证、脾肾<span class="answer-text">阳虚</span>证;<br>②回阳救逆→<span class="answer-text">亡阳</span>证;<br>③祛寒止痛→风寒湿痹、虚寒腹痛、痛经。<br><strong>特别注意:附子有<span class="answer-text">毒</span>,需<span class="answer-text">久煎</span>。</strong></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>232</td>
+                            <td>227. 干姜-功效<br>干姜功效:<br>①温里散寒→<span class="blur-text">脾胃</span>虚寒证、胃寒呕吐、肺寒停饮、中寒水泻;<br>②回阳通脉→<span class="blur-text">亡阳</span>证。</td>
+                            <td>227. 干姜-功效<br>干姜功效:<br>①温里散寒→<span class="answer-text">脾胃</span>虚寒证、胃寒呕吐、肺寒停饮、中寒水泻;<br>②回阳通脉→<span class="answer-text">亡阳</span>证。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>233</td>
+                            <td>228. 川芎-功效<br>川芎功效:<br>①活血行<span class="blur-text">气</span>→气滞血瘀之疼痛;<br>②祛风止痛→风寒湿痹证、<span class="blur-text">头痛</span>。</td>
+                            <td>228. 川芎-功效<br>川芎功效:<br>①活血行<span class="answer-text">气</span>→气滞血瘀之疼痛;<br>②祛风止痛→风寒湿痹证、<span class="answer-text">头痛</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>234</td>
+                            <td>229. 三七-功效<br>三七功效:<br>①散瘀<span class="blur-text">止血</span>→各种出血证;<br>②消肿定痛→跌打损伤、<span class="blur-text">痈疽</span>肿痛。</td>
+                            <td>229. 三七-功效<br>三七功效:<br>①散瘀<span class="answer-text">止血</span>→各种出血证;<br>②消肿定痛→跌打损伤、<span class="answer-text">痈疽</span>肿痛。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>235</td>
+                            <td>230. 黄芪-功效<br>黄芪功效:<br>①补气<span class="blur-text">升阳</span>→中气<span class="blur-text">下陷</span>证(蜜炙);<br>②益气<span class="blur-text">固表</span>→气虚<span class="blur-text">自汗</span>(玉屏风散);<br>③健脾利水→脾虚<span class="blur-text">水肿</span>(生用);<br>④益气活血→气虚血瘀;<br>⑤托毒排脓→气血不足,脓成不溃或疮疡溃后久不收口(生用)。</td>
+                            <td>230. 黄芪-功效<br>黄芪功效:<br>①补气<span class="answer-text">升阳</span>→中气<span class="answer-text">下陷</span>证(蜜炙);<br>②益气<span class="answer-text">固表</span>→气虚<span class="answer-text">自汗</span>(玉屏风散);<br>③健脾利水→脾虚<span class="answer-text">水肿</span>(生用);<br>④益气活血→气虚血瘀;<br>⑤托毒排脓→气血不足,脓成不溃或疮疡溃后久不收口(生用)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>236</td>
+                            <td>231. 当归-功效<br>当归功效:<br>①补血调经→血虚证:贫血、月经不调(归<span class="blur-text">身</span>);<br>②活血止痛→瘀血证:跌打损伤、寒凝痹痛(归<span class="blur-text">尾</span>);<br>③润肠通便→血虚津亏所致肠燥<span class="blur-text">便秘</span>。</td>
+                            <td>231. 当归-功效<br>当归功效:<br>①补血调经→血虚证:贫血、月经不调(归<span class="answer-text">身</span>);<br>②活血止痛→瘀血证:跌打损伤、寒凝痹痛(归<span class="answer-text">尾</span>);<br>③润肠通便→血虚津亏所致肠燥<span class="answer-text">便秘</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>237</td>
+                            <td>232. 麻黄汤-组成<br>麻黄汤组成:<br><span class="blur-text">麻黄</span>(君)、<span class="blur-text">桂枝</span>(臣)、<span class="blur-text">杏仁</span>(佐)、<span class="blur-text">甘草</span>(使)。</td>
+                            <td>232. 麻黄汤-组成<br>麻黄汤组成:<br><span class="answer-text">麻黄</span>(君)、<span class="answer-text">桂枝</span>(臣)、<span class="answer-text">杏仁</span>(佐)、<span class="answer-text">甘草</span>(使)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>238</td>
+                            <td>233. 麻黄汤-功效主治<br>功效:<span class="blur-text">发汗解表</span>,<span class="blur-text">宣肺平喘</span>。<br>主治:风寒表<span class="blur-text">实</span>证。<br>辨证要点:<span class="blur-text">恶寒发热</span>、<span class="blur-text">无汗</span>而<span class="blur-text">喘</span>。</td>
+                            <td>233. 麻黄汤-功效主治<br>功效:<span class="answer-text">发汗解表</span>,<span class="answer-text">宣肺平喘</span>。<br>主治:风寒表<span class="answer-text">实</span>证。<br>辨证要点:<span class="answer-text">恶寒发热</span>、<span class="answer-text">无汗</span>而<span class="answer-text">喘</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>239</td>
+                            <td>234. 银翘散-组成(1)<br>银翘散组成:<br><span class="blur-text">金银花</span>、<span class="blur-text">连翘</span>(君),<br><span class="blur-text">薄荷</span>、<span class="blur-text">牛蒡子</span>、荆芥、淡豆豉(臣)。</td>
+                            <td>234. 银翘散-组成(1)<br>银翘散组成:<br><span class="answer-text">金银花</span>、<span class="answer-text">连翘</span>(君),<br><span class="answer-text">薄荷</span>、<span class="answer-text">牛蒡子</span>、荆芥、淡豆豉(臣)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>240</td>
+                            <td>235. 银翘散-组成(2)<br>银翘散组成(续):<br>芦根、竹叶、<span class="blur-text">桔梗</span>、甘草(佐使)。</td>
+                            <td>235. 银翘散-组成(2)<br>银翘散组成(续):<br>芦根、竹叶、<span class="answer-text">桔梗</span>、甘草(佐使)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>241</td>
+                            <td>236. 银翘散-功效主治<br>功效:<span class="blur-text">辛凉解表</span>,<span class="blur-text">清热解毒</span>。<br>主治:风热表证、温病初起的<span class="blur-text">卫分</span>证。<br>辨证要点:发热微恶风寒,无汗或汗不多,头痛口渴,咽痛咳嗽。</td>
+                            <td>236. 银翘散-功效主治<br>功效:<span class="answer-text">辛凉解表</span>,<span class="answer-text">清热解毒</span>。<br>主治:风热表证、温病初起的<span class="answer-text">卫分</span>证。<br>辨证要点:发热微恶风寒,无汗或汗不多,头痛口渴,咽痛咳嗽。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>242</td>
+                            <td>237. 白虎汤-组成功效<br>组成:<span class="blur-text">石膏</span>(君)、<span class="blur-text">知母</span>(臣)、粳米、甘草(佐使)。<br>功效:<span class="blur-text">清热泻火</span>,<span class="blur-text">生津止渴</span>。<br>主治:<span class="blur-text">气分</span>热盛证。<br>辨证要点:<span class="blur-text">壮热</span>、<span class="blur-text">烦渴</span>、<span class="blur-text">大汗</span>、脉<span class="blur-text">洪大</span>。</td>
+                            <td>237. 白虎汤-组成功效<br>组成:<span class="answer-text">石膏</span>(君)、<span class="answer-text">知母</span>(臣)、粳米、甘草(佐使)。<br>功效:<span class="answer-text">清热泻火</span>,<span class="answer-text">生津止渴</span>。<br>主治:<span class="answer-text">气分</span>热盛证。<br>辨证要点:<span class="answer-text">壮热</span>、<span class="answer-text">烦渴</span>、<span class="answer-text">大汗</span>、脉<span class="answer-text">洪大</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>243</td>
+                            <td>238. 龙胆泻肝汤-组成<br>龙胆泻肝汤组成:<br><span class="blur-text">龙胆草</span>、<span class="blur-text">黄芩</span>、<span class="blur-text">栀子</span>、生地、木通、<br>当归、柴胡、泽泻、车前子、甘草。</td>
+                            <td>238. 龙胆泻肝汤-组成<br>龙胆泻肝汤组成:<br><span class="answer-text">龙胆草</span>、<span class="answer-text">黄芩</span>、<span class="answer-text">栀子</span>、生地、木通、<br>当归、柴胡、泽泻、车前子、甘草。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>244</td>
+                            <td>239. 龙胆泻肝汤-功效主治<br>功效:清<span class="blur-text">肝胆</span>实火,泻<span class="blur-text">下焦</span>湿热。<br>主治:肝胆实火<span class="blur-text">上炎</span>证;肝胆湿热<span class="blur-text">下注</span>证。</td>
+                            <td>239. 龙胆泻肝汤-功效主治<br>功效:清<span class="answer-text">肝胆</span>实火,泻<span class="answer-text">下焦</span>湿热。<br>主治:肝胆实火<span class="answer-text">上炎</span>证;肝胆湿热<span class="answer-text">下注</span>证。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>245</td>
+                            <td>240. 逍遥散-组成<br>逍遥散组成:<br><span class="blur-text">柴胡</span>、<span class="blur-text">当归</span>、<span class="blur-text">白芍</span>、<span class="blur-text">白术</span>、<span class="blur-text">茯苓</span>、<br>甘草、<span class="blur-text">薄荷</span>、煨姜。</td>
+                            <td>240. 逍遥散-组成<br>逍遥散组成:<br><span class="answer-text">柴胡</span>、<span class="answer-text">当归</span>、<span class="answer-text">白芍</span>、<span class="answer-text">白术</span>、<span class="answer-text">茯苓</span>、<br>甘草、<span class="answer-text">薄荷</span>、煨姜。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>246</td>
+                            <td>241. 逍遥散-功效主治<br>功效:<span class="blur-text">疏肝解郁</span>,<span class="blur-text">养血健脾</span>。<br>主治:<span class="blur-text">肝郁脾虚</span>证。<br>辨证要点:<span class="blur-text">胁痛</span>、<span class="blur-text">嗳气</span>、神疲<span class="blur-text">食少</span>。</td>
+                            <td>241. 逍遥散-功效主治<br>功效:<span class="answer-text">疏肝解郁</span>,<span class="answer-text">养血健脾</span>。<br>主治:<span class="answer-text">肝郁脾虚</span>证。<br>辨证要点:<span class="answer-text">胁痛</span>、<span class="answer-text">嗳气</span>、神疲<span class="answer-text">食少</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>247</td>
+                            <td>242. 大承气汤-组成功效<br>组成:<span class="blur-text">大黄</span>(君)、<span class="blur-text">芒硝</span>(臣)、枳实、厚朴(佐使)。<br>功效:<span class="blur-text">峻下热结</span>。<br>主治:阳明<span class="blur-text">腑实</span>证。<br>辨证要点:<span class="blur-text">便秘</span>、腹<span class="blur-text">胀</span>、口干、脉<span class="blur-text">实</span>。</td>
+                            <td>242. 大承气汤-组成功效<br>组成:<span class="answer-text">大黄</span>(君)、<span class="answer-text">芒硝</span>(臣)、枳实、厚朴(佐使)。<br>功效:<span class="answer-text">峻下热结</span>。<br>主治:阳明<span class="answer-text">腑实</span>证。<br>辨证要点:<span class="answer-text">便秘</span>、腹<span class="answer-text">胀</span>、口干、脉<span class="answer-text">实</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>248</td>
+                            <td>243. 藿香正气散-组成(1)<br>藿香正气散组成:<br><span class="blur-text">藿香</span>(君),<br>紫苏、白芷、<span class="blur-text">半夏</span>、<span class="blur-text">陈皮</span>(臣)。</td>
+                            <td>243. 藿香正气散-组成(1)<br>藿香正气散组成:<br><span class="answer-text">藿香</span>(君),<br>紫苏、白芷、<span class="answer-text">半夏</span>、<span class="answer-text">陈皮</span>(臣)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>249</td>
+                            <td>244. 藿香正气散-组成(2)功效<br>白术、茯苓、厚朴、大腹皮、桔梗(佐),甘草(使)。<br>功效:<span class="blur-text">解表化湿</span>,<span class="blur-text">理气和中</span>。<br>主治:外感<span class="blur-text">风寒</span>,内伤<span class="blur-text">湿滞</span>。</td>
+                            <td>244. 藿香正气散-组成(2)功效<br>白术、茯苓、厚朴、大腹皮、桔梗(佐),甘草(使)。<br>功效:<span class="answer-text">解表化湿</span>,<span class="answer-text">理气和中</span>。<br>主治:外感<span class="answer-text">风寒</span>,内伤<span class="answer-text">湿滞</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>250</td>
+                            <td>245. 二陈汤-组成功效<br>组成:制<span class="blur-text">半夏</span>、<span class="blur-text">橘红</span>、<span class="blur-text">茯苓</span>、炙甘草、生姜、乌梅。<br>功效:<span class="blur-text">燥湿化痰</span>,<span class="blur-text">理气和中</span>。<br>主治:<span class="blur-text">湿痰</span>咳嗽。<br>辨证要点:痰多色<span class="blur-text">白</span>易咯,胸膈胀满,恶心呕吐,苔<span class="blur-text">白腻</span>。</td>
+                            <td>245. 二陈汤-组成功效<br>组成:制<span class="answer-text">半夏</span>、<span class="answer-text">橘红</span>、<span class="answer-text">茯苓</span>、炙甘草、生姜、乌梅。<br>功效:<span class="answer-text">燥湿化痰</span>,<span class="answer-text">理气和中</span>。<br>主治:<span class="answer-text">湿痰</span>咳嗽。<br>辨证要点:痰多色<span class="answer-text">白</span>易咯,胸膈胀满,恶心呕吐,苔<span class="answer-text">白腻</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>251</td>
+                            <td>246. 理中丸-组成功效<br>组成:<span class="blur-text">干姜</span>、<span class="blur-text">人参</span>、<span class="blur-text">白术</span>、炙甘草。<br>功效:<span class="blur-text">温中祛寒</span>,<span class="blur-text">补气健脾</span>。<br>主治:<span class="blur-text">脾胃虚寒</span>证。<br>辨证要点:脘腹冷痛,<span class="blur-text">喜暖</span><span class="blur-text">喜按</span>,便溏,呕吐食少。</td>
+                            <td>246. 理中丸-组成功效<br>组成:<span class="answer-text">干姜</span>、<span class="answer-text">人参</span>、<span class="answer-text">白术</span>、炙甘草。<br>功效:<span class="answer-text">温中祛寒</span>,<span class="answer-text">补气健脾</span>。<br>主治:<span class="answer-text">脾胃虚寒</span>证。<br>辨证要点:脘腹冷痛,<span class="answer-text">喜暖</span><span class="answer-text">喜按</span>,便溏,呕吐食少。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>252</td>
+                            <td>247. 越鞠丸-组成功效<br>组成:<span class="blur-text">香附</span>(气)、<span class="blur-text">川芎</span>(血)、<span class="blur-text">苍术</span>(痰、湿)、<br><span class="blur-text">神曲</span>(食)、<span class="blur-text">栀子</span>(火)。<br>功效:<span class="blur-text">行气解郁</span>。<br>主治:气、血、火、湿、痰、食<span class="blur-text">六郁</span>证,以<span class="blur-text">气郁</span>为主。</td>
+                            <td>247. 越鞠丸-组成功效<br>组成:<span class="answer-text">香附</span>(气)、<span class="answer-text">川芎</span>(血)、<span class="answer-text">苍术</span>(痰、湿)、<br><span class="answer-text">神曲</span>(食)、<span class="answer-text">栀子</span>(火)。<br>功效:<span class="answer-text">行气解郁</span>。<br>主治:气、血、火、湿、痰、食<span class="answer-text">六郁</span>证,以<span class="answer-text">气郁</span>为主。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>253</td>
+                            <td>248. 四君子汤-组成<br>四君子汤组成:<br><span class="blur-text">人参</span>、<span class="blur-text">白术</span>、<span class="blur-text">茯苓</span>、炙<span class="blur-text">甘草</span>。</td>
+                            <td>248. 四君子汤-组成<br>四君子汤组成:<br><span class="answer-text">人参</span>、<span class="answer-text">白术</span>、<span class="answer-text">茯苓</span>、炙<span class="answer-text">甘草</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>254</td>
+                            <td>249. 四君子汤-功效主治<br>功效:<span class="blur-text">益气健脾</span>。<br>主治:<span class="blur-text">脾胃气虚</span>证。<br>辨证要点:面色<span class="blur-text">萎白</span>,语声<span class="blur-text">低微</span>,气短乏力,<br>食少便<span class="blur-text">溏</span>,舌淡苔白,脉<span class="blur-text">虚弱</span>。</td>
+                            <td>249. 四君子汤-功效主治<br>功效:<span class="answer-text">益气健脾</span>。<br>主治:<span class="answer-text">脾胃气虚</span>证。<br>辨证要点:面色<span class="answer-text">萎白</span>,语声<span class="answer-text">低微</span>,气短乏力,<br>食少便<span class="answer-text">溏</span>,舌淡苔白,脉<span class="answer-text">虚弱</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>255</td>
+                            <td>250. 四物汤-组成功效<br>组成:<span class="blur-text">熟地</span>(君)、<span class="blur-text">当归</span>(臣)、白芍、川芎(佐使)。<br>功效:<span class="blur-text">养血调经</span>。<br>主治:冲任虚损,<span class="blur-text">血虚</span>血滞证。<br>辨证要点:心悸失眠,头晕目眩,面色<span class="blur-text">无华</span>,月经<span class="blur-text">不调</span>。</td>
+                            <td>250. 四物汤-组成功效<br>组成:<span class="answer-text">熟地</span>(君)、<span class="answer-text">当归</span>(臣)、白芍、川芎(佐使)。<br>功效:<span class="answer-text">养血调经</span>。<br>主治:冲任虚损,<span class="answer-text">血虚</span>血滞证。<br>辨证要点:心悸失眠,头晕目眩,面色<span class="answer-text">无华</span>,月经<span class="answer-text">不调</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>256</td>
+                            <td>251. 六味地黄丸-组成(三补三泻)<br>六味地黄丸组成:<br><span class="blur-text">熟地</span>、<span class="blur-text">山萸肉</span>、<span class="blur-text">山药</span>(三补:补肾肝脾);<br><span class="blur-text">茯苓</span>、<span class="blur-text">泽泻</span>、<span class="blur-text">牡丹皮</span>(三泻:泻肾浊、渗脾湿、清肝火)。</td>
+                            <td>251. 六味地黄丸-组成(三补三泻)<br>六味地黄丸组成:<br><span class="answer-text">熟地</span>、<span class="answer-text">山萸肉</span>、<span class="answer-text">山药</span>(三补:补肾肝脾);<br><span class="answer-text">茯苓</span>、<span class="answer-text">泽泻</span>、<span class="answer-text">牡丹皮</span>(三泻:泻肾浊、渗脾湿、清肝火)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>257</td>
+                            <td>252. 六味地黄丸-功效主治<br>功效:<span class="blur-text">滋补肝肾</span>。<br>主治:<span class="blur-text">肝肾阴虚</span>证。<br>辨证要点:腰膝<span class="blur-text">酸软</span>,头晕目眩,耳鸣耳聋,<br><span class="blur-text">盗汗</span>,遗精,消渴,手足心<span class="blur-text">热</span>,<br>舌红<span class="blur-text">少苔</span>,脉沉细<span class="blur-text">数</span>。</td>
+                            <td>252. 六味地黄丸-功效主治<br>功效:<span class="answer-text">滋补肝肾</span>。<br>主治:<span class="answer-text">肝肾阴虚</span>证。<br>辨证要点:腰膝<span class="answer-text">酸软</span>,头晕目眩,耳鸣耳聋,<br><span class="answer-text">盗汗</span>,遗精,消渴,手足心<span class="answer-text">热</span>,<br>舌红<span class="answer-text">少苔</span>,脉沉细<span class="answer-text">数</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>258</td>
+                            <td>253. 保和丸-组成功效<br>组成:<span class="blur-text">山楂</span>、<span class="blur-text">神曲</span>、半夏、茯苓、陈皮、连翘、莱菔子。<br>功效:<span class="blur-text">消食导滞</span>,<span class="blur-text">理气和胃</span>。<br>主治:<span class="blur-text">食积</span>内停。<br>辨证要点:脘腹<span class="blur-text">胀痛</span>,<span class="blur-text">嗳腐</span>吞酸,呕吐食物,苔<span class="blur-text">厚腻</span>。</td>
+                            <td>253. 保和丸-组成功效<br>组成:<span class="answer-text">山楂</span>、<span class="answer-text">神曲</span>、半夏、茯苓、陈皮、连翘、莱菔子。<br>功效:<span class="answer-text">消食导滞</span>,<span class="answer-text">理气和胃</span>。<br>主治:<span class="answer-text">食积</span>内停。<br>辨证要点:脘腹<span class="answer-text">胀痛</span>,<span class="answer-text">嗳腐</span>吞酸,呕吐食物,苔<span class="answer-text">厚腻</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>259</td>
+                            <td>254. 五苓散-组成功效<br>组成:<span class="blur-text">猪苓</span>、<span class="blur-text">茯苓</span>、<span class="blur-text">泽泻</span>、<span class="blur-text">白术</span>、<span class="blur-text">桂枝</span>。<br>功效:<span class="blur-text">利水渗湿</span>,<span class="blur-text">温阳化气</span>。<br>主治:膀胱<span class="blur-text">气化不利</span>,水湿内停。<br>辨证要点:小便<span class="blur-text">不利</span>,水肿,泄泻。</td>
+                            <td>254. 五苓散-组成功效<br>组成:<span class="answer-text">猪苓</span>、<span class="answer-text">茯苓</span>、<span class="answer-text">泽泻</span>、<span class="answer-text">白术</span>、<span class="answer-text">桂枝</span>。<br>功效:<span class="answer-text">利水渗湿</span>,<span class="answer-text">温阳化气</span>。<br>主治:膀胱<span class="answer-text">气化不利</span>,水湿内停。<br>辨证要点:小便<span class="answer-text">不利</span>,水肿,泄泻。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>260</td>
+                            <td>255. 病案分析-答题步骤<br>病案分析答题步骤(按顺序):<br>①<span class="blur-text">辨证分析</span>(症候分析);<br>②<span class="blur-text">证型诊断</span>;<br>③<span class="blur-text">治法</span>治则;<br>④<span class="blur-text">方药</span>选择;<br>⑤<span class="blur-text">方剂组成</span>(即使不确定也要写!)。</td>
+                            <td>255. 病案分析-答题步骤<br>病案分析答题步骤(按顺序):<br>①<span class="answer-text">辨证分析</span>(症候分析);<br>②<span class="answer-text">证型诊断</span>;<br>③<span class="answer-text">治法</span>治则;<br>④<span class="answer-text">方药</span>选择;<br>⑤<span class="answer-text">方剂组成</span>(即使不确定也要写!)。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>261</td>
+                            <td>256. 病案分析-重要提醒<br><strong>重要提醒:</strong><br>①不要留<span class="blur-text">空白</span>!只要写了相关内容就可能得分;<br>②方剂组成即使只记得<span class="blur-text">一两味药</span>也要写上;<br>③代表性药物指的是<span class="blur-text">君药</span>或最有特色的药物;<br>④不需要写药物<span class="blur-text">剂量</span>。</td>
+                            <td>256. 病案分析-重要提醒<br><strong>重要提醒:</strong><br>①不要留<span class="answer-text">空白</span>!只要写了相关内容就可能得分;<br>②方剂组成即使只记得<span class="answer-text">一两味药</span>也要写上;<br>③代表性药物指的是<span class="answer-text">君药</span>或最有特色的药物;<br>④不需要写药物<span class="answer-text">剂量</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>262</td>
+                            <td>257. 病案分析-代表性药物举例<br>方剂代表性药物(至少要写的):<br>二陈汤→<span class="blur-text">陈皮</span>、半夏;<br>四君子汤→<span class="blur-text">人参</span>、白术;<br>麻黄汤→<span class="blur-text">麻黄</span>、桂枝;<br>六味地黄丸→<span class="blur-text">熟地黄</span>。</td>
+                            <td>257. 病案分析-代表性药物举例<br>方剂代表性药物(至少要写的):<br>二陈汤→<span class="answer-text">陈皮</span>、半夏;<br>四君子汤→<span class="answer-text">人参</span>、白术;<br>麻黄汤→<span class="answer-text">麻黄</span>、桂枝;<br>六味地黄丸→<span class="answer-text">熟地黄</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

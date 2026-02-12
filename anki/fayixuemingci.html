@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">法医学名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>法医学(Forensic medicine)</strong><br>是一门应用<span class="blur-text">医学</span>、<span class="blur-text">生物学</span>以及其他自然学科理论、知识和技术,解决与<span class="blur-text">法律</span>有关的医学问题的学科。</td>
+                            <td>1.. <strong>法医学(Forensic medicine)</strong><br>是一门应用<span class="answer-text">医学</span>、<span class="answer-text">生物学</span>以及其他自然学科理论、知识和技术,解决与<span class="answer-text">法律</span>有关的医学问题的学科。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>鉴定</strong><br>为了查明案情,解决案件中的某些专门性问题,要求依据<span class="blur-text">专门的知识与技能</span>提出科学的证明或判定。</td>
+                            <td>2.. <strong>鉴定</strong><br>为了查明案情,解决案件中的某些专门性问题,要求依据<span class="answer-text">专门的知识与技能</span>提出科学的证明或判定。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>法医学鉴定</strong><br>法医鉴定人应用<span class="blur-text">法医学</span>和<span class="blur-text">医学</span>理论与技术,对有关法医学问题进行鉴别和诊断。如<span class="blur-text">死因</span>、<span class="blur-text">个人识别</span>、<span class="blur-text">损伤程度</span>。</td>
+                            <td>3.. <strong>法医学鉴定</strong><br>法医鉴定人应用<span class="answer-text">法医学</span>和<span class="answer-text">医学</span>理论与技术,对有关法医学问题进行鉴别和诊断。如<span class="answer-text">死因</span>、<span class="answer-text">个人识别</span>、<span class="answer-text">损伤程度</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>补充鉴定</strong><br>若委托单位认为鉴定人所做的鉴定<span class="blur-text">依据不足</span>,<span class="blur-text">理由不充分</span>,或是被告人提出新的问题和材料,委托单位可将新发现的材料及全部案件资料一并交给原鉴定人,要求鉴定人对原鉴定再次进行<span class="blur-text">修改</span>、<span class="blur-text">补充</span>和回答新提出的问题。</td>
+                            <td>4.. <strong>补充鉴定</strong><br>若委托单位认为鉴定人所做的鉴定<span class="answer-text">依据不足</span>,<span class="answer-text">理由不充分</span>,或是被告人提出新的问题和材料,委托单位可将新发现的材料及全部案件资料一并交给原鉴定人,要求鉴定人对原鉴定再次进行<span class="answer-text">修改</span>、<span class="answer-text">补充</span>和回答新提出的问题。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>重新鉴定</strong><br>对原鉴定有争议或几个鉴定人意见不一致时,另外聘请<span class="blur-text">高一级</span>的鉴定人或<span class="blur-text">其他专家</span>进行鉴定。</td>
+                            <td>5.. <strong>重新鉴定</strong><br>对原鉴定有争议或几个鉴定人意见不一致时,另外聘请<span class="answer-text">高一级</span>的鉴定人或<span class="answer-text">其他专家</span>进行鉴定。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>复核鉴定</strong><br>由原鉴定单位或上级单位<span class="blur-text">职称更高</span>的专家,对原案材料进行复查、论证后所得的结论。</td>
+                            <td>6.. <strong>复核鉴定</strong><br>由原鉴定单位或上级单位<span class="answer-text">职称更高</span>的专家,对原案材料进行复查、论证后所得的结论。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>死亡(death)</strong><br>个体<span class="blur-text">生命功能</span>的永久终止。表现:<span class="blur-text">呼吸</span>、<span class="blur-text">心跳</span>与<span class="blur-text">新陈代谢</span>停止,意识丧失等。</td>
+                            <td>7.. <strong>死亡(death)</strong><br>个体<span class="answer-text">生命功能</span>的永久终止。表现:<span class="answer-text">呼吸</span>、<span class="answer-text">心跳</span>与<span class="answer-text">新陈代谢</span>停止,意识丧失等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>脑死亡(brain death)</strong><br>指<span class="blur-text">大脑</span>、<span class="blur-text">小脑</span>和<span class="blur-text">脑干</span>等全脑功能不可逆转的永久性丧失。</td>
+                            <td>8.. <strong>脑死亡(brain death)</strong><br>指<span class="answer-text">大脑</span>、<span class="answer-text">小脑</span>和<span class="answer-text">脑干</span>等全脑功能不可逆转的永久性丧失。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>超生反应(supravital reaction)</strong><br>临床死亡期后,在一定时间内组织细胞仍保持着<span class="blur-text">生命功能</span>和对外界刺激发生的<span class="blur-text">低级</span>、<span class="blur-text">原始性</span>的反应。意义:推断<span class="blur-text">死亡时间</span>。</td>
+                            <td>9.. <strong>超生反应(supravital reaction)</strong><br>临床死亡期后,在一定时间内组织细胞仍保持着<span class="answer-text">生命功能</span>和对外界刺激发生的<span class="answer-text">低级</span>、<span class="answer-text">原始性</span>的反应。意义:推断<span class="answer-text">死亡时间</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>假死(apparent death)</strong><br>生命活动处于<span class="blur-text">极度微弱</span>状态,未做仔细检查难以发现生命体征的存在,貌似已死亡。</td>
+                            <td>10.. <strong>假死(apparent death)</strong><br>生命活动处于<span class="answer-text">极度微弱</span>状态,未做仔细检查难以发现生命体征的存在,貌似已死亡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>暴力性死亡(violent death)</strong><br>又称<span class="blur-text">非自然性死</span>,指蓄意、过失或意外等各种非自然因素作用导致的死亡,例如各种<span class="blur-text">伤害案件</span>、<span class="blur-text">中毒案件</span>、<span class="blur-text">医疗事故</span>等,均涉及刑法、民法和行政法规等要求追究刑事责任的事件或情况。</td>
+                            <td>11.. <strong>暴力性死亡(violent death)</strong><br>又称<span class="answer-text">非自然性死</span>,指蓄意、过失或意外等各种非自然因素作用导致的死亡,例如各种<span class="answer-text">伤害案件</span>、<span class="answer-text">中毒案件</span>、<span class="answer-text">医疗事故</span>等,均涉及刑法、民法和行政法规等要求追究刑事责任的事件或情况。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>尸冷(algor mortis)</strong><br>人死亡后,新陈代谢停止、<span class="blur-text">产热停止</span>而<span class="blur-text">散热继续</span>,尸体温度逐渐降低的现象。</td>
+                            <td>12.. <strong>尸冷(algor mortis)</strong><br>人死亡后,新陈代谢停止、<span class="answer-text">产热停止</span>而<span class="answer-text">散热继续</span>,尸体温度逐渐降低的现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>尸斑(livor mortis)</strong><br>人死后血液循环停止,血液受<span class="blur-text">重力</span>的影响下沉到尸体的底下部位,坠积在<span class="blur-text">未受压部位</span>的血管中,并透过皮肤显示出边缘不清的有色斑痕。</td>
+                            <td>13.. <strong>尸斑(livor mortis)</strong><br>人死后血液循环停止,血液受<span class="answer-text">重力</span>的影响下沉到尸体的底下部位,坠积在<span class="answer-text">未受压部位</span>的血管中,并透过皮肤显示出边缘不清的有色斑痕。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>肌肉弛缓(muscular flaccidity)</strong><br>人死后<span class="blur-text">肌张力消失</span>,肢体变软称肌肉松弛,表现为尸体瞳孔散大,眼、口微张,四肢易屈曲、肌肉松弛,大小便、精液溢出。</td>
+                            <td>14.. <strong>肌肉弛缓(muscular flaccidity)</strong><br>人死后<span class="answer-text">肌张力消失</span>,肢体变软称肌肉松弛,表现为尸体瞳孔散大,眼、口微张,四肢易屈曲、肌肉松弛,大小便、精液溢出。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>尸体痉挛(cadaveric spasm)</strong><br>人死后肌肉未经过松弛而直接发生<span class="blur-text">僵硬</span>,将尸体固定于<span class="blur-text">死亡时状态</span>。</td>
+                            <td>15.. <strong>尸体痉挛(cadaveric spasm)</strong><br>人死后肌肉未经过松弛而直接发生<span class="answer-text">僵硬</span>,将尸体固定于<span class="answer-text">死亡时状态</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>尸僵(rigor mortis)</strong><br>死后各肌群发生<span class="blur-text">僵硬</span>,使关节固定,尸体呈僵直状态。</td>
+                            <td>16.. <strong>尸僵(rigor mortis)</strong><br>死后各肌群发生<span class="answer-text">僵硬</span>,使关节固定,尸体呈僵直状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>自溶(autolysis)</strong><br>人死后,组织细胞因自身<span class="blur-text">水解酶</span>的作用而发生细胞结构的破坏,因而各器官<span class="blur-text">软化</span>甚至<span class="blur-text">液化</span>。</td>
+                            <td>17.. <strong>自溶(autolysis)</strong><br>人死后,组织细胞因自身<span class="answer-text">水解酶</span>的作用而发生细胞结构的破坏,因而各器官<span class="answer-text">软化</span>甚至<span class="answer-text">液化</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>自身消化</strong><br>尸体组织细胞中因自身<span class="blur-text">消化液中酶</span>的作用而溶解的现象,常发生<span class="blur-text">胃肠</span>,<span class="blur-text">胆囊</span>等,可使器官变软、薄穿孔。</td>
+                            <td>18.. <strong>自身消化</strong><br>尸体组织细胞中因自身<span class="answer-text">消化液中酶</span>的作用而溶解的现象,常发生<span class="answer-text">胃肠</span>,<span class="answer-text">胆囊</span>等,可使器官变软、薄穿孔。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>角膜混浊(turbidity of cornea)</strong><br>人死后角膜逐渐失去<span class="blur-text">透明性</span>,变得浑浊、灰白,最后不能透视瞳孔的现象。</td>
+                            <td>19.. <strong>角膜混浊(turbidity of cornea)</strong><br>人死后角膜逐渐失去<span class="answer-text">透明性</span>,变得浑浊、灰白,最后不能透视瞳孔的现象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>腐败(putrefaction)</strong><br>尸体软组织中的<span class="blur-text">蛋白质</span>等大分子物质,在<span class="blur-text">腐败细菌</span>作用下发生水解的过程。结局是尸体的<span class="blur-text">白骨化</span>。</td>
+                            <td>20.. <strong>腐败(putrefaction)</strong><br>尸体软组织中的<span class="answer-text">蛋白质</span>等大分子物质,在<span class="answer-text">腐败细菌</span>作用下发生水解的过程。结局是尸体的<span class="answer-text">白骨化</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>干尸(木乃伊,mummy)</strong><br>因尸体及内脏中的<span class="blur-text">水分急速丧失</span>,而使软组织皱缩和干燥的尸体。</td>
+                            <td>21.. <strong>干尸(木乃伊,mummy)</strong><br>因尸体及内脏中的<span class="answer-text">水分急速丧失</span>,而使软组织皱缩和干燥的尸体。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>尸蜡(adipocere)</strong><br>尸体脂肪组织因<span class="blur-text">皂化</span>、<span class="blur-text">氢化</span>形成暗黄色或白色的腊样物质。常见于脂肪丰富的部位:<span class="blur-text">腹部</span>、<span class="blur-text">面部</span>、<span class="blur-text">臀部</span>、<span class="blur-text">乳房</span>、<span class="blur-text">大腿</span>等。</td>
+                            <td>22.. <strong>尸蜡(adipocere)</strong><br>尸体脂肪组织因<span class="answer-text">皂化</span>、<span class="answer-text">氢化</span>形成暗黄色或白色的腊样物质。常见于脂肪丰富的部位:<span class="answer-text">腹部</span>、<span class="answer-text">面部</span>、<span class="answer-text">臀部</span>、<span class="answer-text">乳房</span>、<span class="answer-text">大腿</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>Tardieu's 斑</strong><br>机械性窒息时<span class="blur-text">心外膜</span>和<span class="blur-text">肺胸膜</span>的点状出血,系血管壁通透性增高或血管内压升高致血管破裂所致,对<span class="blur-text">窒息的鉴定</span>有一定的价值。</td>
+                            <td>23.. <strong>Tardieu's 斑</strong><br>机械性窒息时<span class="answer-text">心外膜</span>和<span class="answer-text">肺胸膜</span>的点状出血,系血管壁通透性增高或血管内压升高致血管破裂所致,对<span class="answer-text">窒息的鉴定</span>有一定的价值。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>缢死(hanging)</strong><br>以<span class="blur-text">索状物</span>缠绕颈部,利用全部或部分自身体重使颈部受压<span class="blur-text">窒息死亡</span>,缢死多为<span class="blur-text">自杀</span>,意外罕见,但偶有他杀后悬尸伪装缢死的案例报道。</td>
+                            <td>24.. <strong>缢死(hanging)</strong><br>以<span class="answer-text">索状物</span>缠绕颈部,利用全部或部分自身体重使颈部受压<span class="answer-text">窒息死亡</span>,缢死多为<span class="answer-text">自杀</span>,意外罕见,但偶有他杀后悬尸伪装缢死的案例报道。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>勒死(ligature strangulation)</strong><br>通过外力使环绕颈部的绳索压迫颈部而引起的<span class="blur-text">窒息</span>。勒死多见于<span class="blur-text">他杀</span>案件,自勒和意外少见。勒索环绕颈部可为一匝或多匝,勒颈后往往<span class="blur-text">绾结固定</span>以防松开。</td>
+                            <td>25.. <strong>勒死(ligature strangulation)</strong><br>通过外力使环绕颈部的绳索压迫颈部而引起的<span class="answer-text">窒息</span>。勒死多见于<span class="answer-text">他杀</span>案件,自勒和意外少见。勒索环绕颈部可为一匝或多匝,勒颈后往往<span class="answer-text">绾结固定</span>以防松开。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>扼死(manual strangulation)</strong><br>用手直接压迫颈部造成的窒息死亡,俗称<span class="blur-text">掐死</span>。扼死均为<span class="blur-text">他杀</span>。</td>
+                            <td>26.. <strong>扼死(manual strangulation)</strong><br>用手直接压迫颈部造成的窒息死亡,俗称<span class="answer-text">掐死</span>。扼死均为<span class="answer-text">他杀</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>捂死(smothering)</strong><br>用手掌或柔软物体同时堵住<span class="blur-text">口部</span>和<span class="blur-text">鼻部</span>,致通气障碍而窒息死。</td>
+                            <td>27.. <strong>捂死(smothering)</strong><br>用手掌或柔软物体同时堵住<span class="answer-text">口部</span>和<span class="answer-text">鼻部</span>,致通气障碍而窒息死。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>梗死(choking)</strong><br>异物堵塞呼吸道阻碍气体交换所引起的窒息。呼吸道异物多来自<span class="blur-text">外界</span>,内源性异物多为<span class="blur-text">呕吐物</span>、<span class="blur-text">血液血凝块</span>。</td>
+                            <td>28.. <strong>梗死(choking)</strong><br>异物堵塞呼吸道阻碍气体交换所引起的窒息。呼吸道异物多来自<span class="answer-text">外界</span>,内源性异物多为<span class="answer-text">呕吐物</span>、<span class="answer-text">血液血凝块</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>性窒息死(sexual asphyxia)</strong><br>指性变态者采用各种奇特的方式使自身处于<span class="blur-text">窒息状态</span>,以满足性欲要求,在实施过程中因措施不当或失控而发生的意外窒息死亡。</td>
+                            <td>29.. <strong>性窒息死(sexual asphyxia)</strong><br>指性变态者采用各种奇特的方式使自身处于<span class="answer-text">窒息状态</span>,以满足性欲要求,在实施过程中因措施不当或失控而发生的意外窒息死亡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>溺死(drowning)</strong><br>指液体吸入<span class="blur-text">呼吸道</span>和/或<span class="blur-text">肺脏</span>引起的堵塞性窒息死亡,也称<span class="blur-text">淹死</span>。</td>
+                            <td>30.. <strong>溺死(drowning)</strong><br>指液体吸入<span class="answer-text">呼吸道</span>和/或<span class="answer-text">肺脏</span>引起的堵塞性窒息死亡,也称<span class="answer-text">淹死</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>蕈状泡沫(mushroom-like foam)</strong><br>冷的溺液进入呼吸道,刺激呼吸道黏膜分泌大量<span class="blur-text">黏液</span>,黏液、溺液及空气三者经剧烈的呼吸运动互相混合搅拌,形成细小均匀的白色泡沫,这种泡沫因富含黏液而极为稳定,不易破灭消失。这些泡沫涌出并附着在口、鼻及其周围,宛如白色棉花团堵塞呼吸孔道,故称蕈样泡沫。</td>
+                            <td>31.. <strong>蕈状泡沫(mushroom-like foam)</strong><br>冷的溺液进入呼吸道,刺激呼吸道黏膜分泌大量<span class="answer-text">黏液</span>,黏液、溺液及空气三者经剧烈的呼吸运动互相混合搅拌,形成细小均匀的白色泡沫,这种泡沫因富含黏液而极为稳定,不易破灭消失。这些泡沫涌出并附着在口、鼻及其周围,宛如白色棉花团堵塞呼吸孔道,故称蕈样泡沫。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>鸡皮样皮肤</strong><br>皮肤受冷水刺激,<span class="blur-text">立毛肌</span>收缩,毛囊隆起、毛根竖立,故皮肤呈鸡皮样改变。但死后不久抛尸入水的尸体也可以见到此征象。</td>
+                            <td>32.. <strong>鸡皮样皮肤</strong><br>皮肤受冷水刺激,<span class="answer-text">立毛肌</span>收缩,毛囊隆起、毛根竖立,故皮肤呈鸡皮样改变。但死后不久抛尸入水的尸体也可以见到此征象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>洗妇样皮肤(washer-woman's skin)</strong><br>尸体浸泡在水中,表皮<span class="blur-text">角质层浸软</span>、<span class="blur-text">变白</span>、<span class="blur-text">膨胀</span>、皱褶,以手和足的变化最为明显。手足部皮肤的改变并非生前溺死者所特有,任何尸体较长时间浸泡在冷水中均可出现类似变化。</td>
+                            <td>33.. <strong>洗妇样皮肤(washer-woman's skin)</strong><br>尸体浸泡在水中,表皮<span class="answer-text">角质层浸软</span>、<span class="answer-text">变白</span>、<span class="answer-text">膨胀</span>、皱褶,以手和足的变化最为明显。手足部皮肤的改变并非生前溺死者所特有,任何尸体较长时间浸泡在冷水中均可出现类似变化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>水性肺气肿(emphysema aquosum)</strong><br>是确定<span class="blur-text">生前溺死</span>的重要证据之一。是因溺水者剧烈呼吸使溺液、空气、黏液三者在气道内相互混合而成泡沫,又因<span class="blur-text">吸气力量大于呼气力量</span>,泡沫样溺液吸入肺泡后不易呼出而形成。水性肺气肿是一种<span class="blur-text">生理反应</span>。</td>
+                            <td>34.. <strong>水性肺气肿(emphysema aquosum)</strong><br>是确定<span class="answer-text">生前溺死</span>的重要证据之一。是因溺水者剧烈呼吸使溺液、空气、黏液三者在气道内相互混合而成泡沫,又因<span class="answer-text">吸气力量大于呼气力量</span>,泡沫样溺液吸入肺泡后不易呼出而形成。水性肺气肿是一种<span class="answer-text">生理反应</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>溺死手套/溺死足套(glove skin)</strong><br>尸体长期浸泡在水中,以及自溶腐败作用,导致尸体手足皮肤的<span class="blur-text">表皮与真皮脱离</span>,指(趾)甲脱落,形成手套或足套样脱皮。</td>
+                            <td>35.. <strong>溺死手套/溺死足套(glove skin)</strong><br>尸体长期浸泡在水中,以及自溶腐败作用,导致尸体手足皮肤的<span class="answer-text">表皮与真皮脱离</span>,指(趾)甲脱落,形成手套或足套样脱皮。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36.. <strong>"巨人观"</strong><br>水中尸体腐败后,腐败气体不断产生,使尸体皮下、消化道充满腐败气体,尸体膨大呈"巨人观",<br>即气味恶臭,全身呈<span class="blur-text">桶</span>状,皮肤发绿,表皮剥脱,毛发脱落,颜面膨大,眼球外突,<br>舌尖挺出口外,上下唇外翻呈漏斗状。</td>
+                            <td>36.. <strong>"巨人观"</strong><br>水中尸体腐败后,腐败气体不断产生,使尸体皮下、消化道充满腐败气体,尸体膨大呈"巨人观",<br>即气味恶臭,全身呈<span class="answer-text">桶</span>状,皮肤发绿,表皮剥脱,毛发脱落,颜面膨大,眼球外突,<br>舌尖挺出口外,上下唇外翻呈漏斗状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37.. <strong>试切创(hesitation marks)</strong><br><span class="blur-text">自杀</span>切创在主创口上缘或下缘常出现与主切口平行的、浅表的短小切创。</td>
+                            <td>37.. <strong>试切创(hesitation marks)</strong><br><span class="answer-text">自杀</span>切创在主创口上缘或下缘常出现与主切口平行的、浅表的短小切创。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38.. <strong>挥鞭样损伤(whiplash injury)</strong><br>驾驶员或乘客由于车辆行驶中突然加速或减速时造成头部急剧加速或减速运动至颈椎过度伸屈而造成的损伤。表现为<span class="blur-text">颈椎脱位</span>,<span class="blur-text">椎体前缘及横突的骨折</span>,<span class="blur-text">韧带和关节囊的撕裂出血</span>,颈髓震荡和挫伤。</td>
+                            <td>38.. <strong>挥鞭样损伤(whiplash injury)</strong><br>驾驶员或乘客由于车辆行驶中突然加速或减速时造成头部急剧加速或减速运动至颈椎过度伸屈而造成的损伤。表现为<span class="answer-text">颈椎脱位</span>,<span class="answer-text">椎体前缘及横突的骨折</span>,<span class="answer-text">韧带和关节囊的撕裂出血</span>,颈髓震荡和挫伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39.. <strong>硬脑膜外出血(epidural hemorrhage)</strong><br>指血液聚集于<span class="blur-text">颅骨内板</span>与<span class="blur-text">硬脑膜</span>之间的出血,最常见于<span class="blur-text">脑膜中动脉破裂</span>,也可见于静脉窦破裂和导血管破裂。</td>
+                            <td>39.. <strong>硬脑膜外出血(epidural hemorrhage)</strong><br>指血液聚集于<span class="answer-text">颅骨内板</span>与<span class="answer-text">硬脑膜</span>之间的出血,最常见于<span class="answer-text">脑膜中动脉破裂</span>,也可见于静脉窦破裂和导血管破裂。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40.. <strong>硬脑膜下出血(subdural hemorrhage)</strong><br>指血液聚集于<span class="blur-text">硬脑膜</span>与<span class="blur-text">蛛网膜</span>之间的出血。可发生在暴力打击部位,也可在暴力作用的对侧。</td>
+                            <td>40.. <strong>硬脑膜下出血(subdural hemorrhage)</strong><br>指血液聚集于<span class="answer-text">硬脑膜</span>与<span class="answer-text">蛛网膜</span>之间的出血。可发生在暴力打击部位,也可在暴力作用的对侧。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41.. <strong>蛛网膜下腔出血(subarachnoid hemorrhage)</strong><br><span class="blur-text">软脑膜</span>与<span class="blur-text">蛛网膜</span>下腔内的血管破裂出血。多为椎动脉、基底动脉及其分支、脑表面的小血管。</td>
+                            <td>41.. <strong>蛛网膜下腔出血(subarachnoid hemorrhage)</strong><br><span class="answer-text">软脑膜</span>与<span class="answer-text">蛛网膜</span>下腔内的血管破裂出血。多为椎动脉、基底动脉及其分支、脑表面的小血管。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42.. <strong>弥漫性轴索损伤(diffuse axonal injury,DAI)</strong><br>指头部受到暴力作用后发生的<span class="blur-text">脑白质广泛性轴索损伤</span>,是一种头部加速度运动引起的脑深部脑组织出现<span class="blur-text">剪切</span>和<span class="blur-text">牵拉</span>作用引起应变性损伤。</td>
+                            <td>42.. <strong>弥漫性轴索损伤(diffuse axonal injury,DAI)</strong><br>指头部受到暴力作用后发生的<span class="answer-text">脑白质广泛性轴索损伤</span>,是一种头部加速度运动引起的脑深部脑组织出现<span class="answer-text">剪切</span>和<span class="answer-text">牵拉</span>作用引起应变性损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43.. <strong>强奸(rape)</strong><br>以<span class="blur-text">暴力</span>、<span class="blur-text">胁迫</span>或其他手段,违背妇女的意志,强行与妇女性交或者奸淫幼女的行为。</td>
+                            <td>43.. <strong>强奸(rape)</strong><br>以<span class="answer-text">暴力</span>、<span class="answer-text">胁迫</span>或其他手段,违背妇女的意志,强行与妇女性交或者奸淫幼女的行为。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44.. <strong>电流斑(current mark)</strong><br>即电流印记,带电导体与皮肤接触,电流通过完整皮肤时在接触处产生的<span class="blur-text">焦耳热</span>及<span class="blur-text">电解作用</span>所造成的一种特殊皮肤损伤。典型的电流斑呈圆形或椭圆形,中央凹陷,边缘隆起,似火山口状。</td>
+                            <td>44.. <strong>电流斑(current mark)</strong><br>即电流印记,带电导体与皮肤接触,电流通过完整皮肤时在接触处产生的<span class="answer-text">焦耳热</span>及<span class="answer-text">电解作用</span>所造成的一种特殊皮肤损伤。典型的电流斑呈圆形或椭圆形,中央凹陷,边缘隆起,似火山口状。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45.. <strong>拳斗姿势(pugilistic attitude)</strong><br>全身被烧炭化时,骨骼肌遇高温而<span class="blur-text">凝固收缩</span>,<span class="blur-text">屈肌强于伸肌</span>,故四肢呈屈曲状,类似拳击比赛中的防守状态。</td>
+                            <td>45.. <strong>拳斗姿势(pugilistic attitude)</strong><br>全身被烧炭化时,骨骼肌遇高温而<span class="answer-text">凝固收缩</span>,<span class="answer-text">屈肌强于伸肌</span>,故四肢呈屈曲状,类似拳击比赛中的防守状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46.. <strong>热作用呼吸道综合征(respiratory complex caused by heat)</strong><br>高温、烟雾等作用下呼吸道损伤,发生<span class="blur-text">急性喉水肿</span>、<span class="blur-text">急性坏死性咽炎</span>、<span class="blur-text">急性喉气管支气管炎</span>和支气管周围炎等,统称为热作用呼吸道综合征,是<span class="blur-text">生前烧死</span>的确切证据。</td>
+                            <td>46.. <strong>热作用呼吸道综合征(respiratory complex caused by heat)</strong><br>高温、烟雾等作用下呼吸道损伤,发生<span class="answer-text">急性喉水肿</span>、<span class="answer-text">急性坏死性咽炎</span>、<span class="answer-text">急性喉气管支气管炎</span>和支气管周围炎等,统称为热作用呼吸道综合征,是<span class="answer-text">生前烧死</span>的确切证据。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47.. <strong>反常脱衣现象(paradoxical undressing)</strong><br>部分冻死者在死前可将自己所穿的衣服、鞋袜部分脱去甚至全身赤裸,这是由于大脑功能障碍产生了"<span class="blur-text">热幻觉</span>"而出现的"反常脱衣"。</td>
+                            <td>47.. <strong>反常脱衣现象(paradoxical undressing)</strong><br>部分冻死者在死前可将自己所穿的衣服、鞋袜部分脱去甚至全身赤裸,这是由于大脑功能障碍产生了"<span class="answer-text">热幻觉</span>"而出现的"反常脱衣"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48.. <strong>猝死(sudden unexpected death)</strong><br>貌似健康的人因<span class="blur-text">潜在性疾病</span>或<span class="blur-text">功能障碍</span>而发生急速的、意外的死亡。</td>
+                            <td>48.. <strong>猝死(sudden unexpected death)</strong><br>貌似健康的人因<span class="answer-text">潜在性疾病</span>或<span class="answer-text">功能障碍</span>而发生急速的、意外的死亡。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49.. <strong>冠心病猝死</strong><br><span class="blur-text">冠状动脉粥样硬化性心脏病</span>,是心血管系统疾病中对人类生命健康危害性最大的疾病,是最常见的猝死原因。</td>
+                            <td>49.. <strong>冠心病猝死</strong><br><span class="answer-text">冠状动脉粥样硬化性心脏病</span>,是心血管系统疾病中对人类生命健康危害性最大的疾病,是最常见的猝死原因。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50.. <strong>青壮年猝死综合征(SMDS)</strong><br>是一种主要发生于<span class="blur-text">青壮年</span>原因不明的猝死,又称<span class="blur-text">睡眠中猝死</span>。</td>
+                            <td>50.. <strong>青壮年猝死综合征(SMDS)</strong><br>是一种主要发生于<span class="answer-text">青壮年</span>原因不明的猝死,又称<span class="answer-text">睡眠中猝死</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51.. <strong>婴幼儿猝死综合征(SIDS)</strong><br>指发生在<span class="blur-text">婴幼儿</span>不明原因的、突然的、意外的猝死。多发生在<span class="blur-text">1个月至1岁</span>的婴儿,且大多是在摇篮里或小床上死亡,故又称"<span class="blur-text">摇篮死</span>"。</td>
+                            <td>51.. <strong>婴幼儿猝死综合征(SIDS)</strong><br>指发生在<span class="answer-text">婴幼儿</span>不明原因的、突然的、意外的猝死。多发生在<span class="answer-text">1个月至1岁</span>的婴儿,且大多是在摇篮里或小床上死亡,故又称"<span class="answer-text">摇篮死</span>"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52.. <strong>法医物证</strong><br>指需要医学方法检验的<span class="blur-text">生物性物质证据</span>。具有<span class="blur-text">种属</span>与<span class="blur-text">个性</span>特征,是<span class="blur-text">个人识别</span>的重要证据。</td>
+                            <td>52.. <strong>法医物证</strong><br>指需要医学方法检验的<span class="answer-text">生物性物质证据</span>。具有<span class="answer-text">种属</span>与<span class="answer-text">个性</span>特征,是<span class="answer-text">个人识别</span>的重要证据。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53.. <strong>生物性检材</strong><br>包括<span class="blur-text">人体组织与器官</span>、<span class="blur-text">体液</span>、<span class="blur-text">分泌物</span>、排泄物及由它们形成的生物性瘢痕。</td>
+                            <td>53.. <strong>生物性检材</strong><br>包括<span class="answer-text">人体组织与器官</span>、<span class="answer-text">体液</span>、<span class="answer-text">分泌物</span>、排泄物及由它们形成的生物性瘢痕。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54.. <strong>个人识别</strong><br>通过<span class="blur-text">遗传标记</span>的检测,揭示个体身份,即用科学的方法对尸体、活体或物证检材进行<span class="blur-text">个人同一认定</span>。</td>
+                            <td>54.. <strong>个人识别</strong><br>通过<span class="answer-text">遗传标记</span>的检测,揭示个体身份,即用科学的方法对尸体、活体或物证检材进行<span class="answer-text">个人同一认定</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55.. <strong>亲子鉴定(parentage testing)</strong><br>应用医学及生物学的理论和技术,通过对遗传特征的检验来判断假设父母与子女间的<span class="blur-text">亲缘关系</span>,称为亲权鉴定。</td>
+                            <td>55.. <strong>亲子鉴定(parentage testing)</strong><br>应用医学及生物学的理论和技术,通过对遗传特征的检验来判断假设父母与子女间的<span class="answer-text">亲缘关系</span>,称为亲权鉴定。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56.. <strong>血型</strong><br>狭义指<span class="blur-text">红细胞表面抗原</span>的遗传多态性;广义指各种血液成分的遗传多态性。</td>
+                            <td>56.. <strong>血型</strong><br>狭义指<span class="answer-text">红细胞表面抗原</span>的遗传多态性;广义指各种血液成分的遗传多态性。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57.. <strong>毒物(poison,toxicant)</strong><br>在日常接触条件下,以<span class="blur-text">较小剂量</span>进入机体后,能与生物体之间发生化学或物理作用,导致机体组织代谢、功能和(或)形态结构损害的化学物质。</td>
+                            <td>57.. <strong>毒物(poison,toxicant)</strong><br>在日常接触条件下,以<span class="answer-text">较小剂量</span>进入机体后,能与生物体之间发生化学或物理作用,导致机体组织代谢、功能和(或)形态结构损害的化学物质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58.. <strong>中毒(poisoning,intoxication)</strong><br>机体由于<span class="blur-text">毒物</span>的作用,器官、组织、细胞代谢、功能和(或)形态结构遭受损害而出现的疾病状态。</td>
+                            <td>58.. <strong>中毒(poisoning,intoxication)</strong><br>机体由于<span class="answer-text">毒物</span>的作用,器官、组织、细胞代谢、功能和(或)形态结构遭受损害而出现的疾病状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59.. <strong>毒品(drug)</strong><br>是指国际禁毒公约和有关法律法规规定管制的,能够使人形成<span class="blur-text">瘾癖</span>的<span class="blur-text">麻醉药品</span>和<span class="blur-text">精神药物</span>的统称。</td>
+                            <td>59.. <strong>毒品(drug)</strong><br>是指国际禁毒公约和有关法律法规规定管制的,能够使人形成<span class="answer-text">瘾癖</span>的<span class="answer-text">麻醉药品</span>和<span class="answer-text">精神药物</span>的统称。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60.. <strong>吸毒(addiction)</strong><br>是指某些人为了变换情绪或诱导欣快感,非法使用毒品的违法行为,又称"<span class="blur-text">毒品滥用</span>"、"<span class="blur-text">毒品成瘾</span>"、"<span class="blur-text">毒品依赖</span>"。</td>
+                            <td>60.. <strong>吸毒(addiction)</strong><br>是指某些人为了变换情绪或诱导欣快感,非法使用毒品的违法行为,又称"<span class="answer-text">毒品滥用</span>"、"<span class="answer-text">毒品成瘾</span>"、"<span class="answer-text">毒品依赖</span>"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61.. <strong>药物滥用(drug abuse)</strong><br>是指与<span class="blur-text">医疗目的无关</span>反复大量使用某种具有依赖性潜力的精神活性物质的行为。</td>
+                            <td>61.. <strong>药物滥用(drug abuse)</strong><br>是指与<span class="answer-text">医疗目的无关</span>反复大量使用某种具有依赖性潜力的精神活性物质的行为。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62.. <strong>法医精神病学(forensic psychiatry)</strong><br>应用现代精神医学理论和技术,对涉及与法律事件相关人员的<span class="blur-text">精神状态</span>、<span class="blur-text">法定能力</span>、<span class="blur-text">精神损伤</span>、精神伤残等问题进行评定的学科。该过程又称精神病司法鉴定,简称"<span class="blur-text">精神鉴定</span>"。</td>
+                            <td>62.. <strong>法医精神病学(forensic psychiatry)</strong><br>应用现代精神医学理论和技术,对涉及与法律事件相关人员的<span class="answer-text">精神状态</span>、<span class="answer-text">法定能力</span>、<span class="answer-text">精神损伤</span>、精神伤残等问题进行评定的学科。该过程又称精神病司法鉴定,简称"<span class="answer-text">精神鉴定</span>"。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63.. <strong>刑事责任能力(criminal responsibility)</strong><br>指一个人<span class="blur-text">辨认</span>和<span class="blur-text">控制</span>自己行为的能力,在刑法意义上即一个人辨认自己行为法律上的性质、意义和后果,并自觉的控制自己行为的能力。</td>
+                            <td>63.. <strong>刑事责任能力(criminal responsibility)</strong><br>指一个人<span class="answer-text">辨认</span>和<span class="answer-text">控制</span>自己行为的能力,在刑法意义上即一个人辨认自己行为法律上的性质、意义和后果,并自觉的控制自己行为的能力。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64.. <strong>民事行为能力(civil capability)</strong><br>指精神正常的公民通过自己的行为,取得<span class="blur-text">民事权利</span>和承担<span class="blur-text">民事义务</span>,从而设立、变更或终止法律关系的资格。包括自己协商和处理财产、婚姻、订立契约和承担社会义务方面的能力。</td>
+                            <td>64.. <strong>民事行为能力(civil capability)</strong><br>指精神正常的公民通过自己的行为,取得<span class="answer-text">民事权利</span>和承担<span class="answer-text">民事义务</span>,从而设立、变更或终止法律关系的资格。包括自己协商和处理财产、婚姻、订立契约和承担社会义务方面的能力。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65.. <strong>法医临床学(clinical forensic medicine)</strong><br>法医学的一个重要分支学科,是运用<span class="blur-text">临床医学</span>、<span class="blur-text">法医学</span>和其他自然科学技术,研究和解决法律上有关<span class="blur-text">活体</span>医学问题的一门学科。</td>
+                            <td>65.. <strong>法医临床学(clinical forensic medicine)</strong><br>法医学的一个重要分支学科,是运用<span class="answer-text">临床医学</span>、<span class="answer-text">法医学</span>和其他自然科学技术,研究和解决法律上有关<span class="answer-text">活体</span>医学问题的一门学科。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66.. <strong>重伤(grave injury)</strong><br>是指<span class="blur-text">危及生命</span>,或者损伤的并发症危及生命的损伤,损伤造成重要器官的破损或严重的功能障碍。《刑法》第95条规定:重伤,是指下列情形之一的伤害:①使人肢体残废或者毁人容貌的;②使人丧失听觉、视觉或者其他器官功能的;③其他对于人体健康有重大伤害的。</td>
+                            <td>66.. <strong>重伤(grave injury)</strong><br>是指<span class="answer-text">危及生命</span>,或者损伤的并发症危及生命的损伤,损伤造成重要器官的破损或严重的功能障碍。《刑法》第95条规定:重伤,是指下列情形之一的伤害:①使人肢体残废或者毁人容貌的;②使人丧失听觉、视觉或者其他器官功能的;③其他对于人体健康有重大伤害的。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67.. <strong>轻伤(flesh injury)</strong><br>指物理、化学及生物等外界因素作用于人体,造成组织、器官结构一定程度的损伤或者部分功能障碍,尚未构成重伤又不属轻微伤害的损伤。包括<span class="blur-text">轻伤一级</span>和<span class="blur-text">轻伤二级</span>。</td>
+                            <td>67.. <strong>轻伤(flesh injury)</strong><br>指物理、化学及生物等外界因素作用于人体,造成组织、器官结构一定程度的损伤或者部分功能障碍,尚未构成重伤又不属轻微伤害的损伤。包括<span class="answer-text">轻伤一级</span>和<span class="answer-text">轻伤二级</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68.. <strong>轻微伤(slight injury)</strong><br>是指殴打他人造成轻微伤害,导致轻微的组织结构破坏或者短暂的功能障碍,经治愈或自愈后可<span class="blur-text">不遗留</span>明显的后遗症。</td>
+                            <td>68.. <strong>轻微伤(slight injury)</strong><br>是指殴打他人造成轻微伤害,导致轻微的组织结构破坏或者短暂的功能障碍,经治愈或自愈后可<span class="answer-text">不遗留</span>明显的后遗症。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69.. <strong>诈病(simulation)</strong><br>指身体健康的人为了达到某种目的,如调换工作,逃避兵役,掩盖罪责,推诿责任,骗取休假,福利或赔偿等,<span class="blur-text">假装或伪装</span>患病,称诈病。</td>
+                            <td>69.. <strong>诈病(simulation)</strong><br>指身体健康的人为了达到某种目的,如调换工作,逃避兵役,掩盖罪责,推诿责任,骗取休假,福利或赔偿等,<span class="answer-text">假装或伪装</span>患病,称诈病。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70.. <strong>造作伤/病(artificial injury/disease)</strong><br>为了达到某种目的,运用<span class="blur-text">物理</span>、<span class="blur-text">化学</span>或<span class="blur-text">生物学</span>的方法,故意伤害自己身体或授意他人伤害自己身体,或者故意夸大、改变原有伤情,造成自身疾病或损伤。</td>
+                            <td>70.. <strong>造作伤/病(artificial injury/disease)</strong><br>为了达到某种目的,运用<span class="answer-text">物理</span>、<span class="answer-text">化学</span>或<span class="answer-text">生物学</span>的方法,故意伤害自己身体或授意他人伤害自己身体,或者故意夸大、改变原有伤情,造成自身疾病或损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71.. <strong>虐待(maltreat/abuse)</strong><br>经常遭到共同生活的家庭成员或照顾人故意造成的<span class="blur-text">精神</span>或<span class="blur-text">肉体</span>上的折磨、摧残和迫害。</td>
+                            <td>71.. <strong>虐待(maltreat/abuse)</strong><br>经常遭到共同生活的家庭成员或照顾人故意造成的<span class="answer-text">精神</span>或<span class="answer-text">肉体</span>上的折磨、摧残和迫害。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72.. <strong>医疗纠纷(medical tangle)</strong><br>在诊疗护理过程中,医患双方对所发生的损害后果<span class="blur-text">认知</span>不同而产生的纠纷。在未弄清事实真相以前统称为医疗纠纷。</td>
+                            <td>72.. <strong>医疗纠纷(medical tangle)</strong><br>在诊疗护理过程中,医患双方对所发生的损害后果<span class="answer-text">认知</span>不同而产生的纠纷。在未弄清事实真相以前统称为医疗纠纷。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73.. <strong>医疗事故(medical negligence)</strong><br>是指医疗机构及其医务人员在医疗活动中,违反<span class="blur-text">医疗卫生管理法律</span>、<span class="blur-text">行政法规</span>、<span class="blur-text">部门规章</span>和诊疗护理规范、常规,过失造成患者人身伤害的事故。</td>
+                            <td>73.. <strong>医疗事故(medical negligence)</strong><br>是指医疗机构及其医务人员在医疗活动中,违反<span class="answer-text">医疗卫生管理法律</span>、<span class="answer-text">行政法规</span>、<span class="answer-text">部门规章</span>和诊疗护理规范、常规,过失造成患者人身伤害的事故。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74.. <strong>治疗损害(medical damage)</strong><br>在诊疗护理过程中,医疗<span class="blur-text">过错(故意或过失)</span>行为对患者产生的不利损害。</td>
+                            <td>74.. <strong>治疗损害(medical damage)</strong><br>在诊疗护理过程中,医疗<span class="answer-text">过错(故意或过失)</span>行为对患者产生的不利损害。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

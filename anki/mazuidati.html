@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">麻醉大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1. 术前病情评估的内容<br>图<span class="blur-text">？</span></td>
+                            <td>1. 术前病情评估的内容<br>图<span class="answer-text">？</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. 术前病情评估的方法<br>图<span class="blur-text">？</span></td>
+                            <td>2. 术前病情评估的方法<br>图<span class="answer-text">？</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. 麻醉前准备<br>图<span class="blur-text">？</span></td>
+                            <td>3. 麻醉前准备<br>图<span class="answer-text">？</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. 局麻药的分类及常用局麻药比较<br>（1）分类：<br>1）按结构：<br>①脂类：<span class="blur-text">普鲁、氯普鲁、丁</span>卡因<br>②酰胺类：<span class="blur-text">罗哌、利比、布比</span>卡因<br>2）按作用时间：<br>①短效：{{c2::普鲁、氯普鲁}}卡因<br>②中效：{{c2::利多、丙胺}}卡因<br>③长效：{{c2::丁、布比}}卡因<br>（2）常用局麻药比较<br>图</td>
+                            <td>4. 局麻药的分类及常用局麻药比较<br>（1）分类：<br>1）按结构：<br>①脂类：<span class="answer-text">普鲁、氯普鲁、丁</span>卡因<br>②酰胺类：<span class="answer-text">罗哌、利比、布比</span>卡因<br>2）按作用时间：<br>①短效：{{c2::普鲁、氯普鲁}}卡因<br>②中效：{{c2::利多、丙胺}}卡因<br>③长效：{{c2::丁、布比}}卡因<br>（2）常用局麻药比较<br>图</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. 局麻药的毒性反应<br>（1）概念：血液中局麻药的浓度超过一定的阈值（机体的耐受能力），引起中枢神经系统和心血管系统出现各种兴奋或抑制的临床症状。<br>（2）常见原因<br>①一次用量超过<span class="blur-text">限量</span><br>②误注入<span class="blur-text">血管</span><br>③作用部位血管<span class="blur-text">丰富</span>，未酌情减量或加用缩血管药物<br>④病人因为<span class="blur-text">体质</span>衰弱等原因使耐受力降低。<br>（3）临床表现<br>1）中枢神经系统：<br>①轻度中毒：<span class="blur-text">嗜睡</span>，<span class="blur-text">眩晕</span>，<span class="blur-text">寒战</span>，口周<span class="blur-text">麻木</span>，<span class="blur-text">多语</span>，<span class="blur-text">惊恐</span>不安及<span class="blur-text">定向</span>力障碍。<br>②重度中毒：<span class="blur-text">神志</span>消失，面部、四肢肌肉<span class="blur-text">震颤</span>，抽搐或<span class="blur-text">惊厥</span>。<br>2）循环系统<br>①早期由于中枢神经系统<span class="blur-text">兴奋</span>，表现为血压上升，心率加快。<br>②后期对心肌、心传导系统、周围血管平滑肌产生直接<span class="blur-text">抑制</span>，引起血管扩张，回心血量减少，心肌收缩力减弱，心输出量下降，血压降低。<br>③当血药浓度极高时，周围血管广泛扩张，房室传导阻滞，心动<span class="blur-text">过缓</span>，最后心跳<span class="blur-text">骤停</span>。<br>（4）预防<br>①一次用量不超量：<span class="blur-text">安全</span>剂量<br>②避免血管内注射：注药前<span class="blur-text">回抽</span><br>③术前评估：根据病人的身体情况酌情<span class="blur-text">减量</span>（<span class="blur-text">低蛋白血</span>症的病人易发生局麻药的毒性反应）<br>（5）处理<br>①一旦出现局麻药中毒症状，<span class="blur-text">停药</span><br>②保证<span class="blur-text">呼吸道</span>通畅：面罩吸氧，严重者行气管插管，机械通气<br>③惊厥和抽搐：静脉注射首选<span class="blur-text">苯二氮䓬</span>类药物，也可选用<span class="blur-text">丙泊芬</span>或<span class="blur-text">硫喷妥钠</span><br>③循环支持：<span class="blur-text">输液</span>、<span class="blur-text">升压</span>药维持血压，<span class="blur-text">阿托品</span>治疗心动过缓<br>④20%<span class="blur-text">长链脂肪乳</span>治疗：负荷量1.5ml/kg，维持剂量<span class="blur-text">0.25</span>ml/kg.min<br>⑤心跳骤停立即行心肺脑复苏</td>
+                            <td>5. 局麻药的毒性反应<br>（1）概念：血液中局麻药的浓度超过一定的阈值（机体的耐受能力），引起中枢神经系统和心血管系统出现各种兴奋或抑制的临床症状。<br>（2）常见原因<br>①一次用量超过<span class="answer-text">限量</span><br>②误注入<span class="answer-text">血管</span><br>③作用部位血管<span class="answer-text">丰富</span>，未酌情减量或加用缩血管药物<br>④病人因为<span class="answer-text">体质</span>衰弱等原因使耐受力降低。<br>（3）临床表现<br>1）中枢神经系统：<br>①轻度中毒：<span class="answer-text">嗜睡</span>，<span class="answer-text">眩晕</span>，<span class="answer-text">寒战</span>，口周<span class="answer-text">麻木</span>，<span class="answer-text">多语</span>，<span class="answer-text">惊恐</span>不安及<span class="answer-text">定向</span>力障碍。<br>②重度中毒：<span class="answer-text">神志</span>消失，面部、四肢肌肉<span class="answer-text">震颤</span>，抽搐或<span class="answer-text">惊厥</span>。<br>2）循环系统<br>①早期由于中枢神经系统<span class="answer-text">兴奋</span>，表现为血压上升，心率加快。<br>②后期对心肌、心传导系统、周围血管平滑肌产生直接<span class="answer-text">抑制</span>，引起血管扩张，回心血量减少，心肌收缩力减弱，心输出量下降，血压降低。<br>③当血药浓度极高时，周围血管广泛扩张，房室传导阻滞，心动<span class="answer-text">过缓</span>，最后心跳<span class="answer-text">骤停</span>。<br>（4）预防<br>①一次用量不超量：<span class="answer-text">安全</span>剂量<br>②避免血管内注射：注药前<span class="answer-text">回抽</span><br>③术前评估：根据病人的身体情况酌情<span class="answer-text">减量</span>（<span class="answer-text">低蛋白血</span>症的病人易发生局麻药的毒性反应）<br>（5）处理<br>①一旦出现局麻药中毒症状，<span class="answer-text">停药</span><br>②保证<span class="answer-text">呼吸道</span>通畅：面罩吸氧，严重者行气管插管，机械通气<br>③惊厥和抽搐：静脉注射首选<span class="answer-text">苯二氮䓬</span>类药物，也可选用<span class="answer-text">丙泊芬</span>或<span class="answer-text">硫喷妥钠</span><br>③循环支持：<span class="answer-text">输液</span>、<span class="answer-text">升压</span>药维持血压，<span class="answer-text">阿托品</span>治疗心动过缓<br>④20%<span class="answer-text">长链脂肪乳</span>治疗：负荷量1.5ml/kg，维持剂量<span class="answer-text">0.25</span>ml/kg.min<br>⑤心跳骤停立即行心肺脑复苏</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. 全身麻醉的三个阶段<br>（1）全身麻醉<span class="blur-text">诱导</span>：指患者接受全麻药后由清醒状态到神志消失，并进入全麻状态，这一阶段称为全麻诱导期，包括{{c2::吸入&静脉}}诱导。<br>（2）全身麻醉的<span class="blur-text">维持</span>：从患者意识消失到手术或检查结束或基本结束，停止追加全身麻醉药的这段时间。包括{{c2::吸入&静脉}}麻醉维持。<br>（3）全身麻醉的<span class="blur-text">苏醒</span>：从{{c2::停止追加}}全身麻醉药到患者意识完全恢复正常的阶段。</td>
+                            <td>6. 全身麻醉的三个阶段<br>（1）全身麻醉<span class="answer-text">诱导</span>：指患者接受全麻药后由清醒状态到神志消失，并进入全麻状态，这一阶段称为全麻诱导期，包括{{c2::吸入&静脉}}诱导。<br>（2）全身麻醉的<span class="answer-text">维持</span>：从患者意识消失到手术或检查结束或基本结束，停止追加全身麻醉药的这段时间。包括{{c2::吸入&静脉}}麻醉维持。<br>（3）全身麻醉的<span class="answer-text">苏醒</span>：从{{c2::停止追加}}全身麻醉药到患者意识完全恢复正常的阶段。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. 全身麻醉的并发症及其处理<br>（1）<span class="blur-text">反流</span>与<span class="blur-text">误吸</span><br>1）原因：<br>①<span class="blur-text">饱食</span>后手术<br>②胃内容物<span class="blur-text">潴留</span>，胃排空时间<span class="blur-text">延长</span><br>③<span class="blur-text">腹</span>部手术，探查，挤压胃肠，肠<span class="blur-text">梗阻</span><br>④消化道<span class="blur-text">大出血</span><br>2）临床表现：决定于误吸物的量、性质和pH<br>①呼吸道{{c2::梗阻}}、窒息、缺氧<br>②{{c2::吸入}}性肺炎：误吸后2~4小时出现{{c2::哮喘}}样综合征，病人发绀，心动过速，支气管痉挛和呼吸困难<br>③急性{{c2::化学}}性肺炎：哮鸣音、啰音、呼气性呼吸困难、心动过速、心律失常<br>胸片：不规则、边缘模糊的{{c2::斑片}}阴影<br>3）预防：<br>①麻醉前{{c3::禁食、禁饮}}<br>②放置粗胃管、胃肠{{c3::减压}}<br>③清醒气管内插管<br>④术前可给{{c3::H2-受体阻滞}}剂、{{c3::抗酸}}剂等，抑制胃酸分泌，提高胃液pH<br>④加强对{{c3::呼吸道}}的保护。<br>4）紧急处理：<br>①立即头{{c4::低}}位、头{{c4::偏}}向一侧<br>②吸引{{c4::反流}}物<br>③解痉：{{c4::氨茶碱}}<br>④{{c4::抗生素}}，{{c4::糖皮质}}激素，{{c4::利尿}}剂<br>④支气管内{{c4::灌洗}}<br>（2）<span class="blur-text">呼吸道梗阻</span><br>1）上呼吸道梗阻<br>①原因：舌后坠、咽喉部分泌物或异物阻塞、喉痉挛、喉水肿<br>②临床表现及处理：<span class="blur-text">吸</span>气性呼吸困难<br>a.轻度：去除<span class="blur-text">诱因</span>，加压吸氧<br>b.重度：<span class="blur-text">环甲膜</span>穿刺置管，加压吸氧<br>c.严重者：静注<span class="blur-text">肌松</span>药，支气管内插管<br>舌后坠、鼾声——头{{c2::后仰}}、托{{c2::下颌}}，放置通气道<br>咽喉部分泌物、喉鸣音——{{c2::吸引}}、取出异物<br>喉痉挛——吸气时{{c2::鸡鸣}}声<br>喉水肿——大剂量{{c2::激素}}、紧急气管切开<br>2）下呼吸道梗阻<br>①原因：分泌物或呕吐物{{c3::误吸}}、支气管{{c3::痉挛}}、气管导管{{c3::扭折}}或斜面{{c3::贴壁}}<br>②临床表现和处理：{{c3::呼}}气性呼吸困难，肺部{{c3::哮鸣}}音，严重者呼吸音消失<br>处理：给氧、吸引、解痉、加深麻醉。<br>（3）<span class="blur-text">通气量</span>不足<br>CO2潴留，低氧血症<br>呼吸机参数的设置、肌松药物的残余。<br>（4）<span class="blur-text">低氧血</span>症<br>吸空气时：SpO2＜90%，PaO2＜<span class="blur-text">60</span>mmHg<br>吸纯氧时，PaO2＜<span class="blur-text">90</span>mmHg<br>常见原因和处理原则：<br>①{{c2::麻醉机}}故障、氧气供应不足、气管导管移位或脱出，应及时发现和纠正。<br>②{{c2::弥散}}性缺氧：可见于N2O吸入麻醉。停止吸入N2O后，应继续吸氧至少<span class="blur-text">5～10</span>分钟。<br>③肺{{c2::不张}}：可通过<span class="blur-text">吸痰</span>、增大通气量、肺复张等措施纠正。<br>④{{c2::误吸}}：轻者应用氧治疗有效，严重者应行<span class="blur-text">机械通气</span>治疗。<br>⑤肺{{c2::脓肿}}：可发生于急性<span class="blur-text">左心衰</span>或肺<span class="blur-text">毛细血管通透性增加</span>。应在增加吸入氧浓度的同时积极治疗<span class="blur-text">原发</span>病。<br>（5）术中<span class="blur-text">知晓</span><br>是指全身麻醉中对周围环境和声音存在一定的感知和记忆，病人在术后能回忆起术中所发生的一切事情，并能告知有无疼痛等情况。<br>预防：监测与调节麻醉深度，间断给予咪达唑仑和吸入挥发性麻醉药。<br>（6）<span class="blur-text">高热</span>、<span class="blur-text">抽搐</span>和<span class="blur-text">惊厥</span><br>1）恶性高热（Malignant Hyperthermia，MH）：为罕见的常染色体显性遗传病，由挥发性吸入麻醉剂和去极化肌松剂（琥珀酰胆碱）诱发的骨骼肌代谢异常亢进综合征，临床表现为持续骨骼肌强直收缩、PaO2迅速升高、体温急剧上升（速度可达1℃/5min）可超过42℃。治疗恶性高热的特效药是丹曲林。<br>2）临床表现——早期表现一紧二高<br>①全身肌肉紧张：<span class="blur-text">咬肌</span>痉挛、<span class="blur-text">上肢屈曲</span>挛缩、<span class="blur-text">下肢僵硬</span>挺直<br>②体温急剧升高：每数分钟升高1℃，迅速升至42℃以上<br>③<span class="blur-text">呼</span>气末二氧化碳分压急剧升高<br>3）急救原则：<br>①快速去除{{c2::诱因}}<br>②促进{{c2::CO2}}排出<br>③特效药物：丹曲林（{{c2::静脉注射}}）<br>④对症治疗。<br>（7）苏醒<span class="blur-text">延迟</span><br>当停止麻醉药物90分钟后，病人仍不能清醒，称为苏醒延迟。<br>（8）低体温<br>核心体温低于<span class="blur-text">36</span>℃。</td>
+                            <td>7. 全身麻醉的并发症及其处理<br>（1）<span class="answer-text">反流</span>与<span class="answer-text">误吸</span><br>1）原因：<br>①<span class="answer-text">饱食</span>后手术<br>②胃内容物<span class="answer-text">潴留</span>，胃排空时间<span class="answer-text">延长</span><br>③<span class="answer-text">腹</span>部手术，探查，挤压胃肠，肠<span class="answer-text">梗阻</span><br>④消化道<span class="answer-text">大出血</span><br>2）临床表现：决定于误吸物的量、性质和pH<br>①呼吸道{{c2::梗阻}}、窒息、缺氧<br>②{{c2::吸入}}性肺炎：误吸后2~4小时出现{{c2::哮喘}}样综合征，病人发绀，心动过速，支气管痉挛和呼吸困难<br>③急性{{c2::化学}}性肺炎：哮鸣音、啰音、呼气性呼吸困难、心动过速、心律失常<br>胸片：不规则、边缘模糊的{{c2::斑片}}阴影<br>3）预防：<br>①麻醉前{{c3::禁食、禁饮}}<br>②放置粗胃管、胃肠{{c3::减压}}<br>③清醒气管内插管<br>④术前可给{{c3::H2-受体阻滞}}剂、{{c3::抗酸}}剂等，抑制胃酸分泌，提高胃液pH<br>④加强对{{c3::呼吸道}}的保护。<br>4）紧急处理：<br>①立即头{{c4::低}}位、头{{c4::偏}}向一侧<br>②吸引{{c4::反流}}物<br>③解痉：{{c4::氨茶碱}}<br>④{{c4::抗生素}}，{{c4::糖皮质}}激素，{{c4::利尿}}剂<br>④支气管内{{c4::灌洗}}<br>（2）<span class="answer-text">呼吸道梗阻</span><br>1）上呼吸道梗阻<br>①原因：舌后坠、咽喉部分泌物或异物阻塞、喉痉挛、喉水肿<br>②临床表现及处理：<span class="answer-text">吸</span>气性呼吸困难<br>a.轻度：去除<span class="answer-text">诱因</span>，加压吸氧<br>b.重度：<span class="answer-text">环甲膜</span>穿刺置管，加压吸氧<br>c.严重者：静注<span class="answer-text">肌松</span>药，支气管内插管<br>舌后坠、鼾声——头{{c2::后仰}}、托{{c2::下颌}}，放置通气道<br>咽喉部分泌物、喉鸣音——{{c2::吸引}}、取出异物<br>喉痉挛——吸气时{{c2::鸡鸣}}声<br>喉水肿——大剂量{{c2::激素}}、紧急气管切开<br>2）下呼吸道梗阻<br>①原因：分泌物或呕吐物{{c3::误吸}}、支气管{{c3::痉挛}}、气管导管{{c3::扭折}}或斜面{{c3::贴壁}}<br>②临床表现和处理：{{c3::呼}}气性呼吸困难，肺部{{c3::哮鸣}}音，严重者呼吸音消失<br>处理：给氧、吸引、解痉、加深麻醉。<br>（3）<span class="answer-text">通气量</span>不足<br>CO2潴留，低氧血症<br>呼吸机参数的设置、肌松药物的残余。<br>（4）<span class="answer-text">低氧血</span>症<br>吸空气时：SpO2＜90%，PaO2＜<span class="answer-text">60</span>mmHg<br>吸纯氧时，PaO2＜<span class="answer-text">90</span>mmHg<br>常见原因和处理原则：<br>①{{c2::麻醉机}}故障、氧气供应不足、气管导管移位或脱出，应及时发现和纠正。<br>②{{c2::弥散}}性缺氧：可见于N2O吸入麻醉。停止吸入N2O后，应继续吸氧至少<span class="answer-text">5～10</span>分钟。<br>③肺{{c2::不张}}：可通过<span class="answer-text">吸痰</span>、增大通气量、肺复张等措施纠正。<br>④{{c2::误吸}}：轻者应用氧治疗有效，严重者应行<span class="answer-text">机械通气</span>治疗。<br>⑤肺{{c2::脓肿}}：可发生于急性<span class="answer-text">左心衰</span>或肺<span class="answer-text">毛细血管通透性增加</span>。应在增加吸入氧浓度的同时积极治疗<span class="answer-text">原发</span>病。<br>（5）术中<span class="answer-text">知晓</span><br>是指全身麻醉中对周围环境和声音存在一定的感知和记忆，病人在术后能回忆起术中所发生的一切事情，并能告知有无疼痛等情况。<br>预防：监测与调节麻醉深度，间断给予咪达唑仑和吸入挥发性麻醉药。<br>（6）<span class="answer-text">高热</span>、<span class="answer-text">抽搐</span>和<span class="answer-text">惊厥</span><br>1）恶性高热（Malignant Hyperthermia，MH）：为罕见的常染色体显性遗传病，由挥发性吸入麻醉剂和去极化肌松剂（琥珀酰胆碱）诱发的骨骼肌代谢异常亢进综合征，临床表现为持续骨骼肌强直收缩、PaO2迅速升高、体温急剧上升（速度可达1℃/5min）可超过42℃。治疗恶性高热的特效药是丹曲林。<br>2）临床表现——早期表现一紧二高<br>①全身肌肉紧张：<span class="answer-text">咬肌</span>痉挛、<span class="answer-text">上肢屈曲</span>挛缩、<span class="answer-text">下肢僵硬</span>挺直<br>②体温急剧升高：每数分钟升高1℃，迅速升至42℃以上<br>③<span class="answer-text">呼</span>气末二氧化碳分压急剧升高<br>3）急救原则：<br>①快速去除{{c2::诱因}}<br>②促进{{c2::CO2}}排出<br>③特效药物：丹曲林（{{c2::静脉注射}}）<br>④对症治疗。<br>（7）苏醒<span class="answer-text">延迟</span><br>当停止麻醉药物90分钟后，病人仍不能清醒，称为苏醒延迟。<br>（8）低体温<br>核心体温低于<span class="answer-text">36</span>℃。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. <span class="blur-text">蛛网膜下腔阻滞</span>的适应症和禁忌症<br>（indications and contraindications of spinal anesthesia）<br>（1）适应症：<br>①<span class="blur-text">下腹及盆腔</span>手术<br>②<span class="blur-text">肛门及会阴</span>手术<br>③<span class="blur-text">下肢</span>手术<br>（2）禁忌症<br>①{{c2::凝血}}功能异常及抗凝治疗患者<br>②{{c2::中枢神经}}系统疾病：脊髓或脊神经根病变，脊髓的慢性或退行性疾病，颅内高压病人<br>③全身性严重{{c2::感染}}以及穿刺部位有炎症或感染者<br>④{{c2::休克}}病人<br>⑤{{c2::腹内压}}明显增高者，如腹腔巨大肿瘤，大量腹水<br>⑥精神病、严重自主神经功能失调以及小儿等{{c2::不合作}}病人<br>⑦脊柱外伤或有明显腰背痛病史者，以及{{c2::脊柱}}严重畸形者</td>
+                            <td>8. <span class="answer-text">蛛网膜下腔阻滞</span>的适应症和禁忌症<br>（indications and contraindications of spinal anesthesia）<br>（1）适应症：<br>①<span class="answer-text">下腹及盆腔</span>手术<br>②<span class="answer-text">肛门及会阴</span>手术<br>③<span class="answer-text">下肢</span>手术<br>（2）禁忌症<br>①{{c2::凝血}}功能异常及抗凝治疗患者<br>②{{c2::中枢神经}}系统疾病：脊髓或脊神经根病变，脊髓的慢性或退行性疾病，颅内高压病人<br>③全身性严重{{c2::感染}}以及穿刺部位有炎症或感染者<br>④{{c2::休克}}病人<br>⑤{{c2::腹内压}}明显增高者，如腹腔巨大肿瘤，大量腹水<br>⑥精神病、严重自主神经功能失调以及小儿等{{c2::不合作}}病人<br>⑦脊柱外伤或有明显腰背痛病史者，以及{{c2::脊柱}}严重畸形者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. <span class="blur-text">椎管内麻醉的并发症</span><br>（complications of Intrathecal anesthesia）<br>（1）蛛网膜下腔阻滞：<br>①<span class="blur-text">头痛</span><br>②尿<span class="blur-text">潴留</span><br>③神经并发症：<span class="blur-text">脑神经</span>受累、假性<span class="blur-text">脑脊膜</span>炎、粘连性<span class="blur-text">蛛网膜</span>炎、<span class="blur-text">马尾</span>神经综合征<br>（2）硬膜外阻滞：<br>①穿破{{c2::硬脊膜}}<br>②穿刺针或导管误入{{c2::血管}}<br>③{{c2::导管}}折断<br>④{{c2::全脊麻}}<br>⑤{{c2::脊神经根}}或脊髓损伤<br>⑥硬膜外{{c2::血肿}}</td>
+                            <td>9. <span class="answer-text">椎管内麻醉的并发症</span><br>（complications of Intrathecal anesthesia）<br>（1）蛛网膜下腔阻滞：<br>①<span class="answer-text">头痛</span><br>②尿<span class="answer-text">潴留</span><br>③神经并发症：<span class="answer-text">脑神经</span>受累、假性<span class="answer-text">脑脊膜</span>炎、粘连性<span class="answer-text">蛛网膜</span>炎、<span class="answer-text">马尾</span>神经综合征<br>（2）硬膜外阻滞：<br>①穿破{{c2::硬脊膜}}<br>②穿刺针或导管误入{{c2::血管}}<br>③{{c2::导管}}折断<br>④{{c2::全脊麻}}<br>⑤{{c2::脊神经根}}或脊髓损伤<br>⑥硬膜外{{c2::血肿}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. What is TSA and how to manage？<br>（TSA的概念及处理）<br>（1）TSA：<span class="blur-text">全脊麻</span>（total spinal anesthesia）：行硬膜外阻滞时，如穿刺针或硬膜外导管误入蛛网膜下腔而未能及时发现，超过脊麻数倍量的局麻药注入蛛网膜下腔，可产生异常广泛的阻滞，称全脊麻。<br>临床表现为全部脊神经支配的区域均无痛觉、低血压、意识丧失及呼吸停止。<br>（2）处理：<br>①保持<span class="blur-text">呼吸</span>道通畅，给予足够的通气并给氧<br>②<span class="blur-text">循环</span>支持：加速输液，必要时静脉给予<span class="blur-text">血管活性药</span>升高血压<br>③如出现<span class="blur-text">心跳</span>停搏，立即行心肺复苏。</td>
+                            <td>10. What is TSA and how to manage？<br>（TSA的概念及处理）<br>（1）TSA：<span class="answer-text">全脊麻</span>（total spinal anesthesia）：行硬膜外阻滞时，如穿刺针或硬膜外导管误入蛛网膜下腔而未能及时发现，超过脊麻数倍量的局麻药注入蛛网膜下腔，可产生异常广泛的阻滞，称全脊麻。<br>临床表现为全部脊神经支配的区域均无痛觉、低血压、意识丧失及呼吸停止。<br>（2）处理：<br>①保持<span class="answer-text">呼吸</span>道通畅，给予足够的通气并给氧<br>②<span class="answer-text">循环</span>支持：加速输液，必要时静脉给予<span class="answer-text">血管活性药</span>升高血压<br>③如出现<span class="answer-text">心跳</span>停搏，立即行心肺复苏。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. What is PDPH and how to treat？（什么是PDPH，如何治疗）<br>（1）PDPH：<span class="blur-text">硬膜穿破后头痛</span>，是由于穿破<span class="blur-text">蛛网膜</span>、<span class="blur-text">脑脊液</span>漏出所导致的<span class="blur-text">低颅压性头痛</span>。在<span class="blur-text">12～72</span>小时发生，持续<span class="blur-text">1-6</span>周，<span class="blur-text">坐/站</span>位时加重，<span class="blur-text">平躺</span>时减轻。<br>（2）治疗：<br>①保持{{c2::卧}}位<br>②液体管理，中度头痛每日输液{{c2::2000-3000}}ml<br>③硬膜外"血补丁"：抽取病人{{c2::自体血10ml}}在10秒内经原穿刺点注入硬膜外间隙<br>④硬膜外隙注射{{c2::生理盐水}}<br>⑤给予{{c2::抗炎镇痛}}药</td>
+                            <td>11. What is PDPH and how to treat？（什么是PDPH，如何治疗）<br>（1）PDPH：<span class="answer-text">硬膜穿破后头痛</span>，是由于穿破<span class="answer-text">蛛网膜</span>、<span class="answer-text">脑脊液</span>漏出所导致的<span class="answer-text">低颅压性头痛</span>。在<span class="answer-text">12～72</span>小时发生，持续<span class="answer-text">1-6</span>周，<span class="answer-text">坐/站</span>位时加重，<span class="answer-text">平躺</span>时减轻。<br>（2）治疗：<br>①保持{{c2::卧}}位<br>②液体管理，中度头痛每日输液{{c2::2000-3000}}ml<br>③硬膜外"血补丁"：抽取病人{{c2::自体血10ml}}在10秒内经原穿刺点注入硬膜外间隙<br>④硬膜外隙注射{{c2::生理盐水}}<br>⑤给予{{c2::抗炎镇痛}}药</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. What are the differences between spinal anesthesia and epidural anesthesia？<br>（比较蛛网膜下腔阻滞和硬膜外隙阻滞）<br>①注射<span class="blur-text">部位</span>：{{c2::L2}}以下；{{c2::C～S}}<br>②注射<span class="blur-text">间隙</span>：{{c2::蛛网膜下}}隙；{{c2::硬膜外}}隙<br>③局麻药<span class="blur-text">剂量</span>：{{c2::小}}剂量；{{c2::大}}剂量<br>④阻滞<span class="blur-text">方式</span>：{{c2::横断}}面；{{c2::上下}}水平<br>⑤起效<span class="blur-text">时间</span>：{{c2::快}}；{{c2::慢}}<br>⑥给药<span class="blur-text">方式</span>：{{c2::单次}}给药；{{c2::单次/置管连续}}给药</td>
+                            <td>12. What are the differences between spinal anesthesia and epidural anesthesia？<br>（比较蛛网膜下腔阻滞和硬膜外隙阻滞）<br>①注射<span class="answer-text">部位</span>：{{c2::L2}}以下；{{c2::C～S}}<br>②注射<span class="answer-text">间隙</span>：{{c2::蛛网膜下}}隙；{{c2::硬膜外}}隙<br>③局麻药<span class="answer-text">剂量</span>：{{c2::小}}剂量；{{c2::大}}剂量<br>④阻滞<span class="answer-text">方式</span>：{{c2::横断}}面；{{c2::上下}}水平<br>⑤起效<span class="answer-text">时间</span>：{{c2::快}}；{{c2::慢}}<br>⑥给药<span class="answer-text">方式</span>：{{c2::单次}}给药；{{c2::单次/置管连续}}给药</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. 影响<span class="blur-text">气管通畅</span>的常见原因<br>（etiology of airway obstruction）<br>①<span class="blur-text">舌</span>后坠<br>②分泌物、出血、血液凝块以及异物<span class="blur-text">阻塞</span><br>③<span class="blur-text">喉</span>痉挛/水肿<br>④<span class="blur-text">支气管</span>痉挛<br>⑤<span class="blur-text">药物</span>残余作用所致通气障碍</td>
+                            <td>13. 影响<span class="answer-text">气管通畅</span>的常见原因<br>（etiology of airway obstruction）<br>①<span class="answer-text">舌</span>后坠<br>②分泌物、出血、血液凝块以及异物<span class="answer-text">阻塞</span><br>③<span class="answer-text">喉</span>痉挛/水肿<br>④<span class="answer-text">支气管</span>痉挛<br>⑤<span class="answer-text">药物</span>残余作用所致通气障碍</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. 打开气道的工具及气道管理的办法<br>（1）单手<span class="blur-text">抬下颏</span>法和双手<span class="blur-text">托下颌</span>法<br>（2）<span class="blur-text">口咽</span>通气管<br>1）适应症：<br>①<span class="blur-text">手</span>法托举无效<br>②需要<span class="blur-text">长</span>时间气道开放<br>2）并发症：<br>①<span class="blur-text">恶心，呕吐</span><br>②加重<span class="blur-text">上气道</span>梗阻<br>③喉<span class="blur-text">痉挛</span>，咳嗽<br>（3）<span class="blur-text">鼻咽</span>通气管<br>1）适应症：<br>①手法托举无效<br>②需要长时间气道开放<br>2）禁忌症：<br>①<span class="blur-text">凝血</span>功能障碍<br>②<span class="blur-text">颅底</span>骨折<br>③鼻腔<span class="blur-text">感染</span><br>④鼻<span class="blur-text">中隔</span>外伤移位<br>（4）<span class="blur-text">面</span>罩通气<br>1）适应症：<br>①为<span class="blur-text">无胃内容物反流、误吸</span>风险的<span class="blur-text">短小</span>手术者实行全身麻醉通气<br>②气管内插管前为病人预<span class="blur-text">充氧去氮</span><br>③<span class="blur-text">紧急</span>情况下进行辅助或控制呼吸，如心肺复苏的急救现场。<br>（5）<span class="blur-text">喉</span>罩通气术（LMA）<br>1）适应症：<br>①无反流呼吸风险的麻醉手术，尤其是非预见性<span class="blur-text">气管内插管</span>困难的病人<br>②<span class="blur-text">颈椎</span>不稳定，病人施行气管内插管需移动头部而有较大顾虑时<br>③短小手术需人工通气或保留自主呼吸的病人<br>④紧急气道处理和心肺复苏时及时建立人工通气<br>2）禁忌症：<br>①饱胃、腹内压过高、有反流呼吸高风险的病人<br>②张口度小于{{c2::3}}cm的病人<br>③{{c2::咽喉}}部感染，水肿，活动性出血，血管瘤和组织损伤等病变的病人<br>④通气压力需大于{{c2::25}}cmH2O的气道狭窄和慢性阻塞性肺疾病病人。<br>（6）气管内<span class="blur-text">插管</span><br>1）适应症：<br>气管内插管可保持患者呼吸道通畅，防止异物进入呼吸道，便于及时<span class="blur-text">吸出</span>气管内分泌物或血液，进行有效的人工或机械通气。因各种原因需要进行机械通气、心肺复苏以及新生儿严重窒息者，都是气管内插管的适应症。<br>①<span class="blur-text">全身麻醉</span>时的通气<br>②严重的<span class="blur-text">气管阻塞</span><br>③需要持续<span class="blur-text">呼吸支持</span>的危重病人<br>④<span class="blur-text">CPR</span>的高级生命支持<br>2）并发症：<br>①气管内插管所引起的{{c2::创伤}}，舌、牙齿创伤，{{c2::环杓}}关节脱位<br>②气管导管不畅<br>③痰液过多或{{c2::痰痂}}<br>④气管导管插入过深阻塞一侧{{c2::支气管}}<br>⑤麻醉机和呼吸机{{c2::故障}}。<br>（7）气管<span class="blur-text">切开</span>术（tracheostomy）<br>1）适应症：<br>①各种原因所致的急性<span class="blur-text">上呼吸道梗阻</span><br>②<span class="blur-text">口腔颌面</span>部严重外伤，无法行气管内插管<br>③各种原因所致的气管内插管失败，尤其是出现非预见性的困难气道时<br>④下呼吸道痰液或分泌潴留或阻塞，为便于及时清理气道、维持下呼吸道通畅时<br>⑤需较长时间保持人工气道和机械通气等。</td>
+                            <td>14. 打开气道的工具及气道管理的办法<br>（1）单手<span class="answer-text">抬下颏</span>法和双手<span class="answer-text">托下颌</span>法<br>（2）<span class="answer-text">口咽</span>通气管<br>1）适应症：<br>①<span class="answer-text">手</span>法托举无效<br>②需要<span class="answer-text">长</span>时间气道开放<br>2）并发症：<br>①<span class="answer-text">恶心，呕吐</span><br>②加重<span class="answer-text">上气道</span>梗阻<br>③喉<span class="answer-text">痉挛</span>，咳嗽<br>（3）<span class="answer-text">鼻咽</span>通气管<br>1）适应症：<br>①手法托举无效<br>②需要长时间气道开放<br>2）禁忌症：<br>①<span class="answer-text">凝血</span>功能障碍<br>②<span class="answer-text">颅底</span>骨折<br>③鼻腔<span class="answer-text">感染</span><br>④鼻<span class="answer-text">中隔</span>外伤移位<br>（4）<span class="answer-text">面</span>罩通气<br>1）适应症：<br>①为<span class="answer-text">无胃内容物反流、误吸</span>风险的<span class="answer-text">短小</span>手术者实行全身麻醉通气<br>②气管内插管前为病人预<span class="answer-text">充氧去氮</span><br>③<span class="answer-text">紧急</span>情况下进行辅助或控制呼吸，如心肺复苏的急救现场。<br>（5）<span class="answer-text">喉</span>罩通气术（LMA）<br>1）适应症：<br>①无反流呼吸风险的麻醉手术，尤其是非预见性<span class="answer-text">气管内插管</span>困难的病人<br>②<span class="answer-text">颈椎</span>不稳定，病人施行气管内插管需移动头部而有较大顾虑时<br>③短小手术需人工通气或保留自主呼吸的病人<br>④紧急气道处理和心肺复苏时及时建立人工通气<br>2）禁忌症：<br>①饱胃、腹内压过高、有反流呼吸高风险的病人<br>②张口度小于{{c2::3}}cm的病人<br>③{{c2::咽喉}}部感染，水肿，活动性出血，血管瘤和组织损伤等病变的病人<br>④通气压力需大于{{c2::25}}cmH2O的气道狭窄和慢性阻塞性肺疾病病人。<br>（6）气管内<span class="answer-text">插管</span><br>1）适应症：<br>气管内插管可保持患者呼吸道通畅，防止异物进入呼吸道，便于及时<span class="answer-text">吸出</span>气管内分泌物或血液，进行有效的人工或机械通气。因各种原因需要进行机械通气、心肺复苏以及新生儿严重窒息者，都是气管内插管的适应症。<br>①<span class="answer-text">全身麻醉</span>时的通气<br>②严重的<span class="answer-text">气管阻塞</span><br>③需要持续<span class="answer-text">呼吸支持</span>的危重病人<br>④<span class="answer-text">CPR</span>的高级生命支持<br>2）并发症：<br>①气管内插管所引起的{{c2::创伤}}，舌、牙齿创伤，{{c2::环杓}}关节脱位<br>②气管导管不畅<br>③痰液过多或{{c2::痰痂}}<br>④气管导管插入过深阻塞一侧{{c2::支气管}}<br>⑤麻醉机和呼吸机{{c2::故障}}。<br>（7）气管<span class="answer-text">切开</span>术（tracheostomy）<br>1）适应症：<br>①各种原因所致的急性<span class="answer-text">上呼吸道梗阻</span><br>②<span class="answer-text">口腔颌面</span>部严重外伤，无法行气管内插管<br>③各种原因所致的气管内插管失败，尤其是出现非预见性的困难气道时<br>④下呼吸道痰液或分泌潴留或阻塞，为便于及时清理气道、维持下呼吸道通畅时<br>⑤需较长时间保持人工气道和机械通气等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. 困难气道的评估<br>（1）病史：<span class="blur-text">打鼾</span>或睡眠呼吸暂停综合征史、气道<span class="blur-text">手术</span>史、头颈部<span class="blur-text">放疗</span>史、困难气道史等。<br>（2）影像学检查：X线、CT等有助于评估<br>（3）体格检查：<span class="blur-text">肥胖</span>、<span class="blur-text">龅</span>牙、<span class="blur-text">颌面</span>部疾病、<span class="blur-text">胸腔和脊柱</span>畸形等<br>（4）气道检查：<br>①<span class="blur-text">马氏</span>分级3-4级<br>②<span class="blur-text">甲颏</span>距离小于6厘米或小于检查者三横指的宽度<br>③<span class="blur-text">张口</span>度小于3厘米<br>④<span class="blur-text">头颈</span>活动度：下巴不能接触胸骨或不能伸颈</td>
+                            <td>15. 困难气道的评估<br>（1）病史：<span class="answer-text">打鼾</span>或睡眠呼吸暂停综合征史、气道<span class="answer-text">手术</span>史、头颈部<span class="answer-text">放疗</span>史、困难气道史等。<br>（2）影像学检查：X线、CT等有助于评估<br>（3）体格检查：<span class="answer-text">肥胖</span>、<span class="answer-text">龅</span>牙、<span class="answer-text">颌面</span>部疾病、<span class="answer-text">胸腔和脊柱</span>畸形等<br>（4）气道检查：<br>①<span class="answer-text">马氏</span>分级3-4级<br>②<span class="answer-text">甲颏</span>距离小于6厘米或小于检查者三横指的宽度<br>③<span class="answer-text">张口</span>度小于3厘米<br>④<span class="answer-text">头颈</span>活动度：下巴不能接触胸骨或不能伸颈</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. 高钾血症的处理<br>①给予<span class="blur-text">钙</span>剂以对抗高钾血症对心脏的抑制<br>②促进钾向细胞内转移：静脉输注<span class="blur-text">葡萄糖</span>，<span class="blur-text">胰岛素</span>，<span class="blur-text">碳酸氢钠</span>和（或）<span class="blur-text">β肾上腺素能激动</span>剂<br>③促进钾排泄：静脉给予<span class="blur-text">利尿</span>剂、<span class="blur-text">醛固酮</span>激动剂，肾功能不全者可行肾脏替代治疗<br>④限制钾的摄入：避免应用<span class="blur-text">库存</span>血<br>⑤治疗<span class="blur-text">原发</span>疾病</td>
+                            <td>16. 高钾血症的处理<br>①给予<span class="answer-text">钙</span>剂以对抗高钾血症对心脏的抑制<br>②促进钾向细胞内转移：静脉输注<span class="answer-text">葡萄糖</span>，<span class="answer-text">胰岛素</span>，<span class="answer-text">碳酸氢钠</span>和（或）<span class="answer-text">β肾上腺素能激动</span>剂<br>③促进钾排泄：静脉给予<span class="answer-text">利尿</span>剂、<span class="answer-text">醛固酮</span>激动剂，肾功能不全者可行肾脏替代治疗<br>④限制钾的摄入：避免应用<span class="answer-text">库存</span>血<br>⑤治疗<span class="answer-text">原发</span>疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. 日间手术麻醉前评估<br>（1）两次评估：术前麻醉评估<span class="blur-text">门诊</span>、手术<span class="blur-text">当日</span>再次评估<br>（2）评估内容：<br>①三个方面：<span class="blur-text">病</span>史、<span class="blur-text">体</span>检、<span class="blur-text">辅助</span>检查<br>②特殊麻醉问题：{{c3::困难气道}}、{{c3::恶性高热}}、{{c3::过敏、肥胖}}、{{c3::血液/呼吸}}系统疾病、{{c3::心脏}}病、胃肠道{{c3::反流}}性疾病<br>（3）术前准备：<br>①禁食：术前{{c2::8}}小时禁食固体食物<br>②禁饮：术前{{c2::2}}小时禁饮清亮液体<br>③戒{{c2::烟}}<br>④不常规给予麻醉前{{c2::用药}}</td>
+                            <td>17. 日间手术麻醉前评估<br>（1）两次评估：术前麻醉评估<span class="answer-text">门诊</span>、手术<span class="answer-text">当日</span>再次评估<br>（2）评估内容：<br>①三个方面：<span class="answer-text">病</span>史、<span class="answer-text">体</span>检、<span class="answer-text">辅助</span>检查<br>②特殊麻醉问题：{{c3::困难气道}}、{{c3::恶性高热}}、{{c3::过敏、肥胖}}、{{c3::血液/呼吸}}系统疾病、{{c3::心脏}}病、胃肠道{{c3::反流}}性疾病<br>（3）术前准备：<br>①禁食：术前{{c2::8}}小时禁食固体食物<br>②禁饮：术前{{c2::2}}小时禁饮清亮液体<br>③戒{{c2::烟}}<br>④不常规给予麻醉前{{c2::用药}}</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. 日间手术麻醉手术后离院标准（图）<br><span class="blur-text">麻醉手术后管理</span>离院标准（postanesthesia discharge score, PADS）<br>总分10分，9分及以上可以离院；成人陪护（留下联系方式）、日间手术中心联系电话<br>1）<span class="blur-text">生命</span>体征：在术前值的20%以内--2分；20-40%--1分；大于40%--0分<br>2）<span class="blur-text">活动</span>状态：步态平稳无头晕，达到术前水平--2分；需要搀扶才可行走--1分；完全不能行走--0分<br>3）<span class="blur-text">恶心</span>呕吐：轻度不需治疗--2分；中度可药物治疗--1分；重度治疗无效--0分<br>4）<span class="blur-text">疼痛</span>：VAS 0-3--2分；4-6--1分；7-10--0分<br>5）手术部位<span class="blur-text">出血</span>：轻度不需换药--2分；中度最多换2次就无继续出血--1分；重度需换药2次以上持续出血--0分</td>
+                            <td>18. 日间手术麻醉手术后离院标准（图）<br><span class="answer-text">麻醉手术后管理</span>离院标准（postanesthesia discharge score, PADS）<br>总分10分，9分及以上可以离院；成人陪护（留下联系方式）、日间手术中心联系电话<br>1）<span class="answer-text">生命</span>体征：在术前值的20%以内--2分；20-40%--1分；大于40%--0分<br>2）<span class="answer-text">活动</span>状态：步态平稳无头晕，达到术前水平--2分；需要搀扶才可行走--1分；完全不能行走--0分<br>3）<span class="answer-text">恶心</span>呕吐：轻度不需治疗--2分；中度可药物治疗--1分；重度治疗无效--0分<br>4）<span class="answer-text">疼痛</span>：VAS 0-3--2分；4-6--1分；7-10--0分<br>5）手术部位<span class="answer-text">出血</span>：轻度不需换药--2分；中度最多换2次就无继续出血--1分；重度需换药2次以上持续出血--0分</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. ARDS的临床表现、诊断与治疗<br>（1）临床表现：<br>1）症状和体征：<br>①症状：呼吸频数（<span class="blur-text">30-50</span>次/分），呼吸窘迫（呼吸<span class="blur-text">深快，费力</span>），创伤、休克或大手术等原发病，起病后<span class="blur-text">1-3</span>日内发生<br>②体征：<br>发病早期：体征无异常，仅在双肺闻及少量<span class="blur-text">细湿啰</span>音<br>病情进展：闻及<span class="blur-text">水泡</span>音，可有<span class="blur-text">管状</span>呼吸音<br>2）影像学检查：<br>①X线胸片：临床症状出现后{{c2::12~24}}小时出现X线胸片异常（边缘模糊的{{c2::斑片}}状阴影，"白肺"，磨玻璃状；弥漫性阴影）<br>②CT：更准确反映病变区域的大小，发现{{c2::气压}}伤及{{c2::小灶}}性的肺部感染。<br>3）实验室检查：<br>①动脉血气分析：PaO2/FiO2 {{c3::400-500}}（正常值）<br>②肺力学监测：顺应性{{c3::降低}}、气道阻力{{c3::增加}}<br>（2）诊断<br>1）依据：<span class="blur-text">原发</span>疾病，难以纠正的<span class="blur-text">缺氧</span>，<span class="blur-text">血气</span>分析，X线<span class="blur-text">胸片</span><br>2）标准：Berlin诊断标准<br>①发病时间：具有已知危险因素后或新出现或原有呼吸系统症状加重后<span class="blur-text">1周内</span>发病，<br>②胸部X线或CT：无法用渗出、肺叶/肺萎缩或结节完全解释的双肺<span class="blur-text">透光度</span>降低<br>③水肿原因：无法完全用心衰或容量负荷过多解释的<span class="blur-text">呼吸衰竭</span><br>④氧合：PaO2/FiO2 {{c2::200-300}}mmHg（轻度）/{{c2::100-200}}（中度）/{{c2::＜100}}（重度），PEEP或CPAP≥{{c2::5}}cmH2O<br>（3）治疗<br>1）原则：<br>①控制{{c2::原发病}}与{{c2::抗感染}}治疗<br>②呼吸支持治疗：{{c2::氧疗}}、{{c2::机械}}通气<br>③液体管理<br>④药物治疗：{{c2::糖皮质}}激素，{{c2::一氧化氮}}吸入，{{c2::肺泡表面活性}}物质<br>⑤营养代谢支持<br>⑥维持重要器官功能，防止{{c2::多器官功能障碍综合征}}。<br>2）机械通气的管理<br>FiO2，通气模式，体位，镇静镇痛，保留适度自主呼吸，肺保护性通气策略，部分液体通气<br>3）保护性肺通气策略：<br>①{{c3::呼气}}末{{c3::正}}压通气PEEP<br>②小{{c3::潮气量}}和允许性{{c3::高碳酸血}}症<br>③肺{{c3::复张}}策略<br>4）体外膜氧合技术</td>
+                            <td>19. ARDS的临床表现、诊断与治疗<br>（1）临床表现：<br>1）症状和体征：<br>①症状：呼吸频数（<span class="answer-text">30-50</span>次/分），呼吸窘迫（呼吸<span class="answer-text">深快，费力</span>），创伤、休克或大手术等原发病，起病后<span class="answer-text">1-3</span>日内发生<br>②体征：<br>发病早期：体征无异常，仅在双肺闻及少量<span class="answer-text">细湿啰</span>音<br>病情进展：闻及<span class="answer-text">水泡</span>音，可有<span class="answer-text">管状</span>呼吸音<br>2）影像学检查：<br>①X线胸片：临床症状出现后{{c2::12~24}}小时出现X线胸片异常（边缘模糊的{{c2::斑片}}状阴影，"白肺"，磨玻璃状；弥漫性阴影）<br>②CT：更准确反映病变区域的大小，发现{{c2::气压}}伤及{{c2::小灶}}性的肺部感染。<br>3）实验室检查：<br>①动脉血气分析：PaO2/FiO2 {{c3::400-500}}（正常值）<br>②肺力学监测：顺应性{{c3::降低}}、气道阻力{{c3::增加}}<br>（2）诊断<br>1）依据：<span class="answer-text">原发</span>疾病，难以纠正的<span class="answer-text">缺氧</span>，<span class="answer-text">血气</span>分析，X线<span class="answer-text">胸片</span><br>2）标准：Berlin诊断标准<br>①发病时间：具有已知危险因素后或新出现或原有呼吸系统症状加重后<span class="answer-text">1周内</span>发病，<br>②胸部X线或CT：无法用渗出、肺叶/肺萎缩或结节完全解释的双肺<span class="answer-text">透光度</span>降低<br>③水肿原因：无法完全用心衰或容量负荷过多解释的<span class="answer-text">呼吸衰竭</span><br>④氧合：PaO2/FiO2 {{c2::200-300}}mmHg（轻度）/{{c2::100-200}}（中度）/{{c2::＜100}}（重度），PEEP或CPAP≥{{c2::5}}cmH2O<br>（3）治疗<br>1）原则：<br>①控制{{c2::原发病}}与{{c2::抗感染}}治疗<br>②呼吸支持治疗：{{c2::氧疗}}、{{c2::机械}}通气<br>③液体管理<br>④药物治疗：{{c2::糖皮质}}激素，{{c2::一氧化氮}}吸入，{{c2::肺泡表面活性}}物质<br>⑤营养代谢支持<br>⑥维持重要器官功能，防止{{c2::多器官功能障碍综合征}}。<br>2）机械通气的管理<br>FiO2，通气模式，体位，镇静镇痛，保留适度自主呼吸，肺保护性通气策略，部分液体通气<br>3）保护性肺通气策略：<br>①{{c3::呼气}}末{{c3::正}}压通气PEEP<br>②小{{c3::潮气量}}和允许性{{c3::高碳酸血}}症<br>③肺{{c3::复张}}策略<br>4）体外膜氧合技术</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. Steward恢复评分（图）<br>（1）<span class="blur-text">清醒</span>程度<br>①完全{{c2::苏醒}}2分<br>②对{{c2::刺激}}有反应1分<br>③对刺激无反应0分<br>（2）<span class="blur-text">呼吸道</span>通畅程度<br>①可按医师吩咐{{c2::咳嗽}}2分<br>②不用{{c2::支持}}可以维持呼吸道通畅1分<br>③呼吸道需要予以支持0分<br>（3）<span class="blur-text">肢体</span>活动度<br>①肢体能做有{{c2::意识}}的活动2分<br>②肢体无意识活动1分<br>③肢体无活动0分</td>
+                            <td>20. Steward恢复评分（图）<br>（1）<span class="answer-text">清醒</span>程度<br>①完全{{c2::苏醒}}2分<br>②对{{c2::刺激}}有反应1分<br>③对刺激无反应0分<br>（2）<span class="answer-text">呼吸道</span>通畅程度<br>①可按医师吩咐{{c2::咳嗽}}2分<br>②不用{{c2::支持}}可以维持呼吸道通畅1分<br>③呼吸道需要予以支持0分<br>（3）<span class="answer-text">肢体</span>活动度<br>①肢体能做有{{c2::意识}}的活动2分<br>②肢体无意识活动1分<br>③肢体无活动0分</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. 围麻醉期栓塞的防治原则<br>①全面评估<span class="blur-text">风险</span>、预防为主<br>②密切监测、及时处理（规范<span class="blur-text">抢救</span>流程）<br>③全力纠正、改善患者预后：改善<span class="blur-text">器官功能</span>、<span class="blur-text">康复锻炼</span>、<span class="blur-text">支持营养</span>治疗</td>
+                            <td>21. 围麻醉期栓塞的防治原则<br>①全面评估<span class="answer-text">风险</span>、预防为主<br>②密切监测、及时处理（规范<span class="answer-text">抢救</span>流程）<br>③全力纠正、改善患者预后：改善<span class="answer-text">器官功能</span>、<span class="answer-text">康复锻炼</span>、<span class="answer-text">支持营养</span>治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. 低血容量性休克的治疗<br>①补充<span class="blur-text">血容量</span><br>②积极处理<span class="blur-text">原发病</span><br>③血管活性药物的应用：<span class="blur-text">升压</span>药，<span class="blur-text">血管扩张</span>药<br>④纠正<span class="blur-text">酸中毒</span><br>⑤防治器官功能<span class="blur-text">衰竭</span></td>
+                            <td>22. 低血容量性休克的治疗<br>①补充<span class="answer-text">血容量</span><br>②积极处理<span class="answer-text">原发病</span><br>③血管活性药物的应用：<span class="answer-text">升压</span>药，<span class="answer-text">血管扩张</span>药<br>④纠正<span class="answer-text">酸中毒</span><br>⑤防治器官功能<span class="answer-text">衰竭</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. 感染性休克的治疗<br>①控制<span class="blur-text">感染</span>和<span class="blur-text">原发病</span>的治疗<br>②补充<span class="blur-text">血容量</span><br>③改善<span class="blur-text">心肌</span>收缩力<br>④加强<span class="blur-text">呼吸</span>管理和治疗<br>⑤加强<span class="blur-text">血流动力学</span>监测（指导血管活性药物的应用）<br>⑥纠正<span class="blur-text">电解质</span>紊乱和<span class="blur-text">酸碱平衡</span>失常<br>⑦<span class="blur-text">激素</span>治疗</td>
+                            <td>23. 感染性休克的治疗<br>①控制<span class="answer-text">感染</span>和<span class="answer-text">原发病</span>的治疗<br>②补充<span class="answer-text">血容量</span><br>③改善<span class="answer-text">心肌</span>收缩力<br>④加强<span class="answer-text">呼吸</span>管理和治疗<br>⑤加强<span class="answer-text">血流动力学</span>监测（指导血管活性药物的应用）<br>⑥纠正<span class="answer-text">电解质</span>紊乱和<span class="answer-text">酸碱平衡</span>失常<br>⑦<span class="answer-text">激素</span>治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. MODS的临床表现<br>（1）<span class="blur-text">原发病</span>的临床表现<br>（2）<span class="blur-text">SIRS</span>的临床表现：<br>①体温大于{{c2::38}}℃或小于{{c2::36}}℃<br>②心率大于{{c2::90}}次/分<br>③呼吸急促，大于{{c2::20}}次/分或过度通气PaCO2＜{{c2::32}}mmHg<br>④白细胞＞{{c2::12}}×10^9/L或＜{{c2::4}}×10^9/L，或未成熟粒细胞＞{{c2::10}}%<br>具有两项或两项以上即可诊断SIRS。<br>（3）<span class="blur-text">受累器官系统</span>相关的临床表现</td>
+                            <td>24. MODS的临床表现<br>（1）<span class="answer-text">原发病</span>的临床表现<br>（2）<span class="answer-text">SIRS</span>的临床表现：<br>①体温大于{{c2::38}}℃或小于{{c2::36}}℃<br>②心率大于{{c2::90}}次/分<br>③呼吸急促，大于{{c2::20}}次/分或过度通气PaCO2＜{{c2::32}}mmHg<br>④白细胞＞{{c2::12}}×10^9/L或＜{{c2::4}}×10^9/L，或未成熟粒细胞＞{{c2::10}}%<br>具有两项或两项以上即可诊断SIRS。<br>（3）<span class="answer-text">受累器官系统</span>相关的临床表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25. MODS的预防与治疗<br>（1）预防：<br>①早期<span class="blur-text">识别</span>高危病人<br>②调控<span class="blur-text">心肺</span>等重要器官功能<br>③预防和控制<span class="blur-text">感染</span><br>④保护胃肠黏膜屏障及<span class="blur-text">营养</span>支持<br>⑤改善全身情况，维持<span class="blur-text">内环境稳定</span><br>⑥加强<span class="blur-text">器官系统功能</span>监测。<br>（2）治疗：<br>①治疗{{c2::原发}}疾病<br>②{{c2::支持}}治疗：<br>循环系统：目标导向液体治疗，<span class="blur-text">正性肌力</span>药、<span class="blur-text">血管收缩/舒张</span>药物；<br>呼吸系统：鼻导管、面罩、无创通气，机械通气，高频率低潮气量（<span class="blur-text">6~8</span>ml/kg），<span class="blur-text">5~10</span>cmH2O<br>④{{c2::营养}}支持和代谢调理：<span class="blur-text">肠内</span>营养<br>⑤{{c2::激素}}治疗：<span class="blur-text">脓毒</span>症<br>⑥预防和控制{{c2::感染}}：合理使用<span class="blur-text">抗生素</span><br>⑥{{c2::血液}}净化治疗<br>⑦{{c2::低温}}。</td>
+                            <td>25. MODS的预防与治疗<br>（1）预防：<br>①早期<span class="answer-text">识别</span>高危病人<br>②调控<span class="answer-text">心肺</span>等重要器官功能<br>③预防和控制<span class="answer-text">感染</span><br>④保护胃肠黏膜屏障及<span class="answer-text">营养</span>支持<br>⑤改善全身情况，维持<span class="answer-text">内环境稳定</span><br>⑥加强<span class="answer-text">器官系统功能</span>监测。<br>（2）治疗：<br>①治疗{{c2::原发}}疾病<br>②{{c2::支持}}治疗：<br>循环系统：目标导向液体治疗，<span class="answer-text">正性肌力</span>药、<span class="answer-text">血管收缩/舒张</span>药物；<br>呼吸系统：鼻导管、面罩、无创通气，机械通气，高频率低潮气量（<span class="answer-text">6~8</span>ml/kg），<span class="answer-text">5~10</span>cmH2O<br>④{{c2::营养}}支持和代谢调理：<span class="answer-text">肠内</span>营养<br>⑤{{c2::激素}}治疗：<span class="answer-text">脓毒</span>症<br>⑥预防和控制{{c2::感染}}：合理使用<span class="answer-text">抗生素</span><br>⑥{{c2::血液}}净化治疗<br>⑦{{c2::低温}}。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26. 生存链包括哪些环节<br>（1）院内心搏骤停生存链环节包括：<br>①监测和<span class="blur-text">预防</span><br>②识别和启动应急反应系统<br>③即时高质量心肺复苏<br>④快速除颤<br>⑤高级生命维持和骤停后护理<br>（2）院外心搏骤停生存链环节包括：<br>①识别和启动应急反应系统<br>②即时高质量心肺复苏<br>③快速除颤<br>④基础及高级<span class="blur-text">急救</span>医疗服务<br>⑤高级生命维持和骤停后护理。</td>
+                            <td>26. 生存链包括哪些环节<br>（1）院内心搏骤停生存链环节包括：<br>①监测和<span class="answer-text">预防</span><br>②识别和启动应急反应系统<br>③即时高质量心肺复苏<br>④快速除颤<br>⑤高级生命维持和骤停后护理<br>（2）院外心搏骤停生存链环节包括：<br>①识别和启动应急反应系统<br>②即时高质量心肺复苏<br>③快速除颤<br>④基础及高级<span class="answer-text">急救</span>医疗服务<br>⑤高级生命维持和骤停后护理。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27. 胸外心脏按压的关键点<br>（key points of external chest compression）<br>①两臂伸直与水平面<span class="blur-text">垂直</span><br>②按压频率为<span class="blur-text">100-120</span>次/分<br>③按压深度为<span class="blur-text">5-6</span>cm<br>④给予足够的通气，按压通气比为<span class="blur-text">30：2</span><br>⑤保证每次按压后胸廓完全<span class="blur-text">回弹</span>，回弹与按压的时间大致相等<br>⑥尽可能减少按压<span class="blur-text">中断</span></td>
+                            <td>27. 胸外心脏按压的关键点<br>（key points of external chest compression）<br>①两臂伸直与水平面<span class="answer-text">垂直</span><br>②按压频率为<span class="answer-text">100-120</span>次/分<br>③按压深度为<span class="answer-text">5-6</span>cm<br>④给予足够的通气，按压通气比为<span class="answer-text">30：2</span><br>⑤保证每次按压后胸廓完全<span class="answer-text">回弹</span>，回弹与按压的时间大致相等<br>⑥尽可能减少按压<span class="answer-text">中断</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28. 胸外按压有效的标志<br>①可触及<span class="blur-text">大动脉搏动</span><br>②皮肤<span class="blur-text">青紫</span>转为<span class="blur-text">红润</span><br>③可测得<span class="blur-text">血压</span><br>④散大的瞳孔开始<span class="blur-text">缩小</span><br>⑤出现自主<span class="blur-text">呼吸</span></td>
+                            <td>28. 胸外按压有效的标志<br>①可触及<span class="answer-text">大动脉搏动</span><br>②皮肤<span class="answer-text">青紫</span>转为<span class="answer-text">红润</span><br>③可测得<span class="answer-text">血压</span><br>④散大的瞳孔开始<span class="answer-text">缩小</span><br>⑤出现自主<span class="answer-text">呼吸</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29. 高级生命支持的内容包括<br>①维持<span class="blur-text">呼吸道</span>通畅和有效人工呼吸支持<br>②恢复和维持<span class="blur-text">自主循环</span><br>③有症状的心动<span class="blur-text">过缓&过速</span>的处理<br>④心肺复苏期间的<span class="blur-text">监测</span><br>⑤心肺复苏期间的<span class="blur-text">用药</span><br>⑥循环<span class="blur-text">支持</span>设备</td>
+                            <td>29. 高级生命支持的内容包括<br>①维持<span class="answer-text">呼吸道</span>通畅和有效人工呼吸支持<br>②恢复和维持<span class="answer-text">自主循环</span><br>③有症状的心动<span class="answer-text">过缓&过速</span>的处理<br>④心肺复苏期间的<span class="answer-text">监测</span><br>⑤心肺复苏期间的<span class="answer-text">用药</span><br>⑥循环<span class="answer-text">支持</span>设备</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30. 脑复苏的措施包括哪些<br>①控制性<span class="blur-text">低温</span>治疗：采用"目标温度管理"，即目标温度选定在<span class="blur-text">32~36</span>℃间，并至少维持<span class="blur-text">24</span>小时。<br>②增加<span class="blur-text">脑血流</span>灌注：提高平均动脉压，降低颅内压，改善脑微循环。<br>③血糖控制：血糖控制在<span class="blur-text">8~10</span>mmol/L。<br>④药物治疗：<span class="blur-text">钙通道阻滞</span>剂和<span class="blur-text">自由基清除</span>剂，<span class="blur-text">肾上腺皮质</span>激素。<br>⑤<span class="blur-text">高压氧</span>治疗</td>
+                            <td>30. 脑复苏的措施包括哪些<br>①控制性<span class="answer-text">低温</span>治疗：采用"目标温度管理"，即目标温度选定在<span class="answer-text">32~36</span>℃间，并至少维持<span class="answer-text">24</span>小时。<br>②增加<span class="answer-text">脑血流</span>灌注：提高平均动脉压，降低颅内压，改善脑微循环。<br>③血糖控制：血糖控制在<span class="answer-text">8~10</span>mmol/L。<br>④药物治疗：<span class="answer-text">钙通道阻滞</span>剂和<span class="answer-text">自由基清除</span>剂，<span class="answer-text">肾上腺皮质</span>激素。<br>⑤<span class="answer-text">高压氧</span>治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31. 疼痛的要素<br>①疼痛的<span class="blur-text">部位</span><br>②疼痛的持续<span class="blur-text">时间</span>：阵发性、持续性<br>③疼痛的<span class="blur-text">性质</span>和<span class="blur-text">程度</span>：胀痛，酸痛，刺痛，烧灼痛；轻，中，重<br>④疼痛的<span class="blur-text">伴随</span>症状：头晕，恶心等<br>⑤疼痛的<span class="blur-text">加重和缓解</span>因素</td>
+                            <td>31. 疼痛的要素<br>①疼痛的<span class="answer-text">部位</span><br>②疼痛的持续<span class="answer-text">时间</span>：阵发性、持续性<br>③疼痛的<span class="answer-text">性质</span>和<span class="answer-text">程度</span>：胀痛，酸痛，刺痛，烧灼痛；轻，中，重<br>④疼痛的<span class="answer-text">伴随</span>症状：头晕，恶心等<br>⑤疼痛的<span class="answer-text">加重和缓解</span>因素</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32. WHO癌痛药物治疗基本原则<br>①首先<span class="blur-text">无创</span>用药<br>②按<span class="blur-text">阶梯</span>用药<br>③按<span class="blur-text">时</span>用药<br>④<span class="blur-text">个性化</span>给药<br>⑤注意具体细节</td>
+                            <td>32. WHO癌痛药物治疗基本原则<br>①首先<span class="answer-text">无创</span>用药<br>②按<span class="answer-text">阶梯</span>用药<br>③按<span class="answer-text">时</span>用药<br>④<span class="answer-text">个性化</span>给药<br>⑤注意具体细节</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33. WHO癌痛三阶梯治疗模式<br>①1级：<span class="blur-text">非阿片类</span>镇痛药，<span class="blur-text">辅助</span>药<br>②2级：<span class="blur-text">弱</span>阿片类镇痛药，非阿片类镇痛药，辅助药<br>③3级：<span class="blur-text">强</span>阿片类镇痛药，非阿片类镇痛药，辅助药<br>```<br></td>
+                            <td>33. WHO癌痛三阶梯治疗模式<br>①1级：<span class="answer-text">非阿片类</span>镇痛药，<span class="answer-text">辅助</span>药<br>②2级：<span class="answer-text">弱</span>阿片类镇痛药，非阿片类镇痛药，辅助药<br>③3级：<span class="answer-text">强</span>阿片类镇痛药，非阿片类镇痛药，辅助药<br>```<br></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

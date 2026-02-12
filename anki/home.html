@@ -4,240 +4,533 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>小c的笔记导航</title>
-    <link rel="stylesheet" href="https://nymeria79.github.io/my-page/style.css">
+    <link rel="stylesheet" href="https://nymeria79.github.io/my-page/style.css   ">
+    <style>
+        /* 基础样式 */
+        .collapsible-section {
+            margin-bottom: 8px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 12px 16px;
+            background: rgba(74, 111, 165, 0.05);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        
+        .section-header:hover {
+            background: rgba(74, 111, 165, 0.1);
+        }
+        
+        .section-title-text {
+            font-weight: 600;
+            color: var(--link-color);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        .toggle-icon {
+            font-size: 0.8rem;
+            color: var(--link-color);
+            transition: transform 0.3s ease;
+            margin-left: 8px;
+        }
+        
+        .toggle-icon.collapsed {
+            transform: rotate(-90deg);
+        }
+        
+        .section-content {
+            max-height: 2000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+            opacity: 1;
+        }
+        
+        .section-content.collapsed {
+            max-height: 0;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+        /* 全局控制按钮 */
+        .global-control {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(74, 111, 165, 0.1);
+            flex-wrap: wrap;
+        }
+        
+        .control-btn {
+            padding: 8px 16px;
+            border: 1px solid var(--link-color);
+            background: transparent;
+            color: var(--link-color);
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        
+        .control-btn:hover {
+            background: var(--link-color);
+            color: white;
+        }
+        
+        .control-btn.active {
+            background: var(--link-color);
+            color: white;
+        }
+        
+        /* 分栏布局核心样式 */
+        .split-wrapper {
+            display: block;
+        }
+        
+        .split-left, .split-right {
+            width: 100%;
+        }
+        
+        /* 分栏模式 - 整个页面分为两边 */
+        body.split-mode .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 1400px;
+        }
+        
+        body.split-mode .split-wrapper {
+            display: contents; /* 让子元素直接参与grid布局 */
+        }
+        
+        body.split-mode .split-left {
+            grid-column: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        body.split-mode .split-right {
+            grid-column: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 0;
+        }
+        
+        /* 右列标题（仅在分栏时显示） */
+        .right-column-header {
+            display: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--link-color);
+            margin-bottom: 16px;
+            padding: 12px;
+            background: rgba(74, 111, 165, 0.08);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        body.split-mode .right-column-header {
+            display: block;
+        }
+        
+        /* 在分栏模式下，原卡片样式调整 */
+        body.split-mode .card {
+            margin-bottom: 0;
+        }
+        
+        body.split-mode .split-right .section-header {
+            background: rgba(74, 111, 165, 0.03);
+        }
+        
+        /* 保持links-grid样式 */
+        .links-grid {
+            padding: 12px 0;
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 968px) {
+            body.split-mode .container {
+                grid-template-columns: 1fr;
+            }
+            
+            body.split-mode .split-right {
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
         
-        <!-- 卡片1：头部 -->
-        <div class="card header-card">
-            <h1>📚 小c的anki笔记导航</h1>
-            <p class="subtitle">许多anki学习笔记的传送门，点击卡片即可跳转</p>
+        <!-- 分栏包装器：左侧内容（近期） -->
+        <div class="split-wrapper">
+            <div class="split-left">
+                
+                <!-- 卡片1：头部 -->
+                <div class="card header-card">
+                    <h1>📚 小c的anki笔记导航</h1>
+                    <p class="subtitle">许多anki学习笔记的传送门，点击卡片即可跳转</p>
 
-            <div class="medical-disclaimer">
-                <strong>⚠️ 医疗免责声明</strong>
-                <p>本站所有内容仅供教育参考与信息分享，不构成医疗建议、诊断或治疗方案。浏览本站不建立医患关系，如有健康疑虑请咨询执业医疗人员。</p>
-            </div>
-        </div>
+                    <div class="medical-disclaimer">
+                        <strong>⚠️ 医疗免责声明</strong>
+                        <p>本站所有内容仅供教育参考与信息分享，不构成医疗建议、诊断或治疗方案。浏览本站不建立医患关系，如有健康疑虑请咨询执业医疗人员。</p>
+                    </div>
+                </div>
 
-        <!-- 卡片2：个人博客 -->
-        <div class="card">
-            <div class="card-title">📝 个人博客</div>
-            <div class="card-desc">最初的主页，存放见闻思考和综合内容</div>
-            <a href="https://nymeria79.github.io/my-page/" target="_blank" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px; margin-top: 16px;">访问网站</a>
-        </div>
+                <!-- 卡片2：个人博客 -->
+                <div class="card">
+                    <div class="card-title">📝 个人博客</div>
+                    <div class="card-desc">最初的主页，存放见闻思考和综合内容</div>
+                    <a href="https://nymeria79.github.io/my-page/   " target="_blank" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px; margin-top: 16px;">访问网站</a>
+                </div>
 
-        <!-- 卡片3：Anki可视化工具 -->
-        <div class="card">
-            <div class="card-title">✨ Anki可视化工具</div>
-            <div class="card-desc">粘贴anki笔记自动排版，Claude写的实用工具</div>
-            <a href="post2ankikeshihua.html" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px; margin-top: 16px;">打开工具</a>
-    
-            <div class="card-desc" style="margin-top: 16px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;"> </div>
-            <div class="card-title">📑 HTML导航栏添加器</div>
-            <div class="card-desc">自动识别 === 【日期】=== 格式，一键生成粘性导航栏</div>
-            <a href="nav_adder.html" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px; margin-top: 16px;">打开工具</a>
-        </div>
-
-        <!-- 卡片4：Anki知识库（核心卡片） -->
-        <div class="card">
-            <div class="card-title">🎴 Anki知识库</div>
-            <div class="card-desc">这学期Anki内容的可视化图表，预计十多个页面</div>
-            <div class="card-desc">使用kimi和claude · 基于网络资源整理 · 侵删 · 勿商用</div>
-            <div class="card-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">⚠️ 不用于任何临床诊断参考，仅供个人学习</div>
-            <div class="card-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">😀 存在不妥或整理错误欢迎指正</div>
-
-            <div class="card-desc" style="margin-top: 16px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大四寒假</div>
-            <div class="links-grid">
-                <a href="post11jichumingci.html" class="link-item">github·基础名词</a>
-                <a href="post12feikaifazhe.html" class="link-item">github·非开发者</a>
-                <a href="post13gerenboke.html" class="link-item">github·个人博客</a>
-            </div>
-
-            <!-- 大一上 -->
-            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大一上</div>
-            <div class="links-grid">
-                <span class="text-item">大学英语1（公共基础课·3.5）</span>
-                <span class="text-item">医用高等数学（医学基础课·3）</span>
-                <span class="text-item">医学物理学（医学基础课·3）</span>
-                <span class="text-item">习近平新时代中国特色社会主义思想概论（公共基础课·3）</span>
-                <span class="text-item">医用无机化学（医学基础课·2.5）</span>
-                <span class="text-item">思想道德与法治（公共基础课·2.5）</span>
-                <span class="text-item">医用无机化学实验（医学基础课·2）</span>
-                <span class="text-item">大学生心理健康教育（公共基础课·2）</span>
-                <span class="text-item">医学物理学实验（医学基础课·1.5）</span>
-                <span class="text-item">大学生职业发展与就业指导(一)（公共基础课·1.5）</span>
-                <span class="text-item">大学体育1（公共基础课·1）</span>
-                <span class="text-item">早期接触临床(一)（集中实践教学·1）</span>
-                <span class="text-item">形势与政策(一)（公共基础课·0）</span>
-            </div>
-
-            <!-- 大一下 -->
-            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大一下</div>
-            <div class="links-grid">
-                <span class="text-item">分子与细胞(一)（医学基础课·9.5）</span>
-                <span class="text-item">人体概述(一)（医学基础课·8）</span>
-                <span class="text-item">大学英语2（公共基础课·3.5）</span>
-                <span class="text-item">医用有机化学（医学基础课·3）</span>
-                <span class="text-item">医用有机化学实验（医学基础课·2）</span>
-                <span class="text-item">中国近现代史纲要（公共基础课·2.5）</span>
-                <span class="text-item">军事理论（公共基础课·2）</span>
-                <span class="text-item">伟大的《红楼梦》（公共选修课·2）</span>
-                <span class="text-item">从创意到创业（公共选修课·2）</span>
-                <span class="text-item">大学体育2（公共基础课·1）</span>
-                <span class="text-item">早期接触临床(二)（集中实践教学·1）</span>
-                <span class="text-item">形势与政策(二)（公共基础课·0.5）</span>
-                <span class="text-item">军事技能（集中实践教学·2）</span>
-            </div>
-
-            <!-- 大二上 -->
-            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大二上</div>
-            <div class="links-grid">
-                <span class="text-item">人体概述(二)（医学基础课·9）</span>
-                <span class="text-item">检体诊断学（专业基础课·4）</span>
-                <span class="text-item">分子与细胞(二)（医学基础课·3.5）</span>
-                <span class="text-item">智慧医学语言基础（公共基础课·3）</span>
-                <span class="text-item">临床技能学(一)（专业基础课·2.5）</span>
-                <span class="text-item">马克思主义基本原理（公共基础课·2.5）</span>
-                <span class="text-item">医学文献获取与研究利用（专业限选课·2）</span>
-                <span class="text-item">西方文学经典鉴赏（公共选修课·2）</span>
-                <span class="text-item">解密黄帝内经（公共选修课·2）</span>
-                <span class="text-item">大学英语3（公共基础课·2）</span>
-                <span class="text-item">思想政治理论综合实践(一)（公共基础课·1.25）</span>
-                <span class="text-item">大学体育3（公共基础课·1）</span>
-                <span class="text-item">临床医学导论（专业基础课·1）</span>
-                <span class="text-item">医学生创新创业案例教学（专业限选课·1）</span>
-                <span class="text-item">医学创新专题讲座（专业限选课·1）</span>
-                <span class="text-item">智慧医学导论（专业限选课·1）</span>
-                <span class="text-item">形势与政策3(5学期)（公共基础课·0.2）</span>
-            </div>
-
-            <!-- 大二下 -->
-            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大二下</div>
-            <div class="links-grid">
-                <a href="rentigaishu3mingci.html" class="link-item">人体概述(三)·名词解释（医学基础课·9）</a>
-                <a href="rentigaishu3dati.html" class="link-item">人体概述(三)·大题（医学基础课·9）</a>
-                <a href="yundongxitongmingci.html" class="link-item">运动系统疾病·名词解释（专业核心课·5.5）</a>
-                <a href="yundongxitongdati.html" class="link-item">运动系统疾病·大题（专业核心课·5.5）</a>
-                <span class="text-item">实验诊断学（医学基础课·3.5）</span>
-                <span class="text-item">毛泽东思想和中国特色社会主义理论体系概论（公共基础课·2.5）</span>
-                <span class="text-item">大学英语4（公共基础课·2）</span>
-                <span class="text-item">健康教育学（专业限选课·2）</span>
-                <span class="text-item">专业英语（专业限选课·2）</span>
-                <span class="text-item">思想政治理论综合实践(二)（公共基础课·1.25）</span>
-                <span class="text-item">大学体育4（公共基础课·1）</span>
-                <span class="text-item">形势与政策4(5学期)（公共基础课·0.2）</span>
-            </div>
-
-            <!-- 大三上 -->
-            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大三上</div>
-            <div class="links-grid">
-                <a href="xiaohuaxitongmingci.html" class="link-item">消化系统疾病·名词解释（专业核心课·9）</a>
-                <a href="xiaohuaxitongdati.html" class="link-item">消化系统疾病·大题（专业核心课·9）</a>
-                <a href="huxixitongmingci.html" class="link-item">呼吸系统疾病·名词解释（专业核心课·7）</a>
-                <a href="huxixitongdati.html" class="link-item">呼吸系统疾病·大题（专业核心课·7）</a>
-                <a href="miniaoxitongmingci.html" class="link-item">泌尿系统疾病·名词解释（专业核心课·4）</a>
-                <a href="miniaoxitongdati.html" class="link-item">泌尿系统疾病·大题（专业核心课·4）</a>
-                <a href="weishengfaxuemingci.html" class="link-item">卫生法学·名词解释（医学基础课·2）</a>
-                <a href="weishengfaxuedati.html" class="link-item">卫生法学·大题（医学基础课·2）</a>
-                <a href="yixuexinlixuemingci.html" class="link-item">医学心理学·名词解释（医学基础课·2）</a>
-                <a href="yixuexinlixuedati.html" class="link-item">医学心理学·大题（医学基础课·2）</a>
-                <span class="text-item">肿瘤治疗学（专业限选课·1.5）</span>
-                <span class="text-item">形势与政策5(5学期)（公共基础课·0.2）</span>
-            </div>
-
-            <!-- 大三下 -->
-            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大三下</div>
-            <div class="links-grid">
-                <a href="xunhuanxitongmingci.html" class="link-item">循环系统疾病·名词解释（专业核心课·8.5）</a>
-                <a href="xunhuanxitongdati.html" class="link-item">循环系统疾病·大题（专业核心课·8.5）</a>
-                <a href="liuxingbingxuemingci.html" class="link-item">流行病学·名词解释（医学基础课·2.5）</a>
-                <a href="liuxingbingxuedati.html" class="link-item">流行病学·大题（医学基础课·2.5）</a>
-                <span class="text-item">医学统计学（医学基础课·2.5）</span>
-                <a href="neifenmixitongmingci.html" class="link-item">内分泌系统疾病·名词解释（专业核心课·3）</a>
-                <a href="neifenmixitongdati.html" class="link-item">内分泌系统疾病·大题（专业核心课·3）</a>
-                <a href="ganguanxitongmingci.html" class="link-item">感官系统疾病·名词解释（专业核心课·3）</a>
-                <a href="ganguanxitongdati.html" class="link-item">感官系统疾病·大题（专业核心课·3）</a>
-                <a href="fayixuemingci.html" class="link-item">法医学·名词解释（专业基础课·2）</a>
-                <a href="fayixuedati.html" class="link-item">法医学·大题（专业基础课·2）</a>
-                <a href="kouqiangkexuemingci.html" class="link-item">口腔科学·名词解释（专业基础课·1）</a>
-                <a href="kouqiangkexuedati.html" class="link-item">口腔科学·大题（专业基础课·1）</a>
-                <span class="text-item">医学伦理学（医学基础课·1.5）</span>
-                <span class="text-item">形势与政策6(5学期)（公共基础课·0.2）</span>
-            </div>
-
-            <!-- 大四上 -->
-            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大四上</div>
-            <div class="links-grid">
-                <a href="shengzhixitongmingci.html" class="link-item">生殖系统疾病·名词解释（专业核心课·6）</a>
-                <a href="shengzhixitongdati.html" class="link-item">生殖系统疾病·大题（专业核心课·6）</a>
-                <a href="xueyeyumianyimingci.html" class="link-item">血液与免疫系统疾病·名词解释（专业核心课·5）</a>
-                <a href="xueyeyumianyidati.html" class="link-item">血液与免疫系统疾病·大题（专业核心课·5）</a>
-                <a href="yufangyixuemingci.html" class="link-item">预防医学·名词解释（医学基础课·4.5）</a>
-                <a href="yufangyixuedati.html" class="link-item">预防医学·大题（医学基础课·4.5）</a>
-                <a href="zhongyixuemingci.html" class="link-item">中医学·名词解释（专业基础课·3.5）</a>
-                <a href="zhongyixuedati.html" class="link-item">中医学·大题（专业基础课·3.5）</a>
-                <a href="mazuimingci.html" class="link-item">麻醉学·名词解释（专业基础课·2）</a>
-                <a href="mazuidati.html" class="link-item">麻醉学·大题（专业基础课·2）</a>
-                <a href="heyixuemingci.html" class="link-item">核医学·名词解释（专业基础课·2）</a>
-                <a href="heyixuedati.html" class="link-item">核医学·大题（专业基础课·2）</a>
-                <a href="pifubingmingci.html" class="link-item">皮肤性病学·名词解释（专业基础课·2）</a>
-                <a href="pifubingdati.html" class="link-item">皮肤性病学·大题（专业基础课·2）</a>
-                <span class="text-item">形势与政策7(5学期)（公共基础课·0.2）</span>
-            </div>
-
-            <!-- 大四下 -->
-            <div class="card-desc" style="margin-top: 24px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">大四下</div>
-            <div class="links-grid">
-                <span class="text-item">临床实习（集中实践教学·48）</span>
-                <a href="post3shenjingmingci.html" class="link-item">神经精神系统疾病·名词解释（专业核心课·8）</a>
-                <a href="post4shenjingdati.html" class="link-item">神经精神系统疾病·大题（专业核心课·8）</a>
-                <a href="post5erkemingci.html" class="link-item">儿科学·名词解释（专业核心课·3.5）</a>
-                <a href="post6erkedati.html" class="link-item">儿科学·大题（专业核心课·3.5）</a>
-                <a href="quankemingci.html" class="link-item">全科医学概论·名词解释（专业基础课·1.5）</a>
-                <a href="quankedati.html" class="link-item">全科医学概论·大题（专业基础课·1.5）</a>
-                <a href="post9quankemingci.html" class="link-item">全科医学·名词解释（专业基础课·1.5）</a>
-                <a href="post10quankedati.html" class="link-item">全科医学·大题（专业基础课·1.5）</a>
-                <a href="post7chuanranmingci.html" class="link-item">传染病学·名词解释（专业核心课·2）</a>
-                <a href="post8chuanrandati.html" class="link-item">传染病学·大题（专业核心课·2）</a>
-                <span class="text-item">循证医学（医学基础课·2）</span>
-                <span class="text-item">大学生职业发展与就业指导(二)（公共基础课·1）</span>
-                <span class="text-item">外科手术学基础（专业基础课·1）</span>
-                <span class="text-item">形势与政策8(5学期)（公共基础课·0.2）</span>
-            </div>
+                <!-- 卡片3：Anki可视化工具 -->
+                <div class="card">
+                    <div class="card-title">✨ Anki可视化工具</div>
+                    <div class="card-desc">粘贴anki笔记自动排版，Claude写的实用工具</div>
+                    <a href="post2ankikeshihua.html" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px; margin-top: 16px;">打开工具</a>
             
-            <div class="card-desc" style="margin-top: 16px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;">各科思考题</div>
-            <div class="links-grid">
-                <a href="post14shenghua.html" class="link-item">生化考研课程思考题</a>
-                <a href="post15bingli.html" class="link-item">病理考研课程思考题</a>
-                <a href="post16neike.html" class="link-item">内科考研课程思考题</a>
-            </div>
-        </div>
+                    <div class="card-desc" style="margin-top: 16px; margin-bottom: 12px; font-weight: 600; color: var(--link-color); font-size: 0.95rem;"> </div>
+                    <div class="card-title">📑 HTML导航栏添加器</div>
+                    <div class="card-desc">自动识别 === 【日期】=== 格式，一键生成粘性导航栏</div>
+                    <a href="nav_adder.html" class="link-item" style="display: inline-flex; width: auto; padding: 10px 24px; margin-top: 16px;">打开工具</a>
+                </div>
 
-        <!-- 卡片5：使用说明 -->
-        <div class="card disclaimer-card" style="background: #fcfcfc; border-left: 4px solid var(--link-color);">
-            <div style="color: var(--link-color); margin-bottom: 16px; font-weight: 600; font-size: 1.1rem;">🔧 如何添加新的笔记链接？</div>
-            
-            <div style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 10px; padding-left: 24px; position: relative; line-height: 1.8;">
-                <span style="position: absolute; left: 0; color: var(--link-color); font-weight: bold;">1.</span>
-                复制上面的一个 <code style="background: var(--link-bg); padding: 2px 6px; border-radius: 4px; color: var(--link-color); font-family: monospace; font-size: 0.9rem;">&lt;a&gt;</code> 链接块
+                <!-- 卡片4：Anki知识库（近期部分） -->
+                <div class="card">
+                    <div class="card-title">🎴 Anki知识库</div>
+                    <div class="card-desc">这学期Anki内容的可视化图表，预计十多个页面</div>
+                    <div class="card-desc">使用kimi和claude · 基于网络资源整理 · 侵删 · 勿商用</div>
+                    <div class="card-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">⚠️ 不用于任何临床诊断参考，仅供个人学习</div>
+                    <div class="card-desc" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">😀 存在不妥或整理错误欢迎指正</div>
+
+                    <!-- 全局控制按钮 -->
+                    <div class="global-control">
+                        <button class="control-btn" onclick="toggleAll(true)">📂 全部展开</button>
+                        <button class="control-btn" onclick="toggleAll(false)">📁 全部收起</button>
+                        <button class="control-btn" onclick="toggleSplitView()" id="splitBtn">📑 分栏视图</button>
+                    </div>
+
+                    <!-- 各科思考题 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">各科思考题</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <a href="post14shenghua.html" class="link-item">生化考研课程思考题</a>
+                                <a href="post15bingli.html" class="link-item">病理考研课程思考题</a>
+                                <a href="post16neike.html" class="link-item">内科考研课程思考题</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 大四下 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大四下</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <a href="post3shenjingmingci.html" class="link-item">神经精神系统疾病·名词解释（专业核心课·8）</a>
+                                <a href="post4shenjingdati.html" class="link-item">神经精神系统疾病·大题（专业核心课·8）</a>
+                                <a href="post5erkemingci.html" class="link-item">儿科学·名词解释（专业核心课·3.5）</a>
+                                <a href="post6erkedati.html" class="link-item">儿科学·大题（专业核心课·3.5）</a>
+                                <a href="post9quankemingci.html" class="link-item">全科医学概论·名词解释（专业基础课·1.5）</a>
+                                <a href="post10quankedati.html" class="link-item">全科医学概论·大题（专业基础课·1.5）</a>
+                                <a href="post7chuanranmingci.html" class="link-item">传染病学·名词解释（专业核心课·2）</a>
+                                <a href="post8chuanrandati.html" class="link-item">传染病学·大题（专业核心课·2）</a>
+                                <span class="text-item">临床实习（集中实践教学·48）</span>
+                                <span class="text-item">循证医学（医学基础课·2）</span>
+                                <span class="text-item">大学生职业发展与就业指导(二)（公共基础课·1）</span>
+                                <span class="text-item">外科手术学基础（专业基础课·1）</span>
+                                <span class="text-item">形势与政策8(5学期)（公共基础课·0.2）</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 大四寒假 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大四寒假</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <a href="post11jichumingci.html" class="link-item">github·基础名词</a>
+                                <a href="post12feikaifazhe.html" class="link-item">github·非开发者</a>
+                                <a href="post13gerenboke.html" class="link-item">github·个人博客</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 10px; padding-left: 24px; position: relative; line-height: 1.8;">
-                <span style="position: absolute; left: 0; color: var(--link-color); font-weight: bold;">2.</span>
-                修改 href 为新文件名（如 post14.html）
-            </div>
-            <div style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 10px; padding-left: 24px; position: relative; line-height: 1.8;">
-                <span style="position: absolute; left: 0; color: var(--link-color); font-weight: bold;">3.</span>
-                修改链接文字
-            </div>
-            <div style="font-size: 0.95rem; color: var(--text-secondary); padding-left: 24px; position: relative; line-height: 1.8;">
-                <span style="position: absolute; left: 0; color: var(--link-color); font-weight: bold;">4.</span>
-                保存推送即可
+
+            <!-- 分栏包装器：右侧内容（早期课程） -->
+            <div class="split-right">
+                <div class="card right-column-card">  <!-- 新增：包一层card -->
+                    <div class="right-column-header">📚 基础课程（大一至大四上）</div>
+                    <!-- 大四上 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大四上</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <a href="shengzhixitongmingci.html" class="link-item">生殖系统疾病·名词解释（专业核心课·6）</a>
+                                <a href="shengzhixitongdati.html" class="link-item">生殖系统疾病·大题（专业核心课·6）</a>
+                                <a href="xueyeyumianyimingci.html" class="link-item">血液与免疫系统疾病·名词解释（专业核心课·5）</a>
+                                <a href="xueyeyumianyidati.html" class="link-item">血液与免疫系统疾病·大题（专业核心课·5）</a>
+                                <a href="yufangyixuemingci.html" class="link-item">预防医学·名词解释（医学基础课·4.5）</a>
+                                <a href="yufangyixuedati.html" class="link-item">预防医学·大题（医学基础课·4.5）</a>
+                                <a href="zhongyixuemingci.html" class="link-item">中医学·名词解释（专业基础课·3.5）</a>
+                                <a href="zhongyixuedati.html" class="link-item">中医学·大题（专业基础课·3.5）</a>
+                                <a href="mazuimingci.html" class="link-item">麻醉学·名词解释（专业基础课·2）</a>
+                                <a href="mazuidati.html" class="link-item">麻醉学·大题（专业基础课·2）</a>
+                                <a href="heyixuemingci.html" class="link-item">核医学·名词解释（专业基础课·2）</a>
+                                <a href="heyixuedati.html" class="link-item">核医学·大题（专业基础课·2）</a>
+                                <a href="pifubingmingci.html" class="link-item">皮肤性病学·名词解释（专业基础课·2）</a>
+                                <a href="pifubingdati.html" class="link-item">皮肤性病学·大题（专业基础课·2）</a>
+                                <span class="text-item">形势与政策7(5学期)（公共基础课·0.2）</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 大三下（分栏切分点） -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大三下</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <a href="xunhuanxitongmingci.html" class="link-item">循环系统疾病·名词解释（专业核心课·8.5）</a>
+                                <a href="xunhuanxitongdati.html" class="link-item">循环系统疾病·大题（专业核心课·8.5）</a>
+                                <a href="neifenmixitongmingci.html" class="link-item">内分泌系统疾病·名词解释（专业核心课·3）</a>
+                                <a href="neifenmixitongdati.html" class="link-item">内分泌系统疾病·大题（专业核心课·3）</a>
+                                <a href="ganguanxitongmingci.html" class="link-item">感官系统疾病·名词解释（专业核心课·3）</a>
+                                <a href="ganguanxitongdati.html" class="link-item">感官系统疾病·大题（专业核心课·3）</a>
+                                <a href="liuxingbingxuemingci.html" class="link-item">流行病学·名词解释（医学基础课·2.5）</a>
+                                <a href="liuxingbingxuedati.html" class="link-item">流行病学·大题（医学基础课·2.5）</a>                
+                                <a href="fayixuemingci.html" class="link-item">法医学·名词解释（专业基础课·2）</a>
+                                <a href="fayixuedati.html" class="link-item">法医学·大题（专业基础课·2）</a>
+                                <a href="kouqiangkexuemingci.html" class="link-item">口腔科学·名词解释（专业基础课·1）</a>
+                                <a href="kouqiangkexuedati.html" class="link-item">口腔科学·大题（专业基础课·1）</a>
+                                <span class="text-item">医学统计学（医学基础课·2.5）</span>                
+                                <span class="text-item">医学伦理学（医学基础课·1.5）</span>
+                                <span class="text-item">形势与政策6(5学期)（公共基础课·0.2）</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- 大三上 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大三上</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <a href="xiaohuaxitongmingci.html" class="link-item">消化系统疾病·名词解释（专业核心课·9）</a>
+                                <a href="xiaohuaxitongdati.html" class="link-item">消化系统疾病·大题（专业核心课·9）</a>
+                                <a href="huxixitongmingci.html" class="link-item">呼吸系统疾病·名词解释（专业核心课·7）</a>
+                                <a href="huxixitongdati.html" class="link-item">呼吸系统疾病·大题（专业核心课·7）</a>
+                                <a href="miniaoxitongmingci.html" class="link-item">泌尿系统疾病·名词解释（专业核心课·4）</a>
+                                <a href="miniaoxitongdati.html" class="link-item">泌尿系统疾病·大题（专业核心课·4）</a>
+                                <a href="weishengfaxuemingci.html" class="link-item">卫生法学·名词解释（医学基础课·2）</a>
+                                <a href="weishengfaxuedati.html" class="link-item">卫生法学·大题（医学基础课·2）</a>
+                                <a href="yixuexinlixuemingci.html" class="link-item">医学心理学·名词解释（医学基础课·2）</a>
+                                <a href="yixuexinlixuedati.html" class="link-item">医学心理学·大题（医学基础课·2）</a>
+                                <span class="text-item">肿瘤治疗学（专业限选课·1.5）</span>
+                                <span class="text-item">形势与政策5(5学期)（公共基础课·0.2）</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 大二下 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大二下</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <a href="rentigaishu3mingci.html" class="link-item">人体概述(三)·名词解释（医学基础课·9）</a>
+                                <a href="rentigaishu3dati.html" class="link-item">人体概述(三)·大题（医学基础课·9）</a>
+                                <a href="yundongxitongmingci.html" class="link-item">运动系统疾病·名词解释（专业核心课·5.5）</a>
+                                <a href="yundongxitongdati.html" class="link-item">运动系统疾病·大题（专业核心课·5.5）</a>
+                                <span class="text-item">实验诊断学（医学基础课·3.5）</span>
+                                <span class="text-item">毛泽东思想和中国特色社会主义理论体系概论（公共基础课·2.5）</span>
+                                <span class="text-item">大学英语4（公共基础课·2）</span>
+                                <span class="text-item">健康教育学（专业限选课·2）</span>
+                                <span class="text-item">专业英语（专业限选课·2）</span>
+                                <span class="text-item">思想政治理论综合实践(二)（公共基础课·1.25）</span>
+                                <span class="text-item">大学体育4（公共基础课·1）</span>
+                                <span class="text-item">形势与政策4(5学期)（公共基础课·0.2）</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 大二上 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大二上</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <span class="text-item">人体概述(二)（医学基础课·9）</span>
+                                <span class="text-item">检体诊断学（专业基础课·4）</span>
+                                <span class="text-item">分子与细胞(二)（医学基础课·3.5）</span>
+                                <span class="text-item">智慧医学语言基础（公共基础课·3）</span>
+                                <span class="text-item">临床技能学(一)（专业基础课·2.5）</span>
+                                <span class="text-item">马克思主义基本原理（公共基础课·2.5）</span>
+                                <span class="text-item">医学文献获取与研究利用（专业限选课·2）</span>
+                                <span class="text-item">西方文学经典鉴赏（公共选修课·2）</span>
+                                <span class="text-item">解密黄帝内经（公共选修课·2）</span>
+                                <span class="text-item">大学英语3（公共基础课·2）</span>
+                                <span class="text-item">思想政治理论综合实践(一)（公共基础课·1.25）</span>
+                                <span class="text-item">大学体育3（公共基础课·1）</span>
+                                <span class="text-item">临床医学导论（专业基础课·1）</span>
+                                <span class="text-item">医学生创新创业案例教学（专业限选课·1）</span>
+                                <span class="text-item">医学创新专题讲座（专业限选课·1）</span>
+                                <span class="text-item">智慧医学导论（专业限选课·1）</span>
+                                <span class="text-item">形势与政策3(5学期)（公共基础课·0.2）</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 大一下 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大一下</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <span class="text-item">分子与细胞(一)（医学基础课·9.5）</span>
+                                <span class="text-item">人体概述(一)（医学基础课·8）</span>
+                                <span class="text-item">大学英语2（公共基础课·3.5）</span>
+                                <span class="text-item">医用有机化学（医学基础课·3）</span>
+                                <span class="text-item">医用有机化学实验（医学基础课·2）</span>
+                                <span class="text-item">中国近现代史纲要（公共基础课·2.5）</span>
+                                <span class="text-item">军事理论（公共基础课·2）</span>
+                                <span class="text-item">伟大的《红楼梦》（公共选修课·2）</span>
+                                <span class="text-item">从创意到创业（公共选修课·2）</span>
+                                <span class="text-item">大学体育2（公共基础课·1）</span>
+                                <span class="text-item">早期接触临床(二)（集中实践教学·1）</span>
+                                <span class="text-item">形势与政策(二)（公共基础课·0.5）</span>
+                                <span class="text-item">军事技能（集中实践教学·2）</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 大一上 -->
+                    <div class="collapsible-section">
+                        <div class="section-header" onclick="toggleSection(this)">
+                            <span class="section-title-text">大一上</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="links-grid">
+                                <span class="text-item">大学英语1（公共基础课·3.5）</span>
+                                <span class="text-item">医用高等数学（医学基础课·3）</span>
+                                <span class="text-item">医学物理学（医学基础课·3）</span>
+                                <span class="text-item">习近平新时代中国特色社会主义思想概论（公共基础课·3）</span>
+                                <span class="text-item">医用无机化学（医学基础课·2.5）</span>
+                                <span class="text-item">思想道德与法治（公共基础课·2.5）</span>
+                                <span class="text-item">医用无机化学实验（医学基础课·2）</span>
+                                <span class="text-item">大学生心理健康教育（公共基础课·2）</span>
+                                <span class="text-item">医学物理学实验（医学基础课·1.5）</span>
+                                <span class="text-item">大学生职业发展与就业指导(一)（公共基础课·1.5）</span>
+                                <span class="text-item">大学体育1（公共基础课·1）</span>
+                                <span class="text-item">早期接触临床(一)（集中实践教学·1）</span>
+                                <span class="text-item">形势与政策(一)（公共基础课·0）</span>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </div>
         </div>
 
     </div>
+
+    <script>
+        // 切换单个section
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                icon.classList.remove('collapsed');
+                icon.textContent = '▼';
+            } else {
+                content.classList.add('collapsed');
+                icon.classList.add('collapsed');
+                icon.textContent = '▶';
+            }
+        }
+        
+        // 全部展开或收起
+        function toggleAll(expand) {
+            const sections = document.querySelectorAll('.collapsible-section');
+            sections.forEach(section => {
+                const content = section.querySelector('.section-content');
+                const icon = section.querySelector('.toggle-icon');
+                
+                if (expand) {
+                    content.classList.remove('collapsed');
+                    icon.classList.remove('collapsed');
+                    icon.textContent = '▼';
+                } else {
+                    content.classList.add('collapsed');
+                    icon.classList.add('collapsed');
+                    icon.textContent = '▶';
+                }
+            });
+        }
+        
+        // 分栏视图切换 - 控制整个网页布局
+        let isSplit = false;
+        function toggleSplitView() {
+            const body = document.body;
+            const btn = document.getElementById('splitBtn');
+            isSplit = !isSplit;
+            
+            if (isSplit) {
+                body.classList.add('split-mode');
+                btn.classList.add('active');
+                btn.textContent = '📄 单列视图';
+                
+                // 分栏时自动展开所有，方便对比浏览
+                toggleAll(true);
+            } else {
+                body.classList.remove('split-mode');
+                btn.classList.remove('active');
+                btn.textContent = '📑 分栏视图';
+            }
+        }
+    </script>
 
 </body>
 </html>

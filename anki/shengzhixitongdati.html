@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">生殖系统大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>卵巢的周期性变化</strong><br>卵巢的周期性变化分为<span class="blur-text">卵泡期</span>（排卵前期）、<span class="blur-text">排卵期</span>和<span class="blur-text">黄体期</span>（排卵后期）。<br>①卵泡期：在<span class="blur-text">FSH</span>、<span class="blur-text">雌激素</span>的协同作用下，诱发颗粒细胞和内膜细胞上出现<span class="blur-text">LH受体</span>，且受体的数量随卵泡的发育不断增加，对LH的敏感性越来越高；卵泡在FSH、LH作用下产生<span class="blur-text">雌激素</span>，雌激素又使得卵泡摄取更多的FSH得以不断发育，分泌的雌激素随之逐渐增加。当雌激素增加到一定程度，对腺垂体FSH分泌起着<span class="blur-text">负反馈</span>调节，此时FSH分泌减少，大多数卵泡发育停止，只有少数卵泡继续发育成为<span class="blur-text">优势卵泡</span>，优势卵泡可分泌大量的雌激素形成<span class="blur-text">排卵前雌激素高峰</span>。此高峰对腺垂体LH的分泌起着<span class="blur-text">正反馈</span>作用，形成排卵前的<span class="blur-text">LH峰</span>。此时子宫内膜在雌激素的作用下，出现<span class="blur-text">增殖期</span>的变化。<br>②排卵期：在<span class="blur-text">LH峰</span>作用下，卵泡破裂排卵。一般每<span class="blur-text">28~35天</span>排卵1次，两个卵巢轮流排卵。<br>③黄体期：排卵后颗粒细胞、内膜细胞在<span class="blur-text">LH</span>作用下形成<span class="blur-text">黄体</span>，黄体可分泌大量<span class="blur-text">雌、孕激素</span>，通常在排卵后<span class="blur-text">7~8天</span>，血中出现雌、孕激素高峰（雌激素的第二个高峰，略低于第一个高峰）。此时子宫内膜在雌激素作用的基础上出现<span class="blur-text">分泌期</span>的变化，为受精卵的植入做好准备。若没受精，血中高浓度的雌、孕激素对下丘脑、腺垂体起着<span class="blur-text">负反馈</span>调节作用，使FSH、LH分泌减少。黄体得不到LH支持，变成<span class="blur-text">白体</span>，没有分泌功能，血中雌、孕激素浓度降低，对下丘脑腺垂体抑制作用减弱，FSH、LH又继续分泌进入下一周期。在此期间，由于血中雌、孕激素浓度降低，内膜得不到支持，使之萎缩、缺血、坏死、脱落进入<span class="blur-text">月经期</span>。</td>
+                            <td>1.. <strong>卵巢的周期性变化</strong><br>卵巢的周期性变化分为<span class="answer-text">卵泡期</span>（排卵前期）、<span class="answer-text">排卵期</span>和<span class="answer-text">黄体期</span>（排卵后期）。<br>①卵泡期：在<span class="answer-text">FSH</span>、<span class="answer-text">雌激素</span>的协同作用下，诱发颗粒细胞和内膜细胞上出现<span class="answer-text">LH受体</span>，且受体的数量随卵泡的发育不断增加，对LH的敏感性越来越高；卵泡在FSH、LH作用下产生<span class="answer-text">雌激素</span>，雌激素又使得卵泡摄取更多的FSH得以不断发育，分泌的雌激素随之逐渐增加。当雌激素增加到一定程度，对腺垂体FSH分泌起着<span class="answer-text">负反馈</span>调节，此时FSH分泌减少，大多数卵泡发育停止，只有少数卵泡继续发育成为<span class="answer-text">优势卵泡</span>，优势卵泡可分泌大量的雌激素形成<span class="answer-text">排卵前雌激素高峰</span>。此高峰对腺垂体LH的分泌起着<span class="answer-text">正反馈</span>作用，形成排卵前的<span class="answer-text">LH峰</span>。此时子宫内膜在雌激素的作用下，出现<span class="answer-text">增殖期</span>的变化。<br>②排卵期：在<span class="answer-text">LH峰</span>作用下，卵泡破裂排卵。一般每<span class="answer-text">28~35天</span>排卵1次，两个卵巢轮流排卵。<br>③黄体期：排卵后颗粒细胞、内膜细胞在<span class="answer-text">LH</span>作用下形成<span class="answer-text">黄体</span>，黄体可分泌大量<span class="answer-text">雌、孕激素</span>，通常在排卵后<span class="answer-text">7~8天</span>，血中出现雌、孕激素高峰（雌激素的第二个高峰，略低于第一个高峰）。此时子宫内膜在雌激素作用的基础上出现<span class="answer-text">分泌期</span>的变化，为受精卵的植入做好准备。若没受精，血中高浓度的雌、孕激素对下丘脑、腺垂体起着<span class="answer-text">负反馈</span>调节作用，使FSH、LH分泌减少。黄体得不到LH支持，变成<span class="answer-text">白体</span>，没有分泌功能，血中雌、孕激素浓度降低，对下丘脑腺垂体抑制作用减弱，FSH、LH又继续分泌进入下一周期。在此期间，由于血中雌、孕激素浓度降低，内膜得不到支持，使之萎缩、缺血、坏死、脱落进入<span class="answer-text">月经期</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>卵母细胞成熟抑制机制</strong><br>女性出生时卵巢里就有初级卵母细胞，进入青春期以后才能发育到比较成熟的次级卵母细胞。为什么卵母细胞到青春期才能发育到比较成熟，在此以前长期维持在休止状态，这与<span class="blur-text">卵母细胞成熟抑制因子（OMI）</span>有关。OMI为<span class="blur-text">颗粒细胞</span>分泌的一种肽类物质，它可通过卵母细胞与周围颗粒细胞之间的<span class="blur-text">缝隙连接</span>作用于卵母细胞而抑制其成熟。<br>进入青春期后，卵巢出现周期性变化，在卵巢的卵泡后期，颗粒细胞上<span class="blur-text">LH受体</span>越来越多，LH高峰时，LH的作用可使<span class="blur-text">缝隙连接消失</span>，使OMI无法再发挥作用，卵母细胞得以发育到比较成熟而排出。</td>
+                            <td>2.. <strong>卵母细胞成熟抑制机制</strong><br>女性出生时卵巢里就有初级卵母细胞，进入青春期以后才能发育到比较成熟的次级卵母细胞。为什么卵母细胞到青春期才能发育到比较成熟，在此以前长期维持在休止状态，这与<span class="answer-text">卵母细胞成熟抑制因子（OMI）</span>有关。OMI为<span class="answer-text">颗粒细胞</span>分泌的一种肽类物质，它可通过卵母细胞与周围颗粒细胞之间的<span class="answer-text">缝隙连接</span>作用于卵母细胞而抑制其成熟。<br>进入青春期后，卵巢出现周期性变化，在卵巢的卵泡后期，颗粒细胞上<span class="answer-text">LH受体</span>越来越多，LH高峰时，LH的作用可使<span class="answer-text">缝隙连接消失</span>，使OMI无法再发挥作用，卵母细胞得以发育到比较成熟而排出。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>月经周期的形成机制</strong><br>①下丘脑分泌<span class="blur-text">GnRH</span>（促性腺激素释放激素）使腺垂体分泌<span class="blur-text">FSH</span>和<span class="blur-text">LH</span>，使卵泡生长发育分泌<span class="blur-text">雌激素</span>，雌激素使子宫内膜进入<span class="blur-text">增生期</span>，它在血中浓度达高峰，通过<span class="blur-text">正反馈</span>形成<span class="blur-text">LH峰</span>，促进<span class="blur-text">排卵</span>。<br>②排卵后卵泡在<span class="blur-text">LH</span>的作用下生成<span class="blur-text">黄体</span>，并分泌大量<span class="blur-text">雌激素</span>和<span class="blur-text">孕激素</span>，使子宫内膜进入<span class="blur-text">分泌期</span>。由于雌、孕激素增多又对下丘脑和腺垂体发挥<span class="blur-text">负反馈</span>作用，使GnRH、FSH和LH的水平下降，使<span class="blur-text">黄体退化</span>，雌激素和孕激素降低，子宫内膜失去激素的支持剥落、出血形成<span class="blur-text">月经</span>。</td>
+                            <td>3.. <strong>月经周期的形成机制</strong><br>①下丘脑分泌<span class="answer-text">GnRH</span>（促性腺激素释放激素）使腺垂体分泌<span class="answer-text">FSH</span>和<span class="answer-text">LH</span>，使卵泡生长发育分泌<span class="answer-text">雌激素</span>，雌激素使子宫内膜进入<span class="answer-text">增生期</span>，它在血中浓度达高峰，通过<span class="answer-text">正反馈</span>形成<span class="answer-text">LH峰</span>，促进<span class="answer-text">排卵</span>。<br>②排卵后卵泡在<span class="answer-text">LH</span>的作用下生成<span class="answer-text">黄体</span>，并分泌大量<span class="answer-text">雌激素</span>和<span class="answer-text">孕激素</span>，使子宫内膜进入<span class="answer-text">分泌期</span>。由于雌、孕激素增多又对下丘脑和腺垂体发挥<span class="answer-text">负反馈</span>作用，使GnRH、FSH和LH的水平下降，使<span class="answer-text">黄体退化</span>，雌激素和孕激素降低，子宫内膜失去激素的支持剥落、出血形成<span class="answer-text">月经</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. A <strong>月经周期中血液雌激素高峰</strong><br>有<span class="blur-text">2次</span>高峰。<br>①第1次：排卵前由成熟卵泡分泌的雌激素形成了雌激素的<span class="blur-text">第一个高峰</span>，此高峰对下丘脑-垂体产生<span class="blur-text">正反馈</span>。——作用：可诱发<span class="blur-text">LH峰</span>，促进<span class="blur-text">排卵</span>。</td>
+                            <td>4.. A <strong>月经周期中血液雌激素高峰</strong><br>有<span class="answer-text">2次</span>高峰。<br>①第1次：排卵前由成熟卵泡分泌的雌激素形成了雌激素的<span class="answer-text">第一个高峰</span>，此高峰对下丘脑-垂体产生<span class="answer-text">正反馈</span>。——作用：可诱发<span class="answer-text">LH峰</span>，促进<span class="answer-text">排卵</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>4.. B <strong>月经周期中血液雌激素高峰</strong><br>②第2次：排卵后，<span class="blur-text">黄体</span>分泌大量的雌、孕激素（此为雌激素的<span class="blur-text">第二次高峰</span>，低于第一次），协同作用，对下丘脑-垂体产生<span class="blur-text">负反馈</span>。——作用：使<span class="blur-text">FSH</span>、<span class="blur-text">LH</span>分泌减少，黄体萎缩，分泌功能减退。</td>
+                            <td>4.. B <strong>月经周期中血液雌激素高峰</strong><br>②第2次：排卵后，<span class="answer-text">黄体</span>分泌大量的雌、孕激素（此为雌激素的<span class="answer-text">第二次高峰</span>，低于第一次），协同作用，对下丘脑-垂体产生<span class="answer-text">负反馈</span>。——作用：使<span class="answer-text">FSH</span>、<span class="answer-text">LH</span>分泌减少，黄体萎缩，分泌功能减退。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5.. A <strong>精子获能</strong><br>（1）精子获能：在生理条件下，精子必须先经过<span class="blur-text">雌性生殖管道</span>并停留一段时间，才具备使卵子受精的能力，这一过程称为<span class="blur-text">精子获能</span>，部位主要在<span class="blur-text">子宫</span>和<span class="blur-text">输卵管</span>。</td>
+                            <td>5.. A <strong>精子获能</strong><br>（1）精子获能：在生理条件下，精子必须先经过<span class="answer-text">雌性生殖管道</span>并停留一段时间，才具备使卵子受精的能力，这一过程称为<span class="answer-text">精子获能</span>，部位主要在<span class="answer-text">子宫</span>和<span class="answer-text">输卵管</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>5.. B <strong>获能精子的变化</strong><br>（2）获能后精子的变化：精子<span class="blur-text">超活化</span>，表现为强有力的鞭打运动，增强精子能顺利地在输卵管管腔内前行的能力，是精子穿透放射冠和透明带的力学基础；膜的<span class="blur-text">流动性增加</span>，利于精卵融合。</td>
+                            <td>5.. B <strong>获能精子的变化</strong><br>（2）获能后精子的变化：精子<span class="answer-text">超活化</span>，表现为强有力的鞭打运动，增强精子能顺利地在输卵管管腔内前行的能力，是精子穿透放射冠和透明带的力学基础；膜的<span class="answer-text">流动性增加</span>，利于精卵融合。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>6.. A <strong>黄体的形成</strong><br>（1）黄体形成：排卵后，残留在卵巢内的卵泡颗粒层连同卵泡膜向卵泡腔内塌陷，卵泡膜的结缔组织和毛细血管伸入颗粒层，在<span class="blur-text">黄体生成素</span>的作用下逐渐演变成体积较大、富含血管的细胞团，新鲜时呈黄色称<span class="blur-text">黄体</span>。</td>
+                            <td>6.. A <strong>黄体的形成</strong><br>（1）黄体形成：排卵后，残留在卵巢内的卵泡颗粒层连同卵泡膜向卵泡腔内塌陷，卵泡膜的结缔组织和毛细血管伸入颗粒层，在<span class="answer-text">黄体生成素</span>的作用下逐渐演变成体积较大、富含血管的细胞团，新鲜时呈黄色称<span class="answer-text">黄体</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>6.. B <strong>黄体的结构</strong><br>（2）结构：①卵泡壁颗粒细胞衍生为<span class="blur-text">颗粒黄体细胞</span>，位于黄体中央，数量多，体积大，呈多边形，染色浅；②卵泡膜内层的膜细胞衍生为<span class="blur-text">膜黄体细胞</span>，位于黄体周边，数量少，体积小，染色深。</td>
+                            <td>6.. B <strong>黄体的结构</strong><br>（2）结构：①卵泡壁颗粒细胞衍生为<span class="answer-text">颗粒黄体细胞</span>，位于黄体中央，数量多，体积大，呈多边形，染色浅；②卵泡膜内层的膜细胞衍生为<span class="answer-text">膜黄体细胞</span>，位于黄体周边，数量少，体积小，染色深。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>6.. C <strong>黄体的转归和功能</strong><br>（3）转归和功能：①若排出的卵没有受精，黄体仅维持<span class="blur-text">2周</span>左右，然后退化，称<span class="blur-text">月经黄体</span>；其中粒黄体细胞分泌<span class="blur-text">孕激素</span>、<span class="blur-text">黄体酮</span>，膜黄体细胞与颗粒黄体细胞协同分泌<span class="blur-text">雌激素</span>。②若卵受精，在绒毛膜分泌的<span class="blur-text">绒毛膜促性腺激素</span>的作用下，黄体继续发育，直径可达<span class="blur-text">4~5cm</span>，称<span class="blur-text">妊娠黄体</span>，可维持约<span class="blur-text">6个月</span>；妊娠黄体除分泌大量的孕激素和雌激素外，还分泌<span class="blur-text">松弛素</span>。③两种黄体最终都退化消失，被结缔组织取代，成为<span class="blur-text">白体</span>，白体被吸收直至消失需数月或数年。</td>
+                            <td>6.. C <strong>黄体的转归和功能</strong><br>（3）转归和功能：①若排出的卵没有受精，黄体仅维持<span class="answer-text">2周</span>左右，然后退化，称<span class="answer-text">月经黄体</span>；其中粒黄体细胞分泌<span class="answer-text">孕激素</span>、<span class="answer-text">黄体酮</span>，膜黄体细胞与颗粒黄体细胞协同分泌<span class="answer-text">雌激素</span>。②若卵受精，在绒毛膜分泌的<span class="answer-text">绒毛膜促性腺激素</span>的作用下，黄体继续发育，直径可达<span class="answer-text">4~5cm</span>，称<span class="answer-text">妊娠黄体</span>，可维持约<span class="answer-text">6个月</span>；妊娠黄体除分泌大量的孕激素和雌激素外，还分泌<span class="answer-text">松弛素</span>。③两种黄体最终都退化消失，被结缔组织取代，成为<span class="answer-text">白体</span>，白体被吸收直至消失需数月或数年。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>7.. A <strong>子宫壁的结构特点（外膜、肌层）</strong><br>子宫壁由外向内分为<span class="blur-text">外膜</span>、<span class="blur-text">肌层</span>和<span class="blur-text">内膜</span>三层。<br>（1）外膜：大部分为<span class="blur-text">浆膜</span>，只有子宫颈部为<span class="blur-text">纤维膜</span>。<br>（2）肌层：很厚，由<span class="blur-text">平滑肌</span>组成，肌束间有结缔组织，含未分化的间充质细胞。肌层自内向外大致分为三层，即<span class="blur-text">黏膜下层</span>、<span class="blur-text">中间层</span>和<span class="blur-text">浆膜下层</span>。黏膜下层和浆膜下层较薄，主要由纵形平滑肌束组成；中间层较厚，由环形或斜形平滑肌束组成。</td>
+                            <td>7.. A <strong>子宫壁的结构特点（外膜、肌层）</strong><br>子宫壁由外向内分为<span class="answer-text">外膜</span>、<span class="answer-text">肌层</span>和<span class="answer-text">内膜</span>三层。<br>（1）外膜：大部分为<span class="answer-text">浆膜</span>，只有子宫颈部为<span class="answer-text">纤维膜</span>。<br>（2）肌层：很厚，由<span class="answer-text">平滑肌</span>组成，肌束间有结缔组织，含未分化的间充质细胞。肌层自内向外大致分为三层，即<span class="answer-text">黏膜下层</span>、<span class="answer-text">中间层</span>和<span class="answer-text">浆膜下层</span>。黏膜下层和浆膜下层较薄，主要由纵形平滑肌束组成；中间层较厚，由环形或斜形平滑肌束组成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>7.. B <strong>子宫壁的结构特点（子宫内膜）</strong><br>（3）子宫内膜：①由<span class="blur-text">单层柱状上皮</span>和<span class="blur-text">固有层</span>组成。上皮由大量<span class="blur-text">分泌细胞</span>和散在的<span class="blur-text">纤毛细胞</span>组成。②固有层结缔组织较厚，含大量低分化的<span class="blur-text">基质细胞</span>、网状纤维、血管和<span class="blur-text">子宫腺</span>。基质细胞呈梭形或星形，核圆，胞质较少，可合成分泌胶原蛋白、糖原、脂滴等营养物质。③子宫内膜浅层为<span class="blur-text">功能层</span>，深层为<span class="blur-text">基底层</span>。进入青春期后，功能层有周期性变化，随月经来潮而发生脱落；也是受精后胚泡植入的部位；基底层在月经和分娩时均不脱落，并有较强的增生和修复能力，可以产生新的功能层。④子宫腺是<span class="blur-text">单管状腺</span>或分支管状腺，由上皮下陷而成，腺细胞主要由分泌细胞组成。⑤内膜基底层由短而直的<span class="blur-text">基底动脉</span>分支供血，不受性激素影响。而营养内膜的动脉主支在功能层内呈螺旋状走行称<span class="blur-text">螺旋动脉</span>，至功能层浅层时形成毛细血管和血窦。基质细胞、子宫腺和螺旋动脉均会伴随月经周期和妊娠而发生变化。</td>
+                            <td>7.. B <strong>子宫壁的结构特点（子宫内膜）</strong><br>（3）子宫内膜：①由<span class="answer-text">单层柱状上皮</span>和<span class="answer-text">固有层</span>组成。上皮由大量<span class="answer-text">分泌细胞</span>和散在的<span class="answer-text">纤毛细胞</span>组成。②固有层结缔组织较厚，含大量低分化的<span class="answer-text">基质细胞</span>、网状纤维、血管和<span class="answer-text">子宫腺</span>。基质细胞呈梭形或星形，核圆，胞质较少，可合成分泌胶原蛋白、糖原、脂滴等营养物质。③子宫内膜浅层为<span class="answer-text">功能层</span>，深层为<span class="answer-text">基底层</span>。进入青春期后，功能层有周期性变化，随月经来潮而发生脱落；也是受精后胚泡植入的部位；基底层在月经和分娩时均不脱落，并有较强的增生和修复能力，可以产生新的功能层。④子宫腺是<span class="answer-text">单管状腺</span>或分支管状腺，由上皮下陷而成，腺细胞主要由分泌细胞组成。⑤内膜基底层由短而直的<span class="answer-text">基底动脉</span>分支供血，不受性激素影响。而营养内膜的动脉主支在功能层内呈螺旋状走行称<span class="answer-text">螺旋动脉</span>，至功能层浅层时形成毛细血管和血窦。基质细胞、子宫腺和螺旋动脉均会伴随月经周期和妊娠而发生变化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>8.. <strong>子宫内膜的月经周期变化与卵巢激素的关系</strong><br><span class="blur-text">图略</span></td>
+                            <td>8.. <strong>子宫内膜的月经周期变化与卵巢激素的关系</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>9.. A <strong>胚胎生殖管道的分化（未分化时期）</strong><br>（1）胚胎性未分化时期有两套生殖管道，它们是<span class="blur-text">中肾管</span>和<span class="blur-text">中肾旁管</span>。<br>①中肾管来源于<span class="blur-text">前肾管</span>。当前肾退化时，中肾在生肾索内发生。当中肾小管的外侧与向尾端走行的前肾管相通时，前肾管改称中肾管。<br>②中肾旁管是由中肾嵴处的<span class="blur-text">体腔上皮</span>凹陷后闭合而成。</td>
+                            <td>9.. A <strong>胚胎生殖管道的分化（未分化时期）</strong><br>（1）胚胎性未分化时期有两套生殖管道，它们是<span class="answer-text">中肾管</span>和<span class="answer-text">中肾旁管</span>。<br>①中肾管来源于<span class="answer-text">前肾管</span>。当前肾退化时，中肾在生肾索内发生。当中肾小管的外侧与向尾端走行的前肾管相通时，前肾管改称中肾管。<br>②中肾旁管是由中肾嵴处的<span class="answer-text">体腔上皮</span>凹陷后闭合而成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>9.. B <strong>胚胎生殖管道的分化（性别分化）</strong><br>（2）在男性和女性的性别分化时，中肾管和中肾旁管演变为不同的器官。<br>①男性由于睾丸支持细胞分泌<span class="blur-text">抗中肾旁管激素</span>，中肾旁管退化，而睾丸间质细胞分泌的<span class="blur-text">雄激素</span>促使中肾小管分化为附睾的输出小管，中肾管的头端延长弯曲形成<span class="blur-text">附睾管</span>，中段分化为<span class="blur-text">输精管</span>，尾段则分化为<span class="blur-text">精囊</span>和<span class="blur-text">射精管</span>。<br>②女性由于无抗中肾旁管激素和缺乏雄激素，<span class="blur-text">中肾管</span>退化，<span class="blur-text">中肾旁管</span>则进一步发育，其上段和中段分化为<span class="blur-text">输卵管</span>，其头端开口于体腔，形成<span class="blur-text">输卵管漏斗部</span>；左右中肾旁管的下段合并，融合形成<span class="blur-text">子宫</span>及<span class="blur-text">阴道穹窿部</span>；其末端的<span class="blur-text">窦结节</span>则分化为<span class="blur-text">阴道大部</span>，与子宫通连。</td>
+                            <td>9.. B <strong>胚胎生殖管道的分化（性别分化）</strong><br>（2）在男性和女性的性别分化时，中肾管和中肾旁管演变为不同的器官。<br>①男性由于睾丸支持细胞分泌<span class="answer-text">抗中肾旁管激素</span>，中肾旁管退化，而睾丸间质细胞分泌的<span class="answer-text">雄激素</span>促使中肾小管分化为附睾的输出小管，中肾管的头端延长弯曲形成<span class="answer-text">附睾管</span>，中段分化为<span class="answer-text">输精管</span>，尾段则分化为<span class="answer-text">精囊</span>和<span class="answer-text">射精管</span>。<br>②女性由于无抗中肾旁管激素和缺乏雄激素，<span class="answer-text">中肾管</span>退化，<span class="answer-text">中肾旁管</span>则进一步发育，其上段和中段分化为<span class="answer-text">输卵管</span>，其头端开口于体腔，形成<span class="answer-text">输卵管漏斗部</span>；左右中肾旁管的下段合并，融合形成<span class="answer-text">子宫</span>及<span class="answer-text">阴道穹窿部</span>；其末端的<span class="answer-text">窦结节</span>则分化为<span class="answer-text">阴道大部</span>，与子宫通连。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>10.. <strong>FDA关于药物对胎儿危险度的分类</strong><br><span class="blur-text">图略</span></td>
+                            <td>10.. <strong>FDA关于药物对胎儿危险度的分类</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>11.. <strong>药物作用与胎儿发育阶段的关系</strong><br>（1）胚囊期（受精后<span class="blur-text">2周</span>内）："全"或"无"——<span class="blur-text">不易感期</span><br>（2）胚胎期（受精后<span class="blur-text">3-8周</span>）：<span class="blur-text">致畸高度易感期</span><br>（3）胎儿期（受精后<span class="blur-text">9-38周</span>）：<span class="blur-text">敏感期</span></td>
+                            <td>11.. <strong>药物作用与胎儿发育阶段的关系</strong><br>（1）胚囊期（受精后<span class="answer-text">2周</span>内）："全"或"无"——<span class="answer-text">不易感期</span><br>（2）胚胎期（受精后<span class="answer-text">3-8周</span>）：<span class="answer-text">致畸高度易感期</span><br>（3）胎儿期（受精后<span class="answer-text">9-38周</span>）：<span class="answer-text">敏感期</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>12.. <strong>妊娠期安全用药原则</strong><br>①明确指征：对可用可不用的药物一律不用<br>②严格参照FDA药物分类用药，早孕期间避免使用<span class="blur-text">C类</span>、<span class="blur-text">D类</span>药物<br>③单药有效的避免联合用药<br>④必须用药时：在同类药物中尽可能选择毒性小或不易通过胎盘的药物，其用药剂量尽可能减小；要使用肯定对胎儿有害的药物，则应<span class="blur-text">终止妊娠</span><br>⑤根据<span class="blur-text">胎龄</span>用药<br>⑥尽量避免忽略用药<br>⑦中成药</td>
+                            <td>12.. <strong>妊娠期安全用药原则</strong><br>①明确指征：对可用可不用的药物一律不用<br>②严格参照FDA药物分类用药，早孕期间避免使用<span class="answer-text">C类</span>、<span class="answer-text">D类</span>药物<br>③单药有效的避免联合用药<br>④必须用药时：在同类药物中尽可能选择毒性小或不易通过胎盘的药物，其用药剂量尽可能减小；要使用肯定对胎儿有害的药物，则应<span class="answer-text">终止妊娠</span><br>⑤根据<span class="answer-text">胎龄</span>用药<br>⑥尽量避免忽略用药<br>⑦中成药</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>13.. A <strong>缩宫素和麦角类比较（作用特点）</strong><br>||缩宫素|麦角类|<br>|:---|:---|:---|<br>|作用强度|强、与<span class="blur-text">剂量</span>有关|强|<br>|维持时间|<span class="blur-text">短</span>|<span class="blur-text">久</span>|<br>|宫底|<span class="blur-text">节律性收缩</span>|<span class="blur-text">强直收缩</span>|<br>|宫颈|<span class="blur-text">松弛</span>|<span class="blur-text">同等收缩</span>|</td>
+                            <td>13.. A <strong>缩宫素和麦角类比较（作用特点）</strong><br>||缩宫素|麦角类|<br>|:---|:---|:---|<br>|作用强度|强、与<span class="answer-text">剂量</span>有关|强|<br>|维持时间|<span class="answer-text">短</span>|<span class="answer-text">久</span>|<br>|宫底|<span class="answer-text">节律性收缩</span>|<span class="answer-text">强直收缩</span>|<br>|宫颈|<span class="answer-text">松弛</span>|<span class="answer-text">同等收缩</span>|</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>13.. B <strong>缩宫素和麦角类比较（用途、不良反应）</strong><br>|用途|<span class="blur-text">催生、引产、产后出血、产后复原</span>|<span class="blur-text">子宫出血、产后复原、偏头痛</span>，<span class="blur-text">禁用于催生引产</span>|<br>|不良反应|<span class="blur-text">抗利尿作用</span>|<span class="blur-text">损害血管内皮</span>，不宜久用|</td>
+                            <td>13.. B <strong>缩宫素和麦角类比较（用途、不良反应）</strong><br>|用途|<span class="answer-text">催生、引产、产后出血、产后复原</span>|<span class="answer-text">子宫出血、产后复原、偏头痛</span>，<span class="answer-text">禁用于催生引产</span>|<br>|不良反应|<span class="answer-text">抗利尿作用</span>|<span class="answer-text">损害血管内皮</span>，不宜久用|</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>14.. <strong>子宫和阴道的正常MRI表现</strong><br><span class="blur-text">图略</span></td>
+                            <td>14.. <strong>子宫和阴道的正常MRI表现</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>15.. <strong>不同时间胚胎胎儿身长体重</strong><br>24周末：胎儿身长<span class="blur-text">30cm</span><br>28周末：胎儿身长<span class="blur-text">35cm</span>，体重<span class="blur-text">1000g</span><br>32周末：胎儿身长<span class="blur-text">40cm</span>，体重约<span class="blur-text">1700g</span>，出生后注意护理能存活<br>36周末：胎儿身长<span class="blur-text">45cm</span>，体重<span class="blur-text">2500g</span>，出生后能啼哭及吸吮，生活力良好<br>40周末：胎儿身长<span class="blur-text">50cm</span>，体重<span class="blur-text">3400g</span>，出生后哭声响亮，吸吮能力强</td>
+                            <td>15.. <strong>不同时间胚胎胎儿身长体重</strong><br>24周末：胎儿身长<span class="answer-text">30cm</span><br>28周末：胎儿身长<span class="answer-text">35cm</span>，体重<span class="answer-text">1000g</span><br>32周末：胎儿身长<span class="answer-text">40cm</span>，体重约<span class="answer-text">1700g</span>，出生后注意护理能存活<br>36周末：胎儿身长<span class="answer-text">45cm</span>，体重<span class="answer-text">2500g</span>，出生后能啼哭及吸吮，生活力良好<br>40周末：胎儿身长<span class="answer-text">50cm</span>，体重<span class="answer-text">3400g</span>，出生后哭声响亮，吸吮能力强</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>16.. A <strong>胎儿附属物（胎盘构成）</strong><br>（1）胎盘构成：由<span class="blur-text">底蜕膜</span>（胎盘的母体部分，占胎盘很小部分）、<span class="blur-text">叶状绒毛膜</span>（胎盘的胎儿部分，占胎盘的主要部分）和<span class="blur-text">羊膜</span>（胎盘的胎儿部分，位于胎盘的最内层）组成。</td>
+                            <td>16.. A <strong>胎儿附属物（胎盘构成）</strong><br>（1）胎盘构成：由<span class="answer-text">底蜕膜</span>（胎盘的母体部分，占胎盘很小部分）、<span class="answer-text">叶状绒毛膜</span>（胎盘的胎儿部分，占胎盘的主要部分）和<span class="answer-text">羊膜</span>（胎盘的胎儿部分，位于胎盘的最内层）组成。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>16.. B <strong>胎儿附属物（胎盘功能）</strong><br>（2）功能：①<span class="blur-text">物质交换功能</span>：气体交换、营养物质交换、排除胎儿代谢产物；②<span class="blur-text">防御功能</span>：胎盘屏障；③<span class="blur-text">合成功能</span>：胎盘合体滋养细胞能合成多种激素、酶、神经递质和细胞因子（<span class="blur-text">人绒毛膜促性腺激素hCG</span>，<span class="blur-text">雌激素</span>，<span class="blur-text">孕激素</span>，<span class="blur-text">缩宫素酶</span>等）；④<span class="blur-text">免疫功能</span></td>
+                            <td>16.. B <strong>胎儿附属物（胎盘功能）</strong><br>（2）功能：①<span class="answer-text">物质交换功能</span>：气体交换、营养物质交换、排除胎儿代谢产物；②<span class="answer-text">防御功能</span>：胎盘屏障；③<span class="answer-text">合成功能</span>：胎盘合体滋养细胞能合成多种激素、酶、神经递质和细胞因子（<span class="answer-text">人绒毛膜促性腺激素hCG</span>，<span class="answer-text">雌激素</span>，<span class="answer-text">孕激素</span>，<span class="answer-text">缩宫素酶</span>等）；④<span class="answer-text">免疫功能</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>17.. <strong>决定分娩的因素</strong><br>①<span class="blur-text">产力</span>：将胎儿及其附属物从宫腔内逼出的力量，包括子宫收缩力、腹壁肌及膈肌收缩力、肛提肌收缩力<br>②<span class="blur-text">产道</span>：胎儿娩出的通道<br>③<span class="blur-text">胎儿</span>：胎儿大小、胎位及有无畸形<br>④<span class="blur-text">精神心理因素</span></td>
+                            <td>17.. <strong>决定分娩的因素</strong><br>①<span class="answer-text">产力</span>：将胎儿及其附属物从宫腔内逼出的力量，包括子宫收缩力、腹壁肌及膈肌收缩力、肛提肌收缩力<br>②<span class="answer-text">产道</span>：胎儿娩出的通道<br>③<span class="answer-text">胎儿</span>：胎儿大小、胎位及有无畸形<br>④<span class="answer-text">精神心理因素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>18.. <strong>子宫收缩力的特点</strong><br>①<span class="blur-text">节律性</span>：不随意、有规律的阵发性收缩伴疼痛<br>②<span class="blur-text">对称性</span>：两侧宫角（起搏点）→宫底中线→宫体→宫颈<br>③<span class="blur-text">极性</span>：宫底两倍强于子宫下段<br>④<span class="blur-text">缩复作用</span>：宫腔缩小，宫颈管消失</td>
+                            <td>18.. <strong>子宫收缩力的特点</strong><br>①<span class="answer-text">节律性</span>：不随意、有规律的阵发性收缩伴疼痛<br>②<span class="answer-text">对称性</span>：两侧宫角（起搏点）→宫底中线→宫体→宫颈<br>③<span class="answer-text">极性</span>：宫底两倍强于子宫下段<br>④<span class="answer-text">缩复作用</span>：宫腔缩小，宫颈管消失</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>19.. <strong>枕先露的分娩机制</strong><br>①<span class="blur-text">衔接</span> ②<span class="blur-text">下降</span> ③<span class="blur-text">俯屈</span> ④<span class="blur-text">内旋转</span> ⑤<span class="blur-text">仰伸</span> ⑥<span class="blur-text">复位及外旋转</span> ⑦<span class="blur-text">胎身娩出</span></td>
+                            <td>19.. <strong>枕先露的分娩机制</strong><br>①<span class="answer-text">衔接</span> ②<span class="answer-text">下降</span> ③<span class="answer-text">俯屈</span> ④<span class="answer-text">内旋转</span> ⑤<span class="answer-text">仰伸</span> ⑥<span class="answer-text">复位及外旋转</span> ⑦<span class="answer-text">胎身娩出</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>20.. <strong>总产程及分期</strong><br><span class="blur-text">图略</span></td>
+                            <td>20.. <strong>总产程及分期</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>21.. <strong>新生儿Apgar评分</strong><br><span class="blur-text">图略</span></td>
+                            <td>21.. <strong>新生儿Apgar评分</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>22.. <strong>胎盘剥离征象</strong><br>①宫体变硬成球形，宫底升高达<span class="blur-text">脐上</span><br>②阴道口外露的脐带自行延长<br>③阴道少量流血<br>④接产者用手掌尺侧在产妇耻骨联合上方轻压子宫下段时，宫体上升而外露的脐带不再回缩</td>
+                            <td>22.. <strong>胎盘剥离征象</strong><br>①宫体变硬成球形，宫底升高达<span class="answer-text">脐上</span><br>②阴道口外露的脐带自行延长<br>③阴道少量流血<br>④接产者用手掌尺侧在产妇耻骨联合上方轻压子宫下段时，宫体上升而外露的脐带不再回缩</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>23.. A <strong>子宫颈浸润癌（组织学类型）</strong><br>（1）子宫颈浸润癌常见的组织学类型：①<span class="blur-text">鳞状细胞癌</span>居多。好发部位在子宫颈鳞状上皮和柱状上皮交界处，或来源于子宫颈内膜化生的鳞状上皮。按癌细胞分化分为<span class="blur-text">角化型鳞癌</span>和<span class="blur-text">非角化型鳞癌</span>。②原发性子宫颈<span class="blur-text">腺癌</span>较鳞癌少见。按组织结构和分化程度分为高分化、中分化和低分化。</td>
+                            <td>23.. A <strong>子宫颈浸润癌（组织学类型）</strong><br>（1）子宫颈浸润癌常见的组织学类型：①<span class="answer-text">鳞状细胞癌</span>居多。好发部位在子宫颈鳞状上皮和柱状上皮交界处，或来源于子宫颈内膜化生的鳞状上皮。按癌细胞分化分为<span class="answer-text">角化型鳞癌</span>和<span class="answer-text">非角化型鳞癌</span>。②原发性子宫颈<span class="answer-text">腺癌</span>较鳞癌少见。按组织结构和分化程度分为高分化、中分化和低分化。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>23.. B <strong>子宫颈浸润癌（扩散、转移途径）</strong><br>（2）扩散、转移途径：①<span class="blur-text">直接蔓延</span>：向上破坏整段子宫颈，向下累及阴道穹窿及阴道壁，向两侧累及子宫旁及盆壁组织。可累及输尿管。晚期可累及膀胱和直肠；②<span class="blur-text">淋巴道转移</span>：是子宫颈癌最常见和最重要的转移途径。转移顺序是：子宫旁淋巴结、闭孔淋巴结、髂内、髂外、髂总、腹股沟、骶前淋巴结、锁骨上淋巴结。③<span class="blur-text">血道转移</span>：少见，晚期可至肺、骨、肝。</td>
+                            <td>23.. B <strong>子宫颈浸润癌（扩散、转移途径）</strong><br>（2）扩散、转移途径：①<span class="answer-text">直接蔓延</span>：向上破坏整段子宫颈，向下累及阴道穹窿及阴道壁，向两侧累及子宫旁及盆壁组织。可累及输尿管。晚期可累及膀胱和直肠；②<span class="answer-text">淋巴道转移</span>：是子宫颈癌最常见和最重要的转移途径。转移顺序是：子宫旁淋巴结、闭孔淋巴结、髂内、髂外、髂总、腹股沟、骶前淋巴结、锁骨上淋巴结。③<span class="answer-text">血道转移</span>：少见，晚期可至肺、骨、肝。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>24.. <strong>葡萄胎的肉眼和镜下特点</strong><br>（1）葡萄胎肉眼特点：胎盘绒毛间质水肿，形成大小不一的薄壁透明囊性葡萄样物，内含清亮液体，有蒂相连，形如葡萄，病变局限于<span class="blur-text">宫腔内</span>。<br>（2）葡萄胎镜下三个特点：①绒毛因<span class="blur-text">间质高度水肿</span>而增大；②绒毛间质<span class="blur-text">血管减少或消失</span>；③<span class="blur-text">合体滋养层细胞</span>和<span class="blur-text">细胞滋养层细胞</span>有不同程度的增生。</td>
+                            <td>24.. <strong>葡萄胎的肉眼和镜下特点</strong><br>（1）葡萄胎肉眼特点：胎盘绒毛间质水肿，形成大小不一的薄壁透明囊性葡萄样物，内含清亮液体，有蒂相连，形如葡萄，病变局限于<span class="answer-text">宫腔内</span>。<br>（2）葡萄胎镜下三个特点：①绒毛因<span class="answer-text">间质高度水肿</span>而增大；②绒毛间质<span class="answer-text">血管减少或消失</span>；③<span class="answer-text">合体滋养层细胞</span>和<span class="answer-text">细胞滋养层细胞</span>有不同程度的增生。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>25.. <strong>良性前列腺增生的临床表现</strong><br>好发于<span class="blur-text">移行带</span><br>（1）下尿路症状（LUTS）<br>①刺激性症状（储尿期症状）：<span class="blur-text">夜尿增多</span>、<span class="blur-text">尿频</span>、<span class="blur-text">尿急</span>、<span class="blur-text">急迫性尿失禁</span><br>②梗阻性症状（排尿期症状）：<span class="blur-text">排尿等待</span>、<span class="blur-text">尿流中断</span>、<span class="blur-text">排尿无力</span>、<span class="blur-text">排尿时间延长</span>、<span class="blur-text">充盈性尿失禁</span><br>③排尿后症状：<span class="blur-text">尿末滴沥</span>，<span class="blur-text">尿不尽感</span><br>（2）并发症：<span class="blur-text">感染</span>、<span class="blur-text">膀胱结石</span>、<span class="blur-text">肾盂积水</span>、<span class="blur-text">慢性肾炎</span>、<span class="blur-text">腹股沟疝</span>、<span class="blur-text">脱肛</span></td>
+                            <td>25.. <strong>良性前列腺增生的临床表现</strong><br>好发于<span class="answer-text">移行带</span><br>（1）下尿路症状（LUTS）<br>①刺激性症状（储尿期症状）：<span class="answer-text">夜尿增多</span>、<span class="answer-text">尿频</span>、<span class="answer-text">尿急</span>、<span class="answer-text">急迫性尿失禁</span><br>②梗阻性症状（排尿期症状）：<span class="answer-text">排尿等待</span>、<span class="answer-text">尿流中断</span>、<span class="answer-text">排尿无力</span>、<span class="answer-text">排尿时间延长</span>、<span class="answer-text">充盈性尿失禁</span><br>③排尿后症状：<span class="answer-text">尿末滴沥</span>，<span class="answer-text">尿不尽感</span><br>（2）并发症：<span class="answer-text">感染</span>、<span class="answer-text">膀胱结石</span>、<span class="answer-text">肾盂积水</span>、<span class="answer-text">慢性肾炎</span>、<span class="answer-text">腹股沟疝</span>、<span class="answer-text">脱肛</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>26.. <strong>良性前列腺增生的鉴别诊断</strong><br>①<span class="blur-text">前列腺癌</span>：肛门指检、血清<span class="blur-text">PSA</span>、活检<br>②<span class="blur-text">膀胱颈挛缩</span>：膀胱镜<br>③<span class="blur-text">尿道狭窄</span>：尿路造影<br>④<span class="blur-text">神经源性膀胱功能障碍</span>：尿动力学检查，静脉尿路造影<br>⑤<span class="blur-text">膀胱肿瘤</span>：CT，膀胱镜<br>⑥<span class="blur-text">尿路结石</span>：X线</td>
+                            <td>26.. <strong>良性前列腺增生的鉴别诊断</strong><br>①<span class="answer-text">前列腺癌</span>：肛门指检、血清<span class="answer-text">PSA</span>、活检<br>②<span class="answer-text">膀胱颈挛缩</span>：膀胱镜<br>③<span class="answer-text">尿道狭窄</span>：尿路造影<br>④<span class="answer-text">神经源性膀胱功能障碍</span>：尿动力学检查，静脉尿路造影<br>⑤<span class="answer-text">膀胱肿瘤</span>：CT，膀胱镜<br>⑥<span class="answer-text">尿路结石</span>：X线</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>27.. A <strong>良性前列腺增生的治疗（观察等待、药物治疗）</strong><br>（1）<span class="blur-text">观察等待</span><br>（2）药物治疗：<span class="blur-text">α受体阻滞剂</span>、<span class="blur-text">5α还原酶抑制剂</span></td>
+                            <td>27.. A <strong>良性前列腺增生的治疗（观察等待、药物治疗）</strong><br>（1）<span class="answer-text">观察等待</span><br>（2）药物治疗：<span class="answer-text">α受体阻滞剂</span>、<span class="answer-text">5α还原酶抑制剂</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>27.. B <strong>良性前列腺增生的治疗（手术治疗）</strong><br>（3）手术治疗<br>①适应症：症状较重，无手术禁忌；严重并发症，如<span class="blur-text">膀胱结石</span>、<span class="blur-text">肾衰竭</span>等；残余尿量≥<span class="blur-text">50ml</span>；最大尿流率<<span class="blur-text">10ml/s</span>；<span class="blur-text">急性尿潴留</span><br>②手术方式：<span class="blur-text">经尿道前列腺电切术（TURP）</span>，金标准，目前最常用；开放性手术：适用于巨大前列腺合并膀胱结石<br>（4）其他疗法：经尿道激光治疗等</td>
+                            <td>27.. B <strong>良性前列腺增生的治疗（手术治疗）</strong><br>（3）手术治疗<br>①适应症：症状较重，无手术禁忌；严重并发症，如<span class="answer-text">膀胱结石</span>、<span class="answer-text">肾衰竭</span>等；残余尿量≥<span class="answer-text">50ml</span>；最大尿流率<<span class="answer-text">10ml/s</span>；<span class="answer-text">急性尿潴留</span><br>②手术方式：<span class="answer-text">经尿道前列腺电切术（TURP）</span>，金标准，目前最常用；开放性手术：适用于巨大前列腺合并膀胱结石<br>（4）其他疗法：经尿道激光治疗等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>28.. A <strong>睾丸肿瘤的分类</strong><br>（1）分类<br>①生殖细胞瘤（<span class="blur-text">90%-95%</span>）：<span class="blur-text">精原细胞瘤</span>（<span class="blur-text">60%</span>）；非精原细胞瘤（<span class="blur-text">40%</span>），包括<span class="blur-text">胚胎癌</span>、<span class="blur-text">畸胎瘤</span>、<span class="blur-text">畸胎癌</span>等<br>②非生殖细胞瘤（<span class="blur-text">5%-10%</span>）：<span class="blur-text">性索/性腺间质肿瘤</span>；其他非特异性间质肿瘤</td>
+                            <td>28.. A <strong>睾丸肿瘤的分类</strong><br>（1）分类<br>①生殖细胞瘤（<span class="answer-text">90%-95%</span>）：<span class="answer-text">精原细胞瘤</span>（<span class="answer-text">60%</span>）；非精原细胞瘤（<span class="answer-text">40%</span>），包括<span class="answer-text">胚胎癌</span>、<span class="answer-text">畸胎瘤</span>、<span class="answer-text">畸胎癌</span>等<br>②非生殖细胞瘤（<span class="answer-text">5%-10%</span>）：<span class="answer-text">性索/性腺间质肿瘤</span>；其他非特异性间质肿瘤</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>28.. B <strong>睾丸肿瘤的治疗</strong><br>（2）治疗<br>①手术治疗：根治性手术为<span class="blur-text">腹股沟切口</span>，先行暴露阻断<span class="blur-text">精索</span><br>②放疗和化疗：<span class="blur-text">精原细胞瘤</span>对放疗敏感，可作为根治性睾丸切除术后首选辅助治疗方法；<span class="blur-text">非精原细胞瘤</span>在进行根治性睾丸切除及腹膜后淋巴结清扫的同时配合化疗，药物主要选择为<span class="blur-text">铂类</span>、<span class="blur-text">长春新碱</span>、<span class="blur-text">博来霉素</span>等</td>
+                            <td>28.. B <strong>睾丸肿瘤的治疗</strong><br>（2）治疗<br>①手术治疗：根治性手术为<span class="answer-text">腹股沟切口</span>，先行暴露阻断<span class="answer-text">精索</span><br>②放疗和化疗：<span class="answer-text">精原细胞瘤</span>对放疗敏感，可作为根治性睾丸切除术后首选辅助治疗方法；<span class="answer-text">非精原细胞瘤</span>在进行根治性睾丸切除及腹膜后淋巴结清扫的同时配合化疗，药物主要选择为<span class="answer-text">铂类</span>、<span class="answer-text">长春新碱</span>、<span class="answer-text">博来霉素</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>29.. A <strong>输卵管妊娠的治疗（大量内出血）</strong><br>典型临床表现是<span class="blur-text">停经</span>、<span class="blur-text">腹痛</span>及<span class="blur-text">阴道流血</span>。<br>（1）大量内出血时的紧急处理：快速备血、建立静脉通道、输血吸氧等抗休克治疗，尽快手术<br>①<span class="blur-text">保守性手术</span>：适用于有生育要求的年轻妇女，特别是对输卵管已切除或有明显病变者。如<span class="blur-text">输卵管切开术</span>。<br>②<span class="blur-text">输卵管切除术</span>：适用于腹腔大量出血，伴有休克的急性病人。</td>
+                            <td>29.. A <strong>输卵管妊娠的治疗（大量内出血）</strong><br>典型临床表现是<span class="answer-text">停经</span>、<span class="answer-text">腹痛</span>及<span class="answer-text">阴道流血</span>。<br>（1）大量内出血时的紧急处理：快速备血、建立静脉通道、输血吸氧等抗休克治疗，尽快手术<br>①<span class="answer-text">保守性手术</span>：适用于有生育要求的年轻妇女，特别是对输卵管已切除或有明显病变者。如<span class="answer-text">输卵管切开术</span>。<br>②<span class="answer-text">输卵管切除术</span>：适用于腹腔大量出血，伴有休克的急性病人。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>29.. B <strong>输卵管妊娠的治疗（无或少量内出血）</strong><br>（2）无或少量内出血的治疗<br>①药物治疗：首选<span class="blur-text">甲氨蝶呤</span>。<br>适应征：a.一般情况好，无活动性腹腔内出血；b.盆腔肿块最大直径<<span class="blur-text">3cm</span>；c.血β-HCG<<span class="blur-text">2000U/L</span><br>②手术治疗</td>
+                            <td>29.. B <strong>输卵管妊娠的治疗（无或少量内出血）</strong><br>（2）无或少量内出血的治疗<br>①药物治疗：首选<span class="answer-text">甲氨蝶呤</span>。<br>适应征：a.一般情况好，无活动性腹腔内出血；b.盆腔肿块最大直径<<span class="answer-text">3cm</span>；c.血β-HCG<<span class="answer-text">2000U/L</span><br>②手术治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>30.. <strong>不同类型流产鉴别诊断</strong><br><span class="blur-text">图略</span></td>
+                            <td>30.. <strong>不同类型流产鉴别诊断</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>31.. A <strong>早产的治疗（药物治疗）</strong><br>治疗原则：若胎膜完整，在母胎情况允许下，尽量延长妊娠至<span class="blur-text">34周</span>。<br>（1）药物治疗<br>①促胎肺成熟：<span class="blur-text">糖皮质激素</span><br>②宫缩抑制剂：a.<span class="blur-text">β-肾上腺素能受体激动剂</span>，<span class="blur-text">利托君</span>；b.<span class="blur-text">宫缩受体拮抗剂</span>，<span class="blur-text">阿托西班</span>；c.<span class="blur-text">钙通道阻滞剂</span>，<span class="blur-text">硝苯地平</span>；d.<span class="blur-text">非甾体抗炎药</span>，<span class="blur-text">吲哚美辛</span>；e.<span class="blur-text">硫酸镁</span><br>③预防控制感染：对于胎膜完整的早产，仅在临产同时伴有下生殖道<span class="blur-text">b族溶血性链球菌</span>检测阳性时使用抗生素，对于<span class="blur-text">胎膜早破</span>的早产，必须使用抗生素预防感染。</td>
+                            <td>31.. A <strong>早产的治疗（药物治疗）</strong><br>治疗原则：若胎膜完整，在母胎情况允许下，尽量延长妊娠至<span class="answer-text">34周</span>。<br>（1）药物治疗<br>①促胎肺成熟：<span class="answer-text">糖皮质激素</span><br>②宫缩抑制剂：a.<span class="answer-text">β-肾上腺素能受体激动剂</span>，<span class="answer-text">利托君</span>；b.<span class="answer-text">宫缩受体拮抗剂</span>，<span class="answer-text">阿托西班</span>；c.<span class="answer-text">钙通道阻滞剂</span>，<span class="answer-text">硝苯地平</span>；d.<span class="answer-text">非甾体抗炎药</span>，<span class="answer-text">吲哚美辛</span>；e.<span class="answer-text">硫酸镁</span><br>③预防控制感染：对于胎膜完整的早产，仅在临产同时伴有下生殖道<span class="answer-text">b族溶血性链球菌</span>检测阳性时使用抗生素，对于<span class="answer-text">胎膜早破</span>的早产，必须使用抗生素预防感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>31.. B <strong>早产的治疗（终止指征、分娩期处理）</strong><br>（2）终止早产的指征：①宫缩进行性加强，经过治疗无法控制者；②有<span class="blur-text">宫内感染</span>者；③权衡母胎利弊，继续妊娠对母亲的危害大于胎肺成熟对胎儿的好处；④孕周已达<span class="blur-text">34周</span>，若无母胎并发症，应停用抗早产药，顺其自然，不必干预，只需密切监测胎儿情况即可。<br>（3）分娩期处理：①小于<span class="blur-text">32周</span>的极早产儿应转运到有救治能力的医院分娩；②无指征不做产钳及会阴侧切，34周前若需要阴道手术助产，推荐<span class="blur-text">产钳</span>，不建议使用胎吸助产；③早产胎位异常，可考虑<span class="blur-text">剖宫产</span>；④早产儿出生后适当延长<span class="blur-text">30~120秒</span>后断脐带，可减少新生儿输血的需要</td>
+                            <td>31.. B <strong>早产的治疗（终止指征、分娩期处理）</strong><br>（2）终止早产的指征：①宫缩进行性加强，经过治疗无法控制者；②有<span class="answer-text">宫内感染</span>者；③权衡母胎利弊，继续妊娠对母亲的危害大于胎肺成熟对胎儿的好处；④孕周已达<span class="answer-text">34周</span>，若无母胎并发症，应停用抗早产药，顺其自然，不必干预，只需密切监测胎儿情况即可。<br>（3）分娩期处理：①小于<span class="answer-text">32周</span>的极早产儿应转运到有救治能力的医院分娩；②无指征不做产钳及会阴侧切，34周前若需要阴道手术助产，推荐<span class="answer-text">产钳</span>，不建议使用胎吸助产；③早产胎位异常，可考虑<span class="answer-text">剖宫产</span>；④早产儿出生后适当延长<span class="answer-text">30~120秒</span>后断脐带，可减少新生儿输血的需要</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>32.. <strong>绒毛膜羊膜炎的诊断标准</strong><br>①母体体温><span class="blur-text">38℃</span>；②胎儿心动过速（胎心率基线≥<span class="blur-text">160次/分</span>）；③母体心动过速（心率≥<span class="blur-text">100次/分</span>）；④母血白细胞计数≥<span class="blur-text">15×10⁹/L</span>，中性粒细胞≥<span class="blur-text">90%</span>；⑤羊水恶臭；⑥子宫激惹<br><span class="blur-text">发热</span>+其余任何一条即可确诊</td>
+                            <td>32.. <strong>绒毛膜羊膜炎的诊断标准</strong><br>①母体体温><span class="answer-text">38℃</span>；②胎儿心动过速（胎心率基线≥<span class="answer-text">160次/分</span>）；③母体心动过速（心率≥<span class="answer-text">100次/分</span>）；④母血白细胞计数≥<span class="answer-text">15×10⁹/L</span>，中性粒细胞≥<span class="answer-text">90%</span>；⑤羊水恶臭；⑥子宫激惹<br><span class="answer-text">发热</span>+其余任何一条即可确诊</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>33.. <strong>胎膜早破的处理</strong><br>（1）妊娠<<span class="blur-text">24周</span>的未足月胎膜早破：胎儿生存概率低，母儿感染风险大，<span class="blur-text">引产</span>为宜<br>（2）<span class="blur-text">24-34周</span>的未足月胎膜早破（同早产治疗）：胎儿情况好且无感染，可期待治疗：宫缩抑制剂、糖皮质激素促胎肺成熟、硫酸镁、抗生素预防感染<br>（3）><span class="blur-text">34周</span>的胎膜早破：①等待<span class="blur-text">12-24小时</span>自然分娩；②胎膜早破超过24小时，考虑<span class="blur-text">引产</span>；③若提示宫内感染，抗生素使用及准备分娩；④胎位不正，<span class="blur-text">剖宫产</span></td>
+                            <td>33.. <strong>胎膜早破的处理</strong><br>（1）妊娠<<span class="answer-text">24周</span>的未足月胎膜早破：胎儿生存概率低，母儿感染风险大，<span class="answer-text">引产</span>为宜<br>（2）<span class="answer-text">24-34周</span>的未足月胎膜早破（同早产治疗）：胎儿情况好且无感染，可期待治疗：宫缩抑制剂、糖皮质激素促胎肺成熟、硫酸镁、抗生素预防感染<br>（3）><span class="answer-text">34周</span>的胎膜早破：①等待<span class="answer-text">12-24小时</span>自然分娩；②胎膜早破超过24小时，考虑<span class="answer-text">引产</span>；③若提示宫内感染，抗生素使用及准备分娩；④胎位不正，<span class="answer-text">剖宫产</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>34.. <strong>妊娠期高血压疾病的分类与临床表现</strong><br><span class="blur-text">图略</span></td>
+                            <td>34.. <strong>妊娠期高血压疾病的分类与临床表现</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>35.. A <strong>妊娠期高血压疾病的治疗（评估检测、一般治疗）</strong><br>目的：确保母婴安全，延长孕周，控制病情。<br>（1）评估与检测：每天测量血压，尿常规等，每三天测量血常规，肝功能，肾功能，眼底检查等。<br>（2）一般治疗：①休息，<span class="blur-text">侧卧位</span>；②间断吸氧；③饮食：充足的营养，不限钠和水</td>
+                            <td>35.. A <strong>妊娠期高血压疾病的治疗（评估检测、一般治疗）</strong><br>目的：确保母婴安全，延长孕周，控制病情。<br>（1）评估与检测：每天测量血压，尿常规等，每三天测量血常规，肝功能，肾功能，眼底检查等。<br>（2）一般治疗：①休息，<span class="answer-text">侧卧位</span>；②间断吸氧；③饮食：充足的营养，不限钠和水</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>35.. B <strong>妊娠期高血压疾病的治疗（降压、解痉）</strong><br>（3）降压治疗：①降压指标：收缩压≥<span class="blur-text">160mmHg</span>和（或）舒张压≥<span class="blur-text">110mmHg</span>；②降压目标：孕妇无并发脏器功能损伤——<span class="blur-text">130-155/80</span>；孕妇合并脏器功能损伤——<span class="blur-text">140/90</span>；③药物：<span class="blur-text">拉贝洛尔</span>、<span class="blur-text">硝苯地平</span>等<br>（4）解痉：首选<span class="blur-text">硫酸镁</span></td>
+                            <td>35.. B <strong>妊娠期高血压疾病的治疗（降压、解痉）</strong><br>（3）降压治疗：①降压指标：收缩压≥<span class="answer-text">160mmHg</span>和（或）舒张压≥<span class="answer-text">110mmHg</span>；②降压目标：孕妇无并发脏器功能损伤——<span class="answer-text">130-155/80</span>；孕妇合并脏器功能损伤——<span class="answer-text">140/90</span>；③药物：<span class="answer-text">拉贝洛尔</span>、<span class="answer-text">硝苯地平</span>等<br>（4）解痉：首选<span class="answer-text">硫酸镁</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>35.. C <strong>妊娠期高血压疾病的治疗（镇静、利尿、糖皮质激素）</strong><br>（5）镇静：<span class="blur-text">地西泮</span>、<span class="blur-text">冬眠药物</span><br>（6）利尿：一般不主张<br>（7）<span class="blur-text">糖皮质激素</span>促胎肺成熟</td>
+                            <td>35.. C <strong>妊娠期高血压疾病的治疗（镇静、利尿、糖皮质激素）</strong><br>（5）镇静：<span class="answer-text">地西泮</span>、<span class="answer-text">冬眠药物</span><br>（6）利尿：一般不主张<br>（7）<span class="answer-text">糖皮质激素</span>促胎肺成熟</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>35.. D <strong>妊娠期高血压疾病的治疗（终止妊娠、期待治疗）</strong><br>（8）终止妊娠和期待治疗：<span class="blur-text">图略</span></td>
+                            <td>35.. D <strong>妊娠期高血压疾病的治疗（终止妊娠、期待治疗）</strong><br>（8）终止妊娠和期待治疗：<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>35.. E <strong>妊娠期高血压疾病的治疗（子痫处理、产后处理）</strong><br>（9）子痫处理：<span class="blur-text">图略</span><br>（10）产后处理：重度子痫前期患者产后继续使用硫酸镁<span class="blur-text">24~48小时</span>，预防产后子痫。哺乳期可继续应用产前使用的降压药禁用<span class="blur-text">ACEI/ARB</span>。</td>
+                            <td>35.. E <strong>妊娠期高血压疾病的治疗（子痫处理、产后处理）</strong><br>（9）子痫处理：<span class="answer-text">图略</span><br>（10）产后处理：重度子痫前期患者产后继续使用硫酸镁<span class="answer-text">24~48小时</span>，预防产后子痫。哺乳期可继续应用产前使用的降压药禁用<span class="answer-text">ACEI/ARB</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>36.. <strong>妊娠期高血压使用硫酸镁的注意事项</strong><br>①<span class="blur-text">MgSO₄</span>监测：尿量≥<span class="blur-text">17ml/h</span>或≥<span class="blur-text">400ml/24h</span>、呼吸><span class="blur-text">16次/分</span>、膝反射（<span class="blur-text">+</span>）、镁离子浓度<<span class="blur-text">3.5mmol/L</span>、心电图<br>②解毒：<span class="blur-text">10%葡萄糖酸钙10ml</span>静注<br>③24h用量<span class="blur-text">25-30g</span><br>④用药时间一般为<span class="blur-text">24-48小时</span>，禁止超过<span class="blur-text">5-7日</span></td>
+                            <td>36.. <strong>妊娠期高血压使用硫酸镁的注意事项</strong><br>①<span class="answer-text">MgSO₄</span>监测：尿量≥<span class="answer-text">17ml/h</span>或≥<span class="answer-text">400ml/24h</span>、呼吸><span class="answer-text">16次/分</span>、膝反射（<span class="answer-text">+</span>）、镁离子浓度<<span class="answer-text">3.5mmol/L</span>、心电图<br>②解毒：<span class="answer-text">10%葡萄糖酸钙10ml</span>静注<br>③24h用量<span class="answer-text">25-30g</span><br>④用药时间一般为<span class="answer-text">24-48小时</span>，禁止超过<span class="answer-text">5-7日</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>37.. A <strong>胎儿窘迫的常见原因</strong><br>因母胎间血氧运输及交换障碍或脐带血液循环障碍所致。常见因素有：①<span class="blur-text">前置胎盘</span>、<span class="blur-text">胎盘早剥</span>；②<span class="blur-text">脐带异常</span>，如脐带绕颈、脐带真结、脐带扭转、脐带脱垂、脐带血肿、脐带过长或过短、脐带附着于胎膜等；③母体严重血液循环障碍致胎盘灌注急剧减少；④<span class="blur-text">缩宫素</span>使用不当，造成过强及不协调宫缩；⑤孕妇应用麻醉药及镇静剂过量，抑制呼吸。</td>
+                            <td>37.. A <strong>胎儿窘迫的常见原因</strong><br>因母胎间血氧运输及交换障碍或脐带血液循环障碍所致。常见因素有：①<span class="answer-text">前置胎盘</span>、<span class="answer-text">胎盘早剥</span>；②<span class="answer-text">脐带异常</span>，如脐带绕颈、脐带真结、脐带扭转、脐带脱垂、脐带血肿、脐带过长或过短、脐带附着于胎膜等；③母体严重血液循环障碍致胎盘灌注急剧减少；④<span class="answer-text">缩宫素</span>使用不当，造成过强及不协调宫缩；⑤孕妇应用麻醉药及镇静剂过量，抑制呼吸。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>37.. B <strong>胎儿窘迫的处理原则及终止妊娠指征（急性）</strong><br>（1）急性胎儿窘迫<br>①处理原则：急性胎儿窘迫应尽快改善胎儿缺氧状态；一般处理：<span class="blur-text">左侧卧位</span>，<span class="blur-text">吸氧</span>；病因治疗：停用缩宫素等；尽快<span class="blur-text">终止妊娠</span><br>②终止妊娠的指征：胎心率<<span class="blur-text">110bpm</span>或><span class="blur-text">180bpm</span>，伴羊水污染<span class="blur-text">II度</span>；羊水污染<span class="blur-text">III度</span>，伴羊水过少；胎儿电子监护CST或OCT出现频繁<span class="blur-text">晚期减速</span>或重度<span class="blur-text">变异减速</span>；胎儿头皮血pH<<span class="blur-text">7.20</span></td>
+                            <td>37.. B <strong>胎儿窘迫的处理原则及终止妊娠指征（急性）</strong><br>（1）急性胎儿窘迫<br>①处理原则：急性胎儿窘迫应尽快改善胎儿缺氧状态；一般处理：<span class="answer-text">左侧卧位</span>，<span class="answer-text">吸氧</span>；病因治疗：停用缩宫素等；尽快<span class="answer-text">终止妊娠</span><br>②终止妊娠的指征：胎心率<<span class="answer-text">110bpm</span>或><span class="answer-text">180bpm</span>，伴羊水污染<span class="answer-text">II度</span>；羊水污染<span class="answer-text">III度</span>，伴羊水过少；胎儿电子监护CST或OCT出现频繁<span class="answer-text">晚期减速</span>或重度<span class="answer-text">变异减速</span>；胎儿头皮血pH<<span class="answer-text">7.20</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>37.. C <strong>胎儿窘迫的处理原则及终止妊娠指征（慢性）</strong><br>（2）慢性胎儿窘迫<br>①处理原则：针对病因，视孕周、胎儿成熟度及胎儿窘迫程度决定处理措施；一般处理：左侧卧位，定时吸氧；期待疗法：孕周小，尽量保持保守治疗以期延长胎龄，同时促胎肺成熟；终止妊娠<br>②终止妊娠的指征：妊娠<span class="blur-text">近足月</span>；胎动减少；OCT出现频繁的<span class="blur-text">晚期减速</span>，重度<span class="blur-text">变异减速</span>；胎儿生物物理评分≤<span class="blur-text">4分</span>者；血气分析提示酸中毒时应尽快转诊并告知预后</td>
+                            <td>37.. C <strong>胎儿窘迫的处理原则及终止妊娠指征（慢性）</strong><br>（2）慢性胎儿窘迫<br>①处理原则：针对病因，视孕周、胎儿成熟度及胎儿窘迫程度决定处理措施；一般处理：左侧卧位，定时吸氧；期待疗法：孕周小，尽量保持保守治疗以期延长胎龄，同时促胎肺成熟；终止妊娠<br>②终止妊娠的指征：妊娠<span class="answer-text">近足月</span>；胎动减少；OCT出现频繁的<span class="answer-text">晚期减速</span>，重度<span class="answer-text">变异减速</span>；胎儿生物物理评分≤<span class="answer-text">4分</span>者；血气分析提示酸中毒时应尽快转诊并告知预后</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>38.. A <strong>前置胎盘的处理（期待治疗）</strong><br>原则：抑制宫缩，止血，纠正贫血和预防感染。<br>（1）期待治疗：适用于妊娠<<span class="blur-text">34周</span>，胎儿体重<<span class="blur-text">2000克</span>，胎儿存活，阴道流血不多，一般情况良好的孕妇。<br>①纠正贫血；②抑制宫缩：<span class="blur-text">利托君</span>；③促胎肺成熟：<span class="blur-text">糖皮质激素</span></td>
+                            <td>38.. A <strong>前置胎盘的处理（期待治疗）</strong><br>原则：抑制宫缩，止血，纠正贫血和预防感染。<br>（1）期待治疗：适用于妊娠<<span class="answer-text">34周</span>，胎儿体重<<span class="answer-text">2000克</span>，胎儿存活，阴道流血不多，一般情况良好的孕妇。<br>①纠正贫血；②抑制宫缩：<span class="answer-text">利托君</span>；③促胎肺成熟：<span class="answer-text">糖皮质激素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>38.. B <strong>前置胎盘的处理（终止妊娠）</strong><br>（2）终止妊娠<br>①指征：孕妇反复发生多量出血甚至休克，无论胎儿是否成熟，立即终止；出现<span class="blur-text">胎儿窘迫</span>；无症状的前置胎盘，但孕周已达<span class="blur-text">37~38周</span>。</td>
+                            <td>38.. B <strong>前置胎盘的处理（终止妊娠）</strong><br>（2）终止妊娠<br>①指征：孕妇反复发生多量出血甚至休克，无论胎儿是否成熟，立即终止；出现<span class="answer-text">胎儿窘迫</span>；无症状的前置胎盘，但孕周已达<span class="answer-text">37~38周</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>39.. A <strong>胎盘早剥的分度</strong><br><span class="blur-text">图略</span></td>
+                            <td>39.. A <strong>胎盘早剥的分度</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>39.. B <strong>胎盘早剥的鉴别诊断</strong><br>（2）鉴别诊断：根据病史、症状、体征、B超，结合实验室检查结果多可作临床诊断。胎盘早剥应与可能引起妊娠晚期出血的疾病相鉴别：<span class="blur-text">I度</span>胎盘早剥表现不典型，应特别注意与<span class="blur-text">前置胎盘</span>鉴别；<span class="blur-text">II度</span>、<span class="blur-text">III度</span>胎盘早剥应与<span class="blur-text">先兆子宫破裂</span>鉴别。</td>
+                            <td>39.. B <strong>胎盘早剥的鉴别诊断</strong><br>（2）鉴别诊断：根据病史、症状、体征、B超，结合实验室检查结果多可作临床诊断。胎盘早剥应与可能引起妊娠晚期出血的疾病相鉴别：<span class="answer-text">I度</span>胎盘早剥表现不典型，应特别注意与<span class="answer-text">前置胎盘</span>鉴别；<span class="answer-text">II度</span>、<span class="answer-text">III度</span>胎盘早剥应与<span class="answer-text">先兆子宫破裂</span>鉴别。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>39.. C <strong>胎盘早剥的处理</strong><br>（3）处理<br>①纠正休克<br>②及时终止妊娠：<br>剖宫产指征：<span class="blur-text">I度</span>胎盘早剥，有胎儿窘迫征象，须抢救胎儿者；<span class="blur-text">II度</span>胎盘早剥，估计短时间内不能结束分娩；<span class="blur-text">III度</span>胎盘早剥，胎儿已死，产妇情况继续恶化不能立即分娩者；破膜后产程无进展者。<br>③治疗并发症：<span class="blur-text">产后出血</span>、<span class="blur-text">凝血功能障碍</span></td>
+                            <td>39.. C <strong>胎盘早剥的处理</strong><br>（3）处理<br>①纠正休克<br>②及时终止妊娠：<br>剖宫产指征：<span class="answer-text">I度</span>胎盘早剥，有胎儿窘迫征象，须抢救胎儿者；<span class="answer-text">II度</span>胎盘早剥，估计短时间内不能结束分娩；<span class="answer-text">III度</span>胎盘早剥，胎儿已死，产妇情况继续恶化不能立即分娩者；破膜后产程无进展者。<br>③治疗并发症：<span class="answer-text">产后出血</span>、<span class="answer-text">凝血功能障碍</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>40.. <strong>多胎妊娠的诊断</strong><br>（1）病史：家族史，辅助生殖应用史<br>（2）症状：早孕反应，体重，腹围，压迫症状<br>（3）产科检查：子宫大于孕周，两个胎心<br>（4）超声检查：可确诊及明确胎位<br>（5）判断绒毛膜性质：①早孕期<span class="blur-text">6-10周</span>，妊娠囊个数等于绒毛膜数（卵黄囊个数不一定等于羊膜个数）；②孕<span class="blur-text">11-13⁺⁶周</span>，双胎间的隔膜与胎盘连接处呈"<span class="blur-text">λ征</span>"或"<span class="blur-text">双胎峰</span>"提示双绒双羊；"<span class="blur-text">T征</span>"提示单绒双羊。<br>（6）产前筛查与产前诊断</td>
+                            <td>40.. <strong>多胎妊娠的诊断</strong><br>（1）病史：家族史，辅助生殖应用史<br>（2）症状：早孕反应，体重，腹围，压迫症状<br>（3）产科检查：子宫大于孕周，两个胎心<br>（4）超声检查：可确诊及明确胎位<br>（5）判断绒毛膜性质：①早孕期<span class="answer-text">6-10周</span>，妊娠囊个数等于绒毛膜数（卵黄囊个数不一定等于羊膜个数）；②孕<span class="answer-text">11-13⁺⁶周</span>，双胎间的隔膜与胎盘连接处呈"<span class="answer-text">λ征</span>"或"<span class="answer-text">双胎峰</span>"提示双绒双羊；"<span class="answer-text">T征</span>"提示单绒双羊。<br>（6）产前筛查与产前诊断</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>41.. <strong>心脏病患者不宜妊娠的情况</strong><br>①心脏病变较重，如严重<span class="blur-text">二尖瓣狭窄</span>伴<span class="blur-text">肺动脉高压</span>；②心功能<span class="blur-text">III~IV级</span>；③既往有<span class="blur-text">心衰</span>史；④有<span class="blur-text">肺动脉高压</span>；⑤<span class="blur-text">紫绀型先心病</span>；⑥心脏明显扩大；⑦风心病伴严重心律失常，伴活动性风湿热两年内患有细菌性心内膜炎。</td>
+                            <td>41.. <strong>心脏病患者不宜妊娠的情况</strong><br>①心脏病变较重，如严重<span class="answer-text">二尖瓣狭窄</span>伴<span class="answer-text">肺动脉高压</span>；②心功能<span class="answer-text">III~IV级</span>；③既往有<span class="answer-text">心衰</span>史；④有<span class="answer-text">肺动脉高压</span>；⑤<span class="answer-text">紫绀型先心病</span>；⑥心脏明显扩大；⑦风心病伴严重心律失常，伴活动性风湿热两年内患有细菌性心内膜炎。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>42.. <strong>妊娠期重型肝炎的诊断</strong><br>①消化道症状严重；②黄疸迅速加深，每天上升><span class="blur-text">17.1μmol/L</span>，血清总胆红素><span class="blur-text">171μmol/L</span>；③凝血酶原活动度<<span class="blur-text">40%</span>；④肝脏缩小，肝臭，肝功能明显异常；⑤出现<span class="blur-text">肝性脑病</span>；⑥出现<span class="blur-text">肝肾综合征</span>。</td>
+                            <td>42.. <strong>妊娠期重型肝炎的诊断</strong><br>①消化道症状严重；②黄疸迅速加深，每天上升><span class="answer-text">17.1μmol/L</span>，血清总胆红素><span class="answer-text">171μmol/L</span>；③凝血酶原活动度<<span class="answer-text">40%</span>；④肝脏缩小，肝臭，肝功能明显异常；⑤出现<span class="answer-text">肝性脑病</span>；⑥出现<span class="answer-text">肝肾综合征</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>43.. A <strong>妊娠期肝内胆汁淤积症（临床表现、对母儿影响）</strong><br>（1）临床表现：①<span class="blur-text">皮肤瘙痒</span>，为主要的首发症状，夜间加重，大多在分娩后<span class="blur-text">24-48小时</span>缓解；②<span class="blur-text">黄疸</span>，于分娩后<span class="blur-text">1-2周</span>内消退；③皮肤抓痕；④其他表现：少数孕妇可有消化道症状<br>（2）对母儿的影响<br>①对母亲：瘙痒、黄疸，由于胆汁分泌不足，<span class="blur-text">VitK</span>吸收减少，凝血因子合成减少，分娩时易发生<span class="blur-text">产后出血</span><br>②对胎儿：主要是<span class="blur-text">胆汁酸</span>的毒性。胆汁酸使结肠蠕动，羊水粪染率增加；胆汁酸能使前列腺素释放，诱发<span class="blur-text">早产</span>；胎盘合成<span class="blur-text">NO</span>减少，使子宫平滑肌敏感性增加，诱发宫缩，引起早产；羊水粪染使脐静脉收缩，造成胎儿急性缺氧，<span class="blur-text">胎死宫内</span>。</td>
+                            <td>43.. A <strong>妊娠期肝内胆汁淤积症（临床表现、对母儿影响）</strong><br>（1）临床表现：①<span class="answer-text">皮肤瘙痒</span>，为主要的首发症状，夜间加重，大多在分娩后<span class="answer-text">24-48小时</span>缓解；②<span class="answer-text">黄疸</span>，于分娩后<span class="answer-text">1-2周</span>内消退；③皮肤抓痕；④其他表现：少数孕妇可有消化道症状<br>（2）对母儿的影响<br>①对母亲：瘙痒、黄疸，由于胆汁分泌不足，<span class="answer-text">VitK</span>吸收减少，凝血因子合成减少，分娩时易发生<span class="answer-text">产后出血</span><br>②对胎儿：主要是<span class="answer-text">胆汁酸</span>的毒性。胆汁酸使结肠蠕动，羊水粪染率增加；胆汁酸能使前列腺素释放，诱发<span class="answer-text">早产</span>；胎盘合成<span class="answer-text">NO</span>减少，使子宫平滑肌敏感性增加，诱发宫缩，引起早产；羊水粪染使脐静脉收缩，造成胎儿急性缺氧，<span class="answer-text">胎死宫内</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>43.. B <strong>妊娠期肝内胆汁淤积症（治疗）</strong><br>（3）治疗<br>①治疗目标：缓解瘙痒症状，降低胆汁酸水平，改善肝功能，延长孕周，改善妊娠结局<br>②病情监测：孕妇生化指标监测，胎儿的宫内情况监测<br>③门诊治疗：妊娠<<span class="blur-text">39周</span>、轻度ICP，且无规律宫缩者——口服降胆酸药物，<span class="blur-text">7-10天</span>为1个疗程<br>④住院治疗标准：妊娠≥<span class="blur-text">39周</span>的轻度ICP；妊娠≥<span class="blur-text">34周</span>的重度ICP；ICP伴有先兆早产者；伴有产科并发症或其他情况需立即终止妊娠者。<br>⑤药物治疗：基本原则：安全，有效，经济，简便。降胆酸的药物：<span class="blur-text">熊脱氧胆酸</span>（轻度—<span class="blur-text">250mg，tid</span>；重度—<span class="blur-text">250mg，qid</span>），<span class="blur-text">S-腺苷蛋氨酸</span>（<span class="blur-text">500mg，bid</span>），联合治疗</td>
+                            <td>43.. B <strong>妊娠期肝内胆汁淤积症（治疗）</strong><br>（3）治疗<br>①治疗目标：缓解瘙痒症状，降低胆汁酸水平，改善肝功能，延长孕周，改善妊娠结局<br>②病情监测：孕妇生化指标监测，胎儿的宫内情况监测<br>③门诊治疗：妊娠<<span class="answer-text">39周</span>、轻度ICP，且无规律宫缩者——口服降胆酸药物，<span class="answer-text">7-10天</span>为1个疗程<br>④住院治疗标准：妊娠≥<span class="answer-text">39周</span>的轻度ICP；妊娠≥<span class="answer-text">34周</span>的重度ICP；ICP伴有先兆早产者；伴有产科并发症或其他情况需立即终止妊娠者。<br>⑤药物治疗：基本原则：安全，有效，经济，简便。降胆酸的药物：<span class="answer-text">熊脱氧胆酸</span>（轻度—<span class="answer-text">250mg，tid</span>；重度—<span class="answer-text">250mg，qid</span>），<span class="answer-text">S-腺苷蛋氨酸</span>（<span class="answer-text">500mg，bid</span>），联合治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>44.. A <strong>糖尿病对妊娠的影响（对孕妇、胎儿）</strong><br>（1）对孕妇的影响：①孕早期<span class="blur-text">自然流产</span>率增加；②<span class="blur-text">妊娠期高血压疾病</span>的发生率升高；③增加<span class="blur-text">感染</span>风险；④<span class="blur-text">羊水过多</span>发生率增加；⑤<span class="blur-text">巨大儿</span>增加难产，产道损伤，手术产概率；⑥<span class="blur-text">糖尿病酮症酸中毒</span><br>（2）对胎儿的影响：①<span class="blur-text">巨大儿</span>发生率增加；②<span class="blur-text">胎儿生长受限</span>发生率增加；③<span class="blur-text">胎儿畸形</span>率增加</td>
+                            <td>44.. A <strong>糖尿病对妊娠的影响（对孕妇、胎儿）</strong><br>（1）对孕妇的影响：①孕早期<span class="answer-text">自然流产</span>率增加；②<span class="answer-text">妊娠期高血压疾病</span>的发生率升高；③增加<span class="answer-text">感染</span>风险；④<span class="answer-text">羊水过多</span>发生率增加；⑤<span class="answer-text">巨大儿</span>增加难产，产道损伤，手术产概率；⑥<span class="answer-text">糖尿病酮症酸中毒</span><br>（2）对胎儿的影响：①<span class="answer-text">巨大儿</span>发生率增加；②<span class="answer-text">胎儿生长受限</span>发生率增加；③<span class="answer-text">胎儿畸形</span>率增加</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>44.. B <strong>糖尿病对妊娠的影响（对新生儿）</strong><br>（3）对新生儿的影响：①<span class="blur-text">新生儿呼吸窘迫综合征</span>发生率增加；②新生儿易发生<span class="blur-text">低血糖</span>；③<span class="blur-text">低钙血症</span>，<span class="blur-text">低镁血症</span>，<span class="blur-text">高胆红素血症</span>和<span class="blur-text">红细胞增多症</span>均高于正常新生儿</td>
+                            <td>44.. B <strong>糖尿病对妊娠的影响（对新生儿）</strong><br>（3）对新生儿的影响：①<span class="answer-text">新生儿呼吸窘迫综合征</span>发生率增加；②新生儿易发生<span class="answer-text">低血糖</span>；③<span class="answer-text">低钙血症</span>，<span class="answer-text">低镁血症</span>，<span class="answer-text">高胆红素血症</span>和<span class="answer-text">红细胞增多症</span>均高于正常新生儿</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>45.. A <strong>妊娠期糖尿病的诊断（高危因素、OGTT）</strong><br>（1）GDM高危因素：①糖尿病家族史；②孕前体重≥<span class="blur-text">90kg</span>；③孕妇本人出生体重≥<span class="blur-text">4kg</span>；④孕妇曾有多囊卵巢综合征、不明原因流产、死胎、巨大儿或畸形儿分娩史；⑤本次妊娠伴有羊水过多或胎儿偏大<br>（2）口服葡萄糖耐量试验（OGTT）：空腹及服糖后1、2小时的血糖值分别为<span class="blur-text">5.1mmol/L</span>、<span class="blur-text">10.0mmol/L</span>、<span class="blur-text">8.5mmol/L</span>。任何一点血糖值达到或超过上述标准值即诊断GDM</td>
+                            <td>45.. A <strong>妊娠期糖尿病的诊断（高危因素、OGTT）</strong><br>（1）GDM高危因素：①糖尿病家族史；②孕前体重≥<span class="answer-text">90kg</span>；③孕妇本人出生体重≥<span class="answer-text">4kg</span>；④孕妇曾有多囊卵巢综合征、不明原因流产、死胎、巨大儿或畸形儿分娩史；⑤本次妊娠伴有羊水过多或胎儿偏大<br>（2）口服葡萄糖耐量试验（OGTT）：空腹及服糖后1、2小时的血糖值分别为<span class="answer-text">5.1mmol/L</span>、<span class="answer-text">10.0mmol/L</span>、<span class="answer-text">8.5mmol/L</span>。任何一点血糖值达到或超过上述标准值即诊断GDM</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>45.. B <strong>妊娠期糖尿病的诊断（空腹血糖测定）</strong><br>（3）空腹血糖测定（FPG）<br>①FPG≥<span class="blur-text">5.1mmol/L</span>，直接诊断GDM，不必行OGTT；②FPG<<span class="blur-text">4.4mmol/L</span>，发生GDM可能性小，可暂不行OGTT；③FPG≥<span class="blur-text">4.4mmol/L</span>且<<span class="blur-text">5.1mmol/L</span>时，应尽早行OGTT</td>
+                            <td>45.. B <strong>妊娠期糖尿病的诊断（空腹血糖测定）</strong><br>（3）空腹血糖测定（FPG）<br>①FPG≥<span class="answer-text">5.1mmol/L</span>，直接诊断GDM，不必行OGTT；②FPG<<span class="answer-text">4.4mmol/L</span>，发生GDM可能性小，可暂不行OGTT；③FPG≥<span class="answer-text">4.4mmol/L</span>且<<span class="answer-text">5.1mmol/L</span>时，应尽早行OGTT</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>46.. A <strong>妊娠期糖尿病的治疗（血糖控制标准）</strong><br>（1）血糖控制<br>①血糖控制标准：空腹血糖及三餐前30分钟≤<span class="blur-text">5.3mmol/L</span>；餐后2h≤<span class="blur-text">6.7mmol/L</span>；夜间><span class="blur-text">4.4mmol/L</span>；孕妇无明显饥饿感，全天无低血糖表现<br>②饮食治疗<br>③运动疗法<br>④药物治疗：<span class="blur-text">胰岛素</span></td>
+                            <td>46.. A <strong>妊娠期糖尿病的治疗（血糖控制标准）</strong><br>（1）血糖控制<br>①血糖控制标准：空腹血糖及三餐前30分钟≤<span class="answer-text">5.3mmol/L</span>；餐后2h≤<span class="answer-text">6.7mmol/L</span>；夜间><span class="answer-text">4.4mmol/L</span>；孕妇无明显饥饿感，全天无低血糖表现<br>②饮食治疗<br>③运动疗法<br>④药物治疗：<span class="answer-text">胰岛素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>46.. B <strong>妊娠期糖尿病的治疗（孕期监护、分娩时机）</strong><br>②孕期母儿监护<br>③分娩时机：无需胰岛素治疗而血糖控制达标的GDM孕妇可待<span class="blur-text">预产期</span>；孕前糖尿病及胰岛素治疗的GDM孕妇，血糖控制良好且无并发症，妊娠<span class="blur-text">39周</span>后可终止妊娠；提前终止妊娠：糖尿病孕妇血糖控制不满意，伴有母儿并发症</td>
+                            <td>46.. B <strong>妊娠期糖尿病的治疗（孕期监护、分娩时机）</strong><br>②孕期母儿监护<br>③分娩时机：无需胰岛素治疗而血糖控制达标的GDM孕妇可待<span class="answer-text">预产期</span>；孕前糖尿病及胰岛素治疗的GDM孕妇，血糖控制良好且无并发症，妊娠<span class="answer-text">39周</span>后可终止妊娠；提前终止妊娠：糖尿病孕妇血糖控制不满意，伴有母儿并发症</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>47.. <strong>肩难产的处理</strong><br>①一旦发生，缩短胎头-胎体娩出间隔，是新生儿能否存活的关键，<span class="blur-text">HELPERR</span>口诀：H—<span class="blur-text">Help</span>求助，E—<span class="blur-text">Evaluate</span>评估是否需要会阴切开，L—<span class="blur-text">Legs</span> <span class="blur-text">McRoberts</span>操作，P—<span class="blur-text">Pressure</span>耻骨上加压，E—<span class="blur-text">Enter</span>阴道内操作，R—<span class="blur-text">Roll</span>转为四肢着床，R—<span class="blur-text">Remove</span>牵出后臂<br>②请求援助和会阴切开<br>③屈大腿法（<span class="blur-text">McRoberts法</span>）<br>④耻骨上加压法<br>⑤旋肩法（<span class="blur-text">Woods法</span>）<br>⑥牵后臂娩后肩法<br>⑦四肢着地法</td>
+                            <td>47.. <strong>肩难产的处理</strong><br>①一旦发生，缩短胎头-胎体娩出间隔，是新生儿能否存活的关键，<span class="answer-text">HELPERR</span>口诀：H—<span class="answer-text">Help</span>求助，E—<span class="answer-text">Evaluate</span>评估是否需要会阴切开，L—<span class="answer-text">Legs</span> <span class="answer-text">McRoberts</span>操作，P—<span class="answer-text">Pressure</span>耻骨上加压，E—<span class="answer-text">Enter</span>阴道内操作，R—<span class="answer-text">Roll</span>转为四肢着床，R—<span class="answer-text">Remove</span>牵出后臂<br>②请求援助和会阴切开<br>③屈大腿法（<span class="answer-text">McRoberts法</span>）<br>④耻骨上加压法<br>⑤旋肩法（<span class="answer-text">Woods法</span>）<br>⑥牵后臂娩后肩法<br>⑦四肢着地法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>48.. <strong>产后出血病因</strong><br>①<span class="blur-text">子宫收缩乏力</span>：全身因素（精神紧张，全身疾病）、子宫因素（产程延长、前置胎盘、胎盘早剥、宫腔感染）、产科因素（多胎妊娠、巨大儿、剖宫产史等）、药物因素（镇静剂、麻醉剂、子宫收缩抑制剂）<br>②<span class="blur-text">胎盘因素</span>：胎盘滞留、胎盘植入（常见原因：子宫内膜损伤，胎盘附着部位异常，子宫手术史，经产妇内膜损伤及发生炎症机会较多）、胎盘部分残留<br>③<span class="blur-text">软产道裂伤</span><br>④<span class="blur-text">凝血功能障碍</span></td>
+                            <td>48.. <strong>产后出血病因</strong><br>①<span class="answer-text">子宫收缩乏力</span>：全身因素（精神紧张，全身疾病）、子宫因素（产程延长、前置胎盘、胎盘早剥、宫腔感染）、产科因素（多胎妊娠、巨大儿、剖宫产史等）、药物因素（镇静剂、麻醉剂、子宫收缩抑制剂）<br>②<span class="answer-text">胎盘因素</span>：胎盘滞留、胎盘植入（常见原因：子宫内膜损伤，胎盘附着部位异常，子宫手术史，经产妇内膜损伤及发生炎症机会较多）、胎盘部分残留<br>③<span class="answer-text">软产道裂伤</span><br>④<span class="answer-text">凝血功能障碍</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>49.. <strong>产后大出血的治疗</strong><br>（1）原则：①针对出血原因，迅速<span class="blur-text">止血</span>；②补充血容量，纠正<span class="blur-text">失血性休克</span>；③防治<span class="blur-text">感染</span><br>（2）子宫收缩乏力的治疗：①<span class="blur-text">按摩子宫</span>；②应用<span class="blur-text">宫缩剂</span>；③<span class="blur-text">宫腔纱条填塞法</span>；④<span class="blur-text">子宫压缩缝合法</span>；⑤<span class="blur-text">结扎盆腔血管</span>；⑥<span class="blur-text">髂内动脉或子宫动脉栓塞</span>；⑦<span class="blur-text">切除子宫</span></td>
+                            <td>49.. <strong>产后大出血的治疗</strong><br>（1）原则：①针对出血原因，迅速<span class="answer-text">止血</span>；②补充血容量，纠正<span class="answer-text">失血性休克</span>；③防治<span class="answer-text">感染</span><br>（2）子宫收缩乏力的治疗：①<span class="answer-text">按摩子宫</span>；②应用<span class="answer-text">宫缩剂</span>；③<span class="answer-text">宫腔纱条填塞法</span>；④<span class="answer-text">子宫压缩缝合法</span>；⑤<span class="answer-text">结扎盆腔血管</span>；⑥<span class="answer-text">髂内动脉或子宫动脉栓塞</span>；⑦<span class="answer-text">切除子宫</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>50.. <strong>羊水栓塞的临床表现</strong><br>典型三联征：①骤然的<span class="blur-text">低氧血症</span>；②<span class="blur-text">低血压</span>（血压与失血量不符）；③<span class="blur-text">凝血功能障碍</span><br>三阶段：①<span class="blur-text">心肺功能衰竭和休克</span>；②<span class="blur-text">出血</span>；③<span class="blur-text">急性肾衰竭</span></td>
+                            <td>50.. <strong>羊水栓塞的临床表现</strong><br>典型三联征：①骤然的<span class="answer-text">低氧血症</span>；②<span class="answer-text">低血压</span>（血压与失血量不符）；③<span class="answer-text">凝血功能障碍</span><br>三阶段：①<span class="answer-text">心肺功能衰竭和休克</span>；②<span class="answer-text">出血</span>；③<span class="answer-text">急性肾衰竭</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>51.. <strong>羊水栓塞的治疗</strong><br>处理原则：维持生命体征，保护器官功能。<br>①<span class="blur-text">抗过敏</span>，解除<span class="blur-text">肺动脉高压</span>，改善<span class="blur-text">低氧血症</span><br>②<span class="blur-text">抗休克</span>：补充血容量，升压药物，纠正酸中毒，纠正心衰<br>③防治<span class="blur-text">DIC</span><br>④预防<span class="blur-text">肾衰竭</span><br>⑤预防<span class="blur-text">感染</span><br>⑥<span class="blur-text">产科处理</span></td>
+                            <td>51.. <strong>羊水栓塞的治疗</strong><br>处理原则：维持生命体征，保护器官功能。<br>①<span class="answer-text">抗过敏</span>，解除<span class="answer-text">肺动脉高压</span>，改善<span class="answer-text">低氧血症</span><br>②<span class="answer-text">抗休克</span>：补充血容量，升压药物，纠正酸中毒，纠正心衰<br>③防治<span class="answer-text">DIC</span><br>④预防<span class="answer-text">肾衰竭</span><br>⑤预防<span class="answer-text">感染</span><br>⑥<span class="answer-text">产科处理</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>52.. <strong>滴虫性阴道炎的临床表现和治疗</strong><br>（1）临床表现：①白带稀薄、脓性、黄绿色<span class="blur-text">泡沫状</span>、<span class="blur-text">臭味</span>；②<span class="blur-text">外阴瘙痒</span>；③尿道口受累出现<span class="blur-text">尿频尿痛</span>；④阴道黏膜充血，散在出血点，<span class="blur-text">草莓样宫颈</span><br>（2）治疗：①<span class="blur-text">全身用药</span>，避免洗阴道；②<span class="blur-text">硝基咪唑类药物</span>（<span class="blur-text">甲硝唑</span>，<span class="blur-text">替硝唑</span>）；③<span class="blur-text">性伴侣同治</span>；④妊娠期滴虫性阴道炎口服<span class="blur-text">甲硝唑</span></td>
+                            <td>52.. <strong>滴虫性阴道炎的临床表现和治疗</strong><br>（1）临床表现：①白带稀薄、脓性、黄绿色<span class="answer-text">泡沫状</span>、<span class="answer-text">臭味</span>；②<span class="answer-text">外阴瘙痒</span>；③尿道口受累出现<span class="answer-text">尿频尿痛</span>；④阴道黏膜充血，散在出血点，<span class="answer-text">草莓样宫颈</span><br>（2）治疗：①<span class="answer-text">全身用药</span>，避免洗阴道；②<span class="answer-text">硝基咪唑类药物</span>（<span class="answer-text">甲硝唑</span>，<span class="answer-text">替硝唑</span>）；③<span class="answer-text">性伴侣同治</span>；④妊娠期滴虫性阴道炎口服<span class="answer-text">甲硝唑</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>53.. A <strong>外阴阴道假丝酵母菌病（VVC）的临床表现</strong><br>（1）临床表现：①外阴瘙痒，<span class="blur-text">奇痒无比</span>，各种阴道炎之首；②阴道附着稠厚<span class="blur-text">豆渣样</span>分泌物；③尿道口受累出现尿频，尿痛；④阴道黏膜充血水肿，散在红斑，外阴<span class="blur-text">地图样红斑</span></td>
+                            <td>53.. A <strong>外阴阴道假丝酵母菌病（VVC）的临床表现</strong><br>（1）临床表现：①外阴瘙痒，<span class="answer-text">奇痒无比</span>，各种阴道炎之首；②阴道附着稠厚<span class="answer-text">豆渣样</span>分泌物；③尿道口受累出现尿频，尿痛；④阴道黏膜充血水肿，散在红斑，外阴<span class="answer-text">地图样红斑</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>53.. B <strong>外阴阴道假丝酵母菌病（VVC）的治疗</strong><br>（2）治疗：<br>①消除病因<br>②单纯性VVC：以<span class="blur-text">局部用药</span>为主。（<span class="blur-text">唑类抗真菌药物</span>，如<span class="blur-text">克霉唑</span>，<span class="blur-text">咪康唑</span>，<span class="blur-text">制霉菌素</span>等），未婚妇女可口服<br>③复杂性VVC：<br><span class="blur-text">重度VVC</span>：在单纯性VVC治疗基础上延长多一个疗程的治疗时间<br><span class="blur-text">复发性VVC（RVVC）</span>：1年≥<span class="blur-text">4次</span>，治疗方案为去除诱因，强化治疗加巩固治疗<br><span class="blur-text">妊娠期VVC</span>：以局部用药为主，以小剂量长疗程为佳</td>
+                            <td>53.. B <strong>外阴阴道假丝酵母菌病（VVC）的治疗</strong><br>（2）治疗：<br>①消除病因<br>②单纯性VVC：以<span class="answer-text">局部用药</span>为主。（<span class="answer-text">唑类抗真菌药物</span>，如<span class="answer-text">克霉唑</span>，<span class="answer-text">咪康唑</span>，<span class="answer-text">制霉菌素</span>等），未婚妇女可口服<br>③复杂性VVC：<br><span class="answer-text">重度VVC</span>：在单纯性VVC治疗基础上延长多一个疗程的治疗时间<br><span class="answer-text">复发性VVC（RVVC）</span>：1年≥<span class="answer-text">4次</span>，治疗方案为去除诱因，强化治疗加巩固治疗<br><span class="answer-text">妊娠期VVC</span>：以局部用药为主，以小剂量长疗程为佳</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>54.. <strong>细菌性阴道病的诊断标准</strong><br>①<span class="blur-text">线索细胞</span>阳性（必要条件）；②白带稀薄，均质，灰白，<span class="blur-text">鱼腥臭</span>；③阴道pH><span class="blur-text">4.5</span>；④<span class="blur-text">胺臭试验</span>阳性</td>
+                            <td>54.. <strong>细菌性阴道病的诊断标准</strong><br>①<span class="answer-text">线索细胞</span>阳性（必要条件）；②白带稀薄，均质，灰白，<span class="answer-text">鱼腥臭</span>；③阴道pH><span class="answer-text">4.5</span>；④<span class="answer-text">胺臭试验</span>阳性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>55.. <strong>急性宫颈炎的诊断</strong><br>（1）两个特征性体征，具备一个或两个同时具备<br>①于宫颈管或宫颈管棉拭子标本上，肉眼见到<span class="blur-text">脓性</span>或<span class="blur-text">粘液脓性</span>分泌物。<br>②用棉拭子擦拭宫颈管时，容易诱发宫颈管内<span class="blur-text">出血</span>。<br>（2）白细胞检测<br>①宫颈管脓性分泌物涂片作革兰染色：中性粒细胞><span class="blur-text">30个/高倍视野</span><br>②阴道分泌物湿片检查：白细胞><span class="blur-text">10个/高倍视野</span><br>（3）病原体检测</td>
+                            <td>55.. <strong>急性宫颈炎的诊断</strong><br>（1）两个特征性体征，具备一个或两个同时具备<br>①于宫颈管或宫颈管棉拭子标本上，肉眼见到<span class="answer-text">脓性</span>或<span class="answer-text">粘液脓性</span>分泌物。<br>②用棉拭子擦拭宫颈管时，容易诱发宫颈管内<span class="answer-text">出血</span>。<br>（2）白细胞检测<br>①宫颈管脓性分泌物涂片作革兰染色：中性粒细胞><span class="answer-text">30个/高倍视野</span><br>②阴道分泌物湿片检查：白细胞><span class="answer-text">10个/高倍视野</span><br>（3）病原体检测</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>56.. <strong>外阴慢性单纯性苔藓的治疗</strong><br>①一般治疗：局部清洁、干燥，避免刺激<br>②局部<span class="blur-text">糖皮质激素</span>治疗<br>③物理治疗：<span class="blur-text">海扶治疗</span>，<span class="blur-text">点阵激光</span>等<br>④手术治疗：不作为首选</td>
+                            <td>56.. <strong>外阴慢性单纯性苔藓的治疗</strong><br>①一般治疗：局部清洁、干燥，避免刺激<br>②局部<span class="answer-text">糖皮质激素</span>治疗<br>③物理治疗：<span class="answer-text">海扶治疗</span>，<span class="answer-text">点阵激光</span>等<br>④手术治疗：不作为首选</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>57.. <strong>宫颈病变"三阶梯"诊断模式</strong><br>（1）<span class="blur-text">宫颈细胞学</span>：宫颈刮片、液基薄层细胞学检查（<span class="blur-text">TCT</span>）<br>（2）<span class="blur-text">阴道镜检查</span><br>（3）<span class="blur-text">组织学检查</span>（确诊依据）：宫颈环形电切（<span class="blur-text">LEEP</span>）</td>
+                            <td>57.. <strong>宫颈病变"三阶梯"诊断模式</strong><br>（1）<span class="answer-text">宫颈细胞学</span>：宫颈刮片、液基薄层细胞学检查（<span class="answer-text">TCT</span>）<br>（2）<span class="answer-text">阴道镜检查</span><br>（3）<span class="answer-text">组织学检查</span>（确诊依据）：宫颈环形电切（<span class="answer-text">LEEP</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>58.. <strong>宫颈上皮内病变的治疗</strong><br>（1）低级别鳞状上皮内病变<br>①观察随访，<span class="blur-text">6~12个月</span>复查<br>②持续存在≥<span class="blur-text">2年</span>者，局部物理治疗或局部手术<br>（2）高级别鳞状上皮内病变<br>①<span class="blur-text">子宫颈锥形切除术</span><br>②经锥切确诊，年龄较大者，可行<span class="blur-text">全子宫切除</span></td>
+                            <td>58.. <strong>宫颈上皮内病变的治疗</strong><br>（1）低级别鳞状上皮内病变<br>①观察随访，<span class="answer-text">6~12个月</span>复查<br>②持续存在≥<span class="answer-text">2年</span>者，局部物理治疗或局部手术<br>（2）高级别鳞状上皮内病变<br>①<span class="answer-text">子宫颈锥形切除术</span><br>②经锥切确诊，年龄较大者，可行<span class="answer-text">全子宫切除</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>59.. <strong>宫颈癌分期</strong><br><span class="blur-text">图略</span></td>
+                            <td>59.. <strong>宫颈癌分期</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>60.. A <strong>宫颈癌治疗及三级预防（治疗）</strong><br>治疗原则：<span class="blur-text">手术</span>和<span class="blur-text">放疗</span>为主，<span class="blur-text">化疗</span>为辅<br>（1）手术治疗：<span class="blur-text">IA—IIA期</span><br>优点：可保留卵巢及阴道功能<br>①<span class="blur-text">IA1</span>：<span class="blur-text">筋膜外全子宫切除术</span>，或<span class="blur-text">宫颈锥形切除术</span>（有生育愿望）<br>②<span class="blur-text">IA2</span>：<span class="blur-text">改良广泛子宫切除+盆腔淋巴结切除术</span><br>③<span class="blur-text">IB1—IIA</span>：<span class="blur-text">广泛性子宫切除术+盆腔淋巴结清扫术</span><br>（2）放射治疗：根治性放疗，术前放疗，术后放疗（即辅助治疗——绝对指征：①<span class="blur-text">淋巴结转移</span>②<span class="blur-text">宫旁侵犯</span>③<span class="blur-text">切缘阳性</span>）<br>（3）全身治疗：化疗（<span class="blur-text">顺铂+紫杉醇</span>）</td>
+                            <td>60.. A <strong>宫颈癌治疗及三级预防（治疗）</strong><br>治疗原则：<span class="answer-text">手术</span>和<span class="answer-text">放疗</span>为主，<span class="answer-text">化疗</span>为辅<br>（1）手术治疗：<span class="answer-text">IA—IIA期</span><br>优点：可保留卵巢及阴道功能<br>①<span class="answer-text">IA1</span>：<span class="answer-text">筋膜外全子宫切除术</span>，或<span class="answer-text">宫颈锥形切除术</span>（有生育愿望）<br>②<span class="answer-text">IA2</span>：<span class="answer-text">改良广泛子宫切除+盆腔淋巴结切除术</span><br>③<span class="answer-text">IB1—IIA</span>：<span class="answer-text">广泛性子宫切除术+盆腔淋巴结清扫术</span><br>（2）放射治疗：根治性放疗，术前放疗，术后放疗（即辅助治疗——绝对指征：①<span class="answer-text">淋巴结转移</span>②<span class="answer-text">宫旁侵犯</span>③<span class="answer-text">切缘阳性</span>）<br>（3）全身治疗：化疗（<span class="answer-text">顺铂+紫杉醇</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>60.. B <strong>宫颈癌三级预防</strong><br>三级预防：<br>①一级预防：<span class="blur-text">HPV疫苗</span>（世界上第一个用于肿瘤预防的疫苗）<br>②二级预防：普及、规范<span class="blur-text">子宫颈癌筛查</span>，早期发现宫颈上皮内病变及宫颈癌<br>③三级预防：及时规范治疗宫颈癌</td>
+                            <td>60.. B <strong>宫颈癌三级预防</strong><br>三级预防：<br>①一级预防：<span class="answer-text">HPV疫苗</span>（世界上第一个用于肿瘤预防的疫苗）<br>②二级预防：普及、规范<span class="answer-text">子宫颈癌筛查</span>，早期发现宫颈上皮内病变及宫颈癌<br>③三级预防：及时规范治疗宫颈癌</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>61.. <strong>子宫肌瘤根据瘤体与肌壁的关系分类</strong><br>①<span class="blur-text">肌壁间肌瘤</span>：可增加内膜面积<br>②<span class="blur-text">浆膜下肌瘤</span>：有蒂，可扭转，导致急腹症<br>③<span class="blur-text">粘膜下肌瘤</span>：内膜面积增大，月经量增多，可脱出至阴道<br>④<span class="blur-text">阔韧带肌瘤</span>：不影响内膜面积，不影响月经量</td>
+                            <td>61.. <strong>子宫肌瘤根据瘤体与肌壁的关系分类</strong><br>①<span class="answer-text">肌壁间肌瘤</span>：可增加内膜面积<br>②<span class="answer-text">浆膜下肌瘤</span>：有蒂，可扭转，导致急腹症<br>③<span class="answer-text">粘膜下肌瘤</span>：内膜面积增大，月经量增多，可脱出至阴道<br>④<span class="answer-text">阔韧带肌瘤</span>：不影响内膜面积，不影响月经量</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>62.. <strong>子宫肌瘤的治疗</strong><br>（1）<span class="blur-text">随访观察</span>：适用于无症状，无生育要求者<br>（2）药物治疗：适用于瘤体过大，血供丰富，严重贫血，严重并发症——减轻症状，期待绝经，术前准备<br>①<span class="blur-text">促性腺激素释放激素类似物（GnRHα）</span><br>②<span class="blur-text">米非司酮</span><br>③<span class="blur-text">雄激素</span><br>（3）手术治疗：<span class="blur-text">肌瘤切除术</span>，<span class="blur-text">子宫切除术</span>（经腹，经阴道，经腹腔镜，经宫腔镜）<br>（4）其他治疗：<span class="blur-text">海扶</span>，<span class="blur-text">子宫动脉栓塞术</span></td>
+                            <td>62.. <strong>子宫肌瘤的治疗</strong><br>（1）<span class="answer-text">随访观察</span>：适用于无症状，无生育要求者<br>（2）药物治疗：适用于瘤体过大，血供丰富，严重贫血，严重并发症——减轻症状，期待绝经，术前准备<br>①<span class="answer-text">促性腺激素释放激素类似物（GnRHα）</span><br>②<span class="answer-text">米非司酮</span><br>③<span class="answer-text">雄激素</span><br>（3）手术治疗：<span class="answer-text">肌瘤切除术</span>，<span class="answer-text">子宫切除术</span>（经腹，经阴道，经腹腔镜，经宫腔镜）<br>（4）其他治疗：<span class="answer-text">海扶</span>，<span class="answer-text">子宫动脉栓塞术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>63.. A <strong>子宫内膜癌的分型及治疗（分型）</strong><br>分型：<span class="blur-text">I型</span>，<span class="blur-text">雌激素依赖型</span>，年轻、肥胖、三高，多<span class="blur-text">内膜样腺癌</span>（唯一的好的类型）<br><span class="blur-text">II型</span>：绝经、老年</td>
+                            <td>63.. A <strong>子宫内膜癌的分型及治疗（分型）</strong><br>分型：<span class="answer-text">I型</span>，<span class="answer-text">雌激素依赖型</span>，年轻、肥胖、三高，多<span class="answer-text">内膜样腺癌</span>（唯一的好的类型）<br><span class="answer-text">II型</span>：绝经、老年</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>63.. B <strong>子宫内膜癌的治疗</strong><br>治疗：<br>（1）手术治疗：首选<br>①<span class="blur-text">I期</span>：<span class="blur-text">筋膜外全子宫切除术+双附件切除术</span>（腹腔及腹主动脉旁淋巴结取样和清扫见于：透明细胞癌，粘液性癌，子宫内膜样腺癌；肿瘤侵犯深肌肉层；肿瘤直径><span class="blur-text">2cm</span>）<br>②<span class="blur-text">II期</span>：<span class="blur-text">广泛子宫切除+双侧盆腔淋巴结清扫+腹主动脉旁淋巴结清扫</span><br>③<span class="blur-text">III、IV期</span>：<span class="blur-text">肿瘤细胞减灭术</span><br>（2）放疗：单纯放疗，术前后辅助放疗<br>（3）孕激素治疗：晚期或复发/不能手术/年轻，早期，要求保留生育功能者<br>（4）晚期不能手术或治疗后复发</td>
+                            <td>63.. B <strong>子宫内膜癌的治疗</strong><br>治疗：<br>（1）手术治疗：首选<br>①<span class="answer-text">I期</span>：<span class="answer-text">筋膜外全子宫切除术+双附件切除术</span>（腹腔及腹主动脉旁淋巴结取样和清扫见于：透明细胞癌，粘液性癌，子宫内膜样腺癌；肿瘤侵犯深肌肉层；肿瘤直径><span class="answer-text">2cm</span>）<br>②<span class="answer-text">II期</span>：<span class="answer-text">广泛子宫切除+双侧盆腔淋巴结清扫+腹主动脉旁淋巴结清扫</span><br>③<span class="answer-text">III、IV期</span>：<span class="answer-text">肿瘤细胞减灭术</span><br>（2）放疗：单纯放疗，术前后辅助放疗<br>（3）孕激素治疗：晚期或复发/不能手术/年轻，早期，要求保留生育功能者<br>（4）晚期不能手术或治疗后复发</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>93</td>
+                            <td>64.. <strong>卵巢肿瘤的并发症</strong><br>①<span class="blur-text">蒂扭转（torsion）</span>：体位骤变或子宫位置改变易诱发，妇科急腹症表现：突然一侧下腹剧烈疼痛，伴恶心，呕吐。妇科查体：肿瘤张力大，压痛，以蒂部明显<br>②<span class="blur-text">破裂</span>：分为自发性~和外伤性~<br>③<span class="blur-text">感染</span>：扭转或破裂后引起或邻近器官感染灶波及<br>④<span class="blur-text">恶变</span>：良性瘤生长迅速，双侧性，应疑恶变。</td>
+                            <td>64.. <strong>卵巢肿瘤的并发症</strong><br>①<span class="answer-text">蒂扭转（torsion）</span>：体位骤变或子宫位置改变易诱发，妇科急腹症表现：突然一侧下腹剧烈疼痛，伴恶心，呕吐。妇科查体：肿瘤张力大，压痛，以蒂部明显<br>②<span class="answer-text">破裂</span>：分为自发性~和外伤性~<br>③<span class="answer-text">感染</span>：扭转或破裂后引起或邻近器官感染灶波及<br>④<span class="answer-text">恶变</span>：良性瘤生长迅速，双侧性，应疑恶变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>94</td>
+                            <td>65.. <strong>卵巢肿瘤的病理组织分型及举例</strong><br>①<span class="blur-text">上皮性肿瘤</span>：<span class="blur-text">浆液性肿瘤</span>、<span class="blur-text">黏液性肿瘤</span><br>②<span class="blur-text">生殖细胞肿瘤</span>：<span class="blur-text">畸胎瘤</span>、<span class="blur-text">无性细胞瘤</span>、<span class="blur-text">卵黄瘤</span><br>③<span class="blur-text">性索间质肿瘤</span>：<span class="blur-text">颗粒细胞瘤</span>、<span class="blur-text">纤维瘤</span>、<span class="blur-text">卵泡膜细胞瘤</span><br>④<span class="blur-text">继发性的卵巢转移肿瘤</span>：<span class="blur-text">印戒细胞瘤</span></td>
+                            <td>65.. <strong>卵巢肿瘤的病理组织分型及举例</strong><br>①<span class="answer-text">上皮性肿瘤</span>：<span class="answer-text">浆液性肿瘤</span>、<span class="answer-text">黏液性肿瘤</span><br>②<span class="answer-text">生殖细胞肿瘤</span>：<span class="answer-text">畸胎瘤</span>、<span class="answer-text">无性细胞瘤</span>、<span class="answer-text">卵黄瘤</span><br>③<span class="answer-text">性索间质肿瘤</span>：<span class="answer-text">颗粒细胞瘤</span>、<span class="answer-text">纤维瘤</span>、<span class="answer-text">卵泡膜细胞瘤</span><br>④<span class="answer-text">继发性的卵巢转移肿瘤</span>：<span class="answer-text">印戒细胞瘤</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>95</td>
+                            <td>66.. <strong>卵巢肿瘤特征性血清学标志物及意义</strong><br>①血清<span class="blur-text">CA125</span>联合<span class="blur-text">HE4</span>（上皮性癌）：判断盆腔包块良恶性<br>②血清<span class="blur-text">AFP</span>（恶性生殖细胞肿瘤）：对<span class="blur-text">卵黄囊瘤</span>有特异性诊断价值<br>③血清<span class="blur-text">HCG</span>：对<span class="blur-text">非妊娠性卵巢绒癌</span>具有价值<br>④<span class="blur-text">性激素</span>：对诊断功能性卵巢肿瘤有价值</td>
+                            <td>66.. <strong>卵巢肿瘤特征性血清学标志物及意义</strong><br>①血清<span class="answer-text">CA125</span>联合<span class="answer-text">HE4</span>（上皮性癌）：判断盆腔包块良恶性<br>②血清<span class="answer-text">AFP</span>（恶性生殖细胞肿瘤）：对<span class="answer-text">卵黄囊瘤</span>有特异性诊断价值<br>③血清<span class="answer-text">HCG</span>：对<span class="answer-text">非妊娠性卵巢绒癌</span>具有价值<br>④<span class="answer-text">性激素</span>：对诊断功能性卵巢肿瘤有价值</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>96</td>
+                            <td>67.. A <strong>卵巢肿瘤的预防（一级、二级预防）</strong><br>（1）一级预防：<span class="blur-text">预防性输卵管卵巢切除</span><br>重视癌家族史，阳性者（1次/半年）遗传基因检测<span class="blur-text">BRCA1/2</span>，必要时可考虑行预防性输卵管卵巢切除。<br>（2）二级预防：早诊早治，腹腔镜探查<br>①囊性肿块><span class="blur-text">5cm</span>或实性块<br>②青春期，绝经期或服避孕药期间卵巢增大或囊性变<br>③盆腔包块诊断不明或治疗无效，不能除外卵巢肿瘤者<br>④胃肠道癌，患乳腺癌患者出现卵巢包块</td>
+                            <td>67.. A <strong>卵巢肿瘤的预防（一级、二级预防）</strong><br>（1）一级预防：<span class="answer-text">预防性输卵管卵巢切除</span><br>重视癌家族史，阳性者（1次/半年）遗传基因检测<span class="answer-text">BRCA1/2</span>，必要时可考虑行预防性输卵管卵巢切除。<br>（2）二级预防：早诊早治，腹腔镜探查<br>①囊性肿块><span class="answer-text">5cm</span>或实性块<br>②青春期，绝经期或服避孕药期间卵巢增大或囊性变<br>③盆腔包块诊断不明或治疗无效，不能除外卵巢肿瘤者<br>④胃肠道癌，患乳腺癌患者出现卵巢包块</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>97</td>
+                            <td>67.. B <strong>卵巢肿瘤的预防（三级预防）</strong><br>（3）三级预防：晚期患者及时规范治疗，改善<span class="blur-text">预后</span></td>
+                            <td>67.. B <strong>卵巢肿瘤的预防（三级预防）</strong><br>（3）三级预防：晚期患者及时规范治疗，改善<span class="answer-text">预后</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>98</td>
+                            <td>68.. <strong>良性与恶性卵巢肿瘤的鉴别</strong><br><span class="blur-text">图略</span></td>
+                            <td>68.. <strong>良性与恶性卵巢肿瘤的鉴别</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>99</td>
+                            <td>69.. <strong>完全性葡萄胎的临床表现</strong><br>①停经，妊娠试验阳性，但无胎儿存在特征<br>②不规则<span class="blur-text">子宫出血</span><br>③子宫<span class="blur-text">增大变软</span>，大于孕龄<br>④阴道排出<span class="blur-text">水泡样组织</span><br>⑤<span class="blur-text">卵巢黄素化囊肿</span>（双侧）<br>⑥其他症状：腹痛，<span class="blur-text">妊娠剧吐</span>，<span class="blur-text">子痫前期</span>征象，<span class="blur-text">甲亢</span>等</td>
+                            <td>69.. <strong>完全性葡萄胎的临床表现</strong><br>①停经，妊娠试验阳性，但无胎儿存在特征<br>②不规则<span class="answer-text">子宫出血</span><br>③子宫<span class="answer-text">增大变软</span>，大于孕龄<br>④阴道排出<span class="answer-text">水泡样组织</span><br>⑤<span class="answer-text">卵巢黄素化囊肿</span>（双侧）<br>⑥其他症状：腹痛，<span class="answer-text">妊娠剧吐</span>，<span class="answer-text">子痫前期</span>征象，<span class="answer-text">甲亢</span>等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>100</td>
+                            <td>70.. <strong>葡萄胎的治疗</strong><br>①一经确诊，及时<span class="blur-text">清宫</span><br>重视清宫后随访<br>*<span class="blur-text">HCG</span>定量动态测定：每周1次至连续3次正常；每月1次共半年；每2月1次至1年<br>②卵巢黄素囊肿处理：不轻易<span class="blur-text">切除卵巢</span><br>③预防性化疗：仅对高危患者或随访困难者<br>④子宫切除：对年龄大，有高危因素，无生育要求者</td>
+                            <td>70.. <strong>葡萄胎的治疗</strong><br>①一经确诊，及时<span class="answer-text">清宫</span><br>重视清宫后随访<br>*<span class="answer-text">HCG</span>定量动态测定：每周1次至连续3次正常；每月1次共半年；每2月1次至1年<br>②卵巢黄素囊肿处理：不轻易<span class="answer-text">切除卵巢</span><br>③预防性化疗：仅对高危患者或随访困难者<br>④子宫切除：对年龄大，有高危因素，无生育要求者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>101</td>
+                            <td>71.. A <strong>妊娠滋养细胞肿瘤（定义、治疗）</strong><br>（1）定义<br>①<span class="blur-text">侵蚀性葡萄胎（invasive mole）</span>：葡萄胎组织侵入子宫肌层引起组织破坏，或并发子宫外转移<br>②<span class="blur-text">绒毛膜癌（Choriocarcinoma）</span>：继发于正常或异常妊娠之后的滋养细胞肿瘤。可继发于葡萄胎，流产，足月妊娠及异位妊娠<br>最常转移到<span class="blur-text">肺</span><br>（2）治疗：唯一仅通过<span class="blur-text">化疗</span>即可达到治愈的妇科恶性肿瘤<br>原则：以<span class="blur-text">化疗</span>为主，<span class="blur-text">手术</span>、<span class="blur-text">放疗</span>为辅<br>治愈率：绒癌<span class="blur-text">80%</span>，侵葡近<span class="blur-text">100%</span><br>①化疗<br>②手术：控制大出血，切除耐药病灶<br>③动脉栓塞（介入治疗）：阴道，宫颈病变致大出血者<br>④放疗：脑转移肺转移</td>
+                            <td>71.. A <strong>妊娠滋养细胞肿瘤（定义、治疗）</strong><br>（1）定义<br>①<span class="answer-text">侵蚀性葡萄胎（invasive mole）</span>：葡萄胎组织侵入子宫肌层引起组织破坏，或并发子宫外转移<br>②<span class="answer-text">绒毛膜癌（Choriocarcinoma）</span>：继发于正常或异常妊娠之后的滋养细胞肿瘤。可继发于葡萄胎，流产，足月妊娠及异位妊娠<br>最常转移到<span class="answer-text">肺</span><br>（2）治疗：唯一仅通过<span class="answer-text">化疗</span>即可达到治愈的妇科恶性肿瘤<br>原则：以<span class="answer-text">化疗</span>为主，<span class="answer-text">手术</span>、<span class="answer-text">放疗</span>为辅<br>治愈率：绒癌<span class="answer-text">80%</span>，侵葡近<span class="answer-text">100%</span><br>①化疗<br>②手术：控制大出血，切除耐药病灶<br>③动脉栓塞（介入治疗）：阴道，宫颈病变致大出血者<br>④放疗：脑转移肺转移</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>102</td>
+                            <td>71.. B <strong>妊娠滋养细胞肿瘤（随访、鉴别）</strong><br>（3）随访：第1年每月访一次；第2年每三月访一次，维持<span class="blur-text">3年</span>不复发达到根治<br>（4）两者鉴别：<span class="blur-text">图略</span></td>
+                            <td>71.. B <strong>妊娠滋养细胞肿瘤（随访、鉴别）</strong><br>（3）随访：第1年每月访一次；第2年每三月访一次，维持<span class="answer-text">3年</span>不复发达到根治<br>（4）两者鉴别：<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>103</td>
+                            <td>72.. <strong>子宫内膜异位症的临床表现</strong><br>（1）痛经及慢性盆腔痛：<br>①痛性质多样：痛经呈<span class="blur-text">继发性</span>、<span class="blur-text">进行性加重</span>，<span class="blur-text">深部性交痛</span><br>②程度多样<br>③部位多样<br>④周期相关性<br>（2）<span class="blur-text">不孕</span><br>（3）其他症状：月经异常，<span class="blur-text">肠道内异症</span>，<span class="blur-text">膀胱内异症</span>，手术疤痕内异症，<span class="blur-text">巧克力囊肿破裂</span>（急腹症）</td>
+                            <td>72.. <strong>子宫内膜异位症的临床表现</strong><br>（1）痛经及慢性盆腔痛：<br>①痛性质多样：痛经呈<span class="answer-text">继发性</span>、<span class="answer-text">进行性加重</span>，<span class="answer-text">深部性交痛</span><br>②程度多样<br>③部位多样<br>④周期相关性<br>（2）<span class="answer-text">不孕</span><br>（3）其他症状：月经异常，<span class="answer-text">肠道内异症</span>，<span class="answer-text">膀胱内异症</span>，手术疤痕内异症，<span class="answer-text">巧克力囊肿破裂</span>（急腹症）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>104</td>
+                            <td>73.. <strong>子宫内膜异位症的治疗</strong><br>治疗原则：症状轻微者采用<span class="blur-text">随访观察</span>；有生育要求的轻度患者先行<span class="blur-text">药物治疗</span>；病变较重者行<span class="blur-text">保留生育功能的保守手术</span>；无生育要求的重度患者，可行<span class="blur-text">保留卵巢的手术</span>或<span class="blur-text">根治性手术</span><br>（1）期待治疗：轻度内异症患者，对症处理。<span class="blur-text">吲哚美辛</span>，<span class="blur-text">萘普生</span>，<span class="blur-text">布洛芬</span><br>（2）药物治疗：<br>①<span class="blur-text">口服避孕药</span>——<span class="blur-text">假孕疗法</span><br>②<span class="blur-text">孕激素</span><br>③<span class="blur-text">米非司酮</span><br>④<span class="blur-text">孕三烯酮</span><br>⑤<span class="blur-text">达那唑</span>——<span class="blur-text">假绝经疗法</span><br>⑥<span class="blur-text">促性腺激素释放激素激动剂</span>——抑制垂体分泌促性腺激素，<span class="blur-text">药物性卵巢切除</span><br>（3）手术治疗：腹腔镜确诊，手术+药物是标准治疗<br>①<span class="blur-text">保留生育手术</span>：切除异位病灶<br>②<span class="blur-text">保留卵巢手术</span>：切除异位病灶及子宫，保留一侧卵巢，适用于重症患者<br>③<span class="blur-text">根治性手术</span>：切除子宫+双附件，适用于<span class="blur-text">45岁</span>以上重症患者</td>
+                            <td>73.. <strong>子宫内膜异位症的治疗</strong><br>治疗原则：症状轻微者采用<span class="answer-text">随访观察</span>；有生育要求的轻度患者先行<span class="answer-text">药物治疗</span>；病变较重者行<span class="answer-text">保留生育功能的保守手术</span>；无生育要求的重度患者，可行<span class="answer-text">保留卵巢的手术</span>或<span class="answer-text">根治性手术</span><br>（1）期待治疗：轻度内异症患者，对症处理。<span class="answer-text">吲哚美辛</span>，<span class="answer-text">萘普生</span>，<span class="answer-text">布洛芬</span><br>（2）药物治疗：<br>①<span class="answer-text">口服避孕药</span>——<span class="answer-text">假孕疗法</span><br>②<span class="answer-text">孕激素</span><br>③<span class="answer-text">米非司酮</span><br>④<span class="answer-text">孕三烯酮</span><br>⑤<span class="answer-text">达那唑</span>——<span class="answer-text">假绝经疗法</span><br>⑥<span class="answer-text">促性腺激素释放激素激动剂</span>——抑制垂体分泌促性腺激素，<span class="answer-text">药物性卵巢切除</span><br>（3）手术治疗：腹腔镜确诊，手术+药物是标准治疗<br>①<span class="answer-text">保留生育手术</span>：切除异位病灶<br>②<span class="answer-text">保留卵巢手术</span>：切除异位病灶及子宫，保留一侧卵巢，适用于重症患者<br>③<span class="answer-text">根治性手术</span>：切除子宫+双附件，适用于<span class="answer-text">45岁</span>以上重症患者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>105</td>
+                            <td>74.. <strong>异常子宫出血的临床表现</strong><br>（1）<span class="blur-text">无排卵性异常子宫出血</span>：月经周期紊乱，经期长短不一、出血量不一，基础体温测定呈<span class="blur-text">单相型</span><br>（2）<span class="blur-text">黄体功能不足</span>：有可辨认的月经周期，月经周期缩短、月经频发，月经周期正常，但卵泡期长黄体期短（<<span class="blur-text">11日</span>）。经间期出血：卵泡期出血/黄体期出血。不易受孕或在妊娠早期流产。<span class="blur-text">双相体温</span><br>（3）<span class="blur-text">子宫内膜不规则脱落</span>：月经周期正常，但经期延长，长达<span class="blur-text">9-10日</span>。基础体温呈双相，但下降缓慢。</td>
+                            <td>74.. <strong>异常子宫出血的临床表现</strong><br>（1）<span class="answer-text">无排卵性异常子宫出血</span>：月经周期紊乱，经期长短不一、出血量不一，基础体温测定呈<span class="answer-text">单相型</span><br>（2）<span class="answer-text">黄体功能不足</span>：有可辨认的月经周期，月经周期缩短、月经频发，月经周期正常，但卵泡期长黄体期短（<<span class="answer-text">11日</span>）。经间期出血：卵泡期出血/黄体期出血。不易受孕或在妊娠早期流产。<span class="answer-text">双相体温</span><br>（3）<span class="answer-text">子宫内膜不规则脱落</span>：月经周期正常，但经期延长，长达<span class="answer-text">9-10日</span>。基础体温呈双相，但下降缓慢。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>106</td>
+                            <td>75.. A <strong>异常子宫出血的治疗（无排卵性）</strong><br>（1）无排卵性异常子宫出血<br>①止血：<span class="blur-text">性激素治疗</span>——一线治疗（最低有效剂量）；<span class="blur-text">刮宫术</span>；辅助治疗：一般止血药、纠正凝血功能、纠正贫血、抗感染<br>②调整月经周期：<span class="blur-text">雌、孕激素序贯法</span>；<span class="blur-text">雌、孕激素联合法</span>；<span class="blur-text">孕激素后半周期疗法</span><br>③诱导排卵<br>④手术治疗：<span class="blur-text">子宫内膜切除术</span>、<span class="blur-text">子宫切除术</span></td>
+                            <td>75.. A <strong>异常子宫出血的治疗（无排卵性）</strong><br>（1）无排卵性异常子宫出血<br>①止血：<span class="answer-text">性激素治疗</span>——一线治疗（最低有效剂量）；<span class="answer-text">刮宫术</span>；辅助治疗：一般止血药、纠正凝血功能、纠正贫血、抗感染<br>②调整月经周期：<span class="answer-text">雌、孕激素序贯法</span>；<span class="answer-text">雌、孕激素联合法</span>；<span class="answer-text">孕激素后半周期疗法</span><br>③诱导排卵<br>④手术治疗：<span class="answer-text">子宫内膜切除术</span>、<span class="answer-text">子宫切除术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>107</td>
+                            <td>75.. B <strong>异常子宫出血的治疗（黄体功能不足）</strong><br>（2）黄体功能不足<br>①诱导排卵<br>②卵泡期低剂量雌激素<br>③促进月经中期<span class="blur-text">LH峰</span>形成：排卵期，<span class="blur-text">绒促性素（HCG）</span><br>④黄体功能刺激疗法：排卵后，<span class="blur-text">HCG</span><br>⑤黄体功能补充疗法：排卵后，<span class="blur-text">黄体酮</span><br>⑥黄体功能不足合并高PRL：<span class="blur-text">溴隐亭</span><br>⑦有避孕需求者：<span class="blur-text">口服避孕药</span></td>
+                            <td>75.. B <strong>异常子宫出血的治疗（黄体功能不足）</strong><br>（2）黄体功能不足<br>①诱导排卵<br>②卵泡期低剂量雌激素<br>③促进月经中期<span class="answer-text">LH峰</span>形成：排卵期，<span class="answer-text">绒促性素（HCG）</span><br>④黄体功能刺激疗法：排卵后，<span class="answer-text">HCG</span><br>⑤黄体功能补充疗法：排卵后，<span class="answer-text">黄体酮</span><br>⑥黄体功能不足合并高PRL：<span class="answer-text">溴隐亭</span><br>⑦有避孕需求者：<span class="answer-text">口服避孕药</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>108</td>
+                            <td>75.. C <strong>异常子宫出血的治疗（子宫内膜不规则脱落）</strong><br>（3）子宫内膜不规则脱落<br>①<span class="blur-text">孕激素</span><br>②有避孕需求者：<span class="blur-text">口服避孕药</span></td>
+                            <td>75.. C <strong>异常子宫出血的治疗（子宫内膜不规则脱落）</strong><br>（3）子宫内膜不规则脱落<br>①<span class="answer-text">孕激素</span><br>②有避孕需求者：<span class="answer-text">口服避孕药</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>109</td>
+                            <td>76.. <strong>子宫脱垂临床分度</strong><br><span class="blur-text">I度轻型</span>：宫颈外口距处女膜<<span class="blur-text">4cm</span>，未达到处女膜缘<br><span class="blur-text">I度重型</span>：宫颈已达到处女膜缘，阴道口可见子宫颈。<br><span class="blur-text">II度轻型</span>：宫颈脱出阴道口，宫体仍在阴道内；<br><span class="blur-text">II度重型</span>：宫颈及部分宫体脱出阴道口。<br><span class="blur-text">III度</span>：宫颈与宫体全部脱出阴道口外。</td>
+                            <td>76.. <strong>子宫脱垂临床分度</strong><br><span class="answer-text">I度轻型</span>：宫颈外口距处女膜<<span class="answer-text">4cm</span>，未达到处女膜缘<br><span class="answer-text">I度重型</span>：宫颈已达到处女膜缘，阴道口可见子宫颈。<br><span class="answer-text">II度轻型</span>：宫颈脱出阴道口，宫体仍在阴道内；<br><span class="answer-text">II度重型</span>：宫颈及部分宫体脱出阴道口。<br><span class="answer-text">III度</span>：宫颈与宫体全部脱出阴道口外。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>110</td>
+                            <td>77.. <strong>子宫脱垂的病因</strong><br>（1）<span class="blur-text">妊娠、分娩损伤</span><br>（2）产后过早体力劳动<br>（3）<span class="blur-text">慢性腹压增加</span><br>（4）生殖器官退化<br>（5）医源性损伤</td>
+                            <td>77.. <strong>子宫脱垂的病因</strong><br>（1）<span class="answer-text">妊娠、分娩损伤</span><br>（2）产后过早体力劳动<br>（3）<span class="answer-text">慢性腹压增加</span><br>（4）生殖器官退化<br>（5）医源性损伤</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>111</td>
+                            <td>78.. A <strong>盆腔炎性疾病的诊断标准</strong><br>①<span class="blur-text">最低标准</span>：宫颈举痛或子宫压痛伴附件区压痛。<br>②<span class="blur-text">附加标准</span>：增加诊断特异性。体温超过<span class="blur-text">38.3℃</span>；宫颈或阴道异常粘液脓性分泌物；阴道分泌物涂片大量白细胞；红细胞沉降率升高；血C反应蛋白升高；<span class="blur-text">奈瑟菌</span>或者<span class="blur-text">衣原体</span>阳性。<br>③<span class="blur-text">特异标准</span>：符合标准基本可以诊断。由于有创，所以少用。子宫内膜组织学活检；阴道超声或磁共振显示输卵管增粗，输卵管积液，伴或不伴盆腔积液、输卵管卵巢肿瘤；腹腔镜检查发现盆腔炎。</td>
+                            <td>78.. A <strong>盆腔炎性疾病的诊断标准</strong><br>①<span class="answer-text">最低标准</span>：宫颈举痛或子宫压痛伴附件区压痛。<br>②<span class="answer-text">附加标准</span>：增加诊断特异性。体温超过<span class="answer-text">38.3℃</span>；宫颈或阴道异常粘液脓性分泌物；阴道分泌物涂片大量白细胞；红细胞沉降率升高；血C反应蛋白升高；<span class="answer-text">奈瑟菌</span>或者<span class="answer-text">衣原体</span>阳性。<br>③<span class="answer-text">特异标准</span>：符合标准基本可以诊断。由于有创，所以少用。子宫内膜组织学活检；阴道超声或磁共振显示输卵管增粗，输卵管积液，伴或不伴盆腔积液、输卵管卵巢肿瘤；腹腔镜检查发现盆腔炎。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>112</td>
+                            <td>78.. B <strong>盆腔炎性疾病的治疗</strong><br>治疗：主要为<span class="blur-text">抗生素治疗</span>，必要时手术治疗，<br>（1）支持治疗<br>①体位：<span class="blur-text">半卧位</span>，有利于宫腔分泌物排出体外，盆腔炎性渗出物局限于子宫直肠陷凹<br>②补充液体，纠正电解质及酸碱平衡紊乱，高热时给予物理降温<br>（2）抗生素治疗<br>①敏感抗生素使用<br>②静脉滴注起效快，联合用药效果好<br>③抗生素使用时间：<span class="blur-text">14日</span><br>（3）手术治疗<br>手术指征：①药物治疗无效；②脓肿持续存在；③<span class="blur-text">脓肿破裂</span><br>（4）性伴侣的治疗</td>
+                            <td>78.. B <strong>盆腔炎性疾病的治疗</strong><br>治疗：主要为<span class="answer-text">抗生素治疗</span>，必要时手术治疗，<br>（1）支持治疗<br>①体位：<span class="answer-text">半卧位</span>，有利于宫腔分泌物排出体外，盆腔炎性渗出物局限于子宫直肠陷凹<br>②补充液体，纠正电解质及酸碱平衡紊乱，高热时给予物理降温<br>（2）抗生素治疗<br>①敏感抗生素使用<br>②静脉滴注起效快，联合用药效果好<br>③抗生素使用时间：<span class="answer-text">14日</span><br>（3）手术治疗<br>手术指征：①药物治疗无效；②脓肿持续存在；③<span class="answer-text">脓肿破裂</span><br>（4）性伴侣的治疗</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>113</td>
+                            <td>79.. A <strong>不孕症的检查步骤和诊断（男方检查）</strong><br>（1）男方检查与诊断<br><span class="blur-text">精液分析</span>：不孕症夫妇首选的检查项目</td>
+                            <td>79.. A <strong>不孕症的检查步骤和诊断（男方检查）</strong><br>（1）男方检查与诊断<br><span class="answer-text">精液分析</span>：不孕症夫妇首选的检查项目</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>114</td>
+                            <td>79.. B <strong>不孕症的检查步骤和诊断（女方检查）</strong><br>（2）女方检查与诊断<br>①<span class="blur-text">超声检查</span>：排卵监测、基础体温测定<br>②激素测定：基础性腺激素：<span class="blur-text">FSH</span>、<span class="blur-text">LH</span>、<span class="blur-text">E2</span>、<span class="blur-text">P</span>、<span class="blur-text">T</span>、<span class="blur-text">PRL</span>；<span class="blur-text">抗米勒管激素（AMH）</span>+<span class="blur-text">窦卵泡计数（AFC）</span>——评价卵巢储备功能金标准<br>③<span class="blur-text">输卵管通畅度检查</span>：首选X线下<span class="blur-text">子宫输卵管造影</span><br>④<span class="blur-text">宫腔镜检查</span>：必要时<br>⑤<span class="blur-text">腹腔镜检查</span>：必要时</td>
+                            <td>79.. B <strong>不孕症的检查步骤和诊断（女方检查）</strong><br>（2）女方检查与诊断<br>①<span class="answer-text">超声检查</span>：排卵监测、基础体温测定<br>②激素测定：基础性腺激素：<span class="answer-text">FSH</span>、<span class="answer-text">LH</span>、<span class="answer-text">E2</span>、<span class="answer-text">P</span>、<span class="answer-text">T</span>、<span class="answer-text">PRL</span>；<span class="answer-text">抗米勒管激素（AMH）</span>+<span class="answer-text">窦卵泡计数（AFC）</span>——评价卵巢储备功能金标准<br>③<span class="answer-text">输卵管通畅度检查</span>：首选X线下<span class="answer-text">子宫输卵管造影</span><br>④<span class="answer-text">宫腔镜检查</span>：必要时<br>⑤<span class="answer-text">腹腔镜检查</span>：必要时</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>115</td>
+                            <td>80.. <strong>不孕的病因</strong><br>（1）女方因素：①<span class="blur-text">输卵管和盆腔因素</span>（我国女性不孕最主要原因）；②<span class="blur-text">排卵障碍</span>；③宫颈与子宫因素；④外阴阴道疾病<br>（2）男方因素：①<span class="blur-text">精子异常</span>；②<span class="blur-text">精子输送异常</span>；③<span class="blur-text">性功能障碍</span><br>（3）男女双方因素：性生活障碍、缺乏性知识、精神高度紧张<br>（4）<span class="blur-text">不明原因不孕</span></td>
+                            <td>80.. <strong>不孕的病因</strong><br>（1）女方因素：①<span class="answer-text">输卵管和盆腔因素</span>（我国女性不孕最主要原因）；②<span class="answer-text">排卵障碍</span>；③宫颈与子宫因素；④外阴阴道疾病<br>（2）男方因素：①<span class="answer-text">精子异常</span>；②<span class="answer-text">精子输送异常</span>；③<span class="answer-text">性功能障碍</span><br>（3）男女双方因素：性生活障碍、缺乏性知识、精神高度紧张<br>（4）<span class="answer-text">不明原因不孕</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>116</td>
+                            <td>81.. <strong>急性乳腺炎的病因和治疗原则</strong><br>（1）病因：①<span class="blur-text">乳汁淤积</span>；②<span class="blur-text">细菌入侵</span>（致病菌主要为<span class="blur-text">金黄色葡萄球菌</span>）<br>（2）治疗原则：①消除<span class="blur-text">感染</span>；②<span class="blur-text">排空乳汁</span>（一般不停止哺乳）；③<span class="blur-text">切开引流</span></td>
+                            <td>81.. <strong>急性乳腺炎的病因和治疗原则</strong><br>（1）病因：①<span class="answer-text">乳汁淤积</span>；②<span class="answer-text">细菌入侵</span>（致病菌主要为<span class="answer-text">金黄色葡萄球菌</span>）<br>（2）治疗原则：①消除<span class="answer-text">感染</span>；②<span class="answer-text">排空乳汁</span>（一般不停止哺乳）；③<span class="answer-text">切开引流</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>117</td>
+                            <td>82.. <strong>乳腺囊性增生病的临床表现</strong><br>①疼痛：部分有<span class="blur-text">周期性</span>（与月经周期有关）<br>②肿块<br>③<span class="blur-text">乳头溢液</span><br>④反复发生<br>⑤腋窝淋巴结无肿大</td>
+                            <td>82.. <strong>乳腺囊性增生病的临床表现</strong><br>①疼痛：部分有<span class="answer-text">周期性</span>（与月经周期有关）<br>②肿块<br>③<span class="answer-text">乳头溢液</span><br>④反复发生<br>⑤腋窝淋巴结无肿大</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>118</td>
+                            <td>83.. <strong>乳房纤维腺瘤的临床表现</strong><br>①症状：一般无明显症状<br>②体征：<span class="blur-text">圆形或椭圆形</span>无痛性包块，表面光滑，界限清楚，无粘连，质中，活动度好</td>
+                            <td>83.. <strong>乳房纤维腺瘤的临床表现</strong><br>①症状：一般无明显症状<br>②体征：<span class="answer-text">圆形或椭圆形</span>无痛性包块，表面光滑，界限清楚，无粘连，质中，活动度好</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>119</td>
+                            <td>84.. A <strong>乳腺癌的临床表现（早期、中晚期）</strong><br>（1）临床表现<br>①早期：<span class="blur-text">无痛性肿块</span>（单一、质硬、界限不清、不光滑、活动度差）<br>②中晚期：<span class="blur-text">皮肤凹陷（酒窝征）</span>；<span class="blur-text">乳头歪斜</span>；<span class="blur-text">乳头内陷</span>；<span class="blur-text">橘皮样变</span>；<span class="blur-text">卫星结节</span>；<span class="blur-text">铠甲状癌</span></td>
+                            <td>84.. A <strong>乳腺癌的临床表现（早期、中晚期）</strong><br>（1）临床表现<br>①早期：<span class="answer-text">无痛性肿块</span>（单一、质硬、界限不清、不光滑、活动度差）<br>②中晚期：<span class="answer-text">皮肤凹陷（酒窝征）</span>；<span class="answer-text">乳头歪斜</span>；<span class="answer-text">乳头内陷</span>；<span class="answer-text">橘皮样变</span>；<span class="answer-text">卫星结节</span>；<span class="answer-text">铠甲状癌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>120</td>
+                            <td>84.. B <strong>乳腺癌的临床表现（炎性乳癌、乳头湿疹样乳腺癌）</strong><br>③<span class="blur-text">炎性乳癌</span>：往往发病极骤，乳房红、肿、热、痛，常见乳房弥漫或局限性皮肤硬化、变厚、表面不平，皮肤水肿似橘皮样，可有卫星结节。预后差<br>④<span class="blur-text">乳头湿疹样乳腺癌（Paget病）</span>：恶性程度低，发展慢。乳头有瘙痒，烧灼感，以后出现乳头和乳晕的皮肤变粗糙、糜烂如湿疹样，进而形成溃疡，有时覆盖黄褐色鳞屑样痂皮。部分病例于乳晕区可扪及肿块，较晚发生腋淋巴结转移。</td>
+                            <td>84.. B <strong>乳腺癌的临床表现（炎性乳癌、乳头湿疹样乳腺癌）</strong><br>③<span class="answer-text">炎性乳癌</span>：往往发病极骤，乳房红、肿、热、痛，常见乳房弥漫或局限性皮肤硬化、变厚、表面不平，皮肤水肿似橘皮样，可有卫星结节。预后差<br>④<span class="answer-text">乳头湿疹样乳腺癌（Paget病）</span>：恶性程度低，发展慢。乳头有瘙痒，烧灼感，以后出现乳头和乳晕的皮肤变粗糙、糜烂如湿疹样，进而形成溃疡，有时覆盖黄褐色鳞屑样痂皮。部分病例于乳晕区可扪及肿块，较晚发生腋淋巴结转移。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>121</td>
+                            <td>84.. C <strong>乳腺癌的转移途径</strong><br>（2）转移途径<br>①<span class="blur-text">淋巴转移</span>：乳腺癌主要播散途径之一<br>②<span class="blur-text">血行转移</span>：最常见的部位——<span class="blur-text">骨</span>、<span class="blur-text">肺</span>、<span class="blur-text">肝</span>、<span class="blur-text">脑</span><br>③<span class="blur-text">直接浸润</span>（局部扩散）</td>
+                            <td>84.. C <strong>乳腺癌的转移途径</strong><br>（2）转移途径<br>①<span class="answer-text">淋巴转移</span>：乳腺癌主要播散途径之一<br>②<span class="answer-text">血行转移</span>：最常见的部位——<span class="answer-text">骨</span>、<span class="answer-text">肺</span>、<span class="answer-text">肝</span>、<span class="answer-text">脑</span><br>③<span class="answer-text">直接浸润</span>（局部扩散）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>122</td>
+                            <td>84.. D <strong>乳腺癌的TNM分期</strong><br>（3）TNM分期：<span class="blur-text">图略</span></td>
+                            <td>84.. D <strong>乳腺癌的TNM分期</strong><br>（3）TNM分期：<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>123</td>
+                            <td>84.. E <strong>乳腺癌的治疗（局部治疗、全身治疗）</strong><br>（4）治疗——以手术治疗为主的综合治疗<br>①局部治疗：手术治疗；放疗（保乳手术后，放疗是一重要治疗组成部分）<br>②全身治疗：化疗；<span class="blur-text">内分泌治疗</span>；<span class="blur-text">分子靶向药物治疗</span>；<span class="blur-text">免疫治疗</span></td>
+                            <td>84.. E <strong>乳腺癌的治疗（局部治疗、全身治疗）</strong><br>（4）治疗——以手术治疗为主的综合治疗<br>①局部治疗：手术治疗；放疗（保乳手术后，放疗是一重要治疗组成部分）<br>②全身治疗：化疗；<span class="answer-text">内分泌治疗</span>；<span class="answer-text">分子靶向药物治疗</span>；<span class="answer-text">免疫治疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>124</td>
+                            <td>84.. F <strong>乳腺癌的治疗（手术方式）</strong><br>③治疗方式：<span class="blur-text">保留乳房的乳腺癌切除术</span>：I、II期，乳房有适当体积，切缘阴性；<span class="blur-text">乳腺癌改良根治术</span>：保留胸大肌，（不）保留胸小肌；<span class="blur-text">乳腺癌根治术</span>和<span class="blur-text">乳腺癌扩大根治术</span>；<span class="blur-text">全乳房切除术</span>；<span class="blur-text">前哨淋巴结活检术</span>及<span class="blur-text">腋淋巴结清扫术</span></td>
+                            <td>84.. F <strong>乳腺癌的治疗（手术方式）</strong><br>③治疗方式：<span class="answer-text">保留乳房的乳腺癌切除术</span>：I、II期，乳房有适当体积，切缘阴性；<span class="answer-text">乳腺癌改良根治术</span>：保留胸大肌，（不）保留胸小肌；<span class="answer-text">乳腺癌根治术</span>和<span class="answer-text">乳腺癌扩大根治术</span>；<span class="answer-text">全乳房切除术</span>；<span class="answer-text">前哨淋巴结活检术</span>及<span class="answer-text">腋淋巴结清扫术</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>125</td>
+                            <td>85.. <strong>精子的产生及排出途径</strong><br>精子由睾丸<span class="blur-text">精曲小管</span>上皮内的<span class="blur-text">精原细胞</span>分化发育而来，依次经过<span class="blur-text">精曲小管</span>→<span class="blur-text">精直小管</span>→<span class="blur-text">睾丸网</span>→<span class="blur-text">睾丸输出小管</span>→<span class="blur-text">附睾</span>→<span class="blur-text">输精管</span>→<span class="blur-text">射精管</span>→<span class="blur-text">尿道前列腺部</span>→<span class="blur-text">尿道膜部</span>→<span class="blur-text">尿道海绵体部</span>→<span class="blur-text">尿道外口</span>→体外。</td>
+                            <td>85.. <strong>精子的产生及排出途径</strong><br>精子由睾丸<span class="answer-text">精曲小管</span>上皮内的<span class="answer-text">精原细胞</span>分化发育而来，依次经过<span class="answer-text">精曲小管</span>→<span class="answer-text">精直小管</span>→<span class="answer-text">睾丸网</span>→<span class="answer-text">睾丸输出小管</span>→<span class="answer-text">附睾</span>→<span class="answer-text">输精管</span>→<span class="answer-text">射精管</span>→<span class="answer-text">尿道前列腺部</span>→<span class="answer-text">尿道膜部</span>→<span class="answer-text">尿道海绵体部</span>→<span class="answer-text">尿道外口</span>→体外。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>126</td>
+                            <td>86.. A <strong>输精管分部</strong><br>（1）输精管可分为<span class="blur-text">睾丸部</span>、<span class="blur-text">精索部</span>、<span class="blur-text">腹股沟部</span>和<span class="blur-text">盆部</span>。</td>
+                            <td>86.. A <strong>输精管分部</strong><br>（1）输精管可分为<span class="answer-text">睾丸部</span>、<span class="answer-text">精索部</span>、<span class="answer-text">腹股沟部</span>和<span class="answer-text">盆部</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>127</td>
+                            <td>86.. B <strong>输精管结扎部位</strong><br>（2）通常<span class="blur-text">精索部</span>位置表浅，是<span class="blur-text">结扎</span>的常用部位。</td>
+                            <td>86.. B <strong>输精管结扎部位</strong><br>（2）通常<span class="answer-text">精索部</span>位置表浅，是<span class="answer-text">结扎</span>的常用部位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>128</td>
+                            <td>87.. <strong>男性尿道的分部及特征</strong><br>男性尿道分三部分，即<span class="blur-text">尿道前列腺部</span>、<span class="blur-text">尿道膜部</span>和<span class="blur-text">尿道海绵体部</span>。前两者合称为<span class="blur-text">后尿道</span>，后者则为<span class="blur-text">前尿道</span>。男性尿道有<span class="blur-text">三个狭窄</span>、<span class="blur-text">三个扩大</span>和<span class="blur-text">两个弯曲</span>。三个狭窄是<span class="blur-text">尿道内口</span>、<span class="blur-text">尿道膜部</span>和<span class="blur-text">尿道外口</span>，其中以<span class="blur-text">尿道外口</span>最窄；三个扩大是<span class="blur-text">尿道前列腺部</span>、<span class="blur-text">尿道球部</span>和<span class="blur-text">尿道舟状窝部</span>；两个弯曲是<span class="blur-text">耻骨下弯</span>和<span class="blur-text">耻骨前弯</span>，其中<span class="blur-text">耻骨前弯</span>可以改变。</td>
+                            <td>87.. <strong>男性尿道的分部及特征</strong><br>男性尿道分三部分，即<span class="answer-text">尿道前列腺部</span>、<span class="answer-text">尿道膜部</span>和<span class="answer-text">尿道海绵体部</span>。前两者合称为<span class="answer-text">后尿道</span>，后者则为<span class="answer-text">前尿道</span>。男性尿道有<span class="answer-text">三个狭窄</span>、<span class="answer-text">三个扩大</span>和<span class="answer-text">两个弯曲</span>。三个狭窄是<span class="answer-text">尿道内口</span>、<span class="answer-text">尿道膜部</span>和<span class="answer-text">尿道外口</span>，其中以<span class="answer-text">尿道外口</span>最窄；三个扩大是<span class="answer-text">尿道前列腺部</span>、<span class="answer-text">尿道球部</span>和<span class="answer-text">尿道舟状窝部</span>；两个弯曲是<span class="answer-text">耻骨下弯</span>和<span class="answer-text">耻骨前弯</span>，其中<span class="answer-text">耻骨前弯</span>可以改变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>129</td>
+                            <td>88.. A <strong>卵巢位置和固定装置（位置）</strong><br>（1）位置：卵巢位于<span class="blur-text">小骨盆内</span>，<span class="blur-text">髂内</span>、<span class="blur-text">外动脉</span>的夹角处。</td>
+                            <td>88.. A <strong>卵巢位置和固定装置（位置）</strong><br>（1）位置：卵巢位于<span class="answer-text">小骨盆内</span>，<span class="answer-text">髂内</span>、<span class="answer-text">外动脉</span>的夹角处。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>130</td>
+                            <td>88.. B <strong>卵巢位置和固定装置（固定装置）</strong><br>（2）固定装置：上端有<span class="blur-text">卵巢悬韧带</span>，下端有<span class="blur-text">卵巢固有韧带</span>，前缘有<span class="blur-text">卵巢系膜</span>。</td>
+                            <td>88.. B <strong>卵巢位置和固定装置（固定装置）</strong><br>（2）固定装置：上端有<span class="answer-text">卵巢悬韧带</span>，下端有<span class="answer-text">卵巢固有韧带</span>，前缘有<span class="answer-text">卵巢系膜</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>131</td>
+                            <td>89.. <strong>子宫腔的形态及特征</strong><br>①子宫腔较狭窄，可分上、下两部，上部位于子宫体内，称为<span class="blur-text">子宫腔</span>；下部位于子宫颈内称为<span class="blur-text">子宫颈管</span>。<br>②子宫腔呈前后略扁的<span class="blur-text">三角形</span>，上外侧角借<span class="blur-text">输卵管子宫口</span>与输卵管相通，下角通子宫颈管。<br>③子宫颈管呈<span class="blur-text">梭形</span>，其上口通子宫腔，下口称<span class="blur-text">子宫口</span>，通阴道，未产妇子宫口呈<span class="blur-text">圆形</span>、光滑，经产妇变成<span class="blur-text">横裂状</span>。<br>④子宫口的前缘和后缘部分别称<span class="blur-text">前唇</span>和<span class="blur-text">后唇</span>。</td>
+                            <td>89.. <strong>子宫腔的形态及特征</strong><br>①子宫腔较狭窄，可分上、下两部，上部位于子宫体内，称为<span class="answer-text">子宫腔</span>；下部位于子宫颈内称为<span class="answer-text">子宫颈管</span>。<br>②子宫腔呈前后略扁的<span class="answer-text">三角形</span>，上外侧角借<span class="answer-text">输卵管子宫口</span>与输卵管相通，下角通子宫颈管。<br>③子宫颈管呈<span class="answer-text">梭形</span>，其上口通子宫腔，下口称<span class="answer-text">子宫口</span>，通阴道，未产妇子宫口呈<span class="answer-text">圆形</span>、光滑，经产妇变成<span class="answer-text">横裂状</span>。<br>④子宫口的前缘和后缘部分别称<span class="answer-text">前唇</span>和<span class="answer-text">后唇</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>132</td>
+                            <td>90.. A <strong>输卵管的位置和分部</strong><br>（1）位置：输卵管位于子宫底两侧，长<span class="blur-text">10~12cm</span>，被<span class="blur-text">子宫阔韧带</span>包绕。内侧端开口于子宫腔，外侧端游离靠近卵巢。输卵管全长可分为四个部分，由内向外为<span class="blur-text">子宫部</span>、<span class="blur-text">峡部</span>、<span class="blur-text">壶腹部</span>和<span class="blur-text">漏斗部</span>。</td>
+                            <td>90.. A <strong>输卵管的位置和分部</strong><br>（1）位置：输卵管位于子宫底两侧，长<span class="answer-text">10~12cm</span>，被<span class="answer-text">子宫阔韧带</span>包绕。内侧端开口于子宫腔，外侧端游离靠近卵巢。输卵管全长可分为四个部分，由内向外为<span class="answer-text">子宫部</span>、<span class="answer-text">峡部</span>、<span class="answer-text">壶腹部</span>和<span class="answer-text">漏斗部</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>133</td>
+                            <td>90.. B <strong>输卵管结扎部位</strong><br>（2）结扎部位：<span class="blur-text">峡部</span>长<span class="blur-text">2~3cm</span>，短而狭窄，壁较厚，血管分布较少，再生能力差，故临床输卵管结扎常取此部位。</td>
+                            <td>90.. B <strong>输卵管结扎部位</strong><br>（2）结扎部位：<span class="answer-text">峡部</span>长<span class="answer-text">2~3cm</span>，短而狭窄，壁较厚，血管分布较少，再生能力差，故临床输卵管结扎常取此部位。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>134</td>
+                            <td>91.. A <strong>子宫的正常位置及维持装置（正常位置）</strong><br>（1）子宫的正常位置：子宫位于<span class="blur-text">小骨盆中央</span>，子宫底在小骨盆上口平面之下，子宫口在坐骨棘连线之上，呈<span class="blur-text">前倾前屈位</span>。</td>
+                            <td>91.. A <strong>子宫的正常位置及维持装置（正常位置）</strong><br>（1）子宫的正常位置：子宫位于<span class="answer-text">小骨盆中央</span>，子宫底在小骨盆上口平面之下，子宫口在坐骨棘连线之上，呈<span class="answer-text">前倾前屈位</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>135</td>
+                            <td>91.. B <strong>子宫的正常位置及维持装置（维持装置）</strong><br>（2）维持正常位置的装置：<br>①<span class="blur-text">子宫阔韧带</span>，位于子宫两侧，由子宫前、后面的腹膜自子宫侧缘向两侧延伸至盆侧壁和盆底的双层腹膜构成，可限制子宫向侧方移位。其游离的上缘包裹输卵管，前叶覆盖<span class="blur-text">子宫圆韧带</span>，后叶覆盖卵巢和<span class="blur-text">卵巢固有韧带</span>。<br>②<span class="blur-text">子宫圆韧带</span>，起于子宫体前面的上外侧，子宫角的下方，在阔韧带前叶的覆盖下向前外侧弯行，经<span class="blur-text">腹环</span>进入<span class="blur-text">腹股沟管</span>，出皮下环后分散止于阴阜和大阴唇皮下。其作用为维持子宫<span class="blur-text">前倾位</span>。<br>③<span class="blur-text">子宫主韧带</span>，位于子宫阔韧带的基部，从子宫颈两侧缘延至盆侧壁。其作用为维持子宫颈正常位置，防止<span class="blur-text">子宫下垂</span>。<br>④<span class="blur-text">子宫骶韧带</span>，从子宫颈后面的上外侧向后弯行，绕经直肠的两侧，止于第<span class="blur-text">2~3骶椎</span>前面的筋膜，其表面覆以<span class="blur-text">直肠子宫襞</span>。其作用为牵引子宫颈向后上方，与子宫圆韧带协同，维持子宫的<span class="blur-text">前屈位</span>。<br>⑤<span class="blur-text">阴道</span>、<span class="blur-text">尿生殖膈</span>和<span class="blur-text">盆底肌</span>的承托。若子宫口低于坐骨棘平面甚至脱出阴道，则称为<span class="blur-text">子宫脱垂</span>。</td>
+                            <td>91.. B <strong>子宫的正常位置及维持装置（维持装置）</strong><br>（2）维持正常位置的装置：<br>①<span class="answer-text">子宫阔韧带</span>，位于子宫两侧，由子宫前、后面的腹膜自子宫侧缘向两侧延伸至盆侧壁和盆底的双层腹膜构成，可限制子宫向侧方移位。其游离的上缘包裹输卵管，前叶覆盖<span class="answer-text">子宫圆韧带</span>，后叶覆盖卵巢和<span class="answer-text">卵巢固有韧带</span>。<br>②<span class="answer-text">子宫圆韧带</span>，起于子宫体前面的上外侧，子宫角的下方，在阔韧带前叶的覆盖下向前外侧弯行，经<span class="answer-text">腹环</span>进入<span class="answer-text">腹股沟管</span>，出皮下环后分散止于阴阜和大阴唇皮下。其作用为维持子宫<span class="answer-text">前倾位</span>。<br>③<span class="answer-text">子宫主韧带</span>，位于子宫阔韧带的基部，从子宫颈两侧缘延至盆侧壁。其作用为维持子宫颈正常位置，防止<span class="answer-text">子宫下垂</span>。<br>④<span class="answer-text">子宫骶韧带</span>，从子宫颈后面的上外侧向后弯行，绕经直肠的两侧，止于第<span class="answer-text">2~3骶椎</span>前面的筋膜，其表面覆以<span class="answer-text">直肠子宫襞</span>。其作用为牵引子宫颈向后上方，与子宫圆韧带协同，维持子宫的<span class="answer-text">前屈位</span>。<br>⑤<span class="answer-text">阴道</span>、<span class="answer-text">尿生殖膈</span>和<span class="answer-text">盆底肌</span>的承托。若子宫口低于坐骨棘平面甚至脱出阴道，则称为<span class="answer-text">子宫脱垂</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>136</td>
+                            <td>92.. A <strong>男性尿道与女性尿道特点比较（男性尿道特点）</strong><br>（1）男性尿道与女性尿道相比，其特点为：①行程较长，为<span class="blur-text">16~22cm</span>；②有<span class="blur-text">三个狭窄</span>，分别位于<span class="blur-text">尿道内口</span>、<span class="blur-text">尿道外口</span>和<span class="blur-text">尿道膜部</span>；③三个扩大分别位于<span class="blur-text">尿道前列腺部</span>、<span class="blur-text">尿道球部</span>和<span class="blur-text">尿道舟状窝</span>；④两个弯曲：<span class="blur-text">耻骨下弯</span>和<span class="blur-text">耻骨前弯</span>；⑤男性尿道还兼有<span class="blur-text">排精</span>功能。</td>
+                            <td>92.. A <strong>男性尿道与女性尿道特点比较（男性尿道特点）</strong><br>（1）男性尿道与女性尿道相比，其特点为：①行程较长，为<span class="answer-text">16~22cm</span>；②有<span class="answer-text">三个狭窄</span>，分别位于<span class="answer-text">尿道内口</span>、<span class="answer-text">尿道外口</span>和<span class="answer-text">尿道膜部</span>；③三个扩大分别位于<span class="answer-text">尿道前列腺部</span>、<span class="answer-text">尿道球部</span>和<span class="answer-text">尿道舟状窝</span>；④两个弯曲：<span class="answer-text">耻骨下弯</span>和<span class="answer-text">耻骨前弯</span>；⑤男性尿道还兼有<span class="answer-text">排精</span>功能。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>137</td>
+                            <td>92.. B <strong>女性易患泌尿系感染的原因</strong><br>（2）女性易患泌尿系感染的原因是女性尿道较短，仅约<span class="blur-text">4cm</span>，起于膀胱尿道内口，向下穿尿生殖膈，开口阴道前庭前部，且<span class="blur-text">宽而直</span>。当外阴部受到污染，患者体内免疫力下降时，细菌可沿尿道逆行至膀胱、输尿管、肾盂等，引起泌尿系统的感染。</td>
+                            <td>92.. B <strong>女性易患泌尿系感染的原因</strong><br>（2）女性易患泌尿系感染的原因是女性尿道较短，仅约<span class="answer-text">4cm</span>，起于膀胱尿道内口，向下穿尿生殖膈，开口阴道前庭前部，且<span class="answer-text">宽而直</span>。当外阴部受到污染，患者体内免疫力下降时，细菌可沿尿道逆行至膀胱、输尿管、肾盂等，引起泌尿系统的感染。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>138</td>
+                            <td>93.. A <strong>卵子的产生排出途径及受精部位（产生和排出途径）</strong><br>（1）产生和排出途径：卵子由<span class="blur-text">卵巢</span>产生，经以下途径排出：卵巢→卵子→<span class="blur-text">腹膜腔</span>→<span class="blur-text">输卵管腹腔口</span>→输卵管→<span class="blur-text">输卵管子宫口</span>→子宫腔（子宫体腔→子宫颈管）→<span class="blur-text">子宫口</span>→阴道→体外。</td>
+                            <td>93.. A <strong>卵子的产生排出途径及受精部位（产生和排出途径）</strong><br>（1）产生和排出途径：卵子由<span class="answer-text">卵巢</span>产生，经以下途径排出：卵巢→卵子→<span class="answer-text">腹膜腔</span>→<span class="answer-text">输卵管腹腔口</span>→输卵管→<span class="answer-text">输卵管子宫口</span>→子宫腔（子宫体腔→子宫颈管）→<span class="answer-text">子宫口</span>→阴道→体外。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>139</td>
+                            <td>93.. B <strong>卵子的产生排出途径及受精部位（受精部位）</strong><br>（2）受精部位：<span class="blur-text">输卵管壶腹</span>。</td>
+                            <td>93.. B <strong>卵子的产生排出途径及受精部位（受精部位）</strong><br>（2）受精部位：<span class="answer-text">输卵管壶腹</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>140</td>
+                            <td>94.. A <strong>睾丸支持细胞的形态特点（光镜、电镜）</strong><br>（1）睾丸支持细胞形态特点<br>①光镜：细胞轮廓不清，核近<span class="blur-text">卵圆形</span>或<span class="blur-text">三角形</span>，染色浅，核仁明显。<br>②电镜：细胞呈不规则<span class="blur-text">锥体形</span>，细胞体从生精上皮基底面一直伸达腔面，侧面镶嵌着各级生精细胞。胞质内富含<span class="blur-text">滑面内质网</span>和一些<span class="blur-text">粗面内质网</span>，<span class="blur-text">高尔基复合体</span>发达，<span class="blur-text">线粒体</span>和<span class="blur-text">溶酶体</span>较多，并有大量脂滴、糖原、微丝、微管。相邻支持细胞侧面的近基底部，细胞膜形成<span class="blur-text">紧密连接</span>，将生精上皮分成<span class="blur-text">基底室</span>和<span class="blur-text">近腔室</span>两部分。基底室位于生精上皮基膜和支持细胞紧密连接之间，内有<span class="blur-text">精原细胞</span>；近腔室位于紧密连接上方，与生精小管管腔相通，内有<span class="blur-text">精母细胞</span>、<span class="blur-text">精子细胞</span>和<span class="blur-text">精子</span>。</td>
+                            <td>94.. A <strong>睾丸支持细胞的形态特点（光镜、电镜）</strong><br>（1）睾丸支持细胞形态特点<br>①光镜：细胞轮廓不清，核近<span class="answer-text">卵圆形</span>或<span class="answer-text">三角形</span>，染色浅，核仁明显。<br>②电镜：细胞呈不规则<span class="answer-text">锥体形</span>，细胞体从生精上皮基底面一直伸达腔面，侧面镶嵌着各级生精细胞。胞质内富含<span class="answer-text">滑面内质网</span>和一些<span class="answer-text">粗面内质网</span>，<span class="answer-text">高尔基复合体</span>发达，<span class="answer-text">线粒体</span>和<span class="answer-text">溶酶体</span>较多，并有大量脂滴、糖原、微丝、微管。相邻支持细胞侧面的近基底部，细胞膜形成<span class="answer-text">紧密连接</span>，将生精上皮分成<span class="answer-text">基底室</span>和<span class="answer-text">近腔室</span>两部分。基底室位于生精上皮基膜和支持细胞紧密连接之间，内有<span class="answer-text">精原细胞</span>；近腔室位于紧密连接上方，与生精小管管腔相通，内有<span class="answer-text">精母细胞</span>、<span class="answer-text">精子细胞</span>和<span class="answer-text">精子</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>141</td>
+                            <td>94.. B <strong>睾丸支持细胞的功能</strong><br>（2）功能<br>①对生精细胞起<span class="blur-text">支持和营养</span>作用。<br>②支持细胞在<span class="blur-text">卵泡刺激素</span>和<span class="blur-text">雄激素</span>的作用下，合成和分泌<span class="blur-text">雄激素结合蛋白</span>，后者与雄激素结合，保持生精小管内较高的雄激素水平，促进<span class="blur-text">精子发生</span>。同时，支持细胞又能分泌<span class="blur-text">抑制素</span>，反馈性抑制垂体分泌<span class="blur-text">卵泡刺激素</span>，使雄激素结合蛋白分泌量维持在稳定水平。<br>③分泌少量液体进入生精小管管腔，成为<span class="blur-text">睾丸液</span>，利于精子运送。<br>④微丝微管收缩可促进生精细胞向腔面移动，并促使精子释放入管腔。<br>⑤<span class="blur-text">吞噬、消化</span>精子形成过程中脱落下来的残余胞质。<br>⑥细胞侧面近基部的紧密连接构成了<span class="blur-text">血-睾屏障</span>的主要结构，阻挡血液中某些物质接触生精上皮，形成并维持利于精子发生的有利微环境，防止精子抗原物质逸出到生精小管外而引发<span class="blur-text">自身免疫反应</span>。</td>
+                            <td>94.. B <strong>睾丸支持细胞的功能</strong><br>（2）功能<br>①对生精细胞起<span class="answer-text">支持和营养</span>作用。<br>②支持细胞在<span class="answer-text">卵泡刺激素</span>和<span class="answer-text">雄激素</span>的作用下，合成和分泌<span class="answer-text">雄激素结合蛋白</span>，后者与雄激素结合，保持生精小管内较高的雄激素水平，促进<span class="answer-text">精子发生</span>。同时，支持细胞又能分泌<span class="answer-text">抑制素</span>，反馈性抑制垂体分泌<span class="answer-text">卵泡刺激素</span>，使雄激素结合蛋白分泌量维持在稳定水平。<br>③分泌少量液体进入生精小管管腔，成为<span class="answer-text">睾丸液</span>，利于精子运送。<br>④微丝微管收缩可促进生精细胞向腔面移动，并促使精子释放入管腔。<br>⑤<span class="answer-text">吞噬、消化</span>精子形成过程中脱落下来的残余胞质。<br>⑥细胞侧面近基部的紧密连接构成了<span class="answer-text">血-睾屏障</span>的主要结构，阻挡血液中某些物质接触生精上皮，形成并维持利于精子发生的有利微环境，防止精子抗原物质逸出到生精小管外而引发<span class="answer-text">自身免疫反应</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>142</td>
+                            <td>95.. A <strong>精子发生的过程及形态变化特点（过程）</strong><br>精原细胞形成精子的过程称<span class="blur-text">精子发生</span>，人需要（<span class="blur-text">64+4.5</span>）天。此过程需<span class="blur-text">精原细胞增殖</span>、<span class="blur-text">精母细胞减数分裂</span>和<span class="blur-text">精子形成</span>三个阶段。</td>
+                            <td>95.. A <strong>精子发生的过程及形态变化特点（过程）</strong><br>精原细胞形成精子的过程称<span class="answer-text">精子发生</span>，人需要（<span class="answer-text">64+4.5</span>）天。此过程需<span class="answer-text">精原细胞增殖</span>、<span class="answer-text">精母细胞减数分裂</span>和<span class="answer-text">精子形成</span>三个阶段。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>143</td>
+                            <td>95.. B <strong>精子发生的过程及形态变化特点（精子形成）</strong><br>（3）精子形成：是指从圆形的<span class="blur-text">精子细胞</span>逐渐转变为<span class="blur-text">蝌蚪状精子</span>的过程。</td>
+                            <td>95.. B <strong>精子发生的过程及形态变化特点（精子形成）</strong><br>（3）精子形成：是指从圆形的<span class="answer-text">精子细胞</span>逐渐转变为<span class="answer-text">蝌蚪状精子</span>的过程。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>144</td>
+                            <td>96.. A <strong>睾丸间质细胞的形态特点和功能（光镜、电镜形态）</strong><br>（1）光镜形态：睾丸间质细胞常成群分布于睾丸间质，细胞呈<span class="blur-text">圆形</span>或<span class="blur-text">多边形</span>，体积较大，核圆居中，胞质<span class="blur-text">嗜酸性</span>。<br>（2）电镜形态：细胞具有<span class="blur-text">类固醇激素分泌细胞</span>的超微结构，含丰富的<span class="blur-text">滑面内质网</span>、<span class="blur-text">线粒体</span>、大量的<span class="blur-text">脂滴</span>。</td>
+                            <td>96.. A <strong>睾丸间质细胞的形态特点和功能（光镜、电镜形态）</strong><br>（1）光镜形态：睾丸间质细胞常成群分布于睾丸间质，细胞呈<span class="answer-text">圆形</span>或<span class="answer-text">多边形</span>，体积较大，核圆居中，胞质<span class="answer-text">嗜酸性</span>。<br>（2）电镜形态：细胞具有<span class="answer-text">类固醇激素分泌细胞</span>的超微结构，含丰富的<span class="answer-text">滑面内质网</span>、<span class="answer-text">线粒体</span>、大量的<span class="answer-text">脂滴</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>145</td>
+                            <td>96.. B <strong>睾丸间质细胞的功能</strong><br>（3）功能：从<span class="blur-text">青春期</span>开始，睾丸间质细胞在<span class="blur-text">黄体生成素</span>刺激下合成分泌<span class="blur-text">雄激素</span>，启动和维持<span class="blur-text">精子发生</span>和男性生殖器官发育，维持<span class="blur-text">男性第二性征</span>和<span class="blur-text">性功能</span>。</td>
+                            <td>96.. B <strong>睾丸间质细胞的功能</strong><br>（3）功能：从<span class="answer-text">青春期</span>开始，睾丸间质细胞在<span class="answer-text">黄体生成素</span>刺激下合成分泌<span class="answer-text">雄激素</span>，启动和维持<span class="answer-text">精子发生</span>和男性生殖器官发育，维持<span class="answer-text">男性第二性征</span>和<span class="answer-text">性功能</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>146</td>
+                            <td>97.. <strong>睾丸功能的内分泌调节</strong><br>（1）从<span class="blur-text">青春期</span>开始，下丘脑分泌<span class="blur-text">促性腺激素释放激素</span>能促使腺垂体嗜碱性细胞分泌<span class="blur-text">卵泡刺激素</span>和<span class="blur-text">黄体生成素</span>。<br>①<span class="blur-text">黄体生成素</span>刺激睾丸间质细胞合成和分泌<span class="blur-text">雄激素</span>；<br>②<span class="blur-text">卵泡刺激素</span>促使睾丸生精小管的支持细胞合成<span class="blur-text">雄激素结合蛋白</span>，其与雄激素结合后使生精小管内含有高浓度雄激素，启动和维持精子发生。<br>（2）同时支持细胞分泌的<span class="blur-text">抑制素</span>和睾丸间质细胞分泌的<span class="blur-text">雄激素</span>均能反馈性地抑制下丘脑分泌促性腺激素释放激素，进而减少腺垂体分泌卵泡刺激素和黄体生成素。</td>
+                            <td>97.. <strong>睾丸功能的内分泌调节</strong><br>（1）从<span class="answer-text">青春期</span>开始，下丘脑分泌<span class="answer-text">促性腺激素释放激素</span>能促使腺垂体嗜碱性细胞分泌<span class="answer-text">卵泡刺激素</span>和<span class="answer-text">黄体生成素</span>。<br>①<span class="answer-text">黄体生成素</span>刺激睾丸间质细胞合成和分泌<span class="answer-text">雄激素</span>；<br>②<span class="answer-text">卵泡刺激素</span>促使睾丸生精小管的支持细胞合成<span class="answer-text">雄激素结合蛋白</span>，其与雄激素结合后使生精小管内含有高浓度雄激素，启动和维持精子发生。<br>（2）同时支持细胞分泌的<span class="answer-text">抑制素</span>和睾丸间质细胞分泌的<span class="answer-text">雄激素</span>均能反馈性地抑制下丘脑分泌促性腺激素释放激素，进而减少腺垂体分泌卵泡刺激素和黄体生成素。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>147</td>
+                            <td>98.. A <strong>宫内节育器（避孕原理、不良反应）</strong><br>1.宫内节育器<br>（1）避孕原理：①<span class="blur-text">干扰着床</span>；②影响受精卵发育；③减少精子通过宫颈<br>含孕激素IUD避孕原理：引起子宫内膜腺体<span class="blur-text">萎缩</span>和间质<span class="blur-text">蜕膜化</span>，不利于着床，使宫颈粘液<span class="blur-text">变稠</span><br>（2）不良反应：①<span class="blur-text">节育器脱落</span>；②<span class="blur-text">节育器异位</span>；③<span class="blur-text">生殖器感染</span>；④<span class="blur-text">带器妊娠</span>；⑤<span class="blur-text">异位妊娠</span></td>
+                            <td>98.. A <strong>宫内节育器（避孕原理、不良反应）</strong><br>1.宫内节育器<br>（1）避孕原理：①<span class="answer-text">干扰着床</span>；②影响受精卵发育；③减少精子通过宫颈<br>含孕激素IUD避孕原理：引起子宫内膜腺体<span class="answer-text">萎缩</span>和间质<span class="answer-text">蜕膜化</span>，不利于着床，使宫颈粘液<span class="answer-text">变稠</span><br>（2）不良反应：①<span class="answer-text">节育器脱落</span>；②<span class="answer-text">节育器异位</span>；③<span class="answer-text">生殖器感染</span>；④<span class="answer-text">带器妊娠</span>；⑤<span class="answer-text">异位妊娠</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>148</td>
+                            <td>98.. B <strong>宫内节育器（禁忌症、适应症）</strong><br>（3）禁忌症：①已经或怀疑<span class="blur-text">妊娠</span>；②流产或分娩未恢复正常；③生殖道<span class="blur-text">急性炎症</span>；④生殖道大的<span class="blur-text">肿瘤</span>；⑤特殊的<span class="blur-text">子宫畸形</span><br>（4）适应症：凡育龄妇女无禁忌症、要求放置宫内节育器者</td>
+                            <td>98.. B <strong>宫内节育器（禁忌症、适应症）</strong><br>（3）禁忌症：①已经或怀疑<span class="answer-text">妊娠</span>；②流产或分娩未恢复正常；③生殖道<span class="answer-text">急性炎症</span>；④生殖道大的<span class="answer-text">肿瘤</span>；⑤特殊的<span class="answer-text">子宫畸形</span><br>（4）适应症：凡育龄妇女无禁忌症、要求放置宫内节育器者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>149</td>
+                            <td>99.. A <strong>甾体激素避孕药（避孕原理、适应症）</strong><br>2.甾体激素避孕药<br>（1）避孕原理：<br>①<span class="blur-text">雌激素孕激素合剂</span>——<span class="blur-text">抑制排卵</span>：LHRH↓→FSH，LH↓<br>②<span class="blur-text">杀精剂</span>，<span class="blur-text">低效孕激素</span>——阻碍受精（改变宫颈粘液形状）：宫颈粘液稠厚，影响精子<br>③<span class="blur-text">高效孕激素</span>——阻碍着床（改变子宫内膜形态与功能）：内膜提前分泌化，无窗口期<br>④改变<span class="blur-text">输卵管功能</span><br>（2）适应症：<span class="blur-text">功血</span>、<span class="blur-text">子宫内膜异位症和腺肌病</span>、<span class="blur-text">子宫内膜癌</span></td>
+                            <td>99.. A <strong>甾体激素避孕药（避孕原理、适应症）</strong><br>2.甾体激素避孕药<br>（1）避孕原理：<br>①<span class="answer-text">雌激素孕激素合剂</span>——<span class="answer-text">抑制排卵</span>：LHRH↓→FSH，LH↓<br>②<span class="answer-text">杀精剂</span>，<span class="answer-text">低效孕激素</span>——阻碍受精（改变宫颈粘液形状）：宫颈粘液稠厚，影响精子<br>③<span class="answer-text">高效孕激素</span>——阻碍着床（改变子宫内膜形态与功能）：内膜提前分泌化，无窗口期<br>④改变<span class="answer-text">输卵管功能</span><br>（2）适应症：<span class="answer-text">功血</span>、<span class="answer-text">子宫内膜异位症和腺肌病</span>、<span class="answer-text">子宫内膜癌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>150</td>
+                            <td>99.. B <strong>甾体激素避孕药（禁忌症、不良反应）</strong><br>（3）禁忌症：①重要器官病变：<span class="blur-text">肝</span>，<span class="blur-text">肾</span>，<span class="blur-text">心</span>，<span class="blur-text">高血压</span>；②血液系统病变：<span class="blur-text">血液病</span>，<span class="blur-text">血栓性疾病</span>；③内分泌疾病：<span class="blur-text">糖尿病</span>，<span class="blur-text">甲亢</span>；④宫颈癌前病变：<span class="blur-text">CIN</span>；⑤卵巢功能减退：<span class="blur-text">月经稀少</span>，<span class="blur-text">闭经</span>；⑥<span class="blur-text">哺乳期</span>；⑦年龄大于<span class="blur-text">35岁</span>的吸烟女性；⑧<span class="blur-text">精神病</span>病人；⑨有严重<span class="blur-text">偏头痛</span>，反复发作者<br>（4）不良反应：①<span class="blur-text">类早孕反应</span>，恶心、呕吐、食欲缺乏等；②<span class="blur-text">闭经</span>；③<span class="blur-text">不规则阴道流血</span>；④体重增加，面部色素沉着</td>
+                            <td>99.. B <strong>甾体激素避孕药（禁忌症、不良反应）</strong><br>（3）禁忌症：①重要器官病变：<span class="answer-text">肝</span>，<span class="answer-text">肾</span>，<span class="answer-text">心</span>，<span class="answer-text">高血压</span>；②血液系统病变：<span class="answer-text">血液病</span>，<span class="answer-text">血栓性疾病</span>；③内分泌疾病：<span class="answer-text">糖尿病</span>，<span class="answer-text">甲亢</span>；④宫颈癌前病变：<span class="answer-text">CIN</span>；⑤卵巢功能减退：<span class="answer-text">月经稀少</span>，<span class="answer-text">闭经</span>；⑥<span class="answer-text">哺乳期</span>；⑦年龄大于<span class="answer-text">35岁</span>的吸烟女性；⑧<span class="answer-text">精神病</span>病人；⑨有严重<span class="answer-text">偏头痛</span>，反复发作者<br>（4）不良反应：①<span class="answer-text">类早孕反应</span>，恶心、呕吐、食欲缺乏等；②<span class="answer-text">闭经</span>；③<span class="answer-text">不规则阴道流血</span>；④体重增加，面部色素沉着</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>151</td>
+                            <td>100.. A <strong>人工终止妊娠术（药物流产）</strong><br>3.人工终止妊娠术<br>（1）药物流产<br>①适应症：严格适应症：早孕≤<span class="blur-text">7周</span>（<span class="blur-text">49天</span>），年龄小于<span class="blur-text">40岁</span>；临床适应症：妊娠；人工流产高危因素者；多次人工流产史<br>②不良反应：消化道症状：<span class="blur-text">恶心呕吐</span>，<span class="blur-text">腹痛腹泻</span><br>③禁忌症：使用<span class="blur-text">米非司酮</span>禁忌：a.肝脏疾病，血液疾病；b.肾上腺疾病，糖尿病；使用<span class="blur-text">前列腺素</span>禁忌：a.血压异常，哮喘，胃肠道功能紊乱；b.带器妊娠，异位妊娠；c.服药（抗结核，抗癫痫，抗抑郁）；d.吸烟，酗酒</td>
+                            <td>100.. A <strong>人工终止妊娠术（药物流产）</strong><br>3.人工终止妊娠术<br>（1）药物流产<br>①适应症：严格适应症：早孕≤<span class="answer-text">7周</span>（<span class="answer-text">49天</span>），年龄小于<span class="answer-text">40岁</span>；临床适应症：妊娠；人工流产高危因素者；多次人工流产史<br>②不良反应：消化道症状：<span class="answer-text">恶心呕吐</span>，<span class="answer-text">腹痛腹泻</span><br>③禁忌症：使用<span class="answer-text">米非司酮</span>禁忌：a.肝脏疾病，血液疾病；b.肾上腺疾病，糖尿病；使用<span class="answer-text">前列腺素</span>禁忌：a.血压异常，哮喘，胃肠道功能紊乱；b.带器妊娠，异位妊娠；c.服药（抗结核，抗癫痫，抗抑郁）；d.吸烟，酗酒</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>152</td>
+                            <td>100.. B <strong>人工终止妊娠术（人工流产）</strong><br>（2）人工流产（吸宫术、钳刮术）<br>①适应症：子宫发育正常<br><span class="blur-text">吸宫术</span>：妊娠<span class="blur-text">6-7周</span>（<<span class="blur-text">50天</span>）<br><span class="blur-text">钳刮术</span>：妊娠<span class="blur-text">8-14周</span><br>②禁忌症：生殖道发育异常、生殖道或全身感染、重要器官功能不全<br>③并发症：<span class="blur-text">人工流产综合反应</span>：子宫心脏反射引起休克样表现；<span class="blur-text">吸宫不全或漏吸</span>：妊娠物残留或全留；<span class="blur-text">感染</span>：消毒不严，违规操作；<span class="blur-text">子宫穿孔</span>：器械穿出子宫；<span class="blur-text">宫腔粘连</span>：子宫内膜损伤过度；<span class="blur-text">子宫出血</span>：子宫不收缩；<span class="blur-text">羊水栓塞</span></td>
+                            <td>100.. B <strong>人工终止妊娠术（人工流产）</strong><br>（2）人工流产（吸宫术、钳刮术）<br>①适应症：子宫发育正常<br><span class="answer-text">吸宫术</span>：妊娠<span class="answer-text">6-7周</span>（<<span class="answer-text">50天</span>）<br><span class="answer-text">钳刮术</span>：妊娠<span class="answer-text">8-14周</span><br>②禁忌症：生殖道发育异常、生殖道或全身感染、重要器官功能不全<br>③并发症：<span class="answer-text">人工流产综合反应</span>：子宫心脏反射引起休克样表现；<span class="answer-text">吸宫不全或漏吸</span>：妊娠物残留或全留；<span class="answer-text">感染</span>：消毒不严，违规操作；<span class="answer-text">子宫穿孔</span>：器械穿出子宫；<span class="answer-text">宫腔粘连</span>：子宫内膜损伤过度；<span class="answer-text">子宫出血</span>：子宫不收缩；<span class="answer-text">羊水栓塞</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>153</td>
+                            <td>101.. <strong>盆腔炎性疾病（PID）的病理生理</strong><br>①<span class="blur-text">子宫内膜炎与子宫肌炎</span>；②<span class="blur-text">输卵管炎</span>、<span class="blur-text">输卵管积脓</span>、<span class="blur-text">输卵管卵巢脓肿</span>；③<span class="blur-text">盆腔腹膜炎</span>；④<span class="blur-text">盆腔结缔组织炎</span>；⑤<span class="blur-text">败血症及脓毒血症</span>；⑥<span class="blur-text">Fitz-Hugh-Curtis综合征</span>（肝包膜炎症而无肝实质损害的肝周围炎）</td>
+                            <td>101.. <strong>盆腔炎性疾病（PID）的病理生理</strong><br>①<span class="answer-text">子宫内膜炎与子宫肌炎</span>；②<span class="answer-text">输卵管炎</span>、<span class="answer-text">输卵管积脓</span>、<span class="answer-text">输卵管卵巢脓肿</span>；③<span class="answer-text">盆腔腹膜炎</span>；④<span class="answer-text">盆腔结缔组织炎</span>；⑤<span class="answer-text">败血症及脓毒血症</span>；⑥<span class="answer-text">Fitz-Hugh-Curtis综合征</span>（肝包膜炎症而无肝实质损害的肝周围炎）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>154</td>
+                            <td>102.. <strong>卵巢、输卵管和原发性腹膜恶性肿瘤的手术病理分期</strong><br><span class="blur-text">图略</span></td>
+                            <td>102.. <strong>卵巢、输卵管和原发性腹膜恶性肿瘤的手术病理分期</strong><br><span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>155</td>
+                            <td>103.. <strong>检测CA125的临床意义</strong><br>①CA125高低可反映肿瘤大小。肿瘤直径<<span class="blur-text">1cm</span>，血浆CA125可正常<br>②若治疗后，CA125水平下降<span class="blur-text">30%</span>以上，或在<span class="blur-text">3个月</span>内降至正常；若治疗后血浆CA125持续高水平提示术后有肿瘤残留。<br>③若治疗后CA125水平一度降至正常水平随后再次升高，提示肿瘤<span class="blur-text">复发或转移</span>。<br>④患有<span class="blur-text">输卵管腺癌</span>、<span class="blur-text">子宫内膜癌</span>、<span class="blur-text">宫颈癌</span>时，患者CA125水平也会升高，对腺癌复发的<br>⑤<span class="blur-text">子宫内膜异位症</span>患者血CA125水平增高，但很少超过<span class="blur-text">200U/ml</span>。</td>
+                            <td>103.. <strong>检测CA125的临床意义</strong><br>①CA125高低可反映肿瘤大小。肿瘤直径<<span class="answer-text">1cm</span>，血浆CA125可正常<br>②若治疗后，CA125水平下降<span class="answer-text">30%</span>以上，或在<span class="answer-text">3个月</span>内降至正常；若治疗后血浆CA125持续高水平提示术后有肿瘤残留。<br>③若治疗后CA125水平一度降至正常水平随后再次升高，提示肿瘤<span class="answer-text">复发或转移</span>。<br>④患有<span class="answer-text">输卵管腺癌</span>、<span class="answer-text">子宫内膜癌</span>、<span class="answer-text">宫颈癌</span>时，患者CA125水平也会升高，对腺癌复发的<br>⑤<span class="answer-text">子宫内膜异位症</span>患者血CA125水平增高，但很少超过<span class="answer-text">200U/ml</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>156</td>
+                            <td>104.. <strong>妊娠合并肿瘤的治疗原则</strong><br>①良性肿瘤：早孕期发现，等到妊娠<span class="blur-text">12周</span>胎盘成熟后手术；晚孕期发现，等待至足月行剖宫产，同时切除<br>②恶性肿瘤：无论早孕期还是晚孕期均应尽早切除。<br>③如发生卵巢肿瘤并发症，如<span class="blur-text">蒂扭转</span>，<span class="blur-text">破裂</span>等，均应进行手术切除。</td>
+                            <td>104.. <strong>妊娠合并肿瘤的治疗原则</strong><br>①良性肿瘤：早孕期发现，等到妊娠<span class="answer-text">12周</span>胎盘成熟后手术；晚孕期发现，等待至足月行剖宫产，同时切除<br>②恶性肿瘤：无论早孕期还是晚孕期均应尽早切除。<br>③如发生卵巢肿瘤并发症，如<span class="answer-text">蒂扭转</span>，<span class="answer-text">破裂</span>等，均应进行手术切除。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

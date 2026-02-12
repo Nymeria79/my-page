@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">中医学名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>证</strong><br>是机体在疾病发展过程中某一阶段的<span class="blur-text">病理概括</span>，反映了疾病某一阶段的<span class="blur-text">病因、病位、性质</span>以及<span class="blur-text">邪正关系</span>和<span class="blur-text">发展趋势</span>，它揭示了疾病的<span class="blur-text">本质</span>。</td>
+                            <td>1.. <strong>证</strong><br>是机体在疾病发展过程中某一阶段的<span class="answer-text">病理概括</span>，反映了疾病某一阶段的<span class="answer-text">病因、病位、性质</span>以及<span class="answer-text">邪正关系</span>和<span class="answer-text">发展趋势</span>，它揭示了疾病的<span class="answer-text">本质</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>阴阳</strong><br>是对自然界相互关联的<span class="blur-text">事物现象</span>或事物内部相互关联的<span class="blur-text">对立双方</span>的属性概括。阴阳既可以代表<span class="blur-text">两个相互对立的事物</span>，也可以代表<span class="blur-text">同一事物内部对立的两个方面</span>。</td>
+                            <td>2.. <strong>阴阳</strong><br>是对自然界相互关联的<span class="answer-text">事物现象</span>或事物内部相互关联的<span class="answer-text">对立双方</span>的属性概括。阴阳既可以代表<span class="answer-text">两个相互对立的事物</span>，也可以代表<span class="answer-text">同一事物内部对立的两个方面</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>五行</strong><br>"<span class="blur-text">五</span>"指<span class="blur-text">木、火、土、金、水</span>五种基本物质元素，"<span class="blur-text">行</span>"指五种基本物质元素<span class="blur-text">行列次序</span>及<span class="blur-text">运动变化</span>。</td>
+                            <td>3.. <strong>五行</strong><br>"<span class="answer-text">五</span>"指<span class="answer-text">木、火、土、金、水</span>五种基本物质元素，"<span class="answer-text">行</span>"指五种基本物质元素<span class="answer-text">行列次序</span>及<span class="answer-text">运动变化</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>气</strong><br>人体之气是人体内<span class="blur-text">活力很强、运行不息</span>的极精微物质，是<span class="blur-text">构成人体</span>和<span class="blur-text">维持人体生命活动</span>的基本物质。</td>
+                            <td>4.. <strong>气</strong><br>人体之气是人体内<span class="answer-text">活力很强、运行不息</span>的极精微物质，是<span class="answer-text">构成人体</span>和<span class="answer-text">维持人体生命活动</span>的基本物质。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>元气</strong><br>是人体<span class="blur-text">最根本、最重要</span>的气，是人体生命活动的<span class="blur-text">原动力</span>。</td>
+                            <td>5.. <strong>元气</strong><br>是人体<span class="answer-text">最根本、最重要</span>的气，是人体生命活动的<span class="answer-text">原动力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>神</strong><br>分为<span class="blur-text">广义之神</span>和<span class="blur-text">狭义之神</span>，广义之神是高度概括的<span class="blur-text">人体生命活动的外在表现</span>，狭义之神是指人的<span class="blur-text">精神、意识、思维活动</span>。</td>
+                            <td>6.. <strong>神</strong><br>分为<span class="answer-text">广义之神</span>和<span class="answer-text">狭义之神</span>，广义之神是高度概括的<span class="answer-text">人体生命活动的外在表现</span>，狭义之神是指人的<span class="answer-text">精神、意识、思维活动</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>六淫</strong><br>是指<span class="blur-text">风、寒、暑、湿、燥、火</span>六种<span class="blur-text">外感病邪</span>的统称。</td>
+                            <td>7.. <strong>六淫</strong><br>是指<span class="answer-text">风、寒、暑、湿、燥、火</span>六种<span class="answer-text">外感病邪</span>的统称。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>四诊</strong><br>是指中医诊查和收集疾病有关资料的<span class="blur-text">基本方法</span>，包括<span class="blur-text">望、闻、问、切</span>四法。</td>
+                            <td>8.. <strong>四诊</strong><br>是指中医诊查和收集疾病有关资料的<span class="answer-text">基本方法</span>，包括<span class="answer-text">望、闻、问、切</span>四法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>自汗</strong><br><span class="blur-text">汗出不已，动则加重</span>，多因<span class="blur-text">阳气虚损，卫阳不固</span>。</td>
+                            <td>9.. <strong>自汗</strong><br><span class="answer-text">汗出不已，动则加重</span>，多因<span class="answer-text">阳气虚损，卫阳不固</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>盗汗</strong><br><span class="blur-text">睡时出汗，醒则汗止</span>，多属<span class="blur-text">阴虚内热</span>。</td>
+                            <td>10.. <strong>盗汗</strong><br><span class="answer-text">睡时出汗，醒则汗止</span>，多属<span class="answer-text">阴虚内热</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>八纲</strong><br>即<span class="blur-text">阴、阳、表、里、寒、热、虚、实</span>。</td>
+                            <td>11.. <strong>八纲</strong><br>即<span class="answer-text">阴、阳、表、里、寒、热、虚、实</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>正治</strong><br>是<span class="blur-text">逆其疾病证候性质</span>而治的一种<span class="blur-text">常规治疗法则</span>，又称"<span class="blur-text">逆治</span>"。（<span class="blur-text">寒者热之，热者寒之，虚则补之，实则泻之</span>）</td>
+                            <td>12.. <strong>正治</strong><br>是<span class="answer-text">逆其疾病证候性质</span>而治的一种<span class="answer-text">常规治疗法则</span>，又称"<span class="answer-text">逆治</span>"。（<span class="answer-text">寒者热之，热者寒之，虚则补之，实则泻之</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>反治</strong><br>是<span class="blur-text">顺从疾病假象</span>而治的一种治疗法则，又称"<span class="blur-text">从治</span>"。（<span class="blur-text">寒因寒用，热因热用，塞因塞用，通因通用</span>）</td>
+                            <td>13.. <strong>反治</strong><br>是<span class="answer-text">顺从疾病假象</span>而治的一种治疗法则，又称"<span class="answer-text">从治</span>"。（<span class="answer-text">寒因寒用，热因热用，塞因塞用，通因通用</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>同病异治</strong><br><span class="blur-text">同一疾病</span>，由于<span class="blur-text">病邪性质不同，机体反应有异，疾病发展的阶段不同</span>，其<span class="blur-text">病机和疾病性质</span>也不一样，治疗上应采用<span class="blur-text">不同的治法</span>进行治疗。</td>
+                            <td>14.. <strong>同病异治</strong><br><span class="answer-text">同一疾病</span>，由于<span class="answer-text">病邪性质不同，机体反应有异，疾病发展的阶段不同</span>，其<span class="answer-text">病机和疾病性质</span>也不一样，治疗上应采用<span class="answer-text">不同的治法</span>进行治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>异病同治</strong><br><span class="blur-text">不同疾病</span>在其发展过程中会出现<span class="blur-text">相同的病机变化</span>或<span class="blur-text">同一性质的证候</span>，可采用<span class="blur-text">相同的治法</span>治疗。</td>
+                            <td>15.. <strong>异病同治</strong><br><span class="answer-text">不同疾病</span>在其发展过程中会出现<span class="answer-text">相同的病机变化</span>或<span class="answer-text">同一性质的证候</span>，可采用<span class="answer-text">相同的治法</span>治疗。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>汗法</strong><br>也叫<span class="blur-text">解表法</span>或<span class="blur-text">解肌法</span>，是运用<span class="blur-text">发汗解表</span>的药方，以<span class="blur-text">开泄腠理，调和营卫，驱邪外出</span>，解除<span class="blur-text">表证</span>的一种治疗方法。</td>
+                            <td>16.. <strong>汗法</strong><br>也叫<span class="answer-text">解表法</span>或<span class="answer-text">解肌法</span>，是运用<span class="answer-text">发汗解表</span>的药方，以<span class="answer-text">开泄腠理，调和营卫，驱邪外出</span>，解除<span class="answer-text">表证</span>的一种治疗方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>下法</strong><br>也叫<span class="blur-text">泻下法</span>，是运用有<span class="blur-text">泻下作用</span>的方药，<span class="blur-text">通泻大便，攻逐体内湿热和积水</span>，以解除<span class="blur-text">实热蕴结</span>的治疗方法。</td>
+                            <td>17.. <strong>下法</strong><br>也叫<span class="answer-text">泻下法</span>，是运用有<span class="answer-text">泻下作用</span>的方药，<span class="answer-text">通泻大便，攻逐体内湿热和积水</span>，以解除<span class="answer-text">实热蕴结</span>的治疗方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>清法</strong><br>也叫<span class="blur-text">清热法</span>，是运用<span class="blur-text">寒凉</span>的方药，通过<span class="blur-text">泻火、解毒、凉血</span>等作用以清除<span class="blur-text">热邪</span>的治疗方法。</td>
+                            <td>18.. <strong>清法</strong><br>也叫<span class="answer-text">清热法</span>，是运用<span class="answer-text">寒凉</span>的方药，通过<span class="answer-text">泻火、解毒、凉血</span>等作用以清除<span class="answer-text">热邪</span>的治疗方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>消法</strong><br>也叫<span class="blur-text">消导法</span>和<span class="blur-text">消散法</span>，是运用<span class="blur-text">消食导滞、行气、化痰、利水</span>等方药，使<span class="blur-text">积滞的实邪</span>逐步消导和消散的治疗方法。</td>
+                            <td>19.. <strong>消法</strong><br>也叫<span class="answer-text">消导法</span>和<span class="answer-text">消散法</span>，是运用<span class="answer-text">消食导滞、行气、化痰、利水</span>等方药，使<span class="answer-text">积滞的实邪</span>逐步消导和消散的治疗方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>补法</strong><br>也叫<span class="blur-text">补益法</span>，是运用具有<span class="blur-text">补养作用</span>的方药，以<span class="blur-text">益气强筋、补精益血</span>，消除<span class="blur-text">虚弱证候</span>的一种治疗方法。</td>
+                            <td>20.. <strong>补法</strong><br>也叫<span class="answer-text">补益法</span>，是运用具有<span class="answer-text">补养作用</span>的方药，以<span class="answer-text">益气强筋、补精益血</span>，消除<span class="answer-text">虚弱证候</span>的一种治疗方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>四气</strong><br>是指药物具有<span class="blur-text">寒、热、温、凉</span>四种不同的药性，又称<span class="blur-text">四性</span>。</td>
+                            <td>21.. <strong>四气</strong><br>是指药物具有<span class="answer-text">寒、热、温、凉</span>四种不同的药性，又称<span class="answer-text">四性</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>五味</strong><br>是指药物具有<span class="blur-text">辛、甘、苦、酸、咸</span>五种味道。</td>
+                            <td>22.. <strong>五味</strong><br>是指药物具有<span class="answer-text">辛、甘、苦、酸、咸</span>五种味道。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>相须</strong><br>两种<span class="blur-text">性能、功效相同或相似</span>的药物合用，以<span class="blur-text">增强疗效</span>的配伍。</td>
+                            <td>23.. <strong>相须</strong><br>两种<span class="answer-text">性能、功效相同或相似</span>的药物合用，以<span class="answer-text">增强疗效</span>的配伍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>相使</strong><br>两种药合用，一种药物为<span class="blur-text">主</span>，另一种药为<span class="blur-text">辅</span>，辅药可以提高<span class="blur-text">主药</span>的疗效的配伍。</td>
+                            <td>24.. <strong>相使</strong><br>两种药合用，一种药物为<span class="answer-text">主</span>，另一种药为<span class="answer-text">辅</span>，辅药可以提高<span class="answer-text">主药</span>的疗效的配伍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>相畏</strong><br>一种药物的<span class="blur-text">毒副作用</span>，被另一种药物所<span class="blur-text">抑制</span>，使其毒副作用<span class="blur-text">减轻或消失</span>的配伍。</td>
+                            <td>25.. <strong>相畏</strong><br>一种药物的<span class="answer-text">毒副作用</span>，被另一种药物所<span class="answer-text">抑制</span>，使其毒副作用<span class="answer-text">减轻或消失</span>的配伍。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>经络</strong><br>是机体<span class="blur-text">运行气血、联络脏腑肢节、沟通上下内外</span>的通道。经络是<span class="blur-text">经脉</span>和<span class="blur-text">络脉</span>的总称。</td>
+                            <td>26.. <strong>经络</strong><br>是机体<span class="answer-text">运行气血、联络脏腑肢节、沟通上下内外</span>的通道。经络是<span class="answer-text">经脉</span>和<span class="answer-text">络脉</span>的总称。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>腧穴</strong><br>是<span class="blur-text">脏腑、经络之气</span>输于体表的<span class="blur-text">特殊部位</span>，也是疾病的<span class="blur-text">反应点</span>和针灸等治法的<span class="blur-text">刺激点</span>。</td>
+                            <td>27.. <strong>腧穴</strong><br>是<span class="answer-text">脏腑、经络之气</span>输于体表的<span class="answer-text">特殊部位</span>，也是疾病的<span class="answer-text">反应点</span>和针灸等治法的<span class="answer-text">刺激点</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>行针</strong><br>进针后，为了使病人产生<span class="blur-text">针刺的感觉</span>，而行使一定的<span class="blur-text">手法</span>。</td>
+                            <td>28.. <strong>行针</strong><br>进针后，为了使病人产生<span class="answer-text">针刺的感觉</span>，而行使一定的<span class="answer-text">手法</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>得气</strong><br>针刺部位产生<span class="blur-text">酸、麻、胀、重</span>等感觉，而医者指下亦有一种<span class="blur-text">沉紧</span>的反应，也称<span class="blur-text">针感</span>。</td>
+                            <td>29.. <strong>得气</strong><br>针刺部位产生<span class="answer-text">酸、麻、胀、重</span>等感觉，而医者指下亦有一种<span class="answer-text">沉紧</span>的反应，也称<span class="answer-text">针感</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

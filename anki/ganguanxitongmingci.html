@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">感官系统名词解释</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>血眼屏障</strong><br>是指循环血液与眼球组织液之间的屏障，包括<span class="blur-text">血房水屏障</span>、<span class="blur-text">血视网膜屏障</span>等。</td>
+                            <td>1.. <strong>血眼屏障</strong><br>是指循环血液与眼球组织液之间的屏障，包括<span class="answer-text">血房水屏障</span>、<span class="answer-text">血视网膜屏障</span>等。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>交感性眼炎</strong><br>发生于一眼的<span class="blur-text">穿通伤</span>或<span class="blur-text">眼内手术</span>后（<span class="blur-text">2周-2个月</span>）的双侧弥漫性肉芽肿性葡萄膜炎。主要由<span class="blur-text">自身免疫应答</span>所致，受伤眼称为<span class="blur-text">诱发眼</span>，另一只眼称为<span class="blur-text">交感眼</span>。</td>
+                            <td>2.. <strong>交感性眼炎</strong><br>发生于一眼的<span class="answer-text">穿通伤</span>或<span class="answer-text">眼内手术</span>后（<span class="answer-text">2周-2个月</span>）的双侧弥漫性肉芽肿性葡萄膜炎。主要由<span class="answer-text">自身免疫应答</span>所致，受伤眼称为<span class="answer-text">诱发眼</span>，另一只眼称为<span class="answer-text">交感眼</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>正视、近视、远视</strong><br>在眼<span class="blur-text">调节静止</span>状态下，外界平行光线经过眼的屈光系统后，聚焦于视网膜之<span class="blur-text">上/之前/之后</span>的一种屈光状态。</td>
+                            <td>3.. <strong>正视、近视、远视</strong><br>在眼<span class="answer-text">调节静止</span>状态下，外界平行光线经过眼的屈光系统后，聚焦于视网膜之<span class="answer-text">上/之前/之后</span>的一种屈光状态。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>近点(near point)</strong><br>眼尽最大调节能力时所能看清物体的<span class="blur-text">最近距离</span>，反映<span class="blur-text">晶状体的弹性</span>、<span class="blur-text">调节能力</span>。</td>
+                            <td>4.. <strong>近点(near point)</strong><br>眼尽最大调节能力时所能看清物体的<span class="answer-text">最近距离</span>，反映<span class="answer-text">晶状体的弹性</span>、<span class="answer-text">调节能力</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>角膜云翳</strong><br>角膜炎时，若浅层的瘢痕性浑浊薄如云雾状，通过浑浊的部分仍能看清虹膜纹理，称为<span class="blur-text">角膜云翳</span>。</td>
+                            <td>5.. <strong>角膜云翳</strong><br>角膜炎时，若浅层的瘢痕性浑浊薄如云雾状，通过浑浊的部分仍能看清虹膜纹理，称为<span class="answer-text">角膜云翳</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>角膜白斑</strong><br>角膜溃疡区上皮愈合，前弹力层和基质层的缺损处由瘢痕组织填充，若瘢痕厚而呈瓷白色的浑浊，不能透见虹膜者称<span class="blur-text">角膜白斑</span>。</td>
+                            <td>6.. <strong>角膜白斑</strong><br>角膜溃疡区上皮愈合，前弹力层和基质层的缺损处由瘢痕组织填充，若瘢痕厚而呈瓷白色的浑浊，不能透见虹膜者称<span class="answer-text">角膜白斑</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>睑板腺囊肿</strong><br>即<span class="blur-text">霰粒肿</span>，是睑板腺<span class="blur-text">特发性无菌性慢性肉芽肿性炎症</span>。它有纤维结缔组织包囊，囊内有睑板腺分泌物及包括<span class="blur-text">巨细胞</span>在内的慢性炎症细胞浸润。</td>
+                            <td>7.. <strong>睑板腺囊肿</strong><br>即<span class="answer-text">霰粒肿</span>，是睑板腺<span class="answer-text">特发性无菌性慢性肉芽肿性炎症</span>。它有纤维结缔组织包囊，囊内有睑板腺分泌物及包括<span class="answer-text">巨细胞</span>在内的慢性炎症细胞浸润。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>眼睑内翻</strong><br>是指眼睑，特别是睑缘向<span class="blur-text">眼球方向</span>卷曲的位置异常。当睑内翻达一定程度时，睫毛也倒向眼球。因此睑内翻和<span class="blur-text">倒睫</span>常同时存在。</td>
+                            <td>8.. <strong>眼睑内翻</strong><br>是指眼睑，特别是睑缘向<span class="answer-text">眼球方向</span>卷曲的位置异常。当睑内翻达一定程度时，睫毛也倒向眼球。因此睑内翻和<span class="answer-text">倒睫</span>常同时存在。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>干眼</strong><br>又称<span class="blur-text">角结膜干燥症</span>。是指任何原因引起的泪液<span class="blur-text">质或量的异常</span>，或<span class="blur-text">动力学异常</span>导致的泪膜稳定性下降，并伴有眼部不适和/或眼表组织损害为特征的多种疾病的总称。</td>
+                            <td>9.. <strong>干眼</strong><br>又称<span class="answer-text">角结膜干燥症</span>。是指任何原因引起的泪液<span class="answer-text">质或量的异常</span>，或<span class="answer-text">动力学异常</span>导致的泪膜稳定性下降，并伴有眼部不适和/或眼表组织损害为特征的多种疾病的总称。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>结膜充血</strong><br>急性结膜炎最常见的体征，其特点是<span class="blur-text">表层血管充血</span>，以<span class="blur-text">穹隆部</span>明显，向角膜缘方向充血减轻，这些表层血管可随结膜机械性移动而移动，并于局部滴<span class="blur-text">肾上腺素</span>后充血消失。</td>
+                            <td>10.. <strong>结膜充血</strong><br>急性结膜炎最常见的体征，其特点是<span class="answer-text">表层血管充血</span>，以<span class="answer-text">穹隆部</span>明显，向角膜缘方向充血减轻，这些表层血管可随结膜机械性移动而移动，并于局部滴<span class="answer-text">肾上腺素</span>后充血消失。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>睫状充血</strong><br>是指位于<span class="blur-text">角膜缘周围</span>的表层巩膜血管的充血，是<span class="blur-text">急性前葡萄膜炎症</span>的一个常见体征，也可见于角膜炎、急性闭角型青光眼。</td>
+                            <td>11.. <strong>睫状充血</strong><br>是指位于<span class="answer-text">角膜缘周围</span>的表层巩膜血管的充血，是<span class="answer-text">急性前葡萄膜炎症</span>的一个常见体征，也可见于角膜炎、急性闭角型青光眼。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. A <strong>春季角结膜炎</strong><br>又名<span class="blur-text">春季卡他性结膜炎</span>、季节性结膜炎等，是一种反复发作的<span class="blur-text">双侧慢性眼表疾病</span>，有环境和种族倾向。主要影响<span class="blur-text">儿童和青少年</span>，<span class="blur-text">20岁以下男性</span>多见。主要症状是<span class="blur-text">眼部奇痒</span>。</td>
+                            <td>12.. A <strong>春季角结膜炎</strong><br>又名<span class="answer-text">春季卡他性结膜炎</span>、季节性结膜炎等，是一种反复发作的<span class="answer-text">双侧慢性眼表疾病</span>，有环境和种族倾向。主要影响<span class="answer-text">儿童和青少年</span>，<span class="answer-text">20岁以下男性</span>多见。主要症状是<span class="answer-text">眼部奇痒</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>12.. B <strong>春季角结膜炎（分型）</strong><br>其他症状还有疼痛、异物感、畏光、烧灼感、流泪和黏性分泌物增多。根据眼部体征的不同，可分为<span class="blur-text">睑结膜型</span>、<span class="blur-text">角结膜缘型</span>及<span class="blur-text">混合型</span>。</td>
+                            <td>12.. B <strong>春季角结膜炎（分型）</strong><br>其他症状还有疼痛、异物感、畏光、烧灼感、流泪和黏性分泌物增多。根据眼部体征的不同，可分为<span class="answer-text">睑结膜型</span>、<span class="answer-text">角结膜缘型</span>及<span class="answer-text">混合型</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>13.. <strong>青光眼(glaucoma)</strong><br>是一组以特征性<span class="blur-text">视神经萎缩</span>和<span class="blur-text">视野缺损</span>为共同特征的疾病，<span class="blur-text">病理性眼压升高</span>是其主要危险因素。</td>
+                            <td>13.. <strong>青光眼(glaucoma)</strong><br>是一组以特征性<span class="answer-text">视神经萎缩</span>和<span class="answer-text">视野缺损</span>为共同特征的疾病，<span class="answer-text">病理性眼压升高</span>是其主要危险因素。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>14.. <strong>原发性闭角型青光眼</strong><br>是由于<span class="blur-text">周边虹膜堵塞小梁网</span>，或与小梁网产生永久性粘连，房水外流受阻，引起眼压升高的一类青光眼。</td>
+                            <td>14.. <strong>原发性闭角型青光眼</strong><br>是由于<span class="answer-text">周边虹膜堵塞小梁网</span>，或与小梁网产生永久性粘连，房水外流受阻，引起眼压升高的一类青光眼。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>15.. <strong>眼压</strong><br>眼内容物作用于<span class="blur-text">眼球壁</span>的压力。</td>
+                            <td>15.. <strong>眼压</strong><br>眼内容物作用于<span class="answer-text">眼球壁</span>的压力。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>16.. <strong>孔源性视网膜脱离</strong><br>发生在<span class="blur-text">视网膜裂孔</span>形成的基础上，<span class="blur-text">液化的玻璃体</span>经视网膜裂孔进入神经上皮视网膜下，使视网膜神经上皮与色素上皮分离。</td>
+                            <td>16.. <strong>孔源性视网膜脱离</strong><br>发生在<span class="answer-text">视网膜裂孔</span>形成的基础上，<span class="answer-text">液化的玻璃体</span>经视网膜裂孔进入神经上皮视网膜下，使视网膜神经上皮与色素上皮分离。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>17.. <strong>棉绒斑</strong><br>视网膜微动脉阻塞导致神经纤维层的微小梗死，形态不规则、大小不一，边界不清的<span class="blur-text">棉絮状灰白色斑片</span>，故称为棉绒斑。</td>
+                            <td>17.. <strong>棉绒斑</strong><br>视网膜微动脉阻塞导致神经纤维层的微小梗死，形态不规则、大小不一，边界不清的<span class="answer-text">棉絮状灰白色斑片</span>，故称为棉绒斑。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>18.. <strong>角膜后沉着物(KP)</strong><br>因<span class="blur-text">角膜内皮损伤</span>，炎症细胞或色素等沉积于角膜后面的形成的颗粒状物质，根据其形态可分为<span class="blur-text">尘状</span>、<span class="blur-text">中等大小</span>和<span class="blur-text">羊脂状</span>三种类型。</td>
+                            <td>18.. <strong>角膜后沉着物(KP)</strong><br>因<span class="answer-text">角膜内皮损伤</span>，炎症细胞或色素等沉积于角膜后面的形成的颗粒状物质，根据其形态可分为<span class="answer-text">尘状</span>、<span class="answer-text">中等大小</span>和<span class="answer-text">羊脂状</span>三种类型。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>19.. <strong>前房闪辉(Tyndall 征)</strong><br><span class="blur-text">血-房水屏障功能破坏</span>后蛋白进入房水，在裂隙灯检查时所见到的前房内白色光束，是血-房水屏障功能受损的指征。</td>
+                            <td>19.. <strong>前房闪辉(Tyndall 征)</strong><br><span class="answer-text">血-房水屏障功能破坏</span>后蛋白进入房水，在裂隙灯检查时所见到的前房内白色光束，是血-房水屏障功能受损的指征。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>20.. <strong>前房细胞</strong><br>病理情况下，炎症细胞、红细胞、肿瘤细胞或色素细胞进入房水，在裂隙灯检查时可见到大小不一致的灰白色尘状细胞，前房炎症细胞是反映<span class="blur-text">眼前段炎症</span>的可靠指标。</td>
+                            <td>20.. <strong>前房细胞</strong><br>病理情况下，炎症细胞、红细胞、肿瘤细胞或色素细胞进入房水，在裂隙灯检查时可见到大小不一致的灰白色尘状细胞，前房炎症细胞是反映<span class="answer-text">眼前段炎症</span>的可靠指标。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>21.. <strong>远达性视网膜病变(Purscher 病)</strong><br>是由于<span class="blur-text">眼以外部位受伤</span>而导致视网膜不同程度的损害。因车祸等所致的<span class="blur-text">严重胸腹部挤压伤</span>，由于突然增加了胸腹腔内的压力，使上腔静脉回流受阻，血管内压力突然增加，造成间接性的眼部损伤。</td>
+                            <td>21.. <strong>远达性视网膜病变(Purscher 病)</strong><br>是由于<span class="answer-text">眼以外部位受伤</span>而导致视网膜不同程度的损害。因车祸等所致的<span class="answer-text">严重胸腹部挤压伤</span>，由于突然增加了胸腹腔内的压力，使上腔静脉回流受阻，血管内压力突然增加，造成间接性的眼部损伤。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>22.. <strong>Terson's 综合征</strong><br>颅内出血可以是玻璃体出血的原因，<span class="blur-text">眼-脑综合征</span>是<span class="blur-text">蛛网膜下腔出血</span>的征象。</td>
+                            <td>22.. <strong>Terson's 综合征</strong><br>颅内出血可以是玻璃体出血的原因，<span class="answer-text">眼-脑综合征</span>是<span class="answer-text">蛛网膜下腔出血</span>的征象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>23.. <strong>白内障(cataract)</strong><br>是指<span class="blur-text">晶状体透明度降低</span>或者<span class="blur-text">颜色改变</span>所导致的光学质量下降的退行性改变。</td>
+                            <td>23.. <strong>白内障(cataract)</strong><br>是指<span class="answer-text">晶状体透明度降低</span>或者<span class="answer-text">颜色改变</span>所导致的光学质量下降的退行性改变。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>24.. <strong>Sherrington 法则</strong><br>当眼球运动时，某一主动肌收缩总是伴有同等量的<span class="blur-text">拮抗剂的松弛</span>。</td>
+                            <td>24.. <strong>Sherrington 法则</strong><br>当眼球运动时，某一主动肌收缩总是伴有同等量的<span class="answer-text">拮抗剂的松弛</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>25.. <strong>Hering 法则</strong><br>所有的随意共轭运动中，相等、同时的神经冲动从眼动中枢传到确定的一个注视方向的肌肉（双眼共同运动时，<span class="blur-text">配偶肌</span>之间接受<span class="blur-text">同等神经冲动</span>）。</td>
+                            <td>25.. <strong>Hering 法则</strong><br>所有的随意共轭运动中，相等、同时的神经冲动从眼动中枢传到确定的一个注视方向的肌肉（双眼共同运动时，<span class="answer-text">配偶肌</span>之间接受<span class="answer-text">同等神经冲动</span>）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>26.. <strong>复视</strong><br>斜视后，外界同一物体投射在两眼视网膜<span class="blur-text">非对应点</span>上，一眼在<span class="blur-text">黄斑</span>，一眼在<span class="blur-text">周边视网膜</span>，因此一个物体被感知为两个物像。</td>
+                            <td>26.. <strong>复视</strong><br>斜视后，外界同一物体投射在两眼视网膜<span class="answer-text">非对应点</span>上，一眼在<span class="answer-text">黄斑</span>，一眼在<span class="answer-text">周边视网膜</span>，因此一个物体被感知为两个物像。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>27.. <strong>弱视</strong><br>视觉发育期由于<span class="blur-text">单眼斜视</span>、<span class="blur-text">未矫正的屈光参差</span>、<span class="blur-text">高度屈光不正</span>及<span class="blur-text">形觉剥夺</span>等各种原因造成视觉细胞的有效刺激不足。引起单眼或双眼最佳矫正视力低于相应的年龄视力，或双眼视力相差<span class="blur-text">2行</span>以上。</td>
+                            <td>27.. <strong>弱视</strong><br>视觉发育期由于<span class="answer-text">单眼斜视</span>、<span class="answer-text">未矫正的屈光参差</span>、<span class="answer-text">高度屈光不正</span>及<span class="answer-text">形觉剥夺</span>等各种原因造成视觉细胞的有效刺激不足。引起单眼或双眼最佳矫正视力低于相应的年龄视力，或双眼视力相差<span class="answer-text">2行</span>以上。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>28.. <strong>屈光不正</strong><br>当眼调节放松时，外界的平行光线经眼的屈光系统后不能在<span class="blur-text">视网膜黄斑中心凹</span>聚焦，不能产生清晰像。</td>
+                            <td>28.. <strong>屈光不正</strong><br>当眼调节放松时，外界的平行光线经眼的屈光系统后不能在<span class="answer-text">视网膜黄斑中心凹</span>聚焦，不能产生清晰像。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>29.. <strong>散光</strong><br>由于<span class="blur-text">角膜在不同方位上曲率半径不同</span>，使不同方位的光线在眼内不能同时聚焦，造成物像变形和视物不清，称为散光。</td>
+                            <td>29.. <strong>散光</strong><br>由于<span class="answer-text">角膜在不同方位上曲率半径不同</span>，使不同方位的光线在眼内不能同时聚焦，造成物像变形和视物不清，称为散光。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>30.. <strong>暗适应</strong><br>当人从亮处突然进入暗室，最初几乎看不清任何物体，经过一定时间后，逐渐恢复了在暗处的视力，这种现象叫<span class="blur-text">暗适应</span>。</td>
+                            <td>30.. <strong>暗适应</strong><br>当人从亮处突然进入暗室，最初几乎看不清任何物体，经过一定时间后，逐渐恢复了在暗处的视力，这种现象叫<span class="answer-text">暗适应</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>31.. <strong>老视</strong><br>由于<span class="blur-text">晶状体随年龄增长而逐渐失去弹性</span>，看近物时的调节能力减弱，<span class="blur-text">近点远移</span>，称为老视，又称<span class="blur-text">老花眼</span>。</td>
+                            <td>31.. <strong>老视</strong><br>由于<span class="answer-text">晶状体随年龄增长而逐渐失去弹性</span>，看近物时的调节能力减弱，<span class="answer-text">近点远移</span>，称为老视，又称<span class="answer-text">老花眼</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>32.. <strong>震颤</strong><br>身体旋转引起的<span class="blur-text">眼球运动</span>。</td>
+                            <td>32.. <strong>震颤</strong><br>身体旋转引起的<span class="answer-text">眼球运动</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>33.. <strong>倒睫</strong><br>睑内翻时，睫毛甚至睑外缘皮肤<span class="blur-text">倒向眼球</span>，刺激角膜。</td>
+                            <td>33.. <strong>倒睫</strong><br>睑内翻时，睫毛甚至睑外缘皮肤<span class="answer-text">倒向眼球</span>，刺激角膜。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>34.. <strong>斜视</strong><br>因<span class="blur-text">中枢管制失调</span>，眼外肌力量不平衡，两眼不能同时注视目标，<span class="blur-text">视轴分离</span>，其中一眼注视目标，另一眼偏离目标。</td>
+                            <td>34.. <strong>斜视</strong><br>因<span class="answer-text">中枢管制失调</span>，眼外肌力量不平衡，两眼不能同时注视目标，<span class="answer-text">视轴分离</span>，其中一眼注视目标，另一眼偏离目标。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>35.. <strong>屈光参差</strong><br>两眼的<span class="blur-text">屈光度数不等</span>。</td>
+                            <td>35.. <strong>屈光参差</strong><br>两眼的<span class="answer-text">屈光度数不等</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

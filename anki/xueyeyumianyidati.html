@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">血液免疫大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr class="title-row">
+                            <td colspan="3"> 1. 临床输血指征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>1. 输血指征-非手术患者<br>血红蛋白＜ <span class="blur-text">60g/L</span> ，血细胞比容＜ <span class="blur-text">0.20</span> ；<br>或血红蛋白60～100g/L，但伴有 <span class="blur-text">明显缺氧症状和体征</span></td>
+                            <td>1. 输血指征-非手术患者<br>血红蛋白＜ <span class="answer-text">60g/L</span> ，血细胞比容＜ <span class="answer-text">0.20</span> ；<br>或血红蛋白60～100g/L，但伴有 <span class="answer-text">明显缺氧症状和体征</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2. 输血指征-手术患者<br>血红蛋白＜ <span class="blur-text">70g/L</span> ；<br>或血红蛋白70～100g/L，伴有 <span class="blur-text">明显缺氧症状和体征</span></td>
+                            <td>2. 输血指征-手术患者<br>血红蛋白＜ <span class="answer-text">70g/L</span> ；<br>或血红蛋白70～100g/L，伴有 <span class="answer-text">明显缺氧症状和体征</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3. 输血小板指征-非手术患者<br>血小板＞ <span class="blur-text">50×10^9/L</span> ，不需输注；<br>血小板＜ <span class="blur-text">5×10^9/L</span> ，立即输注；<br>血小板5～50×10^9/L伴有 <span class="blur-text">出血表现</span> 和/或 <span class="blur-text">血小板功能低下</span> 应输注</td>
+                            <td>3. 输血小板指征-非手术患者<br>血小板＞ <span class="answer-text">50×10^9/L</span> ，不需输注；<br>血小板＜ <span class="answer-text">5×10^9/L</span> ，立即输注；<br>血小板5～50×10^9/L伴有 <span class="answer-text">出血表现</span> 和/或 <span class="answer-text">血小板功能低下</span> 应输注</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4. 输血小板指征-手术患者<br>血小板＞ <span class="blur-text">100×10^9/L</span> ，不需输注；<br>血小板＜ <span class="blur-text">50×10^9/L</span> 应输注；<br>血小板50～100×10^9/L伴有 <span class="blur-text">出血表现</span> 和/或 <span class="blur-text">血小板功能低下</span> 应输注</td>
+                            <td>4. 输血小板指征-手术患者<br>血小板＞ <span class="answer-text">100×10^9/L</span> ，不需输注；<br>血小板＜ <span class="answer-text">50×10^9/L</span> 应输注；<br>血小板50～100×10^9/L伴有 <span class="answer-text">出血表现</span> 和/或 <span class="answer-text">血小板功能低下</span> 应输注</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 2. 输血反应及处理</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5. 输血反应类型<br>过敏反应（选用 <span class="blur-text">洗涤红细胞</span> ）；<br>非溶血性输血发热反应（选用 <span class="blur-text">去白红细胞血液制剂</span> ）；<br> <span class="blur-text">溶血性输血反应</span> （HTR）；<br>输血相关急性肺损伤（TRALI）</td>
+                            <td>5. 输血反应类型<br>过敏反应（选用 <span class="answer-text">洗涤红细胞</span> ）；<br>非溶血性输血发热反应（选用 <span class="answer-text">去白红细胞血液制剂</span> ）；<br> <span class="answer-text">溶血性输血反应</span> （HTR）；<br>输血相关急性肺损伤（TRALI）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6. 输血反应类型（续）<br>输血相关性移植物抗宿主病（选用 <span class="blur-text">辐照红细胞</span> ）；<br>输血相关 <span class="blur-text">循环负荷过重</span> ；<br>大量输血并发症：<span class="blur-text">酸中毒</span> 、<span class="blur-text">低体温</span> 、<span class="blur-text">凝血功能紊乱</span></td>
+                            <td>6. 输血反应类型（续）<br>输血相关性移植物抗宿主病（选用 <span class="answer-text">辐照红细胞</span> ）；<br>输血相关 <span class="answer-text">循环负荷过重</span> ；<br>大量输血并发症：<span class="answer-text">酸中毒</span> 、<span class="answer-text">低体温</span> 、<span class="answer-text">凝血功能紊乱</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7. 输血反应处理原则<br>立即 <span class="blur-text">停止输血</span> ；<br>对症治疗；<br>保持 <span class="blur-text">输液通畅</span> ；<br>监测 <span class="blur-text">生命体征</span></td>
+                            <td>7. 输血反应处理原则<br>立即 <span class="answer-text">停止输血</span> ；<br>对症治疗；<br>保持 <span class="answer-text">输液通畅</span> ；<br>监测 <span class="answer-text">生命体征</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 3. 细胞化学染色</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8. 过氧化物酶染色（POX）<br>AML多呈 <span class="blur-text">阳性</span> 反应，以 <span class="blur-text">M3</span> 和 <span class="blur-text">M2</span> 型反应最强；<br>ALL呈 <span class="blur-text">阴性</span> 反应；<br>故为急性髓细胞和淋巴细胞白血病鉴别的 <span class="blur-text">重要指标</span></td>
+                            <td>8. 过氧化物酶染色（POX）<br>AML多呈 <span class="answer-text">阳性</span> 反应，以 <span class="answer-text">M3</span> 和 <span class="answer-text">M2</span> 型反应最强；<br>ALL呈 <span class="answer-text">阴性</span> 反应；<br>故为急性髓细胞和淋巴细胞白血病鉴别的 <span class="answer-text">重要指标</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9. 酯酶染色及氟化钠抑制试验<br>非特异酯酶染色各期 <span class="blur-text">单核细胞</span> 呈阳性或强阳性反应；<br>可被 <span class="blur-text">氟化钠</span> 抑制；<br>特异性酯酶仅为 <span class="blur-text">中性粒细胞</span> 所特有</td>
+                            <td>9. 酯酶染色及氟化钠抑制试验<br>非特异酯酶染色各期 <span class="answer-text">单核细胞</span> 呈阳性或强阳性反应；<br>可被 <span class="answer-text">氟化钠</span> 抑制；<br>特异性酯酶仅为 <span class="answer-text">中性粒细胞</span> 所特有</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10. 酯酶染色临床意义<br>鉴别诊断AML与ALL；<br>鉴别诊断AML的类型；<br>酯酶双染色对 <span class="blur-text">M4</span> 有独特诊断价值（ <span class="blur-text">M4部分受抑</span> ，<span class="blur-text">M5全部受抑</span> ）</td>
+                            <td>10. 酯酶染色临床意义<br>鉴别诊断AML与ALL；<br>鉴别诊断AML的类型；<br>酯酶双染色对 <span class="answer-text">M4</span> 有独特诊断价值（ <span class="answer-text">M4部分受抑</span> ，<span class="answer-text">M5全部受抑</span> ）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11. 糖原染色（PAS）-M6鉴别<br>M6、MDS的幼红细胞可呈 <span class="blur-text">强阳性</span> ，积分明显增高；<br>巨贫、再障、溶贫时为 <span class="blur-text">阴性</span></td>
+                            <td>11. 糖原染色（PAS）-M6鉴别<br>M6、MDS的幼红细胞可呈 <span class="answer-text">强阳性</span> ，积分明显增高；<br>巨贫、再障、溶贫时为 <span class="answer-text">阴性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12. 糖原染色（PAS）-白血病鉴别<br>淋巴系肿瘤阳性增强，ALL呈 <span class="blur-text">大块状阳性</span> ；<br>AML多为 <span class="blur-text">阴性</span> ；<br>急性单核细胞白血病时，阳性颗粒小而多，呈 <span class="blur-text">弥散分布</span></td>
+                            <td>12. 糖原染色（PAS）-白血病鉴别<br>淋巴系肿瘤阳性增强，ALL呈 <span class="answer-text">大块状阳性</span> ；<br>AML多为 <span class="answer-text">阴性</span> ；<br>急性单核细胞白血病时，阳性颗粒小而多，呈 <span class="answer-text">弥散分布</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13. 中性粒细胞碱性磷酸酶染色（NAP）<br>慢粒与类白的鉴别：CML <span class="blur-text">减低</span> ，类白 <span class="blur-text">增高</span> ；<br>病毒感染 <span class="blur-text">减低</span> ，细菌感染 <span class="blur-text">增高</span></td>
+                            <td>13. 中性粒细胞碱性磷酸酶染色（NAP）<br>慢粒与类白的鉴别：CML <span class="answer-text">减低</span> ，类白 <span class="answer-text">增高</span> ；<br>病毒感染 <span class="answer-text">减低</span> ，细菌感染 <span class="answer-text">增高</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 4. 贫血</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14. 贫血发病机制分类<br>红细胞生成减少性贫血：<span class="blur-text">造血细胞</span> 、<span class="blur-text">造血调节</span> 、<span class="blur-text">造血原料</span> 异常；<br>红细胞破坏过多性贫血：即 <span class="blur-text">溶血性贫血</span> ；<br>失血性贫血：分 <span class="blur-text">急性</span> 和 <span class="blur-text">慢性</span></td>
+                            <td>14. 贫血发病机制分类<br>红细胞生成减少性贫血：<span class="answer-text">造血细胞</span> 、<span class="answer-text">造血调节</span> 、<span class="answer-text">造血原料</span> 异常；<br>红细胞破坏过多性贫血：即 <span class="answer-text">溶血性贫血</span> ；<br>失血性贫血：分 <span class="answer-text">急性</span> 和 <span class="answer-text">慢性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15. 缺铁性贫血发展阶段-缺铁期<br>此时 <span class="blur-text">储存铁</span> 耗尽；<br>血清铁蛋白＜ <span class="blur-text">12μg/L</span> ；<br>或骨髓铁染色显示铁粒幼细胞＜ <span class="blur-text">15%</span> 或消失；<br>但血红蛋白及血清铁 <span class="blur-text">正常</span></td>
+                            <td>15. 缺铁性贫血发展阶段-缺铁期<br>此时 <span class="answer-text">储存铁</span> 耗尽；<br>血清铁蛋白＜ <span class="answer-text">12μg/L</span> ；<br>或骨髓铁染色显示铁粒幼细胞＜ <span class="answer-text">15%</span> 或消失；<br>但血红蛋白及血清铁 <span class="answer-text">正常</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16. 缺铁性贫血发展阶段-缺铁性红细胞生成<br>血清铁蛋白＜12μg/L；<br>转铁蛋白饱和度＜ <span class="blur-text">15%</span> ；<br>FEP/Hb＞ <span class="blur-text">4.5μg/gHb</span> ；<br>但血红蛋白 <span class="blur-text">并不降低</span></td>
+                            <td>16. 缺铁性贫血发展阶段-缺铁性红细胞生成<br>血清铁蛋白＜12μg/L；<br>转铁蛋白饱和度＜ <span class="answer-text">15%</span> ；<br>FEP/Hb＞ <span class="answer-text">4.5μg/gHb</span> ；<br>但血红蛋白 <span class="answer-text">并不降低</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17. 缺铁性贫血发展阶段-缺铁性贫血<br>红细胞内血红蛋白减少；<br>呈现 <span class="blur-text">小细胞低色素性贫血</span> ；<br>Hb <span class="blur-text">低于正常</span></td>
+                            <td>17. 缺铁性贫血发展阶段-缺铁性贫血<br>红细胞内血红蛋白减少；<br>呈现 <span class="answer-text">小细胞低色素性贫血</span> ；<br>Hb <span class="answer-text">低于正常</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 5. 再生障碍性贫血</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18. 再生障碍性贫血诊断标准<br><span class="blur-text">全血细胞减少</span> ，网织红细胞绝对值减少；<br>一般 <span class="blur-text">无</span> 脾肿大；<br>骨髓多部位增生减低（＜正常 <span class="blur-text">50%</span> ）或重度减低（＜正常 <span class="blur-text">25%</span> ）</td>
+                            <td>18. 再生障碍性贫血诊断标准<br><span class="answer-text">全血细胞减少</span> ，网织红细胞绝对值减少；<br>一般 <span class="answer-text">无</span> 脾肿大；<br>骨髓多部位增生减低（＜正常 <span class="answer-text">50%</span> ）或重度减低（＜正常 <span class="answer-text">25%</span> ）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19. 再生障碍性贫血诊断标准（续）<br>造血细胞减少，非造血细胞比例 <span class="blur-text">增高</span> ；<br>骨髓小粒 <span class="blur-text">空虚</span> ；<br>除外引起全血细胞减少的 <span class="blur-text">其他疾病</span> ；<br>抗贫血治疗 <span class="blur-text">无效</span></td>
+                            <td>19. 再生障碍性贫血诊断标准（续）<br>造血细胞减少，非造血细胞比例 <span class="answer-text">增高</span> ；<br>骨髓小粒 <span class="answer-text">空虚</span> ；<br>除外引起全血细胞减少的 <span class="answer-text">其他疾病</span> ；<br>抗贫血治疗 <span class="answer-text">无效</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20. 再生障碍性贫血治疗-造血干细胞移植<br>年龄＜ <span class="blur-text">40岁</span> ；<br>有 <span class="blur-text">同胞供体</span> 来源；<br>与同胞HLA配型 <span class="blur-text">全相合</span></td>
+                            <td>20. 再生障碍性贫血治疗-造血干细胞移植<br>年龄＜ <span class="answer-text">40岁</span> ；<br>有 <span class="answer-text">同胞供体</span> 来源；<br>与同胞HLA配型 <span class="answer-text">全相合</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21. 再生障碍性贫血治疗-免疫抑制剂<br>抗胸腺/淋巴球蛋白（<span class="blur-text">ATG，ALG</span> ）；<br><span class="blur-text">环孢素A</span> ；<br><span class="blur-text">环磷酰胺</span></td>
+                            <td>21. 再生障碍性贫血治疗-免疫抑制剂<br>抗胸腺/淋巴球蛋白（<span class="answer-text">ATG，ALG</span> ）；<br><span class="answer-text">环孢素A</span> ；<br><span class="answer-text">环磷酰胺</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22. 再生障碍性贫血治疗-其他<br>促造血治疗：<span class="blur-text">雄激素</span> ，<span class="blur-text">造血生长因子</span> ；<br>中医中药治疗：<span class="blur-text">人参</span> ，<span class="blur-text">鹿茸</span> 等</td>
+                            <td>22. 再生障碍性贫血治疗-其他<br>促造血治疗：<span class="answer-text">雄激素</span> ，<span class="answer-text">造血生长因子</span> ；<br>中医中药治疗：<span class="answer-text">人参</span> ，<span class="answer-text">鹿茸</span> 等</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 6. MDS</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23. MDS诊断标准-必要条件<br>持续 <span class="blur-text">一系或多系</span> 血细胞减少；<br>血红蛋白＜ <span class="blur-text">110g/L</span> ；<br>中性粒细胞绝对计数＜ <span class="blur-text">1.5×10^9/L</span> ；<br>血小板＜ <span class="blur-text">100×10^9/L</span></td>
+                            <td>23. MDS诊断标准-必要条件<br>持续 <span class="answer-text">一系或多系</span> 血细胞减少；<br>血红蛋白＜ <span class="answer-text">110g/L</span> ；<br>中性粒细胞绝对计数＜ <span class="answer-text">1.5×10^9/L</span> ；<br>血小板＜ <span class="answer-text">100×10^9/L</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24. MDS诊断标准-确定标准<br>发育异常细胞比例≥ <span class="blur-text">10%</span> ；<br>环状铁粒幼红细胞占有核红细胞比例≥ <span class="blur-text">15%</span> ；<br>原始细胞达 <span class="blur-text">5～19%</span> ；<br><span class="blur-text">MDS常见染色体异常</span></td>
+                            <td>24. MDS诊断标准-确定标准<br>发育异常细胞比例≥ <span class="answer-text">10%</span> ；<br>环状铁粒幼红细胞占有核红细胞比例≥ <span class="answer-text">15%</span> ；<br>原始细胞达 <span class="answer-text">5～19%</span> ；<br><span class="answer-text">MDS常见染色体异常</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25. MDS治疗方法<br>去甲基化药物：<span class="blur-text">地西他滨</span> ，<span class="blur-text">5-阿扎胞苷</span> ；<br>联合化疗：<span class="blur-text">GAG</span> ，<span class="blur-text">HAG</span> ；<br>异基因造血干细胞移植：<span class="blur-text">唯一可治愈</span> 的疗法</td>
+                            <td>25. MDS治疗方法<br>去甲基化药物：<span class="answer-text">地西他滨</span> ，<span class="answer-text">5-阿扎胞苷</span> ；<br>联合化疗：<span class="answer-text">GAG</span> ，<span class="answer-text">HAG</span> ；<br>异基因造血干细胞移植：<span class="answer-text">唯一可治愈</span> 的疗法</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 7. 急性白血病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26. 急性白血病临床表现<br>起病 <span class="blur-text">急</span> ；<br><span class="blur-text">贫血</span> ；<br><span class="blur-text">出血</span> ；<br>发热（多呈 <span class="blur-text">低热</span> ）；<br>器官和组织浸润表现</td>
+                            <td>26. 急性白血病临床表现<br>起病 <span class="answer-text">急</span> ；<br><span class="answer-text">贫血</span> ；<br><span class="answer-text">出血</span> ；<br>发热（多呈 <span class="answer-text">低热</span> ）；<br>器官和组织浸润表现</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27. 急性白血病诊断标准<br>骨髓内异常原始细胞和/或幼稚细胞≥ <span class="blur-text">30%ANC</span> （FAB）；<br>或≥ <span class="blur-text">20%ANC</span> （WHO）；<br>需结合 <span class="blur-text">免疫学</span> 、<span class="blur-text">遗传学</span> 及 <span class="blur-text">分子生物学</span> 进一步分型</td>
+                            <td>27. 急性白血病诊断标准<br>骨髓内异常原始细胞和/或幼稚细胞≥ <span class="answer-text">30%ANC</span> （FAB）；<br>或≥ <span class="answer-text">20%ANC</span> （WHO）；<br>需结合 <span class="answer-text">免疫学</span> 、<span class="answer-text">遗传学</span> 及 <span class="answer-text">分子生物学</span> 进一步分型</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28. AML诱导缓解治疗<br>DA方案：<span class="blur-text">柔红霉素</span> +<span class="blur-text">阿糖胞苷</span> ；<br>HA方案：<span class="blur-text">高三尖杉酯碱</span> +阿糖胞苷；<br>CR可达 <span class="blur-text">60-80%</span></td>
+                            <td>28. AML诱导缓解治疗<br>DA方案：<span class="answer-text">柔红霉素</span> +<span class="answer-text">阿糖胞苷</span> ；<br>HA方案：<span class="answer-text">高三尖杉酯碱</span> +阿糖胞苷；<br>CR可达 <span class="answer-text">60-80%</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29. AML-M3特殊治疗<br>选用 <span class="blur-text">诱导分化剂</span> ；<br>全反式维A酸（<span class="blur-text">ATRA</span> ）联合三氧化二砷（<span class="blur-text">As2O3</span> ）；<br>CR可达 <span class="blur-text">90%或更高</span></td>
+                            <td>29. AML-M3特殊治疗<br>选用 <span class="answer-text">诱导分化剂</span> ；<br>全反式维A酸（<span class="answer-text">ATRA</span> ）联合三氧化二砷（<span class="answer-text">As2O3</span> ）；<br>CR可达 <span class="answer-text">90%或更高</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30. 中枢神经系统白血病预防治疗<br>甲氨蝶呤 <span class="blur-text">7-10mg</span> +阿糖胞苷 <span class="blur-text">30-50mg</span> +地塞米松 <span class="blur-text">2.5-5mg</span> 鞘内注射；<br>每 <span class="blur-text">6-8周</span> 1次；<br>至少 <span class="blur-text">3次</span></td>
+                            <td>30. 中枢神经系统白血病预防治疗<br>甲氨蝶呤 <span class="answer-text">7-10mg</span> +阿糖胞苷 <span class="answer-text">30-50mg</span> +地塞米松 <span class="answer-text">2.5-5mg</span> 鞘内注射；<br>每 <span class="answer-text">6-8周</span> 1次；<br>至少 <span class="answer-text">3次</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31. 中枢神经系统白血病治疗<br>鞘内注射：每周 <span class="blur-text">3次</span> ，直到CSF恢复正常后转为维持鞘内注射；<br>头颅和脊髓 <span class="blur-text">放疗</span></td>
+                            <td>31. 中枢神经系统白血病治疗<br>鞘内注射：每周 <span class="answer-text">3次</span> ，直到CSF恢复正常后转为维持鞘内注射；<br>头颅和脊髓 <span class="answer-text">放疗</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32. 完全缓解（CR）标准<br>白血病症状和体征 <span class="blur-text">消失</span> ；<br>外周血中性粒细胞绝对值≥ <span class="blur-text">1.5×10^9/L</span> ；<br>血小板≥ <span class="blur-text">100×10^9/L</span> ；<br>无白血病细胞</td>
+                            <td>32. 完全缓解（CR）标准<br>白血病症状和体征 <span class="answer-text">消失</span> ；<br>外周血中性粒细胞绝对值≥ <span class="answer-text">1.5×10^9/L</span> ；<br>血小板≥ <span class="answer-text">100×10^9/L</span> ；<br>无白血病细胞</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33. 完全缓解（CR）标准（续）<br>骨髓原始细胞＜ <span class="blur-text">5%</span> ；<br>无 <span class="blur-text">Auer小体</span> ；<br>红细胞系及巨核细胞系 <span class="blur-text">正常</span> ；<br>无 <span class="blur-text">髓外白血病</span></td>
+                            <td>33. 完全缓解（CR）标准（续）<br>骨髓原始细胞＜ <span class="answer-text">5%</span> ；<br>无 <span class="answer-text">Auer小体</span> ；<br>红细胞系及巨核细胞系 <span class="answer-text">正常</span> ；<br>无 <span class="answer-text">髓外白血病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34. MRD检测方法<br>形态学方法：<span class="blur-text">骨髓穿刺</span> 和 <span class="blur-text">骨髓活检</span> ；<br><span class="blur-text">体外荧光原位杂交技术</span> ；<br><span class="blur-text">流式细胞仪</span> ；<br><span class="blur-text">聚合酶链反应</span></td>
+                            <td>34. MRD检测方法<br>形态学方法：<span class="answer-text">骨髓穿刺</span> 和 <span class="answer-text">骨髓活检</span> ；<br><span class="answer-text">体外荧光原位杂交技术</span> ；<br><span class="answer-text">流式细胞仪</span> ；<br><span class="answer-text">聚合酶链反应</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 8. 淋巴瘤</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35. 霍奇金淋巴瘤周期性发热特点<br>体温在 <span class="blur-text">38~40℃</span> 之间持续数天，然后逐渐降至正常；<br>经过 <span class="blur-text">10天至6星期或更长</span> 间歇期后又开始上升；<br>皮质激素 <span class="blur-text">易退热</span> ，抗感染治疗 <span class="blur-text">无效</span></td>
+                            <td>35. 霍奇金淋巴瘤周期性发热特点<br>体温在 <span class="answer-text">38~40℃</span> 之间持续数天，然后逐渐降至正常；<br>经过 <span class="answer-text">10天至6星期或更长</span> 间歇期后又开始上升；<br>皮质激素 <span class="answer-text">易退热</span> ，抗感染治疗 <span class="answer-text">无效</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>36. 霍奇金淋巴瘤分型<br>结节性淋巴细胞为主型（NLPHL），占 <span class="blur-text">5%</span> ；<br>经典霍奇金淋巴瘤（CHL），占 <span class="blur-text">95%</span></td>
+                            <td>36. 霍奇金淋巴瘤分型<br>结节性淋巴细胞为主型（NLPHL），占 <span class="answer-text">5%</span> ；<br>经典霍奇金淋巴瘤（CHL），占 <span class="answer-text">95%</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>37. 经典霍奇金淋巴瘤分型<br>富于淋巴细胞型，占 <span class="blur-text">5%</span> ，预后 <span class="blur-text">良好</span> ；<br>结节硬化型，占 <span class="blur-text">40-70%</span> ，预后 <span class="blur-text">相对好</span> ；<br>混合细胞型，占 <span class="blur-text">20-25%</span> ，预后 <span class="blur-text">相对较差</span></td>
+                            <td>37. 经典霍奇金淋巴瘤分型<br>富于淋巴细胞型，占 <span class="answer-text">5%</span> ，预后 <span class="answer-text">良好</span> ；<br>结节硬化型，占 <span class="answer-text">40-70%</span> ，预后 <span class="answer-text">相对好</span> ；<br>混合细胞型，占 <span class="answer-text">20-25%</span> ，预后 <span class="answer-text">相对较差</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>38. 淋巴瘤AB症状-B组症状<br>不明原因发热大于 <span class="blur-text">38℃</span> ；<br><span class="blur-text">盗汗</span> ；<br>半年内体重下降 <span class="blur-text">10%以上</span></td>
+                            <td>38. 淋巴瘤AB症状-B组症状<br>不明原因发热大于 <span class="answer-text">38℃</span> ；<br><span class="answer-text">盗汗</span> ；<br>半年内体重下降 <span class="answer-text">10%以上</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>39. 霍奇金淋巴瘤治疗<br>化疗首选 <span class="blur-text">ABVD方案</span> （至少 <span class="blur-text">6疗程</span> ）；<br>非霍奇金淋巴瘤侵袭性类型标准方案：<span class="blur-text">CHOP方案</span> ；<br>每月1疗程，<span class="blur-text">6-9次</span> ，CR <span class="blur-text">70%</span></td>
+                            <td>39. 霍奇金淋巴瘤治疗<br>化疗首选 <span class="answer-text">ABVD方案</span> （至少 <span class="answer-text">6疗程</span> ）；<br>非霍奇金淋巴瘤侵袭性类型标准方案：<span class="answer-text">CHOP方案</span> ；<br>每月1疗程，<span class="answer-text">6-9次</span> ，CR <span class="answer-text">70%</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>40. 镜影细胞特点<br>典型R-S细胞是 <span class="blur-text">双核或多核</span> 瘤巨细胞；<br>核中央有一大的 <span class="blur-text">嗜酸性核仁</span> ，周围有透明晕；<br>双核面对面排列，形似 <span class="blur-text">镜中之影</span> ；<br>对诊断霍奇金淋巴瘤具有 <span class="blur-text">重要意义</span></td>
+                            <td>40. 镜影细胞特点<br>典型R-S细胞是 <span class="answer-text">双核或多核</span> 瘤巨细胞；<br>核中央有一大的 <span class="answer-text">嗜酸性核仁</span> ，周围有透明晕；<br>双核面对面排列，形似 <span class="answer-text">镜中之影</span> ；<br>对诊断霍奇金淋巴瘤具有 <span class="answer-text">重要意义</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 9. DIC</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>41. DIC诊断-临床表现<br>存在易引起DIC <span class="blur-text">基础疾病</span> ；<br>多发性 <span class="blur-text">出血倾向</span> ；<br>不易用原发病解释的 <span class="blur-text">微循环衰竭或休克</span> ；<br>多发性 <span class="blur-text">血管栓塞</span> 的症状体征</td>
+                            <td>41. DIC诊断-临床表现<br>存在易引起DIC <span class="answer-text">基础疾病</span> ；<br>多发性 <span class="answer-text">出血倾向</span> ；<br>不易用原发病解释的 <span class="answer-text">微循环衰竭或休克</span> ；<br>多发性 <span class="answer-text">血管栓塞</span> 的症状体征</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>42. DIC诊断-实验室检查<br>血小板＜ <span class="blur-text">100×10^9/L</span> 或进行性降低；<br>血浆纤维蛋白原含量＜ <span class="blur-text">1.5g/L</span> 或进行性下降，或＞ <span class="blur-text">4g/L</span> ；<br>血浆FDP＞ <span class="blur-text">20mg/L</span> ，或D-二聚体升高</td>
+                            <td>42. DIC诊断-实验室检查<br>血小板＜ <span class="answer-text">100×10^9/L</span> 或进行性降低；<br>血浆纤维蛋白原含量＜ <span class="answer-text">1.5g/L</span> 或进行性下降，或＞ <span class="answer-text">4g/L</span> ；<br>血浆FDP＞ <span class="answer-text">20mg/L</span> ，或D-二聚体升高</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>43. DIC诊断-实验室检查（续）<br>PT缩短或延长 <span class="blur-text">3秒</span> 以上；<br>APTT缩短或延长 <span class="blur-text">10秒</span> 以上；<br>同时存在 <span class="blur-text">3项以上</span> 异常可诊断</td>
+                            <td>43. DIC诊断-实验室检查（续）<br>PT缩短或延长 <span class="answer-text">3秒</span> 以上；<br>APTT缩短或延长 <span class="answer-text">10秒</span> 以上；<br>同时存在 <span class="answer-text">3项以上</span> 异常可诊断</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>44. DIC治疗原则<br>序贯性、<span class="blur-text">及时性</span> 、<span class="blur-text">个体性</span> 和 <span class="blur-text">动态性</span></td>
+                            <td>44. DIC治疗原则<br>序贯性、<span class="answer-text">及时性</span> 、<span class="answer-text">个体性</span> 和 <span class="answer-text">动态性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>45. DIC治疗方法<br>去除病因，治疗 <span class="blur-text">原发疾病</span> ；<br>抗凝治疗：如 <span class="blur-text">肝素</span> ；<br>补充 <span class="blur-text">凝血因子</span> 和 <span class="blur-text">血小板</span> ；<br>抗纤溶药物：<span class="blur-text">氨甲苯酸</span> 、<span class="blur-text">氨甲环酸</span></td>
+                            <td>45. DIC治疗方法<br>去除病因，治疗 <span class="answer-text">原发疾病</span> ；<br>抗凝治疗：如 <span class="answer-text">肝素</span> ；<br>补充 <span class="answer-text">凝血因子</span> 和 <span class="answer-text">血小板</span> ；<br>抗纤溶药物：<span class="answer-text">氨甲苯酸</span> 、<span class="answer-text">氨甲环酸</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 10. SLE</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>46. SLE特异性皮损<br>面部 <span class="blur-text">蝶形红斑</span> ；<br><span class="blur-text">盘状红斑</span> ；<br>深层 <span class="blur-text">脂膜炎型</span> ；<br><span class="blur-text">冻疮样皮损</span></td>
+                            <td>46. SLE特异性皮损<br>面部 <span class="answer-text">蝶形红斑</span> ；<br><span class="answer-text">盘状红斑</span> ；<br>深层 <span class="answer-text">脂膜炎型</span> ；<br><span class="answer-text">冻疮样皮损</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>47. SLE导致肺动脉高压机制<br><span class="blur-text">肺血管炎</span> ；<br><span class="blur-text">雷诺现象</span> ；<br><span class="blur-text">肺血栓栓塞</span> ；<br>广泛 <span class="blur-text">肺间质病变</span></td>
+                            <td>47. SLE导致肺动脉高压机制<br><span class="answer-text">肺血管炎</span> ；<br><span class="answer-text">雷诺现象</span> ；<br><span class="answer-text">肺血栓栓塞</span> ；<br>广泛 <span class="answer-text">肺间质病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>48. SLE中重型治疗-免疫抑制剂<br>环磷酰胺CTX（用于 <span class="blur-text">狼疮肾</span> 、<span class="blur-text">狼疮脑</span> 、<span class="blur-text">血小板减少</span> ）；<br>环孢素A CSA（用于 <span class="blur-text">狼疮肾伴血液系统损害</span> ）；<br>雷公藤多苷（注意 <span class="blur-text">性腺毒性</span> ）</td>
+                            <td>48. SLE中重型治疗-免疫抑制剂<br>环磷酰胺CTX（用于 <span class="answer-text">狼疮肾</span> 、<span class="answer-text">狼疮脑</span> 、<span class="answer-text">血小板减少</span> ）；<br>环孢素A CSA（用于 <span class="answer-text">狼疮肾伴血液系统损害</span> ）；<br>雷公藤多苷（注意 <span class="answer-text">性腺毒性</span> ）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>49. SLE患者安全妊娠条件<br>没有 <span class="blur-text">中枢神经系统</span> 、<span class="blur-text">肾</span> 或 <span class="blur-text">心脏</span> 损害；<br>停用免疫抑制剂 <span class="blur-text">3月以上</span> ；<br>仅小剂量泼尼松维持，病情缓解 <span class="blur-text">半年以上</span> ；<br>密切监测</td>
+                            <td>49. SLE患者安全妊娠条件<br>没有 <span class="answer-text">中枢神经系统</span> 、<span class="answer-text">肾</span> 或 <span class="answer-text">心脏</span> 损害；<br>停用免疫抑制剂 <span class="answer-text">3月以上</span> ；<br>仅小剂量泼尼松维持，病情缓解 <span class="answer-text">半年以上</span> ；<br>密切监测</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>50. 狼疮性肾炎病理分型-预后<br>Ⅰ型：<span class="blur-text">轻微病变型</span> （光镜下基本正常）；<br>Ⅱ型：<span class="blur-text">系膜增生型</span> ；<br>Ⅰ、Ⅱ型预后 <span class="blur-text">较好</span></td>
+                            <td>50. 狼疮性肾炎病理分型-预后<br>Ⅰ型：<span class="answer-text">轻微病变型</span> （光镜下基本正常）；<br>Ⅱ型：<span class="answer-text">系膜增生型</span> ；<br>Ⅰ、Ⅱ型预后 <span class="answer-text">较好</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>51. 狼疮性肾炎病理分型-预后（续）<br>Ⅲ型：局灶性肾炎（＜ <span class="blur-text">50%</span> 肾小球受累及）；<br>Ⅳ型：弥漫增生性肾小球肾炎（≥ <span class="blur-text">50%</span> 肾小球受累及）；<br>Ⅳ和Ⅵ型预后 <span class="blur-text">差</span> ，但可以 <span class="blur-text">相互转化</span></td>
+                            <td>51. 狼疮性肾炎病理分型-预后（续）<br>Ⅲ型：局灶性肾炎（＜ <span class="answer-text">50%</span> 肾小球受累及）；<br>Ⅳ型：弥漫增生性肾小球肾炎（≥ <span class="answer-text">50%</span> 肾小球受累及）；<br>Ⅳ和Ⅵ型预后 <span class="answer-text">差</span> ，但可以 <span class="answer-text">相互转化</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>52. 狼疮性肾炎活动性指标<br>急性指标：<span class="blur-text">增殖性改变</span> 、<span class="blur-text">纤维素样坏死</span> 、<span class="blur-text">细胞性新月体</span> 、<span class="blur-text">白细胞浸润</span> ；<br>慢性指标：<span class="blur-text">肾小球硬化</span> 、<span class="blur-text">纤维性新月体</span> 、<span class="blur-text">间质纤维化</span></td>
+                            <td>52. 狼疮性肾炎活动性指标<br>急性指标：<span class="answer-text">增殖性改变</span> 、<span class="answer-text">纤维素样坏死</span> 、<span class="answer-text">细胞性新月体</span> 、<span class="answer-text">白细胞浸润</span> ；<br>慢性指标：<span class="answer-text">肾小球硬化</span> 、<span class="answer-text">纤维性新月体</span> 、<span class="answer-text">间质纤维化</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 11. 强直性脊柱炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>53. 强直性脊柱炎关节表现<br><span class="blur-text">炎性腰背痛</span> ；<br><span class="blur-text">骶髂关节炎</span> ；<br>交替性 <span class="blur-text">臀区疼痛</span> ；<br><span class="blur-text">胸壁炎症</span> ；<br><span class="blur-text">脊柱强直</span></td>
+                            <td>53. 强直性脊柱炎关节表现<br><span class="answer-text">炎性腰背痛</span> ；<br><span class="answer-text">骶髂关节炎</span> ；<br>交替性 <span class="answer-text">臀区疼痛</span> ；<br><span class="answer-text">胸壁炎症</span> ；<br><span class="answer-text">脊柱强直</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>54. 强直性脊柱炎关节外表现<br><span class="blur-text">葡萄膜炎</span> ，<span class="blur-text">虹膜炎</span> ；<br><span class="blur-text">心脏病变</span> ；<br><span class="blur-text">肺间质病变</span> ；<br>肾脏病变；<br>神经肌肉病变</td>
+                            <td>54. 强直性脊柱炎关节外表现<br><span class="answer-text">葡萄膜炎</span> ，<span class="answer-text">虹膜炎</span> ；<br><span class="answer-text">心脏病变</span> ；<br><span class="answer-text">肺间质病变</span> ；<br>肾脏病变；<br>神经肌肉病变</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>55. 强直性脊柱炎组织病理学<br><span class="blur-text">附着点炎</span> ；<br>外周关节 <span class="blur-text">滑膜炎</span> ；<br><span class="blur-text">骶髂关节炎</span> ；<br><span class="blur-text">葡萄膜炎</span> 和 <span class="blur-text">虹膜炎</span></td>
+                            <td>55. 强直性脊柱炎组织病理学<br><span class="answer-text">附着点炎</span> ；<br>外周关节 <span class="answer-text">滑膜炎</span> ；<br><span class="answer-text">骶髂关节炎</span> ；<br><span class="answer-text">葡萄膜炎</span> 和 <span class="answer-text">虹膜炎</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>56. 强直性脊柱炎药物治疗<br>非甾体抗炎药：<span class="blur-text">一线用药</span> ，足量，足疗程；<br>抗风湿药：<span class="blur-text">柳氮磺吡啶</span> ，<span class="blur-text">甲氨蝶呤</span> ，<span class="blur-text">来氟米特</span> ；<br>糖皮质激素：<span class="blur-text">不支持</span> ，不能改变病情</td>
+                            <td>56. 强直性脊柱炎药物治疗<br>非甾体抗炎药：<span class="answer-text">一线用药</span> ，足量，足疗程；<br>抗风湿药：<span class="answer-text">柳氮磺吡啶</span> ，<span class="answer-text">甲氨蝶呤</span> ，<span class="answer-text">来氟米特</span> ；<br>糖皮质激素：<span class="answer-text">不支持</span> ，不能改变病情</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 12. 类风湿关节炎</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>57. 类风湿关节炎关节表现<br>常见部位：<span class="blur-text">腕关节</span> 、<span class="blur-text">近端指间关节</span> （PIP）、<span class="blur-text">掌指关节</span> （MCP）；<br>多呈 <span class="blur-text">对称性</span> 、<span class="blur-text">持续性</span></td>
+                            <td>57. 类风湿关节炎关节表现<br>常见部位：<span class="answer-text">腕关节</span> 、<span class="answer-text">近端指间关节</span> （PIP）、<span class="answer-text">掌指关节</span> （MCP）；<br>多呈 <span class="answer-text">对称性</span> 、<span class="answer-text">持续性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>58. 类风湿关节炎晨僵<br>持续时间长短可作为观察RA <span class="blur-text">活动</span> 的指标之一</td>
+                            <td>58. 类风湿关节炎晨僵<br>持续时间长短可作为观察RA <span class="answer-text">活动</span> 的指标之一</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>59. 类风湿关节炎关节畸形<br><span class="blur-text">尺侧偏斜</span> ；<br><span class="blur-text">"天鹅颈样"</span> 畸形；<br><span class="blur-text">"纽扣花样"</span> 畸形</td>
+                            <td>59. 类风湿关节炎关节畸形<br><span class="answer-text">尺侧偏斜</span> ；<br><span class="answer-text">"天鹅颈样"</span> 畸形；<br><span class="answer-text">"纽扣花样"</span> 畸形</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>60. 类风湿关节炎治疗-DMARDs<br>甲氨蝶呤（MTX）是 <span class="blur-text">首选</span> 药物；<br>应作为联合治疗的 <span class="blur-text">基本药物</span> ；<br>剂量：<span class="blur-text">7.5-15mg</span> ，每周服 <span class="blur-text">一次</span></td>
+                            <td>60. 类风湿关节炎治疗-DMARDs<br>甲氨蝶呤（MTX）是 <span class="answer-text">首选</span> 药物；<br>应作为联合治疗的 <span class="answer-text">基本药物</span> ；<br>剂量：<span class="answer-text">7.5-15mg</span> ，每周服 <span class="answer-text">一次</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>61. 类风湿关节炎治疗-其他DMARDs<br>柳氮磺吡啶（SASP）：<span class="blur-text">750mg</span> ，一天2～3次；<br>羟氯喹（HCQ）：<span class="blur-text">200mg</span> ，一天2次；<br>来氟米特（LEF）：<span class="blur-text">20mg</span> ，每周服一次</td>
+                            <td>61. 类风湿关节炎治疗-其他DMARDs<br>柳氮磺吡啶（SASP）：<span class="answer-text">750mg</span> ，一天2～3次；<br>羟氯喹（HCQ）：<span class="answer-text">200mg</span> ，一天2次；<br>来氟米特（LEF）：<span class="answer-text">20mg</span> ，每周服一次</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>62. 糖皮质激素副作用<br>骨：<span class="blur-text">骨质疏松</span> ，<span class="blur-text">骨坏死</span> ；<br>胃肠道：<span class="blur-text">消化道溃疡</span> ，<span class="blur-text">消化道出血</span> ；<br>免疫：<span class="blur-text">感染</span> ；<br>代谢紊乱：<span class="blur-text">库欣综合征</span></td>
+                            <td>62. 糖皮质激素副作用<br>骨：<span class="answer-text">骨质疏松</span> ，<span class="answer-text">骨坏死</span> ；<br>胃肠道：<span class="answer-text">消化道溃疡</span> ，<span class="answer-text">消化道出血</span> ；<br>免疫：<span class="answer-text">感染</span> ；<br>代谢紊乱：<span class="answer-text">库欣综合征</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>63. 糖皮质激素副作用（续）<br>心血管：早发 <span class="blur-text">动脉硬化</span> ；<br>皮肤：<span class="blur-text">毛细血管扩张</span> ，<span class="blur-text">痤疮</span> ；<br>眼：<span class="blur-text">青光眼</span> ，<span class="blur-text">白内障</span> ；<br>精神：兴奋性提高</td>
+                            <td>63. 糖皮质激素副作用（续）<br>心血管：早发 <span class="answer-text">动脉硬化</span> ；<br>皮肤：<span class="answer-text">毛细血管扩张</span> ，<span class="answer-text">痤疮</span> ；<br>眼：<span class="answer-text">青光眼</span> ，<span class="answer-text">白内障</span> ；<br>精神：兴奋性提高</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>64. 类风湿关节炎X线表现<br>Ⅰ期：关节周围软组织肿胀，关节 <span class="blur-text">骨质疏松</span> ；<br>Ⅱ期：<span class="blur-text">关节间隙狭窄</span> ；<br>Ⅲ期：关节 <span class="blur-text">虫凿样改变</span> ；<br>Ⅳ期：关节 <span class="blur-text">半脱位</span> 、<span class="blur-text">纤维性和骨性强直</span></td>
+                            <td>64. 类风湿关节炎X线表现<br>Ⅰ期：关节周围软组织肿胀，关节 <span class="answer-text">骨质疏松</span> ；<br>Ⅱ期：<span class="answer-text">关节间隙狭窄</span> ；<br>Ⅲ期：关节 <span class="answer-text">虫凿样改变</span> ；<br>Ⅳ期：关节 <span class="answer-text">半脱位</span> 、<span class="answer-text">纤维性和骨性强直</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 13. 止血与凝血</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>65. 生理性止血过程<br><span class="blur-text">血管收缩</span> ；<br><span class="blur-text">血小板血栓</span> 形成；<br><span class="blur-text">血液凝固</span></td>
+                            <td>65. 生理性止血过程<br><span class="answer-text">血管收缩</span> ；<br><span class="answer-text">血小板血栓</span> 形成；<br><span class="answer-text">血液凝固</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>66. 血管收缩因素<br><span class="blur-text">损伤性刺激</span> ；<br>血管壁损伤引起血管 <span class="blur-text">肌源性收缩</span> ；<br>血小板释放 <span class="blur-text">5-羟色胺</span> 、<span class="blur-text">TXA2</span> 等缩血管物质</td>
+                            <td>66. 血管收缩因素<br><span class="answer-text">损伤性刺激</span> ；<br>血管壁损伤引起血管 <span class="answer-text">肌源性收缩</span> ；<br>血小板释放 <span class="answer-text">5-羟色胺</span> 、<span class="answer-text">TXA2</span> 等缩血管物质</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>67. 血小板止血栓形成<br>血小板 <span class="blur-text">黏附</span> 于内皮下胶原；<br>释放 <span class="blur-text">内源性ADP</span> 及 <span class="blur-text">TXA2</span> ；<br>促使血小板发生 <span class="blur-text">不可逆聚集</span> ；<br>形成血小板止血栓，达到 <span class="blur-text">初步止血</span></td>
+                            <td>67. 血小板止血栓形成<br>血小板 <span class="answer-text">黏附</span> 于内皮下胶原；<br>释放 <span class="answer-text">内源性ADP</span> 及 <span class="answer-text">TXA2</span> ；<br>促使血小板发生 <span class="answer-text">不可逆聚集</span> ；<br>形成血小板止血栓，达到 <span class="answer-text">初步止血</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>68. 凝血基本过程<br><span class="blur-text">凝血酶原酶复合物</span> 的形成；<br><span class="blur-text">凝血酶原</span> 的激活；<br><span class="blur-text">纤维蛋白</span> 的生成</td>
+                            <td>68. 凝血基本过程<br><span class="answer-text">凝血酶原酶复合物</span> 的形成；<br><span class="answer-text">凝血酶原</span> 的激活；<br><span class="answer-text">纤维蛋白</span> 的生成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>69. 凝血途径区别<br>内源性凝血途径：参与凝血因子全部来自 <span class="blur-text">血液</span> ；<br>外源性凝血途径：凝血因子Ⅲ来自于 <span class="blur-text">组织</span> ；<br>两者都能激活凝血因子 <span class="blur-text">X</span></td>
+                            <td>69. 凝血途径区别<br>内源性凝血途径：参与凝血因子全部来自 <span class="answer-text">血液</span> ；<br>外源性凝血途径：凝血因子Ⅲ来自于 <span class="answer-text">组织</span> ；<br>两者都能激活凝血因子 <span class="answer-text">X</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>70. 蛋白质C抗凝机制<br>可灭活 <span class="blur-text">FVa</span> 和 <span class="blur-text">FⅧa</span> ；<br>阻碍FXa与血小板上的 <span class="blur-text">磷脂膜</span> 结合；<br>刺激 <span class="blur-text">纤溶酶原激活物</span> 的释放，增强纤溶活性</td>
+                            <td>70. 蛋白质C抗凝机制<br>可灭活 <span class="answer-text">FVa</span> 和 <span class="answer-text">FⅧa</span> ；<br>阻碍FXa与血小板上的 <span class="answer-text">磷脂膜</span> 结合；<br>刺激 <span class="answer-text">纤溶酶原激活物</span> 的释放，增强纤溶活性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>71. 肝素抗凝机制<br>与 <span class="blur-text">抗凝血酶Ⅲ</span> 结合，增强抗凝活性；<br>刺激血管内皮细胞释放 <span class="blur-text">TFPI</span> 和其他抗凝物质；<br>增强 <span class="blur-text">蛋白质C</span> 的活性</td>
+                            <td>71. 肝素抗凝机制<br>与 <span class="answer-text">抗凝血酶Ⅲ</span> 结合，增强抗凝活性；<br>刺激血管内皮细胞释放 <span class="answer-text">TFPI</span> 和其他抗凝物质；<br>增强 <span class="answer-text">蛋白质C</span> 的活性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>72. 血小板生理特性<br><span class="blur-text">黏附</span> ：血小板与非血小板表面的黏着；<br><span class="blur-text">释放</span> ：将储存物质排出；<br><span class="blur-text">聚集</span> ：血小板与血小板之间相互黏着；<br><span class="blur-text">收缩</span> 和 <span class="blur-text">吸附</span></td>
+                            <td>72. 血小板生理特性<br><span class="answer-text">黏附</span> ：血小板与非血小板表面的黏着；<br><span class="answer-text">释放</span> ：将储存物质排出；<br><span class="answer-text">聚集</span> ：血小板与血小板之间相互黏着；<br><span class="answer-text">收缩</span> 和 <span class="answer-text">吸附</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>73. 血小板在生理性止血中的作用<br>参与 <span class="blur-text">止血</span> ；<br>促进 <span class="blur-text">凝血</span> ；<br>维持 <span class="blur-text">毛细血管壁</span> 的完整性</td>
+                            <td>73. 血小板在生理性止血中的作用<br>参与 <span class="answer-text">止血</span> ；<br>促进 <span class="answer-text">凝血</span> ；<br>维持 <span class="answer-text">毛细血管壁</span> 的完整性</td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 14. 免疫系统</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>74. 免疫系统组成<br>淋巴器官（中枢：<span class="blur-text">胸腺</span> 、<span class="blur-text">骨髓</span> ；外周：<span class="blur-text">淋巴结</span> 、<span class="blur-text">脾</span> ）；<br>淋巴组织；<br>免疫细胞</td>
+                            <td>74. 免疫系统组成<br>淋巴器官（中枢：<span class="answer-text">胸腺</span> 、<span class="answer-text">骨髓</span> ；外周：<span class="answer-text">淋巴结</span> 、<span class="answer-text">脾</span> ）；<br>淋巴组织；<br>免疫细胞</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>75. 免疫系统功能<br><span class="blur-text">免疫防御</span> ；<br><span class="blur-text">免疫监护</span> ；<br><span class="blur-text">免疫稳定</span></td>
+                            <td>75. 免疫系统功能<br><span class="answer-text">免疫防御</span> ；<br><span class="answer-text">免疫监护</span> ；<br><span class="answer-text">免疫稳定</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>76. 胸腺皮质上皮细胞<br>又称 <span class="blur-text">上皮性网状细胞</span> ；<br>相邻细胞的突起间以 <span class="blur-text">桥粒</span> 连接成网；<br>能分泌 <span class="blur-text">胸腺素</span> 和 <span class="blur-text">胸腺生成素</span></td>
+                            <td>76. 胸腺皮质上皮细胞<br>又称 <span class="answer-text">上皮性网状细胞</span> ；<br>相邻细胞的突起间以 <span class="answer-text">桥粒</span> 连接成网；<br>能分泌 <span class="answer-text">胸腺素</span> 和 <span class="answer-text">胸腺生成素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>77. 胸腺细胞发育<br>约 <span class="blur-text">95%</span> 的胸腺细胞将被淘汰而凋亡；<br>仅 <span class="blur-text">5%</span> 能分化成为初始T细胞；<br>具有正常的 <span class="blur-text">免疫应答潜能</span></td>
+                            <td>77. 胸腺细胞发育<br>约 <span class="answer-text">95%</span> 的胸腺细胞将被淘汰而凋亡；<br>仅 <span class="answer-text">5%</span> 能分化成为初始T细胞；<br>具有正常的 <span class="answer-text">免疫应答潜能</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>78. 淋巴结浅层皮质<br>由 <span class="blur-text">淋巴小结</span> 及小结间弥散淋巴组织构成；<br>主要分布着 <span class="blur-text">B细胞</span> ；<br>未经抗原刺激时为 <span class="blur-text">初级淋巴小结</span></td>
+                            <td>78. 淋巴结浅层皮质<br>由 <span class="answer-text">淋巴小结</span> 及小结间弥散淋巴组织构成；<br>主要分布着 <span class="answer-text">B细胞</span> ；<br>未经抗原刺激时为 <span class="answer-text">初级淋巴小结</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>79. 淋巴结副皮质区<br>主要由 <span class="blur-text">T细胞</span> 聚集而成；<br>是淋巴结的 <span class="blur-text">胸腺依赖区</span> ；<br>有高内皮的 <span class="blur-text">毛细血管后微静脉</span> ，是血液中淋巴细胞进入的重要通道</td>
+                            <td>79. 淋巴结副皮质区<br>主要由 <span class="answer-text">T细胞</span> 聚集而成；<br>是淋巴结的 <span class="answer-text">胸腺依赖区</span> ；<br>有高内皮的 <span class="answer-text">毛细血管后微静脉</span> ，是血液中淋巴细胞进入的重要通道</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>80. 脾白髓组成<br><span class="blur-text">动脉周围淋巴鞘</span> ；<br><span class="blur-text">淋巴小结</span> ；<br><span class="blur-text">边缘区</span></td>
+                            <td>80. 脾白髓组成<br><span class="answer-text">动脉周围淋巴鞘</span> ；<br><span class="answer-text">淋巴小结</span> ；<br><span class="answer-text">边缘区</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>81. 脾白髓细胞分布<br>动脉周围淋巴鞘：大量 <span class="blur-text">T细胞</span> ；<br>淋巴小结：主要由 <span class="blur-text">B细胞</span> 构成；<br>边缘区：含有T细胞、B细胞及较多的 <span class="blur-text">巨噬细胞</span></td>
+                            <td>81. 脾白髓细胞分布<br>动脉周围淋巴鞘：大量 <span class="answer-text">T细胞</span> ；<br>淋巴小结：主要由 <span class="answer-text">B细胞</span> 构成；<br>边缘区：含有T细胞、B细胞及较多的 <span class="answer-text">巨噬细胞</span></td>
+                        </tr>
+                    
+                        <tr class="title-row">
+                            <td colspan="3"> 15. 药理学</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>82. 肝素药理作用<br>抗凝血作用：与 <span class="blur-text">抗凝血酶Ⅲ</span> 结合；<br>激活 <span class="blur-text">纤溶系统</span> ；<br>抑制 <span class="blur-text">血小板凝集</span> ；<br>产生 <span class="blur-text">抗炎</span> 作用</td>
+                            <td>82. 肝素药理作用<br>抗凝血作用：与 <span class="answer-text">抗凝血酶Ⅲ</span> 结合；<br>激活 <span class="answer-text">纤溶系统</span> ；<br>抑制 <span class="answer-text">血小板凝集</span> ；<br>产生 <span class="answer-text">抗炎</span> 作用</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>83. 肝素临床应用<br><span class="blur-text">血栓栓塞性疾病</span> ；<br><span class="blur-text">弥散性血管内凝血</span> （DIC）；<br>体外抗凝，<span class="blur-text">血液透析</span> 抗凝等</td>
+                            <td>83. 肝素临床应用<br><span class="answer-text">血栓栓塞性疾病</span> ；<br><span class="answer-text">弥散性血管内凝血</span> （DIC）；<br>体外抗凝，<span class="answer-text">血液透析</span> 抗凝等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>84. 香豆素药理作用<br>维生素K <span class="blur-text">类似物</span> ；<br>竞争性抑制 <span class="blur-text">维生素K环氧化物还原酶</span></td>
+                            <td>84. 香豆素药理作用<br>维生素K <span class="answer-text">类似物</span> ；<br>竞争性抑制 <span class="answer-text">维生素K环氧化物还原酶</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>85. 阿司匹林作用机制<br>抑制 <span class="blur-text">COX-1</span> ；<br>减少 <span class="blur-text">TXA2</span> 的生成</td>
+                            <td>85. 阿司匹林作用机制<br>抑制 <span class="answer-text">COX-1</span> ；<br>减少 <span class="answer-text">TXA2</span> 的生成</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>86. 阿司匹林临床应用<br>治疗：<span class="blur-text">冠状动脉硬化心脏病</span> ，<span class="blur-text">脑缺血</span> ；<br>预防：冠心病和脑栓塞引起梗死、心瓣膜和冠脉手术后 <span class="blur-text">血栓形成</span></td>
+                            <td>86. 阿司匹林临床应用<br>治疗：<span class="answer-text">冠状动脉硬化心脏病</span> ，<span class="answer-text">脑缺血</span> ；<br>预防：冠心病和脑栓塞引起梗死、心瓣膜和冠脉手术后 <span class="answer-text">血栓形成</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>87. 双嘧达莫作用机制<br>抑制 <span class="blur-text">PDE</span> ，升高细胞内 <span class="blur-text">cAMP</span> 水平；<br>促进肌浆网摄钙，降低细胞内 <span class="blur-text">钙浓度</span> ；<br>主要作用于 <span class="blur-text">血小板</span> 、<span class="blur-text">血管平滑肌</span></td>
+                            <td>87. 双嘧达莫作用机制<br>抑制 <span class="answer-text">PDE</span> ，升高细胞内 <span class="answer-text">cAMP</span> 水平；<br>促进肌浆网摄钙，降低细胞内 <span class="answer-text">钙浓度</span> ；<br>主要作用于 <span class="answer-text">血小板</span> 、<span class="answer-text">血管平滑肌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>88. 维生素K临床应用<br><span class="blur-text">维生素K缺乏症</span> ；<br><span class="blur-text">抗凝药过量</span> 的解毒</td>
+                            <td>88. 维生素K临床应用<br><span class="answer-text">维生素K缺乏症</span> ；<br><span class="answer-text">抗凝药过量</span> 的解毒</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>89. 右旋糖酐药理作用<br>扩充 <span class="blur-text">血容量</span> ，提高 <span class="blur-text">血浆胶体渗透压</span> ；<br>阻止 <span class="blur-text">红细胞</span> 及 <span class="blur-text">血小板</span> 聚集；<br>降低 <span class="blur-text">血液粘滞性</span></td>
+                            <td>89. 右旋糖酐药理作用<br>扩充 <span class="answer-text">血容量</span> ，提高 <span class="answer-text">血浆胶体渗透压</span> ；<br>阻止 <span class="answer-text">红细胞</span> 及 <span class="answer-text">血小板</span> 聚集；<br>降低 <span class="answer-text">血液粘滞性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>90. 环孢素A作用靶点<br>与靶细胞浆的受体相结合形成 <span class="blur-text">复合物</span> ；<br>与 <span class="blur-text">钙调磷酸酶</span> 结合</td>
+                            <td>90. 环孢素A作用靶点<br>与靶细胞浆的受体相结合形成 <span class="answer-text">复合物</span> ；<br>与 <span class="answer-text">钙调磷酸酶</span> 结合</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

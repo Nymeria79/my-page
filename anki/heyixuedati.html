@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">📚 学习对照表</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>核医学物理基础</strong><br>光子与物质相互作用<br>①<span class="blur-text">低能量</span>—光电效应:光子被<span class="blur-text">内层电子</span>吸收，发射出<span class="blur-text">特征x射线</span>或俄歇电子<br>②<span class="blur-text">中等能量</span>—康普顿效应:光子跟物质相互作用，因失去能量而导致<span class="blur-text">波长变长</span><br>③<span class="blur-text">高能量</span>—电子对生成:光子能量大于<span class="blur-text">1.022Mev</span>时，转化为一对<span class="blur-text">正负电子对</span></td>
+                            <td>1.. <strong>核医学物理基础</strong><br>光子与物质相互作用<br>①<span class="answer-text">低能量</span>—光电效应:光子被<span class="answer-text">内层电子</span>吸收，发射出<span class="answer-text">特征x射线</span>或俄歇电子<br>②<span class="answer-text">中等能量</span>—康普顿效应:光子跟物质相互作用，因失去能量而导致<span class="answer-text">波长变长</span><br>③<span class="answer-text">高能量</span>—电子对生成:光子能量大于<span class="answer-text">1.022Mev</span>时，转化为一对<span class="answer-text">正负电子对</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>核医学物理基础</strong><br>三种核射线的性质<br>内容：<span class="blur-text">图略</span></td>
+                            <td>2.. <strong>核医学物理基础</strong><br>三种核射线的性质<br>内容：<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. A <strong>核医学仪器与防护</strong><br>射线探测器基本构成<br>（1）<span class="blur-text">准直器</span>:屏蔽散乱射线，准直有用的射线<br>①形状分类:<span class="blur-text">针孔型</span>，<span class="blur-text">平行孔型</span>，<span class="blur-text">扩散型</span>，<span class="blur-text">会聚型</span><br>②能量分类:150kev以下低能（如<span class="blur-text">99mTc</span>），150-350kev中能（如<span class="blur-text">67Ga</span>），350kev以上高能（如<span class="blur-text">131I</span>）</td>
+                            <td>3.. A <strong>核医学仪器与防护</strong><br>射线探测器基本构成<br>（1）<span class="answer-text">准直器</span>:屏蔽散乱射线，准直有用的射线<br>①形状分类:<span class="answer-text">针孔型</span>，<span class="answer-text">平行孔型</span>，<span class="answer-text">扩散型</span>，<span class="answer-text">会聚型</span><br>②能量分类:150kev以下低能（如<span class="answer-text">99mTc</span>），150-350kev中能（如<span class="answer-text">67Ga</span>），350kev以上高能（如<span class="answer-text">131I</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>3.. B <strong>核医学仪器与防护</strong><br>射线探测器基本构成（续）<br>（2）<span class="blur-text">晶体</span>:波长转换器，将射线转换成<span class="blur-text">可见光子</span><br>（3）<span class="blur-text">光电倍增管</span>:光电转换器，将可见微弱荧光光子转换成<span class="blur-text">电信号</span>并倍增放大<br>（4）<span class="blur-text">前置放大器</span>:调节探头的<span class="blur-text">均匀性</span></td>
+                            <td>3.. B <strong>核医学仪器与防护</strong><br>射线探测器基本构成（续）<br>（2）<span class="answer-text">晶体</span>:波长转换器，将射线转换成<span class="answer-text">可见光子</span><br>（3）<span class="answer-text">光电倍增管</span>:光电转换器，将可见微弱荧光光子转换成<span class="answer-text">电信号</span>并倍增放大<br>（4）<span class="answer-text">前置放大器</span>:调节探头的<span class="answer-text">均匀性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>4.. <strong>核医学仪器与防护</strong><br>个人剂量限制数值<br>（1）职业放射性工作人员:全身照射年最高允许值<span class="blur-text">20mSv</span>（最特殊情况下<span class="blur-text">50mSv</span>）<br>（2）公众:最特殊情况下全身照射年最高允许值<span class="blur-text">5mSv</span></td>
+                            <td>4.. <strong>核医学仪器与防护</strong><br>个人剂量限制数值<br>（1）职业放射性工作人员:全身照射年最高允许值<span class="answer-text">20mSv</span>（最特殊情况下<span class="answer-text">50mSv</span>）<br>（2）公众:最特殊情况下全身照射年最高允许值<span class="answer-text">5mSv</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>5.. <strong>核医学仪器与防护</strong><br>外照射防护原则<br>①<span class="blur-text">时间防护</span>:缩短与放射源的接触时间<br>②<span class="blur-text">距离防护</span>:增大与放射源的距离<br>③<span class="blur-text">屏蔽防护</span>:在人与放射源间设置屏蔽<br>④<span class="blur-text">用量防护</span>:在满足工作需要的情况下减少放射性药物的用量</td>
+                            <td>5.. <strong>核医学仪器与防护</strong><br>外照射防护原则<br>①<span class="answer-text">时间防护</span>:缩短与放射源的接触时间<br>②<span class="answer-text">距离防护</span>:增大与放射源的距离<br>③<span class="answer-text">屏蔽防护</span>:在人与放射源间设置屏蔽<br>④<span class="answer-text">用量防护</span>:在满足工作需要的情况下减少放射性药物的用量</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>6.. A <strong>核医学显像原理与显像剂</strong><br>SPECT显像原理<br>（1）<span class="blur-text">细胞选择性摄取</span>:肾图—<span class="blur-text">131I-OIH</span>（邻碘马尿酸），肾动态显像—<span class="blur-text">99mTc-DTPA</span><br>（2）<span class="blur-text">特异性结合</span>:嗜铬细胞瘤—<span class="blur-text">131I-MIBG</span><br>（3）<span class="blur-text">化学吸附作用</span>:骨显像—<span class="blur-text">99mTc-MDP</span></td>
+                            <td>6.. A <strong>核医学显像原理与显像剂</strong><br>SPECT显像原理<br>（1）<span class="answer-text">细胞选择性摄取</span>:肾图—<span class="answer-text">131I-OIH</span>（邻碘马尿酸），肾动态显像—<span class="answer-text">99mTc-DTPA</span><br>（2）<span class="answer-text">特异性结合</span>:嗜铬细胞瘤—<span class="answer-text">131I-MIBG</span><br>（3）<span class="answer-text">化学吸附作用</span>:骨显像—<span class="answer-text">99mTc-MDP</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>6.. B <strong>核医学显像原理与显像剂</strong><br>SPECT显像原理（续）<br>（4）<span class="blur-text">微血管栓塞</span>:肺灌注显像—<span class="blur-text">99mTc-MAA</span>，肺通气显像—<span class="blur-text">99mTc-DTPA</span>，心肌灌注显像—<span class="blur-text">99mTc-MIBG</span><br>（5）<span class="blur-text">通道、灌注和生物分布</span></td>
+                            <td>6.. B <strong>核医学显像原理与显像剂</strong><br>SPECT显像原理（续）<br>（4）<span class="answer-text">微血管栓塞</span>:肺灌注显像—<span class="answer-text">99mTc-MAA</span>，肺通气显像—<span class="answer-text">99mTc-DTPA</span>，心肌灌注显像—<span class="answer-text">99mTc-MIBG</span><br>（5）<span class="answer-text">通道、灌注和生物分布</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>7.. <strong>核医学显像原理与显像剂</strong><br>神经系统显像<br>显像剂:<span class="blur-text">99mTc-ECD</span>（双半胱乙酯）</td>
+                            <td>7.. <strong>核医学显像原理与显像剂</strong><br>神经系统显像<br>显像剂:<span class="answer-text">99mTc-ECD</span>（双半胱乙酯）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>8.. <strong>核医学显像原理与显像剂</strong><br>淋巴系统显像<br>①显像剂:<span class="blur-text">99mTc-SC</span>（硫胶体）<br>②原理:注射标记放射性核素的大分子或胶体物质，经<span class="blur-text">毛细淋巴管</span>吸收后，随淋巴液回流到各级淋巴结区，最后进入<span class="blur-text">体循环</span></td>
+                            <td>8.. <strong>核医学显像原理与显像剂</strong><br>淋巴系统显像<br>①显像剂:<span class="answer-text">99mTc-SC</span>（硫胶体）<br>②原理:注射标记放射性核素的大分子或胶体物质，经<span class="answer-text">毛细淋巴管</span>吸收后，随淋巴液回流到各级淋巴结区，最后进入<span class="answer-text">体循环</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>9.. <strong>核医学显像原理与显像剂</strong><br>放射性核素主要来源<br>①<span class="blur-text">加速器生产</span>②<span class="blur-text">核反应堆生产</span>③<span class="blur-text">裂变产物提取</span>④<span class="blur-text">放射性核素发生器</span></td>
+                            <td>9.. <strong>核医学显像原理与显像剂</strong><br>放射性核素主要来源<br>①<span class="answer-text">加速器生产</span>②<span class="answer-text">核反应堆生产</span>③<span class="answer-text">裂变产物提取</span>④<span class="answer-text">放射性核素发生器</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>10.. <strong>核医学显像原理与显像剂</strong><br>放射性药物标记方法<br>①<span class="blur-text">化学合成法</span>②<span class="blur-text">同位素交换法</span>③<span class="blur-text">非同位素交换法</span>④<span class="blur-text">双功能螯合剂法</span>⑤<span class="blur-text">生物合成法</span></td>
+                            <td>10.. <strong>核医学显像原理与显像剂</strong><br>放射性药物标记方法<br>①<span class="answer-text">化学合成法</span>②<span class="answer-text">同位素交换法</span>③<span class="answer-text">非同位素交换法</span>④<span class="answer-text">双功能螯合剂法</span>⑤<span class="answer-text">生物合成法</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>11.. <strong>核医学显像原理与显像剂</strong><br>18F-FDG注射液<br>是目前应用最广的<span class="blur-text">正电子类</span>放射性药物，由<span class="blur-text">加速器</span>生产的核素，广泛应用于<span class="blur-text">PET/CT</span>检查</td>
+                            <td>11.. <strong>核医学显像原理与显像剂</strong><br>18F-FDG注射液<br>是目前应用最广的<span class="answer-text">正电子类</span>放射性药物，由<span class="answer-text">加速器</span>生产的核素，广泛应用于<span class="answer-text">PET/CT</span>检查</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>12.. A <strong>体外分析技术</strong><br>基本试剂及要求<br>（1）<span class="blur-text">抗体</span>:高亲和力，高特异性，高滴度<br>（2）<span class="blur-text">标记抗原</span>:比活度和放化纯度高，半衰期较长，最常用<span class="blur-text">125I</span><br>（3）<span class="blur-text">未标记抗原（标准品）</span>:高纯度，配置浓度精确，较好的溯源性</td>
+                            <td>12.. A <strong>体外分析技术</strong><br>基本试剂及要求<br>（1）<span class="answer-text">抗体</span>:高亲和力，高特异性，高滴度<br>（2）<span class="answer-text">标记抗原</span>:比活度和放化纯度高，半衰期较长，最常用<span class="answer-text">125I</span><br>（3）<span class="answer-text">未标记抗原（标准品）</span>:高纯度，配置浓度精确，较好的溯源性</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>12.. B <strong>体外分析技术</strong><br>基本试剂及要求（续）<br>（4）<span class="blur-text">B、F分离</span><br>（5）质量控制:<span class="blur-text">精密度</span>、<span class="blur-text">灵敏度</span>、<span class="blur-text">准确度</span>、<span class="blur-text">特异性</span>、<span class="blur-text">可靠性</span>、<span class="blur-text">稳定性</span></td>
+                            <td>12.. B <strong>体外分析技术</strong><br>基本试剂及要求（续）<br>（4）<span class="answer-text">B、F分离</span><br>（5）质量控制:<span class="answer-text">精密度</span>、<span class="answer-text">灵敏度</span>、<span class="answer-text">准确度</span>、<span class="answer-text">特异性</span>、<span class="answer-text">可靠性</span>、<span class="answer-text">稳定性</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>13.. <strong>体外分析技术</strong><br>放射免疫分析RIA的优点<br>①<span class="blur-text">灵敏度高</span>②<span class="blur-text">特异性高</span>③<span class="blur-text">精密度高</span>，可定量分析④<span class="blur-text">操作简便</span></td>
+                            <td>13.. <strong>体外分析技术</strong><br>放射免疫分析RIA的优点<br>①<span class="answer-text">灵敏度高</span>②<span class="answer-text">特异性高</span>③<span class="answer-text">精密度高</span>，可定量分析④<span class="answer-text">操作简便</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>14.. <strong>体外分析技术</strong><br>RIA与IRMA的比较<br>内容：<span class="blur-text">图略</span></td>
+                            <td>14.. <strong>体外分析技术</strong><br>RIA与IRMA的比较<br>内容：<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>15.. <strong>体外分析技术</strong><br>时间分辨荧光免疫分析（TRFIA）<br>（1）用具有<span class="blur-text">长寿命荧光物质</span>做荧光标记物<br>（2）常用荧光标记物:<span class="blur-text">镧系元素</span>铕Eu，铽Tb，Sm，Dy，Te<br>（3）特点:最大限度提高<span class="blur-text">灵敏度</span>，无<span class="blur-text">辐射污染</span>，可同时检测<span class="blur-text">两种以上</span>待测物</td>
+                            <td>15.. <strong>体外分析技术</strong><br>时间分辨荧光免疫分析（TRFIA）<br>（1）用具有<span class="answer-text">长寿命荧光物质</span>做荧光标记物<br>（2）常用荧光标记物:<span class="answer-text">镧系元素</span>铕Eu，铽Tb，Sm，Dy，Te<br>（3）特点:最大限度提高<span class="answer-text">灵敏度</span>，无<span class="answer-text">辐射污染</span>，可同时检测<span class="answer-text">两种以上</span>待测物</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>16.. <strong>肺通气与灌注显像</strong><br>原理<br>（1）<span class="blur-text">肺灌注显像</span>:将略大于肺毛细管直径的放射性微粒注入静脉，一过性嵌顿在肺的<span class="blur-text">毛细血管</span>或<span class="blur-text">肺小动脉</span>内，分布与<span class="blur-text">灌注血流量</span>成正比<br>（2）<span class="blur-text">肺通气显像</span>:吸入放射性显像剂后沉积在<span class="blur-text">喉、气管、支气管、细支气管和肺泡壁</span>，有效期<span class="blur-text">1-8小时</span></td>
+                            <td>16.. <strong>肺通气与灌注显像</strong><br>原理<br>（1）<span class="answer-text">肺灌注显像</span>:将略大于肺毛细管直径的放射性微粒注入静脉，一过性嵌顿在肺的<span class="answer-text">毛细血管</span>或<span class="answer-text">肺小动脉</span>内，分布与<span class="answer-text">灌注血流量</span>成正比<br>（2）<span class="answer-text">肺通气显像</span>:吸入放射性显像剂后沉积在<span class="answer-text">喉、气管、支气管、细支气管和肺泡壁</span>，有效期<span class="answer-text">1-8小时</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>17.. <strong>肺通气与灌注显像</strong><br>异常肺灌注影像<br>（1）<span class="blur-text">局限性</span>放射性稀疏缺损:见于先天性肺动脉异常，肿瘤压迫，<span class="blur-text">肺栓塞</span><br>（2）<span class="blur-text">弥散性</span>放射性稀疏缺损:多见于<span class="blur-text">COPD</span><br>（3）<span class="blur-text">放射性分布逆转</span>:肺部放射性分布高于肺底，多见于肺源性心脏病，<span class="blur-text">肺动脉高压</span></td>
+                            <td>17.. <strong>肺通气与灌注显像</strong><br>异常肺灌注影像<br>（1）<span class="answer-text">局限性</span>放射性稀疏缺损:见于先天性肺动脉异常，肿瘤压迫，<span class="answer-text">肺栓塞</span><br>（2）<span class="answer-text">弥散性</span>放射性稀疏缺损:多见于<span class="answer-text">COPD</span><br>（3）<span class="answer-text">放射性分布逆转</span>:肺部放射性分布高于肺底，多见于肺源性心脏病，<span class="answer-text">肺动脉高压</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>18.. <strong>肺通气与灌注显像</strong><br>异常肺通气影像<br>（1）<span class="blur-text">局限性</span>放射性分布稀疏缺损:常发生气道狭窄，气道梗阻，肺泡渗出或肺泡塌陷<br>（2）<span class="blur-text">弥散性</span>放射性稀疏或缺损:多见于<span class="blur-text">COPD</span></td>
+                            <td>18.. <strong>肺通气与灌注显像</strong><br>异常肺通气影像<br>（1）<span class="answer-text">局限性</span>放射性分布稀疏缺损:常发生气道狭窄，气道梗阻，肺泡渗出或肺泡塌陷<br>（2）<span class="answer-text">弥散性</span>放射性稀疏或缺损:多见于<span class="answer-text">COPD</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>19.. <strong>肺通气与灌注显像</strong><br>临床应用<br>（1）<span class="blur-text">肺栓塞</span>的诊断:肺灌注显像稀疏或缺损，通气显像正常，<span class="blur-text">V/Q不匹配</span><br>（2）肺减容手术后功能评价与预测<br>（3）<span class="blur-text">COPD</span>评价:<span class="blur-text">花斑样</span>放射线缺损</td>
+                            <td>19.. <strong>肺通气与灌注显像</strong><br>临床应用<br>（1）<span class="answer-text">肺栓塞</span>的诊断:肺灌注显像稀疏或缺损，通气显像正常，<span class="answer-text">V/Q不匹配</span><br>（2）肺减容手术后功能评价与预测<br>（3）<span class="answer-text">COPD</span>评价:<span class="answer-text">花斑样</span>放射线缺损</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>20.. <strong>淋巴显像</strong><br>显像原理<br>①毛细淋巴管<span class="blur-text">单层内皮细胞</span>，基底膜<span class="blur-text">不完整</span><br>②大分子经过<span class="blur-text">淋巴系统的引流</span>和内皮细胞吞噬进入淋巴系统<br>③在皮下或组织间隙内注射标记放射性核素的大分子或胶体物质，经<span class="blur-text">毛细淋巴管</span>吸收后随淋巴液回流<br>④部分被<span class="blur-text">淋巴窦内单核巨噬细胞</span>吞噬滞留，部分被<span class="blur-text">肝脾内的单核巨噬细胞</span>吞噬清除</td>
+                            <td>20.. <strong>淋巴显像</strong><br>显像原理<br>①毛细淋巴管<span class="answer-text">单层内皮细胞</span>，基底膜<span class="answer-text">不完整</span><br>②大分子经过<span class="answer-text">淋巴系统的引流</span>和内皮细胞吞噬进入淋巴系统<br>③在皮下或组织间隙内注射标记放射性核素的大分子或胶体物质，经<span class="answer-text">毛细淋巴管</span>吸收后随淋巴液回流<br>④部分被<span class="answer-text">淋巴窦内单核巨噬细胞</span>吞噬滞留，部分被<span class="answer-text">肝脾内的单核巨噬细胞</span>吞噬清除</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>21.. <strong>淋巴显像</strong><br>显像剂:99mTc-硫胶体<br>①不能透过毛细血管，基底膜直径小于<span class="blur-text">100纳米</span><br>②颗粒分散度<span class="blur-text">小</span>，稳定性<span class="blur-text">高</span><br>③局部注射后淋巴清除速度<span class="blur-text">快</span>，淋巴结摄取率<span class="blur-text">高</span><br>④在淋巴系统中滞留时间相对<span class="blur-text">较长</span></td>
+                            <td>21.. <strong>淋巴显像</strong><br>显像剂:99mTc-硫胶体<br>①不能透过毛细血管，基底膜直径小于<span class="answer-text">100纳米</span><br>②颗粒分散度<span class="answer-text">小</span>，稳定性<span class="answer-text">高</span><br>③局部注射后淋巴清除速度<span class="answer-text">快</span>，淋巴结摄取率<span class="answer-text">高</span><br>④在淋巴系统中滞留时间相对<span class="answer-text">较长</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>22.. A <strong>淋巴显像</strong><br>临床应用<br>（1）<span class="blur-text">前哨淋巴结</span>的探查:从原发肿瘤迁移而来的肿瘤细胞先侵袭<span class="blur-text">一个或几个</span>淋巴结，然后再波及其他淋巴结<br>适用:<span class="blur-text">乳腺癌</span>，黑色素瘤，外阴癌，宫颈癌，胃肠肿瘤，肺癌<br>（2）<span class="blur-text">淋巴水肿</span>的诊断<br>（3）<span class="blur-text">乳糜外溢</span>的定位:乳糜胸，乳糜腹，乳糜心包，乳糜尿</td>
+                            <td>22.. A <strong>淋巴显像</strong><br>临床应用<br>（1）<span class="answer-text">前哨淋巴结</span>的探查:从原发肿瘤迁移而来的肿瘤细胞先侵袭<span class="answer-text">一个或几个</span>淋巴结，然后再波及其他淋巴结<br>适用:<span class="answer-text">乳腺癌</span>，黑色素瘤，外阴癌，宫颈癌，胃肠肿瘤，肺癌<br>（2）<span class="answer-text">淋巴水肿</span>的诊断<br>（3）<span class="answer-text">乳糜外溢</span>的定位:乳糜胸，乳糜腹，乳糜心包，乳糜尿</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>22.. B <strong>淋巴显像</strong><br>临床应用（续）<br>（4）<span class="blur-text">恶性肿瘤淋巴结转移</span>的诊断<br>（5）<span class="blur-text">淋巴瘤</span>的辅助诊断<br>（6）为<span class="blur-text">放疗布野</span>提供准确位置</td>
+                            <td>22.. B <strong>淋巴显像</strong><br>临床应用（续）<br>（4）<span class="answer-text">恶性肿瘤淋巴结转移</span>的诊断<br>（5）<span class="answer-text">淋巴瘤</span>的辅助诊断<br>（6）为<span class="answer-text">放疗布野</span>提供准确位置</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>23.. <strong>淋巴显像</strong><br>注射部位选择<br>（1）黑色素瘤:<span class="blur-text">足趾间</span><br>（2）乳糜外溢:<span class="blur-text">双手指，双脚趾</span><br>（3）乳腺癌:<span class="blur-text">乳晕周围</span><br>（4）乳腺癌后右上肢肿胀:<span class="blur-text">右手指</span></td>
+                            <td>23.. <strong>淋巴显像</strong><br>注射部位选择<br>（1）黑色素瘤:<span class="answer-text">足趾间</span><br>（2）乳糜外溢:<span class="answer-text">双手指，双脚趾</span><br>（3）乳腺癌:<span class="answer-text">乳晕周围</span><br>（4）乳腺癌后右上肢肿胀:<span class="answer-text">右手指</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>24.. <strong>消化系统显像</strong><br>胃肠道出血显像<br>（1）原理:静脉注射<span class="blur-text">99mTc-RBC</span>后，当胃肠壁出现<span class="blur-text">活动性出血</span>病灶时，从血管破裂处外逸进入胃肠道，形成异常放射性浓聚影像<br>（2）显像剂:①<span class="blur-text">99mTc-RBC</span>:急性和间歇性出血②<span class="blur-text">99mTc-硫胶体</span>:急性活动性出血</td>
+                            <td>24.. <strong>消化系统显像</strong><br>胃肠道出血显像<br>（1）原理:静脉注射<span class="answer-text">99mTc-RBC</span>后，当胃肠壁出现<span class="answer-text">活动性出血</span>病灶时，从血管破裂处外逸进入胃肠道，形成异常放射性浓聚影像<br>（2）显像剂:①<span class="answer-text">99mTc-RBC</span>:急性和间歇性出血②<span class="answer-text">99mTc-硫胶体</span>:急性活动性出血</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>25.. <strong>消化系统显像</strong><br>异位胃粘膜显像<br>（1）原理:异位胃粘膜与正常胃粘膜一样能分泌<span class="blur-text">胃酸及胃蛋白酶</span>，也能从血液中摄取<span class="blur-text">99mTcO4-</span>而显影<br>（2）应用:<span class="blur-text">美克尔憩室</span>，<span class="blur-text">Barrett食管</span></td>
+                            <td>25.. <strong>消化系统显像</strong><br>异位胃粘膜显像<br>（1）原理:异位胃粘膜与正常胃粘膜一样能分泌<span class="answer-text">胃酸及胃蛋白酶</span>，也能从血液中摄取<span class="answer-text">99mTcO4-</span>而显影<br>（2）应用:<span class="answer-text">美克尔憩室</span>，<span class="answer-text">Barrett食管</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>26.. A <strong>消化系统显像</strong><br>肝血流灌注和血池显像—正常影像<br>①<span class="blur-text">动脉期</span>:"弹丸式"注入后，腹主动脉开始显影，主要由<span class="blur-text">肝A</span>供血<span class="blur-text">25%</span>，肝血管床一般无明显显影<br>②<span class="blur-text">静脉期</span>:双肾显影后约<span class="blur-text">12-18秒</span>，大量显像剂经<span class="blur-text">门V</span>到达肝脏，供血<span class="blur-text">75%</span><br>③<span class="blur-text">肝血池显像</span>:注射后<span class="blur-text">30min或2小时</span>后显像，反映血容量多少</td>
+                            <td>26.. A <strong>消化系统显像</strong><br>肝血流灌注和血池显像—正常影像<br>①<span class="answer-text">动脉期</span>:"弹丸式"注入后，腹主动脉开始显影，主要由<span class="answer-text">肝A</span>供血<span class="answer-text">25%</span>，肝血管床一般无明显显影<br>②<span class="answer-text">静脉期</span>:双肾显影后约<span class="answer-text">12-18秒</span>，大量显像剂经<span class="answer-text">门V</span>到达肝脏，供血<span class="answer-text">75%</span><br>③<span class="answer-text">肝血池显像</span>:注射后<span class="answer-text">30min或2小时</span>后显像，反映血容量多少</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>26.. B <strong>消化系统显像</strong><br>肝血流灌注和血池显像—异常影像<br>①动脉期肝动脉血供增强:<span class="blur-text">肝实质性肿瘤</span>（原发性肝癌、转移性肝癌、肝腺瘤）<br>②静脉期全肝普遍增高:<span class="blur-text">肝硬化</span>、<span class="blur-text">门静脉高压</span><br>③平衡期:<span class="blur-text">过度充填</span>（肝血管瘤），<span class="blur-text">不充填</span>（肝囊肿、肝脓肿），<span class="blur-text">充填</span>（原发性肝癌、肝转移瘤）</td>
+                            <td>26.. B <strong>消化系统显像</strong><br>肝血流灌注和血池显像—异常影像<br>①动脉期肝动脉血供增强:<span class="answer-text">肝实质性肿瘤</span>（原发性肝癌、转移性肝癌、肝腺瘤）<br>②静脉期全肝普遍增高:<span class="answer-text">肝硬化</span>、<span class="answer-text">门静脉高压</span><br>③平衡期:<span class="answer-text">过度充填</span>（肝血管瘤），<span class="answer-text">不充填</span>（肝囊肿、肝脓肿），<span class="answer-text">充填</span>（原发性肝癌、肝转移瘤）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>26.. C <strong>消化系统显像</strong><br>肝血流灌注和血池显像—临床应用<br>①<span class="blur-text">原发性肝癌</span>:动脉相肝区有放射性积聚（<span class="blur-text">肝动脉化征</span>）<br>②<span class="blur-text">继发性肝癌</span>:动脉相无明显积聚，血池相部分充盈<br>③<span class="blur-text">肝海绵状血管瘤</span>:血池相<span class="blur-text">过度充盈</span><br>④<span class="blur-text">肝脓肿</span>，<span class="blur-text">肝囊肿</span>:无血流灌注</td>
+                            <td>26.. C <strong>消化系统显像</strong><br>肝血流灌注和血池显像—临床应用<br>①<span class="answer-text">原发性肝癌</span>:动脉相肝区有放射性积聚（<span class="answer-text">肝动脉化征</span>）<br>②<span class="answer-text">继发性肝癌</span>:动脉相无明显积聚，血池相部分充盈<br>③<span class="answer-text">肝海绵状血管瘤</span>:血池相<span class="answer-text">过度充盈</span><br>④<span class="answer-text">肝脓肿</span>，<span class="answer-text">肝囊肿</span>:无血流灌注</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>27.. A <strong>心血管显像</strong><br>心肌血流灌注SPECT显像—基础<br>（1）原理:静脉注入<span class="blur-text">99mTc-MIBI</span>或<span class="blur-text">201Tl</span>，被正常心肌细胞摄取，摄取量与<span class="blur-text">心肌血流量</span>呈正比<br>（2）显像剂:<span class="blur-text">99mTc-MIBI</span>，<span class="blur-text">201Tl</span><br>（3）异常图像基本原则:同一心肌节段在两个不同方向的断面上连续<span class="blur-text">两个或两个以上</span>层面出现放射性分布异常</td>
+                            <td>27.. A <strong>心血管显像</strong><br>心肌血流灌注SPECT显像—基础<br>（1）原理:静脉注入<span class="answer-text">99mTc-MIBI</span>或<span class="answer-text">201Tl</span>，被正常心肌细胞摄取，摄取量与<span class="answer-text">心肌血流量</span>呈正比<br>（2）显像剂:<span class="answer-text">99mTc-MIBI</span>，<span class="answer-text">201Tl</span><br>（3）异常图像基本原则:同一心肌节段在两个不同方向的断面上连续<span class="answer-text">两个或两个以上</span>层面出现放射性分布异常</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>27.. B <strong>心血管显像</strong><br>心肌血流灌注SPECT显像—异常类型<br>①<span class="blur-text">可逆性缺损</span>:负荷显像缺损，静息或延迟显像填充，提示<span class="blur-text">心肌可逆性缺血</span><br>②<span class="blur-text">部分可逆性缺损</span>:提示<span class="blur-text">心肌梗死伴缺血</span>或侧支循环形成<br>③<span class="blur-text">固定缺损</span>:运动和静息都存在缺损，见于<span class="blur-text">心肌梗死</span>，心肌瘢痕和<span class="blur-text">冬眠心肌</span><br>④<span class="blur-text">花斑型改变</span>:见于<span class="blur-text">心肌病</span>和<span class="blur-text">心肌炎</span><br>⑤<span class="blur-text">反向再分布</span>:常见于严重的冠状动脉狭窄，多为<span class="blur-text">存活心肌</span></td>
+                            <td>27.. B <strong>心血管显像</strong><br>心肌血流灌注SPECT显像—异常类型<br>①<span class="answer-text">可逆性缺损</span>:负荷显像缺损，静息或延迟显像填充，提示<span class="answer-text">心肌可逆性缺血</span><br>②<span class="answer-text">部分可逆性缺损</span>:提示<span class="answer-text">心肌梗死伴缺血</span>或侧支循环形成<br>③<span class="answer-text">固定缺损</span>:运动和静息都存在缺损，见于<span class="answer-text">心肌梗死</span>，心肌瘢痕和<span class="answer-text">冬眠心肌</span><br>④<span class="answer-text">花斑型改变</span>:见于<span class="answer-text">心肌病</span>和<span class="answer-text">心肌炎</span><br>⑤<span class="answer-text">反向再分布</span>:常见于严重的冠状动脉狭窄，多为<span class="answer-text">存活心肌</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>27.. C <strong>心血管显像</strong><br>心肌血流灌注SPECT显像—靶心图与临床<br>（1）极坐标靶心图:中心为<span class="blur-text">心尖</span>，周边为<span class="blur-text">基底</span>，上部为<span class="blur-text">前壁</span>，下部为<span class="blur-text">下壁和后壁</span><br>（2）临床应用:冠心病早期诊断、<span class="blur-text">存活心肌</span>测定、心脏储备功能评价、<span class="blur-text">心肌病</span>鉴别诊断<br>（3）负荷试验:运动负荷试验适应证为胸痛症候群的病因诊断；药物负荷试验适应证为不能接受<span class="blur-text">心脏运动负荷试验</span>的患者</td>
+                            <td>27.. C <strong>心血管显像</strong><br>心肌血流灌注SPECT显像—靶心图与临床<br>（1）极坐标靶心图:中心为<span class="answer-text">心尖</span>，周边为<span class="answer-text">基底</span>，上部为<span class="answer-text">前壁</span>，下部为<span class="answer-text">下壁和后壁</span><br>（2）临床应用:冠心病早期诊断、<span class="answer-text">存活心肌</span>测定、心脏储备功能评价、<span class="answer-text">心肌病</span>鉴别诊断<br>（3）负荷试验:运动负荷试验适应证为胸痛症候群的病因诊断；药物负荷试验适应证为不能接受<span class="answer-text">心脏运动负荷试验</span>的患者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>36</td>
+                            <td>28.. A <strong>心血管显像</strong><br>心血池显像与心室功能—原理与显像剂<br>（1）原理:静脉注射<span class="blur-text">99mTc-RBC</span>，以受检者自身心电图的<span class="blur-text">R波</span>作触发信号，将R-R间期分成<span class="blur-text">16-32</span>个相等的时间段<br>（2）显像剂:<span class="blur-text">99mTc-RBC</span></td>
+                            <td>28.. A <strong>心血管显像</strong><br>心血池显像与心室功能—原理与显像剂<br>（1）原理:静脉注射<span class="answer-text">99mTc-RBC</span>，以受检者自身心电图的<span class="answer-text">R波</span>作触发信号，将R-R间期分成<span class="answer-text">16-32</span>个相等的时间段<br>（2）显像剂:<span class="answer-text">99mTc-RBC</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>37</td>
+                            <td>28.. B <strong>心血管显像</strong><br>心血池显像与心室功能—影像分析<br>1）局部室壁运动:局部心室轴缩短率RS＞<span class="blur-text">20%</span><br>2）心室容积曲线:射血分数EF=（<span class="blur-text">EDC</span>-<span class="blur-text">ESC</span>）/（<span class="blur-text">EDC</span>-<span class="blur-text">BG</span>）*100%<br>3）时相分析:①<span class="blur-text">相位图</span>:收缩同步性②<span class="blur-text">时相直方图</span>:双峰③<span class="blur-text">振幅图</span>:反映心肌收缩力④<span class="blur-text">时相电影</span>:动态显示激动传导</td>
+                            <td>28.. B <strong>心血管显像</strong><br>心血池显像与心室功能—影像分析<br>1）局部室壁运动:局部心室轴缩短率RS＞<span class="answer-text">20%</span><br>2）心室容积曲线:射血分数EF=（<span class="answer-text">EDC</span>-<span class="answer-text">ESC</span>）/（<span class="answer-text">EDC</span>-<span class="answer-text">BG</span>）*100%<br>3）时相分析:①<span class="answer-text">相位图</span>:收缩同步性②<span class="answer-text">时相直方图</span>:双峰③<span class="answer-text">振幅图</span>:反映心肌收缩力④<span class="answer-text">时相电影</span>:动态显示激动传导</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>38</td>
+                            <td>28.. C <strong>心血管显像</strong><br>心血池显像与心室功能—临床应用<br>1）<span class="blur-text">冠心病</span>诊断<br>2）<span class="blur-text">室壁瘤</span>诊断:真性室壁瘤多发于<span class="blur-text">左室前壁和心尖部</span>，时相直方图上出现<span class="blur-text">室壁瘤峰</span>，相角程大于<span class="blur-text">125°</span><br>3）左右心室功能测定<br>4）<span class="blur-text">扩心病</span>:心室相角程重度异常增宽<br>5）<span class="blur-text">预激综合征</span>:异位兴奋灶或旁道定位<br>6）评价<span class="blur-text">瓣膜性心脏病</span>的心功能</td>
+                            <td>28.. C <strong>心血管显像</strong><br>心血池显像与心室功能—临床应用<br>1）<span class="answer-text">冠心病</span>诊断<br>2）<span class="answer-text">室壁瘤</span>诊断:真性室壁瘤多发于<span class="answer-text">左室前壁和心尖部</span>，时相直方图上出现<span class="answer-text">室壁瘤峰</span>，相角程大于<span class="answer-text">125°</span><br>3）左右心室功能测定<br>4）<span class="answer-text">扩心病</span>:心室相角程重度异常增宽<br>5）<span class="answer-text">预激综合征</span>:异位兴奋灶或旁道定位<br>6）评价<span class="answer-text">瓣膜性心脏病</span>的心功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>39</td>
+                            <td>29.. <strong>骨骼系统显像</strong><br>原理<br>将<span class="blur-text">99mTc</span>标记于磷(膦)酸盐上，形成<span class="blur-text">99mTc-MDP</span>或<span class="blur-text">99mTc-PYP</span>，与骨的<span class="blur-text">羟基磷灰石晶体</span>发生化学吸附和离子交换，沉积于骨内</td>
+                            <td>29.. <strong>骨骼系统显像</strong><br>原理<br>将<span class="answer-text">99mTc</span>标记于磷(膦)酸盐上，形成<span class="answer-text">99mTc-MDP</span>或<span class="answer-text">99mTc-PYP</span>，与骨的<span class="answer-text">羟基磷灰石晶体</span>发生化学吸附和离子交换，沉积于骨内</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>40</td>
+                            <td>30.. <strong>骨骼系统显像</strong><br>影响因素<br>①局部的<span class="blur-text">血流量</span>②<span class="blur-text">无机盐</span>的代谢③<span class="blur-text">成骨活血</span>程度</td>
+                            <td>30.. <strong>骨骼系统显像</strong><br>影响因素<br>①局部的<span class="answer-text">血流量</span>②<span class="answer-text">无机盐</span>的代谢③<span class="answer-text">成骨活血</span>程度</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>41</td>
+                            <td>31.. <strong>骨骼系统显像</strong><br>显像剂<br>最常用<span class="blur-text">99mTc-MDP</span></td>
+                            <td>31.. <strong>骨骼系统显像</strong><br>显像剂<br>最常用<span class="answer-text">99mTc-MDP</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>42</td>
+                            <td>32.. A <strong>骨骼系统显像</strong><br>显像方法<br>1）<span class="blur-text">骨静态显像</span>:全身骨显像，局部骨显像<br>2）<span class="blur-text">骨动态显像</span>（骨三时像）:①<span class="blur-text">血流相</span>:反映较大血管的血流灌注②<span class="blur-text">血池相</span>:反映软组织的血液分布③<span class="blur-text">延迟相</span>:反映局部骨骼代谢情况<br>3）<span class="blur-text">骨断层显像</span><br>4）<span class="blur-text">多模式融合显像</span></td>
+                            <td>32.. A <strong>骨骼系统显像</strong><br>显像方法<br>1）<span class="answer-text">骨静态显像</span>:全身骨显像，局部骨显像<br>2）<span class="answer-text">骨动态显像</span>（骨三时像）:①<span class="answer-text">血流相</span>:反映较大血管的血流灌注②<span class="answer-text">血池相</span>:反映软组织的血液分布③<span class="answer-text">延迟相</span>:反映局部骨骼代谢情况<br>3）<span class="answer-text">骨断层显像</span><br>4）<span class="answer-text">多模式融合显像</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>43</td>
+                            <td>32.. B <strong>骨骼系统显像</strong><br>骨动态显像应用<br>主要应用于<span class="blur-text">骨良恶性肿瘤</span>的鉴别诊断，<span class="blur-text">骨髓炎</span>与蜂窝织炎的鉴别诊断，<span class="blur-text">假体感染</span>与假体松动的鉴别诊断</td>
+                            <td>32.. B <strong>骨骼系统显像</strong><br>骨动态显像应用<br>主要应用于<span class="answer-text">骨良恶性肿瘤</span>的鉴别诊断，<span class="answer-text">骨髓炎</span>与蜂窝织炎的鉴别诊断，<span class="answer-text">假体感染</span>与假体松动的鉴别诊断</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>44</td>
+                            <td>33.. <strong>骨骼系统显像</strong><br>临床应用<br>①对<span class="blur-text">骨转移性肿瘤</span>的早期诊断②<span class="blur-text">原发性骨肿瘤</span>③<span class="blur-text">骨感染性疾病</span>④<span class="blur-text">骨缺血性疾病</span>⑤<span class="blur-text">骨创伤</span>⑥<span class="blur-text">代谢性骨病</span>⑦<span class="blur-text">骨关节疾病</span>⑧<span class="blur-text">移植骨</span>的监测</td>
+                            <td>33.. <strong>骨骼系统显像</strong><br>临床应用<br>①对<span class="answer-text">骨转移性肿瘤</span>的早期诊断②<span class="answer-text">原发性骨肿瘤</span>③<span class="answer-text">骨感染性疾病</span>④<span class="answer-text">骨缺血性疾病</span>⑤<span class="answer-text">骨创伤</span>⑥<span class="answer-text">代谢性骨病</span>⑦<span class="answer-text">骨关节疾病</span>⑧<span class="answer-text">移植骨</span>的监测</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>45</td>
+                            <td>34.. <strong>骨骼系统显像</strong><br>代谢性骨病的典型影像表现<br>①广泛的中轴骨放射性增加②弥漫性长骨放射性增强③干骺端和关节周围的放射性增高④颅骨和下颌骨放射性异常浓聚⑤肋软骨连接处放射活性增高呈"<span class="blur-text">串珠征</span>"⑥胸骨"<span class="blur-text">领带征</span>"⑦<span class="blur-text">肾脏</span>不显影或显影差</td>
+                            <td>34.. <strong>骨骼系统显像</strong><br>代谢性骨病的典型影像表现<br>①广泛的中轴骨放射性增加②弥漫性长骨放射性增强③干骺端和关节周围的放射性增高④颅骨和下颌骨放射性异常浓聚⑤肋软骨连接处放射活性增高呈"<span class="answer-text">串珠征</span>"⑥胸骨"<span class="answer-text">领带征</span>"⑦<span class="answer-text">肾脏</span>不显影或显影差</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>46</td>
+                            <td>35.. <strong>泌尿系统</strong><br>（一）肾图—原理与示踪剂<br>1.原理:肾静脉注射由肾小球滤过或肾小管上皮细胞分泌而不被再吸收的放射性核素示踪剂后，测得的<span class="blur-text">时间—强度曲线</span><br>2.示踪剂:<span class="blur-text">131I-OIH</span>（邻碘马尿酸）</td>
+                            <td>35.. <strong>泌尿系统</strong><br>（一）肾图—原理与示踪剂<br>1.原理:肾静脉注射由肾小球滤过或肾小管上皮细胞分泌而不被再吸收的放射性核素示踪剂后，测得的<span class="answer-text">时间—强度曲线</span><br>2.示踪剂:<span class="answer-text">131I-OIH</span>（邻碘马尿酸）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>47</td>
+                            <td>36.. <strong>泌尿系统</strong><br>（一）肾图—正常肾图<br>①<span class="blur-text">a段</span>:示踪剂出现段，主要来自肾周血管床及肾血管床的放射性<br>②<span class="blur-text">b段</span>:示踪剂聚集段，<span class="blur-text">反映肾功能最重要</span>的一段，反映肾小管上皮细胞从血液中摄取并分泌到肾小管腔内的速度和量<br>③<span class="blur-text">c段</span>:示踪剂排泄段，主要反映<span class="blur-text">上尿路通畅情况</span></td>
+                            <td>36.. <strong>泌尿系统</strong><br>（一）肾图—正常肾图<br>①<span class="answer-text">a段</span>:示踪剂出现段，主要来自肾周血管床及肾血管床的放射性<br>②<span class="answer-text">b段</span>:示踪剂聚集段，<span class="answer-text">反映肾功能最重要</span>的一段，反映肾小管上皮细胞从血液中摄取并分泌到肾小管腔内的速度和量<br>③<span class="answer-text">c段</span>:示踪剂排泄段，主要反映<span class="answer-text">上尿路通畅情况</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>48</td>
+                            <td>37.. <strong>泌尿系统</strong><br>（一）肾图—异常肾图及临床意义<br>内容：<span class="blur-text">图略</span></td>
+                            <td>37.. <strong>泌尿系统</strong><br>（一）肾图—异常肾图及临床意义<br>内容：<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>49</td>
+                            <td>38.. <strong>泌尿系统</strong><br>（二）介入试验（利尿肾图）—原理<br>原理:功能性尿路扩张，肾盂张力降低，尿流速度减慢，示踪剂进入扩大的肾盂腔内不能迅速排出，使肾图呈<span class="blur-text">梗阻型曲线</span>，使用<span class="blur-text">利尿剂</span>加大尿量，观察曲线变化，鉴别<span class="blur-text">尿路机械性梗阻</span>及<span class="blur-text">功能性扩张</span></td>
+                            <td>38.. <strong>泌尿系统</strong><br>（二）介入试验（利尿肾图）—原理<br>原理:功能性尿路扩张，肾盂张力降低，尿流速度减慢，示踪剂进入扩大的肾盂腔内不能迅速排出，使肾图呈<span class="answer-text">梗阻型曲线</span>，使用<span class="answer-text">利尿剂</span>加大尿量，观察曲线变化，鉴别<span class="answer-text">尿路机械性梗阻</span>及<span class="answer-text">功能性扩张</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>50</td>
+                            <td>39.. <strong>泌尿系统</strong><br>（二）介入试验（利尿肾图）—临床意义<br>鉴别功能性尿路扩张与机械性尿路梗阻<br>①<span class="blur-text">功能性尿路扩张</span>:注射利尿剂后，曲线<span class="blur-text">下降</span><br>②<span class="blur-text">机械性尿路梗阻</span>:注射利尿剂后<span class="blur-text">无下降或下降得很少</span></td>
+                            <td>39.. <strong>泌尿系统</strong><br>（二）介入试验（利尿肾图）—临床意义<br>鉴别功能性尿路扩张与机械性尿路梗阻<br>①<span class="answer-text">功能性尿路扩张</span>:注射利尿剂后，曲线<span class="answer-text">下降</span><br>②<span class="answer-text">机械性尿路梗阻</span>:注射利尿剂后<span class="answer-text">无下降或下降得很少</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>51</td>
+                            <td>40.. <strong>泌尿系统</strong><br>（三）肾动态显像<br>1.原理:经静脉<span class="blur-text">弹丸式</span>注入由肾小球滤过或肾小管分泌不被再吸收并迅速随尿液排出的<span class="blur-text">快速通过型</span>显像剂，动态观察显像剂通过<span class="blur-text">腹主动脉，肾动脉，肾实质和尿路</span>的全过程<br>2.显像剂:<span class="blur-text">99mTc-DTPA</span></td>
+                            <td>40.. <strong>泌尿系统</strong><br>（三）肾动态显像<br>1.原理:经静脉<span class="answer-text">弹丸式</span>注入由肾小球滤过或肾小管分泌不被再吸收并迅速随尿液排出的<span class="answer-text">快速通过型</span>显像剂，动态观察显像剂通过<span class="answer-text">腹主动脉，肾动脉，肾实质和尿路</span>的全过程<br>2.显像剂:<span class="answer-text">99mTc-DTPA</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>52</td>
+                            <td>41.. <strong>泌尿系统</strong><br>（四）肾静态显像<br>原理:静脉注射能被肾小管上皮细胞摄取并能在肾实质之内暂时固定的<span class="blur-text">慢速型</span>显像剂，使用<span class="blur-text">SPECT</span>探测双肾区放射性核素的讯号，获得双侧肾实质的放射性分布图像</td>
+                            <td>41.. <strong>泌尿系统</strong><br>（四）肾静态显像<br>原理:静脉注射能被肾小管上皮细胞摄取并能在肾实质之内暂时固定的<span class="answer-text">慢速型</span>显像剂，使用<span class="answer-text">SPECT</span>探测双肾区放射性核素的讯号，获得双侧肾实质的放射性分布图像</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>53</td>
+                            <td>42.. <strong>泌尿系统</strong><br>（五）尿三蛋白测定<br>1.<span class="blur-text">ALB</span>:分子量<span class="blur-text">7万</span>→<span class="blur-text">肾小球</span>损害<br>2.<span class="blur-text">IgG</span>:分子量<span class="blur-text">16万</span>→肾小球<span class="blur-text">进一步</span>损害<br>3.<span class="blur-text">β2-MG</span>:分子量<span class="blur-text">1万</span>→被<span class="blur-text">肾小管</span>重吸收，反映肾小管重吸收功能</td>
+                            <td>42.. <strong>泌尿系统</strong><br>（五）尿三蛋白测定<br>1.<span class="answer-text">ALB</span>:分子量<span class="answer-text">7万</span>→<span class="answer-text">肾小球</span>损害<br>2.<span class="answer-text">IgG</span>:分子量<span class="answer-text">16万</span>→肾小球<span class="answer-text">进一步</span>损害<br>3.<span class="answer-text">β2-MG</span>:分子量<span class="answer-text">1万</span>→被<span class="answer-text">肾小管</span>重吸收，反映肾小管重吸收功能</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>54</td>
+                            <td>43.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—原理<br>应用能自由通过<span class="blur-text">血脑屏障</span>并被脑组织摄取的显像剂，其在脑组织内的分布数量与脑的<span class="blur-text">血流量</span>和<span class="blur-text">脑细胞的功能</span>成正比，通过<span class="blur-text">PET</span>显示脑内各局部放射性分布状态</td>
+                            <td>43.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—原理<br>应用能自由通过<span class="answer-text">血脑屏障</span>并被脑组织摄取的显像剂，其在脑组织内的分布数量与脑的<span class="answer-text">血流量</span>和<span class="answer-text">脑细胞的功能</span>成正比，通过<span class="answer-text">PET</span>显示脑内各局部放射性分布状态</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>55</td>
+                            <td>44.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—显像剂<br><span class="blur-text">99mTc-ECD</span>，<span class="blur-text">99mTc-HMPAO</span>，<span class="blur-text">123I-IMD</span></td>
+                            <td>44.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—显像剂<br><span class="answer-text">99mTc-ECD</span>，<span class="answer-text">99mTc-HMPAO</span>，<span class="answer-text">123I-IMD</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>56</td>
+                            <td>45.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—适应症<br>①<span class="blur-text">缺血性脑疾病</span>②<span class="blur-text">脑梗死</span>③<span class="blur-text">痴呆</span>的诊断与分型④<span class="blur-text">癫痫</span>的定位诊断⑤<span class="blur-text">帕金森病</span>的诊断⑥<span class="blur-text">脑肿瘤</span>治疗后坏死或复发的鉴别诊断⑦<span class="blur-text">偏头痛</span>，脑外伤，脑死亡等</td>
+                            <td>45.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—适应症<br>①<span class="answer-text">缺血性脑疾病</span>②<span class="answer-text">脑梗死</span>③<span class="answer-text">痴呆</span>的诊断与分型④<span class="answer-text">癫痫</span>的定位诊断⑤<span class="answer-text">帕金森病</span>的诊断⑥<span class="answer-text">脑肿瘤</span>治疗后坏死或复发的鉴别诊断⑦<span class="answer-text">偏头痛</span>，脑外伤，脑死亡等</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>57</td>
+                            <td>46.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—正常显像<br>①<span class="blur-text">灰质</span>结构区放射性积聚强②<span class="blur-text">白质</span>区放射性积聚弱③<span class="blur-text">脑室</span>为放射性空白区④两边<span class="blur-text">对称</span></td>
+                            <td>46.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—正常显像<br>①<span class="answer-text">灰质</span>结构区放射性积聚强②<span class="answer-text">白质</span>区放射性积聚弱③<span class="answer-text">脑室</span>为放射性空白区④两边<span class="answer-text">对称</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>58</td>
+                            <td>47.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—临床应用<br>1）<span class="blur-text">短暂性脑缺血发作TIA</span><br>2）<span class="blur-text">脑梗死</span>:优势:①发现病变<span class="blur-text">早</span>②检出阳性率<span class="blur-text">高</span>③显示范围<span class="blur-text">大</span></td>
+                            <td>47.. <strong>神经系统显像</strong><br>局部脑血流灌注显像—临床应用<br>1）<span class="answer-text">短暂性脑缺血发作TIA</span><br>2）<span class="answer-text">脑梗死</span>:优势:①发现病变<span class="answer-text">早</span>②检出阳性率<span class="answer-text">高</span>③显示范围<span class="answer-text">大</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>59</td>
+                            <td>48.. <strong>甲状腺显像</strong><br>（一）甲状腺静态显像—原理<br>将能被甲状腺细胞<span class="blur-text">选择性摄取</span>的放射性药物如<span class="blur-text">131I-NaI</span>或<span class="blur-text">99mTcO4-</span>引入体内，探测甲状腺内放射性核素衰变时所发出的<span class="blur-text">γ射线</span></td>
+                            <td>48.. <strong>甲状腺显像</strong><br>（一）甲状腺静态显像—原理<br>将能被甲状腺细胞<span class="answer-text">选择性摄取</span>的放射性药物如<span class="answer-text">131I-NaI</span>或<span class="answer-text">99mTcO4-</span>引入体内，探测甲状腺内放射性核素衰变时所发出的<span class="answer-text">γ射线</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>60</td>
+                            <td>49.. <strong>甲状腺显像</strong><br>（一）甲状腺静态显像—常用显像剂及特点<br>（1）<span class="blur-text">131I</span>:①β射线+γ射线②半衰期<span class="blur-text">长</span>③辐射剂量相对<span class="blur-text">较高</span>④特异性<span class="blur-text">高</span>，探测<span class="blur-text">异位甲状腺组织</span>及寻找<span class="blur-text">甲状腺癌转移灶</span><br>（2）<span class="blur-text">99mTc</span>:①纯<span class="blur-text">γ射线</span>②半衰期<span class="blur-text">短</span>③辐射剂量相对<span class="blur-text">较低</span>④特异性相对<span class="blur-text">较差</span></td>
+                            <td>49.. <strong>甲状腺显像</strong><br>（一）甲状腺静态显像—常用显像剂及特点<br>（1）<span class="answer-text">131I</span>:①β射线+γ射线②半衰期<span class="answer-text">长</span>③辐射剂量相对<span class="answer-text">较高</span>④特异性<span class="answer-text">高</span>，探测<span class="answer-text">异位甲状腺组织</span>及寻找<span class="answer-text">甲状腺癌转移灶</span><br>（2）<span class="answer-text">99mTc</span>:①纯<span class="answer-text">γ射线</span>②半衰期<span class="answer-text">短</span>③辐射剂量相对<span class="answer-text">较低</span>④特异性相对<span class="answer-text">较差</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>61</td>
+                            <td>50.. A <strong>甲状腺显像</strong><br>（一）甲状腺静态显像—异常显像<br>（1）形态的异常（2）大小的异常（3）部位的异常<br>（4）显像剂分布的异常:<br>1）弥漫性增加（见于<span class="blur-text">甲亢</span>）<br>2）弥漫性降低（见于<span class="blur-text">甲低</span>及甲状腺炎症）<br>3）局限性增高或减低（见于甲状腺内结节性病灶）</td>
+                            <td>50.. A <strong>甲状腺显像</strong><br>（一）甲状腺静态显像—异常显像<br>（1）形态的异常（2）大小的异常（3）部位的异常<br>（4）显像剂分布的异常:<br>1）弥漫性增加（见于<span class="answer-text">甲亢</span>）<br>2）弥漫性降低（见于<span class="answer-text">甲低</span>及甲状腺炎症）<br>3）局限性增高或减低（见于甲状腺内结节性病灶）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>62</td>
+                            <td>50.. B <strong>甲状腺显像</strong><br>（一）甲状腺静态显像—结节类型<br>①<span class="blur-text">热结节</span>:结节部位放射性分布<span class="blur-text">高于</span>周围正常甲状腺组织<br>②<span class="blur-text">凉结节</span>:结节部位放射性分布<span class="blur-text">低于</span>周围正常甲状腺组织<br>③<span class="blur-text">冷结节</span>:结节周围<span class="blur-text">无</span>放射性分布<br>④<span class="blur-text">温结节</span>:结节部位放射性分布<span class="blur-text">等于</span>周围正常甲状腺组织</td>
+                            <td>50.. B <strong>甲状腺显像</strong><br>（一）甲状腺静态显像—结节类型<br>①<span class="answer-text">热结节</span>:结节部位放射性分布<span class="answer-text">高于</span>周围正常甲状腺组织<br>②<span class="answer-text">凉结节</span>:结节部位放射性分布<span class="answer-text">低于</span>周围正常甲状腺组织<br>③<span class="answer-text">冷结节</span>:结节周围<span class="answer-text">无</span>放射性分布<br>④<span class="answer-text">温结节</span>:结节部位放射性分布<span class="answer-text">等于</span>周围正常甲状腺组织</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>63</td>
+                            <td>51.. <strong>甲状腺显像</strong><br>（二）甲状腺动态显像—原理<br>将<span class="blur-text">99mTcO4-</span>经静脉<span class="blur-text">弹丸</span>注射，连续记录显像剂随<span class="blur-text">动脉血流</span>经甲状腺及被甲状腺摄取的动态变化影像，了解甲状腺或其内病灶的<span class="blur-text">血供及功能</span>情况</td>
+                            <td>51.. <strong>甲状腺显像</strong><br>（二）甲状腺动态显像—原理<br>将<span class="answer-text">99mTcO4-</span>经静脉<span class="answer-text">弹丸</span>注射，连续记录显像剂随<span class="answer-text">动脉血流</span>经甲状腺及被甲状腺摄取的动态变化影像，了解甲状腺或其内病灶的<span class="answer-text">血供及功能</span>情况</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>64</td>
+                            <td>52.. <strong>甲状腺显像</strong><br>（二）甲状腺动态显像—异常显像<br>（1）甲状腺<span class="blur-text">提前</span>清晰显影，放射性强度<span class="blur-text">增加</span>，见于<span class="blur-text">弥漫性甲亢</span><br>（2）甲状腺显影<span class="blur-text">延迟</span>，影像较<span class="blur-text">淡</span>，见于<span class="blur-text">甲低</span><br>（3）甲状腺结节:提前显影且强度高于周围→<span class="blur-text">功能自主性腺瘤</span>或甲状腺恶性病变，相反则为<span class="blur-text">良性病变</span></td>
+                            <td>52.. <strong>甲状腺显像</strong><br>（二）甲状腺动态显像—异常显像<br>（1）甲状腺<span class="answer-text">提前</span>清晰显影，放射性强度<span class="answer-text">增加</span>，见于<span class="answer-text">弥漫性甲亢</span><br>（2）甲状腺显影<span class="answer-text">延迟</span>，影像较<span class="answer-text">淡</span>，见于<span class="answer-text">甲低</span><br>（3）甲状腺结节:提前显影且强度高于周围→<span class="answer-text">功能自主性腺瘤</span>或甲状腺恶性病变，相反则为<span class="answer-text">良性病变</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>65</td>
+                            <td>53.. <strong>甲状腺显像</strong><br>（三）甲状腺结节功能性及良恶性的判断<br>1.<span class="blur-text">热结节</span>:良性病变<br>2.<span class="blur-text">温结节</span>:功能正常<br>3.<span class="blur-text">凉或冷结节</span>:①应用<span class="blur-text">亲肿瘤显像剂</span>进行显像②静态显像结合<span class="blur-text">动态显像</span>进行鉴别③其他影像学检查方法</td>
+                            <td>53.. <strong>甲状腺显像</strong><br>（三）甲状腺结节功能性及良恶性的判断<br>1.<span class="answer-text">热结节</span>:良性病变<br>2.<span class="answer-text">温结节</span>:功能正常<br>3.<span class="answer-text">凉或冷结节</span>:①应用<span class="answer-text">亲肿瘤显像剂</span>进行显像②静态显像结合<span class="answer-text">动态显像</span>进行鉴别③其他影像学检查方法</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>66</td>
+                            <td>54.. <strong>甲状腺功能检查</strong><br>（一）甲状腺摄131I试验（甲吸）—原理<br>①碘是甲状腺合成<span class="blur-text">TH</span>的主要原料，其摄取的速度和数量以及碘在甲状腺内的停留时间与<span class="blur-text">甲状腺功能</span>有关<br>②<span class="blur-text">131I</span>与<span class="blur-text">127I</span>互为同位素，131I属放射性核素，衰变时能发出<span class="blur-text">γ射线</span><br>③口服一定量的131I后，在体外用特定的γ射线探测仪探测<span class="blur-text">颈部</span>的放射性计数</td>
+                            <td>54.. <strong>甲状腺功能检查</strong><br>（一）甲状腺摄131I试验（甲吸）—原理<br>①碘是甲状腺合成<span class="answer-text">TH</span>的主要原料，其摄取的速度和数量以及碘在甲状腺内的停留时间与<span class="answer-text">甲状腺功能</span>有关<br>②<span class="answer-text">131I</span>与<span class="answer-text">127I</span>互为同位素，131I属放射性核素，衰变时能发出<span class="answer-text">γ射线</span><br>③口服一定量的131I后，在体外用特定的γ射线探测仪探测<span class="answer-text">颈部</span>的放射性计数</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>67</td>
+                            <td>55.. <strong>甲状腺功能检查</strong><br>（一）甲状腺摄131I试验（甲吸）—临床意义<br>①典型<span class="blur-text">甲亢</span>:甲吸<span class="blur-text">增高</span>，高峰<span class="blur-text">前移</span><br>②<span class="blur-text">甲低（甲减）</span>:甲吸<span class="blur-text">降低</span><br>③<span class="blur-text">地方性甲状腺肿</span>:甲吸增高，但<span class="blur-text">无</span>高峰前移<br>④<span class="blur-text">单纯性甲状腺肿</span>:甲吸可正常或增高（无高峰前移）<br>⑤<span class="blur-text">亚急性甲状腺炎</span>急性期:甲吸<span class="blur-text">降低</span>，而T3、T4<span class="blur-text">升高</span>→<span class="blur-text">分离现象</span></td>
+                            <td>55.. <strong>甲状腺功能检查</strong><br>（一）甲状腺摄131I试验（甲吸）—临床意义<br>①典型<span class="answer-text">甲亢</span>:甲吸<span class="answer-text">增高</span>，高峰<span class="answer-text">前移</span><br>②<span class="answer-text">甲低（甲减）</span>:甲吸<span class="answer-text">降低</span><br>③<span class="answer-text">地方性甲状腺肿</span>:甲吸增高，但<span class="answer-text">无</span>高峰前移<br>④<span class="answer-text">单纯性甲状腺肿</span>:甲吸可正常或增高（无高峰前移）<br>⑤<span class="answer-text">亚急性甲状腺炎</span>急性期:甲吸<span class="answer-text">降低</span>，而T3、T4<span class="answer-text">升高</span>→<span class="answer-text">分离现象</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>68</td>
+                            <td>56.. <strong>甲状腺功能检查</strong><br>（二）过氯酸盐释放试验—原理<br>过氯酸盐可以阻止甲状腺从血中摄取<span class="blur-text">碘离子</span>和促进碘离子从甲状腺内释放出来。正常情况下，碘离子进入甲状腺滤泡上皮细胞后，在<span class="blur-text">过氧化物酶</span>参与下被氧化为碘分子，进而在<span class="blur-text">碘化酶</span>作用下与酪氨酸结合而成<span class="blur-text">有机碘</span>。当与碘有机化相关的酶缺乏时，口服过氯酸盐则使甲状腺内的碘离子被释放出来，通过测量口服过氯酸盐前后甲状腺摄131I率的变化，计算<span class="blur-text">释放率</span>，判断是否存在甲状腺<span class="blur-text">碘有机化障碍</span></td>
+                            <td>56.. <strong>甲状腺功能检查</strong><br>（二）过氯酸盐释放试验—原理<br>过氯酸盐可以阻止甲状腺从血中摄取<span class="answer-text">碘离子</span>和促进碘离子从甲状腺内释放出来。正常情况下，碘离子进入甲状腺滤泡上皮细胞后，在<span class="answer-text">过氧化物酶</span>参与下被氧化为碘分子，进而在<span class="answer-text">碘化酶</span>作用下与酪氨酸结合而成<span class="answer-text">有机碘</span>。当与碘有机化相关的酶缺乏时，口服过氯酸盐则使甲状腺内的碘离子被释放出来，通过测量口服过氯酸盐前后甲状腺摄131I率的变化，计算<span class="answer-text">释放率</span>，判断是否存在甲状腺<span class="answer-text">碘有机化障碍</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>69</td>
+                            <td>57.. <strong>甲状腺功能检查</strong><br>（二）过氯酸盐释放试验—释放率计算<br>释放率=（服KClO4前吸131I率-服KClO4后吸131I率）/服KClO4前吸131I率*100%<br>正常值:<span class="blur-text">＜10%</span></td>
+                            <td>57.. <strong>甲状腺功能检查</strong><br>（二）过氯酸盐释放试验—释放率计算<br>释放率=（服KClO4前吸131I率-服KClO4后吸131I率）/服KClO4前吸131I率*100%<br>正常值:<span class="answer-text">＜10%</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>70</td>
+                            <td>58.. <strong>甲状腺功能检查</strong><br>（二）过氯酸盐释放试验—临床意义<br>辅助诊断甲状腺内<span class="blur-text">碘有机化障碍</span>的相关疾病</td>
+                            <td>58.. <strong>甲状腺功能检查</strong><br>（二）过氯酸盐释放试验—临床意义<br>辅助诊断甲状腺内<span class="answer-text">碘有机化障碍</span>的相关疾病</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>71</td>
+                            <td>59.. <strong>甲状腺功能检查</strong><br>（三）甲状腺激素抑制试验—原理<br>①正常情况下，甲状腺摄取碘及合成、释放甲状腺激素的功能受垂体前叶分泌的<span class="blur-text">TSH</span>调节。口服甲状腺激素后，血中<span class="blur-text">T3、T4</span>浓度增高，通过<span class="blur-text">负反馈</span>作用，垂体前叶分泌TSH<span class="blur-text">减少</span>，甲状腺摄碘功能随之明显下降<br>②当甲亢时，由于体内存在非垂体性的病理性甲状腺激素因素，使甲状腺的功能<span class="blur-text">自主</span>，T3、T4增高使TSH下降后，甲状腺吸碘功能<span class="blur-text">并不受影响</span></td>
+                            <td>59.. <strong>甲状腺功能检查</strong><br>（三）甲状腺激素抑制试验—原理<br>①正常情况下，甲状腺摄取碘及合成、释放甲状腺激素的功能受垂体前叶分泌的<span class="answer-text">TSH</span>调节。口服甲状腺激素后，血中<span class="answer-text">T3、T4</span>浓度增高，通过<span class="answer-text">负反馈</span>作用，垂体前叶分泌TSH<span class="answer-text">减少</span>，甲状腺摄碘功能随之明显下降<br>②当甲亢时，由于体内存在非垂体性的病理性甲状腺激素因素，使甲状腺的功能<span class="answer-text">自主</span>，T3、T4增高使TSH下降后，甲状腺吸碘功能<span class="answer-text">并不受影响</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>72</td>
+                            <td>60.. <strong>甲状腺功能检查</strong><br>（三）甲状腺激素抑制试验—结果与临床意义<br>2.正常:抑制率<span class="blur-text">＞50%</span><br>3.临床意义:诊断<span class="blur-text">甲亢</span>，鉴别<span class="blur-text">眼突</span>的性质，作为判断甲亢病人长期服用<span class="blur-text">ATD</span>治疗停药后是否复发的参考指标</td>
+                            <td>60.. <strong>甲状腺功能检查</strong><br>（三）甲状腺激素抑制试验—结果与临床意义<br>2.正常:抑制率<span class="answer-text">＞50%</span><br>3.临床意义:诊断<span class="answer-text">甲亢</span>，鉴别<span class="answer-text">眼突</span>的性质，作为判断甲亢病人长期服用<span class="answer-text">ATD</span>治疗停药后是否复发的参考指标</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>73</td>
+                            <td>61.. <strong>甲状腺功能检查</strong><br>（四）TSH兴奋试验—原理<br>①正常状态下，甲状腺摄碘能力受垂体前叶分泌的<span class="blur-text">TSH</span>调节<br>②若由于<span class="blur-text">下丘脑或垂体</span>因素致TSH分泌减少时，将出现<span class="blur-text">继发性</span>甲低；如果由于<span class="blur-text">甲状腺本身</span>的疾病，将出现<span class="blur-text">原发性</span>甲低<br>③给予甲低患者静脉注入外源性<span class="blur-text">TSH</span>，观察注射前后甲状腺吸131I率的变化，即可鉴别甲低的原因</td>
+                            <td>61.. <strong>甲状腺功能检查</strong><br>（四）TSH兴奋试验—原理<br>①正常状态下，甲状腺摄碘能力受垂体前叶分泌的<span class="answer-text">TSH</span>调节<br>②若由于<span class="answer-text">下丘脑或垂体</span>因素致TSH分泌减少时，将出现<span class="answer-text">继发性</span>甲低；如果由于<span class="answer-text">甲状腺本身</span>的疾病，将出现<span class="answer-text">原发性</span>甲低<br>③给予甲低患者静脉注入外源性<span class="answer-text">TSH</span>，观察注射前后甲状腺吸131I率的变化，即可鉴别甲低的原因</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>74</td>
+                            <td>62.. <strong>甲状腺功能检查</strong><br>（四）TSH兴奋试验—兴奋值与临床应用<br>2.兴奋值:①继发性甲低:<span class="blur-text">＞11%</span>②原发性甲低:<span class="blur-text">＜11%</span><br>3.临床应用:鉴别<span class="blur-text">原发性</span>和<span class="blur-text">继发性</span>甲低</td>
+                            <td>62.. <strong>甲状腺功能检查</strong><br>（四）TSH兴奋试验—兴奋值与临床应用<br>2.兴奋值:①继发性甲低:<span class="answer-text">＞11%</span>②原发性甲低:<span class="answer-text">＜11%</span><br>3.临床应用:鉴别<span class="answer-text">原发性</span>和<span class="answer-text">继发性</span>甲低</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>75</td>
+                            <td>63.. <strong>甲状腺功能检查</strong><br>（五）TRH兴奋试验—原理<br>下丘脑分泌<span class="blur-text">TRH</span>作用于垂体前叶使其合成释放<span class="blur-text">TSH</span>增多，后者再作用于甲状腺，促使甲状腺激素合成、分泌增加。当给受试者注射一定量TRH后，动态观察<span class="blur-text">TSH浓度</span>的变化，即可了解"<span class="blur-text">下丘脑-垂体-甲状腺轴</span>"功能异常的病变部位</td>
+                            <td>63.. <strong>甲状腺功能检查</strong><br>（五）TRH兴奋试验—原理<br>下丘脑分泌<span class="answer-text">TRH</span>作用于垂体前叶使其合成释放<span class="answer-text">TSH</span>增多，后者再作用于甲状腺，促使甲状腺激素合成、分泌增加。当给受试者注射一定量TRH后，动态观察<span class="answer-text">TSH浓度</span>的变化，即可了解"<span class="answer-text">下丘脑-垂体-甲状腺轴</span>"功能异常的病变部位</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>76</td>
+                            <td>64.. <strong>甲状腺功能检查</strong><br>（五）TRH兴奋试验—反应类型<br>①<span class="blur-text">正常反应</span>②<span class="blur-text">过度反应</span>:原发性甲低③<span class="blur-text">低反应或无反应</span>:甲亢或垂体性甲低④<span class="blur-text">延迟反应</span>:下丘脑性甲低</td>
+                            <td>64.. <strong>甲状腺功能检查</strong><br>（五）TRH兴奋试验—反应类型<br>①<span class="answer-text">正常反应</span>②<span class="answer-text">过度反应</span>:原发性甲低③<span class="answer-text">低反应或无反应</span>:甲亢或垂体性甲低④<span class="answer-text">延迟反应</span>:下丘脑性甲低</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>77</td>
+                            <td>65.. <strong>甲状腺功能检查</strong><br>（六）甲状腺球蛋白（TG）测定<br>主要用途:<span class="blur-text">分化型甲状腺癌</span>术后及131I治疗后，TG增高提示<span class="blur-text">复发、转移</span></td>
+                            <td>65.. <strong>甲状腺功能检查</strong><br>（六）甲状腺球蛋白（TG）测定<br>主要用途:<span class="answer-text">分化型甲状腺癌</span>术后及131I治疗后，TG增高提示<span class="answer-text">复发、转移</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>78</td>
+                            <td>66.. <strong>甲状腺功能检查</strong><br>（七）甲状腺球蛋白抗体（TGAb），甲状腺微粒体抗体（TMAb）<br>作为与<span class="blur-text">自身免疫</span>有关的甲状腺疾病的辅助诊断指标</td>
+                            <td>66.. <strong>甲状腺功能检查</strong><br>（七）甲状腺球蛋白抗体（TGAb），甲状腺微粒体抗体（TMAb）<br>作为与<span class="answer-text">自身免疫</span>有关的甲状腺疾病的辅助诊断指标</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>79</td>
+                            <td>67.. <strong>甲状腺功能检查</strong><br>（八）TRAb（TSH受体抗体）<br>1.<span class="blur-text">Graves病</span>的诊断、疗效评价及停药判定。如甲亢未控制时一般明显<span class="blur-text">↑</span>，经治疗后<span class="blur-text">↓</span>，如未↓至正常，提示<span class="blur-text">免疫异常</span>未纠正，停药后复发风险高<br>2.甲亢病因的鉴别<br>3.<span class="blur-text">新生儿甲亢</span>的诊断和预测<br>4.<span class="blur-text">Graves眼病</span>的辅助诊断</td>
+                            <td>67.. <strong>甲状腺功能检查</strong><br>（八）TRAb（TSH受体抗体）<br>1.<span class="answer-text">Graves病</span>的诊断、疗效评价及停药判定。如甲亢未控制时一般明显<span class="answer-text">↑</span>，经治疗后<span class="answer-text">↓</span>，如未↓至正常，提示<span class="answer-text">免疫异常</span>未纠正，停药后复发风险高<br>2.甲亢病因的鉴别<br>3.<span class="answer-text">新生儿甲亢</span>的诊断和预测<br>4.<span class="answer-text">Graves眼病</span>的辅助诊断</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>80</td>
+                            <td>68.. <strong>肿瘤显像</strong><br>PET显像原理<br>通过正电子同位素标记的药物由静脉注入人体后，发射的正电子与邻近组织的电子发生作用，产生一对<span class="blur-text">方向相反</span>的<span class="blur-text">γ光子</span>。PET扫描探头探测到γ光子信号，计算机将信号处理成可视的图像</td>
+                            <td>68.. <strong>肿瘤显像</strong><br>PET显像原理<br>通过正电子同位素标记的药物由静脉注入人体后，发射的正电子与邻近组织的电子发生作用，产生一对<span class="answer-text">方向相反</span>的<span class="answer-text">γ光子</span>。PET扫描探头探测到γ光子信号，计算机将信号处理成可视的图像</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>81</td>
+                            <td>69.. <strong>肿瘤显像</strong><br>18F-FDG显像原理<br>18F-FDG能够被细胞膜的<span class="blur-text">葡萄糖转运蛋白</span>识别，跨膜转运到细胞内，并被<span class="blur-text">己糖激酶</span>磷酸化，生成<span class="blur-text">6-磷酸脱氧葡萄糖</span>，但不能进入糖酵解的下一个反应过程而蓄积在细胞内。大多数<span class="blur-text">肿瘤细胞</span>具有葡萄糖高代谢特点，经PET显像可反应肿瘤的<span class="blur-text">部位、大小、数量</span>及肿瘤内的放射性分布</td>
+                            <td>69.. <strong>肿瘤显像</strong><br>18F-FDG显像原理<br>18F-FDG能够被细胞膜的<span class="answer-text">葡萄糖转运蛋白</span>识别，跨膜转运到细胞内，并被<span class="answer-text">己糖激酶</span>磷酸化，生成<span class="answer-text">6-磷酸脱氧葡萄糖</span>，但不能进入糖酵解的下一个反应过程而蓄积在细胞内。大多数<span class="answer-text">肿瘤细胞</span>具有葡萄糖高代谢特点，经PET显像可反应肿瘤的<span class="answer-text">部位、大小、数量</span>及肿瘤内的放射性分布</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>82</td>
+                            <td>70.. <strong>肿瘤显像</strong><br>FDG的生理性摄取<br><span class="blur-text">脑</span>，<span class="blur-text">心肌</span>，头颈部腺体和淋巴组织，<span class="blur-text">胃肠道</span>，肝脾，<span class="blur-text">泌尿系统</span>，棕色脂肪组织/肌肉，子宫和卵巢，睾丸，<span class="blur-text">骨髓</span></td>
+                            <td>70.. <strong>肿瘤显像</strong><br>FDG的生理性摄取<br><span class="answer-text">脑</span>，<span class="answer-text">心肌</span>，头颈部腺体和淋巴组织，<span class="answer-text">胃肠道</span>，肝脾，<span class="answer-text">泌尿系统</span>，棕色脂肪组织/肌肉，子宫和卵巢，睾丸，<span class="answer-text">骨髓</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>83</td>
+                            <td>71.. <strong>肿瘤显像</strong><br>PET显像在肿瘤诊治中的应用<br>①协助诊断:良恶性鉴别（良性<span class="blur-text">＜</span>SUVmax2.5<span class="blur-text">＜</span>恶性）<br>②寻找<span class="blur-text">原发灶</span><br>③指导治疗:提供准确的<span class="blur-text">临床分期</span><br>④治疗评估和<span class="blur-text">复发监测</span><br>⑤指导<span class="blur-text">放疗计划</span></td>
+                            <td>71.. <strong>肿瘤显像</strong><br>PET显像在肿瘤诊治中的应用<br>①协助诊断:良恶性鉴别（良性<span class="answer-text">＜</span>SUVmax2.5<span class="answer-text">＜</span>恶性）<br>②寻找<span class="answer-text">原发灶</span><br>③指导治疗:提供准确的<span class="answer-text">临床分期</span><br>④治疗评估和<span class="answer-text">复发监测</span><br>⑤指导<span class="answer-text">放疗计划</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>84</td>
+                            <td>72.. <strong>肿瘤显像</strong><br>18F-FDG临床应用的局限性<br>内容：<span class="blur-text">图略</span></td>
+                            <td>72.. <strong>肿瘤显像</strong><br>18F-FDG临床应用的局限性<br>内容：<span class="answer-text">图略</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>85</td>
+                            <td>73.. <strong>放射性核素治疗</strong><br>定义<br>将<span class="blur-text">开放型放射性核素</span>或其标记物引入体内，利用核素发射出的射线的<span class="blur-text">电离辐射效应</span>，抑制或破坏病变组织，达到治疗的目的</td>
+                            <td>73.. <strong>放射性核素治疗</strong><br>定义<br>将<span class="answer-text">开放型放射性核素</span>或其标记物引入体内，利用核素发射出的射线的<span class="answer-text">电离辐射效应</span>，抑制或破坏病变组织，达到治疗的目的</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>86</td>
+                            <td>74.. <strong>放射性核素治疗</strong><br>131I治疗Grave's病<br>（1）原理:①甲状腺高度选择性摄取<span class="blur-text">131I</span>，有效半衰期<span class="blur-text">3~5天</span>②131I衰变时发出<span class="blur-text">β射线</span>，在组织中平均射程约<span class="blur-text">1mm</span>，对甲状腺细胞产生集中照射，使其遭到破坏或功能被抑制，减少<span class="blur-text">甲状腺激素</span>的合成<br>（2）适应症:①<span class="blur-text">Graves'病</span>②对抗甲状腺药物<span class="blur-text">过敏</span>，治疗效果差或治疗后复发或手术后复发的青少年及儿童Graves'病③Graves'病伴<span class="blur-text">白细胞或血小板减少</span>④Graves'病伴<span class="blur-text">房颤</span>⑤Graves'病合并<span class="blur-text">桥本氏病</span>，内科药物治疗效差，摄碘率增高的患者</td>
+                            <td>74.. <strong>放射性核素治疗</strong><br>131I治疗Grave's病<br>（1）原理:①甲状腺高度选择性摄取<span class="answer-text">131I</span>，有效半衰期<span class="answer-text">3~5天</span>②131I衰变时发出<span class="answer-text">β射线</span>，在组织中平均射程约<span class="answer-text">1mm</span>，对甲状腺细胞产生集中照射，使其遭到破坏或功能被抑制，减少<span class="answer-text">甲状腺激素</span>的合成<br>（2）适应症:①<span class="answer-text">Graves'病</span>②对抗甲状腺药物<span class="answer-text">过敏</span>，治疗效果差或治疗后复发或手术后复发的青少年及儿童Graves'病③Graves'病伴<span class="answer-text">白细胞或血小板减少</span>④Graves'病伴<span class="answer-text">房颤</span>⑤Graves'病合并<span class="answer-text">桥本氏病</span>，内科药物治疗效差，摄碘率增高的患者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>87</td>
+                            <td>75.. <strong>放射性核素治疗</strong><br>对比131I和抗甲状腺药物治疗Graves病的适应症<br>抗甲状腺药物适应症:<br>①<span class="blur-text">轻、中度</span>病情②甲状腺<span class="blur-text">轻、中度肿大</span>③孕妇、高龄甲亢④严重内科疾病<span class="blur-text">不宜手术</span>者⑤术前和131I治疗前的准备⑥术后复发<span class="blur-text">不适宜131I治疗</span>者⑦<span class="blur-text">中至重度活动</span>的GO病人<br>131I适应症:<br>①甲状腺肿大<span class="blur-text">II度以上</span>②抗甲状腺药物<span class="blur-text">过敏</span>③抗甲状腺药物治疗或术后<span class="blur-text">复发</span>④甲亢合并<span class="blur-text">心脏病</span>⑤伴<span class="blur-text">WBC、PLT</span>或全血细胞减少⑥甲亢合并<span class="blur-text">肝、肾</span>等脏器功能损害⑦<span class="blur-text">浸润性突眼</span>，有手术禁忌证者</td>
+                            <td>75.. <strong>放射性核素治疗</strong><br>对比131I和抗甲状腺药物治疗Graves病的适应症<br>抗甲状腺药物适应症:<br>①<span class="answer-text">轻、中度</span>病情②甲状腺<span class="answer-text">轻、中度肿大</span>③孕妇、高龄甲亢④严重内科疾病<span class="answer-text">不宜手术</span>者⑤术前和131I治疗前的准备⑥术后复发<span class="answer-text">不适宜131I治疗</span>者⑦<span class="answer-text">中至重度活动</span>的GO病人<br>131I适应症:<br>①甲状腺肿大<span class="answer-text">II度以上</span>②抗甲状腺药物<span class="answer-text">过敏</span>③抗甲状腺药物治疗或术后<span class="answer-text">复发</span>④甲亢合并<span class="answer-text">心脏病</span>⑤伴<span class="answer-text">WBC、PLT</span>或全血细胞减少⑥甲亢合并<span class="answer-text">肝、肾</span>等脏器功能损害⑦<span class="answer-text">浸润性突眼</span>，有手术禁忌证者</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>88</td>
+                            <td>76.. <strong>放射性核素治疗</strong><br>对比131I和抗甲状腺药物治疗Graves病的优点<br>抗甲状腺药物:相对<span class="blur-text">安全</span>，大部分患者病情可<span class="blur-text">缓解</span>，部分患者甲亢可得到<span class="blur-text">根治</span><br>131I:①方法<span class="blur-text">成熟</span>，简便易行，相对<span class="blur-text">安全</span>②费用相对<span class="blur-text">较低</span></td>
+                            <td>76.. <strong>放射性核素治疗</strong><br>对比131I和抗甲状腺药物治疗Graves病的优点<br>抗甲状腺药物:相对<span class="answer-text">安全</span>，大部分患者病情可<span class="answer-text">缓解</span>，部分患者甲亢可得到<span class="answer-text">根治</span><br>131I:①方法<span class="answer-text">成熟</span>，简便易行，相对<span class="answer-text">安全</span>②费用相对<span class="answer-text">较低</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>89</td>
+                            <td>77.. <strong>放射性核素治疗</strong><br>对比131I和抗甲状腺药物治疗Graves病的并发症及疗效<br>并发症—抗甲状腺药物:①<span class="blur-text">皮肤过敏</span>②<span class="blur-text">粒细胞减少</span>③<span class="blur-text">肝功能受损</span><br>并发症—131I:<span class="blur-text">甲状腺功能减退</span><br>疗效—抗甲状腺药物:<span class="blur-text">根治率低</span><br>疗效—131I:<span class="blur-text">根治率高</span></td>
+                            <td>77.. <strong>放射性核素治疗</strong><br>对比131I和抗甲状腺药物治疗Graves病的并发症及疗效<br>并发症—抗甲状腺药物:①<span class="answer-text">皮肤过敏</span>②<span class="answer-text">粒细胞减少</span>③<span class="answer-text">肝功能受损</span><br>并发症—131I:<span class="answer-text">甲状腺功能减退</span><br>疗效—抗甲状腺药物:<span class="answer-text">根治率低</span><br>疗效—131I:<span class="answer-text">根治率高</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>90</td>
+                            <td>78.. <strong>放射性核素治疗</strong><br>131I治疗分化型甲状腺癌—去除残留甲状腺组织的理由<br>①残留组织有<span class="blur-text">镜下微小癌灶</span>②残留组织去除后有利于<span class="blur-text">发现转移灶</span>③残留组织去除后利于检测<span class="blur-text">甲状腺球蛋白</span>对复发和转移判断④去除剂量131I全身显像可发现<span class="blur-text">诊断剂量不能发现的病灶</span><br>（重复治疗在前次131I治疗后<span class="blur-text">3-6个月</span>）</td>
+                            <td>78.. <strong>放射性核素治疗</strong><br>131I治疗分化型甲状腺癌—去除残留甲状腺组织的理由<br>①残留组织有<span class="answer-text">镜下微小癌灶</span>②残留组织去除后有利于<span class="answer-text">发现转移灶</span>③残留组织去除后利于检测<span class="answer-text">甲状腺球蛋白</span>对复发和转移判断④去除剂量131I全身显像可发现<span class="answer-text">诊断剂量不能发现的病灶</span><br>（重复治疗在前次131I治疗后<span class="answer-text">3-6个月</span>）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>91</td>
+                            <td>79.. <strong>放射性核素治疗</strong><br>89Sr治疗肿瘤骨转移<br>适应症:①<span class="blur-text">原发性骨肿瘤</span>未能手术切除或术后残留病灶或伴骨内多发转移者②<span class="blur-text">多发骨转移瘤</span>人群③易发生骨转移的恶性肿瘤（<span class="blur-text">乳腺癌</span>和<span class="blur-text">前列腺癌</span>约占80%，其次为肺癌、甲状腺癌、结直肠癌等）</td>
+                            <td>79.. <strong>放射性核素治疗</strong><br>89Sr治疗肿瘤骨转移<br>适应症:①<span class="answer-text">原发性骨肿瘤</span>未能手术切除或术后残留病灶或伴骨内多发转移者②<span class="answer-text">多发骨转移瘤</span>人群③易发生骨转移的恶性肿瘤（<span class="answer-text">乳腺癌</span>和<span class="answer-text">前列腺癌</span>约占80%，其次为肺癌、甲状腺癌、结直肠癌等）</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>92</td>
+                            <td>80.. <strong>放射性核素治疗</strong><br>125I治疗恶性肿瘤<br>适用于所有<span class="blur-text">实体性肿瘤</span><br>①原发灶如<span class="blur-text">前列腺癌</span>②<span class="blur-text">亚致死性放射损伤恢复能力较强</span>的肿瘤③<span class="blur-text">分化程度及生长缓慢</span>的肿瘤④原发灶扩散累及主要组织，不能用手术切除，或者手术后仍有残留肿瘤组织</td>
+                            <td>80.. <strong>放射性核素治疗</strong><br>125I治疗恶性肿瘤<br>适用于所有<span class="answer-text">实体性肿瘤</span><br>①原发灶如<span class="answer-text">前列腺癌</span>②<span class="answer-text">亚致死性放射损伤恢复能力较强</span>的肿瘤③<span class="answer-text">分化程度及生长缓慢</span>的肿瘤④原发灶扩散累及主要组织，不能用手术切除，或者手术后仍有残留肿瘤组织</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>

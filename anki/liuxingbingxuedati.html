@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习对照表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --card-bg: #ffffff;
+            --accent-red: #e63946;
+            --text-dark: #2b2d42;
+            --text-light: #6c757d;
+            --border-color: #e9ecef;
+            --blur-bg: rgba(139, 139, 139, 0.8);
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #ede9e4 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 0;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #2b2d42 0%, #3a3d52 100%);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        th {
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-dark);
+            border-bottom: 2px solid var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        tbody tr.title-row {
+            background: #fff8e1;
+            font-weight: 600;
+        }
+
+        tbody tr.title-row:hover {
+            background: #fff3cd;
+        }
+
+        tbody tr.title-row td {
+            padding: 15px 20px;
+            font-size: 1.05rem;
+            color: #856404;
+        }
+
+        td {
+            padding: 18px 20px;
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 60px;
+        }
+
+        .blur-text {
+            background: var(--blur-bg);
+            color: transparent;
+            border-radius: 6px;
+            padding: 2px 8px;
+            user-select: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+
+        .blur-text:hover {
+            background: transparent;
+            color: var(--accent-red);
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .answer-text {
+            background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(230, 57, 70, 0.05) 100%);
+            color: var(--accent-red);
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 2px solid rgba(230, 57, 70, 0.2);
+            display: inline-block;
+        }
+
+        /* 关键修复：确保加粗标签在复制出去的HTML中也有效果 */
+        strong {
+            font-weight: 700;
+        }
+
+        /* 确保strong在遮罩和答案框内也能正确显示 */
+        .answer-text strong,
+        .blur-text strong {
+            font-weight: 700;
+        }
+
+        @media (max-width: 968px) {
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-section">
+            <h3 class="section-title">流行病学大题</h3>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>练习模式（悬停显示答案）</th>
+                            <th>答案对照</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                        <tr>
+                            <td>1</td>
+                            <td>1.. <strong>流行病学的主要观点</strong><br><span class="blur-text">群体的观点</span>、<span class="blur-text">比较的观点</span>、<span class="blur-text">概率论的观点</span>、<span class="blur-text">社会医学的观点</span>、<span class="blur-text">多病因论的观点</span></td>
+                            <td>1.. <strong>流行病学的主要观点</strong><br><span class="answer-text">群体的观点</span>、<span class="answer-text">比较的观点</span>、<span class="answer-text">概率论的观点</span>、<span class="answer-text">社会医学的观点</span>、<span class="answer-text">多病因论的观点</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>2.. <strong>现况研究的特点</strong><br>①在设计阶段<span class="blur-text">一般不设立对照组</span>；②<span class="blur-text">特定时间</span>；③确定因果关系时<span class="blur-text">受到限制</span>；④对研究对象固有的暴露因素可以作<span class="blur-text">因果推断</span>；⑤用现在的暴露来<span class="blur-text">代替或估计过去情况</span>的条件；⑥定期重复进行可以获得<span class="blur-text">发病率资料</span>；⑦一般不用于<span class="blur-text">病程较短的疾病</span></td>
+                            <td>2.. <strong>现况研究的特点</strong><br>①在设计阶段<span class="answer-text">一般不设立对照组</span>；②<span class="answer-text">特定时间</span>；③确定因果关系时<span class="answer-text">受到限制</span>；④对研究对象固有的暴露因素可以作<span class="answer-text">因果推断</span>；⑤用现在的暴露来<span class="answer-text">代替或估计过去情况</span>的条件；⑥定期重复进行可以获得<span class="answer-text">发病率资料</span>；⑦一般不用于<span class="answer-text">病程较短的疾病</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>3.. <strong>单纯随机抽样的操作方法</strong><br>从总体<span class="blur-text">N个对象</span>中，利用<span class="blur-text">抽签</span>或<span class="blur-text">随机数字法</span>抽出<span class="blur-text">n个对象</span>组成一个样本，总体中每个对象被抽到的概率<span class="blur-text">相等</span>。</td>
+                            <td>3.. <strong>单纯随机抽样的操作方法</strong><br>从总体<span class="answer-text">N个对象</span>中，利用<span class="answer-text">抽签</span>或<span class="answer-text">随机数字法</span>抽出<span class="answer-text">n个对象</span>组成一个样本，总体中每个对象被抽到的概率<span class="answer-text">相等</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>4</td>
+                            <td>4.. <strong>系统抽样的操作方法</strong><br>按照<span class="blur-text">一定的顺序</span>，<span class="blur-text">机械的</span>每隔若干单位抽取一个单位的方法。设总体单位数为<span class="blur-text">N</span>，需要调查的样本设为<span class="blur-text">n</span>，则抽样比为<span class="blur-text">n/N</span>，抽样间隔为<span class="blur-text">K=N/n</span>。</td>
+                            <td>4.. <strong>系统抽样的操作方法</strong><br>按照<span class="answer-text">一定的顺序</span>，<span class="answer-text">机械的</span>每隔若干单位抽取一个单位的方法。设总体单位数为<span class="answer-text">N</span>，需要调查的样本设为<span class="answer-text">n</span>，则抽样比为<span class="answer-text">n/N</span>，抽样间隔为<span class="answer-text">K=N/n</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>5</td>
+                            <td>5.. <strong>分层抽样的操作方法</strong><br>根据某种特征将总体分为若干<span class="blur-text">次级总体（层）</span>，然后从每一层内进行<span class="blur-text">单纯随机抽样</span>组成一个样本。</td>
+                            <td>5.. <strong>分层抽样的操作方法</strong><br>根据某种特征将总体分为若干<span class="answer-text">次级总体（层）</span>，然后从每一层内进行<span class="answer-text">单纯随机抽样</span>组成一个样本。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>6</td>
+                            <td>6.. <strong>整群抽样的操作方法</strong><br>从总体中直接抽取若干个<span class="blur-text">群组</span>作为观察单位组成样本。被抽到的群组中<span class="blur-text">全部个体</span>均作为调查对象。</td>
+                            <td>6.. <strong>整群抽样的操作方法</strong><br>从总体中直接抽取若干个<span class="answer-text">群组</span>作为观察单位组成样本。被抽到的群组中<span class="answer-text">全部个体</span>均作为调查对象。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>7</td>
+                            <td>7.. <strong>多阶段抽样的操作方法</strong><br>在大型流行病学调查中，常同时将上面几种抽样方法结合起来使用，把抽样过程分为<span class="blur-text">不同阶段</span>。</td>
+                            <td>7.. <strong>多阶段抽样的操作方法</strong><br>在大型流行病学调查中，常同时将上面几种抽样方法结合起来使用，把抽样过程分为<span class="answer-text">不同阶段</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>8</td>
+                            <td>8.. <strong>现况研究的优点</strong><br>①常用<span class="blur-text">抽样调查</span>，结果具有较强<span class="blur-text">推广意义</span>；②有来自同一群体的自然形成的<span class="blur-text">同期对照组</span>，结果具有<span class="blur-text">可比性</span>；③可同时观察<span class="blur-text">多种因素</span></td>
+                            <td>8.. <strong>现况研究的优点</strong><br>①常用<span class="answer-text">抽样调查</span>，结果具有较强<span class="answer-text">推广意义</span>；②有来自同一群体的自然形成的<span class="answer-text">同期对照组</span>，结果具有<span class="answer-text">可比性</span>；③可同时观察<span class="answer-text">多种因素</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>9</td>
+                            <td>9.. <strong>现况研究的缺点</strong><br>①难以确定<span class="blur-text">先因后果的时相关系</span>；②不能获得<span class="blur-text">发病率资料</span></td>
+                            <td>9.. <strong>现况研究的缺点</strong><br>①难以确定<span class="answer-text">先因后果的时相关系</span>；②不能获得<span class="answer-text">发病率资料</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>10</td>
+                            <td>10.. <strong>队列研究的特点</strong><br>①时间上是<span class="blur-text">前瞻性的</span>；②属于<span class="blur-text">观察性研究</span>；③研究对象按<span class="blur-text">暴露与否</span>进行分组；④是从<span class="blur-text">因到果</span>的研究</td>
+                            <td>10.. <strong>队列研究的特点</strong><br>①时间上是<span class="answer-text">前瞻性的</span>；②属于<span class="answer-text">观察性研究</span>；③研究对象按<span class="answer-text">暴露与否</span>进行分组；④是从<span class="answer-text">因到果</span>的研究</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>11</td>
+                            <td>11.. <strong>队列研究的优点</strong><br>①收集的资料<span class="blur-text">完整可靠</span>，不存在<span class="blur-text">回忆偏倚</span>；②可以直接获得暴露组和非暴露组的<span class="blur-text">发病率或死亡率</span>；③可以直接计算<span class="blur-text">RR</span>、<span class="blur-text">AR</span>等指标反应暴露与疾病的<span class="blur-text">关联强度</span>；④因果关系顺序<span class="blur-text">明确</span>，可证实<span class="blur-text">因果联系</span>；⑤获得一种暴露与<span class="blur-text">多种结局</span>的关系</td>
+                            <td>11.. <strong>队列研究的优点</strong><br>①收集的资料<span class="answer-text">完整可靠</span>，不存在<span class="answer-text">回忆偏倚</span>；②可以直接获得暴露组和非暴露组的<span class="answer-text">发病率或死亡率</span>；③可以直接计算<span class="answer-text">RR</span>、<span class="answer-text">AR</span>等指标反应暴露与疾病的<span class="answer-text">关联强度</span>；④因果关系顺序<span class="answer-text">明确</span>，可证实<span class="answer-text">因果联系</span>；⑤获得一种暴露与<span class="answer-text">多种结局</span>的关系</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>12</td>
+                            <td>12.. <strong>队列研究的局限性</strong><br>①不适于<span class="blur-text">发病率很低的疾病</span>的病因研究；②易发生<span class="blur-text">失访偏倚</span>；③耗费的<span class="blur-text">时间</span>、<span class="blur-text">人力</span>、<span class="blur-text">物力</span>、<span class="blur-text">财力</span>较多，不易实施；④由于随访时间较长，容易产生<span class="blur-text">失访偏倚</span>；⑤随访过程中已知变量的变化或未知变量的引入等可使结局受到影响，增加<span class="blur-text">分析难度</span></td>
+                            <td>12.. <strong>队列研究的局限性</strong><br>①不适于<span class="answer-text">发病率很低的疾病</span>的病因研究；②易发生<span class="answer-text">失访偏倚</span>；③耗费的<span class="answer-text">时间</span>、<span class="answer-text">人力</span>、<span class="answer-text">物力</span>、<span class="answer-text">财力</span>较多，不易实施；④由于随访时间较长，容易产生<span class="answer-text">失访偏倚</span>；⑤随访过程中已知变量的变化或未知变量的引入等可使结局受到影响，增加<span class="answer-text">分析难度</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>13</td>
+                            <td>13.. <strong>混杂偏倚的概念</strong><br>研究因素与疾病之间的关联强度受到其他因素的<span class="blur-text">歪曲或干扰</span>而产生的<span class="blur-text">系统误差</span>。</td>
+                            <td>13.. <strong>混杂偏倚的概念</strong><br>研究因素与疾病之间的关联强度受到其他因素的<span class="answer-text">歪曲或干扰</span>而产生的<span class="answer-text">系统误差</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>14</td>
+                            <td>14.. <strong>混杂因素的特点</strong><br>①是<span class="blur-text">疾病的危险因素</span>；②与<span class="blur-text">研究因素</span>有关；③不是<span class="blur-text">研究因素与疾病因果链上的中间病因</span></td>
+                            <td>14.. <strong>混杂因素的特点</strong><br>①是<span class="answer-text">疾病的危险因素</span>；②与<span class="answer-text">研究因素</span>有关；③不是<span class="answer-text">研究因素与疾病因果链上的中间病因</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>15</td>
+                            <td>15.. <strong>混杂偏倚的解决措施</strong><br>（1）研究设计阶段：<span class="blur-text">随机化</span>、<span class="blur-text">限制</span>、<span class="blur-text">匹配</span><br>（2）资料分析阶段：<span class="blur-text">标准化</span>、<span class="blur-text">分层分析</span>、<span class="blur-text">多因素分析</span></td>
+                            <td>15.. <strong>混杂偏倚的解决措施</strong><br>（1）研究设计阶段：<span class="answer-text">随机化</span>、<span class="answer-text">限制</span>、<span class="answer-text">匹配</span><br>（2）资料分析阶段：<span class="answer-text">标准化</span>、<span class="answer-text">分层分析</span>、<span class="answer-text">多因素分析</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>16</td>
+                            <td>16.. <strong>病例对照研究的优点</strong><br>①适用于<span class="blur-text">罕见的</span>、<span class="blur-text">潜伏期长的</span>疾病的研究，也适用于研究一些<span class="blur-text">新出现</span>或<span class="blur-text">原因不明</span>的疾病，广泛探索其影响因素；②<span class="blur-text">省力</span>、<span class="blur-text">省钱</span>、<span class="blur-text">省时间</span>，易于组织实施；③同时研究<span class="blur-text">多个暴露因素</span>与疾病的关系；④不仅用于<span class="blur-text">病因探讨</span>，而且可广泛用于其他方面</td>
+                            <td>16.. <strong>病例对照研究的优点</strong><br>①适用于<span class="answer-text">罕见的</span>、<span class="answer-text">潜伏期长的</span>疾病的研究，也适用于研究一些<span class="answer-text">新出现</span>或<span class="answer-text">原因不明</span>的疾病，广泛探索其影响因素；②<span class="answer-text">省力</span>、<span class="answer-text">省钱</span>、<span class="answer-text">省时间</span>，易于组织实施；③同时研究<span class="answer-text">多个暴露因素</span>与疾病的关系；④不仅用于<span class="answer-text">病因探讨</span>，而且可广泛用于其他方面</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>17</td>
+                            <td>17.. <strong>病例对照研究的缺点</strong><br>①不适于研究人群暴露比例<span class="blur-text">很低</span>的因素；②易发生各种偏倚，尤其是难以避免<span class="blur-text">回忆偏倚</span>；③难以确定暴露和疾病的<span class="blur-text">时间先后顺序</span>，无法确证<span class="blur-text">因果关联</span>；④不能计算<span class="blur-text">发病率</span>，只能估计<span class="blur-text">相对危险度</span></td>
+                            <td>17.. <strong>病例对照研究的缺点</strong><br>①不适于研究人群暴露比例<span class="answer-text">很低</span>的因素；②易发生各种偏倚，尤其是难以避免<span class="answer-text">回忆偏倚</span>；③难以确定暴露和疾病的<span class="answer-text">时间先后顺序</span>，无法确证<span class="answer-text">因果关联</span>；④不能计算<span class="answer-text">发病率</span>，只能估计<span class="answer-text">相对危险度</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>18</td>
+                            <td>18.. <strong>临床随机对照试验的基本原则</strong><br><span class="blur-text">对照原则</span>、<span class="blur-text">随机化原则</span>、<span class="blur-text">盲法原则</span>、<span class="blur-text">重复原则</span></td>
+                            <td>18.. <strong>临床随机对照试验的基本原则</strong><br><span class="answer-text">对照原则</span>、<span class="answer-text">随机化原则</span>、<span class="answer-text">盲法原则</span>、<span class="answer-text">重复原则</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>19</td>
+                            <td>19.. <strong>实验流行病学研究的优点</strong><br>①采用<span class="blur-text">随机化分组</span>，两组之间除干预措施外，其他基本特征相似，具有较高的<span class="blur-text">可比性</span>，减少了<span class="blur-text">混杂偏倚</span>。②为<span class="blur-text">前瞻性研究</span>，在整个试验过程中，通过随访将研究对象的反应和结局自始至终观察到底，试验组和对照组<span class="blur-text">同步进行比较</span>，最终做出肯定性的结论，检验假设的能力比<span class="blur-text">队列研究</span>强。③有助于了解<span class="blur-text">疾病的自然史</span>，可以获得一种干预与<span class="blur-text">多种结局</span>的关系。</td>
+                            <td>19.. <strong>实验流行病学研究的优点</strong><br>①采用<span class="answer-text">随机化分组</span>，两组之间除干预措施外，其他基本特征相似，具有较高的<span class="answer-text">可比性</span>，减少了<span class="answer-text">混杂偏倚</span>。②为<span class="answer-text">前瞻性研究</span>，在整个试验过程中，通过随访将研究对象的反应和结局自始至终观察到底，试验组和对照组<span class="answer-text">同步进行比较</span>，最终做出肯定性的结论，检验假设的能力比<span class="answer-text">队列研究</span>强。③有助于了解<span class="answer-text">疾病的自然史</span>，可以获得一种干预与<span class="answer-text">多种结局</span>的关系。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>20</td>
+                            <td>20.. <strong>实验流行病学研究的缺点</strong><br>①设计和实施<span class="blur-text">难度高</span>。②受干预措施<span class="blur-text">适用范围</span>的约束，所选择的研究对象代表性不够，影响试验结果推论到总体。③有时对照组不使用药物或其他疗法治疗，只使用<span class="blur-text">安慰剂</span>或受试药物的疗效不如传统药物或存在副作用，会存在<span class="blur-text">伦理学</span>的问题。</td>
+                            <td>20.. <strong>实验流行病学研究的缺点</strong><br>①设计和实施<span class="answer-text">难度高</span>。②受干预措施<span class="answer-text">适用范围</span>的约束，所选择的研究对象代表性不够，影响试验结果推论到总体。③有时对照组不使用药物或其他疗法治疗，只使用<span class="answer-text">安慰剂</span>或受试药物的疗效不如传统药物或存在副作用，会存在<span class="answer-text">伦理学</span>的问题。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>21</td>
+                            <td>21.. <strong>影响人群易感性变化的因素</strong><br>（1）影响人群易感性升高的主要因素：①<span class="blur-text">新生儿增加</span>；②<span class="blur-text">易感人口迁入</span>；③<span class="blur-text">免疫人口减少</span>；④<span class="blur-text">病原体变异</span><br>（2）影响人群易感性降低的主要因素：①<span class="blur-text">预防接种</span>；②<span class="blur-text">传染病流行</span>；③<span class="blur-text">隐性感染</span></td>
+                            <td>21.. <strong>影响人群易感性变化的因素</strong><br>（1）影响人群易感性升高的主要因素：①<span class="answer-text">新生儿增加</span>；②<span class="answer-text">易感人口迁入</span>；③<span class="answer-text">免疫人口减少</span>；④<span class="answer-text">病原体变异</span><br>（2）影响人群易感性降低的主要因素：①<span class="answer-text">预防接种</span>；②<span class="answer-text">传染病流行</span>；③<span class="answer-text">隐性感染</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>22</td>
+                            <td>22.. <strong>疫源地及疫源地消灭的条件</strong><br>（1）疫源地：是指<span class="blur-text">传染源</span>及其排出的<span class="blur-text">病原体</span>向周围所能波及的范围，即可能发生<span class="blur-text">新病例</span>或<span class="blur-text">新感染</span>的区域。<br>（2）疫源地消灭的条件：①<span class="blur-text">传染源被移走</span>（如隔离、死亡）或<span class="blur-text">不再排出病原体</span>（治愈）。</td>
+                            <td>22.. <strong>疫源地及疫源地消灭的条件</strong><br>（1）疫源地：是指<span class="answer-text">传染源</span>及其排出的<span class="answer-text">病原体</span>向周围所能波及的范围，即可能发生<span class="answer-text">新病例</span>或<span class="answer-text">新感染</span>的区域。<br>（2）疫源地消灭的条件：①<span class="answer-text">传染源被移走</span>（如隔离、死亡）或<span class="answer-text">不再排出病原体</span>（治愈）。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>23</td>
+                            <td>23.. <strong>潜伏期的流行病学意义及用途</strong><br>①根据潜伏期可以判断病人<span class="blur-text">受感染的时间</span>，以<span class="blur-text">追踪传染源</span>，寻找<span class="blur-text">传播途径</span>；②确定<span class="blur-text">接受者的留验</span>、<span class="blur-text">检疫</span>或<span class="blur-text">医学观察期限</span>；③确定<span class="blur-text">免疫接种时间</span>；④评价<span class="blur-text">预防措施效果</span>；⑤潜伏期长短可以影响疾病的<span class="blur-text">流行特征</span>。</td>
+                            <td>23.. <strong>潜伏期的流行病学意义及用途</strong><br>①根据潜伏期可以判断病人<span class="answer-text">受感染的时间</span>，以<span class="answer-text">追踪传染源</span>，寻找<span class="answer-text">传播途径</span>；②确定<span class="answer-text">接受者的留验</span>、<span class="answer-text">检疫</span>或<span class="answer-text">医学观察期限</span>；③确定<span class="answer-text">免疫接种时间</span>；④评价<span class="answer-text">预防措施效果</span>；⑤潜伏期长短可以影响疾病的<span class="answer-text">流行特征</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>24</td>
+                            <td>24.. <strong>筛查和诊断试验的评价指标</strong><br>（1）真实性评价：<span class="blur-text">灵敏度</span>、<span class="blur-text">特异度</span>、<span class="blur-text">假阳性率</span>、<span class="blur-text">假阴性率</span>、<span class="blur-text">阳性似然比</span>、<span class="blur-text">阴性似然比</span>、<span class="blur-text">约登指数</span><br>（2）可靠性评价：<span class="blur-text">变异系数</span>、<span class="blur-text">符合率</span>、<span class="blur-text">一致性检验</span><br>（3）收益：<span class="blur-text">阳性预测值</span>、<span class="blur-text">阴性预测值</span></td>
+                            <td>24.. <strong>筛查和诊断试验的评价指标</strong><br>（1）真实性评价：<span class="answer-text">灵敏度</span>、<span class="answer-text">特异度</span>、<span class="answer-text">假阳性率</span>、<span class="answer-text">假阴性率</span>、<span class="answer-text">阳性似然比</span>、<span class="answer-text">阴性似然比</span>、<span class="answer-text">约登指数</span><br>（2）可靠性评价：<span class="answer-text">变异系数</span>、<span class="answer-text">符合率</span>、<span class="answer-text">一致性检验</span><br>（3）收益：<span class="answer-text">阳性预测值</span>、<span class="answer-text">阴性预测值</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>25</td>
+                            <td>25.. <strong>Mill准则</strong><br>①<span class="blur-text">求同法</span>：又称异中求同法，是指在不同事件中寻求其共同点。②<span class="blur-text">求异法</span>：又称同中求异法，是指在相似的事件之间寻求不同点。③<span class="blur-text">共变法</span>：是指某因素出现的频率和强度发生变化，某病发生的频率与强度也随之变化，则该因素很可能是该病的病因，二者间往往成<span class="blur-text">剂量-反应关系</span>。④<span class="blur-text">类推法</span>：是指所研究的某种疾病的病因和分布与另一种病因已知的疾病的分布特征相似，那么可以推测这两种疾病的病因可能相同。⑤<span class="blur-text">排除法</span>：指通过对假设的排除而建立假设的方法。</td>
+                            <td>25.. <strong>Mill准则</strong><br>①<span class="answer-text">求同法</span>：又称异中求同法，是指在不同事件中寻求其共同点。②<span class="answer-text">求异法</span>：又称同中求异法，是指在相似的事件之间寻求不同点。③<span class="answer-text">共变法</span>：是指某因素出现的频率和强度发生变化，某病发生的频率与强度也随之变化，则该因素很可能是该病的病因，二者间往往成<span class="answer-text">剂量-反应关系</span>。④<span class="answer-text">类推法</span>：是指所研究的某种疾病的病因和分布与另一种病因已知的疾病的分布特征相似，那么可以推测这两种疾病的病因可能相同。⑤<span class="answer-text">排除法</span>：指通过对假设的排除而建立假设的方法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>26</td>
+                            <td>26.. <strong>因果联系的推断标准</strong><br>①<span class="blur-text">关联的时间顺序</span>：有因才有果，因一定先于果。实验研究、前瞻性研究中容易判断，病例对照研究或横断面研究中常难以判断。②<span class="blur-text">关联的强度</span>：用<span class="blur-text">相对危险度（RR）</span>或<span class="blur-text">比值比（OR）</span>表示，关联的强度越大，则该因素与某种疾病的因果关系可能性就越大。③<span class="blur-text">关联的可重复性</span>：指在不同的人群、不同的地区、不同的时间由不同的研究者用不同的研究方法进行研究，均可获得相同的结果。④<span class="blur-text">关联的特异性</span>：是指病因与疾病有严格的对应关系，即某种因素只能引起某种特定的疾病，某种疾病只能由某种因素引起。⑤<span class="blur-text">剂量反应关系</span>：随着某因素暴露剂量的增加，人群中发生某疾病的频率随之增加，因果联系的强度增大，则认为该因素与该疾病间存在剂量反应关系。⑥<span class="blur-text">关联的生物学合理性</span>：暴露与疾病的关联应该具有生物学上的合理性，应该符合疾病的自然史和生物学原理，在科学上应言之有理，即用现代医学知识可以对其作出解释。⑦<span class="blur-text">实验证据</span>：观察性研究的结果如能得到实验证据的证实，则说服力大大提高。⑧<span class="blur-text">因素与疾病分布的一致性</span>：是指研究的因素与疾病二者的分布相符合。⑨<span class="blur-text">相似性</span>：是指如果已知某化学物有致病作用，当发现另一种类似的化学物与某种疾病有联系时，则两者因果关系成立的可能性也较大。</td>
+                            <td>26.. <strong>因果联系的推断标准</strong><br>①<span class="answer-text">关联的时间顺序</span>：有因才有果，因一定先于果。实验研究、前瞻性研究中容易判断，病例对照研究或横断面研究中常难以判断。②<span class="answer-text">关联的强度</span>：用<span class="answer-text">相对危险度（RR）</span>或<span class="answer-text">比值比（OR）</span>表示，关联的强度越大，则该因素与某种疾病的因果关系可能性就越大。③<span class="answer-text">关联的可重复性</span>：指在不同的人群、不同的地区、不同的时间由不同的研究者用不同的研究方法进行研究，均可获得相同的结果。④<span class="answer-text">关联的特异性</span>：是指病因与疾病有严格的对应关系，即某种因素只能引起某种特定的疾病，某种疾病只能由某种因素引起。⑤<span class="answer-text">剂量反应关系</span>：随着某因素暴露剂量的增加，人群中发生某疾病的频率随之增加，因果联系的强度增大，则认为该因素与该疾病间存在剂量反应关系。⑥<span class="answer-text">关联的生物学合理性</span>：暴露与疾病的关联应该具有生物学上的合理性，应该符合疾病的自然史和生物学原理，在科学上应言之有理，即用现代医学知识可以对其作出解释。⑦<span class="answer-text">实验证据</span>：观察性研究的结果如能得到实验证据的证实，则说服力大大提高。⑧<span class="answer-text">因素与疾病分布的一致性</span>：是指研究的因素与疾病二者的分布相符合。⑨<span class="answer-text">相似性</span>：是指如果已知某化学物有致病作用，当发现另一种类似的化学物与某种疾病有联系时，则两者因果关系成立的可能性也较大。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>27</td>
+                            <td>27.. <strong>传染病流行过程及影响因素</strong><br>（1）流行过程是指传染病在人群中<span class="blur-text">发生、蔓延</span>的过程，即传染病从感染者体内排出，经过一定的<span class="blur-text">传播途径</span>，侵入易感者机体而形成新的感染，并不断发生、发展的过程。包括三个基本环节：①<span class="blur-text">传染源</span>：<span class="blur-text">病人</span>、<span class="blur-text">病原携带者</span>、<span class="blur-text">受感染的动物</span>。②<span class="blur-text">传播途径</span>：<span class="blur-text">经空气传播</span>、<span class="blur-text">经水传播</span>、<span class="blur-text">经食物传播</span>、<span class="blur-text">经接触传播</span>、<span class="blur-text">经虫媒传播</span>、<span class="blur-text">经土壤传播</span>、<span class="blur-text">医源性传播</span>、<span class="blur-text">垂直传播</span>。③<span class="blur-text">人群易感性</span><br>（2）影响因素：①<span class="blur-text">自然因素</span>；②<span class="blur-text">社会因素</span>：生产环境和生产方式，生活条件和生活方式，社会动荡和社会制度，人口增加和人口流动，医疗卫生条件。</td>
+                            <td>27.. <strong>传染病流行过程及影响因素</strong><br>（1）流行过程是指传染病在人群中<span class="answer-text">发生、蔓延</span>的过程，即传染病从感染者体内排出，经过一定的<span class="answer-text">传播途径</span>，侵入易感者机体而形成新的感染，并不断发生、发展的过程。包括三个基本环节：①<span class="answer-text">传染源</span>：<span class="answer-text">病人</span>、<span class="answer-text">病原携带者</span>、<span class="answer-text">受感染的动物</span>。②<span class="answer-text">传播途径</span>：<span class="answer-text">经空气传播</span>、<span class="answer-text">经水传播</span>、<span class="answer-text">经食物传播</span>、<span class="answer-text">经接触传播</span>、<span class="answer-text">经虫媒传播</span>、<span class="answer-text">经土壤传播</span>、<span class="answer-text">医源性传播</span>、<span class="answer-text">垂直传播</span>。③<span class="answer-text">人群易感性</span><br>（2）影响因素：①<span class="answer-text">自然因素</span>；②<span class="answer-text">社会因素</span>：生产环境和生产方式，生活条件和生活方式，社会动荡和社会制度，人口增加和人口流动，医疗卫生条件。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>28</td>
+                            <td>28.. <strong>病例对照研究与队列研究的异同点</strong><br>（1）相同点：都是<span class="blur-text">分析性研究</span>，<span class="blur-text">验证病因假设</span><br>（2）不同点：①时间顺序：病例对照研究<span class="blur-text">由果推因</span>，队列研究<span class="blur-text">由因到果</span>；②分组因素：病例对照研究<span class="blur-text">疾病</span>，队列研究<span class="blur-text">暴露</span>；③适合的疾病：病例对照研究<span class="blur-text">发病率低</span>，队列研究<span class="blur-text">发病率高</span>；④关联强度指标：病例对照研究<span class="blur-text">OR</span>，队列研究<span class="blur-text">RR</span>、<span class="blur-text">AR</span>、<span class="blur-text">ARP</span>、<span class="blur-text">PARP</span>；⑤实施难度：病例对照研究<span class="blur-text">较易</span>，队列研究<span class="blur-text">较难</span>；⑥常见偏倚：病例对照研究<span class="blur-text">信息偏倚</span>，队列研究<span class="blur-text">失访偏倚</span>；⑦验证假设能力：病例对照研究<span class="blur-text">较弱</span>，队列研究<span class="blur-text">较强</span></td>
+                            <td>28.. <strong>病例对照研究与队列研究的异同点</strong><br>（1）相同点：都是<span class="answer-text">分析性研究</span>，<span class="answer-text">验证病因假设</span><br>（2）不同点：①时间顺序：病例对照研究<span class="answer-text">由果推因</span>，队列研究<span class="answer-text">由因到果</span>；②分组因素：病例对照研究<span class="answer-text">疾病</span>，队列研究<span class="answer-text">暴露</span>；③适合的疾病：病例对照研究<span class="answer-text">发病率低</span>，队列研究<span class="answer-text">发病率高</span>；④关联强度指标：病例对照研究<span class="answer-text">OR</span>，队列研究<span class="answer-text">RR</span>、<span class="answer-text">AR</span>、<span class="answer-text">ARP</span>、<span class="answer-text">PARP</span>；⑤实施难度：病例对照研究<span class="answer-text">较易</span>，队列研究<span class="answer-text">较难</span>；⑥常见偏倚：病例对照研究<span class="answer-text">信息偏倚</span>，队列研究<span class="answer-text">失访偏倚</span>；⑦验证假设能力：病例对照研究<span class="answer-text">较弱</span>，队列研究<span class="answer-text">较强</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>29</td>
+                            <td>29.. <strong>评价诊断试验指标的计算方法</strong><br>（1）灵敏度(Se)：是指评价诊断试验<span class="blur-text">发现病人的能力</span>，即实际有病且被诊断试验正确的判为<span class="blur-text">有病</span>的概率。Se=(<span class="blur-text">a/a+c</span>)×100%<br>（2）特异度(Sp)：是指诊断试验<span class="blur-text">排除没有病人的人</span>的能力，即实际无病按该诊断试验被正确的判为<span class="blur-text">无病</span>的概率。Sp=(<span class="blur-text">d/b+d</span>)×100%<br>（3）阳性似然比(LR+)：<span class="blur-text">真阳性率</span>与<span class="blur-text">假阳性率</span>的比值。LR+=(<span class="blur-text">a/a+c</span>)/(<span class="blur-text">b/b+d</span>)=Se/(1-Se)<br>（4）阴性似然比(LR-)：<span class="blur-text">假阴性率</span>与<span class="blur-text">真阴性率</span>的比值。LR-=(<span class="blur-text">c/a+c</span>)/(<span class="blur-text">d/b+d</span>)=(1-Se)/Sp<br>（5）约登指数(YI)：也称<span class="blur-text">正确诊断指数</span>，<span class="blur-text">灵敏度</span>与<span class="blur-text">特异度</span>之和减1。YI=灵敏度+特异度-1=1-(假阳性率+假阴性率)</td>
+                            <td>29.. <strong>评价诊断试验指标的计算方法</strong><br>（1）灵敏度(Se)：是指评价诊断试验<span class="answer-text">发现病人的能力</span>，即实际有病且被诊断试验正确的判为<span class="answer-text">有病</span>的概率。Se=(<span class="answer-text">a/a+c</span>)×100%<br>（2）特异度(Sp)：是指诊断试验<span class="answer-text">排除没有病人的人</span>的能力，即实际无病按该诊断试验被正确的判为<span class="answer-text">无病</span>的概率。Sp=(<span class="answer-text">d/b+d</span>)×100%<br>（3）阳性似然比(LR+)：<span class="answer-text">真阳性率</span>与<span class="answer-text">假阳性率</span>的比值。LR+=(<span class="answer-text">a/a+c</span>)/(<span class="answer-text">b/b+d</span>)=Se/(1-Se)<br>（4）阴性似然比(LR-)：<span class="answer-text">假阴性率</span>与<span class="answer-text">真阴性率</span>的比值。LR-=(<span class="answer-text">c/a+c</span>)/(<span class="answer-text">d/b+d</span>)=(1-Se)/Sp<br>（5）约登指数(YI)：也称<span class="answer-text">正确诊断指数</span>，<span class="answer-text">灵敏度</span>与<span class="answer-text">特异度</span>之和减1。YI=灵敏度+特异度-1=1-(假阳性率+假阴性率)</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>30</td>
+                            <td>30.. <strong>阳性及阴性预测值的含义、计算方法及影响因素</strong><br>（1）含义：①阳性预测值：是诊断试验结果为<span class="blur-text">阳性</span>的对象中真正是<span class="blur-text">病人</span>的概率。②阴性预测值：是诊断试验结果为<span class="blur-text">阴性</span>的对象中真正<span class="blur-text">无病</span>的概率。<br>（2）计算方法：阳性预测值=<span class="blur-text">a/(a+b)</span>×100%；阴性预测值=<span class="blur-text">d/(c+d)</span>×100%<br>（3）影响因素：①<span class="blur-text">灵敏度</span>、<span class="blur-text">特异度</span>：一般来说患病率相同时，诊断试验的灵敏度越高，则阴性预测值越高；特异度越高，则阳性预测值越高。②<span class="blur-text">疾病的患病率</span>：当一项诊断试验的灵敏度和特异度确定后，阳性预测值和患病率呈<span class="blur-text">正比</span>，阴性预测值与患病率成<span class="blur-text">反比</span>。</td>
+                            <td>30.. <strong>阳性及阴性预测值的含义、计算方法及影响因素</strong><br>（1）含义：①阳性预测值：是诊断试验结果为<span class="answer-text">阳性</span>的对象中真正是<span class="answer-text">病人</span>的概率。②阴性预测值：是诊断试验结果为<span class="answer-text">阴性</span>的对象中真正<span class="answer-text">无病</span>的概率。<br>（2）计算方法：阳性预测值=<span class="answer-text">a/(a+b)</span>×100%；阴性预测值=<span class="answer-text">d/(c+d)</span>×100%<br>（3）影响因素：①<span class="answer-text">灵敏度</span>、<span class="answer-text">特异度</span>：一般来说患病率相同时，诊断试验的灵敏度越高，则阴性预测值越高；特异度越高，则阳性预测值越高。②<span class="answer-text">疾病的患病率</span>：当一项诊断试验的灵敏度和特异度确定后，阳性预测值和患病率呈<span class="answer-text">正比</span>，阴性预测值与患病率成<span class="answer-text">反比</span>。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>31</td>
+                            <td>31.. <strong>疾病感染谱的定义及分类</strong><br>（1）定义：是指宿主机体对病原体传染过程反应<span class="blur-text">轻重程度的频率</span>。<br>（2）分类：①以<span class="blur-text">隐性感染</span>为主；②以<span class="blur-text">显性感染</span>为主；③大部分感染者以<span class="blur-text">死亡</span>为结局</td>
+                            <td>31.. <strong>疾病感染谱的定义及分类</strong><br>（1）定义：是指宿主机体对病原体传染过程反应<span class="answer-text">轻重程度的频率</span>。<br>（2）分类：①以<span class="answer-text">隐性感染</span>为主；②以<span class="answer-text">显性感染</span>为主；③大部分感染者以<span class="answer-text">死亡</span>为结局</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>32</td>
+                            <td>32.. <strong>并联试验和串联试验的结果判断及对灵敏度和特异度的影响</strong><br>（1）结果判断：①并联试验：即同时应用<span class="blur-text">多个诊断试验</span>进行诊断，只要有任何一项诊断结果为<span class="blur-text">阳性</span>就可定为阳性，只有全部试验结果均为<span class="blur-text">阴性</span>，才将最终结果判断为阴性。②串联试验：即<span class="blur-text">依次</span>应用多项诊断试验进行诊断，全部试验结果为<span class="blur-text">阳性</span>，才将最终结果判断为阳性，任何一项试验结果为<span class="blur-text">阴性</span>就可以定为最终结果阴性。<br>（2）对灵敏度和特异度的影响：①并联试验：<span class="blur-text">提高灵敏度</span>，<span class="blur-text">降低特异度</span>；②串联试验：<span class="blur-text">提高特异度</span>，<span class="blur-text">降低灵敏度</span></td>
+                            <td>32.. <strong>并联试验和串联试验的结果判断及对灵敏度和特异度的影响</strong><br>（1）结果判断：①并联试验：即同时应用<span class="answer-text">多个诊断试验</span>进行诊断，只要有任何一项诊断结果为<span class="answer-text">阳性</span>就可定为阳性，只有全部试验结果均为<span class="answer-text">阴性</span>，才将最终结果判断为阴性。②串联试验：即<span class="answer-text">依次</span>应用多项诊断试验进行诊断，全部试验结果为<span class="answer-text">阳性</span>，才将最终结果判断为阳性，任何一项试验结果为<span class="answer-text">阴性</span>就可以定为最终结果阴性。<br>（2）对灵敏度和特异度的影响：①并联试验：<span class="answer-text">提高灵敏度</span>，<span class="answer-text">降低特异度</span>；②串联试验：<span class="answer-text">提高特异度</span>，<span class="answer-text">降低灵敏度</span></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>33</td>
+                            <td>33.. <strong>临床试验对照的目的及常用方法</strong><br>（1）目的：消除<span class="blur-text">非研究因素</span>的干扰，以便得出正确的结论。<br>（2）常用的对照方法：①<span class="blur-text">标准对照</span>：或称阳性对照，以现行<span class="blur-text">最有效</span>或临床上<span class="blur-text">最常用</span>的药物或治疗方法作为对照，用以判断新药或新疗法是否<span class="blur-text">优于</span>该药物或疗法。②<span class="blur-text">空白对照</span>：对照组在试验期间<span class="blur-text">不给任何处理</span>，仅对他们进行观察、记录结果。③<span class="blur-text">安慰剂对照</span>：或称阴性对照，安慰剂常用没有作用的<span class="blur-text">淀粉</span>、<span class="blur-text">乳糖</span>、<span class="blur-text">生理盐水</span>等制成，目的是为消除<span class="blur-text">主观因素</span>的影响。④<span class="blur-text">自身对照</span>：受试者要接受前后两个阶段、<span class="blur-text">两种不同的处理措施</span>，然后对其效果进行比较。⑤<span class="blur-text">交叉对照</span>：是一种特殊的<span class="blur-text">自身前后对照</span>试验技能，自身前后对照又可分析<span class="blur-text">用药顺序</span>对疗效的影响。⑥<span class="blur-text">互相对照</span>：如果同时研究<span class="blur-text">几种药物或治疗方法</span>时，可以不设专门的对照，各组之间互为对照，从中选出两项最好的药物或疗法。</td>
+                            <td>33.. <strong>临床试验对照的目的及常用方法</strong><br>（1）目的：消除<span class="answer-text">非研究因素</span>的干扰，以便得出正确的结论。<br>（2）常用的对照方法：①<span class="answer-text">标准对照</span>：或称阳性对照，以现行<span class="answer-text">最有效</span>或临床上<span class="answer-text">最常用</span>的药物或治疗方法作为对照，用以判断新药或新疗法是否<span class="answer-text">优于</span>该药物或疗法。②<span class="answer-text">空白对照</span>：对照组在试验期间<span class="answer-text">不给任何处理</span>，仅对他们进行观察、记录结果。③<span class="answer-text">安慰剂对照</span>：或称阴性对照，安慰剂常用没有作用的<span class="answer-text">淀粉</span>、<span class="answer-text">乳糖</span>、<span class="answer-text">生理盐水</span>等制成，目的是为消除<span class="answer-text">主观因素</span>的影响。④<span class="answer-text">自身对照</span>：受试者要接受前后两个阶段、<span class="answer-text">两种不同的处理措施</span>，然后对其效果进行比较。⑤<span class="answer-text">交叉对照</span>：是一种特殊的<span class="answer-text">自身前后对照</span>试验技能，自身前后对照又可分析<span class="answer-text">用药顺序</span>对疗效的影响。⑥<span class="answer-text">互相对照</span>：如果同时研究<span class="answer-text">几种药物或治疗方法</span>时，可以不设专门的对照，各组之间互为对照，从中选出两项最好的药物或疗法。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>34</td>
+                            <td>34.. <strong>队列研究人群的选择</strong><br>（1）暴露组的选择：①<span class="blur-text">职业人群</span>：如果要研究某种可疑的<span class="blur-text">职业暴露因素</span>与疾病或健康的关系，必须选择<span class="blur-text">相关职业人群</span>作为暴露人群。②<span class="blur-text">特殊暴露人群</span>：指由于某种原因对某因素有<span class="blur-text">较高暴露水平</span>的人群。如果暴露因素与疾病有关，则高度暴露人群中疾病发病率或死亡率<span class="blur-text">高于</span>其他人群，将有利于探索暴露与疾病之间的联系，有时甚至是研究某些<span class="blur-text">罕见暴露</span>的唯一选择。③<span class="blur-text">一般人群</span>：即某<span class="blur-text">行政区域</span>或<span class="blur-text">地理区域</span>范围内的全体人群。从中选择暴露于研究因素者作为暴露组，而不暴露于该因素者作为非暴露组，这样，研究人群的<span class="blur-text">代表性</span>更好。④<span class="blur-text">有组织的人群团体</span>：即某些<span class="blur-text">群众组织</span>或<span class="blur-text">专业团体成员</span>、<span class="blur-text">机关或社会团体成员</span>、<span class="blur-text">部队成员</span>、<span class="blur-text">参加人社保险或保险的人员</span>。该类人群可看作是一般人群的特殊形式，其优势是组织系统较完善，更便于收集<span class="blur-text">随访资料</span>，而且暴露组和对照组有相似的经历，<span class="blur-text">可比性</span>较好。<br>（2）对照人群的选择：①<span class="blur-text">内对照</span>：如果在一般人群或有组织的人群团体中选择暴露于所研究因素的对象作为暴露组，那么其余<span class="blur-text">非暴露者</span>就可作为对照组。②<span class="blur-text">外对照</span>：当选择<span class="blur-text">职业人群</span>或<span class="blur-text">特殊暴露人群</span>作为暴露组时，往往不能从这些人群中选出足够数量的具有可比性的对照，常需在该人群之外寻找对照组。③<span class="blur-text">总人口对照</span>：即在采用职业人群或特殊暴露人群作为暴露组时，以该地区<span class="blur-text">全人口</span>的发病或死亡率作为对照。④<span class="blur-text">多重对照</span>：同时选取上述<span class="blur-text">两种或两种以上</span>形式的对照。</td>
+                            <td>34.. <strong>队列研究人群的选择</strong><br>（1）暴露组的选择：①<span class="answer-text">职业人群</span>：如果要研究某种可疑的<span class="answer-text">职业暴露因素</span>与疾病或健康的关系，必须选择<span class="answer-text">相关职业人群</span>作为暴露人群。②<span class="answer-text">特殊暴露人群</span>：指由于某种原因对某因素有<span class="answer-text">较高暴露水平</span>的人群。如果暴露因素与疾病有关，则高度暴露人群中疾病发病率或死亡率<span class="answer-text">高于</span>其他人群，将有利于探索暴露与疾病之间的联系，有时甚至是研究某些<span class="answer-text">罕见暴露</span>的唯一选择。③<span class="answer-text">一般人群</span>：即某<span class="answer-text">行政区域</span>或<span class="answer-text">地理区域</span>范围内的全体人群。从中选择暴露于研究因素者作为暴露组，而不暴露于该因素者作为非暴露组，这样，研究人群的<span class="answer-text">代表性</span>更好。④<span class="answer-text">有组织的人群团体</span>：即某些<span class="answer-text">群众组织</span>或<span class="answer-text">专业团体成员</span>、<span class="answer-text">机关或社会团体成员</span>、<span class="answer-text">部队成员</span>、<span class="answer-text">参加人社保险或保险的人员</span>。该类人群可看作是一般人群的特殊形式，其优势是组织系统较完善，更便于收集<span class="answer-text">随访资料</span>，而且暴露组和对照组有相似的经历，<span class="answer-text">可比性</span>较好。<br>（2）对照人群的选择：①<span class="answer-text">内对照</span>：如果在一般人群或有组织的人群团体中选择暴露于所研究因素的对象作为暴露组，那么其余<span class="answer-text">非暴露者</span>就可作为对照组。②<span class="answer-text">外对照</span>：当选择<span class="answer-text">职业人群</span>或<span class="answer-text">特殊暴露人群</span>作为暴露组时，往往不能从这些人群中选出足够数量的具有可比性的对照，常需在该人群之外寻找对照组。③<span class="answer-text">总人口对照</span>：即在采用职业人群或特殊暴露人群作为暴露组时，以该地区<span class="answer-text">全人口</span>的发病或死亡率作为对照。④<span class="answer-text">多重对照</span>：同时选取上述<span class="answer-text">两种或两种以上</span>形式的对照。</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>35</td>
+                            <td>35.. <strong>经空气、水、食物传播传染病的流行特征</strong><br>（1）经空气传播的传染病的流行特征：①传播<span class="blur-text">广泛</span>，发病率<span class="blur-text">高</span>；②<span class="blur-text">冬春季</span>高发；③<span class="blur-text">儿童</span>和<span class="blur-text">老年人</span>多见；④在未经免疫预防的人群中，发病可呈<span class="blur-text">周期性升高</span>；⑤居住拥挤和人口密度大的地区高发。<br>（2）经饮用水传播传染病的流行特征：①病例分布与<span class="blur-text">供水范围</span>一致，有饮用同一水源水的历史；②在水源经常受到污染处病例终年不断，发病呈<span class="blur-text">地方性</span>；③除哺乳婴儿外，发病无<span class="blur-text">年龄</span>、<span class="blur-text">性别</span>、<span class="blur-text">职业</span>差别；④停止使用污染的水源或采取<span class="blur-text">消毒</span>、<span class="blur-text">净化</span>措施后爆发或流行即可平息；⑤水源短时大量被污染，可造成<span class="blur-text">爆发或流行</span>。<br>（3）经接触疫水传播的疾病的流行特征：①病人有<span class="blur-text">接触疫水史</span>，发病有<span class="blur-text">职业差异</span>，主要是接触疫水的职业；②呈现<span class="blur-text">地方性</span>或<span class="blur-text">季节性</span>特点，多见于<span class="blur-text">水网地区</span>、<span class="blur-text">雨季</span>和<span class="blur-text">收获季节</span>；③大量易感人群进入流行区，可呈<span class="blur-text">爆发或流行</span>；④对疫水采取措施或加强<span class="blur-text">个人防护</span>可控制疾病发生。<br>（4）经食物传播传染病的流行特征：①病人有<span class="blur-text">进食同一食物史</span>，不食者不发病；②一次大量污染可致<span class="blur-text">爆发</span>；③病人一般潜伏期较<span class="blur-text">短</span>，临床症状较<span class="blur-text">重</span>；④当停供污染食物后爆发即可很快<span class="blur-text">平息</span>。</td>
+                            <td>35.. <strong>经空气、水、食物传播传染病的流行特征</strong><br>（1）经空气传播的传染病的流行特征：①传播<span class="answer-text">广泛</span>，发病率<span class="answer-text">高</span>；②<span class="answer-text">冬春季</span>高发；③<span class="answer-text">儿童</span>和<span class="answer-text">老年人</span>多见；④在未经免疫预防的人群中，发病可呈<span class="answer-text">周期性升高</span>；⑤居住拥挤和人口密度大的地区高发。<br>（2）经饮用水传播传染病的流行特征：①病例分布与<span class="answer-text">供水范围</span>一致，有饮用同一水源水的历史；②在水源经常受到污染处病例终年不断，发病呈<span class="answer-text">地方性</span>；③除哺乳婴儿外，发病无<span class="answer-text">年龄</span>、<span class="answer-text">性别</span>、<span class="answer-text">职业</span>差别；④停止使用污染的水源或采取<span class="answer-text">消毒</span>、<span class="answer-text">净化</span>措施后爆发或流行即可平息；⑤水源短时大量被污染，可造成<span class="answer-text">爆发或流行</span>。<br>（3）经接触疫水传播的疾病的流行特征：①病人有<span class="answer-text">接触疫水史</span>，发病有<span class="answer-text">职业差异</span>，主要是接触疫水的职业；②呈现<span class="answer-text">地方性</span>或<span class="answer-text">季节性</span>特点，多见于<span class="answer-text">水网地区</span>、<span class="answer-text">雨季</span>和<span class="answer-text">收获季节</span>；③大量易感人群进入流行区，可呈<span class="answer-text">爆发或流行</span>；④对疫水采取措施或加强<span class="answer-text">个人防护</span>可控制疾病发生。<br>（4）经食物传播传染病的流行特征：①病人有<span class="answer-text">进食同一食物史</span>，不食者不发病；②一次大量污染可致<span class="answer-text">爆发</span>；③病人一般潜伏期较<span class="answer-text">短</span>，临床症状较<span class="answer-text">重</span>；④当停供污染食物后爆发即可很快<span class="answer-text">平息</span>。</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+        </div>
+    </div>
+</body>
+</html>
